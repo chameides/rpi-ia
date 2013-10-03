@@ -1,0 +1,1 @@
+$(window).touchwipe({wipeLeft:function(){togglemenu()},wipeRight:function(){togglemenu()},min_move_x:20,preventDefaultEvents:!1});
