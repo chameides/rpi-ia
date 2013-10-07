@@ -41,7 +41,10 @@
                  var y = e.touches[0].pageY;
                  var dx = startX - x;
                  var dy = startY - y;
-                 if(Math.abs(dx) >= config.min_move_x) {
+                 //Prevent diagonal firings
+                 //if(Math.abs(dx) >= config.min_move_x)
+                 if(Math.abs(dx) >= config.min_move_x + (Math.abs(dy) * 1.5) ) 
+                    {
                     cancelTouch();
                     if(dx > 0) {
                         config.wipeLeft();
