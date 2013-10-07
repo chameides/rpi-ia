@@ -1,11 +1,11 @@
 $(window).touchwipe({
   wipeLeft: function() {
     //Close
-    togglemenu();
+    $('body').removeClass('menu-on');
   },
   wipeRight: function() {
     // Open
-    togglemenu();
+    $('body').addClass('menu-on');
   },
    // preventDefaultEvents: false
  min_move_x: 20,
