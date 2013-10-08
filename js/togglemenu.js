@@ -1,10 +1,21 @@
 //toggles fly out menu on small screen
-function togglemenu() {
-$('body').toggleClass('menu-on');
+
+function menuopen() {
+$('body').addClass('menu-on');
 }
 
-$('.menu-button').click(
+function menuclose() {
+$('body').removeClass('menu-on');
+}
+
+$('.menu-open').click(
     function () {
-        togglemenu();
+        menuopen();
+    }
+);
+
+$('.menu-close').click(
+    function () {
+        menuclose();
     }
 );

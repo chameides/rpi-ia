@@ -1,2 +1,2 @@
 //toggles fly out menu on small screen
-function togglemenu(){$("body").toggleClass("menu-on")}$(".menu-button").click(function(){togglemenu()});
+function menuopen(){$("body").addClass("menu-on")}function menuclose(){$("body").removeClass("menu-on")}$(".menu-open").click(function(){menuopen()});$(".menu-close").click(function(){menuclose()});
