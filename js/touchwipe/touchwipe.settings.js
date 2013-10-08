@@ -7,7 +7,6 @@ $(window).touchwipe({
     // Open
     $('body').addClass('menu-on');
   },
-   // preventDefaultEvents: false
  min_move_x: 20,
- preventDefaultEvents: false,
+ //preventDefaultEvents: false,
   });

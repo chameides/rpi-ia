@@ -6,12 +6,13 @@
  * @version 1.1.1 (9th December 2010) - fix bug (older IE's had problems)
  * @version 1.1 (1st September 2010) - support wipe up and wipe down
  * @version 1.0 (15th July 2010)
+ forked by Michael Chameides - removed diagonal firings and commented out wipeup and wipedown
  */
 (function($) {
    $.fn.touchwipe = function(settings) {
      var config = {
-            min_move_x: 20,
-            min_move_y: 20,
+            //min_move_x: 20,
+            //min_move_y: 20,
             wipeLeft: function() { },
             wipeRight: function() { },
             wipeUp: function() { },
@@ -43,7 +44,7 @@
                  var dy = startY - y;
                  //Prevent diagonal firings
                  //if(Math.abs(dx) >= config.min_move_x)
-                 if(Math.abs(dx) >= config.min_move_x + (Math.abs(dy) * 1.5) ) 
+                 if(Math.abs(dx) >= config.min_move_x + (Math.abs(dy) * 1.5) )
                     {
                     cancelTouch();
                     if(dx > 0) {
@@ -55,13 +56,14 @@
                  }
                  else if(Math.abs(dy) >= config.min_move_y) {
                         cancelTouch();
-                        if(dy > 0) {
+                        /*if(dy > 0) {
                             config.wipeDown();
                         }
                         else {
                             config.wipeUp();
-                        }
+                        }*/
                      }
+                
              }
          }
          
