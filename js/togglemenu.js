@@ -1,22 +1,8 @@
-//toggles fly out menu on small screen
-
-
+//when minified it loses the semicolons and breaks for iphone
 function menuopen() {
-$('body').addClass('menu-on');
+    $(document.body).addClass('menu-on');
 }
 
 function menuclose() {
-$('body').removeClass('menu-on');
+     $(document.body).removeClass('menu-on');
 }
-
-$('.menu-open').click(
-    function () {
-        menuopen();
-    }
-);
-
-$('.menu-close').click(
-    function () {
-        menuclose();
-    }
-);
