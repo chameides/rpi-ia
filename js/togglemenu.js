@@ -1,5 +1,6 @@
 //toggles fly out menu on small screen
 
+
 function menuopen() {
 $('body').addClass('menu-on');
 }
