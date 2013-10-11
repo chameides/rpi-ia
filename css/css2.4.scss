@@ -9,6 +9,7 @@ Grid
 Header
 Footer
 Sidemenu
+Aside
 Misc Style
 Links
 Typography
@@ -128,7 +129,7 @@ body {
 }
 
 .content {
- margin: 0px .7em;
+ margin-left: .9em;
 }
 
 /* End of General Layout */
@@ -143,7 +144,6 @@ body {
 }
 
 .grid {
-  background: white;
   margin: 0;
 }
 .grid:after {
@@ -158,10 +158,11 @@ body {
   padding-right: .9em;
 }
 
-
-.grid [class*='col-']:last-of-type {
+.grid [class*='col-']:last-of-type,  {
   padding-right: 0;
 }
+
+
 
 
 .col-2-3 {
@@ -306,7 +307,8 @@ body {
 footer {
   text-align: center;
   font-size: .6em;
-  clear:both
+  clear:both;
+  margin-right: .9em;
 }
 
 footer img {
@@ -367,7 +369,11 @@ body.menu-on .wrapper {
 
 /* End of Sidemenu */
 
+/*Aside */
 
+aside {
+  margin-right: .9em;
+}
 
 /* Misc Style */
 
@@ -863,6 +869,7 @@ screen and (max-width : 719px) and (min-height : 300px) and (orientation:portrai
 .col-section {
   width: 50%;
 }
+
 }
 
 /* large phone (landscape) ----------- */

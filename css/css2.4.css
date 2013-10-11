@@ -8,6 +8,7 @@ Grid
 Header
 Footer
 Sidemenu
+Aside
 Misc Style
 Links
 Typography
@@ -24,7 +25,7 @@ Queries
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000343}}
 article,
 aside,
 details,
@@ -43,7 +44,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000353}}
 audio,
 canvas,
 video {
@@ -56,7 +57,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000364}}
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -66,7 +67,7 @@ audio:not([controls]) {
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000374}}
 [hidden] {
   display: none;
 }
@@ -81,7 +82,7 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\0000394}}
 html {
   font-size: 100%;
   /* 1 */
@@ -95,7 +96,7 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003109}}
 html,
 button,
 input,
@@ -107,35 +108,34 @@ textarea {
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003117}}
 body {
   margin: 0;
 }
 
 /*End of Base*/
 /* General Layout */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003127}}
 body {
   padding: 0px 0px 4em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003131}}
 .content {
-  margin: 0px .7em;
+  margin-left: .9em;
 }
 
 /* End of General Layout */
 /* Grid */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003140}}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003145}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003146}}
 .grid {
-  background: white;
   margin: 0;
 }
 
@@ -153,34 +153,34 @@ body {
   padding-right: .9em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003162}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003161}}
 .grid [class*='col-']:last-of-type {
   padding-right: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003168}}
 .col-2-3 {
   width: 66.66%;
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003172}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003173}}
 .col-1-3 {
   width: 33.33%;
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003178}}
 .col-1-2 {
   width: 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003181}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003182}}
 .col-3-4 {
   width: 75%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003185}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003186}}
 .col-section img {
   width: 100%;
 }
@@ -193,23 +193,23 @@ body {
   padding-right: 0;
 }
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003199}}
 .col-5-8 {
   width: 62.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003203}}
 .col-2-8 {
   width: 25%;
 }
 
 /*only need in two column width*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003206}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003207}}
 .col-1-8 {
   width: 12.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003210}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003211}}
 .module {
   padding: 0;
   min-width: 25px;
@@ -218,37 +218,37 @@ body {
 }
 
 /* Opt-in outside padding */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003219}}
 .grid-pad {
   padding: 0;
 }
 
 /* End of Grid */
 /* Header */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003230}}
 .header {
   padding: .7em .7em .3em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003233}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003234}}
 .header {
   background: #d3d8d4;
   padding-top: .3em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003239}}
 .menu {
   width: 10%;
   padding: 0;
   margin: 0 .5em 0 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003243}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003244}}
 .donate {
   width: 20%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003245}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003246}}
 #menu {
   /* background: rgba(0, 0, 0, 0.5);*/
   text-align: center;
@@ -256,18 +256,18 @@ body {
   text-align: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003252}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003253}}
 #menuicon {
   width: 100%;
   max-width: 50px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003254}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003255}}
 .bannerimage {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003256}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003257}}
 .title {
   margin-top: .25em;
   text-align: center;
@@ -275,7 +275,7 @@ body {
   width: 67%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003264}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003265}}
 #donate {
   margin-left: .1em;
   color: white;
@@ -296,21 +296,22 @@ body {
 
 /* End of Header */
 /* Footer */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003306}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003307}}
 footer {
   text-align: center;
   font-size: .6em;
   clear: both;
+  margin-right: .9em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003314}}
 footer img {
   width: 100%;
 }
 
 /* End of Footer */
 /* Sidemenu */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003323}}
 #sidemenu {
   width: 100%;
   height: 100%;
@@ -329,39 +330,45 @@ footer img {
   z-index: 999;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003343}}
 #sidemenu ul {
   text-align: center;
   list-style-type: none;
   padding-left: 0px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003349}}
 #sidemenu li {
   padding: .4em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003353}}
 #sidemenu a {
   color: white;
   display: inline-block;
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003359}}
 body.menu-on #sidemenu {
   -webkit-transform: translate(0%);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003366}}
 body.menu-on .wrapper {
   opacity: 0;
 }
 
 /* End of Sidemenu */
+/*Aside */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003374}}
+aside {
+  margin-right: .9em;
+}
+
 /* Misc Style */
 /* Red Line */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003381}}
 .header, .bottomlinks {
   border-style: none;
   border-bottom-style: solid;
@@ -369,7 +376,7 @@ body.menu-on .wrapper {
   border-bottom-color: #ec2027;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003388}}
 .button {
   text-align: center;
   text-transform: uppercase;
@@ -378,7 +385,7 @@ body.menu-on .wrapper {
   font-size: .9em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003397}}
 *:hover, *:focus, nav {
   -moz-transition: background-color 0.2s linear,border-color 0.2s linear,box-shadow .5s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-moz-transform 0.2s linear;
   -webkit-transition: background-color 0.2s linear,border-color 0.2s linear,-webkit-box-shadow 0.5s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-webkit-transform 0.2s linear;
@@ -393,7 +400,7 @@ body.menu-on .wrapper {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003406}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003412}}
 a:focus {
   outline: thin dotted;
 }
@@ -401,13 +408,13 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003415}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003421}}
 a:active,
 a:hover {
   outline: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003419}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003425}}
 a {
   text-decoration: none;
 }
@@ -421,43 +428,43 @@ a {
  * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
  * and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003435}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003441}}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003440}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003446}}
 h2 {
   font-size: 1em;
   margin: 0.5em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003445}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003451}}
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003450}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003456}}
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003455}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003461}}
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003460}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003466}}
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003465}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003471}}
 p {
   font-size: 0.8em;
 }
@@ -465,7 +472,7 @@ p {
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003473}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003479}}
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -473,13 +480,13 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003482}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003488}}
 b,
 strong {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003486}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003492}}
 blockquote {
   margin: 1em 40px;
 }
@@ -487,7 +494,7 @@ blockquote {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003494}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003500}}
 dfn {
   font-style: italic;
 }
@@ -496,7 +503,7 @@ dfn {
  * Address differences between Firefox and other browsers.
  * Known issue: no IE 6/7 normalization.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003503}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003509}}
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -506,7 +513,7 @@ hr {
 /**
  * Address styling not present in IE 6/7/8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003513}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003519}}
 mark {
   background: #ff0;
   color: #000;
@@ -515,7 +522,7 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003523}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003529}}
 p,
 pre {
   margin: 1em 0;
@@ -524,7 +531,7 @@ pre {
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003534}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003540}}
 code,
 kbd,
 pre,
@@ -537,7 +544,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003544}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003550}}
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -547,7 +554,7 @@ pre {
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003554}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003560}}
 q {
   quotes: none;
 }
@@ -555,7 +562,7 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003563}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003569}}
 q:before,
 q:after {
   content: '';
@@ -565,7 +572,7 @@ q:after {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003572}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003578}}
 small {
   font-size: 80%;
 }
@@ -573,7 +580,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003581}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003587}}
 sub,
 sup {
   font-size: 75%;
@@ -582,23 +589,23 @@ sup {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003588}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003594}}
 sup {
   top: -0.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003592}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003598}}
 sub {
   bottom: -0.25em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003598}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003604}}
 h1, h2 {
   text-transform: uppercase;
   margin-top: 0px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003603}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003609}}
 h2 {
   text-align: center;
 }
@@ -610,7 +617,7 @@ h2 {
 /**
  * Address margins set differently in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003621}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003627}}
 dl,
 menu,
 ol,
@@ -618,7 +625,7 @@ ul {
   margin: 1em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003625}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003631}}
 dd {
   margin: 0 0 0 40px;
 }
@@ -626,7 +633,7 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003635}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003641}}
 menu,
 ol,
 ul {
@@ -636,7 +643,7 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003644}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003650}}
 nav ul,
 nav ol {
   list-style: none;
@@ -650,7 +657,7 @@ nav ol {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003658}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003664}}
 img {
   border: 0;
   /* 1 */
@@ -661,7 +668,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003667}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003673}}
 svg:not(:root) {
   overflow: hidden;
 }
@@ -672,7 +679,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003679}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003685}}
 figure {
   margin: 0;
 }
@@ -683,7 +690,7 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003691}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003697}}
 form {
   margin: 0;
 }
@@ -691,7 +698,7 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003699}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003705}}
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -703,7 +710,7 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003711}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003717}}
 legend {
   border: 0;
   /* 1 */
@@ -720,7 +727,7 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003728}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003734}}
 button,
 input,
 select,
@@ -739,7 +746,7 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003741}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003747}}
 button,
 input {
   line-height: normal;
@@ -751,7 +758,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003753}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003759}}
 button,
 select {
   text-transform: none;
@@ -766,7 +773,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003770}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003776}}
 button,
 html input[type="button"],
 input[type="reset"],
@@ -782,7 +789,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003781}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003787}}
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -794,7 +801,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003793}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003799}}
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -812,7 +819,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003806}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003812}}
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -826,7 +833,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003819}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003825}}
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -835,7 +842,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003828}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003834}}
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -846,7 +853,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003838}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003844}}
 textarea {
   overflow: auto;
   /* 1 */
@@ -860,7 +867,7 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003851}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003857}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -870,7 +877,7 @@ table {
 @media only screen and (min-width: 1px) and (max-width: 549px) and (orientation: landscape), screen and (max-width: 719px) and (min-height: 300px) and (orientation: portrait) {
   /* Styles */
   /*2 across*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003863}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003869}}
   .col-section {
     width: 50%;
   }
@@ -879,7 +886,7 @@ table {
 @media only screen and (min-width: 550px) and (max-width: 719px) and (min-height: 320px) and (orientation: landscape) {
   /* Styles */
   /*3 across*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003874}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003881}}
   .col-section {
     width: 33.33%;
   }
@@ -888,24 +895,24 @@ table {
 @media only screen and (min-width: 599px) {
   /* Styles */
   /*Sidebar to side*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003886}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003893}}
   .maincontent {
     float: left;
     display: inline;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003887}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003894}}
   aside {
     float: right;
     display: inline;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003890}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003897}}
   aside p {
     margin-top: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003891}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003898}}
   .content {
     margin-top: 1em;
   }
@@ -914,18 +921,18 @@ table {
 @media only screen and (min-width: 599px) and (orientation: portrait) {
   /* Styles */
   /*Content Sidebar Ration*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003905}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003912}}
   .maincontent {
     width: 75%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003906}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003913}}
   aside {
     width: 25%;
   }
 
   /*2 across*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003911}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003918}}
   .col-section {
     width: 50%;
   }
@@ -934,18 +941,18 @@ table {
 @media only screen and (min-width: 720px) and (orientation: landscape) {
   /* Styles */
   /*Content Sidebar Ratio*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003924}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003931}}
   .maincontent {
     width: 80%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003925}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003932}}
   aside {
     width: 20%;
   }
 
   /*3 across*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003929}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/MC\/Documents\/Website\/Redesign\/css\/css2\.4\.scss}line{font-family:\00003936}}
   .col-section {
     width: 33%;
   }
