@@ -1,0 +1,47 @@
+/* Sidemenu */
+.sidemenu {
+  width: 100%;
+  height:100%;
+  position:absolute;
+  position:fixed;
+  display: block;
+  top:0px;
+  left:0px;
+  background:#333;
+  color:#fff;
+  padding:3%;
+  text-transform:uppercase;
+  -webkit-box-shadow:inset 0 0 1em .2em #222;
+   -webkit-transform:translate(-105%);
+   -moz-transform:translate(-105%);
+   z-index:999;
+   ul {
+    text-align: center;
+    list-style-type:none;
+    padding-left: 0px;
+  }
+
+  li {
+    padding: .4em;
+  }
+
+  a {
+  color: white;
+  display:inline-block;
+  width:100%;
+  }
+
+}
+
+body.menu-on .sidemenu {
+  -webkit-transform:translate(0%);
+ }
+
+
+
+
+body.menu-on .wrapper {
+    opacity: 0
+}
+
+/* End of Sidemenu */

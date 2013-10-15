@@ -1,0 +1,18 @@
+/*Aside */
+
+aside {
+	margin-right: .9em;
+	/*on tablet and up, aside floats right*/
+	@include breakpoint(teen-up) { 
+		float: right; 
+		p {margin-top: 0;}
+		} 
+	}
+	@include breakpoint (teen) {
+		aside {width:25%;} 
+	}
+	@include breakpoint (teen-sleep) {
+		aside {width:23%;} 
+	}
+
+

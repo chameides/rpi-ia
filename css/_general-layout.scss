@@ -1,0 +1,30 @@
+/* General Layout */
+body {
+  padding: 0px 0px 4em;
+}
+
+.content {
+ margin-left: $margin;
+ /*on larger screen, additional margin */
+ @include breakpoint(teen-up) {
+ 	margin-top:1em
+ }
+}
+
+
+
+.maincontent {
+	/*on tablets and up, the aside moves to the sidebar*/
+	@include breakpoint(teen-up) { 
+		float:left; 
+		display:inline;
+	} 
+	@include breakpoint(teen) {
+		width: 72%;
+	}
+	@include breakpoint(teen-sleep) {
+		width: 75%;
+	}
+}
+
+/* End of General Layout */

@@ -1,0 +1,20 @@
+/* Misc Style */
+
+/* Red Line */
+.header, .bottomlinks {
+border-style: none;
+border-bottom-style:solid;
+border-bottom-width:thin;
+border-bottom-color:$color2;
+}
+
+.button {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+ *:hover, *:focus, nav{-moz-transition:background-color 0.2s linear,border-color 0.2s linear,box-shadow .5s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-moz-transform 0.2s linear; -webkit-transition:background-color 0.2s linear,border-color 0.2s linear,-webkit-box-shadow 0.5s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-webkit-transform 0.2s linear; -o-transition:background-color 0.2s linear,border-color 0.2s linear,-o-box-shadow 0.5s linear,box-shadow 0.2s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-o-transform 0.2s linear; transition:background-color 0.2s linear,border-color 0.2s linear,box-shadow .5s linear,color 0.8s linear,opacity 0.2s linear,text-shadow 0.2s linear,transform 0.2s linear}
+
+
+/* End of Misc Style */
