@@ -12,32 +12,44 @@
 .menu-wrapper {
   width: 10%; 
   padding: 0; 
-  margin: 0 .5em 0 0}
+  margin: 0 .5em 0 0;
+  @include breakpoint(big-baby-sleep) { 
+    margin-top: .5%;
+  }
+  @include breakpoint(teen) { 
+    margin-top: 5.5%;
+  }
+}
+
 
 .donate-wrapper {
   width: 15%; 
-  margin-left: .4em;}
+  margin-left: .4em;
+  }
 
 .menu {
   text-align:center;
   margin: 2px 4px 0px 0px; 
   text-align:left;
+  
 }
 
-.menuicon {width:100%; max-width: 50px;}
+.menuicon {width:100%; max-width: 45px;}
 
 .bannerimage {width:100%;}
 
 .title {
-  margin-top:.25em;
+  margin-top:.2em;
   text-align:center;
   padding-right: 0em;
   width: 70%;
   }
 
 
+
 .donate {
   color: white;
+  max-width: 80px;
   width:100%;
   float:right;
   background: -moz-linear-gradient(
@@ -66,7 +78,11 @@
   text-shadow:
     0px -1px 0px rgba(000,000,000,0),
     0px 1px 0px rgba(255,255,255,0);
-  font-size:.6em
+  font-size:.5em;
+
+  @include breakpoint(big-baby-sleep) { 
+    margin-top: 8%;
+  }
 }
 
 

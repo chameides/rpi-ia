@@ -1,7 +1,7 @@
 @mixin breakpoint($point) {
   /* Smartphones, except large phone landscape ----------- */
   @if $point == baby {
-    @media only screen and (min-width : 1px) and (max-width : 549px) and (orientation:landscape), 
+    @media only screen and (max-width : 549px) and (orientation:landscape), 
     screen and (max-width : 719px) and (min-height : 300px) and (orientation:portrait) { @content; }
   }
   
@@ -9,7 +9,7 @@
 
   @else if $point == big-baby-sleep {
     /* large phone (landscape) ----------- */
-    @media only screen and (min-width : 550px) and (max-width : 719px) and (min-height : 320px) and (orientation:landscape)  { @content; }
+    @media only screen and (min-width : 550px) and (max-width : 719px) and (orientation:landscape)  { @content; }
   }
   
 

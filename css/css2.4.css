@@ -191,13 +191,13 @@ body {
   /* Smartphones, except large phone landscape ----------- */
   /*tablet*/
 }
-@media only screen and (min-width: 1px) and (max-width: 549px) and (orientation: landscape), screen and (max-width: 719px) and (min-height: 300px) and (orientation: portrait) {
+@media only screen and (max-width: 549px) and (orientation: landscape), screen and (max-width: 719px) and (min-height: 300px) and (orientation: portrait) {
   /* line 31, _grid.scss */
   .col-section {
     width: 50%;
   }
 }
-@media only screen and (min-width: 550px) and (max-width: 719px) and (min-height: 320px) and (orientation: landscape) {
+@media only screen and (min-width: 550px) and (max-width: 719px) and (orientation: landscape) {
   /* line 31, _grid.scss */
   .col-section {
     width: 33.33%;
@@ -299,43 +299,60 @@ body {
   width: 10%;
   padding: 0;
   margin: 0 .5em 0 0;
+  /* Smartphones, except large phone landscape ----------- */
+  /* large phone (landscape) ----------- */
+  /* Smartphones, except large phone landscape ----------- */
+  /*tablet*/
+}
+@media only screen and (min-width: 550px) and (max-width: 719px) and (orientation: landscape) {
+  /* line 12, _header.scss */
+  .menu-wrapper {
+    margin-top: .5%;
+  }
+}
+@media only screen and (min-width: 599px) and (orientation: portrait) {
+  /* line 12, _header.scss */
+  .menu-wrapper {
+    margin-top: 5.5%;
+  }
 }
 
-/* line 17, _header.scss */
+/* line 25, _header.scss */
 .donate-wrapper {
   width: 15%;
   margin-left: .4em;
 }
 
-/* line 21, _header.scss */
+/* line 30, _header.scss */
 .menu {
   text-align: center;
   margin: 2px 4px 0px 0px;
   text-align: left;
 }
 
-/* line 27, _header.scss */
+/* line 37, _header.scss */
 .menuicon {
   width: 100%;
-  max-width: 50px;
+  max-width: 45px;
 }
 
-/* line 29, _header.scss */
+/* line 39, _header.scss */
 .bannerimage {
   width: 100%;
 }
 
-/* line 31, _header.scss */
+/* line 41, _header.scss */
 .title {
-  margin-top: .25em;
+  margin-top: .2em;
   text-align: center;
   padding-right: 0em;
   width: 70%;
 }
 
-/* line 39, _header.scss */
+/* line 50, _header.scss */
 .donate {
   color: white;
+  max-width: 80px;
   width: 100%;
   float: right;
   background: -moz-linear-gradient(top, #d91f28 0%, #de2831 29%, #94151b);
@@ -348,7 +365,15 @@ body {
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), inset -14px -12px 4px rgba(247, 54, 64, 0);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), inset -14px -12px 4px rgba(247, 54, 64, 0);
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0), 0px 1px 0px rgba(255, 255, 255, 0);
-  font-size: 0.6em;
+  font-size: .5em;
+  /* Smartphones, except large phone landscape ----------- */
+  /* large phone (landscape) ----------- */
+}
+@media only screen and (min-width: 550px) and (max-width: 719px) and (orientation: landscape) {
+  /* line 50, _header.scss */
+  .donate {
+    margin-top: 8%;
+  }
 }
 
 /* End of Header */
