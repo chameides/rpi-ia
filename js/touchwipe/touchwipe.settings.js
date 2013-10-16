@@ -7,6 +7,6 @@ $(window).touchwipe({
     // Open
     menuopen();
   },
- min_move_x: 20,
- //preventDefaultEvents: false,
+ 
+ preventDefaultEvents: false
   });
