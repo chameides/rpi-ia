@@ -297,64 +297,83 @@ body {
 /* line 12, _header.scss */
 .menu-wrapper {
   width: 10%;
+  max-width: 65px;
   padding: 0;
   margin: 0 .5em 0 0;
   /* Smartphones, except large phone landscape ----------- */
   /* large phone (landscape) ----------- */
   /* Smartphones, except large phone landscape ----------- */
-  /*tablet*/
+  /*tablet and up*/
 }
 @media only screen and (min-width: 550px) and (max-width: 719px) and (orientation: landscape) {
   /* line 12, _header.scss */
   .menu-wrapper {
-    margin-top: .5%;
+    margin-top: .2em;
   }
 }
-@media only screen and (min-width: 599px) and (orientation: portrait) {
+@media only screen and (min-width: 599px) {
   /* line 12, _header.scss */
   .menu-wrapper {
-    margin-top: 5.5%;
+    margin-top: .2em;
   }
 }
 
-/* line 25, _header.scss */
+/* line 26, _header.scss */
 .donate-wrapper {
   width: 15%;
-  margin-left: .4em;
+  margin-top: 0;
+  padding-top: 0;
+  margin-right: 0.45em;
+  float: right;
+  /* Smartphones, except large phone landscape ----------- */
+  /*tablet and up*/
+}
+@media only screen and (min-width: 599px) {
+  /* line 26, _header.scss */
+  .donate-wrapper {
+    margin-top: .6em;
+  }
 }
 
-/* line 30, _header.scss */
+/* line 37, _header.scss */
 .menu {
   text-align: center;
   margin: 2px 4px 0px 0px;
   text-align: left;
 }
 
-/* line 37, _header.scss */
+/* line 44, _header.scss */
 .menuicon {
   width: 100%;
   max-width: 45px;
 }
 
-/* line 39, _header.scss */
+/* line 46, _header.scss */
 .bannerimage {
   width: 100%;
 }
 
-/* line 41, _header.scss */
+/* line 48, _header.scss */
 .title {
   margin-top: .2em;
   text-align: center;
   padding-right: 0em;
-  width: 70%;
+  width: 69%;
 }
 
-/* line 50, _header.scss */
+/* line 55, _header.scss */
+.title div {
+  max-width: 400px;
+}
+
+/* line 60, _header.scss */
 .donate {
   color: white;
   max-width: 80px;
   width: 100%;
   float: right;
+  margin-top: 0;
+  padding-top: 0;
   background: -moz-linear-gradient(top, #d91f28 0%, #de2831 29%, #94151b);
   background: -webkit-gradient(linear, left top, left bottom, from(#d91f28), color-stop(0.49, #de2831), to(#94151b));
   -moz-border-radius: .7em;
@@ -366,14 +385,6 @@ body {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), inset -14px -12px 4px rgba(247, 54, 64, 0);
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0), 0px 1px 0px rgba(255, 255, 255, 0);
   font-size: .5em;
-  /* Smartphones, except large phone landscape ----------- */
-  /* large phone (landscape) ----------- */
-}
-@media only screen and (min-width: 550px) and (max-width: 719px) and (orientation: landscape) {
-  /* line 50, _header.scss */
-  .donate {
-    margin-top: 8%;
-  }
 }
 
 /* End of Header */

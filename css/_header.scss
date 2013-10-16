@@ -10,21 +10,28 @@
 }
 
 .menu-wrapper {
-  width: 10%; 
+  width: 10%;
+  max-width: 65px; 
   padding: 0; 
   margin: 0 .5em 0 0;
   @include breakpoint(big-baby-sleep) { 
-    margin-top: .5%;
+    margin-top: .2em;
   }
-  @include breakpoint(teen) { 
-    margin-top: 5.5%;
+  @include breakpoint(teen-up) { 
+    margin-top: .2em;
   }
 }
 
 
 .donate-wrapper {
-  width: 15%; 
-  margin-left: .4em;
+  width: 15%;
+  margin-top:0;
+  padding-top:0;
+  margin-right: $margin/2; 
+  float: right;
+  @include breakpoint(teen-up) { 
+    margin-top: .6em;
+  }
   }
 
 .menu {
@@ -42,9 +49,12 @@
   margin-top:.2em;
   text-align:center;
   padding-right: 0em;
-  width: 70%;
+  width: 69%;
   }
 
+.title div {
+  max-width: 400px;
+}
 
 
 .donate {
@@ -52,6 +62,8 @@
   max-width: 80px;
   width:100%;
   float:right;
+  margin-top:0;
+  padding-top:0;
   background: -moz-linear-gradient(
     top,
     #d91f28 0%,
@@ -79,10 +91,6 @@
     0px -1px 0px rgba(000,000,000,0),
     0px 1px 0px rgba(255,255,255,0);
   font-size:.5em;
-
-  @include breakpoint(big-baby-sleep) { 
-    margin-top: 8%;
-  }
 }
 
 
