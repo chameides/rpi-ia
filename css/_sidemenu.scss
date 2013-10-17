@@ -2,7 +2,6 @@
 .sidemenu {
   width: 100%;
   height:100%;
-  position:absolute;
   position:fixed;
   display: block;
   top:0px;
@@ -12,23 +11,52 @@
   padding:3%;
   text-transform:uppercase;
   -webkit-box-shadow:inset 0 0 1em .2em #222;
-   -webkit-transform:translate(-105%);
-   -moz-transform:translate(-105%);
-   z-index:999;
+  -webkit-transform:translate(-105%);
+  -moz-transform:translate(-105%);
+  @include breakpoint(adult) { 
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: $margin;
+    background: darken($color1, 60);
+    -webkit-transform:translate(0%);
+    -webkit-box-shadow:none;
+    font-size: .9em;
+  }
+  z-index:999;
    ul {
-    text-align: center;
+    text-align: left;
     list-style-type:none;
     padding-left: 0px;
+    margin: 0;
+    @include breakpoint(adult) { 
+  }
   }
 
+.menu-close {
+  @include breakpoint(adult) { 
+    display: none;
+  }
+}
+
   li {
-    padding: .4em;
+    padding: 0 1.5em 0 0;
+    @include breakpoint(adult) {
+      display: inline;
+
+      }
   }
 
   a {
   color: white;
   display:inline-block;
   width:100%;
+    @include breakpoint(adult) { 
+    width: auto;
+    display: inline;
+    }
   }
 
 }
