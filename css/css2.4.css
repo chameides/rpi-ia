@@ -125,6 +125,8 @@ body {
   /*tablet*/
   /* Smartphones, except large phone landscape ----------- */
   /*tablet*/
+  /* Smartphones, except large phone landscape ----------- */
+  /*screen*/
 }
 @media only screen and (min-width: 599px) {
   /* line 16, _general-layout.scss */
@@ -143,6 +145,12 @@ body {
   /* line 16, _general-layout.scss */
   .maincontent {
     width: 75%;
+  }
+}
+@media only screen and (min-width: 1525px) {
+  /* line 16, _general-layout.scss */
+  .maincontent {
+    width: 74%;
   }
 }
 
@@ -411,6 +419,19 @@ body {
 /* End of Header */
 /*Aside */
 /* line 3, _aside.scss */
+.priority1and2 {
+  /* Smartphones, except large phone landscape ----------- */
+  /*screen*/
+}
+@media only screen and (min-width: 1525px) {
+  /* line 3, _aside.scss */
+  .priority1and2 {
+    float: right;
+    width: 89%;
+  }
+}
+
+/* line 9, _aside.scss */
 aside {
   margin-right: .9em;
   /*on tablet and up, aside floats right*/
@@ -418,11 +439,11 @@ aside {
   /*tablet and up*/
 }
 @media only screen and (min-width: 599px) {
-  /* line 3, _aside.scss */
+  /* line 9, _aside.scss */
   aside {
     float: right;
   }
-  /* line 8, _aside.scss */
+  /* line 14, _aside.scss */
   aside p {
     margin-top: 0;
   }
@@ -431,7 +452,7 @@ aside {
 /* Smartphones, except large phone landscape ----------- */
 /*tablet*/
 @media only screen and (min-width: 599px) and (orientation: portrait) {
-  /* line 12, _aside.scss */
+  /* line 18, _aside.scss */
   aside {
     width: 25%;
   }
@@ -439,11 +460,32 @@ aside {
 /* Smartphones, except large phone landscape ----------- */
 /*tablet*/
 @media only screen and (min-width: 720px) and (orientation: landscape) {
-  /* line 15, _aside.scss */
+  /* line 21, _aside.scss */
   aside {
     width: 23%;
   }
 }
+/* Smartphones, except large phone landscape ----------- */
+/*screen*/
+@media only screen and (min-width: 1525px) {
+  /* line 24, _aside.scss */
+  aside {
+    width: 24%;
+  }
+}
+/* line 27, _aside.scss */
+.priority3 {
+  /* Smartphones, except large phone landscape ----------- */
+  /*screen*/
+}
+@media only screen and (min-width: 1525px) {
+  /* line 27, _aside.scss */
+  .priority3 {
+    float: left;
+    width: 10%;
+  }
+}
+
 /* Footer */
 /* line 4, _footer.scss */
 footer {

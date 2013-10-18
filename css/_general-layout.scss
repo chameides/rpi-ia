@@ -25,6 +25,9 @@ body {
 	@include breakpoint(teen-sleep) {
 		width: 75%;
 	}
+	@include breakpoint(senior) { 
+		width: 74%;
+	} 
 }
 
 /* End of General Layout */
