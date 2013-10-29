@@ -1,0 +1,31 @@
+p.quote {display: none;}
+
+blockquote{
+	line-height:1.2em;
+	margin: 1.5em 2.2em 0;
+	max-width: 25em;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before{
+	content: '\201C'; 
+	font-size:2.75em;
+	text-indent:-.5em;
+	margin-top:.1em;
+	float:left;
+	opacity:.3;
+	}
+cite{
+	display:block;
+	text-transform:uppercase;
+	letter-spacing:.1em;
+	font-weight:900;
+	font-style:normal;
+	font-size:.7em;
+	margin: .4em 2.2em+$margin $margin;
+	
+}
+cite:before{
+	content:"\2014";
+	float:left;
+	opacity:.3;
+	}
