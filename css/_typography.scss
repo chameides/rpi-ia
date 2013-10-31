@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {font-size:1.2em; 
-    margin-bottom: .5em;
+    margin-bottom: .2em;
         }
 
 article h2 {
@@ -38,7 +38,8 @@ article h2 {
 
 section h2, h2.subtitle {
     text-align: center;
-    margin-top: 0px;
+    margin: 0 0 $margin
+
 }
 
 h2.subtitle {
@@ -201,6 +202,11 @@ sub {
     bottom: -0.25em;
 }
 
+
+.summary {
+    font-style:italic;
+    font-weight: bold;
+    font-size: .9em}
 
 @import "typography-quote";
 

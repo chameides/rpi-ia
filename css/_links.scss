@@ -8,6 +8,7 @@
 
 a:focus {
     outline: thin dotted;
+    
 }
 
 /**
@@ -21,3 +22,11 @@ a:hover {
 
 a {text-decoration: none}
 
+a:link, a:visited{
+	color: $color3}
+
+a:hover {
+	color: lighten($color3, 5);
+	text-shadow: 2px 2px 2px $color1; 
+	
+}
