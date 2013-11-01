@@ -2,9 +2,11 @@ p.quote {display: none;}
 
 blockquote{
 	line-height:1.2em;
-	margin: 1.5em 2.2em 0;
+	margin: 1.5em 2em 0 2.2em;
 	max-width: 25em;
 	quotes: "\201C""\201D""\2018""\2019";
+	text-align: justify;
+
 }
 blockquote:before{
 	content: '\201C'; 

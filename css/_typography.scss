@@ -21,7 +21,7 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 1.9em;
+    font-size: 1.5em;
     margin: 0.3em 0 0;
 }
 
@@ -78,6 +78,7 @@ h6 {
 p {
     font-size: 0.8em;
     max-width: 40em;
+    text-align: justify;
 }
 
 /**
@@ -132,6 +133,7 @@ mark {
 p,
 pre {
     margin: 0 0 .8em;
+    font-size: .9em;
 }
 
 /**
@@ -212,6 +214,7 @@ sub {
 figcaption {
     font-size:.7em;
     font-weight: bold;
+     text-align: justify;
 }
 
 @import "typography-quote";
