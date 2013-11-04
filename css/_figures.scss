@@ -8,4 +8,8 @@
 
 figure {
     margin: 0 0 $margin;
+    @include breakpoint(big-baby-sleep) { 
+    margin: 0 auto $margin;
+    text-align: center;
+  }
 }

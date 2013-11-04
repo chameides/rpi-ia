@@ -1,6 +1,7 @@
 /*Aside */
 
 .priority1and2 {
+
 	@include breakpoint(senior) { 
 	float: right;
 	width: 89%}
@@ -8,6 +9,10 @@
 
 aside {
 	margin-right: .9em;
+	
+	@include breakpoint(big-baby-sleep) { 
+    float: none;
+  	}
 	/*on tablet and up, aside floats right*/
 	@include breakpoint(teen-up) { 
 		float: right; 

@@ -23,6 +23,9 @@ h1, h2 {
 h1 {
     font-size: 1.5em;
     margin: 0.3em 0 0;
+    @include breakpoint(big-baby-sleep) { 
+    font-size: 1.5em; 
+  }
 }
 
 h2 {font-size:1.2em; 
@@ -76,9 +79,12 @@ h6 {
 }
 
 p {
-    font-size: 0.8em;
     max-width: 40em;
     text-align: justify;
+    font-size: .9em;
+    @include breakpoint(big-baby-sleep) { 
+        font-size: .7em;
+    }
 }
 
 /**
@@ -133,7 +139,6 @@ mark {
 p,
 pre {
     margin: 0 0 .8em;
-    font-size: .9em;
 }
 
 /**
@@ -215,6 +220,9 @@ figcaption {
     font-size:.7em;
     font-weight: bold;
      text-align: justify;
+     @include breakpoint(big-baby-sleep) { 
+        font-size: .5em;
+    }
 }
 
 @import "typography-quote";

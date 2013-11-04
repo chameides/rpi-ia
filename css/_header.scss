@@ -15,7 +15,7 @@
   padding: 0; 
   margin: 0 .5em 0 0;
   @include breakpoint(big-baby-sleep) { 
-    margin-top: .2em;
+    margin-top: .1em;
   }
   @include breakpoint(teen-up) { 
     margin-top: .2em;
@@ -51,7 +51,7 @@
 .bannerimage {width:100%;}
 
 .title {
-  margin-top:.2em;
+  margin-top:.3em;
   text-align:center;
   padding-right: 0em;
   width: 69%;
