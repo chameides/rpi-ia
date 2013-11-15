@@ -13,3 +13,45 @@ figure {
     text-align: center;
   }
 }
+
+.read figure {
+	@include breakpoint(teen) {
+		margin-bottom: 0;
+	}
+}
+
+.read figcaption:before {
+	content: '';
+	border-bottom: .4em solid $color3;
+	margin-top: $margin*2;
+	margin-bottom: $margin;
+	width: 60%;
+	display: block;
+
+}
+.read .aside {
+	@include breakpoint(teen) {
+		width: $smallratio;
+		float: left;
+		clear: left;
+		margin-left: $pagemargin;
+		margin-top: $margin;
+		margin-bottom: $margin/2;
+		figcaption:before {
+			display: none;
+		}
+		figcaption {
+			width: 100%;
+		}
+	}
+}
+
+.read .left {
+	@include breakpoint(teen) {
+		width: 100% - $smallratio;
+		float: left;
+		clear: left;
+		margin: 0 0 $margin/2;
+		padding-right: $margin;
+	}
+}

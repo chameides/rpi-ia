@@ -11,13 +11,20 @@ body {
  }
 }
 
+.read .content {
+	@include breakpoint(teen-up) { 
+		margin-left: 0;
+	}
+}
 
 
 .maincontent {
 	/*on tablets and up, the aside moves to the sidebar*/
+	width: 100%;
 	@include breakpoint(teen-up) { 
 		float:left; 
 		display:inline;
+
 	} 
 	@include breakpoint(teen) {
 		width: 72%;
@@ -29,5 +36,9 @@ body {
 		width: 74%;
 	} 
 }
+
+.read .maincontent{
+	width: 100%
+	}
 
 /* End of General Layout */

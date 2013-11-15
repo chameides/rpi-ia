@@ -1,9 +1,23 @@
-$margin: .9em;
+/* layout */
+
+/* Main-Sidebar Ratio */
+	$ratio: 31%;
+	$smallratio: 23%;
+	$margin: .9em;
+	$pagemargin: 3%;
+
+
 
 /* colors */
-/*header*/
-$color1: #d3d8d4;
-/*red line, separator*/
-$color2: #ec2027;
-$textmain: black;
-$color3: #003399;
+	/*header*/
+	$color1: #d3d8d4;
+
+	/*red line, separator*/
+	$color2: #ec2027;
+	
+	$textmain: black;
+	$lighttext: lighten($textmain,30%);
+	$color3: #003399;
+
+
+

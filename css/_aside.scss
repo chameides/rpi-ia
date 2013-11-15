@@ -15,19 +15,25 @@ aside {
   	}
 	/*on tablet and up, aside floats right*/
 	@include breakpoint(teen-up) { 
-		float: right; 
+		float: right;
+		width:$smallratio;
+		margin-bottom: $margin; 
 		p {margin-top: 0;}
 		} 
 	}
-	@include breakpoint (teen) {
-		aside {width:25%;} 
-	}
-	@include breakpoint (teen-sleep) {
-		aside {width:23%;} 
-	}
-	@include breakpoint (senior) {
-		aside {width:24%;} 
-	}
+
+.read aside {
+	@include breakpoint(teen-up) { 
+		margin-bottom: $margin; 
+		padding-top: $margin;
+		padding-left: $pagemargin;
+		width:100%-$ratio;
+		float: none;
+		clear: both;
+		display: block;
+		} 
+}
+
 
 .priority3 {
 	@include breakpoint(senior) { 

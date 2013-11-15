@@ -1,4 +1,7 @@
-p.quote {display: none;}
+p.quote {
+	display: none;
+}
+
 
 blockquote{
 	line-height:1.2em;
@@ -11,6 +14,7 @@ blockquote{
     font-size: .7em;
   }
 
+
 }
 blockquote:before{
 	content: '\201C'; 
@@ -20,6 +24,7 @@ blockquote:before{
 	float:left;
 	opacity:.3;
 	}
+
 cite{
 	display:block;
 	text-transform:uppercase;
@@ -33,8 +38,19 @@ cite{
     font-size: .5em;
   }	
 }
+
+
 cite:before{
 	content:"\2014";
 	float:left;
 	opacity:.3;
 	}
+
+.read blockquote{
+	@include breakpoint(teen-up) {
+	clear: right;
+	max-width: 75%;
+	font-size: 1.2em;
+	color: $lighttext;
+	}
+}

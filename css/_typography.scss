@@ -28,9 +28,18 @@ h1 {
   }
 }
 
+.read h1 {
+    @include breakpoint(teen-up) { 
+        font-size: 3em;
+        text-align: left;
+        margin-left: $pagemargin;
+        margin-right: $pagemargin;
+    }
+}
+
 h2 {font-size:1.2em; 
     margin-bottom: .2em;
-        }
+    }
 
 article h2 {
     font-size: 1em;
@@ -39,14 +48,38 @@ article h2 {
     margin-top: 1.5em;
 }
 
+.read h2  {
+    @include breakpoint(teen-up) { 
+        margin-left: $ratio;
+        color: $lighttext;
+        text-transform: none;
+        margin-right: $pagemargin;
+        margin-top: $margin*3;
+
+    }
+}
+
 section h2, h2.subtitle {
     text-align: center;
-    margin: 0 0 $margin
+    margin: 0 0 $margin;
+
 
 }
 
+.read h2.subtitle {
+    @include breakpoint(teen-up) { 
+        text-align: left;
+        font-size: 1.2em;
+        padding: 0 $pagemargin;
+        margin-bottom: 3em;
+        text-transform: uppercase;
+        width: 100%;
+
+    }
+}
+
 h2.subtitle {
-    color: lighten($textmain, 30);
+    color: lighttext;
 }
 
 section h2 {
@@ -59,6 +92,12 @@ h3 {
     font-size: 1.17em;
     margin: 0 0 .3em;
     text-transform: uppercase;
+}
+
+.read aside h3 {
+    @include breakpoint(teen-up) { 
+        
+    }
 }
 
 .donate h3 {margin-top: .7em;}
@@ -86,6 +125,21 @@ p {
         font-size: .7em;
     }
 }
+
+.read p {
+    @include breakpoint(teen-up) { 
+        margin-left: $ratio;
+        font-size: 1em;
+        margin-right: $pagemargin;
+    }
+}
+
+.read aside p {
+    @include breakpoint(teen-up) { 
+        margin-left: 0;
+    }
+}
+
 
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
@@ -224,6 +278,27 @@ figcaption {
         font-size: .5em;
     }
 }
+
+.read figcaption {
+    @include breakpoint(teen) {
+        width: $smallratio;
+        float: left;
+        clear: left;
+        font-weight: normal;
+        margin-left: $pagemargin;
+        text-align: left;
+        display: inline;
+    }
+}
+
+.aside figcaption {
+    @include breakpoint(teen) {
+        margin-left: 0;
+    }
+}
+
+
+aside {font-size:.8em;}
 
 @import "typography-quote";
 

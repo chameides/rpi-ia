@@ -26,7 +26,10 @@
   padding-right: 0;
 }
 
-
+/* Opt-in outside padding */
+.grid-pad {
+  padding: 0;
+}
 
 .col-section {
   /*blocks are two across on smartphones*/
@@ -39,6 +42,14 @@
 
 .col-article {
   margin-right: $margin;
+  padding-right: $margin;
+}
+
+.read .col-article {
+  @include breakpoint(teen) {
+    margin: 0;
+    padding: 0
+    }
 }
 
 .col-2-3 {
@@ -87,10 +98,6 @@
   overflow: hidden;
 }
 
-/* Opt-in outside padding */
-.grid-pad {
-  padding: 0;
-}
 
 section {margin-bottom: $margin;}
 
