@@ -31,34 +31,34 @@
     list-style-type:none;
     padding-left: 0px;
     margin: 0;
-    @include breakpoint(adult) { 
   }
-  }
-
-.menu-close {
+  .menu-close {
+    font-size: .8em;   
   @include breakpoint(adult) { 
     display: none;
-  }
-}
-
-  li {
-    padding: 0 1.5em 0 0;
-    @include breakpoint(adult) {
-      display: inline;
-
-      }
-  }
-
-  a {
-  color: white;
-  display:inline-block;
-  width:100%;
-    @include breakpoint(adult) { 
-    width: auto;
-    display: inline;
     }
   }
 
+ .menu-close:hover, .menu-close:active{
+  cursor: pointer
+}
+
+  li {
+    border-bottom: 1px solid #1A1A1A;
+    border-top: 1px solid #4D4D4D;
+    display: block;
+    text-align: center;
+    padding: $margin;
+    @include breakpoint(adult) {
+      display: inline;
+    }
+  }
+  a:link, a:visited{
+  color: white;
+  width: 100%;
+  display: block;
+
+}
 }
 
 body.menu-on .sidemenu {
@@ -66,10 +66,20 @@ body.menu-on .sidemenu {
  }
 
 
-
-
 body.menu-on .wrapper {
     opacity: 0
 }
+
+
+
+.sidemenu ul li:first-of-type {
+  border-top: none;
+}
+
+
+
+
+
+
 
 /* End of Sidemenu */
