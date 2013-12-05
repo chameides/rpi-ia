@@ -1,3 +1,39 @@
+/*this goes in button */
+
+.flex-menu-wrapper {
+  max-width: 55px;
+  
+  -webkit-flex-basis: 15%;
+  -moz-flex-basis: 15%;
+  flex-basis: 15%;
+  }
+
+.flex-menu-icon {
+  width:100%; 
+  }
+
+.flex-donate-wrapper {
+  max-width: 80px;
+  -webkit-flex-basis: 23%;
+  -moz-flex-basis: 23%;
+  flex-basis: 23%;
+  @include breakpoint(teen-up) { 
+    margin-top: .6em;
+  }
+  }
+
+.flexdonate {
+  font-size:.5em;
+  color: white;
+  vertical-align: center;
+  text-align: center;
+  padding: .5em;
+}
+
+
+/* this code removed and replaced with flexbox 
+
+
 .menu-wrapper {
   width: 10%;
   max-width: 65px; 
@@ -47,9 +83,9 @@
   font-size:.5em;
   color: white;
 }
+*/
 
-
-.donate, .action, .flexdonate {
+.action, .flexdonate {
   background: -moz-linear-gradient(
     top,
     #d91f28 0%,
@@ -93,3 +129,5 @@ a.action:link, a.action:visited {
     text-align: center;
     padding: .7em;
   }
+
+

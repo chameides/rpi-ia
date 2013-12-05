@@ -1,5 +1,12 @@
 /* Header */
 
+
+.header {
+  background: $color1;
+}
+
+.bannerimage {width:100%;}
+/* code removed and replaced with flexbox
 .header {
   padding: .7em .7em .3em;
 }
@@ -10,7 +17,7 @@
 }
 
 
-.bannerimage {width:100%;}
+
 
 .title {
   margin-top:.3em;
@@ -22,7 +29,7 @@
 
 .title div {
 }
-
+*/
 .col-bannerfill {
   display: none;
   @include breakpoint(adult) { 
