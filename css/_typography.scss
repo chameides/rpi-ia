@@ -22,7 +22,7 @@ h1, h2 {
 
 h1 {
     font-size: 1.5em;
-    margin: 0.3em 0 0;
+    margin: 0.3em;
     @include breakpoint(big-baby-sleep) { 
     font-size: 1.5em; 
   }
@@ -154,7 +154,7 @@ abbr[title] {
  */
 
 b,
-strong {
+strong, .run-in {
     font-weight: bold;
 }
 
@@ -270,6 +270,8 @@ sub {
     font-weight: bold;
     font-size: .9em}*/
 
+.run-in {font-size: 1.1em;}
+
 figcaption {
     font-size:.7em;
     font-weight: bold;
@@ -299,6 +301,8 @@ figcaption {
 
 
 aside {font-size:.8em;}
+
+
 
 @import "typography-quote";
 

@@ -1,16 +1,31 @@
 /* Footer */
 
+.footerimage {
+  width: 100%;
+  @include breakpoint(baby) { 
+  display: none;
+  }
+}
+
 
 footer {
   text-align: center;
   font-size: .6em;
   clear:both;
-  margin-right: .9em;
+  background: #333;
+  background: darken($color1, 60);
+  color: white;
 }
 
-footer img {
-  width: 100%;
+
+.col-bottomlink {
+	width: 25%;
 }
+
+
+
+
+
 
 
 /* End of Footer */

@@ -33,7 +33,8 @@
 
 .col-section {
   /*blocks are two across on smartphones*/
-  @include breakpoint(baby) { width: 50%; }
+  @include breakpoint(baby) { width: 50%;
+  height: 8rem; }
   /*blocks are three across on large smartphones landscape*/
   @include breakpoint(big-baby-sleep) { width: 33.33%; }
   @include breakpoint(teen) { width: 50%; }

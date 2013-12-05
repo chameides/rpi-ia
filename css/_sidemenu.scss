@@ -6,7 +6,7 @@
   display: block;
   top:0px;
   left:0px;
-  background:#333;
+  background: #333;
   color:#fff;
   padding:3%;
   text-transform:uppercase;
@@ -26,40 +26,86 @@
     font-size: .9em;
   }
   z-index:999;
-   ul {
-    text-align: left;
-    list-style-type:none;
-    padding-left: 0px;
-    margin: 0;
-  }
+   
   .menu-close {
     font-size: .8em;   
-  @include breakpoint(adult) { 
-    display: none;
+    @include breakpoint(adult) { 
+      display: none;
     }
   }
+  .menu-close:hover, .menu-close:active{
+    cursor: pointer
+  }
 
- .menu-close:hover, .menu-close:active{
-  cursor: pointer
+  ul.nav {
+    margin-top: 1em;
+    li {
+      border-bottom: 1px solid #1A1A1A;
+      border-top: 1px solid #4D4D4D;
+      display: block;
+      text-align: center;
+      padding: $margin;
+      @include breakpoint(adult) {
+        display: inline;
+      }
+    }
+    li:first-of-type {
+      border-top: none;
+    }
+    li:last-of-type {
+      border-bottom: none;
+    }
+  }
+  ul.extra {
+    margin-top: $margin*2;  
+  }
 }
 
-  li {
-    border-bottom: 1px solid #1A1A1A;
-    border-top: 1px solid #4D4D4D;
+.sidemenu, footer {
+  a:link, a:visited, a:active, a:hover {
+    color: white;
+    width: 100%;
     display: block;
-    text-align: center;
-    padding: $margin;
-    @include breakpoint(adult) {
-      display: inline;
+  }
+  ul {
+    list-style-type:none;
+    padding-left: 0px;
+  }
+  ul.extra {
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;  
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content:center;
+
+    font-size: .7rem;
+    padding: 0 $margin;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+    
+    li {
+      text-align: center;
+      margin: 1px;
+      -webkit-flex: 1 1 24%;
+      -moz-flex: 1 1 24%;
+      flex: 1 1 24%;
     }
   }
-  a:link, a:visited{
-  color: white;
-  width: 100%;
-  display: block;
+}
 
+footer ul.extra {
+  text-transform: uppercase;
 }
-}
+
 
 body.menu-on .sidemenu {
   -webkit-transform:translate(0%);
@@ -70,14 +116,11 @@ body.menu-on .wrapper {
     opacity: 0
 }
 
-
-
-.sidemenu ul li:first-of-type {
-  border-top: none;
-}
-
-
-
+a:link, .a:visited, a:active, a:hover {
+    color: white;
+    width: 100%;
+    display: block;
+  }
 
 
 
