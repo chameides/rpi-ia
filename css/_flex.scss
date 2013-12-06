@@ -1,17 +1,28 @@
-.flexcontainer {
+.flexcontainer, .flexcontainer2 {
   width: 100%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: flex;
-  @include align-items(center);
+  @include flexbox;
   @include flex-flow(row);
   @include justify-content(center);
-  padding: $pagemargin $pagemargin;
 }
+
+.flexcontainer {
+   padding: $pagemargin $pagemargin;
+   @include align-items(center);
+}
+
+.flexcontainer2 {
+  @include flex-wrap( wrap ) ;
+  section {
+    width: 50%;
+    padding-right: $margin;
+  }
+  .highlight {
+    width: 100%;
+  }
+}
+
 
 .flexitem {
   padding-right: $margin/2;
-  -webkit-flex-grow:1;
-  -moz-flex-grow:1;
-  flex-grow:1;
+  @include flex-grow(1)
 }
