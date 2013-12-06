@@ -3,6 +3,7 @@
 
 .header {
   background: $color1;
+  @include flex-wrap( nowrap ) 
 }
 
 .bannerimage {width:100%;}

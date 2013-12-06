@@ -3,15 +3,9 @@
   display: -webkit-flex;
   display: -moz-flex;
   display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;  
-  -webkit-flex-flow: row nowrap;
-  -moz-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content:space-between;
+  @include align-items(center);
+  @include flex-flow(row);
+  @include justify-content(center);
   padding: $pagemargin $pagemargin;
 }
 
