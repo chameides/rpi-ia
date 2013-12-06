@@ -2,6 +2,7 @@
 
 .footerimage {
   width: 100%;
+  background: white;
   @include breakpoint(baby) { 
   display: none;
   }
@@ -11,7 +12,7 @@
 footer {
   text-align: center;
   font-size: .6em;
-  clear:both;
+  clear: both;
   background: #333;
   background: darken($color1, 60);
   color: white;

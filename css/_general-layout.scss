@@ -1,13 +1,16 @@
 /* General Layout */
 body {
   padding: 0px 0px 4em;
+  min-width: 310px;
 }
 
 .content {
  margin-left: $margin;
  /*on larger screen, additional margin */
  @include breakpoint(teen-up) {
- 	margin-top:1em
+ 	margin-top:1em;
+ 	margin-left: $pagemargin;
+
  }
 }
 

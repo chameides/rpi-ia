@@ -9,7 +9,6 @@
 
 aside {
 	margin-right: .9em;
-	
 	@include breakpoint(big-baby-sleep) { 
     float: none;
   	}
@@ -17,7 +16,8 @@ aside {
 	@include breakpoint(teen-up) { 
 		float: right;
 		width:$smallratio;
-		margin-bottom: $margin; 
+		margin-bottom: $margin;
+		padding-right: $margin; 
 		p {margin-top: 0;}
 		} 
 	}

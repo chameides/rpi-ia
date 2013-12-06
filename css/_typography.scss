@@ -300,7 +300,11 @@ figcaption {
 }
 
 
-aside {font-size:.8em;}
+aside {font-size:.8em; 
+    p {
+    text-align: left;
+    }
+}
 
 
 

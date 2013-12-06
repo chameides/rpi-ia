@@ -20,6 +20,10 @@
 [class*='col-'] {
   float: left;
   padding-right: $margin;
+  @include breakpoint(teen) { 
+    padding-right: $pagemargin*1.5;   
+  }
+
 }
 
 .grid [class*='col-']:last-of-type,  {
@@ -34,22 +38,18 @@
 .col-section {
   /*blocks are two across on smartphones*/
   @include breakpoint(baby) { width: 50%;
-  height: 8rem; }
+   }
   /*blocks are three across on large smartphones landscape*/
   @include breakpoint(big-baby-sleep) { width: 33.33%; }
   @include breakpoint(teen) { width: 50%; }
   @include breakpoint(teen-sleep) { width: 33.33%; }
 }
 
-.col-article {
-  margin-right: $margin;
-  padding-right: $margin;
-}
 
 .read .col-article {
   @include breakpoint(teen) {
     margin: 0;
-    padding: 0
+    padding: 0;
     }
 }
 
@@ -100,6 +100,11 @@
 }
 
 
-section {margin-bottom: $margin;}
+section {
+  margin-bottom: $margin;
+  @include breakpoint(teen) { 
+    margin-bottom: $pagemargin*1.5;   
+  }
+  }
 
 /* End of Grid */

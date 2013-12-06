@@ -2,11 +2,8 @@
 
 .flex-menu-wrapper {
   max-width: 55px;
-  
-  -webkit-flex-basis: 15%;
-  -moz-flex-basis: 15%;
-  flex-basis: 15%;
-  }
+  @include flex-basis (15%);
+}
 
 .flex-menu-icon {
   width:100%; 
@@ -14,12 +11,7 @@
 
 .flex-donate-wrapper {
   max-width: 80px;
-  -webkit-flex-basis: 23%;
-  -moz-flex-basis: 23%;
-  flex-basis: 23%;
-  @include breakpoint(teen-up) { 
-    margin-top: .6em;
-  }
+  @include flex-basis (23%);
   }
 
 .flexdonate {
@@ -28,6 +20,7 @@
   vertical-align: center;
   text-align: center;
   padding: .5em;
+
 }
 
 

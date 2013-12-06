@@ -6,7 +6,13 @@
   @include flex-wrap( nowrap ) 
 }
 
-.bannerimage {width:100%;}
+.bannerimage {
+  width:100%;
+  max-width: 400px;
+  @include breakpoint(teen) {
+    padding: 0 $margin;
+    }
+  }
 /* code removed and replaced with flexbox
 .header {
   padding: .7em .7em .3em;
