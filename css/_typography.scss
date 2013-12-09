@@ -11,7 +11,10 @@
  * and Chrome.
  */
 
-body {color: $textmain}
+body {
+    color: $textmain; 
+    font-family: "news-gothic-std", "times new roman", sans-serif;
+}
 
 h1, h2 {
     text-transform: uppercase;
@@ -25,7 +28,11 @@ h1 {
     margin: 0.3em;
     @include breakpoint(big-baby-sleep) { 
     font-size: 1.5em; 
-  }
+    }
+    @include breakpoint(teen) { 
+    font-size: 1.9em; 
+    }
+
 }
 
 .read h1 {
@@ -118,6 +125,8 @@ h6 {
 }
 
 p {
+    font-family: "museo-sans",sans-serif;
+    font-weight: 300;
     max-width: 40em;
     text-align: justify;
     font-size: .9em;
@@ -270,7 +279,7 @@ sub {
     font-weight: bold;
     font-size: .9em}*/
 
-.run-in {font-size: 1.1em;}
+
 
 figcaption {
     font-size:.7em;
