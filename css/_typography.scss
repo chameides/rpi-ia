@@ -13,7 +13,12 @@
 
 body {
     color: $textmain; 
-    font-family: "news-gothic-std", "times new roman", sans-serif;
+    font-family: "franklin-gothic-urw", verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
+    font-weight: 700;
 }
 
 h1, h2 {
@@ -125,7 +130,6 @@ h6 {
 }
 
 p {
-    font-family: "museo-sans",sans-serif;
     font-weight: 300;
     max-width: 40em;
     text-align: justify;
@@ -164,7 +168,7 @@ abbr[title] {
 
 b,
 strong, .run-in {
-    font-weight: bold;
+    font-weight: 500;
 }
 
 /**
