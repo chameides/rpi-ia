@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" href="http://www.rpi.edu/favicon.ico" />
+    <script type="text/javascript" src="//use.typekit.net/yac3sjj.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <!--<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>-->
   </head>
   <body class="read">
@@ -19,35 +21,33 @@
       <![endif]-->
     <nav class="sidemenu">
       <a class="menu-close">Close X</a> 
-      <ul>
-        <li><a href="1">Support Students</a></li>
-        <li><a href="2">Connect with Alum</a></li>
-        <li><a href="3">Change the World</a></li>
+      <ul class="nav">
+        <li><a href="1">Make an Impact</a></li>
+        <li><a href="2">Ways to Give</a></li>
+        <li><a href="3">Supporters</a></li>
+        <li><a href="3">News</a></li>
+      </ul>
+      <ul class="extra">
+        <li><a href="3">Donate</a></li>
+        <li><a href="3">Contact</a></li>
+        <li><a href="3">Search</a></li>
+        <li><a href="3">User Settings</a></li>
       </ul>
     </nav>
     <div class="wrapper">
-      <div class="grid header grid-pad">
-        <div class="col-1-8 menu-wrapper">
-          <div class="module" class="menu">
-            <a class="menu-open"><img src="img/menu.svg" alt="menu" class="menuicon"></a>
-          </div>
+      <div class="flexcontainer header">
+        <div class="flexitem flex-menu-wrapper">
+          <a class="menu-open"><img src="img/menu.svg" alt="menu" class="flex-menu-icon"></a>
         </div>
-        <div class="col-5-8 title">  
-          <div class="module">
-            <img src="img/banner-alumni.svg" alt="Rensselaer Alumni" class="bannerimage">
-          </div>
+        <div class="flexitem">
+           <img src="img/banner-alumni.svg" alt="Rensselaer Alumni" class="bannerimage">
         </div>
-        <div class="col-bannerfill">
-          <div class="module">
-            why not change the world?
-          </div>
-        </div>  
-        <div class="col-2-8 donate-wrapper">
-          <div class="module button donate">
+        <div class="flexitem flex-donate-wrapper">
+          <div class="flexdonate">
             <h3>DONATE</h3>
           </div>
-        </div> 
-      </div><!--close grid-->
+        </div>
+      </div><!--end of header-->  
       <div class="content"><!--content adds margin-->
         <div class="priority1and2">
           <article class="maincontent grid-pad col-article">
@@ -88,41 +88,28 @@
           <aside>
             <h3>Why not change the world?</h3>
             <p>Your gift can do just that, <a href="http://alumni.rpi.edu/give">Make a gift</a> to support students at Rensselaer.</p>
-            <div class="action-wrapper"><a class="action" href="http://alumni.rpi.edu/give">Make a gift</a></div>  
+            
           </aside>
       </div><!--close priority1and2-->
+     </div><!--close content-->
       <footer>
-        <div class="bottomlinks">
-          <div class="col-bottomlink">
-            <div class="module">
-              <h3>Sitemap</h3>
-            </div>
-          </div>
-          <div class="col-bottomlink">
-            <div class="module">
-              <h3>Contact Us</h3>
-            </div>
-          </div>
-          <div class="col-bottomlink">
-            <div class="module">
-              <h3>Search</h3>
-            </div>
-          </div>
-          <div class="col-bottomlink">
-            <div class="module">
-              <h3>Donate</h3>              
-            </div>
-          </div>
-          <div class="col-bottomlink">
-            <div class="module">
-              <h3>Login</h3>
-            </div>
-          </div>
-        </div><!--close bottom links-->   
-        <img src="http://news.rpi.edu/sites/all/themes/rpi_news/css/footer.png">
-        Copyright ©2013 Rensselaer Polytechnic Institute (RPI) 110 Eighth Street, Troy, NY USA 12180 (518) 276-6000 All rights reserved.
+        <img src="http://news.rpi.edu/sites/all/themes/rpi_news/css/footer.png" class="footerimage">
+        <ul class="extra">
+          <li><a href="3">Donate</a></li>
+          <li><a href="3">Contact</a></li>
+          <li><a href="3">Search</a></li>
+          <li><a href="3">User Settings</a></li>
+        </ul>
+        <div class="sitemap">
+        SITE MAP
+        </div>
+        <div>110 Eighth Street, Troy, NY USA 12180 (518) 276-6000</div> 
+        <div>Privacy Policy</div>
+        <div>Copyright ©2014
+        <br>Rensselaer Polytechnic Institute
+        <br>All rights reserved
+        </div>
       </footer>
-      </div><!--close content-->
     </div> <!--close wrapper-->
        <!-- <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

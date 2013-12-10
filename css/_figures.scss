@@ -21,12 +21,14 @@ figure {
 }
 
 .read figcaption:before {
-	content: '';
-	border-bottom: .4em solid $color3;
-	margin-top: $margin*2;
-	margin-bottom: $margin;
-	width: 60%;
-	display: block;
+	@include breakpoint(teen) {
+		content: '';
+		border-bottom: .4em solid $color3;
+		margin-top: $margin*2;
+		margin-bottom: $margin;
+		width: 60%;
+		display: block;
+	}
 
 }
 .read .aside {

@@ -29,8 +29,8 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 1.5em;
-    margin: 0.3em;
+    font-size: 1.9em;
+    margin: 0.2em 0 0 ;
     @include breakpoint(big-baby-sleep) { 
     font-size: 1.5em; 
     }
@@ -49,15 +49,15 @@ h1 {
     }
 }
 
-h2 {font-size:1.2em; 
+h2 {
+    font-size:1.2em; 
     margin-bottom: .2em;
     }
 
 article h2 {
-    font-size: 1em;
     color: $textmain;
     text-align: left;
-    margin-top: 1.5em;
+    margin-top: $margin;
 }
 
 .read h2  {
@@ -79,6 +79,7 @@ section h2, h2.subtitle {
 }
 
 .read h2.subtitle {
+    font-size: 1.1em;
     @include breakpoint(teen-up) { 
         text-align: left;
         font-size: 1.2em;
@@ -133,7 +134,7 @@ p {
     font-weight: 300;
     max-width: 40em;
     text-align: justify;
-    font-size: .9em;
+    font-size: 1em;
     @include breakpoint(big-baby-sleep) { 
         font-size: .7em;
     }
@@ -286,8 +287,8 @@ sub {
 
 
 figcaption {
-    font-size:.7em;
-    font-weight: bold;
+    font-size:.8em;
+    font-weight: 500;
      text-align: justify;
      @include breakpoint(big-baby-sleep) { 
         font-size: .5em;
@@ -313,9 +314,12 @@ figcaption {
 }
 
 
-aside {font-size:.8em; 
-    p {
-    text-align: left;
+aside {
+    @include breakpoint(teen) {
+        font-size:.8em; 
+        p {
+        text-align: left;
+        }
     }
 }
 

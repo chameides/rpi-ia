@@ -57,7 +57,8 @@
     }
   }
   ul.extra {
-    margin-top: $margin*2;  
+    margin-top: $margin*2;
+    font-size: .8rem;  
   }
 }
 
@@ -85,11 +86,8 @@
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content:center;
-
-    font-size: .7rem;
     padding: 0 $margin;
     flex-direction: row;
-    
     flex-wrap: wrap;
     
     li {
@@ -104,6 +102,7 @@
 
 footer ul.extra {
   text-transform: uppercase;
+  font-size: .7rem;
 }
 
 
@@ -116,11 +115,7 @@ body.menu-on .wrapper {
     opacity: 0
 }
 
-a:link, .a:visited, a:active, a:hover {
-    color: white;
-    width: 100%;
-    display: block;
-  }
+
 
 
 

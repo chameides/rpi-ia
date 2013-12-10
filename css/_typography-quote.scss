@@ -9,6 +9,7 @@ blockquote{
 	max-width: 25em;
 	quotes: "\201C""\201D""\2018""\2019";
 	text-align: justify;
+	font-weight: 500;
 	@include breakpoint(big-baby-sleep) { 
     margin-left: 20%;
     font-size: .7em;
@@ -29,10 +30,11 @@ cite{
 	display:block;
 	text-transform:uppercase;
 	letter-spacing:.1em;
-	font-weight:900;
+	font-weight:700;
 	font-style:normal;
 	font-size:.7em;
 	margin: .4em 2.2em+$margin $margin+$margin;
+	font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
 	@include breakpoint(big-baby-sleep) { 
     margin-left: 20%;
     font-size: .5em;

@@ -1,6 +1,6 @@
 /* General Layout */
 body {
-  padding: 0px 0px 4em;
+  padding: 0px;
   min-width: 310px;
 }
 
@@ -15,8 +15,10 @@ body {
 }
 
 .read .content {
+	margin-right: $margin;
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
