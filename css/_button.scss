@@ -1,8 +1,8 @@
 /*this goes in button */
 
 .flex-menu-wrapper {
-  max-width: 55px;
-  @include flex-basis (15%);
+  min-width: 40px;
+
 }
 
 .flex-menu-icon {
@@ -10,16 +10,17 @@
   }
 
 .flex-donate-wrapper {
-  max-width: 80px;
-  @include flex-basis (23%);
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(flex-end);
   }
 
 .flexdonate {
-  font-size:.5em;
+  font-size:.6em;
   color: white;
-  vertical-align: center;
   text-align: center;
-  padding: .5em;
+  padding: .6em;
+
 
 }
 

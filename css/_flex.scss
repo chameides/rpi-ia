@@ -2,9 +2,9 @@
   width: 100%;
   @include flexbox;
   @include flex-flow(row);
-  @include justify-content(center);
-  padding: $pagemargin;
-  @include align-items(center);
+  @include justify-content(left);
+  padding: $margin $margin $margin/2;
+  /*@include align-items(center);*/
 }
 
 /* not using multiline flex
@@ -25,10 +25,15 @@
 */
 
 .flexitem {
-  padding-right: $margin/2;
-  @include flex-grow(1);
+  padding-right: $margin;
   @include breakpoint(teen) { 
     padding-right: $margin; 
   }
 
+}
+
+
+.title {
+  padding-top: 0px;
+  margin-top: 0px;
 }

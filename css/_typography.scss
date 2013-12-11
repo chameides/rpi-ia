@@ -21,10 +21,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-h1, h2 {
+h1, h2, .title {
     text-transform: uppercase;
     margin-top: 0px;
     text-align: center;
+
 
 }
 
@@ -323,7 +324,24 @@ aside {
     }
 }
 
-
+.title {
+    color: #CCCCCC;
+    font-size: 1.1em;
+    font-weight: 500;
+    line-height: .5em;
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    @include flex-grow(1);
+}
+.title .part2 {
+    color: #FFFFFF;
+    display: block;
+    font-size: 1.6em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1em;
+}
 
 @import "typography-quote";
 

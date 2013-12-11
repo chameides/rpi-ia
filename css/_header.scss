@@ -49,7 +49,22 @@
 }
 
 
-
+.box-shadow-menu {
+  position: relative;
+  padding-left: 1.25em;
+}
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0em;
+  width: 1.3em;
+  height: 0.15em;
+  background: white;
+  box-shadow: 
+    0 0.5em 0 0 white,
+    0 1em 0 0 white;
+}
 
 
 /* End of Header */
