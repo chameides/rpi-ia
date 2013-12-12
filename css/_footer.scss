@@ -14,7 +14,7 @@ footer {
   font-size: .6em;
   clear: both;
   background: #333;
-  background: darken($color1, 60);
+  background: $color1;
   color: white;
   padding: 0.1em 0 6em;
 }
