@@ -16,17 +16,17 @@ aside {
 	@include breakpoint(teen-up) { 
 		float: right;
 		width:$smallratio;
-		margin-bottom: $margin;
-		padding-right: $margin; 
+		margin-bottom: $margin2;
+		padding-right: $margin2; 
 		p {margin-top: 0;}
 		} 
 	}
 
 .read aside {
 	@include breakpoint(teen-up) { 
-		margin-bottom: $margin; 
-		padding-top: $margin;
-		padding-left: $pagemargin;
+		margin-bottom: $margin2; 
+		padding-top: $margin2;
+		padding-left: $margin2;
 		width:100%-$ratio;
 		float: none;
 		clear: both;

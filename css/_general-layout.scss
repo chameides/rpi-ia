@@ -5,17 +5,17 @@ body {
 }
 
 .content {
- margin-left: $margin;
+ margin-left: $margin2;
  /*on larger screen, additional margin */
  @include breakpoint(teen-up) {
  	margin-top:1em;
- 	margin-left: $pagemargin;
+ 	margin-left: $margin2;
 
  }
 }
 
 .read .content {
-	margin-right: $margin;
+	margin-right: $margin2;
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
 		margin-right: 0;

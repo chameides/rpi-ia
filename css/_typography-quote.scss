@@ -33,7 +33,7 @@ cite{
 	font-weight:700;
 	font-style:normal;
 	font-size:.7em;
-	margin: .4em 2.2em+$margin $margin+$margin;
+	margin: .4rem 2.2rem+$margin2 $margin2+$margin2;
 	font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
 	@include breakpoint(big-baby-sleep) { 
     margin-left: 20%;

@@ -19,9 +19,9 @@
 
 [class*='col-'] {
   float: left;
-  padding-right: $margin;
+  padding-right: $margin2;
   @include breakpoint(teen) { 
-    padding-right: $pagemargin*1.5;   
+    padding-right: $margin2*1.5;   
   }
 
 }
@@ -101,9 +101,9 @@
 
 
 section {
-  margin-bottom: $margin;
+  margin-bottom: $margin2;
   @include breakpoint(teen) { 
-    margin-bottom: $pagemargin*1.5;   
+    margin-bottom: $margin2*1.5;   
   }
   }
 

@@ -3,7 +3,7 @@
   @include flexbox;
   @include flex-flow(row);
   @include justify-content(left);
-  padding: $margin $margin $margin/2;
+  padding: $margin2 $margin2 $margin2/2;
   /*@include align-items(center);*/
 }
 
@@ -25,9 +25,9 @@
 */
 
 .flexitem {
-  padding-right: $margin;
+  padding-right: $margin2;
   @include breakpoint(teen) { 
-    padding-right: $margin; 
+    padding-right: $margin2; 
   }
 
 }

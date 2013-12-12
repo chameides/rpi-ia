@@ -45,8 +45,8 @@ h1 {
     @include breakpoint(teen-up) { 
         font-size: 3em;
         text-align: left;
-        margin-left: $pagemargin;
-        margin-right: $pagemargin;
+        margin-left: $margin2;
+        margin-right: $margin2;
     }
 }
 
@@ -58,7 +58,7 @@ h2 {
 article h2 {
     color: $textmain;
     text-align: left;
-    margin-top: $margin;
+    margin-top: $margin2;
 }
 
 .read h2  {
@@ -66,15 +66,15 @@ article h2 {
         margin-left: $ratio;
         color: $lighttext;
         text-transform: none;
-        margin-right: $pagemargin;
-        margin-top: $margin*3;
+        margin-right: $margin2;
+        margin-top: $margin2*3;
 
     }
 }
 
 section h2, h2.subtitle {
     text-align: center;
-    margin: 0 0 $margin;
+    margin: 0 0 $margin2;
 
 
 }
@@ -84,7 +84,7 @@ section h2, h2.subtitle {
     @include breakpoint(teen-up) { 
         text-align: left;
         font-size: 1.2em;
-        padding: 0 $pagemargin;
+        padding: 0 $margin2;
         margin-bottom: 3em;
         text-transform: uppercase;
         width: 100%;
@@ -145,7 +145,7 @@ p {
     @include breakpoint(teen-up) { 
         margin-left: $ratio;
         font-size: 1em;
-        margin-right: $pagemargin;
+        margin-right: $margin2;
     }
 }
 
@@ -302,7 +302,7 @@ figcaption {
         float: left;
         clear: left;
         font-weight: normal;
-        margin-left: $pagemargin;
+        margin-left: $margin2;
         text-align: left;
         display: inline;
     }
