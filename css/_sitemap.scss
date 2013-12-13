@@ -2,6 +2,18 @@
   text-align: left;
   margin: $margin2;
   li {
-    
+  	margin-bottom: $margin2;
+  	text-transform: uppercase;
+  	ul {
+      margin: 0;
+  	}
+  	ul li{
+		font-size: .8em;
+		text-transform: none;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    width: 100%;
+
+  	} 
   }
 }

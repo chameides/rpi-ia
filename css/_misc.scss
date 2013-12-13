@@ -2,14 +2,12 @@
 
 /* Red Line */
 .header, .nav {
-border-style: none;
 border-bottom-style:solid;
 border-bottom-width:thin;
 border-bottom-color:$color2;
 }
 
-footer {
-border-style: none;
+footer, footer .sitemap {
 border-top-style:solid;
 border-top-width:thin;
 border-top-color:$color2;
