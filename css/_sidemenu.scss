@@ -76,18 +76,10 @@
     width: 100%;
     @include flexbox;
     @include align-items(center); 
-    @include flex-flow(row);
-    @include justify-content(center);
     padding: 0 $margin2;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
     li {
       text-align: center;
-      margin: 1px;
-      -webkit-flex: 1 1 24%;
-      -moz-flex: 1 1 24%;
-      flex: 1 1 24%;
+      @include flex-basis(25%);
     }
   }
 }
