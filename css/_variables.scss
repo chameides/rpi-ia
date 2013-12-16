@@ -18,7 +18,8 @@
 	
 	$textmain: black;
 	$lighttext: lighten($textmain,30%);
-	$color3: #003399;
+	$color3: #003399; /*blue link text */
+	$color4: lighten($color3, 55) /*lighter link text for dark bg */
 
 
 
