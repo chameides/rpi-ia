@@ -4,7 +4,12 @@
   @include flex-flow(row);
   @include justify-content(left);
   padding: $margin2 $margin2 $margin2/2;
-  /*@include align-items(center);*/
+  @include breakpoint(teen) {
+    @include align-items(center);
+    background: blue;
+    padding-top: $margin2;
+    padding-bottom: $margin2;
+  }
 }
 
 /* not using multiline flex
@@ -27,7 +32,8 @@
 .flexitem {
   padding-right: $margin2;
   @include breakpoint(teen) { 
-    padding-right: $margin2; 
+    padding-right: $margin2;
+
   }
 
 }

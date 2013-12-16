@@ -334,11 +334,10 @@ aside {
     text-transform: none;
     @include flex-grow(1);
     @include breakpoint (teen) {
-        font-size: 1.4em;
         color: #FFF;
-        font-size: 1.6em;
+        font-size: 2.2em;
         font-weight: 700;
-        text-transform: uppercase;    
+        text-transform: uppercase;   
     }
 }
 .title .part2 {
@@ -352,16 +351,15 @@ aside {
         display: inline;
         margin-left: .2em;
         font-size: 1em;
+        line-height: 1em;
     }
 }
 
 .tagline {
     color: #CCC;
-    @include flex-grow(20);
-    align-self:baseline;
-    padding-top: .5em;
     font-weight: 500;
-    font-size: 1em;
+    font-size: .6em;
+    text-transform: none;
     @include breakpoint(baby) {
         display: none;
     }
