@@ -46,6 +46,12 @@
   @include breakpoint(teen-sleep) { width: 33.33%; }
 }
 
+.sitemap ul li {
+  @include breakpoint(teen) { 
+    width: 25%;
+   }
+}
+
 
 .read .col-article {
   @include breakpoint(teen) {
