@@ -145,7 +145,7 @@ p {
     @include breakpoint(teen-up) { 
         margin-left: $ratio;
         font-size: 1em;
-        margin-right: $margin2;
+        margin-right: $margin3;
     }
 }
 
@@ -290,7 +290,7 @@ sub {
 figcaption {
     font-size:.8em;
     font-weight: 500;
-     text-align: justify;
+    text-align: justify;
      @include breakpoint(big-baby-sleep) { 
         font-size: .5em;
     }

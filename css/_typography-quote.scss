@@ -5,11 +5,9 @@ p.quote {
 
 blockquote{
 	line-height:1.2em;
-	margin: 1.5em 2em 0 2.2em;
-	max-width: 25em;
-	quotes: "\201C""\201D""\2018""\2019";
 	text-align: justify;
 	font-weight: 500;
+	margin-bottom: 0;
 	@include breakpoint(big-baby-sleep) { 
     margin-left: 20%;
     font-size: .7em;
@@ -22,8 +20,8 @@ blockquote:before{
 	font-size:2.75em;
 	text-indent:-.5em;
 	margin-top:.1em;
-	float:left;
 	opacity:.3;
+	float: left;
 	}
 
 cite{
@@ -33,18 +31,23 @@ cite{
 	font-weight:700;
 	font-style:normal;
 	font-size:.7em;
-	margin: .4rem 2.2rem+$margin2 $margin2+$margin2;
+	margin: .4rem 2.2rem $margin2+$margin2 4em;	
 	font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
 	@include breakpoint(big-baby-sleep) { 
-    margin-left: 20%;
-    font-size: .5em;
-  }	
+	    margin-left: 20%;
+	    font-size: .5em;
+  	}
+  	@include breakpoint(teen-up) {
+		float: left;
+		clear: left;
+		width: 75%;
+		margin-right: 25%;
+  	}	
 }
 
 
 cite:before{
 	content:"\2014";
-	float:left;
 	opacity:.3;
 	}
 
@@ -54,5 +57,8 @@ cite:before{
 	max-width: 75%;
 	font-size: 1.2em;
 	color: $lighttext;
+	margin-right: 25%;
+	float: left;
+	display: inline-block;
 	}
 }
