@@ -1,13 +1,5 @@
 /* Footer */
 
-.footerimage {
-  width: 100%;
-  background: white;
-  @include breakpoint(baby) { 
-  display: none;
-  }
-}
-
 
 footer {
   text-align: center;
@@ -15,9 +7,23 @@ footer {
   background: #333;
   background: $color1;
   color: white;
-  padding: 0.1em 0 6em;
+  padding: 0 0 6em;
 }
 
+.footerbanner {
+  width: 100%;
+  background: white;
+  padding: 0;
+  @include breakpoint(baby) { 
+  display: none;
+  }
+}
+
+.footerlogo {
+  width: 100%;
+  max-width: 300px;
+  margin: $margin2*2 auto;
+}
 
 .col-bottomlink {
 	width: 25%;
@@ -25,7 +31,16 @@ footer {
 
 @import "sitemap";
 
-
+.smallprint {
+  clear: both;
+  margin: $margin2;
+  font-size: .7em;
+  a:link {
+    display: inline;
+    line-height: 2em;
+    color: $color4;
+  }
+}
 
 
 
