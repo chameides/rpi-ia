@@ -16,7 +16,7 @@ body {
     font-family: "franklin-gothic-urw", verdana, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .tagline {
     font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
     font-weight: 700;
 }
@@ -325,7 +325,7 @@ aside {
 }
 
 .title {
-    color: #CCCCCC;
+    color: #CCC;
     font-size: 1.1em;
     font-weight: 500;
     line-height: .5em;
@@ -333,14 +333,38 @@ aside {
     text-align: left;
     text-transform: none;
     @include flex-grow(1);
+    @include breakpoint (teen) {
+        font-size: 1.4em;
+        color: #FFF;
+        font-size: 1.6em;
+        font-weight: 700;
+        text-transform: uppercase;    
+    }
 }
 .title .part2 {
-    color: #FFFFFF;
+    color: #FFF;
     display: block;
     font-size: 1.6em;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.1em;
+    @include breakpoint(teen) {
+        display: inline;
+        margin-left: .2em;
+        font-size: 1em;
+    }
+}
+
+.tagline {
+    color: #CCC;
+    @include flex-grow(20);
+    align-self:baseline;
+    padding-top: .5em;
+    font-weight: 500;
+    font-size: 1em;
+    @include breakpoint(baby) {
+        display: none;
+    }
 }
 
 @import "typography-quote";
