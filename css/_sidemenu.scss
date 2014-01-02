@@ -39,6 +39,12 @@
 
   ul.nav {
     margin-top: 1em;
+    border-bottom-style:solid;
+    border-bottom-width:thin;
+    border-bottom-color:$color2;
+    @include breakpoint(adult) { 
+      border: none;
+}
     li {
       border-bottom: 1px solid #1A1A1A;
       border-top: 1px solid #4D4D4D;
@@ -47,6 +53,7 @@
       padding: $margin2;
       @include breakpoint(adult) {
         display: inline;
+        border: none;
       }
     }
     li:first-of-type {
@@ -73,6 +80,9 @@
     color: white;
     width: 100%;
     display: block;
+    @include breakpoint(adult) {
+      display: inline;
+    }
   }
   ul {
     list-style-type:none;
