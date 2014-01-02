@@ -43,8 +43,13 @@
     border-bottom-width:thin;
     border-bottom-color:$color2;
     @include breakpoint(adult) { 
-      border: none;
-}
+      border:none;
+      border-right-style:solid;
+      border-right-width:thin;
+      border-right-color:white;
+      display: inline;
+
+    }
     li {
       border-bottom: 1px solid #1A1A1A;
       border-top: 1px solid #4D4D4D;
@@ -65,7 +70,7 @@
   }
   ul.extra {
     margin-top: $margin2*2;
-    font-size: .8rem;  
+    font-size: .8rem;
   }
 }
 
@@ -93,9 +98,22 @@
     @include flexbox;
     @include align-items(center); 
     padding: 0 $margin2;
+    @include breakpoint(adult) {
+      width: auto;
+      display: inline;
+      font-size: .8em;
+      .mobileonly {
+        display: none;
+      }
+    }
+    
     li {
       text-align: center;
       @include flex-basis(25%);
+      @include breakpoint(adult) {
+        display: inline;
+        margin-right: $margin2;
+      }
     }
   }
 }
