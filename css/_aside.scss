@@ -36,7 +36,11 @@ aside {
 
 
 .priority3 {
+	@include breakpoint(baby) {
+		clear: left;
+	}
 	@include breakpoint(senior) { 
-	float: left;
-	width:10%}
+		float: left;
+		width:10%
+	}
 }

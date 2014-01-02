@@ -31,7 +31,8 @@ h1, h2, .title {
 
 h1 {
     font-size: 1.9em;
-    margin: 0.2em 0 0 ;
+    line-height: 1em;
+    margin: 0.2em 0 0;
     @include breakpoint(big-baby-sleep) { 
     font-size: 1.5em; 
     }
@@ -131,6 +132,15 @@ h6 {
     margin: 2.33em 0;
 }
 
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+p,
+pre {
+    margin: 0 0 .8em;
+}
+
 p {
     font-weight: 300;
     max-width: 40em;
@@ -139,6 +149,11 @@ p {
     @include breakpoint(big-baby-sleep) { 
         font-size: .7em;
     }
+}
+
+/*used on alumni-classes to reduce white space between intro paragraph and boxes*/
+p.squeeze {
+    margin-bottom: 0;
 }
 
 .read p {
@@ -201,14 +216,7 @@ mark {
     color: #000;
 }
 
-/**
- * Address margins set differently in IE 6/7.
- */
 
-p,
-pre {
-    margin: 0 0 .8em;
-}
 
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.

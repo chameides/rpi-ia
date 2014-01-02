@@ -7,6 +7,10 @@ border-bottom-width:thin;
 border-bottom-color:$color2;
 }
 
+.pageheader {
+	margin-bottom: .2em;
+}
+
 footer {
 	border-style: none;
 	@include breakpoint(baby) {

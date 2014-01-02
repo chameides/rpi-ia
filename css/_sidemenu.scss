@@ -62,7 +62,13 @@
   }
 }
 
-.sidemenu, footer {
+/*too much space between redline and text on alumni menu because of the <br> before login, the <br> is there to force the <hr> to vertical align with the rest of the text  */
+.alumni ul.extra{
+    margin-top: 0;
+  }
+
+
+.sidemenu, footer,  {
   a:link, a:visited, a:active, a:hover {
     color: white;
     width: 100%;
@@ -83,7 +89,6 @@
     }
   }
 }
-
 footer ul.extra {
   text-transform: uppercase;
 }

@@ -11,9 +11,16 @@
 		font-size: .8em;
 		text-transform: none;
     margin-bottom: 0;
-    padding-bottom: .5em;
+    padding-bottom: .7em;
     width: 100%;
-
   	} 
+  }
+}
+
+footer ul.secondaryextra { 
+  @include justify-content(space-between);
+  li{
+    @include flex-basis(auto);
+    padding-right: 10px;
   }
 }
