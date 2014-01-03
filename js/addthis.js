@@ -5,7 +5,7 @@ addthis.layers({
     'numPreferredServices' : 5
   },
   'follow' : {
-    'offset' : {'top':'.4rem'},
+    'offset' : {'top':'1.5rem'},
     'services' : [
       {'service': 'facebook', 'id': 'RPIAlumni'},
       {'service': 'twitter', 'id': 'RPIAlumni'},

@@ -347,6 +347,9 @@ aside {
         font-weight: 700;
         text-transform: uppercase;   
     }
+    @include breakpoint (adult) {
+        font-size: 3em;
+    }
 }
 .title .part2 {
     color: #FFF;

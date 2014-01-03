@@ -10,7 +10,8 @@
     padding-bottom: $margin2;
   }
   @include breakpoint(adult) {
-    padding-bottom: 0
+    padding-bottom: 0;
+    padding-top: .5rem;
   }
 }
 
