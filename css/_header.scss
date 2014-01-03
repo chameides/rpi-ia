@@ -3,8 +3,10 @@
 
 .header {
   background: $color1;
-  @include flex-wrap( nowrap ) 
-
+  @include flex-wrap( nowrap );
+  @include breakpoint(adult) {
+    padding: $margin2;
+  } 
 }
 
 .bannerimage {

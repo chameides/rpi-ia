@@ -5,13 +5,15 @@ body {
 }
 
 .content {
- margin-left: $margin2;
- /*on larger screen, additional margin */
- @include breakpoint(teen-up) {
- 	margin-top:1em;
- 	margin-left: $margin2;
-
- }
+	margin-left: $margin2;
+ 	/*on larger screen, additional margin */
+	@include breakpoint(teen-up) {
+ 		margin-top:1em;
+ 		margin-left: $margin2;
+ 	}
+	@include breakpoint(adult) {
+ 		margin-left: $margin3;
+	}
 }
 
 .read .content {

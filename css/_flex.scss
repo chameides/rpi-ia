@@ -6,9 +6,11 @@
   padding: $margin2 $margin2 $margin2/2;
   @include breakpoint(teen) {
     @include align-items(center);
-    background: blue;
     padding-top: $margin2;
     padding-bottom: $margin2;
+  }
+  @include breakpoint(adult) {
+    padding-bottom: 0
   }
 }
 

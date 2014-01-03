@@ -14,17 +14,11 @@
   -webkit-transform:translate(-105%);
   -moz-transform:translate(-105%);
   @include breakpoint(adult) { 
-    width: 100%;
-    height: auto;
     position: relative;
-    top: auto;
-    left: auto;
-    padding: $margin2;
-    background: darken($color1, 60);
+    padding: 0rem 1rem;
     -webkit-transform:translate(0%);
     -webkit-box-shadow:none;
     font-size: .9em;
-    background: $color1;
   }
   z-index:999;
    
@@ -45,11 +39,9 @@
     border-bottom-color:$color2;
     @include breakpoint(adult) { 
       border:none;
-      border-right-style:solid;
-      border-right-width:thin;
-      border-right-color:white;
-      display: inline;
-
+      display: inline-block;
+      width: $navwidth;
+      
     }
     li {
       border-bottom: 1px solid #1A1A1A;
@@ -60,6 +52,8 @@
       @include breakpoint(adult) {
         display: inline;
         border: none;
+        padding: 0;
+        padding-right: $margin2;
       }
     }
     li:first-of-type {
@@ -100,12 +94,11 @@
     @include align-items(center); 
     padding: 0 $margin2;
     @include breakpoint(adult) {
-      width: auto;
-      display: inline;
-      position: absolute;
-      top: 1.5rem;
-      right: 0;
-      
+      width: $extrawidth; 
+      display: inline-block;
+      text-align: right;
+      margin: 0;
+      padding: 0;
       /*hides text, just the icons show */
       font-size: 0em;
       .mobileonly {
@@ -118,7 +111,8 @@
       @include flex-basis(25%);
       @include breakpoint(adult) {
         display: inline;
-        margin-right: .2rem;
+        margin-left: .3rem;
+
       }
     }
   }
