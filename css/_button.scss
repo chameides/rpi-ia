@@ -2,7 +2,9 @@
 
 .flex-menu-wrapper {
   min-width: 40px;
-
+  @include breakpoint(adult) { 
+    display: none
+  }
 }
 
 .flex-menu-icon {

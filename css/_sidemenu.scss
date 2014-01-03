@@ -24,6 +24,7 @@
     -webkit-transform:translate(0%);
     -webkit-box-shadow:none;
     font-size: .9em;
+    background: $color1;
   }
   z-index:999;
    
@@ -119,6 +120,12 @@
 }
 footer ul.extra {
   text-transform: uppercase;
+}
+
+/*icons adjacent to text on menu items */
+.menu-icon {
+  height: .9rem;
+  padding-right: .3rem;
 }
 
 
