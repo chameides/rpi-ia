@@ -29,8 +29,11 @@
   color: white;
   text-align: center;
   padding: .6em;
+  @include breakpoint(adult) { 
+      padding: .4em .6em .3em;
+      font-size: .7em;
 
-
+  }
 }
 
 
@@ -132,5 +135,3 @@ a.action:link, a.action:visited {
     text-align: center;
     padding: .7em;
   }
-
-
