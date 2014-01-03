@@ -102,6 +102,10 @@
     @include breakpoint(adult) {
       width: auto;
       display: inline;
+      position: absolute;
+      top: 1.5rem;
+      right: 0;
+      
       /*hides text, just the icons show */
       font-size: 0em;
       .mobileonly {
@@ -114,7 +118,7 @@
       @include flex-basis(25%);
       @include breakpoint(adult) {
         display: inline;
-        margin-right: $margin2;
+        margin-right: .2rem;
       }
     }
   }
