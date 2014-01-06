@@ -25,8 +25,9 @@ h1, h2, .title {
     text-transform: uppercase;
     margin-top: 0px;
     text-align: center;
-
-
+    @include breakpoint(adult) {
+        text-align: left;
+    }
 }
 
 h1 {
@@ -150,7 +151,6 @@ p {
         font-size: .7em;
     }
     @include breakpoint(adult) { 
-        font-size: 1.3em;
         max-width: auto;
     }
 }
@@ -377,6 +377,12 @@ aside {
     text-transform: none;
     @include breakpoint(baby) {
         display: none;
+    }
+}
+
+.content {
+    @include breakpoint(adult) {
+        font-size: 1.3em;
     }
 }
 
