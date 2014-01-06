@@ -28,5 +28,11 @@ a:link, a:visited{
 a:hover {
 	color: lighten($color3, 5);
 	text-shadow: 2px 2px 2px $color1; 
-	
+}
+
+/*hide phone link on desktop */
+a.phone:link, a.phone:visited, a.phone:hover {
+	@include breakpoint(adult){
+		color: white;
+	}
 }
