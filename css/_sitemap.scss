@@ -1,8 +1,9 @@
 .sitemap {
   text-align: left;
-  margin: $margin2;
+  margin: $margin2*2;
+  background: red;
   li {
-  	margin-bottom: $margin2;
+  	margin-bottom: $margin2*2;
   	text-transform: uppercase;
   	ul {
       margin: 0;
