@@ -128,6 +128,13 @@ footer ul.extra {
   padding-right: .3rem;
 }
 
+ul.extra .menu-icon {
+  @include breakpoint(adult) {
+  padding-right: 0;
+  padding-left: .3rem;
+}
+}
+
 
 body.menu-on .sidemenu {
   -webkit-transform:translate(0%);

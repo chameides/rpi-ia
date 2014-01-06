@@ -334,7 +334,7 @@ aside {
 
 .title {
     color: #CCC;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 500;
     line-height: .5em;
     margin: 0;
@@ -348,7 +348,7 @@ aside {
         text-transform: uppercase;   
     }
     @include breakpoint (adult) {
-        font-size: 3em;
+        font-size: 2.8em;
     }
 }
 .title .part2 {

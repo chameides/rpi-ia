@@ -36,7 +36,9 @@
   padding-right: $margin2;
   @include breakpoint(teen) { 
     padding-right: $margin2;
-
+  }
+  @include breakpoint(adult) { 
+    padding-right: 0;
   }
 
 }
