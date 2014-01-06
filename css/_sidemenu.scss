@@ -132,7 +132,7 @@ ul.extra .menu-icon {
   @include breakpoint(adult) {
   padding-right: 0;
   padding-left: .3rem;
-}
+  }
 }
 
 
@@ -140,10 +140,12 @@ body.menu-on .sidemenu {
   -webkit-transform:translate(0%);
  }
 
-
+/*this makes the main body fade out when the sidemenu goes, but unfortunately also affects the sidemenu now that I moved it inside the wrapper
 body.menu-on .wrapper {
-    opacity: 0
+    opacity: 0;
 }
+/*
+
 
 
 
