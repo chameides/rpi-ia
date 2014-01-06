@@ -1,8 +1,10 @@
 addthis.layers({
   'theme' : 'transparent',
   'share' : {
-    'position' : 'left',
-    'numPreferredServices' : 5
+    'position' : 'right',
+    'services' : 'facebook,google_plusone_share,twitter,pinterest,linkedin,email,more',
+    'offset' : {'bottom':'5.5rem'}
+    //'numPreferredServices' : 5
   },
   'follow' : {
     'offset' : {'top':'1.5rem'},

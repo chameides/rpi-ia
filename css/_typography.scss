@@ -149,6 +149,10 @@ p {
     @include breakpoint(big-baby-sleep) { 
         font-size: .7em;
     }
+    @include breakpoint(adult) { 
+        font-size: 1.3em;
+        max-width: auto;
+    }
 }
 
 /*used on alumni-classes to reduce white space between intro paragraph and boxes*/

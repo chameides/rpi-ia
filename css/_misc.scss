@@ -9,6 +9,9 @@ border-bottom-color:$color2;
 
 .pageheader {
 	margin-bottom: .2em;
+	@include breakpoint(adult) {
+		margin-bottom: .6em;
+	}
 }
 
 footer {
