@@ -50,11 +50,9 @@
 
 /*on two grid, aligns the odds to the left side*/
 .col-section:nth-of-type(odd) {
-  @include breakpoint(baby) {
-    clear: left;
-  }
-  @include breakpoint(adult) {
-    clear: left;
+  clear: left;
+  @include breakpoint(big-baby-sleep) {
+    clear: inherit;
   }
 }
 
