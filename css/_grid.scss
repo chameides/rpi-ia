@@ -21,6 +21,9 @@
   @include breakpoint(teen) { 
     padding-right: $margin2*1.5;   
   }
+  @include breakpoint(adult) { 
+    padding-right: $margin2*2;   
+  }
 
 }
 
@@ -116,6 +119,9 @@ section {
   margin-bottom: $margin2;
   @include breakpoint(teen) { 
     margin-bottom: $margin2*1.5;   
+  }
+  @include breakpoint(adult) { 
+    margin-bottom: $margin2*2;   
   }
   }
 
