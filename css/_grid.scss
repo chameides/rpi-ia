@@ -45,11 +45,15 @@
   @include breakpoint(big-baby-sleep) { width: 33.33%; }
   @include breakpoint(teen) { width: 50%; }
   @include breakpoint(teen-sleep) { width: 33.33%; }
+  @include breakpoint(adult) { width: 50%; }
 }
 
 /*on two grid, aligns the odds to the left side*/
 .col-section:nth-of-type(odd) {
   @include breakpoint(baby) {
+    clear: left;
+  }
+  @include breakpoint(adult) {
     clear: left;
   }
 }
