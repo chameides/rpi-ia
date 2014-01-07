@@ -31,13 +31,10 @@ body {
 	@include breakpoint(teen-up) { 
 		float:left; 
 		display:inline;
-
-	} 
-	@include breakpoint(teen) {
 		width: 72%;
-	}
+	} 
 	@include breakpoint(teen-sleep) {
-		width: 75%;
+		width: 73%;
 	}
 	@include breakpoint(senior) { 
 		width: 74%;

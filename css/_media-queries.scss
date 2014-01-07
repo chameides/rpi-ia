@@ -1,29 +1,29 @@
 @mixin breakpoint($point) {
   /* Smartphones, except large phone landscape ----------- */
   @if $point == baby {
-    @media only screen and (max-width : 598px) { @content; }
+    @media only screen and (max-width : 707px) { @content; }
   }
   
 
   @else if $point == big-baby-sleep {
     /* large phone (landscape) ----------- */
-    @media only screen and (min-width : 320px) and (max-width : 719px) and (orientation:landscape)  { @content; }
+    @media only screen and (min-width : 320px) and (max-width : 707px) and (orientation:landscape)  { @content; }
   }
   
 
   @else if $point == teen-up {
     /*tablet and up*/
-    @media only screen and (min-width : 599px) { @content; }
+    @media only screen and (min-width : 708px) { @content; }
   }
 
   @else if $point == teen {
     /*tablet*/
-    @media only screen and (min-width : 599px) and (orientation:portrait) { @content; }
+    @media only screen and (min-width : 708px) and (max-width : 1024px) and (orientation:portrait) { @content; }
   }
 
   @else if $point == teen-sleep {
     /*tablet*/
-    @media only screen and (min-width : 720px) and (orientation:landscape) { @content; }
+    @media only screen and (min-width : 708px) and (max-width : 1024px) and (orientation:landscape) { @content; }
   }
 
   @else if $point == adult {

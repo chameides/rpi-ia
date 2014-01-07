@@ -43,9 +43,8 @@
    }
   /*blocks are three across on large smartphones landscape*/
   @include breakpoint(big-baby-sleep) { width: 33.33%; }
-  @include breakpoint(teen) { width: 50%; }
+  @include breakpoint(teen-up) { width: 50%; }
   @include breakpoint(teen-sleep) { width: 33.33%; }
-  @include breakpoint(adult) { width: 50%; }
 }
 
 /*on two grid, aligns the odds to the left side*/
@@ -54,17 +53,20 @@
   @include breakpoint(big-baby-sleep) {
     clear: inherit;
   }
+  @include breakpoint(teen-sleep) {
+    clear: inherit;
+  }
 }
 
 .sitemap ul li {
-  @include breakpoint(teen) { 
+  @include breakpoint(teen-up) { 
     width: 25%;
    }
 }
 
 
 .read .col-article {
-  @include breakpoint(teen) {
+  @include breakpoint(teen-up) {
     margin: 0;
     padding: 0;
     }

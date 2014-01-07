@@ -30,6 +30,7 @@ h1, h2, .title {
     }
 }
 
+
 h1 {
     font-size: 1.9em;
     line-height: 1em;
@@ -37,7 +38,7 @@ h1 {
     @include breakpoint(big-baby-sleep) { 
     font-size: 1.5em; 
     }
-    @include breakpoint(teen) { 
+    @include breakpoint(teen-up) { 
     font-size: 1.9em; 
     }
 
@@ -147,9 +148,11 @@ p {
     max-width: 40em;
     text-align: justify;
     font-size: 1em;
+    /*
     @include breakpoint(big-baby-sleep) { 
         font-size: .7em;
     }
+    */
     @include breakpoint(adult) { 
         max-width: auto;
     }
@@ -309,7 +312,7 @@ figcaption {
 }
 
 .read figcaption {
-    @include breakpoint(teen) {
+    @include breakpoint(teen-up) {
         width: $smallratio;
         float: left;
         clear: left;
@@ -321,14 +324,14 @@ figcaption {
 }
 
 .aside figcaption {
-    @include breakpoint(teen) {
+    @include breakpoint(teen-up) {
         margin-left: 0;
     }
 }
 
 
 aside {
-    @include breakpoint(teen) {
+    @include breakpoint(teen-up) {
         font-size:.8em; 
         p {
         text-align: left;
@@ -345,7 +348,7 @@ aside {
     text-align: left;
     text-transform: none;
     @include flex-grow(1);
-    @include breakpoint (teen) {
+    @include breakpoint (teen-up) {
         color: #FFF;
         font-size: 2.2em;
         font-weight: 700;
@@ -362,7 +365,7 @@ aside {
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.1em;
-    @include breakpoint(teen) {
+    @include breakpoint(teen-up) {
         display: inline;
         margin-left: .2em;
         font-size: 1em;
