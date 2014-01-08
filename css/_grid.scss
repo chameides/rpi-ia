@@ -1,13 +1,10 @@
 /* Grid */
 
-
 * {
   @include box-sizing(border-box);
 }
 
-.grid {
-  margin: 0;
-}
+/*could probably delete this rule */
 .grid:after {
   /* Or @extend clearfix */
   content: "";
@@ -15,48 +12,83 @@
   clear: both;
 }
 
+
 [class*='col-'], .sitemap ul li {
   float: left;
-  padding-right: $margin2;
+  padding-right: $margin;
   @include breakpoint(teen) { 
     padding-right: $margin2*1.5;   
   }
   @include breakpoint(adult) { 
-    padding-right: $margin2*2;   
+    padding-right: $margin3;
   }
-
 }
 
 
-.grid [class*='col-']:last-of-type,  {
-  padding-right: 0;
-}
-
-/* Opt-in outside padding */
+/* Opt-in outside padding 
 .grid-pad {
   padding: 0;
 }
+*/
+
 
 .col-section, .sitemap ul li {
-  /*blocks are two across on smartphones*/
-  @include breakpoint(baby) { width: 50%;
-   }
-  /*blocks are three across on large smartphones landscape*/
-  @include breakpoint(big-baby-sleep) { width: 33.33%; }
-  @include breakpoint(teen-up) { width: 50%; }
-  @include breakpoint(teen-sleep) { width: 33.33%; }
+  /*blocks are two across on portrait phone and tablet
+    blocks are three across on landscape phone and tablet as well as desktop
+   */
+  @include breakpoint(baby) { 
+    width: 50%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(big-baby-sleep) { 
+    width: 33.33%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(teen) { 
+    width: 50%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(teen-sleep) { 
+    width: 33.33%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(adult) {
+    width: 33.33%; /*if you change this, must change .col-section:nth-of-type */
+  }
 }
 
-/*on two grid, aligns the odds to the left side*/
-.col-section:nth-of-type(odd) {
-  clear: left;
-  @include breakpoint(big-baby-sleep) {
-    clear: inherit;
-  }
-  @include breakpoint(teen-sleep) {
-    clear: inherit;
+
+/*.col-sections have various heights and this set of rules ensure that the tops of second rows line up */
+
+/*col-sections are two across*/
+@include breakpoint(baby) {
+  .col-section:nth-of-type(2n + 1) {
+    clear: left;
   }
 }
+
+@include breakpoint(teen) {
+  .col-section:nth-of-type(2n + 1) {
+    clear: left;
+  }
+}
+
+/*col-sections are three across*/
+@include breakpoint(big-baby-sleep) {
+  .col-section:nth-of-type(3n + 1) {
+    clear: left;
+  }
+}
+
+@include breakpoint(teen-sleep) {
+  .col-section:nth-of-type(3n + 1) {
+    clear: left;
+  }
+}
+
+@include breakpoint(adult) {
+  .col-section:nth-of-type(3n + 1) {
+    clear: left;
+  }
+}
+
+
 
 .sitemap ul li {
   @include breakpoint(teen-up) { 
@@ -112,10 +144,8 @@
 }
 
 .module {
-  padding: 0;
   min-width: 25px;
   min-height: 25px;
-  overflow: hidden;
 }
 
 
