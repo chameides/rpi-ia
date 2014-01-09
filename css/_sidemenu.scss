@@ -166,6 +166,10 @@ body.menu-on .wrapper {
 }
 */
 
+
+
+/*this should be folded into above code after icons for alumni pages is figured out */
+
 .iconnav {
   ul:after {
    content: '';
@@ -185,11 +189,16 @@ body.menu-on .wrapper {
     .menu-icon {
       height: 3em;
     }
-  }
-   
-
+  } 
 }
 
+ul.iconfooter {
+  font-size: .7em;
+  margin-top: $margin2*2;
+    .menu-icon {
+      height: 3em;
+    }
+}
 
 
 
