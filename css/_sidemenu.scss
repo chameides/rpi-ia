@@ -170,7 +170,7 @@ body.menu-on .wrapper {
 
 /*this should be folded into above code after icons for alumni pages is figured out */
 
-@include breakpoint(adult) {
+@include breakpoint(baby) {
   .iconnav {
     ul:after {
      content: '';
@@ -197,7 +197,6 @@ body.menu-on .wrapper {
         height: 3em;
       }
   }
-
 }
 
 
