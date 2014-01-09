@@ -18,17 +18,17 @@
 
   @else if $point == teen {
     /*tablet*/
-    @media only screen and (min-width : 708px) and (max-width : 1024px) and (orientation:portrait) { @content; }
+    @media only screen and (min-width : 708px) and (max-width : 1023px) and (orientation:portrait) { @content; }
   }
 
   @else if $point == teen-sleep {
     /*tablet*/
-    @media only screen and (min-width : 708px) and (max-width : 1024px) and (orientation:landscape) { @content; }
+    @media only screen and (min-width : 708px) and (max-width : 1023px) and (orientation:landscape) { @content; }
   }
 
   @else if $point == adult {
     /*screen*/
-    @media only screen and (min-width : 1025px) { @content; }
+    @media only screen and (min-width : 1024px) { @content; }
   }
 
   @else if $point == senior {
