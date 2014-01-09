@@ -13,8 +13,12 @@
 
 .flex-donate-wrapper {
   @include flexbox;
-  @include align-items(center);
+  @include align-items(flex-start);
   @include justify-content(flex-end);
+  @include breakpoint (teen-up) {
+    font-size: 1.1em;
+    @include align-items(flex-end);
+  }
   }
 
 .flexdonate {
