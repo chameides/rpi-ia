@@ -143,13 +143,24 @@ footer ul.extra {
 /*icons adjacent to text on menu items */
 .menu-icon {
   height: 3em;
+  max-width: 50px;
   width: 100%;
-  @include breakpoint(adult) {
+}
+
+.sitemap .menu-icon {
+  display: none;
+}
+
+@include breakpoint(adult) {
+  .menu-icon, .sitemap .menu-icon  {
     height: .9rem;
     padding-right: .3rem;
     width: auto;
+    display: inline;
   }
-}
+  }
+
+
 
 ul.extra .menu-icon {
   width: 100%;

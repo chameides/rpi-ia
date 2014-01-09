@@ -21,8 +21,11 @@ footer {
 
 .footerlogo {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   padding: $margin2 $margin2*2 ;
+  @include breakpoint (adult) {
+    margin-top: $margin3;
+  }
 }
 
 .col-bottomlink {
