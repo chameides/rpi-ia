@@ -1,6 +1,5 @@
 /* Sidemenu */
 
-
 /* this can be replaced, if all menus are icon based*/
 .sidemenu, footer,  {
   a:link, a:visited, a:active, a:hover {
@@ -27,10 +26,7 @@
       width: $extrawidth; 
       display: inline-block;
       text-align: right;
-      margin: 0;
       padding: 0;
-      /*hides text, just the icons show */
-      font-size: 0em;
       .mobileonly {
         display: none;
       }
@@ -120,9 +116,18 @@
     margin-top: $margin2*2;
     font-size: .8rem;
     margin-bottom: 50px;
-  }
- 
+    @include breakpoint(adult) {
+      margin-top: 0;
+      font-size: 0; /*hides text, just the icons show */
+      margin-bottom: 0;
+
+    }
+  } 
 }
+
+
+
+
 
 /*too much space between redline and text on alumni menu because of the <br> before login, the <br> is there to force the <hr> to vertical align with the rest of the text  */
 .alumni ul.extra{
@@ -142,6 +147,7 @@ footer ul.extra {
   @include breakpoint(adult) {
     height: .9rem;
     padding-right: .3rem;
+    width: auto;
   }
 }
 
