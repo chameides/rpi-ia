@@ -179,6 +179,13 @@ body.menu-on .wrapper {
       border-style: none;
       padding: $margin 0 $margin3
     } 
+
+  ul.extra {
+    font-size: .7em;
+    .menu-icon {
+      height: 3em;
+    }
+  }
    
 
 }
