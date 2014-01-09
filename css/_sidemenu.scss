@@ -205,8 +205,12 @@ body.menu-on .wrapper {
   }
 }
 
-
-
+/*hides iconfooter on desktop, but could be less specific if we hide equivalent on alumni */
+@include breakpoint(adult) {
+  footer ul.iconfooter {
+  display: none;
+  }
+}
 
 
 
