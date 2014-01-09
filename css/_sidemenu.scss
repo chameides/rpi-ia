@@ -170,34 +170,34 @@ body.menu-on .wrapper {
 
 /*this should be folded into above code after icons for alumni pages is figured out */
 
-.iconnav {
-  ul:after {
-   content: '';
-   display: table;
+@include breakpoint(adult) {
+  .iconnav {
+    ul:after {
+     content: '';
+     display: table;
+    }
+    ul.nav li
+      {
+        width: 50%; /*if you change this, must change .col-section:nth-of-type in grid.scss*/
+        float: left;
+        border-style: none;
+        padding: $margin 0 $margin3
+      } 
+    ul.extra {
+      font-size: .7em;
+      .menu-icon {
+        height: 3em;
+      }
+    } 
+  }
+  ul.iconfooter {
+    font-size: .7em;
+    margin-top: $margin2*2;
+      .menu-icon {
+        height: 3em;
+      }
   }
 
-  ul.nav li
-    {
-      width: 50%; /*if you change this, must change .col-section:nth-of-type in grid.scss*/
-      float: left;
-      border-style: none;
-      padding: $margin 0 $margin3
-    } 
-
-  ul.extra {
-    font-size: .7em;
-    .menu-icon {
-      height: 3em;
-    }
-  } 
-}
-
-ul.iconfooter {
-  font-size: .7em;
-  margin-top: $margin2*2;
-    .menu-icon {
-      height: 3em;
-    }
 }
 
 
