@@ -1,4 +1,54 @@
 /* Sidemenu */
+
+
+/* this can be replaced, if all menus are icon based*/
+.sidemenu, footer,  {
+  a:link, a:visited, a:active, a:hover {
+    color: white;
+    width: 100%;
+    display: block;
+    @include breakpoint(adult) {
+      display: inline;
+    }
+  }
+  ul {
+    list-style-type:none;
+    padding-left: 0px;
+  }
+  ul.extra {
+    width: 100%;
+    /*I'm not sure if this needs to be flexbox, now that everything is top aligned */
+    @include flexbox;
+    /* don't need this anymore. with icons, everything should be top aligned
+    @include align-items(center);
+    */ 
+    padding: 0 $margin2;
+    @include breakpoint(adult) {
+      width: $extrawidth; 
+      display: inline-block;
+      text-align: right;
+      margin: 0;
+      padding: 0;
+      /*hides text, just the icons show */
+      font-size: 0em;
+      .mobileonly {
+        display: none;
+      }
+    }
+    
+    li {
+      text-align: center;
+      @include flex-basis(25%);
+      @include breakpoint(adult) {
+        display: inline;
+        margin-left: .3rem;
+
+      }
+    }
+  }
+}
+
+
 .sidemenu {
   width: 100%;
   height:100%;
@@ -9,6 +59,7 @@
   background: #333;
   color:#fff;
   padding:3%;
+  overflow: scroll;
   text-transform:uppercase;
   -webkit-box-shadow:inset 0 0 1em .2em #222;
   -webkit-transform:translate(-105%);
@@ -19,6 +70,7 @@
     -webkit-transform:translate(0%);
     -webkit-box-shadow:none;
     font-size: .9em;
+    margin-bottom: 0px;
   }
   z-index:999;
    
@@ -67,7 +119,9 @@
   ul.extra {
     margin-top: $margin2*2;
     font-size: .8rem;
+    margin-bottom: 50px;
   }
+ 
 }
 
 /*too much space between redline and text on alumni menu because of the <br> before login, the <br> is there to force the <hr> to vertical align with the rest of the text  */
@@ -76,60 +130,24 @@
   }
 
 
-.sidemenu, footer,  {
-  a:link, a:visited, a:active, a:hover {
-    color: white;
-    width: 100%;
-    display: block;
-    @include breakpoint(adult) {
-      display: inline;
-    }
-  }
-  ul {
-    list-style-type:none;
-    padding-left: 0px;
-  }
-  ul.extra {
-    width: 100%;
-    @include flexbox;
-    @include align-items(center); 
-    padding: 0 $margin2;
-    @include breakpoint(adult) {
-      width: $extrawidth; 
-      display: inline-block;
-      text-align: right;
-      margin: 0;
-      padding: 0;
-      /*hides text, just the icons show */
-      font-size: 0em;
-      .mobileonly {
-        display: none;
-      }
-    }
-    
-    li {
-      text-align: center;
-      @include flex-basis(25%);
-      @include breakpoint(adult) {
-        display: inline;
-        margin-left: .3rem;
 
-      }
-    }
-  }
-}
 footer ul.extra {
   text-transform: uppercase;
 }
 
 /*icons adjacent to text on menu items */
 .menu-icon {
-  height: .9rem;
-  padding-right: .3rem;
+  height: 3em;
+  width: 100%;
+  @include breakpoint(adult) {
+    height: .9rem;
+    padding-right: .3rem;
+  }
 }
 
 ul.extra .menu-icon {
   width: 100%;
+  padding-right: 0;
   @include breakpoint(adult) {
   padding-right: 0;
   padding-left: .3rem;
@@ -146,7 +164,24 @@ body.menu-on .sidemenu {
 body.menu-on .wrapper {
     opacity: 0;
 }
-/*
+*/
+
+.iconnav {
+  ul:after {
+   content: '';
+   display: table;
+  }
+
+  ul.nav li
+    {
+      width: 50%; /*if you change this, must change .col-section:nth-of-type in grid.scss*/
+      float: left;
+      border-style: none;
+      padding: $margin 0 $margin3
+    } 
+   
+
+}
 
 
 
