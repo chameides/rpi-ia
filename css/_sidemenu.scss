@@ -114,8 +114,11 @@
   }
   ul.extra {
     margin-top: $margin2*2;
-    font-size: .8rem;
     margin-bottom: 50px;
+    font-size: .7em;
+      .menu-icon {
+        height: 3em;
+      }
     @include breakpoint(adult) {
       margin-top: 0;
       font-size: 0; /*hides text, just the icons show */
@@ -212,13 +215,8 @@ body.menu-on .wrapper {
         border-style: none;
         padding: $margin 0 $margin3
       } 
-    ul.extra {
-      font-size: .7em;
-      .menu-icon {
-        height: 3em;
-      }
-    } 
-  }
+   
+  } 
   ul.iconfooter {
     font-size: .7em;
     margin-top: $margin2*2;
