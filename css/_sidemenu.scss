@@ -152,9 +152,19 @@ footer ul.extra {
 }
 
 
+/*menu adjustments for desktop*/
+@include breakpoint(adult) {
+  .menu-icon  {
+    height: .9rem;
+    padding-right: .3rem;
+    width: auto;
+    display: inline;
+  }
+  }
 
+/*icons show on sitemap in teen and adult */
 @include breakpoint(teen-up) {
-  .menu-icon, .sitemap .menu-icon  {
+ .sitemap .menu-icon  {
     height: .9rem;
     padding-right: .3rem;
     width: auto;
