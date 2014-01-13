@@ -1,0 +1,58 @@
+.col-section {
+ 
+}
+
+
+.textouterwrapper {
+  color: white;
+  overflow: hidden;
+  -webkit-transform:translate(0, -100%);
+}
+
+.textouterwrapper .text {
+  -webkit-transform:translate(0, 100%);
+  color:white;  
+  transition: all 0.5s ease;
+
+}
+
+
+
+.textouterwrapper .text .textinnerwrapper {
+  margin-top: 3em;
+  -webkit-transform:translate(0, -2.4em);
+  transition: all 0.5s ease;
+  background: rgba(54, 51, 51, 1);
+  padding: 0 1em 1em;
+}
+
+.boxheader {
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.boxheader h2{
+  text-transform: uppercase;
+  color: white;
+}
+
+
+.textinnerwrapper .textbody {
+  height: 100%;
+
+}
+
+
+
+.textouterwrapper:hover .text{
+  -webkit-transform:translate(0, 0);
+}
+
+.textouterwrapper:hover .text .textinnerwrapper{
+  -webkit-transform:translate(0, 0em);
+}
+
+
+*:hover, *:focus, nav{-moz-transition:background-color 0.2s linear,border-color 0.2s linear,box-shadow .5s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-moz-transform 0.2s linear; -webkit-transition:background-color 0.2s linear,border-color 0.2s linear,-webkit-box-shadow 0.5s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-webkit-transform 0.2s linear; -o-transition:background-color 0.2s linear,border-color 0.2s linear,-o-box-shadow 0.5s linear,box-shadow 0.2s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-o-transform 0.2s linear; transition:background-color 0.2s linear,border-color 0.2s linear,box-shadow .5s linear,color 0.8s linear,opacity 0.2s linear,text-shadow 0.2s linear,transform 0.2s linear}
+
+
