@@ -12,130 +12,130 @@
  */
 
 body {
-    color: $textmain; 
-    font-family: "franklin-gothic-urw", verdana, sans-serif;
+	color: $textmain; 
+	font-family: "franklin-gothic-urw", verdana, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, .tagline {
-    font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
-    font-weight: 700;
+	font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
+	font-weight: 700;
 }
 
 h1, h2, .title {
-    text-transform: uppercase;
-    margin-top: 0px;
-    text-align: center;
-    @include breakpoint(adult) {
-        text-align: left;
-    }
+	text-transform: uppercase;
+	margin-top: 0px;
+	text-align: center;
+	@include breakpoint(adult) {
+		text-align: left;
+	}
 }
 
 
 h1 {
-    font-size: 1.9em;
-    line-height: 1em;
-    margin: 0.2em 0 0;
-    @include breakpoint(big-baby-sleep) { 
-    font-size: 1.5em; 
-    }
-    @include breakpoint(teen-up) { 
-    font-size: 1.9em; 
-    }
+	font-size: 1.9em;
+	line-height: 1em;
+	margin: 0.2em 0 0;
+	@include breakpoint(big-baby-sleep) { 
+	font-size: 1.5em; 
+	}
+	@include breakpoint(teen-up) { 
+	font-size: 1.9em; 
+	}
 
 }
 
 .read h1 {
-    @include breakpoint(teen-up) { 
-        font-size: 3em;
-        text-align: left;
-        margin-left: $margin2;
-        margin-right: $margin2;
-    }
+	@include breakpoint(teen-up) { 
+		font-size: 3em;
+		text-align: left;
+		margin-left: $margin2;
+		margin-right: $margin2;
+	}
 }
 
 h2 {
-    font-size:1.2em; 
-    margin-bottom: .2em;
-    }
+	font-size:1.2em; 
+	margin-bottom: .2em;
+	}
 
 article h2 {
-    color: $textmain;
-    text-align: left;
-    margin-top: $margin2;
+	color: $textmain;
+	text-align: left;
+	margin-top: $margin2;
 }
 
 .read h2  {
-    @include breakpoint(teen-up) { 
-        margin-left: $ratio;
-        color: $lighttext;
-        text-transform: none;
-        margin-right: $margin2;
-        margin-top: $margin2*3;
+	@include breakpoint(teen-up) { 
+		margin-left: $ratio;
+		color: $lighttext;
+		text-transform: none;
+		margin-right: $margin2;
+		margin-top: $margin2*3;
 
-    }
+	}
 }
 
 
 section h2, h2.subtitle {
-    text-align: center;
-    margin: 0 0 $margin2;
+	text-align: center;
+	margin: 0 0 $margin2;
 }
 
 /*do i need this? */
 .gridtext h2 {
-    text-align: left;
-    line-height: 1em;
+	text-align: left;
+	line-height: 1em;
 }
 .read h2.subtitle {
-    font-size: 1.1em;
-    @include breakpoint(teen-up) { 
-        text-align: left;
-        font-size: 1.2em;
-        padding: 0 $margin2;
-        margin-bottom: 3em;
-        text-transform: uppercase;
-        width: 100%;
+	font-size: 1.1em;
+	@include breakpoint(teen-up) { 
+		text-align: left;
+		font-size: 1.2em;
+		padding: 0 $margin2;
+		margin-bottom: 3em;
+		text-transform: uppercase;
+		width: 100%;
 
-    }
+	}
 }
 
 h2.subtitle {
-    color: lighttext;
+	color: lighttext;
 }
 
 section h2 {
-    margin-bottom: 0em;
+	margin-bottom: 0em;
 }
 
 
 
 h3 {
-    font-size: 1.17em;
-    margin: 0 0 .3em;
-    text-transform: uppercase;
+	font-size: 1.17em;
+	margin: 0 0 .3em;
+	text-transform: uppercase;
 }
 
 .read aside h3 {
-    @include breakpoint(teen-up) { 
-        
-    }
+	@include breakpoint(teen-up) { 
+		
+	}
 }
 
 .donate h3 {margin-top: .7em;}
 
 h4 {
-    font-size: 1em;
-    margin: 1.33em 0;
+	font-size: 1em;
+	margin: 1.33em 0;
 }
 
 h5 {
-    font-size: 0.83em;
-    margin: 1.67em 0;
+	font-size: 0.83em;
+	margin: 1.67em 0;
 }
 
 h6 {
-    font-size: 0.67em;
-    margin: 2.33em 0;
+	font-size: 0.67em;
+	margin: 2.33em 0;
 }
 
 /**
@@ -144,47 +144,49 @@ h6 {
 
 p,
 pre {
-    margin: 0 0 .8em;
+	margin: 0 0 .8em;
 }
 
 p {
-    font-weight: 300;
-    max-width: 40em;
-    text-align: justify;
-    font-size: 1em;
-    /*
-    @include breakpoint(big-baby-sleep) { 
-        font-size: .7em;
-    }
-    */
-    @include breakpoint(adult) { 
-        max-width: auto;
-    }
+	font-weight: 300;
+	max-width: 40em;
+	text-align: justify;
+	font-size: 1em;
+	/*
+	@include breakpoint(big-baby-sleep) { 
+		font-size: .7em;
+	}
+	*/
+	@include breakpoint(adult) { 
+		max-width: auto;
+	}
 }
 
 
 .gridtext p {
-    font-size: .8em;
-    text-align: left;
+	@include breakpoint(adult) { 
+	  font-size: .8em;
+		text-align: left;
+	}
 }
 
 /*used on alumni-classes to reduce white space between intro paragraph and boxes*/
 p.squeeze {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .read p {
-    @include breakpoint(teen-up) { 
-        margin-left: $ratio;
-        font-size: 1em;
-        margin-right: $margin3;
-    }
+	@include breakpoint(teen-up) { 
+		margin-left: $ratio;
+		font-size: 1em;
+		margin-right: $margin3;
+	}
 }
 
 .read aside p {
-    @include breakpoint(teen-up) { 
-        margin-left: 0;
-    }
+	@include breakpoint(teen-up) { 
+		margin-left: 0;
+	}
 }
 
 
@@ -193,7 +195,7 @@ p.squeeze {
  */
 
 abbr[title] {
-    border-bottom: 1px dotted;
+	border-bottom: 1px dotted;
 }
 
 /**
@@ -202,7 +204,7 @@ abbr[title] {
 
 b,
 strong, .run-in {
-    font-weight: 500;
+	font-weight: 500;
 }
 
 /**
@@ -210,7 +212,7 @@ strong, .run-in {
  */
 
 dfn {
-    font-style: italic;
+	font-style: italic;
 }
 
 /**
@@ -219,9 +221,9 @@ dfn {
  */
 
 hr {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
 }
 
 /**
@@ -229,8 +231,8 @@ hr {
  */
 
 mark {
-    background: #ff0;
-    color: #000;
+	background: #ff0;
+	color: #000;
 }
 
 
@@ -243,9 +245,9 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, serif;
-    _font-family: 'courier new', monospace;
-    font-size: 1em;
+	font-family: monospace, serif;
+	_font-family: 'courier new', monospace;
+	font-size: 1em;
 }
 
 /**
@@ -253,9 +255,9 @@ samp {
  */
 
 pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 
 /**
@@ -263,7 +265,7 @@ pre {
  */
 
 q {
-    quotes: none;
+	quotes: none;
 }
 
 /**
@@ -272,8 +274,8 @@ q {
 
 q:before,
 q:after {
-    content: '';
-    content: none;
+	content: '';
+	content: none;
 }
 
 /**
@@ -281,7 +283,7 @@ q:after {
  */
 
 small {
-    font-size: 80%;
+	font-size: 80%;
 }
 
 /**
@@ -290,119 +292,119 @@ small {
 
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sup {
-    top: -0.5em;
+	top: -0.5em;
 }
 
 sub {
-    bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 
 /*.summary {
-    font-style:italic;
-    font-weight: bold;
-    font-size: .9em}*/
+	font-style:italic;
+	font-weight: bold;
+	font-size: .9em}*/
 
 
 
 figcaption {
-    font-size:.8em;
-    font-weight: 500;
-    text-align: justify;
-     @include breakpoint(big-baby-sleep) { 
-        font-size: .5em;
-    }
+	font-size:.8em;
+	font-weight: 500;
+	text-align: justify;
+	 @include breakpoint(big-baby-sleep) { 
+		font-size: .5em;
+	}
 }
 
 .read figcaption {
-    @include breakpoint(teen-up) {
-        width: $smallratio;
-        float: left;
-        clear: left;
-        font-weight: normal;
-        margin-left: $margin2;
-        text-align: left;
-        display: inline;
-    }
+	@include breakpoint(teen-up) {
+		width: $smallratio;
+		float: left;
+		clear: left;
+		font-weight: normal;
+		margin-left: $margin2;
+		text-align: left;
+		display: inline;
+	}
 }
 
 .aside figcaption {
-    @include breakpoint(teen-up) {
-        margin-left: 0;
-    }
+	@include breakpoint(teen-up) {
+		margin-left: 0;
+	}
 }
 
 
 aside {
-    @include breakpoint(teen-up) {
-        font-size:.8em; 
-        p {
-            text-align: left;
-        }
-    }
-    @include breakpoint(adult) {
-        p {
-            font-size: .9em;
-        }
-    }
-    
+	@include breakpoint(teen-up) {
+		font-size:.8em; 
+		p {
+			text-align: left;
+		}
+	}
+	@include breakpoint(adult) {
+		p {
+			font-size: .9em;
+		}
+	}
+	
 }
 
 .title {
-    color: #CCC;
-    font-size: 1em;
-    font-weight: 500;
-    line-height: .5em;
-    margin: 0;
-    text-align: left;
-    text-transform: none;
-    @include flex-grow(1);
-    @include breakpoint (teen-up) {
-        color: #FFF;
-        font-size: 2.2em;
-        font-weight: 700;
-        text-transform: uppercase;   
-    }
-    @include breakpoint (adult) {
-        font-size: 2.8em;
-    }
+	color: #CCC;
+	font-size: 1em;
+	font-weight: 500;
+	line-height: .5em;
+	margin: 0;
+	text-align: left;
+	text-transform: none;
+	@include flex-grow(1);
+	@include breakpoint (teen-up) {
+		color: #FFF;
+		font-size: 2.2em;
+		font-weight: 700;
+		text-transform: uppercase;   
+	}
+	@include breakpoint (adult) {
+		font-size: 2.8em;
+	}
 }
 .title .part2 {
-    color: #FFF;
-    display: block;
-    font-size: 1.6em;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.1em;
-    @include breakpoint(teen-up) {
-        display: inline;
-        margin-left: .2em;
-        font-size: 1em;
-        line-height: 1em;
-    }
+	color: #FFF;
+	display: block;
+	font-size: 1.6em;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.1em;
+	@include breakpoint(teen-up) {
+		display: inline;
+		margin-left: .2em;
+		font-size: 1em;
+		line-height: 1em;
+	}
 }
 
 .tagline {
-    color: #CCC;
-    font-weight: 500;
-    font-size: .6em;
-    text-transform: none;
-    @include breakpoint(baby) {
-        display: none;
-    }
+	color: #CCC;
+	font-weight: 500;
+	font-size: .6em;
+	text-transform: none;
+	@include breakpoint(baby) {
+		display: none;
+	}
 }
 
 .content {
-    @include breakpoint(adult) {
-        font-size: 1.3em;
-    }
+	@include breakpoint(adult) {
+		font-size: 1.3em;
+	}
 }
 
 @import "typography-quote";
