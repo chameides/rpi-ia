@@ -75,13 +75,17 @@ article h2 {
     }
 }
 
+
 section h2, h2.subtitle {
     text-align: center;
     margin: 0 0 $margin2;
-
-
 }
 
+/*do i need this? */
+.gridtext h2 {
+    text-align: left;
+    line-height: 1em;
+}
 .read h2.subtitle {
     font-size: 1.1em;
     @include breakpoint(teen-up) { 
@@ -156,6 +160,11 @@ p {
     @include breakpoint(adult) { 
         max-width: auto;
     }
+}
+
+
+.gridtext p {
+    font-size: .8em;
 }
 
 /*used on alumni-classes to reduce white space between intro paragraph and boxes*/
@@ -334,9 +343,15 @@ aside {
     @include breakpoint(teen-up) {
         font-size:.8em; 
         p {
-        text-align: left;
+            text-align: left;
         }
     }
+    @include breakpoint(adult) {
+        p {
+            font-size: .9em;
+        }
+    }
+    
 }
 
 .title {
