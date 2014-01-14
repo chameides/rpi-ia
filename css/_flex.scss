@@ -1,11 +1,9 @@
-.flexcontainer {
+.header-main /*flexcontainer*/ {
   width: 100%;
   @include flexbox;
   @include flex-flow(row);
   @include justify-content(left);
   padding: $margin2 0 $margin2/2 $margin2;
-
-  
   
   @include breakpoint(teen) {
     @include align-items(center);
@@ -36,9 +34,8 @@
 }
 */
 
-.flexitem {
+.header-item /*flexitem*/{
   padding-right: $margin2;
-
   @include breakpoint(teen) { 
     padding-right: $margin2;
   }
