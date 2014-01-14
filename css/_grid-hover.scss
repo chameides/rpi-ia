@@ -16,18 +16,32 @@ position: relative;
 /******************* HOVRER IMAGE **************/
 
 /* Image Box Style */
+
+.gridhover .col-section {
+  width: 50%;
+  height: 100%;
+}
+
+
+@include breakpoint(adult) {
+  .gridhover .col-section:nth-of-type(3n + 1) {
+    clear: none;
+  }
+}
+
 .gridhover .box {
   cursor: pointer;
-  height: 10em;
+  min-height: 15rem;
   float: left;
   position: relative;
   overflow: hidden;
   width: 100%;
+  background: red;
 }
 .gridhover .box img {
   position: absolute;
   height: 100%;
-  width: auto;
+  width: 100%;
   left: 0;
     -webkit-transition: all 300ms ease-out;
     -moz-transition: all 300ms ease-out;
@@ -47,7 +61,8 @@ position: relative;
     -o-transition: all 300ms ease-out;
     -ms-transition: all 300ms ease-out; 
     transition: all 300ms ease-out;
-  left: 0;
+  top: 0;
+  height: 15em;
   h2 {
     color: white;
   }
@@ -57,14 +72,14 @@ position: relative;
 .gridhover .box .slide-caption {
   text-align: left;
   padding: 15px;
-  -webkit-transform: translateY(55%);
+  -webkit-transform: translateY(57%);
 }
 
 /** Slide Caption :hover Behaviour **/
 .gridhover .box:hover .slide-caption {
   background: rgba(54, 51, 51, .9);
 
-  -webkit-transform: translateY(0%);
+  -webkit-transform: translateY(30%);
   opacity: 1;
   
 }
