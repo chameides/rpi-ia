@@ -11,7 +11,7 @@
   width:100%; 
   }
 
-.flex-donate-wrapper {
+.donate-wrapper /*, .flex-donate-wrapper */{
   @include flexbox;
   @include align-items(flex-start);
   @include justify-content(flex-end);
@@ -21,7 +21,7 @@
   }
   }
 
-.flexdonate {
+.donate-button, /*.flexdonate*/ {
   font-size:.6em;
   color: white;
   text-align: center;
@@ -88,7 +88,7 @@
 }
 */
 
-.action, .flexdonate {
+.action, .donate-button /*, .flexdonate*/ {
   background: -moz-linear-gradient(
     top,
     #d91f28 0%,
