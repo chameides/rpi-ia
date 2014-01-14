@@ -52,11 +52,11 @@
 }
 
 
-.box-shadow-menu {
+.menu-open /*box-shadow-menu*/ {
   position: relative;
   padding-left: 1.25em;
 }
-.box-shadow-menu:before {
+.menu-open:before {
   content: "";
   position: absolute;
   left: 0;

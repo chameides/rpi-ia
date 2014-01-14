@@ -1,13 +1,13 @@
 /*this goes in button */
 
-.flex-menu-wrapper {
+.menu-button-wrapper /*.flex-menu-wrapper*/ {
   min-width: 40px;
   @include breakpoint(adult) { 
     display: none
   }
 }
 
-.flex-menu-icon {
+.toggle-menu-icon /*flex-menu-icon*/ {
   width:100%; 
   }
 
