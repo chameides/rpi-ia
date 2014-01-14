@@ -1,58 +1,78 @@
-.col-section {
- 
+.grid {
+list-style: none;
+padding: 0;
 }
 
+.grid li {
+display: inline-block;
+width: 33%;
+margin: 0;
+padding: 5px;
+text-align: left;
+position: relative;
+}
 
-.textouterwrapper {
-  color: white;
+/******************* HOVRER IMAGE **************/
+
+/* Image Box Style */
+.gridhover .box {
+  cursor: pointer;
+  height: 10em;
+  float: left;
+  margin: 5px;
+  position: relative;
   overflow: hidden;
-  -webkit-transform:translate(0, -100%);
+  width: 25%;
+    -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+    -moz-box-shadow: 1px 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+.gridhover .box img {
+  position: absolute;
+  left: 0;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out; 
+  transition: all 300ms ease-out;
 }
 
-.textouterwrapper .text {
-  -webkit-transform:translate(0, 100%);
-  color:white;  
-  transition: all 0.5s ease;
-
+/* Caption Common Style */
+.gridhover .box .caption {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  color: #fff;
+  z-index: 100;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out; 
+    transition: all 300ms ease-out;
+  left: 0;
 }
 
-
-
-.textouterwrapper .text .textinnerwrapper {
-  margin-top: 3em;
-  -webkit-transform:translate(0, -2.4em);
-  transition: all 0.5s ease;
-  background: rgba(54, 51, 51, 1);
-  padding: 0 1em 1em;
-}
-
-.boxheader {
-  text-transform: uppercase;
-  overflow: hidden;
-}
-
-.boxheader h2{
-  text-transform: uppercase;
-  color: white;
-}
-
-
-.textinnerwrapper .textbody {
+/** Caption 4: Slide **/
+.gridhover .box .slide-caption {
+  width: 100%;
   height: 100%;
-
+  text-align: left;
+  padding: 15px;
+  -webkit-transform: translateY(50%);
 }
 
+/** Slide Caption :hover Behaviour **/
+.gridhover .box:hover .slide-caption {
+  background-color: rgba(0,0,0,1) !important;
 
-
-.textouterwrapper:hover .text{
-  -webkit-transform:translate(0, 0);
+  -webkit-transform: translateY(0%);
+  opacity: 1;
+  transform: translateX(-100%);
 }
-
-.textouterwrapper:hover .text .textinnerwrapper{
-  -webkit-transform:translate(0, 0em);
+.gridhover .box:hover img#image-4 {
+  -moz-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  opacity: 1;
 }
-
-
-*:hover, *:focus, nav{-moz-transition:background-color 0.2s linear,border-color 0.2s linear,box-shadow .5s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-moz-transform 0.2s linear; -webkit-transition:background-color 0.2s linear,border-color 0.2s linear,-webkit-box-shadow 0.5s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-webkit-transform 0.2s linear; -o-transition:background-color 0.2s linear,border-color 0.2s linear,-o-box-shadow 0.5s linear,box-shadow 0.2s linear,color 0.2s linear,opacity 0.2s linear,text-shadow 0.2s linear,-o-transform 0.2s linear; transition:background-color 0.2s linear,border-color 0.2s linear,box-shadow .5s linear,color 0.8s linear,opacity 0.2s linear,text-shadow 0.2s linear,transform 0.2s linear}
-
 
