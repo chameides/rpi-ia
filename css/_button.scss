@@ -34,60 +34,6 @@
 }
 
 
-/* this code removed and replaced with flexbox 
-
-
-.menu-wrapper {
-  width: 10%;
-  max-width: 65px; 
-  padding: 0; 
-  margin: 0 .5em 0 0;
-  @include breakpoint(big-baby-sleep) { 
-    margin-top: .1em;
-  }
-  @include breakpoint(teen-up) { 
-    margin-top: .2em;
-  }
-  @include breakpoint(adult) { 
-    display: none;
-    }
-}
-
-.menu {
-  text-align:center;
-  margin: 2px 4px 0px 0px; 
-  text-align:left;
-  
-}
-
-.menuicon {width:100%; max-width: 45px;
-  }
-
-
-
-.donate-wrapper {
-  width: 15%;
-  max-width: 80px;
-  margin-top:.2em;
-  padding-top:0;
-  margin-right: $margin/2; 
-  float: right;
-  @include breakpoint(teen-up) { 
-    margin-top: .6em;
-  }
-  }
-
-
-.donate {
-  width:100%;
-  float:right;
-  margin-top:0;
-  padding-top:0;
-  font-size:.5em;
-  color: white;
-}
-*/
-
 .action, .donate-button /*, .flexdonate*/ {
   background: -moz-linear-gradient(
     top,
