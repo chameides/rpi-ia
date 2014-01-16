@@ -1,7 +1,7 @@
 /* Sidemenu */
 
 /* this can be replaced, if all menus are icon based*/
-.sidemenu, footer,  {
+.mainnav, footer  {
   a:link, a:visited, a:active, a:hover {
     color: white;
     width: 100%;
@@ -44,8 +44,7 @@
   }
 }
 
-
-.sidemenu {
+.mainnav {
   width: 100%;
   height:100%;
   position:fixed;
@@ -57,9 +56,8 @@
   padding:3%;
   overflow: scroll;
   text-transform:uppercase;
-  -webkit-box-shadow:inset 0 0 1em .2em #222;
-  -webkit-transform:translate(-105%);
-  -moz-transform:translate(-105%);
+  box-shadow:inset 0 0 1em .2em #222;
+  @include transform( translate(-105%) );
   @include breakpoint(adult) { 
     position: relative;
     padding: 0rem 1rem;
@@ -94,11 +92,11 @@
       
     }
     li {
-      border-bottom: 1px solid #1A1A1A;
-      border-top: 1px solid #4D4D4D;
       display: block;
       text-align: center;
-      padding: $margin2;
+      width: 50%; /*if you change this, must change .col-section:nth-of-type in grid.scss*/
+      float: left;
+      padding: $margin 0 $margin3;
       @include breakpoint(adult) {
         display: inline;
         border: none;
@@ -127,8 +125,14 @@
       margin-bottom: 0;
 
     }
+  ul:after {
+     content: '';
+     display: table;
+    }
   } 
 }
+
+
 
 /*could aggregate all the clearfixes into 1 place
 this clearfix was added to ensure the red line in the flyin menu on the alumni page (5 items) comes after the 5 items */
@@ -194,7 +198,7 @@ ul.extra .menu-icon {
 }
 
 
-body.menu-on .sidemenu {
+body.menu-on .mainnav {
   -webkit-transform:translate(0%);
  }
 
@@ -209,20 +213,7 @@ body.menu-on .wrapper {
 /*this should be folded into above code after icons for alumni pages is figured out */
 
 @include breakpoint(baby) {
-  .iconnav {
-    ul:after {
-     content: '';
-     display: table;
-    }
-    ul.nav li
-      {
-        width: 50%; /*if you change this, must change .col-section:nth-of-type in grid.scss*/
-        float: left;
-        border-style: none;
-        padding: $margin 0 $margin3
-      } 
-   
-  } 
+ 
   ul.iconfooter {
     font-size: .7em;
     margin-top: $margin2*2;
@@ -237,25 +228,7 @@ body.menu-on .wrapper {
 /* this is repetitive with baby breakpoint */
 
 @include breakpoint(teen) {
-  .iconnav {
-    ul:after {
-     content: '';
-     display: table;
-    }
-    ul.nav li
-      {
-        width: 50%; /*if you change this, must change .col-section:nth-of-type in grid.scss*/
-        float: left;
-        border-style: none;
-        padding: $margin 0 $margin3
-      } 
-    ul.extra {
-      font-size: .7em;
-      .menu-icon {
-        height: 3em;
-      }
-    } 
-  }
+  
   ul.iconfooter {
     font-size: .7em;
     margin-top: $margin2*2;
@@ -275,7 +248,3 @@ body.menu-on .wrapper {
   display: none;
   }
 }
-
-
-
-/* End of Sidemenu */
