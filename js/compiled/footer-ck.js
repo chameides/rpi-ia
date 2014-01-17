@@ -139,15 +139,15 @@ $(window).touchwipe({
 ********************************************** */
 
 addthis.layers({
-  'theme' : 'transparent',
+  'theme' : 'light',
   'responsive' : {
-      'maxWidth' : '1023px',
+      'maxWidth' : '4000px',
       'minWidth' : '0px'
     },
   //share buttons    
   'share' : {
     'position' : 'right',
-    'services' : 'facebook,google_plusone_share,twitter,pinterest,linkedin,email,more',
+    'services' : 'facebook,google_plusone_share,twitter,linkedin,email',
     'offset' : {'bottom':'5.5rem'}
 
     //'numPreferredServices' : 5
@@ -159,10 +159,10 @@ addthis.layers({
       {'service': 'facebook', 'id': 'RPIAlumni'},
       {'service': 'twitter', 'id': 'RPIAlumni'},
       {'service': 'google_follow', 'id': '107990642161097904060/posts'},
-      {'service': 'pinterest', 'id': '107990642161097904060/posts'},
       {'service': 'instagram', 'id': '107990642161097904060/posts'},
       {'service': 'linkedin', 'id': '107990642161097904060/posts'}
     ]
+
     
   },
 });
