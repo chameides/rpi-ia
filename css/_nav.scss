@@ -26,7 +26,8 @@
       width: $extrawidth; 
       display: inline-block;
       text-align: right;
-      padding: 0;
+      padding: .8em 0;
+      vertical-align: top;
       .mobileonly {
         display: none;
       }
@@ -74,7 +75,7 @@
       display: none;
     }
   }
-  .menu-close:hover, .menu-close:active{
+  .menu-close:hover, .menu-close:active {
     cursor: pointer
   }
 
@@ -102,6 +103,7 @@
         border: none;
         padding: 0;
         padding-right: $margin2;
+        width: auto;
       }
     }
     
@@ -121,9 +123,7 @@
       }
     @include breakpoint(adult) {
       margin-top: 0;
-      font-size: 0; /*hides text, just the icons show */
       margin-bottom: 0;
-
     }
   ul:after {
      content: '';
@@ -192,8 +192,9 @@ ul.extra .menu-icon {
   padding-right: 0;
   @include breakpoint(adult) {
   padding-right: 0;
-  padding-left: .3rem;
+  padding-left: 0;
   width: auto;
+  max-height: 1.5em;
   }
 }
 
@@ -224,7 +225,6 @@ body.menu-on .wrapper {
 }
 
 
-
 /* this is repetitive with baby breakpoint */
 
 @include breakpoint(teen) {
@@ -238,6 +238,10 @@ body.menu-on .wrapper {
   }
 }
 
+
+.extra {
+  margin-top: 0;
+}
 
 
 
