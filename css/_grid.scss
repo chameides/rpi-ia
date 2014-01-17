@@ -59,7 +59,7 @@
 
 /*col-sections are two across*/
 @include breakpoint(baby) {
-  .col-section:nth-of-type(2n + 1), ul li:nth-of-type(2n + 1) {
+  .col-section:nth-of-type(2n + 1), ul.nav li:nth-of-type(2n + 1) {
     clear: left;
   }
 }

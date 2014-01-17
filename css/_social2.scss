@@ -1,0 +1,59 @@
+.social {
+	position: fixed;  /*position at bottom right of page */
+	bottom: 0;
+	right: 0;
+	color: white;
+	width: 100%;
+	max-width: 300px;
+	background: rgba(59, 89, 152, .93);
+	
+	ul {
+		list-style-type: none; /*could probably combine with menu rule */
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		
+	}
+	/*clearflix could combine */
+	ul:after {
+		display: table;
+		content: "";
+	}
+
+	
+	li {
+		padding: $margin;
+	}
+}
+
+ul.follow {
+	@include transform( translateY(00%) );
+	
+	
+
+
+}
+.follow {
+	z-index: 1025;
+}
+
+.socialnav {
+	z-index: 1000;
+}
+.socialnav li {
+	display: inline;
+	width: 50%;
+	float: left;
+	
+
+.socialnav li:hover {
+		color: white;
+		display: none;
+	}
+	
+
+}
+.socialnav li:hover {
+	background-color: $color1;
+}
