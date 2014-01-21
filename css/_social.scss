@@ -3,6 +3,10 @@
 	width: 100%;
 	max-width: 200px;
 	z-index: 2;
+
+	position: fixed;  /*position at bottom right of page */
+	bottom: 0;
+	right: 0;
 	ul {
 		list-style-type: none; /*could probably combine with menu rule */
 		width: 100%;
@@ -11,26 +15,25 @@
 		text-align: center;
 		clear: left;
 	}
-	/*clearflix could combine */
+	/*clearflix could combine 
 	ul:after {
 		display: table;
 		content: "";
-	}
+	}*/
+	
 	li {
 		display: inline;
 		width: 50%;
-
 	}
  	a {
 		color: white;
 		cursor: pointer;
 }
+	/*this graphic has a white background */
 	.addthis_counter a {
 		color: black;
 	}
 }
-
-
 
 .follow, .share {
 	padding: $margin;
@@ -38,13 +41,10 @@
 	font-size: .8em;
 	background-color: $color1;
 	@include transform( translateY(100%));
-	position: fixed;  /*position at bottom right of page */
-	bottom: 0;
-	right: 0;
+	
 
 	li {
-		padding: $margin;
-		
+		padding: $margin;		
 		float: left;
 	}
 	
@@ -52,10 +52,6 @@
 
 
 .socialnav {
-	position: fixed;  /*position at bottom right of page */
-	bottom: 0;
-	right: 0;
-	
 	z-index: 4;
 
 	a {
