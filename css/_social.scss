@@ -41,8 +41,6 @@
 	font-size: .8em;
 	background-color: $color1;
 	@include transform( translateY(100%));
-	
-
 	li {
 		padding: $margin;		
 		float: left;
@@ -53,28 +51,21 @@
 
 .socialnav {
 	z-index: 4;
-
 	a {
 		padding: $margin;
 		width: 50%;
 		display: inline-block;
 		float: left;
+		/*facebook blue*/
 		background: rgba(59, 89, 152, .93);
 	}
-
 	a:hover {
 		background: $color1;
 	}
-	
 }
-
-
-
 	
-.socialnav li:hover {
-	background-color: $color1;
-}
 
+/*this selector is fired with javascript*/
 body.follow-on {
 		.follow-toggle {
 			background-color: $color1;			
