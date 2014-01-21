@@ -100,6 +100,36 @@ function menuclose() {
 }
 
 /* **********************************************
+     Begin togglefollow.js
+********************************************** */
+
+//when minified it loses the semicolons and breaks for iphone
+function followopen() {
+    $(document.body).toggleClass('follow-on');
+    $(document.body).removeClass('share-on');
+}
+
+function followclose() {
+     $(document.body).removeClass('follow-on');
+}
+
+/* **********************************************
+     Begin toggleshare.js
+********************************************** */
+
+//when minified it loses the semicolons and breaks for iphone
+function shareopen() {
+    $(document.body).toggleClass('share-on');
+    $(document.body).removeClass('follow-on');
+}
+
+function socialclose() {
+    $(document.body).removeClass('follow-on');
+    $(document.body).removeClass('share-on');
+    
+}
+
+/* **********************************************
      Begin menu-click.js
 ********************************************** */
 
@@ -114,6 +144,36 @@ $('.menu-close').click(
     function () {
         //"use strict";
         menuclose();
+    }
+);
+
+
+/* **********************************************
+     Begin follow-click.js
+********************************************** */
+
+$('.follow-open').click(
+    function () {
+        //"use strict";
+        followopen();
+    }
+);
+
+/* **********************************************
+     Begin share-click.js
+********************************************** */
+
+$('.share-open').click(
+    function () {
+        //"use strict";
+        shareopen();
+    }
+);
+
+$('.social-close').click(
+    function () {
+        //"use strict";
+        socialclose();
     }
 );
 
@@ -135,41 +195,8 @@ $(window).touchwipe({
   });
 
 /* **********************************************
-     Begin addthis.js
-********************************************** */
-
-addthis.layers({
-  'theme' : 'light',
-  'responsive' : {
-      'maxWidth' : '4000px',
-      'minWidth' : '0px'
-    },
-  //share buttons    
-  'share' : {
-    'position' : 'right',
-    'services' : 'facebook,google_plusone_share,twitter,linkedin,email',
-    'offset' : {'bottom':'5.5rem'}
-
-    //'numPreferredServices' : 5
-  },
-  // follow buttons
-  'follow' : {
-    'offset' : {'top':'1.7rem'},
-    'services' : [
-      {'service': 'facebook', 'id': 'RPIAlumni'},
-      {'service': 'twitter', 'id': 'RPIAlumni'},
-      {'service': 'google_follow', 'id': '107990642161097904060/posts'},
-      {'service': 'instagram', 'id': '107990642161097904060/posts'},
-      {'service': 'linkedin', 'id': '107990642161097904060/posts'}
-    ]
-
-    
-  },
-});
-
-/* **********************************************
      Begin footer.js
 ********************************************** */
 
 //combined files for codekit
-//@codekit-prepend "/touchwipe/touchwipe.settings.js", "addthis.js" 
+//@codekit-prepend "/touchwipe/touchwipe.settings.js"

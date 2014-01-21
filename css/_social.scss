@@ -1,12 +1,8 @@
 .social {
-	position: fixed;  /*position at bottom right of page */
-	bottom: 0;
-	right: 0;
 	color: white;
 	width: 100%;
 	max-width: 200px;
-	
-	
+	z-index: 2;
 	
 	ul {
 		list-style-type: none; /*could probably combine with menu rule */
@@ -30,36 +26,66 @@
 		width: 50%;
 		float: left;
 	}
+ 	a {
+		color: white;
+		cursor: pointer;
+}
+	.addthis_counter a {
+		color: black;
+	}
 }
 
-.follow {
+.follow, .share {
 	padding: $margin;
 	text-align: right;
 	font-size: .8em;
 	background-color: $color1;
-	@include transform( translateY(125%) );
+	@include transform( translateY(100%));
+	position: fixed;  /*position at bottom right of page */
+	bottom: 0;
+	right: 0;
+	
 }
 
 
-
 .socialnav {
+	position: fixed;  /*position at bottom right of page */
+	bottom: 0;
+	right: 0;
 	background: rgba(59, 89, 152, .93);
+	z-index: 4;
 	li {
 		
 	}
 }
+
+
 
 	
 .socialnav li:hover {
 	background-color: $color1;
 }
 
-body.followactive {
+body.follow-on {
 		.follow-toggle {
-			background-color: $color1;
+			background-color: $color1;			
 		}
 		.follow {
 			@include transform( translateY(0%) );
+			opacity: 1;
+			z-index: 3;	
+			padding-bottom: 50px;
+		}
+	}
+
+body.share-on {
+		.share-toggle {
+			background-color: $color1;
+		}
+		.share {
+			@include transform( translateY(0%) );
+			opacity: 1;
+			padding-bottom: 50px;
 			
 		}
 	}

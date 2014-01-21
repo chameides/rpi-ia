@@ -1,13 +1,13 @@
-$('.menu-open').click(
+$('.share-open').click(
     function () {
         //"use strict";
-        menuopen();
+        shareopen();
     }
 );
 
-$('.menu-close').click(
+$('.social-close').click(
     function () {
         //"use strict";
-        menuclose();
+        socialclose();
     }
 );
