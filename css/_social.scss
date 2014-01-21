@@ -3,7 +3,6 @@
 	width: 100%;
 	max-width: 200px;
 	z-index: 2;
-	
 	ul {
 		list-style-type: none; /*could probably combine with menu rule */
 		width: 100%;
@@ -11,20 +10,16 @@
 		padding: 0;
 		text-align: center;
 		clear: left;
-		
 	}
 	/*clearflix could combine */
 	ul:after {
 		display: table;
 		content: "";
 	}
-
-	
 	li {
-		padding: $margin;
 		display: inline;
 		width: 50%;
-		float: left;
+
 	}
  	a {
 		color: white;
@@ -35,6 +30,8 @@
 	}
 }
 
+
+
 .follow, .share {
 	padding: $margin;
 	text-align: right;
@@ -44,6 +41,12 @@
 	position: fixed;  /*position at bottom right of page */
 	bottom: 0;
 	right: 0;
+
+	li {
+		padding: $margin;
+		
+		float: left;
+	}
 	
 }
 
@@ -52,11 +55,21 @@
 	position: fixed;  /*position at bottom right of page */
 	bottom: 0;
 	right: 0;
-	background: rgba(59, 89, 152, .93);
+	
 	z-index: 4;
-	li {
-		
+
+	a {
+		padding: $margin;
+		width: 50%;
+		display: inline-block;
+		float: left;
+		background: rgba(59, 89, 152, .93);
 	}
+
+	a:hover {
+		background: $color1;
+	}
+	
 }
 
 
@@ -69,7 +82,11 @@
 body.follow-on {
 		.follow-toggle {
 			background-color: $color1;			
+			a {
+				background: $color1;
+			}
 		}
+
 		.follow {
 			@include transform( translateY(0%) );
 			opacity: 1;
@@ -81,6 +98,9 @@ body.follow-on {
 body.share-on {
 		.share-toggle {
 			background-color: $color1;
+			a {
+				background: $color1;
+			}
 		}
 		.share {
 			@include transform( translateY(0%) );
