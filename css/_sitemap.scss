@@ -1,10 +1,10 @@
 /*navigation at footer of page*/
 .sitemap {
   text-align: left;  
-  padding: 0 $margin2*2;
+  padding: 0 $margin2;
   li {
-  	margin-bottom: $margin2*2;
   	text-transform: uppercase;
+    
   	ul {
       margin: 0;
   	}
@@ -21,10 +21,26 @@
   }
 }
 
+.sitemap-comp {
+  li {
+    margin-bottom: $margin2*2;
+  }
+}
+
 /*alumni channel does not have tertiary links */
 .sitemap-simple {
-  width: 50%;
-  float: left;
+  ul {
+    width: 50%;
+    float: left;
+    padding-right: $margin2;
+    li {
+      margin-bottom: $margin2;
+    }
+    ul {
+      width: 100%;
+    }
+  }
 }
+
 
 /*some additional rules are in the _nav.scss that define how the grid is arranged */
