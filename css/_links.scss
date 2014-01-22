@@ -19,16 +19,48 @@ a:active,
 a:hover {
     outline: 0;
 }
-
+/*no underline*/
 a {text-decoration: none}
 
+/*standard link color*/
 a:link, a:visited{
 	color: $color3}
 
+/*dark shadow on hover*/
 a:hover {
 	color: lighten($color3, 5);
 	text-shadow: 2px 2px 2px $color1; 
 }
+
+/*footer links are on gray and need a lighter blue*/
+footer {
+  a:link, a:visited {
+    color: $color4;
+  }
+}
+
+
+/*hidden white links*/
+.mainnav, .sitemap, .extra  {
+  a:link, a:visited, a:active, a:hover {
+    color: white;
+    width: 100%;
+    display: block;
+    @include breakpoint(adult) {
+      display: inline;
+    }
+	}
+}
+
+
+/*use this class to space out links for touch*/
+.space-link {
+	line-height: 2em;
+	@include breakpoint(adult) {
+		line-height: auto;
+	}
+}
+
 
 /*hide phone link on desktop */
 a.phone:link, a.phone:visited, a.phone:hover {

@@ -2,14 +2,6 @@
 
 /* this can be replaced, if all menus are icon based*/
 .mainnav, footer  {
-  a:link, a:visited, a:active, a:hover {
-    color: white;
-    width: 100%;
-    display: block;
-    @include breakpoint(adult) {
-      display: inline;
-    }
-  }
   ul {
     list-style-type:none;
     padding-left: 0px;
