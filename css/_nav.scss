@@ -141,11 +141,15 @@ ul.nav:after {
       clear: both;
 }
 
-/*too much space between redline and text on alumni menu because of the <br> before login, the <br> is there to force the <hr> to vertical align with the rest of the text  */
+
+
+/*
+removed
+too much space between redline and text on alumni menu because of the <br> before login, the <br> is there to force the <hr> to vertical align with the rest of the text  
 .alumni ul.extra{
     margin-top: 0;
   }
-
+*/
 
 
 footer ul.extra {

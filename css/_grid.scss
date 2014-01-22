@@ -13,7 +13,7 @@
 }
 
 
-[class*='col-'], .sitemap ul li {
+[class*='col-'], .sitemap-comp ul li {
   float: left;
   padding-right: $margin;
   @include breakpoint(teen) { 
@@ -33,7 +33,7 @@
 
 /* could move this into a new _.scss */
 
-.col-section, .sitemap ul li {
+.col-section, .sitemap-comp ul li {
   /*blocks are two across on portrait phone and tablet
     blocks are three across on landscape phone and tablet as well as desktop
    */
