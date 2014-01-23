@@ -10,8 +10,23 @@
     } 
    }
 
-.read img {
-	width: 100%;
-	max-width: 40em;
-	text-align: right;
+/*figure */
+.fullimg img {
+	width: 100%; /*full screen*/
+	/*max-width and slide left for images on read adult */
+	@include breakpoint(adult) { 
+		max-width: 30em; /* or else too big on big screens */
+		float: left; 
+		margin-left: -$margin*2; /*align to page width*/
+		margin-right: $margin*2; /*set gutter*/
+		margin-bottom: $margin;
+	}
+}
+
+/*figure */
+.imageright img{
+	@include breakpoint(adult) { 
+	margin-left: 31%; /*align right*/
+	max-width: 69%;	/*full width of whatever is left*/
+	}
 }

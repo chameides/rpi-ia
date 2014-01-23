@@ -20,7 +20,8 @@ figure {
 	}
 }
 
-.read figcaption:before {
+/*add bar before caption on .read */
+.fullimg figcaption:before {
 	@include breakpoint(teen) {
 		content: '';
 		border-bottom: .4em solid $color3;
@@ -32,7 +33,7 @@ figure {
 
 }
 .read .aside {
-	@include breakpoint(teen) {
+	@include breakpoint(teen-up) {
 		width: $smallratio;
 		float: left;
 		clear: left;
@@ -55,5 +56,18 @@ figure {
 		clear: left;
 		margin: 0 0 $margin2/2;
 		padding-right: $margin2;
+	}
+}
+
+figcaption {
+	@include breakpoint(adult) {
+		margin-bottom: $margin2;
+	}
+}
+
+
+.imageright figcaption {
+	@include breakpoint(adult) {
+		@include transform( translateY(-100%) );
 	}
 }

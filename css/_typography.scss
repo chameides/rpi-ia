@@ -95,6 +95,9 @@ section h2, h2.subtitle {
 		margin-bottom: 3em;
 		text-transform: uppercase;
 		width: 100%;
+	@include breakpoint(adult) {
+		margin-bottom: $margin2*2;
+	}
 
 	}
 }
@@ -181,6 +184,9 @@ p.squeeze {
 		margin-left: $ratio;
 		font-size: 1em;
 		margin-right: $margin3;
+	}
+	@include breakpoint(adult) {
+		font-size: .9em;
 	}
 }
 
