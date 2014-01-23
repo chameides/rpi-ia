@@ -1,17 +1,15 @@
-/*this goes in button */
-
-.menu-button-wrapper /*.flex-menu-wrapper*/ {
+.menu-button-wrapper {
   min-width: 40px;
   @include breakpoint(adult) { 
     display: none
   }
 }
 
-.toggle-menu-icon /*flex-menu-icon*/ {
+.toggle-menu-icon {
   width:100%; 
   }
 
-.donate-wrapper /*, .flex-donate-wrapper */{
+.donate-wrapper {
   @include flexbox;
   @include align-items(flex-start);
   @include justify-content(flex-end);
@@ -21,7 +19,7 @@
   }
   }
 
-.donate-button, /*.flexdonate*/ {
+.donate-button {
   font-size:.6em;
   color: white;
   text-align: center;
@@ -35,27 +33,10 @@
 }
 
 
-.action, .donate-button /*, .flexdonate*/ {
-  background: -moz-linear-gradient(
-    top,
-    #d91f28 0%,
-    #de2831 29%,
-    #94151b);
-  background: -webkit-gradient(
-    linear, left top, left bottom, 
-    from(#d91f28),
-    color-stop(0.49, #de2831),
-    to(#94151b));
-  -moz-border-radius: .7em;
-  -webkit-border-radius: .7em;
+.action, .donate-button  {
+  @include linear-gradient(to bottom, #d91f28 0%, #de2831 29%, #94151b 100%, $fallback: #de2831);
   border-radius: 1em;
   border: 1px solid #d91f28;
-  -moz-box-shadow:
-    3px 3px 3px rgba(000,000,000,0.5),
-    inset -14px -12px 4px rgba(247,054,064,0);
-  -webkit-box-shadow:
-    3px 3px 3px rgba(000,000,000,0.5),
-    inset -14px -12px 4px rgba(247,054,064,0);
   box-shadow:
     3px 3px 3px rgba(000,000,000,0.5),
     inset -14px -12px 4px rgba(247,054,064,0);
@@ -64,6 +45,12 @@
     0px 1px 0px rgba(255,255,255,0);
    text-transform: uppercase; 
 }
+
+
+.donate-button:hover {
+
+}
+
 
 .action-wrapper{
   text-align: center;
