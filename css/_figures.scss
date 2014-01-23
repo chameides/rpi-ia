@@ -20,8 +20,6 @@ figure {
 	}
 }
 
-
-
 /*add bar before caption on .read */
 .fullimg figcaption:before {
 	@include breakpoint(teen) {
