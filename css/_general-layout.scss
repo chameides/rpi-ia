@@ -16,8 +16,7 @@ body {
 	}
 }
 
-.read .content {
-	margin-right: $margin2;
+.read {
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
 		margin-right: 0;
