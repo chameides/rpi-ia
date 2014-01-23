@@ -56,6 +56,8 @@
   position: relative;
   padding-left: 1.25em;
 }
+
+/*menu hamburger*/
 .menu-open:before {
   content: "";
   position: absolute;
@@ -63,10 +65,18 @@
   top: 0em;
   width: 1.3em;
   height: 0.15em;
-  background: white;
+  background: white; 
   box-shadow: 
-    0 0.5em 0 0 white,
-    0 1em 0 0 white;
+    0 0.5em 0 0 white, /*if change this, change the hover as well*/
+    0 1em 0 0 white; /*if change this, change the hover as well*/
+}
+
+
+.menu-open:hover:before {
+  background: $color4;
+  box-shadow: 
+    0 0.5em 0 0 $color4,
+    0 1em 0 0 $color4;
 }
 
 
