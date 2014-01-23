@@ -47,8 +47,9 @@
 }
 
 
-.donate-button:hover {
-
+.header .donate-button:hover {
+  @include linear-gradient($color4 0%, $color4 100%, $fallback: $color4);
+  color: $color1;
 }
 
 

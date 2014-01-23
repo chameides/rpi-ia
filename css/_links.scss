@@ -39,6 +39,10 @@ a:hover {
   a:link, a:visited, a:active {
     color: white;
   }
+  a:hover {
+    color: $color4;
+    text-shadow: none;
+  }
 }
 
 .mainnav, .sitemap, .extra  {
@@ -51,13 +55,8 @@ a:hover {
 	}
 }
 
-/*hidden white links go blue on hover */
-.header:hover {
-    a:hover {
-    color: $color4;
-    text-shadow: none;
-  }
-}
+
+
 
 
 /*footer links are on gray and need a lighter blue*/
