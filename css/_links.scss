@@ -32,24 +32,39 @@ a:hover {
 	text-shadow: 2px 2px 2px $color1; 
 }
 
-/*footer links are on gray and need a lighter blue*/
-footer {
-  a:link, a:visited {
-    color: $color4;
-  }
-}
 
 
 /*hidden white links*/
-.mainnav, .sitemap, .extra  {
-  a:link, a:visited, a:active, a:hover {
+.sitemap, .extra, .header  {
+  a:link, a:visited, a:active {
     color: white;
+  }
+}
+
+.mainnav, .sitemap, .extra  {
+  a:link, a:visited, a:active {
     width: 100%;
     display: block;
     @include breakpoint(adult) {
       display: inline;
     }
 	}
+}
+
+/*hidden white links go blue on hover */
+.header:hover {
+    a:hover {
+    color: $color4;
+    text-shadow: none;
+  }
+}
+
+
+/*footer links are on gray and need a lighter blue*/
+footer {
+  a:link, a:visited {
+    color: $color4;
+  }
 }
 
 

@@ -25,11 +25,12 @@
   font-size:.6em;
   color: white;
   text-align: center;
+  height: 100%;
   padding: .6em;
+  display: inline-block;
   @include breakpoint(adult) { 
-      padding: .4em .6em .3em;
-      font-size: .7em;
-
+    padding: .4em .6em .3em;
+    font-size: .7em;
   }
 }
 
