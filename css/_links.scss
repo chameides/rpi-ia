@@ -35,7 +35,7 @@ a:hover {
 
 
 /*hidden white links*/
-.sitemap, .extra, .header  {
+.sitemap, .extra, .header {
   a:link, a:visited, a:active {
     color: white;
   }
@@ -43,6 +43,23 @@ a:hover {
     color: $color4;
     text-shadow: none;
   }
+}
+
+/*Rensselaer is gray on phone */
+.title {
+  @include breakpoint(baby) {
+    a:link, a:visited, a:active {
+      color: #CCC;    
+    }
+    a:hover {
+      color: $color4;
+    }
+  }
+}
+
+.title .part2:hover {
+    color: $color4;
+    text-shadow: none;
 }
 
 .mainnav, .sitemap, .extra  {
