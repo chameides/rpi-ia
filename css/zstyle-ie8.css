@@ -355,6 +355,7 @@ position: relative;
 /* Header */
 .header {
   background: #333333;
+  background: red;
   -webkit-flex-wrap: nowrap;
   -moz-flex-wrap: nowrap;
   -ms-flex-wrap: none;

@@ -3,6 +3,9 @@
 
 .header {
   background: $color1;
+  @include ie8 {
+    background: red;
+  }
   @include flex-wrap( nowrap );
   @include breakpoint(adult) {
     padding: $margin2;

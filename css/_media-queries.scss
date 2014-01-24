@@ -51,8 +51,8 @@ $ie8: false !default;
 }
 
 
-@mixin old-ie {
-  @if $old-ie {
+@mixin ie8 {
+  @if $ie8 {
     @content;
   }
 }
