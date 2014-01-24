@@ -53,8 +53,8 @@
   @include breakpoint(adult) { 
     position: relative;
     padding: 0rem 1rem;
-    -webkit-transform:translate(0%);
-    -webkit-box-shadow:none;
+    @include transform( translate(0%) );
+    box-shadow:none;
     font-size: .9em;
     margin-bottom: 0px;
   }
@@ -203,7 +203,7 @@ ul.extra .menu-icon {
 
 
 body.menu-on .mainnav {
-  -webkit-transform:translate(0%);
+  @include transform( translate(0%) );
  }
 
 /*this makes the main body fade out when the sidemenu goes, but unfortunately also affects the sidemenu now that I moved it inside the wrapper
