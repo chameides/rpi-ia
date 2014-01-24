@@ -50,6 +50,7 @@ a:hover {
   }
 }
 
+
 /*Rensselaer is gray on phone */
 .title {
   @include breakpoint(baby) {
@@ -66,6 +67,14 @@ a:hover {
     color: $color4;
     text-shadow: none;
 }
+
+/*no hover affect, w/out this there will be a flash of color*/
+nav, .social, .footerlogo-wrapper{
+  a:hover {
+    border-style: none;
+  }
+}
+
 
 .mainnav, .sitemap, .extra  {
   a:link, a:visited, a:active {
