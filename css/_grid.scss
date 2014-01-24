@@ -13,7 +13,7 @@
 }
 
 
-[class*='col-'], .sitemap-comp ul li {
+[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li {
   float: left;
   padding-right: $margin;
   @include breakpoint(teen) { 

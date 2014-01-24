@@ -1,4 +1,10 @@
 /*navigation at footer of page*/
+
+/*also see:
+  grid.scss for some of the float rules
+  nav.scss for icon rule */
+
+
 .sitemap {
   text-align: left;  
   padding: 0 $margin2;
@@ -30,11 +36,23 @@
 /*alumni channel does not have tertiary links */
 .sitemap-simple {
   ul {
+    /* 2 columns on phone */
     width: 50%;
     float: left;
-    padding-right: $margin2;
+    /*main section is 3 columns on tablet */
+    @include breakpoint(teen-up) {
+      width: 75%;
+      text-align: center;
+    }
     li {
       margin-bottom: $margin2;
+      width: 100%;
+      @include breakpoint(teen-up) {
+        /*each li is 1/3 of 75*/
+        width: 33%;
+        padding-right: 0;
+        padding-bottom: $margin;
+      }
     }
     ul {
       width: 100%;
@@ -42,5 +60,16 @@
   }
 }
 
+/*events is the fourth column*/
+ul.sitemap-feature {
+  @include breakpoint(teen-up) {
+    width: 25%;
+  }
+  li {
+    @include breakpoint(teen-up) {
+      width: 100%;
+    }
+  }
+}
 
 /*some additional rules are in the _nav.scss that define how the grid is arranged */
