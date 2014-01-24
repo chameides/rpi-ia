@@ -24,20 +24,25 @@ a {text-decoration: none}
 
 /*standard link color*/
 a:link, a:visited{
-	color: $color3}
+	color: $color3; 
+  border-bottom: white;
+  border-width: 0px 0px 1px 0px;
+  border-style: none none dotted none;
+}
 
-/*dark shadow on hover*/
 a:hover {
-	color: lighten($color3, 5);
-	text-shadow: 2px 2px 2px $color1; 
+  border-bottom: $color3;
+  border-width: 0px 0px 1px 0px;
+  border-style: none none dotted none;
 }
 
 
 
 /*hidden white links*/
-.sitemap, .extra, .header {
+.sitemap, .extra, .header, .social  {
   a:link, a:visited, a:active {
     color: white;
+    border-style: none;
   }
   a:hover {
     color: $color4;
@@ -78,8 +83,14 @@ a:hover {
 
 /*footer links are on gray and need a lighter blue*/
 footer {
-  a:link, a:visited {
+  a:link, a:visited, a:active {
     color: $color4;
+    border-style: none;
+  }
+  a:hover {
+    border-bottom: $color4;
+    border-width: 0px 0px 1px 0px;
+    border-style: none none dotted none;
   }
 }
 
