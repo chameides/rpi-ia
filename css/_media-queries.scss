@@ -1,42 +1,58 @@
+$ie8: false !default; 
+
 @mixin breakpoint($point) {
-  /* Smartphones, except large phone landscape ----------- */
-  @if $point == baby {
-    @media only screen and (max-width : 707px) { @content; }
-  }
-  
-
-  @else if $point == big-baby-sleep {
-    /* large phone (landscape) ----------- */
-    @media only screen and (min-width : 320px) and (max-width : 707px) and (orientation:landscape)  { @content; }
-  }
-  
-
-  @else if $point == teen-up {
-    /*tablet and up*/
-    @media only screen and (min-width : 708px) { @content; }
+  /*if ie8, combine teen-up and adult breakpoints */
+  @if $ie8 {
+    
+    @if $point == teen-up {
+       @content;
+    }
+    @if $point == adult {
+      @content;
+    }
   }
 
-  @else if $point == teen {
-    /*tablet*/
-    @media only screen and (min-width : 708px) and (max-width : 1020px) and (orientation:portrait) { @content; }
+  /*not ie8*/
+  @else {
+    /* Smartphones, except large phone landscape ----------- */
+    @if $point == baby {
+      @media only screen and (max-width : 707px) { @content; }
+    }
+
+    @else if $point == big-baby-sleep {
+      /* large phone (landscape) ----------- */
+      @media only screen and (min-width : 320px) and (max-width : 707px) and (orientation:landscape)  { @content; }
+    }
+    @else if $point == teen-up {
+      /*tablet and up*/
+      @media only screen and (min-width : 708px) { @content; }
+    }
+
+    @else if $point == teen {
+      /*tablet*/
+      @media only screen and (min-width : 708px) and (max-width : 1020px) and (orientation:portrait) { @content; }
+    }
+
+    @else if $point == teen-sleep {
+      /*tablet*/
+      @media only screen and (min-width : 708px) and (max-width : 1020px) and (orientation:landscape) { @content; }
+    }
+
+    @else if $point == adult {
+      /*screen*/
+      @media only screen and (min-width : 1021px) { @content; }
+    }
+
+    @else if $point == senior {
+      /*screen*/
+      @media only screen and (min-width : 1525px) { @content; }
+    }
   }
+}
 
-  @else if $point == teen-sleep {
-    /*tablet*/
-    @media only screen and (min-width : 708px) and (max-width : 1020px) and (orientation:landscape) { @content; }
+
+@mixin old-ie {
+  @if $old-ie {
+    @content;
   }
-
-  @else if $point == adult {
-    /*screen*/
-    @media only screen and (min-width : 1021px) { @content; }
-  }
-
-  @else if $point == senior {
-    /*screen*/
-    @media only screen and (min-width : 1525px) { @content; }
-  }
-
-
-
-
 }
