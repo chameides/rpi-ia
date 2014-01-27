@@ -859,6 +859,7 @@ a.phone:link, a.phone:visited, a.phone:hover {
 .menu-button-wrapper {
   min-width: 40px;
   /*if ie8, combine teen-up and adult breakpoints */
+  margin-top: .5em;
   /*if ie8, combine teen-up and adult breakpoints */
   display: none; }
 
