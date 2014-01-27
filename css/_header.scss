@@ -3,14 +3,14 @@
 
 .header {
   background: $color1;
-  @include ie8 {
-    background: red;
-  }
-  @include flex-wrap( nowrap );
+  /*@include flex-wrap( nowrap );*/
   @include breakpoint(adult) {
     padding: $margin2;
   } 
 }
+
+
+
 
 .bannerimage {
   width:100%;

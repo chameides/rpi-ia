@@ -305,45 +305,25 @@ position: relative;
 */
 .header-main {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row;
-  -moz-flex-flow: row;
-  -ms-flex-flow: row;
-  flex-flow: row;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  -moz-justify-content: left;
-  justify-content: left;
   padding: 0.9rem 0 0.45rem 0.9rem;
   /*if ie8, combine teen-up and adult breakpoints */
   /*if ie8, combine teen-up and adult breakpoints */
   padding-bottom: 0;
   padding-top: .5rem;
   padding-right: 0.9rem; }
+  .header-main .donate-wrapper {
+    float: right; }
 
-/* not using multiline flex
-.flexcontainer2 {
-  width: 100%;
-  @include flexbox;
-  @include flex-flow(row);
-  @include justify-content(center);
-  @include flex-wrap( wrap ) ;
-  section {
-    width: 50%;
-    padding-right: $margin;
-  }
-  .highlight {
-    width: 100%;
-  }
-}
-*/
+/*clear fix*/
+.header-main:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .header-item {
+  float: left;
   padding-right: 0.9rem;
+  display: inline-block;
   /*if ie8, combine teen-up and adult breakpoints */
   /*if ie8, combine teen-up and adult breakpoints */
   padding-right: 0; }
@@ -355,11 +335,7 @@ position: relative;
 /* Header */
 .header {
   background: #333333;
-  background: red;
-  -webkit-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -ms-flex-wrap: none;
-  flex-wrap: nowrap;
+  /*@include flex-wrap( nowrap );*/
   /*if ie8, combine teen-up and adult breakpoints */
   padding: 0.9rem; }
 
@@ -907,42 +883,24 @@ hide borders between buttons*/
 .menu-button-wrapper {
   min-width: 40px;
   /*if ie8, combine teen-up and adult breakpoints */
+  /*if ie8, combine teen-up and adult breakpoints */
   display: none; }
 
 .toggle-menu-icon {
   width: 100%; }
 
 .donate-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  justify-content: flex-end;
   /*if ie8, combine teen-up and adult breakpoints */
   font-size: 1.1em;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  -webkit-align-items: flex-end;
-  -moz-align-items: flex-end;
-  align-items: flex-end; }
+  margin-top: .2em;
+  /*if ie8, combine teen-up and adult breakpoints */
+  margin-top: .65em; }
 
 .donate-button {
   font-size: .6em;
-  color: white;
   text-align: center;
   height: 100%;
   padding: .6em;
-  display: inline-block;
   /*if ie8, combine teen-up and adult breakpoints */
   padding: .4em .6em .3em;
   font-size: .7em; }

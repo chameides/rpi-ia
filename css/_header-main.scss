@@ -1,12 +1,8 @@
-.header-main /*flexcontainer*/ {
+.header-main {
   width: 100%;
-  @include flexbox;
-  @include flex-flow(row);
-  @include justify-content(left);
   padding: $margin2 0 $margin2/2 $margin2;
-  
-  @include breakpoint(teen) {
-    @include align-items(center);
+
+   @include breakpoint(teen) {
     padding-top: $margin2;
     padding-bottom: $margin2;
   }
@@ -15,36 +11,31 @@
     padding-top: .5rem;
     padding-right: $margin2;
   }
-}
-
-/* not using multiline flex
-.flexcontainer2 {
-  width: 100%;
-  @include flexbox;
-  @include flex-flow(row);
-  @include justify-content(center);
-  @include flex-wrap( wrap ) ;
-  section {
-    width: 50%;
-    padding-right: $margin;
-  }
-  .highlight {
-    width: 100%;
+  .donate-wrapper {
+    float:right;
   }
 }
-*/
 
-.header-item /*flexitem*/{
+/*clear fix*/
+.header-main:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+
+.header-item {
+  float: left;
   padding-right: $margin2;
+  display: inline-block;
   @include breakpoint(teen) { 
     padding-right: $margin2;
   }
   @include breakpoint(adult) { 
     padding-right: 0;
   }
-
 }
-
 
 .title {
   padding-top: 0px;

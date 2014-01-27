@@ -1,5 +1,9 @@
 .menu-button-wrapper {
   min-width: 40px;
+  @include breakpoint(teen)
+  {
+    margin-top: .5em;
+  }
   @include breakpoint(adult) { 
     display: none
   }
@@ -10,22 +14,20 @@
   }
 
 .donate-wrapper {
-  @include flexbox;
-  @include align-items(flex-start);
-  @include justify-content(flex-end);
   @include breakpoint (teen-up) {
     font-size: 1.1em;
-    @include align-items(flex-end);
+    margin-top: .2em;
   }
+  @include breakpoint (adult) {
+    margin-top: .65em;
   }
+}
 
 .donate-button {
   font-size:.6em;
-  color: white;
   text-align: center;
   height: 100%;
   padding: .6em;
-  display: inline-block;
   @include breakpoint(adult) { 
     padding: .4em .6em .3em;
     font-size: .7em;
