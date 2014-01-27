@@ -64,6 +64,7 @@
   }
 }
 
+
 @include breakpoint(teen) {
   .col-section:nth-of-type(2n + 1) {
     clear: left;
@@ -85,11 +86,27 @@
 
 @include breakpoint(adult) {
   .col-section:nth-of-type(3n + 1) {
-    clear: left;
+    clear: left;  
+  }
+  @include ie8 {    
+    /*4th col-section */
+    .col-section:first-child + .col-section + .col-section + .col-section {
+      clear: left;
+    }
+    /*7th col-section */
+    .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
+      clear: left;
+    }
+    /*10th col-section */
+    .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
+      clear: left;
+    }
+    /*13th col-section */
+    .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
+      clear: left;
+    }
   }
 }
-
-
 
 .sitemap ul li {
   @include breakpoint(teen-up) { 
