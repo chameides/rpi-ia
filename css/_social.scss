@@ -3,7 +3,6 @@
 	width: 100%;
 	max-width: 200px;
 	z-index: 2;
-
 	position: fixed;  /*position at bottom right of page */
 	bottom: 0;
 	right: 0;
@@ -41,6 +40,10 @@
 	font-size: .8em;
 	background-color: $color1;
 	@include transform( translateY(100%));
+	/*transform does not work in ie8*/
+	@include ie8 {
+		bottom: -100%;
+	}
 	li {
 		padding: $margin;		
 		float: left;
@@ -57,6 +60,9 @@
 		float: left;
 		/*facebook blue*/
 		background: rgba(59, 89, 152, .93);
+		@include ie8 {
+			background: rgb(59, 89, 152);
+		}
 	}
 	a:hover {
 		background: $color1;
@@ -73,10 +79,13 @@ body.follow-on {
 		}
 
 		.follow {
-			@include transform( translateY(0%) );
 			opacity: 1;
 			z-index: 3;	
 			padding-bottom: 50px;
+			@include transform( translateY(0%) );
+			@include ie8 {
+				bottom: 0;
+			}
 		}
 	}
 
@@ -88,9 +97,11 @@ body.share-on {
 			}
 		}
 		.share {
-			@include transform( translateY(0%) );
 			opacity: 1;
 			padding-bottom: 50px;
-			
+			@include transform( translateY(0%) );
+			@include ie8 {
+				bottom: 0;
+			}
 		}
 	}

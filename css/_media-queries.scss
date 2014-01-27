@@ -49,10 +49,3 @@ $ie8: false !default;
     }
   }
 }
-
-
-@mixin ie8 {
-  @if $ie8 {
-    @content;
-  }
-}

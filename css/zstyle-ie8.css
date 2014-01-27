@@ -1,3 +1,5 @@
+/* Vendor Dependencies */
+/* Authored Dependencies */
 /* layout */
 /* Main-Sidebar Ratio */
 /* colors */
@@ -6,6 +8,7 @@
 /*red line, separator*/
 /*blue link text */
 /*lighter link text for dark bg */
+/* html5 and reset */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -87,6 +90,7 @@ body {
   margin: 0; }
 
 /*End of Base*/
+/* page structure and parts */
 /* General Layout */
 body {
   padding: 0px;
@@ -703,6 +707,7 @@ ul.sitemap-feature {
   font-size: .7em; }
 
 /* End of Footer */
+/* styles */
 .col-section img, article img, footer img {
   width: 100%; }
 
@@ -835,51 +840,6 @@ a.phone:link, a.phone:visited, a.phone:hover {
   /*if ie8, combine teen-up and adult breakpoints */
   color: white; }
 
-/*the social media follow buttons are created through a 3rd party*/
-.at4-follow {
-  /*this adjusts those buttons and moves them to the left */
-  right: 5.1rem;
-  /*buttons scroll with page */
-  position: absolute; }
-
-/*hides a carot which allows the social media buttons to be collapsed */
-.at4-follow-close-control, .at4-show {
-  /*display: none!important;*/ }
-
-/*follow and share buttons */
-#at4m-dock {
-  max-width: 354px;
-  background: rgba(59, 89, 152, 0.8);
-  right: 0;
-  left: auto;
-  /*overrides script */ }
-
-/*individual follow and share buttons*/
-.at4m-dock a:link, .at4m-dock a:visited {
-  max-width: 118px;
-  color: white; }
-
-/*hide borders between buttons*/
-.at4m-dock.at4-ma2 a:first-child, .at4m-dock-toggle a {
-  border: none; }
-
-.at4m-dock-toggle {
-  max-width: 118px; }
-
-/*
-.at4-show
-
-max-width: 354px;
-right: 0;
-left: auto;
-position: relative;
-margin-left: auto;
-
-
-at4m-menu ats-transparent animated slideInUp at4-show
-
-
-hide borders between buttons*/
 .menu-button-wrapper {
   min-width: 40px;
   /*if ie8, combine teen-up and adult breakpoints */
@@ -1372,7 +1332,9 @@ nav ol {
   -moz-transform: translateY(100%);
   -ms-transform: translateY(100%);
   -o-transform: translateY(100%);
-  transform: translateY(100%); }
+  transform: translateY(100%);
+  /*transform does not work in ie8*/
+  bottom: -100%; }
   .follow li, .share li {
     padding: 0.9em;
     float: left; }
@@ -1385,7 +1347,8 @@ nav ol {
     display: inline-block;
     float: left;
     /*facebook blue*/
-    background: rgba(59, 89, 152, 0.93); }
+    background: rgba(59, 89, 152, 0.93);
+    background: #3b5998; }
   .socialnav a:hover {
     background: #333333; }
 
@@ -1395,27 +1358,29 @@ body.follow-on .follow-toggle {
   body.follow-on .follow-toggle a {
     background: #333333; }
 body.follow-on .follow {
+  opacity: 1;
+  z-index: 3;
+  padding-bottom: 50px;
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
   transform: translateY(0%);
-  opacity: 1;
-  z-index: 3;
-  padding-bottom: 50px; }
+  bottom: 0; }
 
 body.share-on .share-toggle {
   background-color: #333333; }
   body.share-on .share-toggle a {
     background: #333333; }
 body.share-on .share {
+  opacity: 1;
+  padding-bottom: 50px;
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
   transform: translateY(0%);
-  opacity: 1;
-  padding-bottom: 50px; }
+  bottom: 0; }
 
 /* ==========================================================================
    Embedded content

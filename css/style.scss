@@ -1,9 +1,17 @@
+/* Vendor Dependencies */
 @import "bourbon";
 @import "mixin-flex";
+
+/* Authored Dependencies */
 @import "variables";
+@import "mixin";
 @import "media-queries";
+
+/* html5 and reset */
 @import "Display-Definitions";
 @import "base";
+
+/* page structure and parts */
 @import "general-layout";
 @import "grid";
 @import "grid-hover";
@@ -12,10 +20,13 @@
 @import "aside";
 @import "nav";
 @import "footer";
+
+
+/* styles */
 @import "images";
 @import "misc";
 @import "links";
-@import "button-addthis";
+
 @import "button";
 @import "typography";
 @import "lists";
