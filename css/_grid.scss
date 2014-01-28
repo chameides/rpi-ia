@@ -54,6 +54,21 @@
   }
 }
 
+.full .col-section {
+  /*no sidebar so:
+    blocks are three across on tablet
+    blocks are four across on tablet as well as desktop
+   */
+  @include breakpoint(teen) { 
+    width: 33.33%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(teen-sleep) { 
+    width: 25%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(adult) {
+    width: 25%; /*if you change this, must change .col-section:nth-of-type */
+  }
+}
 
 /*.col-sections have various heights and this set of rules ensure that the tops of second rows line up */
 
@@ -69,6 +84,14 @@
   .col-section:nth-of-type(2n + 1) {
     clear: left;
   }
+  .full /*no sidebar */{
+    .col-section:nth-of-type(2n + 1) {
+      clear: none; /*reverse above */
+    }
+    .col-section:nth-of-type(3n + 1) {
+      clear: left; 
+    }
+  } 
 }
 
 /*col-sections are three across*/
@@ -82,12 +105,28 @@
   .col-section:nth-of-type(3n + 1) {
     clear: left;
   }
+  .full /*no sidebar */{
+    .col-section:nth-of-type(3n + 1) {
+      clear: none; /*reverse above */
+    }
+    .col-section:nth-of-type(4n + 1) {
+      clear: left; 
+    }
+  } 
 }
 
 @include breakpoint(adult) {
   .col-section:nth-of-type(3n + 1) {
     clear: left;  
   }
+  .full /*no sidebar */{
+    .col-section:nth-of-type(3n + 1) {
+      clear: none; /*reverse above */
+    }
+    .col-section:nth-of-type(4n + 1) {
+      clear: left; 
+    }
+  } 
   @include ie8 {    
     /*1st col-section */
     .col-section:first-child {
@@ -109,6 +148,31 @@
     /*13th col-section */
     .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
       clear: left;
+    }
+    .full /*no sidebar */ {
+      /*1st col-section */
+      .col-section:first-child,  
+      /*4th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section, 
+      /*7th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, 
+      /*10th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, 
+      /*13th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
+        clear: none;
+      }
+      /*1st col-section */
+      .col-section:first-child,  
+      /*5th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section + .col-section, 
+      /*9th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, 
+      /*12th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section 
+      {
+        clear: left;
+      } 
     }
   }
 }

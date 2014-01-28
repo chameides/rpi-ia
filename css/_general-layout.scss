@@ -35,7 +35,7 @@ body {
 	}
 }
 
-
+/*if change this, change aside */
 .maincontent {
 	/*on tablets and up, the aside moves to the sidebar*/
 	width: 100%;
@@ -52,8 +52,11 @@ body {
 	}
 }
 
-.read .maincontent{
-	width: 100%
+
+.read, .full {
+	.maincontent{
+		width: 100%;
 	}
+}
 
 /* End of General Layout */

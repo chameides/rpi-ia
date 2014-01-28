@@ -7,6 +7,7 @@
 	width: 89%}
 }
 
+/*if change this, change general-layout */
 aside {
 	margin-right: .9em;
 	@include breakpoint(big-baby-sleep) { 
@@ -22,16 +23,19 @@ aside {
 		} 
 	}
 
-.read aside {
-	@include breakpoint(teen-up) { 
-		margin-bottom: $margin2; 
-		padding-top: $margin2;
-		padding-left: $margin2;
-		width:100%-$ratio;
-		float: none;
-		clear: both;
-		display: block;
-		} 
+/*aside is at bottom, not sidebar*/
+.read, .full {
+	aside {
+		@include breakpoint(teen-up) { 
+			margin-bottom: $margin2; 
+			padding-top: $margin2;
+			padding-left: $margin2;
+			width:100%-$ratio;
+			float: none;
+			clear: both;
+			display: block;
+		}
+	} 
 }
 
 

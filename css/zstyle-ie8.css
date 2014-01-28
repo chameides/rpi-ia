@@ -117,6 +117,7 @@ body {
   margin-left: 0;
   margin-right: 0; }
 
+/*if change this, change aside */
 .maincontent {
   /*on tablets and up, the aside moves to the sidebar*/
   width: 100%;
@@ -127,7 +128,7 @@ body {
   /*if ie8, combine teen-up and adult breakpoints */
   /*if ie8, combine teen-up and adult breakpoints */ }
 
-.read .maincontent {
+.read .maincontent, .full .maincontent {
   width: 100%; }
 
 /* End of General Layout */
@@ -169,6 +170,17 @@ body {
   width: 33.33%;
   /*if you change this, must change .col-section:nth-of-type */ }
 
+.full .col-section {
+  /*no sidebar so:
+    blocks are three across on tablet
+    blocks are four across on tablet as well as desktop
+   */
+  /*if ie8, combine teen-up and adult breakpoints */
+  /*if ie8, combine teen-up and adult breakpoints */
+  /*if ie8, combine teen-up and adult breakpoints */
+  width: 25%;
+  /*if you change this, must change .col-section:nth-of-type */ }
+
 /*.col-sections have various heights and this set of rules ensure that the tops of second rows line up */
 /*col-sections are two across*/
 /*if ie8, combine teen-up and adult breakpoints */
@@ -178,6 +190,12 @@ body {
 /*if ie8, combine teen-up and adult breakpoints */
 /*if ie8, combine teen-up and adult breakpoints */
 .col-section:nth-of-type(3n + 1) {
+  clear: left; }
+
+.full .col-section:nth-of-type(3n + 1) {
+  clear: none;
+  /*reverse above */ }
+.full .col-section:nth-of-type(4n + 1) {
   clear: left; }
 
 /*1st col-section */
@@ -199,6 +217,21 @@ body {
 /*13th col-section */
 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
   clear: left; }
+
+.full {
+  /*1st col-section */
+  /*1st col-section */ }
+  .full .col-section:first-child,
+  .full .col-section:first-child + .col-section + .col-section + .col-section,
+  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
+    clear: none; }
+  .full .col-section:first-child,
+  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section,
+  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
+    clear: left; }
 
 .sitemap ul li {
   /*if ie8, combine teen-up and adult breakpoints */
@@ -434,6 +467,7 @@ position: relative;
 .priority1and2 {
   /*if ie8, combine teen-up and adult breakpoints */ }
 
+/*if change this, change general-layout */
 aside {
   margin-right: .9em;
   /*if ie8, combine teen-up and adult breakpoints */
@@ -446,7 +480,8 @@ aside {
   aside p {
     margin-top: 0; }
 
-.read aside {
+/*aside is at bottom, not sidebar*/
+.read aside, .full aside {
   /*if ie8, combine teen-up and adult breakpoints */
   margin-bottom: 0.9em;
   padding-top: 0.9em;
