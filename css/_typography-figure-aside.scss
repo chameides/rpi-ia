@@ -1,0 +1,42 @@
+figcaption {
+	font-size:.8em;
+	font-weight: 500;
+	text-align: justify;
+	 @include breakpoint(big-baby-sleep) { 
+		font-size: .5em;
+	}
+}
+
+.read figcaption {
+	@include breakpoint(teen-up) {
+		width: $smallratio;
+		float: left;
+		clear: left;
+		font-weight: normal;
+		margin-left: $margin2;
+		text-align: left;
+		display: inline;
+	}
+}
+
+.aside figcaption {
+	@include breakpoint(teen-up) {
+		margin-left: 0;
+	}
+}
+
+
+aside {
+	@include breakpoint(teen-up) {
+		font-size:.8em; 
+		p {
+			text-align: left;
+		}
+	}
+	@include breakpoint(adult) {
+		p {
+			font-size: .9em;
+		}
+	}
+	
+}

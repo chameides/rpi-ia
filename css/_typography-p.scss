@@ -1,0 +1,50 @@
+p,
+pre {
+	margin: 0 0 .8em;
+}
+
+p {
+	font-weight: 300;
+	max-width: 40em;
+	text-align: justify;
+	font-size: 1em;
+	/*
+	@include breakpoint(big-baby-sleep) { 
+		font-size: .7em;
+	}
+	*/
+	@include breakpoint(adult) { 
+		max-width: auto;
+	}
+}
+
+
+.gridtext p {
+	font-size: .9em;
+	text-align: left;
+	@include breakpoint(adult) { 
+	  font-size: .8em;
+	}
+}
+
+/*used on alumni-classes to reduce white space between intro paragraph and boxes*/
+p.squeeze {
+	margin-bottom: 0;
+}
+
+.read p {
+	@include breakpoint(teen-up) { 
+		margin-left: $ratio;
+		font-size: 1em;
+		margin-right: $margin3;
+	}
+	@include breakpoint(adult) {
+		font-size: .9em;
+	}
+}
+
+.read aside p {
+	@include breakpoint(teen-up) { 
+		margin-left: 0;
+	}
+}
