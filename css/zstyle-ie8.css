@@ -94,14 +94,21 @@ body {
 /* General Layout */
 body {
   padding: 0px;
-  min-width: 310px; }
+  min-width: 310px;
+  min-width: 850px;
+  max-width: 1770px;
+  margin: 0 auto;
+  background: #ccc; }
+
+.wrapper {
+  background: white; }
 
 .content {
-  margin-left: 0.9rem;
+  margin-left: 0.9em;
   /*on larger screen, additional margin */
   /*if ie8, combine teen-up and adult breakpoints */
   margin-top: 1em;
-  margin-left: 0.9rem;
+  margin-left: 0.9em;
   /*if ie8, combine teen-up and adult breakpoints */
   margin-left: 1.8em; }
 
@@ -173,6 +180,10 @@ body {
 .col-section:nth-of-type(3n + 1) {
   clear: left; }
 
+/*1st col-section */
+.col-section:first-child {
+  clear: left; }
+
 /*4th col-section */
 .col-section:first-child + .col-section + .col-section + .col-section {
   clear: left; }
@@ -235,10 +246,10 @@ body {
   min-height: 25px; }
 
 section {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.9em;
   /*if ie8, combine teen-up and adult breakpoints */
   /*if ie8, combine teen-up and adult breakpoints */
-  margin-bottom: 0.9rem; }
+  margin-bottom: 0.9em; }
 
 /* End of Grid */
 /* .grid {
@@ -325,12 +336,13 @@ position: relative;
 */
 .header-main {
   width: 100%;
-  padding: 0.9rem 0 0.45rem 0.9rem;
+  padding: 0.9em 0 0.45em 0.9em;
   /*if ie8, combine teen-up and adult breakpoints */
   /*if ie8, combine teen-up and adult breakpoints */
   padding-bottom: 0;
+  padding-right: 0.9em;
   padding-top: .5rem;
-  padding-right: 0.9rem; }
+  padding-top: .5em; }
   .header-main .donate-wrapper {
     float: right; }
 
@@ -342,7 +354,7 @@ position: relative;
 
 .header-item {
   float: left;
-  padding-right: 0.9rem;
+  padding-right: 0.9em;
   display: inline-block;
   /*if ie8, combine teen-up and adult breakpoints */
   /*if ie8, combine teen-up and adult breakpoints */
@@ -357,7 +369,7 @@ position: relative;
   background: #333333;
   /*@include flex-wrap( nowrap );*/
   /*if ie8, combine teen-up and adult breakpoints */
-  padding: 0.9rem; }
+  padding: 0.9em; }
 
 .bannerimage {
   width: 100%;
@@ -394,7 +406,7 @@ position: relative;
   display: inline;
   color: #0d0d0d;
   font-size: 2em;
-  margin-left: 0.45rem;
+  margin-left: 0.45em;
   margin-top: .4em; }
 
 .menu-open {
@@ -429,16 +441,16 @@ aside {
   /*if ie8, combine teen-up and adult breakpoints */
   float: right;
   width: 25%;
-  margin-bottom: 0.9rem;
-  padding-right: 0.9rem; }
+  margin-bottom: 0.9em;
+  padding-right: 0.9em; }
   aside p {
     margin-top: 0; }
 
 .read aside {
   /*if ie8, combine teen-up and adult breakpoints */
-  margin-bottom: 0.9rem;
-  padding-top: 0.9rem;
-  padding-left: 0.9rem;
+  margin-bottom: 0.9em;
+  padding-top: 0.9em;
+  padding-left: 0.9em;
   width: 69%;
   float: none;
   clear: both;
@@ -464,7 +476,7 @@ aside {
   /* don't need this anymore. with icons, everything should be top aligned
   @include align-items(center);
   */
-  padding: 0 0.9rem;
+  padding: 0 0.9em;
   /*if ie8, combine teen-up and adult breakpoints */
   width: 14%;
   display: inline-block;
@@ -481,7 +493,8 @@ aside {
     flex-basis: 25%;
     /*if ie8, combine teen-up and adult breakpoints */
     display: inline;
-    margin-left: .3rem; }
+    margin-left: .3rem;
+    margin-left: .3em; }
 
 .mainnav {
   width: 100%;
@@ -503,6 +516,7 @@ aside {
   /*if ie8, combine teen-up and adult breakpoints */
   position: relative;
   padding: 0rem 1rem;
+  padding: 0em 1em;
   -webkit-transform: translate(0%);
   -moz-transform: translate(0%);
   -ms-transform: translate(0%);
@@ -527,7 +541,8 @@ aside {
     border: none;
     display: inline-block;
     width: 85%;
-    margin-top: .5rem; }
+    margin-top: .5rem;
+    margin-top: .5em; }
     .mainnav ul.nav li {
       display: block;
       text-align: center;
@@ -539,14 +554,14 @@ aside {
       display: inline;
       border: none;
       padding: 0;
-      padding-right: 0.9rem;
+      padding-right: 0.9em;
       width: auto; }
     .mainnav ul.nav li:first-of-type {
       border-top: none; }
     .mainnav ul.nav li:last-of-type {
       border-bottom: none; }
   .mainnav ul.extra {
-    margin-top: 1.8rem;
+    margin-top: 1.8em;
     margin-bottom: 50px;
     font-size: .7em;
     /*if ie8, combine teen-up and adult breakpoints */
@@ -587,19 +602,23 @@ footer ul.extra {
 /*menu adjustments for desktop*/
 /*if ie8, combine teen-up and adult breakpoints */
 .menu-icon {
-  height: .9rem;
-  padding-right: .3rem;
   width: auto;
-  display: inline; }
+  display: inline;
+  padding-right: .3rem;
+  height: .9rem;
+  padding-right: .3em;
+  height: .9em; }
 
 /*icons show on sitemap in teen and adult */
 /*if ie8, combine teen-up and adult breakpoints */
 /*small inline icons for giving sitemap*/
 .sitemap-comp .menu-icon {
+  width: auto;
+  display: inline;
   height: .9rem;
   padding-right: .3rem;
-  width: auto;
-  display: inline; }
+  height: .9em;
+  padding-right: .3em; }
 
 /*large block icons for alumni sitemap*/
 .sitemap-simple .menu-icon {
@@ -658,7 +677,7 @@ footer {
 .footerlogo {
   width: 100%;
   max-width: 500px;
-  padding: 0.9rem 1.8rem;
+  padding: 0.9em 1.8em;
   /*if ie8, combine teen-up and adult breakpoints */
   margin-top: 1.8em; }
 
@@ -671,7 +690,7 @@ footer {
   nav.scss for icon rule */
 .sitemap {
   text-align: left;
-  padding: 0 0.9rem; }
+  padding: 0 0.9em; }
   .sitemap li {
     text-transform: uppercase; }
     .sitemap li ul {
@@ -686,7 +705,7 @@ footer {
       padding: .1em 0; }
 
 .sitemap-comp li {
-  margin-bottom: 1.8rem; }
+  margin-bottom: 1.8em; }
 
 /*alumni channel does not have tertiary links */
 .sitemap-simple ul {
@@ -698,7 +717,7 @@ footer {
   width: 75%;
   text-align: center; }
   .sitemap-simple ul li {
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.9em;
     width: 100%;
     /*if ie8, combine teen-up and adult breakpoints */
     /*each li is 1/3 of 75*/
@@ -720,7 +739,7 @@ ul.sitemap-feature {
 /*some additional rules are in the _nav.scss that define how the grid is arranged */
 .smallprint {
   clear: both;
-  margin: 0.9rem;
+  margin: 0.9em;
   font-size: .7em; }
 
 /* End of Footer */
@@ -906,7 +925,7 @@ a.phone:link, a.phone:visited, a.phone:hover {
 
 .action {
   font-size: .8em;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.9em;
   display: inline-block; }
 
 a.action:link, a.action:visited {
@@ -950,8 +969,8 @@ h1 {
   /*if ie8, combine teen-up and adult breakpoints */
   font-size: 3em;
   text-align: left;
-  margin-left: 0.9rem;
-  margin-right: 0.9rem; }
+  margin-left: 0.9em;
+  margin-right: 0.9em; }
 
 h2 {
   font-size: 1.2em;
@@ -960,19 +979,19 @@ h2 {
 article h2 {
   color: black;
   text-align: left;
-  margin-top: 0.9rem; }
+  margin-top: 0.9em; }
 
 .read h2 {
   /*if ie8, combine teen-up and adult breakpoints */
   margin-left: 31%;
   color: #4d4d4d;
   text-transform: none;
-  margin-right: 0.9rem;
-  margin-top: 2.7rem; }
+  margin-right: 0.9em;
+  margin-top: 2.7em; }
 
 section h2, h2.subtitle {
   text-align: center;
-  margin: 0 0 0.9rem; }
+  margin: 0 0 0.9em; }
 
 /*do i need this? */
 .gridtext h2 {
@@ -984,12 +1003,12 @@ section h2, h2.subtitle {
   /*if ie8, combine teen-up and adult breakpoints */
   text-align: left;
   font-size: 1.2em;
-  padding: 0 0.9rem;
+  padding: 0 0.9em;
   margin-bottom: 3em;
   text-transform: uppercase;
   width: 100%;
   /*if ie8, combine teen-up and adult breakpoints */
-  margin-bottom: 1.8rem; }
+  margin-bottom: 1.8em; }
 
 h2.subtitle {
   color: lighttext; }
@@ -1168,7 +1187,7 @@ figcaption {
   float: left;
   clear: left;
   font-weight: normal;
-  margin-left: 0.9rem;
+  margin-left: 0.9em;
   text-align: left;
   display: inline; }
 
@@ -1254,8 +1273,9 @@ cite {
   font-weight: 700;
   font-style: normal;
   font-size: .7em;
-  margin: 0.4rem 2.2rem 1.8rem 4em;
   font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
+  margin: 0.4rem 2.2rem 1.8em 4em;
+  margin: 0.4em 2.2em 1.8em 4em;
   /*if ie8, combine teen-up and adult breakpoints */
   /*if ie8, combine teen-up and adult breakpoints */
   float: left;
@@ -1426,7 +1446,7 @@ svg:not(:root) {
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
 figure {
-  margin: 0 0 0.9rem;
+  margin: 0 0 0.9em;
   /*if ie8, combine teen-up and adult breakpoints */ }
 
 .read figure {
@@ -1441,9 +1461,9 @@ figure {
   width: 25%;
   float: left;
   clear: left;
-  margin-left: 0.9rem;
-  margin-top: 0.9rem;
-  margin-bottom: 0.45rem; }
+  margin-left: 0.9em;
+  margin-top: 0.9em;
+  margin-bottom: 0.45em; }
   .read .aside figcaption:before {
     display: none; }
   .read .aside figcaption {
@@ -1454,7 +1474,7 @@ figure {
 
 figcaption {
   /*if ie8, combine teen-up and adult breakpoints */
-  margin-bottom: 0.9rem; }
+  margin-bottom: 0.9em; }
 
 .imageright figcaption {
   /*if ie8, combine teen-up and adult breakpoints */

@@ -1,5 +1,3 @@
-$ie8: false !default; 
-
 @mixin breakpoint($point) {
   /*if ie8, combine teen-up and adult breakpoints */
   @if $ie8 {

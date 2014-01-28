@@ -31,8 +31,11 @@ cite{
 	font-weight:700;
 	font-style:normal;
 	font-size:.7em;
-	margin: .4rem 2.2rem $margin2+$margin2 4em;	
 	font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
+	margin: .4rem 2.2rem $margin2+$margin2 4em;	
+	@include ie8 {
+		margin: .4em 2.2em $margin2+$margin2 4em;	
+	}
 	@include breakpoint(big-baby-sleep) { 
 	    margin-left: 20%;
 	    font-size: .5em;

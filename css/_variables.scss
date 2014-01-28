@@ -1,3 +1,5 @@
+$ie8: false !default; 
+
 /* layout */
 
 /* Main-Sidebar Ratio */
@@ -6,6 +8,9 @@
 	$margin: .9em;
 	$pagemargin: 3%;
 	$margin2: .9rem;
+	@if $ie8 {
+    $margin2: .9em;
+  }
 	$margin3: $margin * 2;
 
 
