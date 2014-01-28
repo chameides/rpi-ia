@@ -2,6 +2,18 @@
 body {
   padding: 0px;
   min-width: 310px;
+  @include ie8 {
+  	min-width: 850px;
+  	max-width: 1770px;
+  	margin: 0 auto;
+  	background: #ccc;
+  }
+}
+
+.wrapper {
+	@include ie8 {
+		background: white
+	}
 }
 
 .content {
