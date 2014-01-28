@@ -129,26 +129,17 @@
   } 
   @include ie8 {    
     /*1st col-section */
-    .col-section:first-child {
-      clear: left;
-    }
-
-    /*4th col-section */
-    .col-section:first-child + .col-section + .col-section + .col-section {
-      clear: left;
-    }
-    /*7th col-section */
-    .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
-      clear: left;
-    }
-    /*10th col-section */
-    .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
-      clear: left;
-    }
-    /*13th col-section */
-    .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
-      clear: left;
-    }
+      .col-section:first-child,  
+      /*4th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section, 
+      /*7th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, 
+      /*10th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, 
+      /*13th col-section */
+      .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
+        clear: left;
+      }
     .full /*no sidebar */ {
       /*1st col-section */
       .col-section:first-child,  
