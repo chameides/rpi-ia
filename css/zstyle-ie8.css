@@ -714,7 +714,8 @@ ul.sitemap-feature {
   width: 25%; }
   ul.sitemap-feature li {
     /*if ie8, combine teen-up and adult breakpoints */
-    width: 100%; }
+    width: 100%;
+    margin-top: .5em; }
 
 /*some additional rules are in the _nav.scss that define how the grid is arranged */
 .smallprint {
