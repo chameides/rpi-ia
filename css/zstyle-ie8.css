@@ -594,7 +594,8 @@ footer ul.extra {
 .menu-icon {
   height: 3em;
   max-height: 50px;
-  width: 100%; }
+  display: block;
+  margin: auto; }
 
 .sitemap .menu-icon {
   display: none; }
@@ -627,13 +628,13 @@ footer ul.extra {
   width: 100%; }
 
 ul.extra .menu-icon {
-  width: 100%;
   padding-right: 0;
   /*if ie8, combine teen-up and adult breakpoints */
   padding-right: 0;
   padding-left: 0;
   width: auto;
-  max-height: 1.5em; }
+  max-height: 1.5em;
+  max-width: 2em; }
 
 body.menu-on .mainnav {
   -webkit-transform: translate(0%);
@@ -679,7 +680,8 @@ footer {
   max-width: 500px;
   padding: 0.9em 1.8em;
   /*if ie8, combine teen-up and adult breakpoints */
-  margin-top: 1.8em; }
+  margin-top: 1.8em;
+  max-height: 101px; }
 
 .col-bottomlink {
   width: 25%; }

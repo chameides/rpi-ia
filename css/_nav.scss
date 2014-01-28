@@ -160,7 +160,8 @@ footer ul.extra {
 .menu-icon {
   height: 3em;
   max-height: 50px;
-  width: 100%;
+  display: block;
+  margin: auto;
 }
 
 .sitemap .menu-icon {
@@ -204,16 +205,16 @@ footer ul.extra {
   }
 }
 
-
-
 ul.extra .menu-icon {
-  width: 100%;
   padding-right: 0;
   @include breakpoint(adult) {
   padding-right: 0;
   padding-left: 0;
   width: auto;
   max-height: 1.5em;
+  }
+  @include ie8 {
+    max-width: 2em; 
   }
 }
 

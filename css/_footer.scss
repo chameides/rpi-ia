@@ -26,6 +26,9 @@ footer {
   @include breakpoint (adult) {
     margin-top: $margin3;
   }
+  @include ie8 {
+    max-height: 101px;
+  }
 }
 
 .col-bottomlink {
