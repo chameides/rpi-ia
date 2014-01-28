@@ -1,0 +1,124 @@
+h1, h2, h3, h4, h5, h6, .tagline {
+	font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
+	font-weight: 700;
+}
+
+h1, h2, .title {
+	text-transform: uppercase;
+	margin-top: 0px;
+	text-align: center;
+	@include breakpoint(adult) {
+		text-align: left;
+	}
+}
+
+
+h1 {
+	font-size: 1.9em;
+	line-height: 1em;
+	margin: 0.2em 0 0;
+	@include breakpoint(big-baby-sleep) { 
+	font-size: 1.5em; 
+	}
+	@include breakpoint(teen-up) { 
+	font-size: 1.9em; 
+	}
+
+}
+
+.read h1 {
+	@include breakpoint(teen-up) { 
+		font-size: 3em;
+		text-align: left;
+		margin-left: $margin2;
+		margin-right: $margin2;
+	}
+}
+
+h2 {
+	font-size:1.2em; 
+	margin-bottom: .2em;
+	}
+
+article h2 {
+	color: $textmain;
+	text-align: left;
+	margin-top: $margin2;
+}
+
+.read h2  {
+	@include breakpoint(teen-up) { 
+		margin-left: $ratio;
+		color: $lighttext;
+		text-transform: none;
+		margin-right: $margin2;
+		margin-top: $margin2*3;
+
+	}
+}
+
+
+section h2, h2.subtitle {
+	text-align: center;
+	margin: 0 0 $margin2;
+}
+
+/*do i need this? */
+.gridtext h2 {
+	text-align: left;
+	line-height: 1em;
+}
+.read h2.subtitle {
+	font-size: 1.1em;
+	@include breakpoint(teen-up) { 
+		text-align: left;
+		font-size: 1.2em;
+		padding: 0 $margin2;
+		margin-bottom: 3em;
+		text-transform: uppercase;
+		width: 100%;
+	@include breakpoint(adult) {
+		margin-bottom: $margin2*2;
+	}
+
+	}
+}
+
+h2.subtitle {
+	color: lighttext;
+}
+
+section h2 {
+	margin-bottom: 0em;
+}
+
+
+
+h3 {
+	font-size: 1.17em;
+	margin: 0 0 .3em;
+	text-transform: uppercase;
+}
+
+.read aside h3 {
+	@include breakpoint(teen-up) { 
+		
+	}
+}
+
+.donate h3 {margin-top: .7em;}
+
+h4 {
+	font-size: 1em;
+	margin: 1.33em 0;
+}
+
+h5 {
+	font-size: 0.83em;
+	margin: 1.67em 0;
+}
+
+h6 {
+	font-size: 0.67em;
+	margin: 2.33em 0;
+}
