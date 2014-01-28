@@ -471,13 +471,20 @@ aside {
 /*aside is at bottom, not sidebar*/
 .read aside, .full aside {
   /*if ie8, combine teen-up and adult breakpoints */
-  margin-bottom: 0.9em;
-  padding-top: 0.9em;
-  padding-left: 0.9em;
-  width: 69%;
+  width: 100%;
   float: none;
   clear: both;
   display: block; }
+
+.full aside {
+  /*if ie8, combine teen-up and adult breakpoints */
+  padding-right: 1.8em; }
+
+.read aside {
+  /*if ie8, combine teen-up and adult breakpoints */
+  margin-bottom: 0.9em;
+  padding-top: 0.9em;
+  padding-left: 0.9em; }
 
 .priority3 {
   /*if ie8, combine teen-up and adult breakpoints */
