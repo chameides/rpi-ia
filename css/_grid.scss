@@ -89,6 +89,11 @@
     clear: left;  
   }
   @include ie8 {    
+    /*1st col-section */
+    .col-section:first-child {
+      clear: left;
+    }
+
     /*4th col-section */
     .col-section:first-child + .col-section + .col-section + .col-section {
       clear: left;
