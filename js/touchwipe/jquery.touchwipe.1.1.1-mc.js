@@ -10,7 +10,8 @@
 (function($) {
    $.fn.touchwipe = function(settings) {
      var config = {
-            min_move_x: 20,
+            min_move_x: 70,
+            max_move_y: 10,
             //min_move_y: 20,
             wipeLeft: function() { },
             wipeRight: function() { },
@@ -43,10 +44,14 @@
                  var dy = startY - y;
                  //Prevent diagonal firings
                  //if(Math.abs(dx) >= config.min_move_x)
-                 if(Math.abs(dx) >= config.min_move_x + (Math.abs(dy) * 1.5) )
+                 if(
+                    (Math.abs(dx) >= config.min_move_x) && (Math.abs(dy) < config.max_move_y )
+                    )
                     {
+                    
                     cancelTouch();
                     if(dx > 0) {
+
                         config.wipeLeft();
                     }
                     else {
