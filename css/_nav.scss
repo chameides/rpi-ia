@@ -132,12 +132,12 @@ footer ul.extra {
 }
 .sitemap .menu-icon {
   display: none;
+  width: auto;
 }
 /*icons show on sitemap in teen and adult */
 @include breakpoint(teen-up) {
  /*small inline icons for giving sitemap*/
  .sitemap-comp .menu-icon  {
-    width: auto;
     display: inline;
     height: .9rem;
     padding-right: .3rem;
@@ -150,7 +150,8 @@ footer ul.extra {
   .sitemap-simple .menu-icon {
     display: block;
     height: 2em;
-    width: 100%;
+ 
+
   }
 }
 ul.extra .menu-icon {
