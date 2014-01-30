@@ -9,7 +9,7 @@ $ie8: false !default;
 	$pagemargin: 3%;
 	$margin2: .9rem;
 	@if $ie8 {
-    $margin2: .9em;
+    $margin2: 15px;
   }
 	$margin3: $margin * 2;
 
