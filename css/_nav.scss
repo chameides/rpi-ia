@@ -35,7 +35,6 @@
     }
   }
 }
-
 .mainnav {
   width: 100%; /* is this the right choice? */
   height:100%;
@@ -105,8 +104,6 @@
     }
   } 
 }
-
-
 footer ul.extra {
   text-transform: uppercase;
   font-size: .7em;
@@ -115,7 +112,6 @@ footer ul.extra {
      display: none;
   }
 }
-
 /*icons adjacent to text on menu items */
 .menu-icon {
   height: 3em;
@@ -134,11 +130,9 @@ footer ul.extra {
     }
   }
 }
-
 .sitemap .menu-icon {
   display: none;
 }
-
 /*icons show on sitemap in teen and adult */
 @include breakpoint(teen-up) {
  /*small inline icons for giving sitemap*/
@@ -159,7 +153,6 @@ footer ul.extra {
     width: 100%;
   }
 }
-
 ul.extra .menu-icon {
   padding-right: 0;
   @include breakpoint(adult) {
@@ -172,8 +165,7 @@ ul.extra .menu-icon {
     max-width: 2em; 
   }
 }
-
 /*javascript fires new class, which moves menu */
 body.menu-on .mainnav {
   @include transform( translate(0%) );
- }
+}

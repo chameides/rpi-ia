@@ -1,6 +1,7 @@
 .group:after, 
 .grid:after,
 .header-main:after,
+ul.nav:after
 {
 	content: "";
   display: table;
@@ -8,8 +9,7 @@
 }
 
 @include breakpoint (adult) {
-	.mainnav ul.extra ul:after,
-	ul.nav:after
+	.mainnav ul.extra ul:after
 	{
 		content: "";
 	  display: table;
