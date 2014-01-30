@@ -1,12 +1,14 @@
-/* this can be replaced, if all menus are icon based*/
 .mainnav, footer  {
+  /*menu is set up as a ul, but renders as inline*/
   ul {
     list-style-type:none;
     padding-left: 0px;
   }
+  /*this is for a secondary menu, renders as a list of icons with labels*/
   ul.extra {
     width: 100%;
     padding: 0 $margin2;
+    /*on desktop, a string of small icons on right*/
     @include breakpoint(adult) {
       width: $extrawidth; 
       display: inline-block;
@@ -25,6 +27,7 @@
       @include breakpoint(adult) {
         display: inline;
         margin-left: .3rem;
+        float: none; /*move icons to the right, not left*/
         @include ie8 {
           margin-left: .3em;
         }
