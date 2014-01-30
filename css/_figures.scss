@@ -70,4 +70,13 @@ figcaption {
 	@include breakpoint(adult) {
 		@include transform( translateY(-100%) );
 	}
+	@include ie8{
+		width: 30em;
+		float: none;
+		clear: left;
+		margin-left: $ratio;
+		margin-top: 0;
+		margin-bottom: $margin2;
+		display: block;
+	}
 }

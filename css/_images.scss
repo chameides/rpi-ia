@@ -20,6 +20,9 @@
 		margin-right: $margin*2; /*set gutter*/
 		margin-bottom: $margin;
 	}
+	@include ie8 {
+		width: 30em;
+	}
 }
 
 /*figure */
@@ -27,5 +30,9 @@
 	@include breakpoint(adult) { 
 	margin-left: 31%; /*align right*/
 	max-width: 69%;	/*full width of whatever is left*/
+	}
+	@include ie8 {
+		width: 30em;
+		margin-left: $ratio;
 	}
 }
