@@ -1,0 +1,18 @@
+.group:after, 
+.grid:after,
+.header-main:after,
+{
+	content: "";
+  display: table;
+  clear: both;
+}
+
+@include breakpoint (adult) {
+	.mainnav ul.extra ul:after,
+	ul.nav:after
+	{
+		content: "";
+	  display: table;
+	  clear: both;
+	}
+}

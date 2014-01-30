@@ -18,14 +18,6 @@
   }
 }
 
-/*clear fix*/
-.header-main:after {
-  content: "";
-  display: table;
-  clear: both;
-
-}
-
 
 .header-item {
   float: left;

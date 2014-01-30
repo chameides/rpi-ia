@@ -4,15 +4,6 @@
   @include box-sizing(border-box);
 }
 
-/*could probably delete this rule */
-.grid:after {
-  /* Or @extend clearfix */
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
 [class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li {
   float: left;
   padding-right: $margin;
