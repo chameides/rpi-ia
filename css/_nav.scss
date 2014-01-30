@@ -37,7 +37,7 @@
 }
 
 .mainnav {
-  width: 100%;
+  width: 100%; /* is this the right choice? */
   height:100%;
   position:fixed;
   display: block;
@@ -74,10 +74,7 @@
 
   ul.nav {
     margin-top: 1em;
-    border-bottom-style:solid;
-    border-bottom-width:thin;
-    border-bottom-color:$color2;
-
+    border-bottom: solid thin $color2; /* red line divider */
     @include breakpoint(adult) { 
       border:none;
       display: inline-block;
@@ -86,7 +83,6 @@
       @include ie8 {
         margin-top: .5em;
       }
-      
     }
     li {
       display: block;
@@ -102,24 +98,12 @@
         width: auto;
       }
     }
-    
-    li:first-of-type {
-      border-top: none;
-    }
-    li:last-of-type {
-      border-bottom: none;
-    }
   }
   ul.extra {
     margin-top: $margin2*2;
-    margin-bottom: 50px;
     font-size: .7em;
-      .menu-icon {
-        height: 3em;
-      }
     @include breakpoint(adult) {
       margin-top: 0;
-      margin-bottom: 0;
     }
   ul:after {
      content: '';
@@ -127,7 +111,6 @@
     }
   } 
 }
-
 
 
 /*could aggregate all the clearfixes into 1 place
@@ -138,29 +121,23 @@ ul.nav:after {
       clear: both;
 }
 
-
-
-
 footer ul.extra {
   text-transform: uppercase;
+  font-size: .7em;
+  margin-top: $margin2*2;
+  @include breakpoint(adult) {
+     display: none;
+  }
 }
 
 /*icons adjacent to text on menu items */
 .menu-icon {
+  height: 3em;
   max-height: 50px;
   display: block;
   margin: auto;
   width: auto;
-}
-
-.sitemap .menu-icon {
-  display: none;
-}
-
-
-/*menu adjustments for desktop*/
-@include breakpoint(adult) {
-  .menu-icon  {
+  @include breakpoint(adult) {
     width: auto;
     display: inline;
     padding-right: .3rem;
@@ -170,6 +147,10 @@ footer ul.extra {
       height: .9em;
     }
   }
+}
+
+.sitemap .menu-icon {
+  display: none;
 }
 
 /*icons show on sitemap in teen and adult */
@@ -190,7 +171,6 @@ footer ul.extra {
     display: block;
     height: 2em;
     width: 100%;
-
   }
 }
 
@@ -207,57 +187,7 @@ ul.extra .menu-icon {
   }
 }
 
-
+/*javascript fires new class, which moves menu */
 body.menu-on .mainnav {
   @include transform( translate(0%) );
  }
-
-/*this makes the main body fade out when the sidemenu goes, but unfortunately also affects the sidemenu now that I moved it inside the wrapper
-body.menu-on .wrapper {
-    opacity: 0;
-}
-*/
-
-
-
-/*this should be folded into above code after icons for alumni pages is figured out */
-
-@include breakpoint(baby) {
- 
-  ul.iconfooter {
-    font-size: .7em;
-    margin-top: $margin2*2;
-      .menu-icon {
-        height: 3em;
-      }
-  }
-}
-
-
-/* this is repetitive with baby breakpoint */
-
-@include breakpoint(teen) {
-  
-  ul.iconfooter {
-    font-size: .7em;
-    margin-top: $margin2*2;
-      .menu-icon {
-        height: 3em;
-      }
-  }
-}
-
-
-.extra {
-  margin-top: 0;
-}
-
-
-
-
-/*hides iconfooter on desktop, but could be less specific if we hide equivalent on alumni */
-@include breakpoint(adult) {
-  footer ul.iconfooter {
-  display: none;
-  }
-}
