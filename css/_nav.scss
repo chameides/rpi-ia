@@ -126,7 +126,7 @@ footer ul.extra {
     height: .9rem;
     @include ie8 {
       padding-right: .3em;
-      height: .9em;
+      height: 15px;
     }
   }
 }
