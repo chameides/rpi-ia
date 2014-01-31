@@ -13,9 +13,6 @@ p {
 		font-size: .7em;
 	}
 	*/
-	@include breakpoint(adult) { 
-		max-width: auto;
-	}
 }
 
 

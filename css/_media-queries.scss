@@ -1,7 +1,6 @@
+/*if ie8, combine teen-up and adult breakpoints */
 @mixin breakpoint($point) {
-  /*if ie8, combine teen-up and adult breakpoints */
   @if $ie8 {
-    
     @if $point == teen-up {
        @content;
     }
@@ -12,8 +11,9 @@
 
   /*not ie8*/
   @else {
-    /* Smartphones, except large phone landscape ----------- */
+    
     @if $point == baby {
+      /* Smartphones, except large phone landscape ----------- */
       @media only screen and (max-width : 707px) { @content; }
     }
 

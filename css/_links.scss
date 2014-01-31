@@ -108,7 +108,7 @@ footer {
 .space-link {
 	line-height: 2em;
 	@include breakpoint(adult) {
-		line-height: auto;
+		line-height: normal;
 	}
 }
 
