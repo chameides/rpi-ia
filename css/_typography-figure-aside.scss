@@ -19,6 +19,11 @@ figcaption {
 	}
 }
 
+.symmetry figcaption {
+	width: auto;
+	margin-left: 0;
+}
+
 .aside figcaption {
 	@include breakpoint(teen-up) {
 		margin-left: 0;

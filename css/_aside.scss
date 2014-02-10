@@ -24,7 +24,7 @@ aside {
 	}
 
 /*aside is at bottom, not sidebar*/
-.read, .full {
+.full {
 	aside {
 		@include breakpoint(teen-up) { 
 			width:100%;

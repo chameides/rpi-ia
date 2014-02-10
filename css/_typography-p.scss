@@ -29,6 +29,7 @@ p.squeeze {
 	margin-bottom: 0;
 }
 
+/*this corresponds to aside symmetry .figure*/
 .read p {
 	@include breakpoint(teen-up) { 
 		margin-left: $ratio;
