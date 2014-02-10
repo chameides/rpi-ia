@@ -26,6 +26,7 @@ $ie8: false !default;
 	$lighttext: lighten($textmain,30%);
 	$color3: #003399; /*blue link text */
 	$color4: lighten($color3, 55); /*lighter link text for dark bg */
+	$colorfacebook: rgb(59, 89, 152);
 
 $navwidth: 85%;
 $extrawidth: 99% - $navwidth;

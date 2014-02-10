@@ -59,9 +59,9 @@
 		display: inline-block;
 		float: left;
 		/*facebook blue*/
-		background: rgba(59, 89, 152, .93);
+		background: transparentize($colorfacebook, .07);
 		@include ie8 {
-			background: rgb(59, 89, 152);
+			background: $colorfacebook;
 		}
 	}
 	a:hover {
