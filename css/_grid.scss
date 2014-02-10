@@ -45,7 +45,7 @@
   }
 }
 
-.full .col-section {
+.full .col-section, .grid-4 .col-section {
   /*no sidebar so:
     blocks are three across on tablet
     blocks are four across on tablet as well as desktop
@@ -75,7 +75,7 @@
   .col-section:nth-of-type(2n + 1) {
     clear: left;
   }
-  .full /*no sidebar */{
+  .full /*no sidebar */, .grid-4 {
     .col-section:nth-of-type(2n + 1) {
       clear: none; /*reverse above */
     }
@@ -96,7 +96,7 @@
   .col-section:nth-of-type(3n + 1) {
     clear: left;
   }
-  .full /*no sidebar */{
+  .full /*no sidebar */, .grid-4{
     .col-section:nth-of-type(3n + 1) {
       clear: none; /*reverse above */
     }
@@ -110,7 +110,7 @@
   .col-section:nth-of-type(3n + 1) {
     clear: left;  
   }
-  .full /*no sidebar */{
+  .full /*no sidebar */, .grid-4{
     .col-section:nth-of-type(3n + 1) {
       clear: none; /*reverse above */
     }
@@ -131,7 +131,7 @@
       .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
         clear: left;
       }
-    .full /*no sidebar */ {
+    .full /*no sidebar */, .grid-4 {
       /*1st col-section */
       .col-section:first-child,  
       /*4th col-section */
