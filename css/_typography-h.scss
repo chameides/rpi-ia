@@ -46,13 +46,21 @@ article h2 {
 	margin-top: $margin2;
 }
 
+
 .read h2  {
 	@include breakpoint(teen-up) { 
-		margin-left: $ratio;
+		margin-left: $margin4;
 		color: $lighttext;
 		text-transform: none;
-		margin-right: $margin2;
 		margin-top: $margin2*3;
+
+	}
+}
+
+.read .full h2  {
+	@include breakpoint(teen-up) { 
+		margin-left: $ratio;
+		
 
 	}
 }

@@ -54,6 +54,7 @@ cite:before{
 	opacity:.3;
 	}
 
+
 .read blockquote{
 	@include breakpoint(teen-up) {
 	clear: right;
@@ -63,5 +64,29 @@ cite:before{
 	margin-right: 25%;
 	float: left;
 	display: inline-block;
+	}
+}
+
+
+
+.read .withsidebar blockquote, .read .withsidebar cite {
+	@include breakpoint(teen-up) {
+		float: none;
+		width: 100%;
+		max-width: 80%;
+		padding: 0 $margin4*2;
+		display: block;
+	}
+}
+
+.read .withsidebar blockquote {
+	@include breakpoint(teen-up) {
+		margin: $margin4 auto $margin2;
+	}
+}
+
+.read .withsidebar cite {
+	@include breakpoint(teen-up) {
+		margin: 0 auto $margin4;
 	}
 }

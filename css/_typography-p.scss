@@ -29,15 +29,30 @@ p.squeeze {
 	margin-bottom: 0;
 }
 
-/*this corresponds to aside symmetry .figure*/
+
 .read p {
 	@include breakpoint(teen-up) { 
-		margin-left: $ratio;
+		margin-left: $margin4;
 		font-size: 1em;
-		margin-right: $margin3;
+	
 	}
 	@include breakpoint(adult) {
 		font-size: .9em;
+	}
+}
+
+/*this corresponds to .figure*/
+.read .full p {
+	@include breakpoint(teen-up) { 
+		margin-left: $ratio;
+		margin-right: $margin3;
+	}
+}
+
+
+.read .sidebar p {
+	@include breakpoint(teen-up) { 
+		margin-left: $margin3;
 	}
 }
 

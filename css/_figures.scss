@@ -32,20 +32,31 @@ figure {
 	}
 
 }
+
+/*space between image and main body on read with sidebar */
 .read .aside {
 	@include breakpoint(teen-up) {
 		width: $smallratio;
-		float: left;
-		clear: left;
-		margin-left: $margin2;
+		float: right;
+		clear: right;
 		margin-top: $margin2;
 		margin-bottom: $margin2/2;
+		margin-left: $margin3;
 		figcaption:before {
 			display: none;
 		}
 		figcaption {
 			width: 100%;
 		}
+	}
+}
+
+
+.read .full .aside {
+	@include breakpoint(teen-up) {
+		margin-left: $margin2;
+		float: left;
+		clear: left;
 	}
 }
 
@@ -62,6 +73,14 @@ figure {
 figcaption {
 	@include breakpoint(adult) {
 		margin-bottom: $margin2;
+	}
+}
+
+/*space between figcaption and mainbody on article with sidebar */
+.read .withsidebar figcaption {
+	@include breakpoint(teen-up) {
+		margin-left: $margin4;
+		float: right;
 	}
 }
 
