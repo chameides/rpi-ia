@@ -2,9 +2,9 @@
 
 .priority1and2 {
 
-	@include breakpoint(senior) { 
+	/*@include breakpoint(senior) { 
 	float: right;
-	width: 89%}
+	width: 89%}*/
 }
 
 /*if change this, change general-layout */
@@ -54,8 +54,8 @@ aside {
 	@include breakpoint(baby) {
 		clear: left;
 	}
-	@include breakpoint(senior) { 
+	/*@include breakpoint(senior) { 
 		float: left;
 		width:10%
-	}
+	}*/
 }
