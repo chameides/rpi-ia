@@ -23,7 +23,6 @@ h1 {
 	@include breakpoint(teen-up) { 
 	font-size: 1.9em; 
 	}
-
 }
 
 .read h1 {
@@ -32,6 +31,15 @@ h1 {
 		text-align: left;
 		margin-left: $margin2;
 		margin-right: $margin2;
+	}
+}
+
+/*on event page, float h1 on left side*/
+.single h1 {
+	@include breakpoint(teen-up) { 
+		margin-bottom: 1em;
+		max-width: 100-$smallratio;
+		float: left;
 	}
 }
 
@@ -114,9 +122,21 @@ h3 {
 
 .donate h3 {margin-top: .7em;}
 
+.details h3 {
+	font-size: 1em;
+	margin-top: 0em;
+	margin-bottom: 0;
+}
+
+
 h4 {
 	font-size: 1em;
 	margin: 1.33em 0;
+}
+
+.details h4 {
+	margin: 0em;
+	font-size: .9em;
 }
 
 h5 {
