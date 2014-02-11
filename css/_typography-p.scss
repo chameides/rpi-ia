@@ -42,7 +42,7 @@ p.squeeze {
 }
 
 /*this corresponds to .figure*/
-.read .full p {
+.read .full .maincontent p {
 	@include breakpoint(teen-up) { 
 		margin-left: $ratio;
 		margin-right: $margin3;
