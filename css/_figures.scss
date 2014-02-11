@@ -103,11 +103,17 @@ figcaption {
 /*this corresponds to typgoraphy-p: read p margins*/
 figure.symmetry {
 	@include breakpoint(teen-up) { 
-		margin-left: $ratio;
+		margin-left: $margin4;
 		font-size: 1em;
-		margin-right: $margin3;
 	}
 	@include breakpoint(adult) {
 		font-size: .9em;
+	}
+}
+
+.read .symmetry figcaption {
+	@include breakpoint(teen-up) { 
+		margin-left: 0;
+		float: none;
 	}
 }
