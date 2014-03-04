@@ -87,6 +87,10 @@
 
 /*col-sections are three across*/
 @include breakpoint(big-baby-sleep) {
+  /*clear baby grid*/
+  .col-section:nth-of-type(2n + 1) {
+    clear: none;
+  }
   .col-section:nth-of-type(3n + 1) {
     clear: left;
   }
