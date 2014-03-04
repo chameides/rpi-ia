@@ -87,6 +87,9 @@
       width: 50%; /*if you change this, must change .col-section:nth-of-type in grid.scss*/
       float: left;
       padding: $margin 0 $margin3;
+      @include breakpoint(teen-all) {
+        margin-bottom: 3em;
+      }
       @include breakpoint(adult) {
         display: inline;
         border: none;
