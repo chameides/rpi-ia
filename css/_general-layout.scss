@@ -37,6 +37,7 @@ body {
 		.full .maincontent { 
 			h2, h3, h4, h5, h6, p, ul, ol  {
 				margin-left: $ratio;
+				margin-right: $margin3;
 			}
 		}
 	}
