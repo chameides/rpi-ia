@@ -3,8 +3,8 @@ $ie8: false !default;
 /* layout */
 
 /* Main-Sidebar Ratio */
-	$ratio: 31%;
-	$smallratio: 25%;
+	$ratio: 34%;
+	$smallratio: 28%;
 	$margin: .9em;
 	$pagemargin: 3%;
 	$margin2: .9rem;
@@ -13,6 +13,7 @@ $ie8: false !default;
   }
 	$margin3: $margin * 2;
 	$margin4: $margin2 * 2;
+	$margin5: $margin2*1.5;
 
 
 

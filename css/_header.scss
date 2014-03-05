@@ -4,19 +4,23 @@
 .header {
   background: $color1;
   /*@include flex-wrap( nowrap );*/
+   @include breakpoint(teen-all) {
+    padding: 0 $margin2;
+  } 
   @include breakpoint(adult) {
     padding: $margin2;
   } 
 }
 
-
+/*replaced with text
 .bannerimage {
   width:100%;
   max-width: 400px;
-  @include breakpoint(teen) {
+  @include breakpoint(teen-all) {
     padding: 0 $margin2;
     }
   }
+*/
 /* code removed and replaced with flexbox
 .header {
   padding: .7em .7em .3em;

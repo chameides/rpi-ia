@@ -9,7 +9,7 @@
 
 /*if change this, change general-layout */
 aside {
-	margin-right: .9em;
+	padding-right: .9em;
 	@include breakpoint(big-baby-sleep) { 
     float: none;
   	}
@@ -18,7 +18,7 @@ aside {
 		float: right;
 		width:$smallratio;
 		margin-bottom: $margin2;
-		padding-right: $margin2; 
+		padding-right: $margin3;
 		p {margin-top: 0;}
 		} 
 	}
@@ -35,6 +35,11 @@ aside {
 	} 
 }
 
+.read .full aside {
+	@include breakpoint(teen-up) { 
+		padding-left: $margin4; 
+	}
+}
 .full aside {
 	@include breakpoint(adult) {
 		padding-right: $margin2*2;
@@ -45,7 +50,8 @@ aside {
 	@include breakpoint(teen-up) { 
 		margin-bottom: $margin2; 
 		padding-top: $margin2;
-		padding-left: $margin2; 
+		padding-left: $margin4;
+		
 	}
 } 
 

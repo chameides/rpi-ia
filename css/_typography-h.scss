@@ -7,7 +7,7 @@ h1, h2, .title {
 	text-transform: uppercase;
 	margin-top: 0px;
 	text-align: center;
-	@include breakpoint(adult) {
+	@include breakpoint(teen-up) {
 		text-align: left;
 	}
 }
@@ -29,8 +29,8 @@ h1 {
 	@include breakpoint(teen-up) { 
 		font-size: 3em;
 		text-align: left;
-		margin-left: $margin2;
-		margin-right: $margin2;
+		margin-left: $margin4;
+		margin-right: $margin4;
 	}
 }
 
@@ -89,7 +89,7 @@ section h2, h2.subtitle {
 	@include breakpoint(teen-up) { 
 		text-align: left;
 		font-size: 1.2em;
-		padding: 0 $margin2;
+		padding: 0 $margin4;
 		margin-bottom: 3em;
 		text-transform: uppercase;
 		width: 100%;

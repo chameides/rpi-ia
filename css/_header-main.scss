@@ -1,7 +1,7 @@
 .header-main {
   width: 100%;
   padding: $margin2 0 $margin2/2 $margin2;
-   @include breakpoint(teen) {
+   @include breakpoint(teen-all) {
     padding-top: $margin2;
     padding-bottom: $margin2;
   }

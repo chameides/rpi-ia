@@ -7,8 +7,8 @@
 [class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li {
   float: left;
   padding-right: $margin;
-  @include breakpoint(teen) { 
-    padding-right: $margin2*1.5;   
+  @include breakpoint(teen-all) { 
+    padding-right: $margin5;   
   }
   @include breakpoint(adult) { 
     padding-right: $margin3;
@@ -225,7 +225,7 @@
 section {
   margin-bottom: $margin2;
   @include breakpoint(teen) { 
-    margin-bottom: $margin2*1.5;   
+    margin-bottom: $margin5;
   }
   @include breakpoint(adult) { 
     margin-bottom: $margin2;   
