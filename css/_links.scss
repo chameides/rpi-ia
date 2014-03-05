@@ -36,7 +36,13 @@ a:hover {
   border-style: none none dotted none;
 }
 
-
+/*hide phone link on desktop */
+  a.phone:link, a.phone:visited, a.phone:hover {
+    @include breakpoint(adult){
+      color: black;
+      border-style: none;
+    }
+  }
 
 /*hidden white links*/
 .sitemap, .extra, .header, .social  {
@@ -101,6 +107,13 @@ footer {
     border-width: 0px 0px 1px 0px;
     border-style: none none dotted none;
   }
+  /*hide phone link on desktop */
+  a.phone:link, a.phone:visited, a.phone:hover {
+    @include breakpoint(adult){
+      color: white;
+      border-style: none;
+    }
+  }
 }
 
 
@@ -109,13 +122,5 @@ footer {
 	line-height: 2em;
 	@include breakpoint(adult) {
 		line-height: normal;
-	}
-}
-
-
-/*hide phone link on desktop */
-a.phone:link, a.phone:visited, a.phone:hover {
-	@include breakpoint(adult){
-		color: white;
 	}
 }
