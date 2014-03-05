@@ -3,7 +3,7 @@ pre {
 	margin: 0 0 .8em;
 }
 
-p {
+p, ul {
 	font-weight: 300;
 	max-width: 40em;
 	text-align: justify;
@@ -40,9 +40,6 @@ p.squeeze {
 		font-size: .9em;
 	}
 }
-
-
-
 
 .read .sidebar p {
 	@include breakpoint(teen-up) { 
