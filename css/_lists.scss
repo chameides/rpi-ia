@@ -41,8 +41,13 @@ nav ol {
 	padding-left: $margin3;
 	padding-right: $margin3;
 	max-width: 36em;
+	font-weight: 300;
+	text-align: justify;
 	@include breakpoint(teen-up) {
 		padding-left: $margin4;
 		padding-right: $margin4;
+	}
+	li {
+		margin-bottom: .3em;
 	}
 }
