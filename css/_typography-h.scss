@@ -65,13 +65,7 @@ article h2 {
 	}
 }
 
-.read .full h2  {
-	@include breakpoint(teen-up) { 
-		margin-left: $ratio;
-		
 
-	}
-}
 
 
 section h2, h2.subtitle {
@@ -114,11 +108,6 @@ h3 {
 	text-transform: uppercase;
 }
 
-.read aside h3 {
-	@include breakpoint(teen-up) { 
-		
-	}
-}
 
 .donate h3 {margin-top: .7em;}
 

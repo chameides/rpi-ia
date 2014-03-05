@@ -34,6 +34,11 @@ body {
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
 		margin-right: 0;
+		.full .maincontent { 
+			h2, h3, h4, h5, h6, p, ul, ol  {
+				margin-left: $ratio;
+			}
+		}
 	}
 }
 
@@ -69,3 +74,5 @@ body {
  		margin-right: $margin3;
 	}
 }
+
+
