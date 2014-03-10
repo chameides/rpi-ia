@@ -77,7 +77,7 @@ section h2, h2.subtitle {
 	text-align: left;
 	line-height: 1em;
 }
-.read h2.subtitle {
+.read .maincontent h2.subtitle {
 	font-size: 1.1em;
 	@include breakpoint(teen-up) { 
 		text-align: left;
