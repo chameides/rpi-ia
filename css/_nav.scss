@@ -4,15 +4,16 @@
     list-style-type:none;
     padding-left: 0px;
   }
-  /*this is for a secondary menu, renders as a list of icons with labels*/
+  /*this is for a secondary menu, renders as a list of icons with labels
+  both mainnav and footer*/
   ul.extra {
     width: 100%;
     padding: 0 $margin2;
     /*on desktop, a string of small icons on right*/
     @include breakpoint(adult) {
-      width: $extrawidth; 
-      display: inline-block;
-      text-align: right;
+      float: right;
+      width: auto;
+      display: inline;
       padding: .8em 0;
       vertical-align: top;
       .mobileonly {
@@ -25,9 +26,13 @@
       width: 25%;
       float: left;
       @include breakpoint(adult) {
+        padding-left: .9em;
+        width: auto;
         display: inline;
-        margin-left: .3rem;
-        float: none; /*move icons to the right, not left*/
+        float: left;
+        img {
+          display: block;
+        }
         @include ie8 {
           margin-left: .3em;
         }
@@ -75,6 +80,7 @@
     @include breakpoint(adult) { 
       border:none;
       display: inline-block;
+      float: left;
       width: $navwidth;
       margin-top: .5rem;
       @include ie8 {
@@ -99,6 +105,7 @@
       }
     }
   }
+  /*extra menu, just the header*/
   ul.extra {
     margin-top: $margin2*2;
     font-size: .7em;
