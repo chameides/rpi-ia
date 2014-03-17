@@ -112,7 +112,13 @@
     @include breakpoint(adult) {
       margin-top: 0;
     }
-  } 
+  }
+  ul.log {
+    
+    @include breakpoint(adult) {
+
+    }
+  }  
 }
 footer ul.extra {
   text-transform: uppercase;
