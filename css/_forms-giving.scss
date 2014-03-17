@@ -1,7 +1,83 @@
-.idbmsBreadcrumbActive {
-    background: red;
+/*fields */
+textarea, input {
+	padding: 5px;
+	border: gray 2px solid;
+	border-radius: 5px;
+	margin-top: 5px ;
 }
 
-.EventsHeader {
-    background: yellow;
+input[type="text"]{
+	width: 10em;
 }
+
+input[type="radio"], input[type="checkbox"]{
+	margin-right: 5px;
+}
+
+input[type="radio"]:hover, input[type="radio"]:hover + label, input[type="checkbox"]:hover {
+	cursor: pointer;
+}
+
+input[type="radio"]:checked, input[type="radio"]:checked+ label {
+	border-bottom: 1px solid black;
+}
+
+input[type="submit"] {
+	border: 0;
+}
+
+input[type="submit"]:hover {
+	border: 0;
+}
+
+textarea:hover, input:hover, textarea:focus, input:focus{
+	border: black 2px solid;
+
+}
+
+textarea:focus, input:focus {
+	background: $color4;
+}
+
+.button {
+
+}
+
+/* breadcrumbs */
+
+/* controls the block of breadcrumbs*/
+.formbreadcrumbs {
+	margin-bottom: $margin2;
+}
+
+/*individual items*/
+.idbmsBreadcrumb, .idbmsBreadcrumbActive {
+	padding: .2em;
+	color: white;
+	margin: 0;
+	border: $color2 thin solid;
+	padding: .7em;
+	font-size: .6em;
+}
+
+/*different color for general and active*/
+.idbmsBreadcrumb {
+	background: $color1;
+}
+
+.idbmsBreadcrumbActive {
+	background: $color3;
+	border: $color2 thin solid;
+}
+
+/*add a margin underneath radio buttons on giving form*/
+#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
+	margin-bottom: .5em;
+}
+
+/*tab in the "if you selected other" */
+#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_27319 {
+	margin-left: 1.5em;
+}
+
+
