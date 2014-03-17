@@ -41,10 +41,14 @@
   }
   ul.log {
     padding: 0;
+    @include breakpoint (adult) {
+      padding: .8em 0 0;
+    }
     li {
       width: 20%;
       @include breakpoint (adult) {
         width: auto;
+
       }
     }
   }
