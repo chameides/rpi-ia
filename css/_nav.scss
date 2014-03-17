@@ -129,11 +129,13 @@ footer ul.extra {
   display: block;
   margin: auto;
   width: auto;
+  margin-bottom: .2em;
   @include breakpoint(adult) {
     width: auto;
     display: inline;
     padding-right: .3rem;
     height: .9rem;
+    margin-bottom: 0;
     @include ie8 {
       padding-right: .3em;
       height: 15px;
