@@ -39,16 +39,18 @@
       }
     }
   }
-  ul.log {
-    padding: 0;
-    @include breakpoint (adult) {
-      padding: .8em 0 0;
-    }
-    li {
-      width: 20%;
+  @if $alumni {
+    ul.log {
+      padding: 0;
       @include breakpoint (adult) {
-        width: auto;
+        padding: .8em 0 0;
+      }
+      li {
+        width: 20%;
+        @include breakpoint (adult) {
+          width: auto;
 
+        }
       }
     }
   }
@@ -133,12 +135,6 @@
       margin-top: 0;
     }
   }
-  ul.log {
-    
-    @include breakpoint(adult) {
-
-    }
-  }  
 }
 footer ul.extra {
   text-transform: uppercase;

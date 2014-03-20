@@ -756,8 +756,6 @@ aside {
     @media only screen and (min-width: 1124px) {
       .mainnav ul.extra {
         margin-top: 0; } }
-  .mainnav ul.log {
-    /*screen*/ }
 
 footer ul.extra {
   text-transform: uppercase;
@@ -872,9 +870,6 @@ footer {
         .sitemap li ul li {
           padding: .1em 0; } }
 
-.sitemap-comp li {
-  margin-bottom: 1.8rem; }
-
 /*alumni channel does not have tertiary links */
 .sitemap-simple ul {
   /* 2 columns on phone */
@@ -919,6 +914,7 @@ ul.sitemap-feature {
   font-size: .7em; }
 
 /* End of Footer */
+/*event details*/
 /*prevent too much space between event description and event details*/
 .single {
   max-width: 1200px; }

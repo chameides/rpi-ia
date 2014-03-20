@@ -1,44 +1,44 @@
-/*prevent too much space between event description and event details*/
-.single 
-{
-  max-width: 1200px;
-}
+@if $alumni {
+  /*event details*/
 
-
-/*event details
-on small screen, centered
-on larger screen, floats right
-*/
-.details {
-  padding-top: $margin;
-  text-align: center;
-  @include breakpoint (teen-up) {
-    float: right;
-    width:$smallratio;
-    padding: $margin;
+  /*prevent too much space between event description and event details*/
+  .single 
+  {
+    max-width: 1200px;
   }
-}
-
-.part {
-  margin-bottom: 1em;
-}
-
-
-/*event description
-on small screen, centered - after details
-on larger screen, floats left
-*/
-.description 
-{
-  @include breakpoint (teen-up) {
-    float: left;
-    padding-right: $margin2;
-    max-width: 100-$smallratio;
-
-    img {
-      max-width: 250px;
-      float: left;
-      margin-right: $margin;
+  /*event details
+  on small screen, centered
+  on larger screen, floats right
+  */
+  .details {
+    padding-top: $margin;
+    text-align: center;
+    @include breakpoint (teen-up) {
+      float: right;
+      width:$smallratio;
+      padding: $margin;
     }
   }
+  .part {
+    margin-bottom: 1em;
+  }
+  /*event description
+  on small screen, centered - after details
+  on larger screen, floats left
+  */
+  .description 
+  {
+    @include breakpoint (teen-up) {
+      float: left;
+      padding-right: $margin2;
+      max-width: 100-$smallratio;
+
+      img {
+        max-width: 250px;
+        float: left;
+        margin-right: $margin;
+      }
+    }
+  }
+
 }
