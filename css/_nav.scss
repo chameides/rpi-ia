@@ -95,7 +95,7 @@
       border:none;
       display: inline-block;
       float: left;
-      width: $navwidth;
+      width: auto;
       margin-top: .5rem;
       @include ie8 {
         margin-top: .5em;
