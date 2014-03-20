@@ -34,4 +34,18 @@
 .title {
   padding-top: 0px;
   margin-top: 0px;
+  @if $alumni {
+    /*only image in alumni channel*/
+    img {
+      float: left;
+      padding-right: 6px;
+      height: 2em;
+      @include breakpoint(teen-up) {
+        height: .85em;
+      }
+    }
+    .headertitle {
+      float: left;
+    }
+  }
 }

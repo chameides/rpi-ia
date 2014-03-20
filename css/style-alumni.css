@@ -470,7 +470,18 @@ position: relative;
 
 .title {
   padding-top: 0px;
-  margin-top: 0px; }
+  margin-top: 0px;
+  /*only image in alumni channel*/ }
+  .title img {
+    float: left;
+    padding-right: 6px;
+    height: 2em;
+    /*tablet and up*/ }
+    @media only screen and (min-width: 708px) {
+      .title img {
+        height: .85em; } }
+  .title .headertitle {
+    float: left; }
 
 /* Header */
 .header {
@@ -1516,12 +1527,13 @@ aside {
       line-height: 1em; } }
 
 .tagline {
-  color: #CCC;
-  font-weight: 500;
-  font-size: .6em;
-  text-transform: none;
-  /* Smartphones, except large phone landscape ----------- */ }
+  /* Smartphones, except large phone landscape ----------- */
+  /*association doesn't show up until desktop*/
+  /*tablet-all*/ }
   @media only screen and (max-width: 707px) {
+    .tagline {
+      display: none; } }
+  @media only screen and (min-width: 708px) and (max-width: 1123px) {
     .tagline {
       display: none; } }
 

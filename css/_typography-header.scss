@@ -1,6 +1,5 @@
 
 .title {
-	
 	font-size: 1em;
 	font-weight: 500;
 	line-height: .5em;
@@ -34,11 +33,20 @@
 }
 
 .tagline {
-	color: #CCC;
-	font-weight: 500;
-	font-size: .6em;
-	text-transform: none;
 	@include breakpoint(baby) {
 		display: none;
+	}
+	@if $alumni {
+		/*association doesn't show up until desktop*/
+		@include breakpoint(teen-all) {
+			display: none;
+		}
+	}
+	@else {	
+		/*tagline is small and gray*/
+		color: #CCC;
+		font-weight: 500;
+		font-size: .6em;
+		text-transform: none;	
 	}
 }
