@@ -29,40 +29,11 @@ footer {
 }
 
 
- *:hover, *:focus, nav, .social{
- 	-moz-transition:
- 		background-color 0.2s linear,
- 		border-color 0.2s linear,
- 		box-shadow .5s linear,
- 		color 0.2s linear,
- 		opacity 0.2s linear,
- 		text-shadow 0.2s linear,
- 		-moz-transform 0.2s linear; 
- 	-webkit-transition:
- 		background-color 0.2s linear,
- 		border-color .5s linear,
- 		-webkit-box-shadow 0.5s linear,
- 		color 0.2s linear,
- 		opacity 0.2s linear,
- 		text-shadow 0.2s linear,
- 		-webkit-transform 0.2s linear;
- 	-o-transition:
- 		background-color 0.2s linear,
- 		border-color 0.5s linear,
- 		-o-box-shadow 0.5s linear,
- 		box-shadow 0.2s linear,
- 		color 0.2s linear,
- 		opacity 0.2s linear,
- 		text-shadow 0.2s linear,
- 		-o-transform 0.2s linear;
-	transition:
-		background-color 0.2s linear,
-		border-color .5s linear,
-		box-shadow .5s linear,
-		color 0.8s linear,
-		opacity 0.2s linear,
-		text-shadow 0.2s linear,
-		transform 0.2s linear}
+ *, *:hover, *:focus, nav, .social, .gridlink{
+ 	-webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;}
 
 
 /* End of Misc Style */
