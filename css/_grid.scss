@@ -221,6 +221,31 @@
   min-height: 25px;
 }
 
+.gridlink {
+  height: 100%;
+  display: block;
+  background: white;
+  padding-bottom: $margin2;
+  img {
+    opacity:1;
+    
+  }
+}
+
+.gridlink:hover {
+  background: $color4;
+  border: dotted thin $color3;
+  color: white;
+  img {
+    opacity:0.6;
+    @include ie8 {  
+      filter:alpha(opacity=60); /* For IE8 and earlier */
+    }
+  }
+  h2 {
+    color: $color1;
+  }
+}
 
 section {
   margin-bottom: $margin2;
