@@ -97,7 +97,36 @@ nav, .social, .footerlogo-wrapper{
 
 
 
+/*for grid, we want the whole box to be a link, the image and text*/
+.gridlink:link, .gridlink:visited {
+  /*these two rules ensure that the link wraps the image and text when there is a background*/
+  height: 100%;
+  display: block;
+  background: white;
+  /*prevents a jiggle when mousing over*/
+  border: dotted thin transparent;
+  padding-bottom: $margin2/2;
+  img {
+    opacity:1;   
+  }
+}
 
+.gridlink:hover, .gridlink:active {
+  background: $color4;
+  border: dotted thin $color3;
+  color: $color1;
+  img {
+    opacity:0.6;
+    /*webkit jiggles the image without this rule*/
+    -webkit-backface-visibility: hidden;
+    @include ie8 {  
+      filter:alpha(opacity=60);
+    }
+  }
+  h2 {
+    color: $color1;
+  }
+}
 
 /*footer links are on gray and need a lighter blue*/
 footer {
