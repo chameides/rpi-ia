@@ -1040,14 +1040,16 @@ a.phone:link, a.phone:visited, a.phone:hover {
 .title {
   /* Smartphones, except large phone landscape ----------- */ }
   @media only screen and (max-width: 707px) {
-    .title a:link, .title a:visited, .title a:active {
+    .title a:link, .title a:visited, .title a:active, .title .part1 {
       color: #CCC; }
     .title a:hover {
-      color: #b3ccff; } }
+      color: #b3ccff; }
+    .title .part2:hover {
+      color: #b3ccff;
+      text-shadow: none; } }
 
-.title .part2:hover {
-  color: #b3ccff;
-  text-shadow: none; }
+.title:hover .part1, .title:hover .part2 {
+  color: #b3ccff; }
 
 /*no hover affect, w/out this there will be a flash of color*/
 nav a:hover, .social a:hover, .footerlogo-wrapper a:hover {

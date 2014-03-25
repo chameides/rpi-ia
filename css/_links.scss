@@ -60,18 +60,21 @@ a:hover {
 /*Rensselaer is gray on phone */
 .title {
   @include breakpoint(baby) {
-    a:link, a:visited, a:active {
+    a:link, a:visited, a:active, .part1 {
       color: #CCC;    
     }
     a:hover {
       color: $color4;
     }
+    .part2:hover {
+      color: $color4;
+      text-shadow: none;
+    }
   }
 }
 
-.title .part2:hover {
-    color: $color4;
-    text-shadow: none;
+.title:hover .part1, .title:hover .part2 {
+  color: $color4
 }
 
 /*no hover affect, w/out this there will be a flash of color*/
