@@ -5,6 +5,9 @@ body {
   background: #ccc;
   @include ie8 {
   	min-width: 850px;
+  	@if $alumni {
+  		min-width: 1037px;
+  	}
   }
 }
 
