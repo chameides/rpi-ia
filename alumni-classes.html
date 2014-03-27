@@ -264,8 +264,6 @@
           <li><a class="addthis_button_linkedin_follow" addthis:usertype="group" addthis:userid="35733"></a></li>
           <li><a class="addthis_button_youtube_follow" addthis:userid="RPIAlumni"></a></li>
         </ul>
-        <!--add this script move to footer-->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52de8ad020e6b26c"></script>
       </div>
     </div><!--end follow-->
     <div class="social share">
@@ -280,9 +278,6 @@
           <li><a class="addthis_counter addthis_bubble_style"></a></li>
         </ul>
       </div>
-      <!--add this script, move to footer -->
-      <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52de8ad020e6b26c"></script>
     </div><!--end share-->    
     <div class="social socialnav">
       <ul>
@@ -301,5 +296,13 @@
     </script>
     <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js?ver=1.10.2"></script>   
     <script src="js/compiled/footer-ck.js"></script>
+    
+    <!--add this -->
+    <script type="text/javascript">
+      var addthis_config = addthis_config||{};
+      addthis_config.data_track_addressbar = false;
+      addthis_config.data_track_clickback = false;
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52de8ad020e6b26c"></script>
   </body>
 </html>
