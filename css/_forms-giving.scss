@@ -53,21 +53,21 @@ textarea:focus, input:focus {
 /*individual items*/
 .idbmsBreadcrumb, .idbmsBreadcrumbActive {
 	padding: .2em;
-	color: white;
 	margin: 0;
-	border: $color2 thin solid;
+	border: #666 thin solid;
 	padding: .7em;
 	font-size: .6em;
 }
 
 /*different color for general and active*/
 .idbmsBreadcrumb {
-	background: $color1;
+	background: #999;
+	color: black;
 }
 
 .idbmsBreadcrumbActive {
 	background: $color3;
-	border: $color2 thin solid;
+	color: white;
 }
 
 /*add a margin underneath radio buttons on giving form*/
