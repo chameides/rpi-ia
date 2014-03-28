@@ -60,6 +60,7 @@
   width: 100%; /* is this the right choice? */
   height:100%;
   position:fixed;
+  overflow: scroll;
   display: block;
   top:0px;
   left:0px;
@@ -93,6 +94,9 @@
   ul.nav {
     margin-top: 1em;
     border-bottom: solid thin $color2; /* red line divider */
+    @if $alumni {
+      margin-top: 0em;
+    }
     @include breakpoint(adult) { 
       border:none;
       display: inline-block;
@@ -109,6 +113,9 @@
       width: 50%; /*if you change this, must change .col-section:nth-of-type in grid.scss*/
       float: left;
       padding: $margin 0 $margin3;
+      @if $alumni {
+        padding-bottom: $margin3/2;
+      }
       @include breakpoint(teen-all) {
         margin-bottom: 3em;
       }
