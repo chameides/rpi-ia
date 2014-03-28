@@ -72,6 +72,7 @@
   @include transform( translate(-105%) );
   @include breakpoint(adult) { 
     position: relative;
+    overflow: visible;
     padding: 0rem 1rem;
     @include ie8 {
       padding: 0em 1em;
