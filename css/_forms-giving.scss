@@ -1,13 +1,18 @@
+.form {
+
+}
+
 /*fields */
 textarea, input {
 	padding: 5px;
-	border: gray 2px solid;
-	border-radius: 5px;
-	margin-top: 5px ;
+	border: #999 2px solid;
+	border-radius: 3px;
+	margin-top: 3px ;
 }
 
 input[type="text"]{
-	width: 10em;
+	width: 90%;
+	max-width: 20em;
 }
 
 input[type="radio"], input[type="checkbox"]{
@@ -39,9 +44,7 @@ textarea:focus, input:focus {
 	background: $color4;
 }
 
-.button {
 
-}
 
 /* breadcrumbs */
 
