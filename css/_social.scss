@@ -105,3 +105,10 @@ body.share-on {
 			}
 		}
 	}
+
+body.social-off .social {
+	opacity: 0;
+	@include breakpoint (adult){
+	opacity: 1;
+	}	
+}
