@@ -1830,13 +1830,15 @@ textarea {
   vertical-align: baseline;
   /* 3 */
   *vertical-align: middle;
-  /* 3 */ }
+  /* 3 */
+  display: block;
+  margin-bottom: 0.9em; }
 
 /**
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 59, _forms.scss */
+/* line 61, _forms.scss */
 button,
 input {
   line-height: normal; }
@@ -1847,7 +1849,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 71, _forms.scss */
+/* line 73, _forms.scss */
 button,
 select {
   text-transform: none; }
@@ -1861,7 +1863,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 88, _forms.scss */
+/* line 90, _forms.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -1871,12 +1873,14 @@ input[type="submit"] {
   cursor: pointer;
   /* 3 */
   *overflow: visible;
-  /* 4 */ }
+  /* 4 */
+  margin-top: 0.9em;
+  display: block; }
 
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 99, _forms.scss */
+/* line 103, _forms.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -1887,7 +1891,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 111, _forms.scss */
+/* line 115, _forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -1897,14 +1901,15 @@ input[type="radio"] {
   *height: 13px;
   /* 3 */
   *width: 13px;
-  /* 3 */ }
+  /* 3 */
+  display: inline; }
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 124, _forms.scss */
+/* line 129, _forms.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -1917,7 +1922,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 137, _forms.scss */
+/* line 142, _forms.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -1925,7 +1930,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-/* line 146, _forms.scss */
+/* line 151, _forms.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -1935,12 +1940,27 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 156, _forms.scss */
+/* line 161, _forms.scss */
 textarea {
   overflow: auto;
   /* 1 */
   vertical-align: top;
   /* 2 */ }
+
+/* line 166, _forms.scss */
+label, .checkbox-header {
+  font-size: .8em; }
+
+/* line 171, _forms.scss */
+label {
+  cursor: pointer;
+  line-height: 1em;
+  padding-left: 2px;
+  color: #666; }
+
+/* line 179, _forms.scss */
+.checkbox-header label {
+  font-size: 1em; }
 
 /*fields */
 /* line 6, _forms-giving.scss */

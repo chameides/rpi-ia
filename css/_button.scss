@@ -35,7 +35,7 @@
 }
 
 
-.action, .donate-button, .button  {
+.action, .donate-button, .button, input[type="submit"], input[type="button"]   {
   border-radius: 1em;
   text-shadow:
     0px -1px 0px rgba(000,000,000,0),
@@ -51,7 +51,7 @@
     inset -14px -12px 4px rgba(247,054,064,0);
 }
 
-.action, .button {
+.action, .button, input[type="submit"] {
   @include linear-gradient(to bottom, $color4 0%, $color4 5%, $color3 100%, $fallback: $color3);
 }
 
@@ -66,17 +66,17 @@
 .action-wrapper{
   text-align: center;
 }
-.action, .button {
+.action, .button, input[type="submit"], input[type="button"] {
   font-size: .8em;
   margin-bottom: $margin2;
   display: inline-block;
 }
 
-.action:hover, .button:hover {
+.action:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
   @include linear-gradient(to bottom, #d91f28 0%, #de2831 29%, #94151b 100%, $fallback: #de2831);
 }
 
-a.action:link, a.action:visited, .button {
+a.action:link, a.action:visited, .button, input[type="submit"] {
     color: white;
     text-align: center;
     padding: .7em;

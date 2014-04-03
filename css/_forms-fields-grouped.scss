@@ -1,0 +1,36 @@
+/*rules that groupd fields and lables based on a container */
+
+
+/*checkboxes that are grouped together*/
+.checkbox-header {
+  /*input goes inside the label*/
+  label {
+    /*counteracts font-size set above*/
+    font-size: 1em;
+    display: block;
+    vertical-align: bottom;
+  }
+  input[type="checkbox"]
+  {
+    margin-bottom: $margin/4;
+    margin-top: $margin/2;
+    margin-right:0;
+  }
+  margin-bottom: $margin;
+}
+
+.radio-group {
+    label {
+        display: inline;
+        padding-right: $margin/2;
+    }
+}
+
+.input-group {
+    input[type="button"], 
+    input[type="reset"],
+    input[type="submit"] {
+        display: inline;
+        padding-right: $margin/2;
+    }
+}

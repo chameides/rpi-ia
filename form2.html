@@ -19,6 +19,7 @@
     <script src="js/vendor/modernizr-2.7.1.js"></script>
     <script type="text/javascript" src="//use.typekit.net/yac3sjj.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
   </head>
   <body>
       <!--[if lt IE 7]>
@@ -67,21 +68,23 @@
               <form>
                 <fieldset>
                   <legend>Input types</legend>
-                  <label for="text_input">Type some text</label>
-                  <input type="text" id="text_input" name="text_input"></input>
+                  <label for="text_input">text</label>
+                  <input type="text" id="text_input" name="text_input">
                   <label for="password_input">Password</label>
-                  <input type="password" id="password_input" name="password_input"></input>
-                  <label for="email_input">Email address</label>
-                  <input type="email" id="email_input" name="email_input"></input>
-                  <input type="submit" value="Submit" class="button">
+                  <input type="password" id="password_input" name="password_input">
+                  <label for="email_input">Email</label>
+                  <input type="email" id="email_input" name="email_input">
                   <label for="url_input">URL</label>
-                  <input type="url" id="url_input" name="url_input"></input>
+                  <input type="url" id="url_input" name="url_input">
                   <label for="tel_input">Phone number</label>
-                  <input type="tel" id="tel_input" name="tel_input"></input>
+                  <input type="tel" id="tel_input" name="tel_input">
                   <label for="number_input">A number</label>
-                  <input type="number" id="number_input" name="number_input"></input>
-                  <label for="input_list">Input + datalist</label>
-                  <input id="input_list" name="input_list" list="countries"></input>
+                  <input type="number" id="number_input" name="number_input">
+                  <label for="cb_input_10" class="checkbox label">
+                      <input type="checkbox" id="cb_input_10" name="cb_input_10" value="cb1_true">Sign me up!
+                  </label>
+                  <label for="input_list">Nationality</label>
+                  <input id="input_list" name="input_list" list="countries">
                   <datalist id="countries">
                       <option value="Afghanistan">Afghanistan</option>
                       <option value="Akrotiri">Akrotiri</option>
@@ -101,99 +104,71 @@
                       <option value="Austria">Austria</option>
                       <option value="Azerbaijan">Azerbaijan</option>
                   </datalist>
-                  <input type="checkbox" id="cb_input_1" name="cb_input_1" value="cb1_true"></input>
-        <label for="cb_input_1">Yes please!</label>
-        <input type="checkbox" id="cb_input_2" name="cb_input_2" value="cb2_true"></input>
-        <label for="cb_input_2">This too!</label>
-        <input type="radio" id="radio_1" name="rb" value="rb1_true"></input>
-        <label for="radio_1">One</label>
-        <input type="radio" id="radio_2" name="rb" value="rb2_true"></input>
-        <label for="radio_2">Two</label>
-         <label for="range_input">Input of type range (0&ndash;100)</label>
-        <input type="range" id="range_input" name="range_input" value="50"></input>
-        <input type="range" id="range_input" name="range_input" value="50" style="width: 100%;"
-               oninput="range_output.value=range_input.value"></input>
-                <output id="range_output" name="range_output" for="range_input">50</output>
-
-                <label for="dropdown">Drop-down list</label>
-        <select id="dropdown" name="dropdown">
-            <option value="none" disabled selected>Select&hellip;</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-        </select>
-
-
-
-<label for="textarea">Textarea</label>
-        <textarea id="textarea" name="textarea" style="height: auto;" rows="6"></textarea>
-
-
+                  <div class="checkbox-header">Grouped checkboxes
+                    <label for="cb_input_1">
+                      <input type="checkbox" id="cb_input_1" name="cb_input_1" value="cb1_true">
+                      Yes please!
+                    </label>
+                    <label for="cb_input_2">
+                      <input type="checkbox" id="cb_input_2" name="cb_input_2" value="cb2_true">
+                      This too!
+                    </label>
+                  </div>
+                  <span class="radio-header">Grouped radio buttons</span>
+                  <div class="radio-group">
+                    <label for="radio_1">
+                      <input type="radio" id="radio_1" name="rb" value="rb1_true">One
+                    </label>
+                    <label for="radio_2">
+                      <input type="radio" id="radio_2" name="rb" value="rb2_true">Two
+                    </label>
+                  </div>
+                  <label for="dropdown">Drop-down list</label>
+                  <select id="dropdown" name="dropdown">
+                      <option value="none" disabled selected>Select&hellip;</option>
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                      <option value="option4">something really long and it just keeps going and is actually longer than it should be im not sure why</option>
+                  </select>
+                  <label for="textarea">Textarea</label>
+                  <textarea id="textarea" name="textarea" style="height: auto;" rows="6"></textarea>
+                  <div class="input-group">
+                    <label for="email_input">Email</label>
+                    <input type="email" id="email_input" name="email_input">
+                    <label for="email_input">Email</label>
+                    <input type="email" id="email_input" name="email_input">
+                </div>
                 </fieldset> 
-                <input type="submit" value="Submit" class="button">
-<input type="button" value="Cancel" class="button secondary">
+                <fieldset>
+                  <legend>section 2</legend>
+                  <label for="type-text">Text (text)</label>
+                  <input type="text" name="type-text" id="type-text">
+                  <label for="type-search">Search (search)</label>
+                  <input type="search" name="type-search" id="type-search">
+                  <label for="type-tel">Telephone (tel)</label>
+                  <input type="tel" name="type-tel" id="type-tel">
+                  <label for="type-url">URL (url)</label>
+                  <input type="url" name="type-url" id="type-url">
+                  <label for="type-email">E-mail (email)</label>
+                  <input type="email" name="type-email" id="type-email">
+                  <label for="type-datetime">Date and Time (datetime)</label>
+                  <input type="datetime" name="type-datetime" id="type-datetime">
+                  <label for="type-date">Date (date)</label>
+                  <input type="date" name="type-date" id="type-date">
+                  <label for="type-month">Month (month)</label>
+                  <input type="month" name="type-month" id="type-month">
+                  <label for="type-week">Week (week)</label>
+                  <input type="week" name="type-week" id="type-week">
+                  <label for="type-time">Time (time)</label>
+                  <input type="time" name="type-time" id="type-time">
+                  <label for="type-datetime-local">Local Date and Time (datetime-local)</label>
+                  <input type="datetime-local" name="type-datetime-local" id="type-datetime-local">
+                  <label for="type-number">Number (number)</label>
+                  <input type="number" name="type-number" id="type-number" min="0" max="20">
+                </fieldset> 
               </form>
-              <form action=".">
-      <div class="text">
-        <label for="type-text">Text (text)</label>
-        <input type="text" name="type-text" id="type-text">
-      </div>
-      <div class="text">
-        <label for="type-search">Search (search)</label>
-        <input type="search" name="type-search" id="type-search">
-      </div>
-      <div class="text">
-        <label for="type-tel">Telephone (tel)</label>
-        <input type="tel" name="type-tel" id="type-tel">
-      </div>
-      <div class="text">
-        <label for="type-url">URL (url)</label>
-        <input type="url" name="type-url" id="type-url">
-      </div>
-      <div class="text">
-        <label for="type-email">E-mail (email)</label>
-        <input type="email" name="type-email" id="type-email">
-      </div>
-      <div class="text">
-        <label for="type-datetime">Date and Time (datetime)</label>
-        <input type="datetime" name="type-datetime" id="type-datetime">
-      </div>
-      <div class="text">
-        <label for="type-date">Date (date)</label>
-        <input type="date" name="type-date" id="type-date">
-      </div>
-      <div class="text">
-        <label for="type-month">Month (month)</label>
-        <input type="month" name="type-month" id="type-month">
-      </div>
-      <div class="text">
-        <label for="type-week">Week (week)</label>
-        <input type="week" name="type-week" id="type-week">
-      </div>
-      <div class="text">
-        <label for="type-time">Time (time)</label>
-        <input type="time" name="type-time" id="type-time">
-      </div>
-      <div class="text">
-        <label for="type-datetime-local">Local Date and Time (datetime-local)</label>
-        <input type="datetime-local" name="type-datetime-local" id="type-datetime-local">
-      </div>
-      <div class="text">
-        <label for="type-number">Number (number)</label>
-        <input type="number" name="type-number" id="type-number" min="0" max="20">
-      </div>
-      <div class="text">
-        <label for="type-range">Range (range)</label>
-        <input type="range" name="type-range" id="type-range" min="0" max="100">
-      </div>
-      <div class="text">
-        <label for="type-color">Colour (color)</label>
-        <input type="color" name="type-color" id="type-color">
-      </div>
-      <div class="submit-area">
-        <input type="submit" value="Submit" name="submit-1">
-      </div>
-    </form>
+            <input type="submit" value="Submit" name="submit-1">
             </section>
           </article>
         </div><!--close priority1and2-->
@@ -314,6 +289,7 @@
     </script>-->
     <!--jquery must be loaded prior to touchwipe-->
     <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js?ver=1.10.2"></script>
+    <script src="js/hide-social.js"></script>
     <script src="js/compiled/footer-ck.js"></script>
   </body>
 </html>
