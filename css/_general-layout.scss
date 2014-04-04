@@ -46,6 +46,14 @@ body {
 	}
 }
 
+.read .priority1and2 .maincontent aside {
+	h2, h3, h4, h5, h6, p, ul, ol  {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+	}
+}
+
 /*if change this, change aside */
 .maincontent {
 	/*on tablets and up, the aside moves to the sidebar*/

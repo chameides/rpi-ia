@@ -33,7 +33,7 @@ figure {
 }
 
 /*space between image and main body on read with sidebar */
-.read .aside {
+.read .aside, .priority1and2 aside  {
 	@include breakpoint(teen-up) {
 		width: $smallratio;
 		float: right;
@@ -51,7 +51,7 @@ figure {
 }
 
 
-.read .full .aside {
+.read .full .aside, .priority1and2 aside {
 	@include breakpoint(teen-up) {
 		margin-left: $margin4;
 		float: left;
@@ -59,7 +59,7 @@ figure {
 	}
 }
 
-.read .left {
+.read .left  {
 	@include breakpoint(teen) {
 		width: 100% - $smallratio;
 		float: left;
