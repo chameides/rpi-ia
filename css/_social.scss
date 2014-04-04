@@ -110,6 +110,7 @@ body.social-off .social {
 	opacity: 0;
 	display: none;
 	@include breakpoint (adult){
-	opacity: 1;
+		opacity: 1;
+		display: block;
 	}	
 }
