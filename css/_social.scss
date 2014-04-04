@@ -105,10 +105,13 @@ body.share-on {
 			}
 		}
 	}
-
+/*css turned on by javascript*/
 body.social-off .social {
+	/*with transitions it fades out. In case they have a keyboard attached, it still looks nice*/
 	opacity: 0;
+	/*don't want it to interfere with keyboard or fields*/
 	display: none;
+	/*still works with large screens, which presumably don't have on screen keyboards*/
 	@include breakpoint (adult){
 		opacity: 1;
 		display: block;
