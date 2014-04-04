@@ -116,6 +116,12 @@ input[type="radio"] {
     margin-bottom: $margin*1.5;
 }
 
+.imod_formWrapper {
+    input[type="radio"] {
+        margin-bottom: $margin/2;    
+    }
+}
+
 input[type="radio"]:hover, input[type="radio"]:hover + label, input[type="checkbox"]:hover {
     cursor: pointer;
 }
@@ -176,11 +182,15 @@ input[type="textarea"] {
     max-width: none;
 }
 
-textarea:hover, input:hover, select:hover, textarea:focus, input:focus{
+textarea:focus, input:focus{
     border: black 2px solid;
-}
-
-textarea:focus, input:focus {
     background: $color4;
 }
+/*hover only on adult, otherwise you get false positives between hover and focus*/
+@include breakpoint(adult) {
+    textarea:hover, input:hover, select:hover{
+        border: black 2px solid;
+    }
+}
+
 
