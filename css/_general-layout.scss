@@ -38,7 +38,7 @@ body {
 		margin-left: 0;
 		margin-right: 0;
 		.full .maincontent { 
-			h2, h3, h4, h5, h6, p, ul, ol, .button  {
+			h2, h3, h4, h5, h6, p, ul, ol, .center-content {
 				margin-left: $ratio;
 				margin-right: $margin3;
 			}
@@ -46,10 +46,13 @@ body {
 	}
 }
 
+/*rewrite above fule for asides*/
 .read .priority1and2 .maincontent aside {
-	h2, h3, h4, h5, h6, p, ul, ol  {
+	h2, h3, h4, h5, h6, p, ul, ol, .center-content  {
 		margin-left: 0;
 		margin-right: 0;
+	}
+	h2, h3, h4, h5, h6, p, ul, ol  {	
 		padding: 0;
 	}
 }
