@@ -32,15 +32,21 @@ figure {
 	}
 }
 
-/*space between image and main body on read with sidebar */
-.read .aside, .priority1and2 aside  {
+/*aside margins for read */
+.read .priority1and2 .aside, .full .priority1and2 aside {
 	@include breakpoint(teen-up) {
 		width: $smallratio;
-		float: right;
-		clear: right;
 		margin-top: $margin2;
 		margin-bottom: $margin2/2;
-		margin-left: $margin3;
+	}
+}
+
+/*space between image and main body on read with sidebar */
+.read .priority1and2 .aside {
+	@include breakpoint(teen-up) {
+		float: right;
+		clear: right;
+		margin-left: $margin4;
 		figcaption:before {
 			display: none;
 		}
@@ -50,14 +56,23 @@ figure {
 	}
 }
 
-
-.read .full .aside, .priority1and2 aside {
+/*full article, set aside to left*/
+.read .full .aside, .full aside {
 	@include breakpoint(teen-up) {
 		margin-left: $margin4;
 		float: left;
 		clear: left;
 	}
 }
+
+/*correct above rule so that aside within priority1and2 is flush left*/
+.full .priority1and2 aside {
+	@include breakpoint(teen-up) {
+		margin-left: 0;
+	}
+}
+
+
 
 .read .left  {
 	@include breakpoint(teen) {
