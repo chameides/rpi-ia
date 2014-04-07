@@ -38,7 +38,7 @@ body {
 		margin-left: 0;
 		margin-right: 0;
 		.full .maincontent { 
-			h2, h3, h4, h5, h6, p, ul, ol  {
+			h2, h3, h4, h5, h6, p, ul, ol, .button  {
 				margin-left: $ratio;
 				margin-right: $margin3;
 			}
@@ -87,4 +87,6 @@ body {
 	}
 }
 
-
+.center-content {
+	text-align: center;
+}
