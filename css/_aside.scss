@@ -1,7 +1,6 @@
 /*Aside */
 
 .priority1and2 {
-
 	/*@include breakpoint(senior) { 
 	float: right;
 	width: 89%}*/
@@ -9,6 +8,7 @@
 
 /*if change this, change general-layout */
 aside {
+	overflow: hidden;
 	padding-right: .9em;
 	@include breakpoint(big-baby-sleep) { 
     float: none;
@@ -22,6 +22,7 @@ aside {
 		p {margin-top: 0;}
 		} 
 	}
+
 
 /*aside is at bottom, not sidebar*/
 .full {
