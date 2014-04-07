@@ -36,18 +36,14 @@ aside {
 	} 
 }
 
-.read .full aside {
-	@include breakpoint(teen-up) { 
-		padding-left: $margin4; 
-	}
-}
+
 .full aside {
 	@include breakpoint(adult) {
 		padding-right: $margin2*2;
 	}
 } 
 
-.read aside {
+.read .priority1and2 aside {
 	@include breakpoint(teen-up) { 
 		margin-bottom: $margin2; 
 		padding-top: $margin2;
