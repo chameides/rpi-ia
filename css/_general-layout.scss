@@ -11,14 +11,29 @@ body {
   }
 }
 
-.wrapper {
-	margin: auto;
-	max-width: 1524px;
-	background: white;
-	@include breakpoint(senior) {
-		border: thin solid $color1;
+
+/*drupal uses #page for .wrapper*/
+@if $drupal {
+	#page {
+		margin: auto;
+		max-width: 1524px;
+		background: white;
+		@include breakpoint(senior) {
+			border: thin solid $color1;
+		}
 	}
 }
+@else {
+	.wrapper {
+		margin: auto;
+		max-width: 1524px;
+		background: white;
+		@include breakpoint(senior) {
+			border: thin solid $color1;
+		}
+	}
+}
+
 
 .content {
 	margin-left: $margin2;
