@@ -123,13 +123,14 @@ body {
   min-width: 850px;
   min-width: 1037px; }
 
-/* line 14, _general-layout.scss */
+/*drupal uses #page for .wrapper*/
+/* line 27, _general-layout.scss */
 .wrapper {
   margin: auto;
   max-width: 1524px;
   background: white; }
 
-/* line 23, _general-layout.scss */
+/* line 38, _general-layout.scss */
 .content {
   margin-left: 15px;
   /*on larger screen, additional margin */
@@ -137,17 +138,26 @@ body {
   margin-left: 30px;
   margin-left: 1.8em; }
 
-/* line 36, _general-layout.scss */
+/* line 51, _general-layout.scss */
 .read {
   margin-left: 0;
   margin-right: 0; }
-  /* line 41, _general-layout.scss */
-  .read .full .maincontent h2, .read .full .maincontent h3, .read .full .maincontent h4, .read .full .maincontent h5, .read .full .maincontent h6, .read .full .maincontent p, .read .full .maincontent ul, .read .full .maincontent ol {
+  /* line 56, _general-layout.scss */
+  .read .full .maincontent h2, .read .full .maincontent h3, .read .full .maincontent h4, .read .full .maincontent h5, .read .full .maincontent h6, .read .full .maincontent p, .read .full .maincontent ul, .read .full .maincontent ol, .read .full .maincontent .center-content {
     margin-left: 34%;
     margin-right: 1.8em; }
 
+/*rewrite above fule for asides*/
+/* line 66, _general-layout.scss */
+.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol, .read .priority1and2 .maincontent aside .center-content {
+  margin-left: 0;
+  margin-right: 0; }
+/* line 70, _general-layout.scss */
+.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol {
+  padding: 0; }
+
 /*if change this, change aside */
-/* line 50, _general-layout.scss */
+/* line 76, _general-layout.scss */
 .maincontent {
   /*on tablets and up, the aside moves to the sidebar*/
   width: 100%;
@@ -158,16 +168,20 @@ body {
   	width: 74%;
   }*/ }
 
-/* line 65, _general-layout.scss */
+/* line 91, _general-layout.scss */
 .full .maincontent {
   width: 100%; }
 
 /*add a right margin*/
-/* line 74, _general-layout.scss */
+/* line 100, _general-layout.scss */
 .single {
   margin-right: 15px;
   /*on larger screen, additional margin */
   margin-right: 1.8em; }
+
+/* line 108, _general-layout.scss */
+.center-content {
+  text-align: center; }
 
 /* Grid */
 /* line 3, _grid.scss */
@@ -176,8 +190,9 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 7, _grid.scss */
-[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li {
+/*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
+/* line 8, _grid.scss */
+[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li {
   float: left;
   padding-right: 0.9em;
   padding-right: 1.8em; }
@@ -187,16 +202,18 @@ body {
   padding: 0;
 }
 */
-/* could move this into a new _.scss */
-/* line 27, _grid.scss */
-.col-section, .sitemap-comp ul li {
+/*col-section is for block grids
+sitemap-comp is the giving menu
+block-menu is the giving menu in drupal*/
+/* line 30, _grid.scss */
+.col-section, .sitemap-comp ul li, .block-menu ul li {
   /*blocks are two across on portrait phone and tablet
     blocks are three across on landscape phone and tablet as well as desktop
    */
   width: 33.33%;
   /*if you change this, must change .col-section:nth-of-type */ }
 
-/* line 48, _grid.scss */
+/* line 51, _grid.scss */
 .full .col-section, .grid-4 .col-section {
   /*no sidebar so:
     blocks are three across on tablet
@@ -208,20 +225,20 @@ body {
 /*.col-sections have various heights and this set of rules ensure that the tops of second rows line up */
 /*col-sections are two across*/
 /*col-sections are three across*/
-/* line 114, _grid.scss */
+/* line 117, _grid.scss */
 .col-section:nth-of-type(3n + 1) {
   clear: left; }
 
-/* line 118, _grid.scss */
+/* line 121, _grid.scss */
 .full .col-section:nth-of-type(3n + 1), .grid-4 .col-section:nth-of-type(3n + 1) {
   clear: none;
   /*reverse above */ }
-/* line 121, _grid.scss */
+/* line 124, _grid.scss */
 .full .col-section:nth-of-type(4n + 1), .grid-4 .col-section:nth-of-type(4n + 1) {
   clear: left; }
 
 /*1st col-section */
-/* line 135, _grid.scss */
+/* line 138, _grid.scss */
 .col-section:first-child,
 .col-section:first-child + .col-section + .col-section + .col-section,
 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
@@ -229,11 +246,11 @@ body {
 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
   clear: left; }
 
-/* line 138, _grid.scss */
+/* line 141, _grid.scss */
 .full, .grid-4 {
   /*1st col-section */
   /*1st col-section */ }
-  /* line 148, _grid.scss */
+  /* line 151, _grid.scss */
   .full .col-section:first-child,
   .full .col-section:first-child + .col-section + .col-section + .col-section,
   .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
@@ -244,7 +261,7 @@ body {
   .grid-4 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
   .grid-4 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
     clear: none; }
-  /* line 159, _grid.scss */
+  /* line 162, _grid.scss */
   .full .col-section:first-child,
   .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section,
   .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
@@ -254,30 +271,30 @@ body {
   .grid-4 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
     clear: left; }
 
-/* line 166, _grid.scss */
-.sitemap ul li {
+/* line 169, _grid.scss */
+.sitemap ul li, .block-menu ul li {
   width: 25%; }
 
-/* line 173, _grid.scss */
+/* line 175, _grid.scss */
 .read .col-article {
   margin: 0;
   padding: 0; }
 
-/* line 180, _grid.scss */
+/* line 182, _grid.scss */
 .col-2-3 {
   width: 66.66%;
   display: block; }
 
-/* line 185, _grid.scss */
+/* line 187, _grid.scss */
 .col-1-3 {
   width: 33.33%;
   display: block; }
 
-/* line 190, _grid.scss */
+/* line 192, _grid.scss */
 .col-1-2 {
   width: 50%; }
 
-/* line 194, _grid.scss */
+/* line 196, _grid.scss */
 .col-3-4 {
   width: 75%; }
 
@@ -289,119 +306,31 @@ body {
   padding-right: 0;
 }
 */
-/* line 207, _grid.scss */
+/* line 209, _grid.scss */
 .col-5-8 {
   width: 62.5%; }
 
-/* line 211, _grid.scss */
+/* line 213, _grid.scss */
 .col-2-8 {
   width: 25%; }
 
 /*only need in two column width*/
-/* line 215, _grid.scss */
+/* line 217, _grid.scss */
 .col-1-8 {
   width: 12.5%; }
 
-/* line 219, _grid.scss */
+/* line 221, _grid.scss */
 .module {
   min-width: 25px;
   min-height: 25px; }
 
-/* line 225, _grid.scss */
+/* line 227, _grid.scss */
 section {
   margin-bottom: 15px;
   margin-bottom: 15px; }
 
 /* End of Grid */
-/* .grid {
-list-style: none;
-padding: 0;
-}
-
-.grid li {
-display: inline-block;
-width: 33%;
-margin: 0;
-padding: 5px;
-text-align: left;
-position: relative;
-}
-
-*/
-/******************* HOVRER IMAGE **************/
-/* Image Box Style */
-/* line 20, _grid-hover.scss */
-.gridhover .col-section {
-  width: 50%;
-  height: 100%; }
-
-/* line 27, _grid-hover.scss */
-.gridhover .col-section:nth-of-type(3n + 1) {
-  clear: none; }
-
-/* line 32, _grid-hover.scss */
-.gridhover .box {
-  cursor: pointer;
-  min-height: 15rem;
-  float: left;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  background: red; }
-
-/* line 41, _grid-hover.scss */
-.gridhover .box img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  -webkit-transition: all 300ms ease-out;
-  -moz-transition: all 300ms ease-out;
-  -o-transition: all 300ms ease-out;
-  -ms-transition: all 300ms ease-out;
-  transition: all 300ms ease-out; }
-
-/* Caption Common Style */
-/* line 54, _grid-hover.scss */
-.gridhover .box .caption {
-  background: rgba(54, 51, 51, 0.5);
-  position: absolute;
-  color: #fff;
-  z-index: 100;
-  -webkit-transition: all 300ms ease-out;
-  -moz-transition: all 300ms ease-out;
-  -o-transition: all 300ms ease-out;
-  -ms-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
-  top: 0;
-  height: 15em; }
-  /* line 66, _grid-hover.scss */
-  .gridhover .box .caption h2 {
-    color: white; }
-
-/** Caption 4: Slide **/
-/* line 72, _grid-hover.scss */
-.gridhover .box .slide-caption {
-  text-align: left;
-  padding: 15px;
-  -webkit-transform: translateY(57%); }
-
-/** Slide Caption :hover Behaviour **/
-/* line 79, _grid-hover.scss */
-.gridhover .box:hover .slide-caption {
-  background: rgba(54, 51, 51, 0.9);
-  -webkit-transform: translateY(30%);
-  opacity: 1; }
-
-/*
-.gridhover .box:hover img#image-4 {
-  -moz-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  opacity: 1;
-}
-*/
+/*@import "grid-hover";*/
 /* line 1, _header-main.scss */
 .header-main {
   width: 100%;
@@ -421,19 +350,20 @@ position: relative;
   display: inline-block;
   padding-right: 0; }
 
-/* line 34, _header-main.scss */
-.title {
+/*added .header to front end because drupal assigns .title to main h1, not title of channel*/
+/* line 35, _header-main.scss */
+.header .title {
   padding-top: 0px;
   margin-top: 0px;
   /*only image in alumni channel*/ }
-  /* line 39, _header-main.scss */
-  .title img {
+  /* line 40, _header-main.scss */
+  .header .title img {
     float: left;
     padding-right: 6px;
     height: 2em;
     height: .85em; }
-  /* line 47, _header-main.scss */
-  .title .headertitle {
+  /* line 48, _header-main.scss */
+  .header .title .headertitle {
     float: left; }
 
 /* Header */
@@ -517,8 +447,9 @@ position: relative;
   width: 89%}*/ }
 
 /*if change this, change general-layout */
-/* line 11, _aside.scss */
+/* line 10, _aside.scss */
 aside {
+  overflow: hidden;
   padding-right: .9em;
   /*on tablet and up, aside floats right*/
   float: right;
@@ -530,28 +461,24 @@ aside {
     margin-top: 0; }
 
 /*aside is at bottom, not sidebar*/
-/* line 28, _aside.scss */
+/* line 29, _aside.scss */
 .full aside {
   width: 100%;
   float: none;
   clear: both;
   display: block; }
 
-/* line 38, _aside.scss */
-.read .full aside {
-  padding-left: 30px; }
-
-/* line 43, _aside.scss */
+/* line 40, _aside.scss */
 .full aside {
   padding-right: 30px; }
 
-/* line 49, _aside.scss */
-.read aside {
+/* line 46, _aside.scss */
+.read .priority1and2 aside {
   margin-bottom: 15px;
   padding-top: 15px;
   padding-left: 30px; }
 
-/* line 59, _aside.scss */
+/* line 56, _aside.scss */
 .priority3 {
   /*@include breakpoint(senior) { 
   	float: left;
@@ -634,7 +561,7 @@ aside {
   box-shadow: none;
   font-size: .9em;
   margin-bottom: 0px;
-  z-index: 999;
+  z-index: 10;
   /*extra menu, just the header*/ }
   /* line 86, _nav.scss */
   .mainnav .menu-close {
@@ -699,14 +626,18 @@ footer ul.extra {
   padding-right: .3em;
   height: 15px; }
 
-/* line 175, _nav.scss */
+/* line 176, _nav.scss */
+.toggle-menu-icon:hover {
+  cursor: pointer; }
+
+/* line 179, _nav.scss */
 .sitemap .menu-icon {
   display: none;
   width: auto; }
 
 /*icons show on sitemap in teen and adult */
 /*small inline icons for giving sitemap*/
-/* line 182, _nav.scss */
+/* line 186, _nav.scss */
 .sitemap-comp .menu-icon {
   display: inline;
   height: .9rem;
@@ -715,12 +646,12 @@ footer ul.extra {
   padding-right: .3em; }
 
 /*large block icons for alumni sitemap*/
-/* line 192, _nav.scss */
+/* line 196, _nav.scss */
 .sitemap-simple .menu-icon {
   display: block;
   height: 2em; }
 
-/* line 197, _nav.scss */
+/* line 201, _nav.scss */
 ul.extra .menu-icon {
   padding-right: 0;
   padding-right: 0;
@@ -730,7 +661,7 @@ ul.extra .menu-icon {
   max-width: 2em; }
 
 /*javascript fires new class, which moves menu */
-/* line 210, _nav.scss */
+/* line 214, _nav.scss */
 body.menu-on .mainnav {
   -webkit-transform: translate(0%);
   -moz-transform: translate(0%);
@@ -770,18 +701,19 @@ footer {
 /*also see:
   grid.scss for some of the float rules
   nav.scss for icon rule */
-/* line 5, _sitemap.scss */
-.sitemap {
+/*.block-menu is sitemap in drupal*/
+/* line 6, _sitemap.scss */
+.sitemap, .block-menu {
   text-align: left;
   padding: 0 15px; }
-  /* line 8, _sitemap.scss */
-  .sitemap li {
+  /* line 9, _sitemap.scss */
+  .sitemap li, .block-menu li {
     text-transform: uppercase; }
-    /* line 11, _sitemap.scss */
-    .sitemap li ul {
+    /* line 12, _sitemap.scss */
+    .sitemap li ul, .block-menu li ul {
       margin: 0; }
-    /* line 14, _sitemap.scss */
-    .sitemap li ul li {
+    /* line 15, _sitemap.scss */
+    .sitemap li ul li, .block-menu li ul li {
       font-size: .8em;
       text-transform: none;
       margin-bottom: 0;
@@ -790,7 +722,7 @@ footer {
       padding: .1em 0; }
 
 /*alumni channel does not have tertiary links */
-/* line 38, _sitemap.scss */
+/* line 39, _sitemap.scss */
 .sitemap-simple ul {
   /* 2 columns on phone */
   width: 50%;
@@ -798,7 +730,7 @@ footer {
   /*main section is 3 columns on tablet */
   width: 75%;
   text-align: center; }
-  /* line 47, _sitemap.scss */
+  /* line 48, _sitemap.scss */
   .sitemap-simple ul li {
     margin-bottom: 15px;
     width: 100%;
@@ -806,15 +738,15 @@ footer {
     width: 33%;
     padding-right: 0;
     padding-bottom: 0.9em; }
-  /* line 57, _sitemap.scss */
+  /* line 58, _sitemap.scss */
   .sitemap-simple ul ul {
     width: 100%; }
 
 /*events is the fourth column*/
-/* line 64, _sitemap.scss */
+/* line 65, _sitemap.scss */
 ul.sitemap-feature {
   width: 25%; }
-  /* line 68, _sitemap.scss */
+  /* line 69, _sitemap.scss */
   ul.sitemap-feature li {
     width: 100%;
     margin-top: .5em; }
@@ -937,33 +869,34 @@ a.phone:link, a.phone:visited, a.phone:hover {
   border-style: none; }
 
 /*hidden white links*/
-/* line 49, _links.scss */
-.sitemap a:link, .sitemap a:visited, .sitemap a:active, .extra a:link, .extra a:visited, .extra a:active, .header a:link, .header a:visited, .header a:active, .social a:link, .social a:visited, .social a:active {
+/*block-menu is sitemap in drupal*/
+/* line 50, _links.scss */
+.sitemap a:link, .sitemap a:visited, .sitemap a:active, .extra a:link, .extra a:visited, .extra a:active, .header a:link, .header a:visited, .header a:active, .social a:link, .social a:visited, .social a:active, .block-menu a:link, .block-menu a:visited, .block-menu a:active {
   color: white;
   border-style: none; }
-/* line 53, _links.scss */
-.sitemap a:hover, .extra a:hover, .header a:hover, .social a:hover {
+/* line 54, _links.scss */
+.sitemap a:hover, .extra a:hover, .header a:hover, .social a:hover, .block-menu a:hover {
   color: #b3ccff;
   text-shadow: none; }
 
 /*Rensselaer is gray on phone */
-/* line 76, _links.scss */
-.title:hover .part1, .title:hover .part2 {
+/* line 77, _links.scss */
+.header .title:hover .part1, .header .title:hover .part2 {
   color: #b3ccff; }
 
 /*no hover affect, w/out this there will be a flash of color*/
-/* line 82, _links.scss */
+/* line 83, _links.scss */
 nav a:hover, .social a:hover, .footerlogo-wrapper a:hover {
   border-style: none; }
 
-/* line 89, _links.scss */
-.mainnav a:link, .mainnav a:visited, .mainnav a:active, .sitemap a:link, .sitemap a:visited, .sitemap a:active, .extra a:link, .extra a:visited, .extra a:active {
+/* line 90, _links.scss */
+.mainnav a:link, .mainnav a:visited, .mainnav a:active, .sitemap a:link, .sitemap a:visited, .sitemap a:active, .extra a:link, .extra a:visited, .extra a:active, .block-menu a:link, .block-menu a:visited, .block-menu a:active {
   width: 100%;
   display: block;
   display: inline; }
 
 /*for grid, we want the whole box to be a link, the image and text*/
-/* line 99, _links.scss */
+/* line 100, _links.scss */
 .gridlink:link, .gridlink:visited {
   /*these two rules ensure that the link wraps the image and text when there is a background*/
   height: 100%;
@@ -972,45 +905,45 @@ nav a:hover, .social a:hover, .footerlogo-wrapper a:hover {
   /*prevents a jiggle when mousing over*/
   border: dotted thin transparent;
   padding-bottom: 7.5px; }
-  /* line 107, _links.scss */
+  /* line 108, _links.scss */
   .gridlink:link img, .gridlink:visited img {
     opacity: 1; }
 
-/* line 112, _links.scss */
+/* line 113, _links.scss */
 .gridlink:hover, .gridlink:active {
   background: #b3ccff;
   border: dotted thin #003399;
   color: #333333; }
-  /* line 116, _links.scss */
+  /* line 117, _links.scss */
   .gridlink:hover img, .gridlink:active img {
     opacity: 0.6;
     /*webkit jiggles the image without this rule*/
     -webkit-backface-visibility: hidden;
     filter: alpha(opacity=60); }
-  /* line 124, _links.scss */
+  /* line 125, _links.scss */
   .gridlink:hover h2, .gridlink:active h2 {
     color: #333333; }
 
 /*footer links are on gray and need a lighter blue*/
-/* line 130, _links.scss */
+/* line 131, _links.scss */
 footer {
   /*hide phone link on desktop */ }
-  /* line 131, _links.scss */
+  /* line 132, _links.scss */
   footer a:link, footer a:visited, footer a:active {
     color: #b3ccff;
     border-style: none; }
-  /* line 135, _links.scss */
+  /* line 136, _links.scss */
   footer a:hover {
     border-bottom: #b3ccff;
     border-width: 0px 0px 1px 0px;
     border-style: none none dotted none; }
-  /* line 141, _links.scss */
+  /* line 142, _links.scss */
   footer a.phone:link, footer a.phone:visited, footer a.phone:hover {
     color: white;
     border-style: none; }
 
 /*use this class to space out links for touch*/
-/* line 151, _links.scss */
+/* line 152, _links.scss */
 .space-link {
   line-height: 2em;
   line-height: normal; }
@@ -1041,7 +974,7 @@ footer {
   font-size: .7em; }
 
 /* line 38, _button.scss */
-.action, .donate-button, .button {
+.action, .donate-button, .button, input[type="submit"], input[type="button"] {
   border-radius: 1em;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0), 0px 1px 0px rgba(255, 255, 255, 0);
   text-transform: uppercase; }
@@ -1056,7 +989,7 @@ footer {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), inset -14px -12px 4px rgba(247, 54, 64, 0); }
 
 /* line 54, _button.scss */
-.action, .button {
+.action, .button, input[type="submit"] {
   background-color: #003399;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b3ccff), color-stop(5%, #b3ccff), color-stop(100%, #003399));
   background-image: -webkit-linear-gradient(top, #b3ccff 0%, #b3ccff 5%, #003399 100%);
@@ -1075,20 +1008,20 @@ footer {
   text-align: center; }
 
 /* line 69, _button.scss */
-.action, .button {
+.action, .button, input[type="submit"], input[type="button"] {
   font-size: .8em;
   margin-bottom: 15px;
   display: inline-block; }
 
 /* line 75, _button.scss */
-.action:hover, .button:hover {
+.action:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
   background-color: #de2831;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d91f28), color-stop(29%, #de2831), color-stop(100%, #94151b));
   background-image: -webkit-linear-gradient(top, #d91f28 0%, #de2831 29%, #94151b 100%);
   background-image: linear-gradient(to bottom,#d91f28 0%, #de2831 29%, #94151b 100%); }
 
 /* line 79, _button.scss */
-a.action:link, a.action:visited, .button {
+a.action:link, a.action:visited, .button, input[type="submit"] {
   color: white;
   text-align: center;
   padding: .7em; }
@@ -1113,7 +1046,7 @@ h1, h2, h3, h4, h5, h6, .tagline {
   font-weight: 700; }
 
 /* line 6, _typography-h.scss */
-h1, h2, .title {
+h1, h2, .header .title {
   text-transform: uppercase;
   margin-top: 0px;
   text-align: center;
@@ -1406,7 +1339,7 @@ aside {
     font-size: .9em; }
 
 /* line 1, _typography-header.scss */
-.title {
+.header .title {
   font-size: 1em;
   font-weight: 500;
   line-height: .5em;
@@ -1425,7 +1358,7 @@ aside {
   font-size: 2.8em; }
 
 /* line 19, _typography-header.scss */
-.title .part2 {
+.header .title .part2 {
   color: #FFF;
   display: block;
   font-size: 1.6em;
@@ -1672,6 +1605,17 @@ body.share-on .share {
   transform: translateY(0%);
   bottom: 0; }
 
+/*css turned on by javascript*/
+/* line 109, _social.scss */
+body.social-off .social {
+  /*with transitions it fades out. In case they have a keyboard attached, it still looks nice*/
+  opacity: 0;
+  /*don't want it to interfere with keyboard or fields*/
+  display: none;
+  /*still works with large screens, which presumably don't have on screen keyboards*/
+  opacity: 1;
+  display: block; }
+
 /* ==========================================================================
    Embedded content
    ========================================================================== */
@@ -1713,45 +1657,55 @@ figure {
   width: 60%;
   display: block; }
 
-/*space between image and main body on read with sidebar */
+/*aside margins for read */
 /* line 36, _figures.scss */
-.read .aside {
+.read .priority1and2 .aside, .full .priority1and2 aside {
   width: 28%;
+  margin-top: 15px;
+  margin-bottom: 7.5px; }
+
+/*space between image and main body on read with sidebar */
+/* line 45, _figures.scss */
+.read .priority1and2 .aside {
   float: right;
   clear: right;
-  margin-top: 15px;
-  margin-bottom: 7.5px;
-  margin-left: 1.8em; }
-  /* line 44, _figures.scss */
-  .read .aside figcaption:before {
+  margin-left: 30px; }
+  /* line 50, _figures.scss */
+  .read .priority1and2 .aside figcaption:before {
     display: none; }
-  /* line 47, _figures.scss */
-  .read .aside figcaption {
+  /* line 53, _figures.scss */
+  .read .priority1and2 .aside figcaption {
     width: 100%; }
 
-/* line 54, _figures.scss */
-.read .full .aside {
+/*full article, set aside to left*/
+/* line 60, _figures.scss */
+.read .full .aside, .full aside {
   margin-left: 30px;
   float: left;
   clear: left; }
 
-/* line 72, _figures.scss */
+/*correct above rule so that aside within priority1and2 is flush left*/
+/* line 69, _figures.scss */
+.full .priority1and2 aside {
+  margin-left: 0; }
+
+/* line 87, _figures.scss */
 figcaption {
   margin-bottom: 15px; }
 
 /*add bar before caption on .read */
-/* line 79, _figures.scss */
+/* line 94, _figures.scss */
 .withsidebar .fullimg figcaption:before, .withsidebar .imageright figcaption:before {
   margin-top: 22.5px; }
 
 /*space between figcaption and mainbody on article with sidebar */
-/* line 86, _figures.scss */
+/* line 101, _figures.scss */
 .read .withsidebar figcaption {
   margin-left: 30px;
   margin-bottom: 15px;
   float: right; }
 
-/* line 95, _figures.scss */
+/* line 110, _figures.scss */
 .full .imageright figcaption {
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
@@ -1767,13 +1721,13 @@ figcaption {
   display: block; }
 
 /*this corresponds to typgoraphy-p: read p margins*/
-/* line 111, _figures.scss */
+/* line 126, _figures.scss */
 figure.symmetry {
   margin-left: 30px;
   font-size: 1em;
   font-size: .9em; }
 
-/* line 121, _figures.scss */
+/* line 136, _figures.scss */
 .read .symmetry figcaption {
   margin-left: 0;
   float: none; }
@@ -1793,24 +1747,30 @@ form {
  */
 /* line 17, _forms.scss */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.625em 0.75em;
+  border-radius: 3px; }
 
 /**
  * 1. Correct color not being inherited in IE 6/7/8/9.
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-/* line 29, _forms.scss */
+/* line 35, _forms.scss */
 legend {
+  padding: 0 0 0.45em;
   border: 0;
   /* 1 */
-  padding: 0;
+  padding: 0 0.45em 0.45em;
   white-space: normal;
   /* 2 */
   *margin-left: -7px;
-  /* 3 */ }
+  /* 3 */
+  font-size: .8em; }
 
 /*
  1. Correct font size not being inherited in all browsers.
@@ -1818,12 +1778,24 @@ legend {
     and Chrome.
 3. Improve appearance and consistency in all browsers.
  */
-/* line 46, _forms.scss */
+/* line 55, _forms.scss */
+label, .checkbox-header, .radio-header {
+  font-size: .7em; }
+
+/* line 59, _forms.scss */
+label {
+  cursor: pointer;
+  line-height: 1em;
+  padding-left: 2px;
+  color: #666;
+  display: block; }
+
+/* line 4, _forms-fields.scss */
 button,
 input,
 select,
 textarea {
-  font-size: 100%;
+  font-size: .8em;
   /* 1 */
   margin: 0;
   /* 2 */
@@ -1832,13 +1804,22 @@ textarea {
   *vertical-align: middle;
   /* 3 */
   display: block;
-  margin-bottom: 0.9em; }
+  margin-bottom: 0.9em;
+  width: 90%;
+  max-width: 30em;
+  background: #f9f9f9;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border: #999 2px solid;
+  border-radius: 3px;
+  margin-top: 3px; }
 
+/*-------buttons and submits -------- */
 /**
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 61, _forms.scss */
+/* line 29, _forms-fields.scss */
 button,
 input {
   line-height: normal; }
@@ -1849,7 +1830,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 73, _forms.scss */
+/* line 41, _forms-fields.scss */
 button,
 select {
   text-transform: none; }
@@ -1863,7 +1844,16 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 90, _forms.scss */
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+/* line 60, _forms-fields.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 68, _forms-fields.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -1875,12 +1865,24 @@ input[type="submit"] {
   *overflow: visible;
   /* 4 */
   margin-top: 0.9em;
-  display: block; }
+  display: block;
+  width: auto;
+  max-width: auto; }
+
+/* line 79, _forms-fields.scss */
+input[type="submit"], input[type="reset"],
+input[type="submit"] {
+  border: 0; }
+
+/* line 84, _forms-fields.scss */
+input[type="submit"]:hover, input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border: 0; }
 
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 103, _forms.scss */
+/* line 93, _forms-fields.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -1891,7 +1893,8 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 115, _forms.scss */
+/*------- input types -------- */
+/* line 108, _forms-fields.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -1902,115 +1905,121 @@ input[type="radio"] {
   /* 3 */
   *width: 13px;
   /* 3 */
-  display: inline; }
+  display: inline;
+  margin-right: 5px;
+  width: auto;
+  margin-bottom: 1.35em; }
+
+/* line 120, _forms-fields.scss */
+.imod_formWrapper input[type="radio"] {
+  margin-bottom: 0.45em; }
+
+/* line 125, _forms-fields.scss */
+input[type="radio"]:hover, input[type="radio"]:hover + label, input[type="checkbox"]:hover {
+  cursor: pointer; }
+
+/* line 129, _forms-fields.scss */
+input[type="radio"]:checked, input[type="radio"]:checked + label {
+  border-bottom: 1px solid black; }
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 129, _forms.scss */
+/* line 139, _forms-fields.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box; }
+  /*  -webkit-box-sizing: content-box; 2 
+   box-sizing: content-box;*/ }
 
 /**
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 142, _forms.scss */
+/* line 152, _forms-fields.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/**
- * Remove inner padding and border in Firefox 3+.
- */
-/* line 151, _forms.scss */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
+/* line 158, _forms-fields.scss */
+input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime-local"] {
+  width: auto; }
+
+/*------- select and text area -------- */
+/* line 164, _forms-fields.scss */
+select {
+  margin-top: 0.3em;
+  font-size: .7em; }
 
 /**
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 161, _forms.scss */
+/* line 175, _forms-fields.scss */
 textarea {
   overflow: auto;
   /* 1 */
   vertical-align: top;
-  /* 2 */ }
+  /* 2 */
+  max-width: none; }
 
-/* line 166, _forms.scss */
-label, .checkbox-header {
-  font-size: .8em; }
+/* line 181, _forms-fields.scss */
+input[type="textarea"] {
+  max-width: none; }
 
-/* line 171, _forms.scss */
-label {
-  cursor: pointer;
-  line-height: 1em;
-  padding-left: 2px;
-  color: #666; }
-
-/* line 179, _forms.scss */
-.checkbox-header label {
-  font-size: 1em; }
-
-/*fields */
-/* line 6, _forms-giving.scss */
-textarea, input {
-  padding: 5px;
-  border: #999 2px solid;
-  border-radius: 3px;
-  margin-top: 3px; }
-
-/* line 13, _forms-giving.scss */
-input[type="text"] {
-  width: 90%;
-  max-width: 20em; }
-
-/* line 18, _forms-giving.scss */
-input[type="radio"], input[type="checkbox"] {
-  margin-right: 5px; }
-
-/* line 22, _forms-giving.scss */
-input[type="radio"]:hover, input[type="radio"]:hover + label, input[type="checkbox"]:hover {
-  cursor: pointer; }
-
-/* line 26, _forms-giving.scss */
-input[type="radio"]:checked, input[type="radio"]:checked + label {
-  border-bottom: 1px solid black; }
-
-/* line 30, _forms-giving.scss */
-input[type="submit"] {
-  border: 0; }
-
-/* line 34, _forms-giving.scss */
-input[type="submit"]:hover {
-  border: 0; }
-
-/* line 38, _forms-giving.scss */
-textarea:hover, input:hover, textarea:focus, input:focus {
-  border: black 2px solid; }
-
-/* line 43, _forms-giving.scss */
+/* line 185, _forms-fields.scss */
 textarea:focus, input:focus {
+  border: black 2px solid;
   background: #b3ccff; }
 
+/*hover only on adult, otherwise you get false positives between hover and focus*/
+/* line 191, _forms-fields.scss */
+textarea:hover, input:hover, select:hover {
+  border: black 2px solid; }
+
+/*rules that groupd fields and lables based on a container */
+/*checkboxes that are grouped together*/
+/* line 5, _forms-fields-grouped.scss */
+.checkbox-header {
+  /*input goes inside the label*/
+  margin-bottom: 0.9em; }
+  /* line 7, _forms-fields-grouped.scss */
+  .checkbox-header label {
+    /*counteracts font-size set above*/
+    font-size: 1em;
+    display: block;
+    vertical-align: bottom; }
+  /* line 14, _forms-fields-grouped.scss */
+  .checkbox-header input[type="checkbox"] {
+    margin-bottom: 0.225em;
+    margin-top: 0.45em;
+    margin-right: 0; }
+
+/*that long string is for iModules giving form*/
+/* line 24, _forms-fields-grouped.scss */
+.radio-group label, #rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations label {
+  display: inline;
+  padding-right: 0.45em; }
+
+/* line 33, _forms-fields-grouped.scss */
+.input-group input[type="button"],
+.input-group input[type="reset"],
+.input-group input[type="submit"] {
+  display: inline;
+  padding-right: 0.45em; }
+
+/*rules designed for the iModules giving form */
 /* breadcrumbs */
 /* controls the block of breadcrumbs*/
-/* line 52, _forms-giving.scss */
+/* line 6, _forms-giving.scss */
 .formbreadcrumbs {
   margin-bottom: 15px; }
 
 /*individual items*/
-/* line 57, _forms-giving.scss */
+/* line 11, _forms-giving.scss */
 .idbmsBreadcrumb, .idbmsBreadcrumbActive {
   padding: .2em;
   margin: 0;
@@ -2019,23 +2028,23 @@ textarea:focus, input:focus {
   font-size: .6em; }
 
 /*different color for general and active*/
-/* line 66, _forms-giving.scss */
+/* line 20, _forms-giving.scss */
 .idbmsBreadcrumb {
   background: #999;
   color: black; }
 
-/* line 71, _forms-giving.scss */
+/* line 25, _forms-giving.scss */
 .idbmsBreadcrumbActive {
   background: #003399;
   color: white; }
 
 /*add a margin underneath radio buttons on giving form*/
-/* line 77, _forms-giving.scss */
+/* line 31, _forms-giving.scss */
 #rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
   margin-bottom: .5em; }
 
 /*tab in the "if you selected other" */
-/* line 82, _forms-giving.scss */
+/* line 36, _forms-giving.scss */
 #rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_27319 {
   margin-left: 1.5em; }
 

@@ -2,7 +2,8 @@
 /*also see:
   grid.scss for some of the float rules
   nav.scss for icon rule */
-.sitemap {
+/*.block-menu is sitemap in drupal*/
+.sitemap, .block-menu {
   text-align: left;  
   padding: 0 $margin2;
   li {
@@ -25,7 +26,7 @@
 }
 @if $alumni {}
 @else {
-  .sitemap-comp {
+  .sitemap-comp, .block-menu {
     li {
       margin-bottom: $margin2*2;
     }
@@ -73,4 +74,12 @@
     }
   }
 }
+
+@if $drupal {
+  .block-menu {
+    clear: both;
+  }
+}
+
+
 /*some additional rules are in the _nav.scss that define how the grid is arranged */

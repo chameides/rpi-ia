@@ -45,7 +45,8 @@ a:hover {
   }
 
 /*hidden white links*/
-.sitemap, .extra, .header, .social  {
+/*block-menu is sitemap in drupal*/
+.sitemap, .extra, .header, .social, .block-menu  {
   a:link, a:visited, a:active {
     color: white;
     border-style: none;
@@ -85,7 +86,7 @@ nav, .social, .footerlogo-wrapper{
 }
 
 
-.mainnav, .sitemap, .extra  {
+.mainnav, .sitemap, .extra, .block-menu {
   a:link, a:visited, a:active {
     width: 100%;
     display: block;

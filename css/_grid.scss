@@ -4,7 +4,8 @@
   @include box-sizing(border-box);
 }
 
-[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li {
+/*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
+[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li {
   float: left;
   padding-right: $margin;
   @include breakpoint(teen-all) { 
@@ -22,9 +23,11 @@
 }
 */
 
-/* could move this into a new _.scss */
 
-.col-section, .sitemap-comp ul li {
+/*col-section is for block grids
+sitemap-comp is the giving menu
+block-menu is the giving menu in drupal*/
+.col-section, .sitemap-comp ul li, .block-menu ul li {
   /*blocks are two across on portrait phone and tablet
     blocks are three across on landscape phone and tablet as well as desktop
    */
@@ -163,12 +166,11 @@
   }
 }
 
-.sitemap ul li {
+.sitemap ul li, .block-menu ul li {
   @include breakpoint(teen-up) { 
     width: 25%;
    }
 }
-
 
 .read .col-article {
   @include breakpoint(teen-up) {
