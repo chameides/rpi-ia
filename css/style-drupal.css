@@ -1,0 +1,3005 @@
+/*add rules selectors generated in the drupal site*/
+/* Vendor Dependencies */
+/* Authored Dependencies */
+/* layout */
+/* Main-Sidebar Ratio */
+/* colors */
+/*header*/
+/* it was: $color1: #d3d8d4; */
+/*red line, separator*/
+/*blue link text */
+/*lighter link text for dark bg */
+/*if ie8, combine teen-up and adult breakpoints */
+/* html5 and reset */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 20, _Display-Definitions.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 30, _Display-Definitions.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, _Display-Definitions.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 51, _Display-Definitions.scss */
+[hidden] {
+  display: none;
+}
+
+/* End of HTML5 Definitions */
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 12, _base.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 27, _base.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+/* line 35, _base.scss */
+body {
+  margin: 0;
+}
+
+/*End of Base*/
+/* line 5, _clearfix.scss */
+.group:after,
+.grid:after,
+.header-main:after,
+ul.nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*screen*/
+@media only screen and (min-width: 1021px) {
+  /* line 13, _clearfix.scss */
+  .mainnav ul.extra ul:after, .mainnav:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+/* page structure and parts */
+/* General Layout */
+/* line 2, _general-layout.scss */
+body {
+  padding: 0px;
+  min-width: 310px;
+  background: #ccc;
+}
+
+/*drupal uses #page for .wrapper*/
+/* line 17, _general-layout.scss */
+#page {
+  margin: auto;
+  max-width: 1524px;
+  background: white;
+  /*screen*/
+}
+@media only screen and (min-width: 1525px) {
+  /* line 17, _general-layout.scss */
+  #page {
+    border: thin solid #333333;
+  }
+}
+
+/* line 38, _general-layout.scss */
+.content {
+  margin-left: 0.9rem;
+  /*on larger screen, additional margin */
+  /*tablet and up*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 38, _general-layout.scss */
+  .content {
+    margin-top: 1em;
+    margin-left: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 38, _general-layout.scss */
+  .content {
+    margin-left: 1.8em;
+  }
+}
+
+/* line 51, _general-layout.scss */
+.read {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 51, _general-layout.scss */
+  .read {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 56, _general-layout.scss */
+  .read .full .maincontent h2, .read .full .maincontent h3, .read .full .maincontent h4, .read .full .maincontent h5, .read .full .maincontent h6, .read .full .maincontent p, .read .full .maincontent ul, .read .full .maincontent ol, .read .full .maincontent .center-content {
+    margin-left: 34%;
+    margin-right: 1.8em;
+  }
+}
+
+/*rewrite above fule for asides*/
+/* line 66, _general-layout.scss */
+.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol, .read .priority1and2 .maincontent aside .center-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 70, _general-layout.scss */
+.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol {
+  padding: 0;
+}
+
+/*if change this, change aside */
+/* line 76, _general-layout.scss */
+.maincontent {
+  /*on tablets and up, the aside moves to the sidebar*/
+  width: 100%;
+  /*tablet and up*/
+  /*@include breakpoint(senior) { 
+  	width: 74%;
+  }*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 76, _general-layout.scss */
+  .maincontent {
+    float: left;
+    display: inline;
+    width: 72%;
+  }
+}
+
+/* line 91, _general-layout.scss */
+.full .maincontent {
+  width: 100%;
+  /*tablet-all*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) {
+  /* line 91, _general-layout.scss */
+  .full .maincontent {
+    padding-right: 0.45rem;
+  }
+}
+
+/*add a right margin*/
+/* line 100, _general-layout.scss */
+.single {
+  margin-right: 0.9rem;
+  /*on larger screen, additional margin */
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 100, _general-layout.scss */
+  .single {
+    margin-right: 1.8em;
+  }
+}
+
+/* line 108, _general-layout.scss */
+.center-content {
+  text-align: center;
+}
+
+/* Grid */
+/* line 3, _grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, _grid.scss */
+[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li {
+  float: left;
+  padding-right: 0.9em;
+  /*tablet-all*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) {
+  /* line 7, _grid.scss */
+  [class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li {
+    padding-right: 1.35rem;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 7, _grid.scss */
+  [class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li {
+    padding-right: 1.8em;
+  }
+}
+
+/* Opt-in outside padding 
+.grid-pad {
+  padding: 0;
+}
+*/
+/* could move this into a new _.scss */
+/* line 27, _grid.scss */
+.col-section, .sitemap-comp ul li {
+  /*blocks are two across on portrait phone and tablet
+    blocks are three across on landscape phone and tablet as well as desktop
+   */
+  /* Smartphones, except large phone landscape ----------- */
+  /* large phone (landscape) ----------- */
+  /*tablet-vertical*/
+  /*tablet-horizontal*/
+  /*screen*/
+}
+@media only screen and (max-width: 707px) {
+  /* line 27, _grid.scss */
+  .col-section, .sitemap-comp ul li {
+    width: 50%;
+    /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
+  /* line 27, _grid.scss */
+  .col-section, .sitemap-comp ul li {
+    width: 33.33%;
+    /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: portrait) {
+  /* line 27, _grid.scss */
+  .col-section, .sitemap-comp ul li {
+    width: 50%;
+    /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: landscape) {
+  /* line 27, _grid.scss */
+  .col-section, .sitemap-comp ul li {
+    width: 33.33%;
+    /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 27, _grid.scss */
+  .col-section, .sitemap-comp ul li {
+    width: 33.33%;
+    /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+
+/* line 48, _grid.scss */
+.full .col-section, .grid-4 .col-section {
+  /*no sidebar so:
+    blocks are three across on tablet
+    blocks are four across on tablet as well as desktop
+   */
+  /*tablet-vertical*/
+  /*tablet-horizontal*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: portrait) {
+  /* line 48, _grid.scss */
+  .full .col-section, .grid-4 .col-section {
+    width: 33.33%;
+    /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: landscape) {
+  /* line 48, _grid.scss */
+  .full .col-section, .grid-4 .col-section {
+    width: 25%;
+    /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 48, _grid.scss */
+  .full .col-section, .grid-4 .col-section {
+    width: 25%;
+    /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+
+/*.col-sections have various heights and this set of rules ensure that the tops of second rows line up */
+/*col-sections are two across*/
+/* Smartphones, except large phone landscape ----------- */
+@media only screen and (max-width: 707px) {
+  /* line 68, _grid.scss */
+  .col-section:nth-of-type(2n + 1), ul.nav li:nth-of-type(2n + 1) {
+    clear: left;
+  }
+}
+/*tablet-vertical*/
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: portrait) {
+  /* line 75, _grid.scss */
+  .col-section:nth-of-type(2n + 1) {
+    clear: left;
+  }
+
+  /* line 79, _grid.scss */
+  .full .col-section:nth-of-type(2n + 1), .grid-4 .col-section:nth-of-type(2n + 1) {
+    clear: none;
+    /*reverse above */
+  }
+  /* line 82, _grid.scss */
+  .full .col-section:nth-of-type(3n + 1), .grid-4 .col-section:nth-of-type(3n + 1) {
+    clear: left;
+  }
+}
+/*col-sections are three across*/
+/* large phone (landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
+  /*clear baby grid*/
+  /* line 91, _grid.scss */
+  .col-section:nth-of-type(2n + 1) {
+    clear: none;
+  }
+
+  /* line 94, _grid.scss */
+  .col-section:nth-of-type(3n + 1) {
+    clear: left;
+  }
+}
+/*tablet-horizontal*/
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: landscape) {
+  /* line 100, _grid.scss */
+  .col-section:nth-of-type(3n + 1) {
+    clear: left;
+  }
+
+  /* line 104, _grid.scss */
+  .full .col-section:nth-of-type(3n + 1), .grid-4 .col-section:nth-of-type(3n + 1) {
+    clear: none;
+    /*reverse above */
+  }
+  /* line 107, _grid.scss */
+  .full .col-section:nth-of-type(4n + 1), .grid-4 .col-section:nth-of-type(4n + 1) {
+    clear: left;
+  }
+}
+/*screen*/
+@media only screen and (min-width: 1021px) {
+  /* line 114, _grid.scss */
+  .col-section:nth-of-type(3n + 1) {
+    clear: left;
+  }
+
+  /* line 118, _grid.scss */
+  .full .col-section:nth-of-type(3n + 1), .grid-4 .col-section:nth-of-type(3n + 1) {
+    clear: none;
+    /*reverse above */
+  }
+  /* line 121, _grid.scss */
+  .full .col-section:nth-of-type(4n + 1), .grid-4 .col-section:nth-of-type(4n + 1) {
+    clear: left;
+  }
+}
+/* line 166, _grid.scss */
+.sitemap ul li {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 166, _grid.scss */
+  .sitemap ul li {
+    width: 25%;
+  }
+}
+
+/* line 173, _grid.scss */
+.read .col-article {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 173, _grid.scss */
+  .read .col-article {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* line 180, _grid.scss */
+.col-2-3 {
+  width: 66.66%;
+  display: block;
+}
+
+/* line 185, _grid.scss */
+.col-1-3 {
+  width: 33.33%;
+  display: block;
+}
+
+/* line 190, _grid.scss */
+.col-1-2 {
+  width: 50%;
+}
+
+/* line 194, _grid.scss */
+.col-3-4 {
+  width: 75%;
+}
+
+/*col-1-4:nth-of-type(even) {
+  clear:left;
+}
+
+.col-1-4:nth-of-type(even) {
+  padding-right: 0;
+}
+*/
+/* line 207, _grid.scss */
+.col-5-8 {
+  width: 62.5%;
+}
+
+/* line 211, _grid.scss */
+.col-2-8 {
+  width: 25%;
+}
+
+/*only need in two column width*/
+/* line 215, _grid.scss */
+.col-1-8 {
+  width: 12.5%;
+}
+
+/* line 219, _grid.scss */
+.module {
+  min-width: 25px;
+  min-height: 25px;
+}
+
+/* line 225, _grid.scss */
+section {
+  margin-bottom: 0.9rem;
+  /*tablet-vertical*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: portrait) {
+  /* line 225, _grid.scss */
+  section {
+    margin-bottom: 1.35rem;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 225, _grid.scss */
+  section {
+    margin-bottom: 0.9rem;
+  }
+}
+
+/* End of Grid */
+/*@import "grid-hover";*/
+/* line 1, _header-main.scss */
+.header-main {
+  width: 100%;
+  padding: 0.9rem 0 0.45rem 0.9rem;
+  /*tablet-all*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) {
+  /* line 1, _header-main.scss */
+  .header-main {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 1, _header-main.scss */
+  .header-main {
+    padding-bottom: 0;
+    padding-right: 0.9rem;
+    padding-top: .5rem;
+  }
+}
+/* line 16, _header-main.scss */
+.header-main .donate-wrapper {
+  float: right;
+}
+
+/* line 22, _header-main.scss */
+.header-item {
+  float: left;
+  padding-right: 0.9rem;
+  display: inline-block;
+  /*tablet-vertical*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: portrait) {
+  /* line 22, _header-main.scss */
+  .header-item {
+    padding-right: 0.9rem;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 22, _header-main.scss */
+  .header-item {
+    padding-right: 0;
+  }
+}
+
+/* line 34, _header-main.scss */
+.title {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+/* Header */
+/* line 4, _header.scss */
+.header {
+  background: #333333;
+  /*@include flex-wrap( nowrap );*/
+  /*tablet-all*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) {
+  /* line 4, _header.scss */
+  .header {
+    padding: 0 0.9rem;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 4, _header.scss */
+  .header {
+    padding: 0.9rem;
+  }
+}
+
+/*replaced with text
+.bannerimage {
+  width:100%;
+  max-width: 400px;
+  @include breakpoint(teen-all) {
+    padding: 0 $margin2;
+    }
+  }
+*/
+/* code removed and replaced with flexbox
+.header {
+  padding: .7em .7em .3em;
+}
+
+.header {
+  background: $color1;
+  padding-top: .3em;
+}
+
+
+
+
+.title {
+  margin-top:.3em;
+  text-align:center;
+  padding-right: 0em;
+  width: 69%;
+  max-width: 400px;
+  }
+
+.title div {
+}
+*/
+/* line 48, _header.scss */
+.col-bannerfill {
+  display: none;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 48, _header.scss */
+  .col-bannerfill {
+    display: inline;
+    color: #0d0d0d;
+    font-size: 2em;
+    margin-left: 0.45rem;
+    margin-top: .4em;
+  }
+}
+
+/* line 60, _header.scss */
+.menu-open {
+  position: relative;
+  padding-left: 1.25em;
+}
+
+/*menu hamburger*/
+/* line 66, _header.scss */
+.menu-open:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0em;
+  width: 1.3em;
+  height: 0.15em;
+  background: white;
+  box-shadow: 0 0.5em 0 0 white, 0 1em 0 0 white;
+  /*if change this, change the hover as well*/
+}
+
+/* line 80, _header.scss */
+.menu-open:hover:before {
+  background: #b3ccff;
+  box-shadow: 0 0.5em 0 0 #b3ccff, 0 1em 0 0 #b3ccff;
+}
+
+/* End of Header */
+/*Aside */
+/* line 3, _aside.scss */
+.priority1and2 {
+  /*@include breakpoint(senior) { 
+  float: right;
+  width: 89%}*/
+}
+
+/*if change this, change general-layout */
+/* line 10, _aside.scss */
+aside {
+  overflow: hidden;
+  padding-right: .9em;
+  /* large phone (landscape) ----------- */
+  /*on tablet and up, aside floats right*/
+  /*tablet and up*/
+}
+@media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
+  /* line 10, _aside.scss */
+  aside {
+    float: none;
+  }
+}
+@media only screen and (min-width: 708px) {
+  /* line 10, _aside.scss */
+  aside {
+    float: right;
+    width: 28%;
+    margin-bottom: 0.9rem;
+    padding-right: 1.8em;
+  }
+  /* line 22, _aside.scss */
+  aside p {
+    margin-top: 0;
+  }
+}
+
+/*aside is at bottom, not sidebar*/
+/* line 29, _aside.scss */
+.full aside {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 29, _aside.scss */
+  .full aside {
+    width: 100%;
+    float: none;
+    clear: both;
+    display: block;
+  }
+}
+
+/* line 40, _aside.scss */
+.full aside {
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 40, _aside.scss */
+  .full aside {
+    padding-right: 1.8rem;
+  }
+}
+
+/* line 46, _aside.scss */
+.read .priority1and2 aside {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 46, _aside.scss */
+  .read .priority1and2 aside {
+    margin-bottom: 0.9rem;
+    padding-top: 0.9rem;
+    padding-left: 1.8rem;
+  }
+}
+
+/* line 56, _aside.scss */
+.priority3 {
+  /* Smartphones, except large phone landscape ----------- */
+  /*@include breakpoint(senior) { 
+  	float: left;
+  	width:10%
+  }*/
+}
+@media only screen and (max-width: 707px) {
+  /* line 56, _aside.scss */
+  .priority3 {
+    clear: left;
+  }
+}
+
+/* line 1, _nav.scss */
+.mainnav, footer {
+  /*menu is set up as a ul, but renders as inline*/
+  /*this is for a secondary menu, renders as a list of icons with labels
+  both mainnav and footer*/
+}
+/* line 3, _nav.scss */
+.mainnav ul, footer ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+/* line 9, _nav.scss */
+.mainnav ul.extra, footer ul.extra {
+  width: 100%;
+  padding: 0 0.9rem;
+  /*on desktop, a string of small icons on right*/
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 9, _nav.scss */
+  .mainnav ul.extra, footer ul.extra {
+    float: right;
+    width: auto;
+    display: inline;
+    padding: .8em 0 0;
+    vertical-align: top;
+  }
+  /* line 19, _nav.scss */
+  .mainnav ul.extra .mobileonly, footer ul.extra .mobileonly {
+    display: none;
+  }
+}
+/* line 24, _nav.scss */
+.mainnav ul.extra li, footer ul.extra li {
+  text-align: center;
+  width: 25%;
+  float: left;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 24, _nav.scss */
+  .mainnav ul.extra li, footer ul.extra li {
+    padding-left: .9em;
+    width: auto;
+    display: inline;
+    float: left;
+  }
+  /* line 33, _nav.scss */
+  .mainnav ul.extra li img, footer ul.extra li img {
+    display: block;
+  }
+}
+
+/* line 59, _nav.scss */
+.mainnav {
+  width: 100%;
+  /* is this the right choice? */
+  height: 100%;
+  position: fixed;
+  overflow: scroll;
+  display: block;
+  top: 0px;
+  left: 0px;
+  background: #333;
+  color: #fff;
+  padding: 3%;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 1em .2em #222;
+  -webkit-transform: translate(-105%);
+  -moz-transform: translate(-105%);
+  -ms-transform: translate(-105%);
+  -o-transform: translate(-105%);
+  transform: translate(-105%);
+  /*screen*/
+  z-index: 10;
+  /*extra menu, just the header*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 59, _nav.scss */
+  .mainnav {
+    position: relative;
+    overflow: visible;
+    padding: 0rem 1rem;
+    -webkit-transform: translate(0%);
+    -moz-transform: translate(0%);
+    -ms-transform: translate(0%);
+    -o-transform: translate(0%);
+    transform: translate(0%);
+    box-shadow: none;
+    font-size: .9em;
+    margin-bottom: 0px;
+  }
+}
+/* line 86, _nav.scss */
+.mainnav .menu-close {
+  font-size: .8em;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 86, _nav.scss */
+  .mainnav .menu-close {
+    display: none;
+  }
+}
+/* line 92, _nav.scss */
+.mainnav .menu-close:hover, .mainnav .menu-close:active {
+  cursor: pointer;
+}
+/* line 95, _nav.scss */
+.mainnav ul.nav {
+  margin-top: 1em;
+  border-bottom: solid thin #ec2027;
+  /* red line divider */
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 95, _nav.scss */
+  .mainnav ul.nav {
+    border: none;
+    display: inline-block;
+    float: left;
+    width: auto;
+    margin-top: .5rem;
+  }
+}
+/* line 111, _nav.scss */
+.mainnav ul.nav li {
+  display: block;
+  text-align: center;
+  width: 50%;
+  /*if you change this, must change .col-section:nth-of-type in grid.scss*/
+  float: left;
+  padding: 0.9em 0 1.8em;
+  /*tablet-all*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) {
+  /* line 111, _nav.scss */
+  .mainnav ul.nav li {
+    margin-bottom: 3em;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 111, _nav.scss */
+  .mainnav ul.nav li {
+    display: inline;
+    border: none;
+    padding: 0;
+    padding-right: 0.9rem;
+    width: auto;
+  }
+}
+/* line 132, _nav.scss */
+.mainnav ul.alumni li {
+  /*tablet-horizontal*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: landscape) {
+  /* line 132, _nav.scss */
+  .mainnav ul.alumni li {
+    margin-bottom: 0;
+  }
+}
+/* line 139, _nav.scss */
+.mainnav ul.extra {
+  margin-top: 1.8rem;
+  font-size: .7em;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 139, _nav.scss */
+  .mainnav ul.extra {
+    margin-top: 0;
+  }
+}
+
+/* line 147, _nav.scss */
+footer ul.extra {
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 1.8rem;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 147, _nav.scss */
+  footer ul.extra {
+    display: none;
+  }
+}
+
+/*icons adjacent to text on menu items */
+/* line 156, _nav.scss */
+.menu-icon {
+  height: 3em;
+  max-height: 50px;
+  display: block;
+  margin: auto;
+  width: auto;
+  margin-bottom: .2em;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 156, _nav.scss */
+  .menu-icon {
+    width: auto;
+    display: inline;
+    padding-right: .3rem;
+    height: .9rem;
+    margin-bottom: 0;
+  }
+}
+
+/* line 176, _nav.scss */
+.toggle-menu-icon:hover {
+  cursor: pointer;
+}
+
+/* line 179, _nav.scss */
+.sitemap .menu-icon {
+  display: none;
+  width: auto;
+}
+
+/*icons show on sitemap in teen and adult */
+/*tablet and up*/
+@media only screen and (min-width: 708px) {
+  /*small inline icons for giving sitemap*/
+  /* line 186, _nav.scss */
+  .sitemap-comp .menu-icon {
+    display: inline;
+    height: .9rem;
+    padding-right: .3rem;
+  }
+
+  /*large block icons for alumni sitemap*/
+  /* line 196, _nav.scss */
+  .sitemap-simple .menu-icon {
+    display: block;
+    height: 2em;
+  }
+}
+/* line 201, _nav.scss */
+ul.extra .menu-icon {
+  padding-right: 0;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 201, _nav.scss */
+  ul.extra .menu-icon {
+    padding-right: 0;
+    padding-left: 0;
+    width: auto;
+    max-height: 1.5em;
+  }
+}
+
+/*javascript fires new class, which moves menu */
+/* line 214, _nav.scss */
+body.menu-on .mainnav {
+  -webkit-transform: translate(0%);
+  -moz-transform: translate(0%);
+  -ms-transform: translate(0%);
+  -o-transform: translate(0%);
+  transform: translate(0%);
+}
+
+/* Footer */
+/* line 4, _footer.scss */
+footer {
+  text-align: center;
+  clear: both;
+  background: #333;
+  background: #333333;
+  color: white;
+  padding: 0 0 3em;
+}
+
+/* line 13, _footer.scss */
+.footerbanner {
+  width: 100%;
+  background: white;
+  padding: 0;
+  /* Smartphones, except large phone landscape ----------- */
+}
+@media only screen and (max-width: 707px) {
+  /* line 13, _footer.scss */
+  .footerbanner {
+    display: none;
+  }
+}
+
+/* line 22, _footer.scss */
+.footerlogo {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.9rem 1.8rem;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 22, _footer.scss */
+  .footerlogo {
+    margin-top: 1.8em;
+  }
+}
+
+/* line 34, _footer.scss */
+.col-bottomlink {
+  width: 25%;
+}
+
+/*navigation at footer of page*/
+/*also see:
+  grid.scss for some of the float rules
+  nav.scss for icon rule */
+/* line 5, _sitemap.scss */
+.sitemap {
+  text-align: left;
+  padding: 0 0.9rem;
+}
+/* line 8, _sitemap.scss */
+.sitemap li {
+  text-transform: uppercase;
+}
+/* line 11, _sitemap.scss */
+.sitemap li ul {
+  margin: 0;
+}
+/* line 14, _sitemap.scss */
+.sitemap li ul li {
+  font-size: .8em;
+  text-transform: none;
+  margin-bottom: 0;
+  padding-bottom: .7em;
+  width: 100%;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 14, _sitemap.scss */
+  .sitemap li ul li {
+    padding: .1em 0;
+  }
+}
+
+/* line 29, _sitemap.scss */
+.sitemap-comp li {
+  margin-bottom: 1.8rem;
+}
+
+/*some additional rules are in the _nav.scss that define how the grid is arranged */
+/* line 40, _footer.scss */
+.smallprint {
+  clear: both;
+  margin: 0.9rem;
+  font-size: .7em;
+}
+
+/* End of Footer */
+/* styles */
+/* line 1, _images.scss */
+.col-section img, article img, footer img {
+  width: 100%;
+}
+
+/* line 6, _images.scss */
+.col-article img {
+  /* large phone (landscape) ----------- */
+}
+@media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
+  /* line 6, _images.scss */
+  .col-article img {
+    max-height: 150px;
+    width: auto;
+  }
+}
+
+/*figure */
+/* line 14, _images.scss */
+.full .fullimg img {
+  width: 100%;
+  /*full screen*/
+  /*max-width and slide left for images on read adult */
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 14, _images.scss */
+  .full .fullimg img {
+    max-width: 30em;
+    /* or else too big on big screens */
+    float: left;
+    margin-right: 1.8em;
+    /*set gutter*/
+    margin-bottom: 0.9em;
+  }
+}
+
+/*figure */
+/* line 29, _images.scss */
+.full .imageright img {
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 29, _images.scss */
+  .full .imageright img {
+    margin-left: 31%;
+    /*align right*/
+    max-width: 69%;
+    /*full width of whatever is left*/
+  }
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 9, _links.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 19, _links.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*no underline*/
+/* line 23, _links.scss */
+a {
+  text-decoration: none;
+}
+
+/*standard link color*/
+/* line 26, _links.scss */
+a:link, a:visited {
+  color: #003399;
+  border-bottom: white;
+  border-width: 0px 0px 1px 0px;
+  border-style: none none dotted none;
+}
+
+/* line 33, _links.scss */
+a:hover {
+  border-bottom: #003399;
+  border-width: 0px 0px 1px 0px;
+  border-style: none none dotted none;
+}
+
+/*hide phone link on desktop */
+/* line 40, _links.scss */
+a.phone:link, a.phone:visited, a.phone:hover {
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 40, _links.scss */
+  a.phone:link, a.phone:visited, a.phone:hover {
+    color: black;
+    border-style: none;
+  }
+}
+
+/*hidden white links*/
+/* line 49, _links.scss */
+.sitemap a:link, .sitemap a:visited, .sitemap a:active, .extra a:link, .extra a:visited, .extra a:active, .header a:link, .header a:visited, .header a:active, .social a:link, .social a:visited, .social a:active {
+  color: white;
+  border-style: none;
+}
+/* line 53, _links.scss */
+.sitemap a:hover, .extra a:hover, .header a:hover, .social a:hover {
+  color: #b3ccff;
+  text-shadow: none;
+}
+
+/*Rensselaer is gray on phone */
+/* line 61, _links.scss */
+.title {
+  /* Smartphones, except large phone landscape ----------- */
+}
+@media only screen and (max-width: 707px) {
+  /* line 63, _links.scss */
+  .title a:link, .title a:visited, .title a:active, .title .part1 {
+    color: #CCC;
+  }
+  /* line 66, _links.scss */
+  .title a:hover {
+    color: #b3ccff;
+  }
+  /* line 69, _links.scss */
+  .title .part2:hover {
+    color: #b3ccff;
+    text-shadow: none;
+  }
+}
+
+/* line 76, _links.scss */
+.title:hover .part1, .title:hover .part2 {
+  color: #b3ccff;
+}
+
+/*no hover affect, w/out this there will be a flash of color*/
+/* line 82, _links.scss */
+nav a:hover, .social a:hover, .footerlogo-wrapper a:hover {
+  border-style: none;
+}
+
+/* line 89, _links.scss */
+.mainnav a:link, .mainnav a:visited, .mainnav a:active, .sitemap a:link, .sitemap a:visited, .sitemap a:active, .extra a:link, .extra a:visited, .extra a:active {
+  width: 100%;
+  display: block;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 89, _links.scss */
+  .mainnav a:link, .mainnav a:visited, .mainnav a:active, .sitemap a:link, .sitemap a:visited, .sitemap a:active, .extra a:link, .extra a:visited, .extra a:active {
+    display: inline;
+  }
+}
+
+/*for grid, we want the whole box to be a link, the image and text*/
+/* line 99, _links.scss */
+.gridlink:link, .gridlink:visited {
+  /*these two rules ensure that the link wraps the image and text when there is a background*/
+  height: 100%;
+  display: block;
+  background: white;
+  /*prevents a jiggle when mousing over*/
+  border: dotted thin transparent;
+  padding-bottom: 0.45rem;
+}
+/* line 107, _links.scss */
+.gridlink:link img, .gridlink:visited img {
+  opacity: 1;
+}
+
+/* line 112, _links.scss */
+.gridlink:hover, .gridlink:active {
+  background: #b3ccff;
+  border: dotted thin #003399;
+  color: #333333;
+}
+/* line 116, _links.scss */
+.gridlink:hover img, .gridlink:active img {
+  opacity: 0.6;
+  /*webkit jiggles the image without this rule*/
+  -webkit-backface-visibility: hidden;
+}
+/* line 124, _links.scss */
+.gridlink:hover h2, .gridlink:active h2 {
+  color: #333333;
+}
+
+/*footer links are on gray and need a lighter blue*/
+/* line 130, _links.scss */
+footer {
+  /*hide phone link on desktop */
+}
+/* line 131, _links.scss */
+footer a:link, footer a:visited, footer a:active {
+  color: #b3ccff;
+  border-style: none;
+}
+/* line 135, _links.scss */
+footer a:hover {
+  border-bottom: #b3ccff;
+  border-width: 0px 0px 1px 0px;
+  border-style: none none dotted none;
+}
+/* line 141, _links.scss */
+footer a.phone:link, footer a.phone:visited, footer a.phone:hover {
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 141, _links.scss */
+  footer a.phone:link, footer a.phone:visited, footer a.phone:hover {
+    color: white;
+    border-style: none;
+  }
+}
+
+/*use this class to space out links for touch*/
+/* line 151, _links.scss */
+.space-link {
+  line-height: 2em;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 151, _links.scss */
+  .space-link {
+    line-height: normal;
+  }
+}
+
+/* line 1, _button.scss */
+.menu-button-wrapper {
+  min-width: 40px;
+  /*tablet and up*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 1, _button.scss */
+  .menu-button-wrapper {
+    margin-top: .5em;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 1, _button.scss */
+  .menu-button-wrapper {
+    display: none;
+  }
+}
+
+/* line 12, _button.scss */
+.toggle-menu-icon {
+  width: 100%;
+}
+
+/* line 16, _button.scss */
+.donate-wrapper {
+  /*tablet and up*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 16, _button.scss */
+  .donate-wrapper {
+    font-size: 1.1em;
+    margin-top: .2em;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 16, _button.scss */
+  .donate-wrapper {
+    margin-top: .65em;
+  }
+}
+
+/* line 26, _button.scss */
+.donate-button {
+  font-size: .6em;
+  text-align: center;
+  height: 100%;
+  padding: .6em;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 26, _button.scss */
+  .donate-button {
+    padding: .4em .6em .3em;
+    font-size: .7em;
+  }
+}
+
+/* line 38, _button.scss */
+.action, .donate-button, .button, input[type="submit"], input[type="button"] {
+  border-radius: 1em;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0), 0px 1px 0px rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+}
+
+/* line 46, _button.scss */
+.donate-button {
+  background-color: #de2831;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d91f28), color-stop(29%, #de2831), color-stop(100%, #94151b));
+  background-image: -webkit-linear-gradient(top, #d91f28 0%, #de2831 29%, #94151b 100%);
+  background-image: linear-gradient(to bottom,#d91f28 0%, #de2831 29%, #94151b 100%);
+  border: 1px solid #d91f28;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), inset -14px -12px 4px rgba(247, 54, 64, 0);
+}
+
+/* line 54, _button.scss */
+.action, .button, input[type="submit"] {
+  background-color: #003399;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b3ccff), color-stop(5%, #b3ccff), color-stop(100%, #003399));
+  background-image: -webkit-linear-gradient(top, #b3ccff 0%, #b3ccff 5%, #003399 100%);
+  background-image: linear-gradient(to bottom,#b3ccff 0%, #b3ccff 5%, #003399 100%);
+}
+
+/* line 60, _button.scss */
+.header .donate-button:hover {
+  background-color: #b3ccff;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b3ccff), color-stop(100%, #b3ccff));
+  background-image: -webkit-linear-gradient(#b3ccff 0%, #b3ccff 100%);
+  background-image: linear-gradient(#b3ccff 0%, #b3ccff 100%);
+  color: #333333;
+}
+
+/* line 66, _button.scss */
+.action-wrapper {
+  text-align: center;
+}
+
+/* line 69, _button.scss */
+.action, .button, input[type="submit"], input[type="button"] {
+  font-size: .8em;
+  margin-bottom: 0.9rem;
+  display: inline-block;
+}
+
+/* line 75, _button.scss */
+.action:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  background-color: #de2831;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d91f28), color-stop(29%, #de2831), color-stop(100%, #94151b));
+  background-image: -webkit-linear-gradient(top, #d91f28 0%, #de2831 29%, #94151b 100%);
+  background-image: linear-gradient(to bottom,#d91f28 0%, #de2831 29%, #94151b 100%);
+}
+
+/* line 79, _button.scss */
+a.action:link, a.action:visited, .button, input[type="submit"] {
+  color: white;
+  text-align: center;
+  padding: .7em;
+}
+
+/* Typography */
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 14, _typography.scss */
+body {
+  color: black;
+  font-family: "franklin-gothic-urw", verdana, sans-serif;
+}
+
+/* line 1, _typography-h.scss */
+h1, h2, h3, h4, h5, h6, .tagline {
+  font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
+  font-weight: 700;
+}
+
+/* line 6, _typography-h.scss */
+h1, h2, .title {
+  text-transform: uppercase;
+  margin-top: 0px;
+  text-align: center;
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 6, _typography-h.scss */
+  h1, h2, .title {
+    text-align: left;
+  }
+}
+
+/* line 16, _typography-h.scss */
+h1 {
+  font-size: 1.9em;
+  line-height: 1em;
+  margin: 0.2em 0 0;
+  /* large phone (landscape) ----------- */
+  /*tablet and up*/
+}
+@media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
+  /* line 16, _typography-h.scss */
+  h1 {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 708px) {
+  /* line 16, _typography-h.scss */
+  h1 {
+    font-size: 1.9em;
+  }
+}
+
+/* line 28, _typography-h.scss */
+.read h1 {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 28, _typography-h.scss */
+  .read h1 {
+    font-size: 3em;
+    text-align: left;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+  }
+}
+
+/*on event page, float h1 on left side*/
+/* line 38, _typography-h.scss */
+.single h1 {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 38, _typography-h.scss */
+  .single h1 {
+    margin-bottom: 1em;
+    max-width: 72%;
+    float: left;
+  }
+}
+
+/* line 46, _typography-h.scss */
+h2 {
+  font-size: 1.2em;
+  margin-bottom: .2em;
+}
+
+/* line 51, _typography-h.scss */
+article h2 {
+  color: black;
+  text-align: left;
+  margin-top: 0.9rem;
+}
+
+/* line 58, _typography-h.scss */
+.read h2 {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 58, _typography-h.scss */
+  .read h2 {
+    margin-left: 1.8rem;
+    color: #4d4d4d;
+    text-transform: none;
+    margin-top: 2.7rem;
+  }
+}
+
+/* line 70, _typography-h.scss */
+section h2, h2.subtitle {
+  text-align: center;
+  margin: 0 0 0.9rem;
+}
+
+/*do i need this? */
+/* line 76, _typography-h.scss */
+.gridtext h2 {
+  text-align: left;
+  line-height: 1em;
+}
+
+/* line 80, _typography-h.scss */
+.read .maincontent h2.subtitle {
+  font-size: 1.1em;
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 80, _typography-h.scss */
+  .read .maincontent h2.subtitle {
+    text-align: left;
+    font-size: 1.2em;
+    padding: 0 1.8rem;
+    margin-bottom: 3em;
+    text-transform: uppercase;
+    width: 100%;
+    margin-left: 0;
+    /*screen*/
+  }
+}
+@media only screen and (min-width: 708px) and (min-width: 1021px) {
+  /* line 80, _typography-h.scss */
+  .read .maincontent h2.subtitle {
+    margin-bottom: 1.8rem;
+  }
+}
+
+/* line 98, _typography-h.scss */
+section h2 {
+  margin-bottom: 0em;
+}
+
+/* line 104, _typography-h.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 0 0 .3em;
+  text-transform: uppercase;
+}
+
+/* line 111, _typography-h.scss */
+.donate h3 {
+  margin-top: .7em;
+}
+
+/* line 122, _typography-h.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 133, _typography-h.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 138, _typography-h.scss */
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+/* line 2, _typography-p.scss */
+p,
+pre {
+  margin: 0 0 .8em;
+}
+
+/* line 6, _typography-p.scss */
+p {
+  font-weight: 300;
+  max-width: 40em;
+  text-align: justify;
+  font-size: 1em;
+  /*
+  @include breakpoint(big-baby-sleep) { 
+  	font-size: .7em;
+  }
+  */
+}
+
+/* line 19, _typography-p.scss */
+.gridtext p {
+  font-size: .9em;
+  text-align: left;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 19, _typography-p.scss */
+  .gridtext p {
+    font-size: .8em;
+  }
+}
+
+/*used on alumni-classes to reduce white space between intro paragraph and boxes*/
+/* line 28, _typography-p.scss */
+p.squeeze {
+  margin-bottom: 0;
+}
+
+/* line 33, _typography-p.scss */
+.read p {
+  /*tablet and up*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 33, _typography-p.scss */
+  .read p {
+    margin-left: 1.8rem;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 33, _typography-p.scss */
+  .read p {
+    font-size: .9em;
+  }
+}
+
+/* line 44, _typography-p.scss */
+.read .sidebar p {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 44, _typography-p.scss */
+  .read .sidebar p {
+    margin-left: 1.8em;
+  }
+}
+
+/* line 50, _typography-p.scss */
+.read aside p {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 50, _typography-p.scss */
+  .read aside p {
+    margin-left: 0;
+  }
+}
+
+/* line 56, _typography-p.scss */
+.gray {
+  color: #666;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+/* line 6, _typography-semantic-misc.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 15, _typography-semantic-misc.scss */
+b,
+strong, .run-in {
+  font-weight: 500;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 23, _typography-semantic-misc.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+/* line 32, _typography-semantic-misc.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+/* line 42, _typography-semantic-misc.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 56, _typography-semantic-misc.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 66, _typography-semantic-misc.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+/* line 76, _typography-semantic-misc.scss */
+q {
+  quotes: none;
+}
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+/* line 85, _typography-semantic-misc.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 94, _typography-semantic-misc.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 103, _typography-semantic-misc.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 110, _typography-semantic-misc.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 114, _typography-semantic-misc.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 1, _typography-figure-aside.scss */
+figcaption {
+  font-size: .8em;
+  font-weight: 500;
+  text-align: justify;
+  /* large phone (landscape) ----------- */
+}
+@media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
+  /* line 1, _typography-figure-aside.scss */
+  figcaption {
+    font-size: .5em;
+  }
+}
+
+/* line 10, _typography-figure-aside.scss */
+.read figcaption {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 10, _typography-figure-aside.scss */
+  .read figcaption {
+    width: 28%;
+    float: left;
+    clear: left;
+    font-weight: normal;
+    margin-left: 1.8rem;
+    text-align: left;
+    display: inline;
+  }
+}
+
+/* line 22, _typography-figure-aside.scss */
+.symmetry figcaption {
+  width: auto;
+  margin-left: 0;
+}
+
+/* line 27, _typography-figure-aside.scss */
+.aside figcaption {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 27, _typography-figure-aside.scss */
+  .aside figcaption {
+    margin-left: 0;
+  }
+}
+
+/* line 34, _typography-figure-aside.scss */
+aside {
+  /*tablet and up*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 34, _typography-figure-aside.scss */
+  aside {
+    font-size: .8em;
+  }
+  /* line 37, _typography-figure-aside.scss */
+  aside p {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 42, _typography-figure-aside.scss */
+  aside p {
+    font-size: .9em;
+  }
+}
+
+/* line 1, _typography-header.scss */
+.title {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: .5em;
+  margin: 0;
+  text-align: left;
+  text-transform: none;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  /*tablet and up*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 1, _typography-header.scss */
+  .title {
+    color: #FFF;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 1, _typography-header.scss */
+  .title {
+    font-size: 2.8em;
+  }
+}
+
+/* line 19, _typography-header.scss */
+.title .part2 {
+  color: #FFF;
+  display: block;
+  font-size: 1.6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 19, _typography-header.scss */
+  .title .part2 {
+    display: inline;
+    margin-left: .2em;
+    font-size: 1em;
+    line-height: 1em;
+  }
+}
+
+/* line 34, _typography-header.scss */
+.tagline {
+  /* Smartphones, except large phone landscape ----------- */
+  /*tagline is small and gray*/
+  color: #CCC;
+  font-weight: 500;
+  font-size: .6em;
+  text-transform: none;
+}
+@media only screen and (max-width: 707px) {
+  /* line 34, _typography-header.scss */
+  .tagline {
+    display: none;
+  }
+}
+
+/*.summary {
+	font-style:italic;
+	font-weight: bold;
+	font-size: .9em}*/
+/* line 33, _typography.scss */
+.content {
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 33, _typography.scss */
+  .content {
+    font-size: 1.3em;
+  }
+}
+
+/* line 1, _typography-quote.scss */
+p.quote {
+  display: none;
+}
+
+/* line 6, _typography-quote.scss */
+blockquote {
+  line-height: 1.2em;
+  text-align: justify;
+  font-weight: 500;
+  margin-bottom: 0;
+  /* large phone (landscape) ----------- */
+}
+@media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
+  /* line 6, _typography-quote.scss */
+  blockquote {
+    margin-left: 20%;
+    font-size: .7em;
+  }
+}
+
+/* line 18, _typography-quote.scss */
+blockquote:before {
+  content: '\201C';
+  font-size: 2.75em;
+  text-indent: -.5em;
+  margin-top: .1em;
+  opacity: .3;
+  float: left;
+}
+
+/* line 27, _typography-quote.scss */
+cite {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 700;
+  font-style: normal;
+  font-size: .7em;
+  font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
+  margin: 0.4rem 2.2rem 1.8rem 4em;
+  /* large phone (landscape) ----------- */
+  /*tablet and up*/
+}
+@media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
+  /* line 27, _typography-quote.scss */
+  cite {
+    margin-left: 20%;
+    font-size: .5em;
+  }
+}
+@media only screen and (min-width: 708px) {
+  /* line 27, _typography-quote.scss */
+  cite {
+    float: left;
+    clear: left;
+    width: 75%;
+    margin-right: 25%;
+  }
+}
+
+/* line 52, _typography-quote.scss */
+cite:before {
+  content: "\2014";
+  opacity: .3;
+}
+
+/* line 58, _typography-quote.scss */
+.read blockquote {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 58, _typography-quote.scss */
+  .read blockquote {
+    clear: right;
+    max-width: 75%;
+    font-size: 1.2em;
+    color: #4d4d4d;
+    margin-right: 25%;
+    float: left;
+    display: inline-block;
+  }
+}
+
+/* line 72, _typography-quote.scss */
+.read .withsidebar blockquote, .read .withsidebar cite {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 72, _typography-quote.scss */
+  .read .withsidebar blockquote, .read .withsidebar cite {
+    float: none;
+    width: 100%;
+    max-width: 80%;
+    padding: 0 3.6rem;
+    display: block;
+  }
+}
+
+/* line 82, _typography-quote.scss */
+.read .withsidebar blockquote {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 82, _typography-quote.scss */
+  .read .withsidebar blockquote {
+    margin: 1.8rem auto 0.9rem;
+  }
+}
+
+/* line 88, _typography-quote.scss */
+.read .withsidebar cite {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 88, _typography-quote.scss */
+  .read .withsidebar cite {
+    margin: 0 auto 1.8rem;
+  }
+}
+
+/* End of Typography */
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 12, _lists.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 16, _lists.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+/* line 26, _lists.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 35, _lists.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 40, _lists.scss */
+.content ul {
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  max-width: 36em;
+  font-weight: 300;
+  text-align: justify;
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 40, _lists.scss */
+  .content ul {
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+  }
+}
+/* line 50, _lists.scss */
+.content ul li {
+  margin-bottom: .3em;
+}
+
+/* line 1, _social.scss */
+.social {
+  color: white;
+  width: 100%;
+  max-width: 200px;
+  z-index: 2;
+  position: fixed;
+  /*position at bottom right of page */
+  bottom: 0;
+  right: 0;
+  /*clearflix could combine 
+  ul:after {
+  	display: table;
+  	content: "";
+  }*/
+  /*this graphic has a white background */
+}
+/* line 9, _social.scss */
+.social ul {
+  list-style-type: none;
+  /*could probably combine with menu rule */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  clear: left;
+}
+/* line 23, _social.scss */
+.social li {
+  display: inline;
+  width: 50%;
+}
+/* line 27, _social.scss */
+.social a {
+  color: white;
+  cursor: pointer;
+}
+/* line 32, _social.scss */
+.social .addthis_counter a {
+  color: black;
+}
+
+/* line 37, _social.scss */
+.follow, .share {
+  padding: 0.9em;
+  text-align: right;
+  font-size: .8em;
+  background-color: #333333;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  /*transform does not work in ie8*/
+}
+/* line 47, _social.scss */
+.follow li, .share li {
+  padding: 0.9em;
+  float: left;
+}
+
+/* line 54, _social.scss */
+.socialnav {
+  z-index: 4;
+}
+/* line 56, _social.scss */
+.socialnav a {
+  padding: 0.9em;
+  width: 50%;
+  display: inline-block;
+  float: left;
+  /*facebook blue*/
+  background: rgba(59, 89, 152, 0.93);
+}
+/* line 67, _social.scss */
+.socialnav a:hover {
+  background: #333333;
+}
+
+/*this selector is fired with javascript*/
+/* line 74, _social.scss */
+body.follow-on .follow-toggle {
+  background-color: #333333;
+}
+/* line 76, _social.scss */
+body.follow-on .follow-toggle a {
+  background: #333333;
+}
+/* line 81, _social.scss */
+body.follow-on .follow {
+  opacity: 1;
+  z-index: 3;
+  padding-bottom: 50px;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+/* line 93, _social.scss */
+body.share-on .share-toggle {
+  background-color: #333333;
+}
+/* line 95, _social.scss */
+body.share-on .share-toggle a {
+  background: #333333;
+}
+/* line 99, _social.scss */
+body.share-on .share {
+  opacity: 1;
+  padding-bottom: 50px;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+/*css turned on by javascript*/
+/* line 109, _social.scss */
+body.social-off .social {
+  /*with transitions it fades out. In case they have a keyboard attached, it still looks nice*/
+  opacity: 0;
+  /*don't want it to interfere with keyboard or fields*/
+  display: none;
+  /*still works with large screens, which presumably don't have on screen keyboards*/
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 109, _social.scss */
+  body.social-off .social {
+    opacity: 1;
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+/* line 10, _embedded-content.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 19, _embedded-content.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 9, _figures.scss */
+figure {
+  margin: 0 0 0.9rem;
+  /* large phone (landscape) ----------- */
+}
+@media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
+  /* line 9, _figures.scss */
+  figure {
+    margin: 0 auto 0.9rem;
+    text-align: center;
+  }
+}
+
+/* line 17, _figures.scss */
+.read figure {
+  /*tablet-vertical*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: portrait) {
+  /* line 17, _figures.scss */
+  .read figure {
+    margin-bottom: 0;
+  }
+}
+
+/*add bar before caption on .read */
+/* line 24, _figures.scss */
+.fullimg figcaption:before, .imageright figcaption:before {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 24, _figures.scss */
+  .fullimg figcaption:before, .imageright figcaption:before {
+    content: '';
+    border-bottom: 0.4em solid #003399;
+    margin-top: 1.8rem;
+    margin-bottom: 0.9rem;
+    width: 60%;
+    display: block;
+  }
+}
+
+/*aside margins for read */
+/* line 36, _figures.scss */
+.read .priority1and2 .aside, .full .priority1and2 aside {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 36, _figures.scss */
+  .read .priority1and2 .aside, .full .priority1and2 aside {
+    width: 28%;
+    margin-top: 0.9rem;
+    margin-bottom: 0.45rem;
+  }
+}
+
+/*space between image and main body on read with sidebar */
+/* line 45, _figures.scss */
+.read .priority1and2 .aside {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 45, _figures.scss */
+  .read .priority1and2 .aside {
+    float: right;
+    clear: right;
+    margin-left: 1.8rem;
+  }
+  /* line 50, _figures.scss */
+  .read .priority1and2 .aside figcaption:before {
+    display: none;
+  }
+  /* line 53, _figures.scss */
+  .read .priority1and2 .aside figcaption {
+    width: 100%;
+  }
+}
+
+/*full article, set aside to left*/
+/* line 60, _figures.scss */
+.read .full .aside, .full aside {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 60, _figures.scss */
+  .read .full .aside, .full aside {
+    margin-left: 1.8rem;
+    float: left;
+    clear: left;
+  }
+}
+
+/*correct above rule so that aside within priority1and2 is flush left*/
+/* line 69, _figures.scss */
+.full .priority1and2 aside {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 69, _figures.scss */
+  .full .priority1and2 aside {
+    margin-left: 0;
+  }
+}
+
+/* line 77, _figures.scss */
+.read .left {
+  /*tablet-vertical*/
+}
+@media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: portrait) {
+  /* line 77, _figures.scss */
+  .read .left {
+    width: 72%;
+    float: left;
+    clear: left;
+    margin: 0 0 0.45rem;
+    padding-right: 0.9rem;
+  }
+}
+
+/* line 87, _figures.scss */
+figcaption {
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 87, _figures.scss */
+  figcaption {
+    margin-bottom: 0.9rem;
+  }
+}
+
+/*add bar before caption on .read */
+/* line 94, _figures.scss */
+.withsidebar .fullimg figcaption:before, .withsidebar .imageright figcaption:before {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 94, _figures.scss */
+  .withsidebar .fullimg figcaption:before, .withsidebar .imageright figcaption:before {
+    margin-top: 1.35rem;
+  }
+}
+
+/*space between figcaption and mainbody on article with sidebar */
+/* line 101, _figures.scss */
+.read .withsidebar figcaption {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 101, _figures.scss */
+  .read .withsidebar figcaption {
+    margin-left: 1.8rem;
+    margin-bottom: 0.9rem;
+    float: right;
+  }
+}
+
+/* line 110, _figures.scss */
+.full .imageright figcaption {
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 110, _figures.scss */
+  .full .imageright figcaption {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+/*this corresponds to typgoraphy-p: read p margins*/
+/* line 126, _figures.scss */
+figure.symmetry {
+  /*tablet and up*/
+  /*screen*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 126, _figures.scss */
+  figure.symmetry {
+    margin-left: 1.8rem;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1021px) {
+  /* line 126, _figures.scss */
+  figure.symmetry {
+    font-size: .9em;
+  }
+}
+
+/* line 136, _figures.scss */
+.read .symmetry figcaption {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 136, _figures.scss */
+  .read .symmetry figcaption {
+    margin-left: 0;
+    float: none;
+  }
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+/* line 9, _forms.scss */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 17, _forms.scss */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 17, _forms.scss */
+  fieldset {
+    border: 1px solid #ccc;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+    border-radius: 3px;
+  }
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+/* line 35, _forms.scss */
+legend {
+  padding: 0 0 0.45em;
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 35, _forms.scss */
+  legend {
+    border: 0;
+    /* 1 */
+    padding: 0 0.45em 0.45em;
+    white-space: normal;
+    /* 2 */
+    *margin-left: -7px;
+    /* 3 */
+    font-size: .8em;
+  }
+}
+
+/*
+ 1. Correct font size not being inherited in all browsers.
+ 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+    and Chrome.
+3. Improve appearance and consistency in all browsers.
+ */
+/* line 55, _forms.scss */
+label, .checkbox-header, .radio-header {
+  font-size: .7em;
+}
+
+/* line 59, _forms.scss */
+label {
+  cursor: pointer;
+  line-height: 1em;
+  padding-left: 2px;
+  color: #666;
+  display: block;
+}
+
+/* line 4, _forms-fields.scss */
+button,
+input,
+select,
+textarea {
+  font-size: .8em;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+  display: block;
+  margin-bottom: 0.9em;
+  width: 90%;
+  max-width: 30em;
+  background: #f9f9f9;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border: #999 2px solid;
+  border-radius: 3px;
+  margin-top: 3px;
+}
+
+/*-------buttons and submits -------- */
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 29, _forms-fields.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 41, _forms-fields.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+/* line 60, _forms-fields.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 68, _forms-fields.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+  margin-top: 0.9em;
+  display: block;
+  width: auto;
+  max-width: auto;
+}
+
+/* line 79, _forms-fields.scss */
+input[type="submit"], input[type="reset"],
+input[type="submit"] {
+  border: 0;
+}
+
+/* line 84, _forms-fields.scss */
+input[type="submit"]:hover, input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border: 0;
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 93, _forms-fields.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/*------- input types -------- */
+/* line 108, _forms-fields.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+  display: inline;
+  margin-right: 5px;
+  width: auto;
+  margin-bottom: 1.35em;
+}
+
+/* line 120, _forms-fields.scss */
+.imod_formWrapper input[type="radio"] {
+  margin-bottom: 0.45em;
+}
+
+/* line 125, _forms-fields.scss */
+input[type="radio"]:hover, input[type="radio"]:hover + label, input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+/* line 129, _forms-fields.scss */
+input[type="radio"]:checked, input[type="radio"]:checked + label {
+  border-bottom: 1px solid black;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 139, _forms-fields.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  /*  -webkit-box-sizing: content-box; 2 
+   box-sizing: content-box;*/
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 152, _forms-fields.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 158, _forms-fields.scss */
+input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime-local"] {
+  width: auto;
+}
+
+/*------- select and text area -------- */
+/* line 164, _forms-fields.scss */
+select {
+  margin-top: 0.3em;
+  font-size: .7em;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 175, _forms-fields.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+  max-width: none;
+}
+
+/* line 181, _forms-fields.scss */
+input[type="textarea"] {
+  max-width: none;
+}
+
+/* line 185, _forms-fields.scss */
+textarea:focus, input:focus {
+  border: black 2px solid;
+  background: #b3ccff;
+}
+
+/*hover only on adult, otherwise you get false positives between hover and focus*/
+/*screen*/
+@media only screen and (min-width: 1021px) {
+  /* line 191, _forms-fields.scss */
+  textarea:hover, input:hover, select:hover {
+    border: black 2px solid;
+  }
+}
+/*rules that groupd fields and lables based on a container */
+/*checkboxes that are grouped together*/
+/* line 5, _forms-fields-grouped.scss */
+.checkbox-header {
+  /*input goes inside the label*/
+  margin-bottom: 0.9em;
+}
+/* line 7, _forms-fields-grouped.scss */
+.checkbox-header label {
+  /*counteracts font-size set above*/
+  font-size: 1em;
+  display: block;
+  vertical-align: bottom;
+}
+/* line 14, _forms-fields-grouped.scss */
+.checkbox-header input[type="checkbox"] {
+  margin-bottom: 0.225em;
+  margin-top: 0.45em;
+  margin-right: 0;
+}
+
+/*that long string is for iModules giving form*/
+/* line 24, _forms-fields-grouped.scss */
+.radio-group label, #rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations label {
+  display: inline;
+  padding-right: 0.45em;
+}
+
+/* line 33, _forms-fields-grouped.scss */
+.input-group input[type="button"],
+.input-group input[type="reset"],
+.input-group input[type="submit"] {
+  display: inline;
+  padding-right: 0.45em;
+}
+
+/*rules designed for the iModules giving form */
+/* breadcrumbs */
+/* controls the block of breadcrumbs*/
+/* line 6, _forms-giving.scss */
+.formbreadcrumbs {
+  margin-bottom: 0.9rem;
+}
+
+/*individual items*/
+/* line 11, _forms-giving.scss */
+.idbmsBreadcrumb, .idbmsBreadcrumbActive {
+  padding: .2em;
+  margin: 0;
+  border: #666 thin solid;
+  padding: .7em;
+  font-size: .6em;
+}
+
+/*different color for general and active*/
+/* line 20, _forms-giving.scss */
+.idbmsBreadcrumb {
+  background: #999;
+  color: black;
+}
+
+/* line 25, _forms-giving.scss */
+.idbmsBreadcrumbActive {
+  background: #003399;
+  color: white;
+}
+
+/*add a margin underneath radio buttons on giving form*/
+/* line 31, _forms-giving.scss */
+#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
+  margin-bottom: .5em;
+}
+
+/*tab in the "if you selected other" */
+/* line 36, _forms-giving.scss */
+#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_27319 {
+  margin-left: 1.5em;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 9, _tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Misc Style */
+/* Red Line */
+/* line 4, _misc.scss */
+.header {
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: #ec2027;
+}
+
+/* line 10, _misc.scss */
+.pageheader {
+  margin-bottom: .2em;
+  /*screen*/
+}
+@media only screen and (min-width: 1021px) {
+  /* line 10, _misc.scss */
+  .pageheader {
+    margin-bottom: .6em;
+  }
+}
+
+/* line 17, _misc.scss */
+footer {
+  border-style: none;
+  /* Smartphones, except large phone landscape ----------- */
+}
+@media only screen and (max-width: 707px) {
+  /* line 17, _misc.scss */
+  footer {
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: #ec2027;
+  }
+}
+
+/* line 26, _misc.scss */
+.button {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 32, _misc.scss */
+*:hover, *:focus, nav, .social, .gridlink {
+  -moz-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, text-shadow 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.5s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, text-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -o-box-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, text-shadow 0.3s ease-in-out, -o-transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* End of Misc Style */
