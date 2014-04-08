@@ -58,7 +58,7 @@ a:hover {
 
 
 /*Rensselaer is gray on phone */
-.title {
+.header .title {
   @include breakpoint(baby) {
     a:link, a:visited, a:active, .part1 {
       color: #CCC;    
@@ -73,7 +73,7 @@ a:hover {
   }
 }
 
-.title:hover .part1, .title:hover .part2 {
+.header .title:hover .part1, .header .title:hover .part2 {
   color: $color4
 }
 

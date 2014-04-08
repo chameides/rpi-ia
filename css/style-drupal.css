@@ -579,8 +579,9 @@ section {
   }
 }
 
-/* line 34, _header-main.scss */
-.title {
+/*added .header to front end because drupal assigns .title to main h1, not title of channel*/
+/* line 35, _header-main.scss */
+.header .title {
   padding-top: 0px;
   margin-top: 0px;
 }
@@ -1251,27 +1252,27 @@ a.phone:link, a.phone:visited, a.phone:hover {
 
 /*Rensselaer is gray on phone */
 /* line 61, _links.scss */
-.title {
+.header .title {
   /* Smartphones, except large phone landscape ----------- */
 }
 @media only screen and (max-width: 707px) {
   /* line 63, _links.scss */
-  .title a:link, .title a:visited, .title a:active, .title .part1 {
+  .header .title a:link, .header .title a:visited, .header .title a:active, .header .title .part1 {
     color: #CCC;
   }
   /* line 66, _links.scss */
-  .title a:hover {
+  .header .title a:hover {
     color: #b3ccff;
   }
   /* line 69, _links.scss */
-  .title .part2:hover {
+  .header .title .part2:hover {
     color: #b3ccff;
     text-shadow: none;
   }
 }
 
 /* line 76, _links.scss */
-.title:hover .part1, .title:hover .part2 {
+.header .title:hover .part1, .header .title:hover .part2 {
   color: #b3ccff;
 }
 
@@ -1510,7 +1511,7 @@ h1, h2, h3, h4, h5, h6, .tagline {
 }
 
 /* line 6, _typography-h.scss */
-h1, h2, .title {
+h1, h2, .header .title {
   text-transform: uppercase;
   margin-top: 0px;
   text-align: center;
@@ -1518,7 +1519,7 @@ h1, h2, .title {
 }
 @media only screen and (min-width: 708px) {
   /* line 6, _typography-h.scss */
-  h1, h2, .title {
+  h1, h2, .header .title {
     text-align: left;
   }
 }
@@ -1943,7 +1944,7 @@ aside {
 }
 
 /* line 1, _typography-header.scss */
-.title {
+.header .title {
   font-size: 1em;
   font-weight: 500;
   line-height: .5em;
@@ -1960,7 +1961,7 @@ aside {
 }
 @media only screen and (min-width: 708px) {
   /* line 1, _typography-header.scss */
-  .title {
+  .header .title {
     color: #FFF;
     font-size: 2.2em;
     font-weight: 700;
@@ -1969,13 +1970,13 @@ aside {
 }
 @media only screen and (min-width: 1021px) {
   /* line 1, _typography-header.scss */
-  .title {
+  .header .title {
     font-size: 2.8em;
   }
 }
 
 /* line 19, _typography-header.scss */
-.title .part2 {
+.header .title .part2 {
   color: #FFF;
   display: block;
   font-size: 1.6em;
@@ -1986,7 +1987,7 @@ aside {
 }
 @media only screen and (min-width: 708px) {
   /* line 19, _typography-header.scss */
-  .title .part2 {
+  .header .title .part2 {
     display: inline;
     margin-left: .2em;
     font-size: 1em;

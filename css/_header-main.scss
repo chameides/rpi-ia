@@ -31,7 +31,8 @@
   }
 }
 
-.title {
+/*added .header to front end because drupal assigns .title to main h1, not title of channel*/
+.header .title {
   padding-top: 0px;
   margin-top: 0px;
   @if $alumni {
