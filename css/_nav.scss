@@ -187,6 +187,7 @@ footer ul.extra {
     display: inline;
     height: .9rem;
     padding-right: .3rem;
+    margin: 0;
     @include ie8{
       height: .9em;
       padding-right: .3em;
