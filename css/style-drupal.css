@@ -110,7 +110,7 @@ body {
 .group:after,
 .grid:after,
 .header-main:after,
-ul.nav:after {
+ul.nav:after, .gridgroup1, .gridgroup2, .gridgroup3 {
   content: "";
   display: table;
   clear: both;
@@ -170,17 +170,17 @@ body {
   }
 }
 
-/* line 51, _general-layout.scss */
+/* line 52, _general-layout.scss */
 .read {
   /*tablet and up*/
 }
 @media only screen and (min-width: 708px) {
-  /* line 51, _general-layout.scss */
+  /* line 52, _general-layout.scss */
   .read {
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 56, _general-layout.scss */
+  /* line 57, _general-layout.scss */
   .read .full .maincontent h2, .read .full .maincontent h3, .read .full .maincontent h4, .read .full .maincontent h5, .read .full .maincontent h6, .read .full .maincontent p, .read .full .maincontent ul, .read .full .maincontent ol, .read .full .maincontent .center-content {
     margin-left: 34%;
     margin-right: 1.8em;
@@ -188,18 +188,30 @@ body {
 }
 
 /*rewrite above fule for asides*/
-/* line 66, _general-layout.scss */
+/* line 67, _general-layout.scss */
 .read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol, .read .priority1and2 .maincontent aside .center-content {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 70, _general-layout.scss */
+/* line 71, _general-layout.scss */
 .read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol {
   padding: 0;
 }
 
-/*if change this, change aside */
 /* line 76, _general-layout.scss */
+.gridpad {
+  /*tablet and up*/
+}
+@media only screen and (min-width: 708px) {
+  /* line 76, _general-layout.scss */
+  .gridpad {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/*if change this, change aside */
+/* line 84, _general-layout.scss */
 .maincontent {
   /*on tablets and up, the aside moves to the sidebar*/
   width: 100%;
@@ -209,7 +221,7 @@ body {
   }*/
 }
 @media only screen and (min-width: 708px) {
-  /* line 76, _general-layout.scss */
+  /* line 84, _general-layout.scss */
   .maincontent {
     float: left;
     display: inline;
@@ -217,35 +229,41 @@ body {
   }
 }
 
-/* line 91, _general-layout.scss */
+/* line 99, _general-layout.scss */
 .full .maincontent {
   width: 100%;
   /*tablet-all*/
 }
 @media only screen and (min-width: 708px) and (max-width: 1020px) {
-  /* line 91, _general-layout.scss */
+  /* line 99, _general-layout.scss */
   .full .maincontent {
     padding-right: 0.45rem;
   }
 }
 
 /*add a right margin*/
-/* line 100, _general-layout.scss */
+/* line 108, _general-layout.scss */
 .single {
   margin-right: 0.9rem;
   /*on larger screen, additional margin */
   /*screen*/
 }
 @media only screen and (min-width: 1021px) {
-  /* line 100, _general-layout.scss */
+  /* line 108, _general-layout.scss */
   .single {
     margin-right: 1.8em;
   }
 }
 
-/* line 108, _general-layout.scss */
+/* line 116, _general-layout.scss */
 .center-content {
   text-align: center;
+}
+
+/* line 120, _general-layout.scss */
+.gridguide {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Grid */
@@ -533,6 +551,25 @@ section {
 }
 
 /* End of Grid */
+/* line 1, _grid-groups.scss */
+.gridgroup1 {
+  background: white;
+}
+
+/* line 4, _grid-groups.scss */
+.gridgroup2 {
+  background: #b3ccff;
+}
+
+/* line 8, _grid-groups.scss */
+.gridgroup3 {
+  background: #4f853c;
+}
+/* line 10, _grid-groups.scss */
+.gridgroup3 h2 {
+  color: white;
+}
+
 /*@import "grid-hover";*/
 /* line 1, _header-main.scss */
 .header-main {
@@ -1321,45 +1358,50 @@ nav a:hover, .social a:hover, .footerlogo-wrapper a:hover {
   opacity: 1;
 }
 
-/* line 113, _links.scss */
+/* line 114, _links.scss */
+.gridgroup1 .gridlink:link, .gridgroup1 .gridlink:visited, .gridgroup2 .gridlink:link, .gridgroup2 .gridlink:visited, .gridgroup3 .gridlink:link, .gridgroup3 .gridlink:visited {
+  background: none;
+}
+
+/* line 119, _links.scss */
 .gridlink:hover, .gridlink:active {
   background: #b3ccff;
   border: dotted thin #003399;
   color: #333333;
 }
-/* line 117, _links.scss */
+/* line 123, _links.scss */
 .gridlink:hover img, .gridlink:active img {
   opacity: 0.6;
   /*webkit jiggles the image without this rule*/
   -webkit-backface-visibility: hidden;
 }
-/* line 125, _links.scss */
+/* line 131, _links.scss */
 .gridlink:hover h2, .gridlink:active h2 {
   color: #333333;
 }
 
 /*footer links are on gray and need a lighter blue*/
-/* line 131, _links.scss */
+/* line 137, _links.scss */
 footer {
   /*hide phone link on desktop */
 }
-/* line 132, _links.scss */
+/* line 138, _links.scss */
 footer a:link, footer a:visited, footer a:active {
   color: #b3ccff;
   border-style: none;
 }
-/* line 136, _links.scss */
+/* line 142, _links.scss */
 footer a:hover {
   border-bottom: #b3ccff;
   border-width: 0px 0px 1px 0px;
   border-style: none none dotted none;
 }
-/* line 142, _links.scss */
+/* line 148, _links.scss */
 footer a.phone:link, footer a.phone:visited, footer a.phone:hover {
   /*screen*/
 }
 @media only screen and (min-width: 1021px) {
-  /* line 142, _links.scss */
+  /* line 148, _links.scss */
   footer a.phone:link, footer a.phone:visited, footer a.phone:hover {
     color: white;
     border-style: none;
@@ -1367,13 +1409,13 @@ footer a.phone:link, footer a.phone:visited, footer a.phone:hover {
 }
 
 /*use this class to space out links for touch*/
-/* line 152, _links.scss */
+/* line 158, _links.scss */
 .space-link {
   line-height: 2em;
   /*screen*/
 }
 @media only screen and (min-width: 1021px) {
-  /* line 152, _links.scss */
+  /* line 158, _links.scss */
   .space-link {
     line-height: normal;
   }

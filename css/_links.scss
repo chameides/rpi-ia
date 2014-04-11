@@ -110,6 +110,12 @@ nav, .social, .footerlogo-wrapper{
   }
 }
 
+.gridgroup1, .gridgroup2, .gridgroup3 {
+  .gridlink:link, .gridlink:visited {
+  background: none;
+  }
+}
+
 .gridlink:hover, .gridlink:active {
   background: $color4;
   border: dotted thin $color3;
