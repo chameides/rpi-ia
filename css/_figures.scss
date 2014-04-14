@@ -57,13 +57,22 @@ figure {
 }
 
 /*full article, set aside to left*/
-.read .full .aside, .full aside {
+.full aside, .read .full .aside {
 	@include breakpoint(teen-up) {
-		margin-left: $margin4;
 		float: left;
 		clear: left;
 	}
 }
+
+/*read full article, add margin to aside*/
+.read .full .aside, .read .full aside {
+	@include breakpoint(teen-up) {
+		margin-left: $margin4;
+	}
+}
+
+
+
 
 /*correct above rule so that aside within priority1and2 is flush left*/
 .full .priority1and2 aside {
