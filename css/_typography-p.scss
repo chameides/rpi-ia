@@ -6,7 +6,7 @@ pre {
 p {
 	font-weight: 300;
 	max-width: 40em;
-	text-align: justify;
+	/*text-align: justify;*/
 	font-size: 1em;
 	/*
 	@include breakpoint(big-baby-sleep) { 
@@ -18,7 +18,7 @@ p {
 
 .gridtext p {
 	font-size: .9em;
-	text-align: left;
+	/*text-align: left;*/
 	@include breakpoint(adult) { 
 	  font-size: .8em;
 	}
