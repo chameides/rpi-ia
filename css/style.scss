@@ -40,3 +40,8 @@
 @import "forms-giving";
 @import "tables";
 @import "misc";
+
+
+@media print {
+	@import "print";
+}

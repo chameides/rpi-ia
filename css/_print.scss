@@ -1,0 +1,60 @@
+.mainnav, .menu-button-wrapper, .donate-button, .social, .footerbanner, ul.extra, .sitemap, .footerlogo-wrapper {display: none;}
+
+
+@if $alumni {
+	.header .title{
+		.part1, .part2, .tagline {
+			font-size: 10px;
+			text-transform: uppercase;
+			display: inline;
+			color: black;
+			font-weight: normal;
+		}
+		img {display: none;}
+		a:link, a:visited {
+			color: black;
+		}
+	}
+}
+
+@else {
+	.header .title, .header .title .part2{
+		font-size: 10px;
+		text-transform: uppercase;
+		display: inline;
+		color: black;
+		font-weight: normal;
+		a:link, a:visited {
+			color: black;
+		}
+	}
+}
+
+
+.header .title .part2 {
+	margin-left: 2px;
+}
+
+.content {
+	a:link:after, a:visited:after { 
+		content: " (" attr(href) ") "; 
+		font-size: 80%; 
+	}
+	@if $alumni {
+		a[href^="/"]:after { 
+			content: " (http://alumni.rpi.edu" attr(href) ") "; 
+		}
+	}
+	@else 
+		{
+		a[href^="/"]:after { 
+			content: " (http://rpi.edu/giving" attr(href) ") "; 
+		}
+	}
+}
+
+.priority3 {
+	clear: both;
+}
+
+
