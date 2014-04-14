@@ -1045,22 +1045,23 @@ footer ul.extra {
     display: inline;
     height: .9rem;
     padding-right: .3rem;
+    margin: 0;
   }
 
   /*large block icons for alumni sitemap*/
-  /* line 196, _nav.scss */
+  /* line 197, _nav.scss */
   .sitemap-simple .menu-icon {
     display: block;
     height: 2em;
   }
 }
-/* line 201, _nav.scss */
+/* line 202, _nav.scss */
 ul.extra .menu-icon {
   padding-right: 0;
   /*screen*/
 }
 @media only screen and (min-width: 1021px) {
-  /* line 201, _nav.scss */
+  /* line 202, _nav.scss */
   ul.extra .menu-icon {
     padding-right: 0;
     padding-left: 0;
@@ -1070,7 +1071,7 @@ ul.extra .menu-icon {
 }
 
 /*javascript fires new class, which moves menu */
-/* line 214, _nav.scss */
+/* line 215, _nav.scss */
 body.menu-on .mainnav {
   -webkit-transform: translate(0%);
   -moz-transform: translate(0%);
@@ -2331,28 +2332,36 @@ nav ol {
   width: 50%;
   display: inline-block;
   float: left;
+  font-size: .7em;
   /*facebook blue*/
   background: rgba(59, 89, 152, 0.93);
 }
-/* line 67, _social.scss */
+/* line 68, _social.scss */
 .socialnav a:hover {
   background: #333333;
 }
 
+/* line 73, _social.scss */
+.socialicon {
+  height: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
 /*this selector is fired with javascript*/
-/* line 74, _social.scss */
+/* line 81, _social.scss */
 body.follow-on .follow-toggle {
   background-color: #333333;
 }
-/* line 76, _social.scss */
+/* line 83, _social.scss */
 body.follow-on .follow-toggle a {
   background: #333333;
 }
-/* line 81, _social.scss */
+/* line 88, _social.scss */
 body.follow-on .follow {
   opacity: 1;
   z-index: 3;
-  padding-bottom: 50px;
+  padding-bottom: 55px;
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
   -ms-transform: translateY(0%);
@@ -2360,18 +2369,18 @@ body.follow-on .follow {
   transform: translateY(0%);
 }
 
-/* line 93, _social.scss */
+/* line 100, _social.scss */
 body.share-on .share-toggle {
   background-color: #333333;
 }
-/* line 95, _social.scss */
+/* line 102, _social.scss */
 body.share-on .share-toggle a {
   background: #333333;
 }
-/* line 99, _social.scss */
+/* line 106, _social.scss */
 body.share-on .share {
   opacity: 1;
-  padding-bottom: 50px;
+  padding-bottom: 55px;
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
   -ms-transform: translateY(0%);
@@ -2380,7 +2389,7 @@ body.share-on .share {
 }
 
 /*css turned on by javascript*/
-/* line 109, _social.scss */
+/* line 116, _social.scss */
 body.social-off .social {
   /*with transitions it fades out. In case they have a keyboard attached, it still looks nice*/
   opacity: 0;
@@ -2390,7 +2399,7 @@ body.social-off .social {
   /*screen*/
 }
 @media only screen and (min-width: 1021px) {
-  /* line 109, _social.scss */
+  /* line 116, _social.scss */
   body.social-off .social {
     opacity: 1;
     display: block;
