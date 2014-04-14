@@ -118,7 +118,7 @@
         padding-bottom: $margin3/2;
       }
       @include breakpoint(teen-all) {
-        margin-bottom: 3em;
+        margin-bottom: 2em;
       }
       @include breakpoint(adult) {
         display: inline;
@@ -129,16 +129,31 @@
       }
     }
   }
-  ul.alumni li{
-    @include breakpoint(teen-sleep) {
-      margin-bottom: 0;
-
+  @if $alumni {
+    ul.alumni {
+      padding-bottom: $margin2
+    }
+    ul.alumni li{
+      @include breakpoint(teen-sleep) {
+        margin-bottom: 0;
+      }
     }
   }
   /*extra menu, just the header*/
   ul.extra {
     margin-top: $margin2*2;
     font-size: .7em;
+    /*symmetrical space above and below red line */
+    @if $alumni {
+      @include breakpoint (teen) {
+        padding-top: 2em;
+      }
+    }
+    @else {
+      @include breakpoint (teen-all) {
+        padding-top: 2em;
+      }
+    }
     @include breakpoint(adult) {
       margin-top: 0;
     }
