@@ -9,11 +9,19 @@ border-bottom-color:$color2;
 
 .pageheader {
 	margin-bottom: .2em;
+	@include breakpoint(teen) {
+		margin-bottom: .6em;
+	}
 	@include breakpoint(adult) {
 		margin-bottom: .6em;
 	}
 }
 
+.read .pageheader {
+	@include breakpoint(teen-all) {
+		margin-bottom: $margin2*2.5;
+	}
+}
 footer {
 	border-style: none;
 	@include breakpoint(baby) {
