@@ -1,7 +1,7 @@
 .social {
 	color: white;
 	width: 100%;
-	max-width: 200px;
+	max-width: 150px;
 	z-index: 2;
 	position: fixed;  /*position at bottom right of page */
 	bottom: 0;
@@ -34,8 +34,13 @@
 	}
 }
 
+/*override add this styles*/
+.addthis_counter {
+	margin-top: .9em !important;
+	float: none !important;
+}
+
 .follow, .share {
-	padding: $margin;
 	text-align: right;
 	font-size: .8em;
 	background-color: $color1;
@@ -45,10 +50,18 @@
 		bottom: -100%;
 	}
 	li {
-		padding: $margin;		
+		/*icons form two rows*/
 		float: left;
+		/*magic number to center icons*/
+		a {
+			margin: 0.9em 22%;
+		}
 	}
-	
+}
+/*close text gets spacing*/
+.social-close {
+	padding: $margin;
+	display: inline-block;
 }
 
 .socialnav {
