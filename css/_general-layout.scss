@@ -53,20 +53,32 @@ body {
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
 		margin-right: 0;
-		.full .maincontent { 
-			h2, h3, h4, h5, h6, p, ul, ol, .center-content {
-				margin-left: $ratio;
-				margin-right: $margin3;
-				/*prevent margin on nested lists*/
-				ul, ol {
-					margin-left: $margin;
+		/*for article with sidebar, add a gutter*/
+		.priority1and2 {
+			padding-right: $margin3;
+		}
+		/*turn off gutter if no sidebar*/
+		.full {
+			.priority1and2 {
+				padding-right: 0;
+			}
+			/*if no sidebar, set margins on semantic level becuase images are full screen*/
+			.maincontent { 
+				h2, h3, h4, h5, h6, p, ul, ol, .center-content {
+					margin-left: $ratio;
+					margin-right: $margin3;
+					/*prevent margin on nested lists*/
+					ul, ol {
+						margin-left: $margin;
+					}
 				}
 			}
 		}
 	}
 }
 
-/*rewrite above fule for asides*/
+
+/*rewrite above rule for asides*/
 .read .priority1and2 .maincontent aside {
 	h2, h3, h4, h5, h6, p, ul, ol, .center-content  {
 		margin-left: 0;
