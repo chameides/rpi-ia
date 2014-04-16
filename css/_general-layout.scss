@@ -57,6 +57,10 @@ body {
 			h2, h3, h4, h5, h6, p, ul, ol, .center-content {
 				margin-left: $ratio;
 				margin-right: $margin3;
+				/*prevent margin on nested lists*/
+				ul, ol {
+					margin-left: $margin;
+				}
 			}
 		}
 	}
@@ -68,7 +72,7 @@ body {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	h2, h3, h4, h5, h6, p, ul, ol  {	
+	h2, h3, h4, h5, h6, p  {	
 		padding: 0;
 	}
 }
