@@ -59,10 +59,19 @@ nav ol {
 		}
 }
 
-.read .priority1and2 .maincontent aside {
+.read .priority1and2 {
+	/*set lists on article with sidebar to the same as p*/
 	ul, ol {
-		li {
-			margin: 0;
+		@include breakpoint(teen-up) { 
+			margin-left: $margin4;
+		}
+	}
+	aside {
+		ul, ol {
+			li {
+				margin: 0;
+			}
 		}
 	}
 }
+
