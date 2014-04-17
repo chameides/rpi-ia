@@ -28,7 +28,7 @@ aside {
 .full {
 	aside {
 		@include breakpoint(teen-up) { 
-			width:100%;
+			width:auto;
 			float: none;
 			clear: both;
 			display: block;
