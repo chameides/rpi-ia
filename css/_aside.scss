@@ -57,6 +57,10 @@ aside {
 	@include breakpoint(baby) {
 		clear: left;
 	}
+	/*set image to width of priority3*/
+	img {
+		width: 100%;
+	}
 	/*@include breakpoint(senior) { 
 		float: left;
 		width:10%
