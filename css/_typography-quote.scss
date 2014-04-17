@@ -57,13 +57,13 @@ cite:before{
 
 .read blockquote{
 	@include breakpoint(teen-up) {
-	clear: right;
-	max-width: 75%;
-	font-size: 1.2em;
-	color: $lighttext;
-	margin-right: 25%;
-	float: left;
-	display: inline-block;
+		clear: right;
+		max-width: 75%;
+		font-size: 1.2em;
+		color: $lighttext;
+		margin-right: 25%;
+		float: left;
+		display: inline-block;
 	}
 }
 
