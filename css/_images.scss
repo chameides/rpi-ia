@@ -26,7 +26,7 @@
 }
 
 /*figure */
-.full .imageright img{
+.full .imgright img{
 	@include breakpoint(adult) { 
 	margin-left: 31%; /*align right*/
 	max-width: 69%;	/*full width of whatever is left*/

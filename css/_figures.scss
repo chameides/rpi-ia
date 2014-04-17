@@ -21,7 +21,7 @@ figure {
 }
 
 /*add bar before caption on .read */
-.fullimg figcaption:before, .imageright figcaption:before {
+.fullimg figcaption:before, .imgright figcaption:before {
 	@include breakpoint(teen-up) {
 		content: '';
 		border-bottom: .4em solid $color3;
@@ -100,7 +100,7 @@ figcaption {
 }
 
 /*add bar before caption on .read */
-.withsidebar .fullimg figcaption:before, .withsidebar .imageright figcaption:before {
+.withsidebar .fullimg figcaption:before, .withsidebar .imgright figcaption:before {
 	@include breakpoint(teen-up) {
 		margin-top: $margin5;
 	}
@@ -116,7 +116,7 @@ figcaption {
 }
 
 
-.full .imageright figcaption {
+.full .imgright figcaption {
 	@include breakpoint(adult) {
 		@include transform( translateY(-100%) );
 	}
