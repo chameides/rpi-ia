@@ -63,23 +63,23 @@ img {
     } 
    }
 
-/*figure */
-.full .fullimg img {
-	width: 100%; /*full screen*/
-	/*max-width and slide left for images on read adult */
-	@include breakpoint(adult) { 
-		max-width: 30em; /* or else too big on big screens */
-		float: left; 
-		margin-right: $margin*2; /*set gutter*/
-		margin-bottom: $margin;
-	}
-	@include ie8 {
-		width: 30em;
-	}
-}
 
-/*figure */
-.full .imgright img{
+.full {
+	/*fullimg figure and images*/ 
+	.fullimg img, img.fullimg {
+		width: 100%; /*full screen*/
+		/*max-width and slide left for images on read adult */
+		@include breakpoint(adult) { 
+			max-width: 30em; /* or else too big on big screens */
+			float: left; 
+			margin-right: $margin*2; /*set gutter*/
+			margin-bottom: $margin;
+		}
+		@include ie8 {
+			width: 30em;
+		}
+	}
+	.imgright img, img.imgright {
 	@include breakpoint(adult) { 
 	margin-left: 31%; /*align right*/
 	max-width: 69%;	/*full width of whatever is left*/
@@ -89,3 +89,6 @@ img {
 		margin-left: $ratio;
 	}
 }
+}
+
+
