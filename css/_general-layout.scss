@@ -46,6 +46,23 @@ body {
 		@include breakpoint(adult) {
 	 		margin-left: $margin3; /*if change this, change .full img in images.scss*/
 		}
+		/*add right margin to full width image, .content adds a left margin*/
+		img, p, h1, h2, h3, h4, h5, h6, li {
+			padding-right: $margin2; /*if change this, change .content in general-layout.scss*/
+		 	/*on larger screen, additional margin */
+			@include breakpoint(teen-up) {
+		 		padding-right: $margin4; /*if change this, change .content in general-layout.scss*/
+		 	}
+			@include breakpoint(adult) {
+		 		padding-right: $margin3; /*if change this, change .content in general-layout.scss*/
+			}
+		}
+		/*col-article adds the right margin, so set image margin to 0*/
+		.col-article, .col-section, .field-name-field-aside {
+			img, p, h1, h2, h3, h4, h5, h6, ol, li {
+				padding-right: 0;
+			}
+		}
 	}
 }
 
@@ -60,11 +77,25 @@ body {
 		@include breakpoint(adult) {
 	 		margin-left: $margin3; /*if change this, change .full img in images.scss*/
 		}
+		/*add right margin to full width image, .content adds a left margin*/
+		img, p, h1, h2, h3, h4, h5, h6, li {
+			padding-right: $margin2; /*if change this, change .content in general-layout.scss*/
+		 	/*on larger screen, additional margin */
+			@include breakpoint(teen-up) {
+		 		padding-right: $margin4; /*if change this, change .content in general-layout.scss*/
+		 	}
+			@include breakpoint(adult) {
+		 		padding-right: $margin3; /*if change this, change .content in general-layout.scss*/
+			}
+		}
+		/*col-article adds the right margin, so set image margin to 0*/
+		.col-article, .col-section, .priority3 {
+			img, p, h1, h2, h3, h4, h5, h6, ol, li {
+				padding-right: 0;
+			}
+		}
 	}
 }
-
-
-
 
 
 .read {
