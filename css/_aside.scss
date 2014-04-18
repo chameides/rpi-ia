@@ -7,7 +7,7 @@
 }
 
 /*if change this, change general-layout */
-aside {
+aside, .field-name-field-aside {
 	overflow: hidden;
 	padding-right: .9em;
 	@include breakpoint(big-baby-sleep) { 
@@ -55,7 +55,7 @@ aside {
 } 
 
 
-.priority3 {
+.priority3, .field-name-field-aside {
 	@include breakpoint(baby) {
 		clear: left;
 	}
