@@ -119,6 +119,7 @@ figcaption {
 .full .imgright figcaption {
 	@include breakpoint(adult) {
 		@include transform( translateY(-100%) );
+
 	}
 	@include ie8{
 		width: 30em;
@@ -136,13 +137,19 @@ figure.symmetry {
 	@include breakpoint(teen-up) { 
 		margin-left: $margin4;
 		font-size: 1em;
+		margin-bottom: $margin2;
 	}
 	@include breakpoint(adult) {
 		font-size: .9em;
 	}
 }
 
-
+.full figure.symmetry {
+	@include breakpoint(teen-up) {
+		margin-left: $ratio;
+		margin-right: $margin4;
+	}
+}
 
 .read .symmetry figcaption {
 	@include breakpoint(teen-up) { 
