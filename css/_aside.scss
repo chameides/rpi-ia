@@ -1,10 +1,10 @@
 /*Aside */
-
+/*
 .priority1and2 {
-	/*@include breakpoint(senior) { 
+	@include breakpoint(senior) { 
 	float: right;
-	width: 89%}*/
-}
+	width: 89%}
+}*/
 
 /*if change this, change general-layout */
 aside, .field-name-field-aside {
@@ -45,7 +45,7 @@ aside, .field-name-field-aside {
 
 
 
-.read .priority1and2 aside {
+.read .priority1and2 aside, .read .field-name-body aside {
 	@include breakpoint(teen-up) { 
 		margin-bottom: $margin2; 
 		padding-top: $margin2;

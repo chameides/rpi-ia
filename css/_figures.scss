@@ -33,7 +33,9 @@ figure {
 }
 
 /*aside margins for read */
-.read .priority1and2 .aside, .full .priority1and2 aside {
+.read .priority1and2 .aside, .full .priority1and2 aside,
+.read .field-name-body .aside, .full .field-name-body aside
+ {
 	@include breakpoint(teen-up) {
 		width: $smallratio;
 		margin-top: $margin2;
@@ -42,7 +44,8 @@ figure {
 }
 
 /*space between image and main body on read with sidebar */
-.read .priority1and2 .aside {
+.read .priority1and2 .aside,
+.read .field-name-body .aside {
 	@include breakpoint(teen-up) {
 		float: right;
 		clear: right;
@@ -74,7 +77,7 @@ figure {
 }
 
 /*correct above rule so that aside within priority1and2 is flush left*/
-.full .priority1and2 {
+.full .priority1and2, .full .field-name-body {
 	aside, .aside{
 		@include breakpoint(teen-up) {
 			margin-left: 0;

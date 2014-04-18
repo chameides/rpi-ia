@@ -72,12 +72,12 @@ body {
 		margin-left: 0;
 		margin-right: 0;
 		/*for article with sidebar, add a gutter*/
-		.priority1and2 {
+		.priority1and2, .field-name-body /*drupal uses .field-name-body */{
 			padding-right: $margin3;
 		}
 		/*turn off gutter if no sidebar*/
 		.full {
-			.priority1and2 {
+			.priority1and2, .field-name-body {
 				padding-right: 0;
 			}
 			/*if no sidebar, set margins on semantic level becuase images are full screen*/
@@ -97,7 +97,7 @@ body {
 
 
 /*rewrite above rule for asides*/
-.read .priority1and2 .maincontent aside {
+.read .priority1and2 .maincontent aside, .read .field-name-body .maincontent aside {
 	h2, h3, h4, h5, h6, p, ul, ol, .center-content  {
 		margin-left: 0;
 		margin-right: 0;
