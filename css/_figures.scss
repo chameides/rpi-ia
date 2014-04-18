@@ -136,7 +136,7 @@ figcaption {
 }
 
 /*this corresponds to typgoraphy-p: read p margins*/
-figure.symmetry {
+figure.symmetry, img.symmetry {
 	@include breakpoint(teen-up) { 
 		margin-left: $margin4;
 		font-size: 1em;
@@ -146,8 +146,14 @@ figure.symmetry {
 		font-size: .9em;
 	}
 }
+.withsidebar img.symmetry {
+	@include breakpoint(teen-up) {  
+		padding-right: $margin4;
+	}
+}
 
-.full figure.symmetry {
+
+.full figure.symmetry, .full img.symmetry {
 	@include breakpoint(teen-up) {
 		margin-left: $ratio;
 		margin-right: $margin4;
