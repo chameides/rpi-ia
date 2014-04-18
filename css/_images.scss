@@ -3,9 +3,9 @@ img {
 	max-width: 100%;
 }
 
-/*add right margin to full width image, .full adds a left margin*/
-.full {
-	img {
+/*add right margin to full width image, .content adds a left margin*/
+.content {
+	img, p, h1, h2, h3, h4, h5, h6, li {
 		padding-right: $margin2; /*if change this, change .content in general-layout.scss*/
 	 	/*on larger screen, additional margin */
 		@include breakpoint(teen-up) {
@@ -17,11 +17,12 @@ img {
 	}
 	/*col-article adds the right margin, so set image margin to 0*/
 	.col-article, .col-section, .priority3 {
-		img {
+		img, p, h1, h2, h3, h4, h5, h6, ol, li {
 			padding-right: 0;
 		}
 	}
 }
+
 
 
 
