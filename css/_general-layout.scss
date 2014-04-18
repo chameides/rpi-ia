@@ -36,14 +36,14 @@ body {
 
 
 .content {
-	margin-left: $margin2;
+	margin-left: $margin2; /*if change this, change .full img in images.scss*/
  	/*on larger screen, additional margin */
 	@include breakpoint(teen-up) {
  		margin-top:1em;
- 		margin-left: $margin4;
+ 		margin-left: $margin4; /*if change this, change .full img in images.scss*/
  	}
 	@include breakpoint(adult) {
- 		margin-left: $margin3;
+ 		margin-left: $margin3; /*if change this, change .full img in images.scss*/
 	}
 }
 
