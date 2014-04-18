@@ -17,14 +17,20 @@ figcaption {
 			margin-left: $margin4;
 			text-align: left;
 			display: inline;
-			/*add right margin/gutter on figcaption with sidebar*/
-			margin-right: $margin2;
 		}
 	}
-	/*turn off for .full, gutters are set elsewhere*/
-	.full figcaption {
-		@include breakpoint(teen-up) {
-			margin-right: 0;
+	/*add right margin/gutter on figcaption fullimg and imgright with sidebar*/
+	@include breakpoint(teen-up) {
+		.fullimg, .imgright {
+			figcaption{
+			margin-right: $margin2;
+			}
+		}
+		/*turn off for .full, gutters are set elsewhere*/
+		.full figcaption {
+			
+				margin-right: 0;
+			
 		}
 	}	
 }
