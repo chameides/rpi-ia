@@ -37,26 +37,52 @@ nav ol {
     list-style-image: none;
 }
 
-.content {
-	ul {
-		padding-left: $margin3;
-		padding-right: $margin3;
-		max-width: 36em;
-		font-weight: 300;
-		/*text-align: justify;*/
-		@include breakpoint(teen-up) {
-			padding-left: $margin4;
-			padding-right: $margin4;
+@if $drupal {
+	#content {
+		ul {
+			padding-left: $margin3;
+			padding-right: $margin3;
+			max-width: 36em;
+			font-weight: 300;
+			/*text-align: justify;*/
+			@include breakpoint(teen-up) {
+				padding-left: $margin4;
+				padding-right: $margin4;
+			}
+			li {
+				margin-bottom: .3em;
+			}
 		}
-		li {
-			margin-bottom: .3em;
-		}
-	}
-	/*reduce top-margin and font size on nested lists*/
-	ul ul, ol ol {
+		/*reduce top-margin and font size on nested lists*/
+		ul ul, ol ol {
 			margin-top: $margin/2;
 			font-size: .8em;
 		}
+	}
+}
+
+@else {
+	.content {
+		ul {
+			padding-left: $margin3;
+			padding-right: $margin3;
+			max-width: 36em;
+			font-weight: 300;
+			/*text-align: justify;*/
+			@include breakpoint(teen-up) {
+				padding-left: $margin4;
+				padding-right: $margin4;
+			}
+			li {
+				margin-bottom: .3em;
+			}
+		}
+		/*reduce top-margin and font size on nested lists*/
+		ul ul, ol ol {
+			margin-top: $margin/2;
+			font-size: .8em;
+		}
+	}
 }
 
 .read .priority1and2 {

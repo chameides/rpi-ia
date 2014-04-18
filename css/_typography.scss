@@ -29,10 +29,18 @@ body {
 	font-style:italic;
 	font-weight: bold;
 	font-size: .9em}*/
-
-.content {
-	@include breakpoint(adult) {
-		font-size: 1.3em;
+@if $drupal {
+	#content {
+		@include breakpoint(adult) {
+			font-size: 1.3em;
+		}
+	}	
+}
+@else {
+	.content {
+		@include breakpoint(adult) {
+			font-size: 1.3em;
+		}
 	}
 }
 

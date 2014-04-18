@@ -3,18 +3,33 @@ pre {
 	margin: 0 0 .8em;
 }
 
-p, .content ul, .content ol {
-	font-weight: 300;
-	max-width: 40em;
-	/*text-align: justify;*/
-	font-size: 1em;
-	/*
-	@include breakpoint(big-baby-sleep) { 
-		font-size: .7em;
+@if $drupal {
+	p, #content ul, #content ol {
+		font-weight: 300;
+		max-width: 40em;
+		/*text-align: justify;*/
+		font-size: 1em;
+		/*
+		@include breakpoint(big-baby-sleep) { 
+			font-size: .7em;
+		}
+		*/
 	}
-	*/
 }
 
+@else {
+	p, .content ul, .content ol {
+		font-weight: 300;
+		max-width: 40em;
+		/*text-align: justify;*/
+		font-size: 1em;
+		/*
+		@include breakpoint(big-baby-sleep) { 
+			font-size: .7em;
+		}
+		*/
+	}
+}
 
 .gridtext p {
 	font-size: .9em;

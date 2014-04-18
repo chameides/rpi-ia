@@ -35,20 +35,42 @@
 	margin-left: 2px;
 }
 
-.content {
-	a:link:after, a:visited:after { 
-		content: " (" attr(href) ") "; 
-		font-size: 80%; 
-	}
-	@if $alumni {
-		a[href^="/"]:after { 
-			content: " (http://alumni.rpi.edu" attr(href) ") "; 
+@if $drupal {
+	#content {
+		a:link:after, a:visited:after { 
+			content: " (" attr(href) ") "; 
+			font-size: 80%; 
 		}
-	}
-	@else 
-		{
-		a[href^="/"]:after { 
-			content: " (http://rpi.edu/giving" attr(href) ") "; 
+		@if $alumni {
+			a[href^="/"]:after { 
+				content: " (http://alumni.rpi.edu" attr(href) ") "; 
+			}
+		}
+		@else 
+			{
+			a[href^="/"]:after { 
+				content: " (http://rpi.edu/giving" attr(href) ") "; 
+			}
+		}
+	}	
+}
+
+@else {
+	.content {
+		a:link:after, a:visited:after { 
+			content: " (" attr(href) ") "; 
+			font-size: 80%; 
+		}
+		@if $alumni {
+			a[href^="/"]:after { 
+				content: " (http://alumni.rpi.edu" attr(href) ") "; 
+			}
+		}
+		@else 
+			{
+			a[href^="/"]:after { 
+				content: " (http://rpi.edu/giving" attr(href) ") "; 
+			}
 		}
 	}
 }
