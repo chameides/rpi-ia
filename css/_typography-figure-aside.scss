@@ -7,21 +7,32 @@ figcaption {
 	}
 }
 
-.read figcaption {
-	@include breakpoint(teen-up) {
-		width: $smallratio;
-		float: left;
-		clear: left;
-		font-weight: normal;
-		margin-left: $margin4;
-		text-align: left;
-		display: inline;
+.read 
+	{figcaption {
+		@include breakpoint(teen-up) {
+			width: $smallratio;
+			float: left;
+			clear: left;
+			font-weight: normal;
+			margin-left: $margin4;
+			text-align: left;
+			display: inline;
+			/*add right margin/gutter on figcaption with sidebar*/
+			margin-right: $margin2;
+		}
 	}
+	/*turn off for .full, gutters are set elsewhere*/
+	.full figcaption {
+		@include breakpoint(teen-up) {
+			margin-right: 0;
+		}
+	}	
 }
 
 .symmetry figcaption {
 	width: auto;
 	margin-left: 0;
+	margin-right: 0;
 }
 
 .aside figcaption {
