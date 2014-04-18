@@ -46,7 +46,7 @@ figure {
 	@include breakpoint(teen-up) {
 		float: right;
 		clear: right;
-		margin-left: $margin4;
+		padding-left: $margin4;
 		figcaption:before {
 			display: none;
 		}
@@ -65,22 +65,22 @@ figure {
 }
 
 /*read full article, add margin to aside*/
-.read .full .aside, .read .full aside {
-	@include breakpoint(teen-up) {
-		margin-left: $margin4;
+.read .full {
+	 .aside, aside {
+		@include breakpoint(teen-up) {
+			margin-left: $margin4;
+		}
 	}
 }
-
-
-
 
 /*correct above rule so that aside within priority1and2 is flush left*/
-.full .priority1and2 aside {
-	@include breakpoint(teen-up) {
-		margin-left: 0;
+.full .priority1and2 {
+	aside, .aside{
+		@include breakpoint(teen-up) {
+			margin-left: 0;
+		}
 	}
 }
-
 
 
 .read .left  {
@@ -141,6 +141,8 @@ figure.symmetry {
 		font-size: .9em;
 	}
 }
+
+
 
 .read .symmetry figcaption {
 	@include breakpoint(teen-up) { 
