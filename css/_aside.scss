@@ -36,14 +36,12 @@ aside {
 		@include breakpoint(adult) {
 			padding-right: $margin2*2;
 		}
-	}	 
-	/*margin asigned at col-article level*/
+	}	  
+}
+/*margin asigned at col-article level*/
 	.col-article aside {
 		padding-right: 0;
-		
-	} 
-}
-
+	}
 
 
 
