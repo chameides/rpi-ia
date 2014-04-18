@@ -39,7 +39,7 @@ nav ol {
 
 @if $drupal {
 	#content {
-		ul {
+		ul,ol {
 			padding-left: $margin3;
 			padding-right: $margin3;
 			max-width: 36em;
@@ -63,7 +63,7 @@ nav ol {
 
 @else {
 	.content {
-		ul {
+		ul, ol {
 			padding-left: $margin3;
 			padding-right: $margin3;
 			max-width: 36em;
