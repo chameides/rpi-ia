@@ -130,39 +130,72 @@ body {
   max-width: 1524px;
   background: white; }
 
-/* line 38, _general-layout.scss */
+/*drupal uses #content for .content*/
+/* line 70, _general-layout.scss */
 .content {
   margin-left: 15px;
+  /*if change this, change .full img in images.scss*/
   /*on larger screen, additional margin */
   margin-top: 1em;
   margin-left: 30px;
-  margin-left: 1.8em; }
+  /*if change this, change .full img in images.scss*/
+  margin-left: 1.8em;
+  /*if change this, change .full img in images.scss*/
+  /*add right margin to full width image, .content adds a left margin*/
+  /*col-article adds the right margin, so set image margin to 0*/ }
+  /* line 81, _general-layout.scss */
+  .content img, .content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content li {
+    padding-right: 15px;
+    /*if change this, change .content in general-layout.scss*/
+    /*on larger screen, additional margin */
+    padding-right: 30px;
+    /*if change this, change .content in general-layout.scss*/
+    padding-right: 1.8em;
+    /*if change this, change .content in general-layout.scss*/ }
+  /* line 93, _general-layout.scss */
+  .content .col-article img, .content .col-article p, .content .col-article h1, .content .col-article h2, .content .col-article h3, .content .col-article h4, .content .col-article h5, .content .col-article h6, .content .col-article ol, .content .col-article li, .content .col-section img, .content .col-section p, .content .col-section h1, .content .col-section h2, .content .col-section h3, .content .col-section h4, .content .col-section h5, .content .col-section h6, .content .col-section ol, .content .col-section li, .content .priority3 img, .content .priority3 p, .content .priority3 h1, .content .priority3 h2, .content .priority3 h3, .content .priority3 h4, .content .priority3 h5, .content .priority3 h6, .content .priority3 ol, .content .priority3 li {
+    padding-right: 0; }
 
-/* line 52, _general-layout.scss */
+/* line 101, _general-layout.scss */
 .read {
   margin-left: 0;
-  margin-right: 0; }
-  /* line 57, _general-layout.scss */
-  .read .full .maincontent h2, .read .full .maincontent h3, .read .full .maincontent h4, .read .full .maincontent h5, .read .full .maincontent h6, .read .full .maincontent p, .read .full .maincontent ul, .read .full .maincontent ol, .read .full .maincontent .center-content {
-    margin-left: 34%;
-    margin-right: 1.8em; }
+  margin-right: 0;
+  /*for article with sidebar, add a gutter*/
+  /*turn off gutter if no sidebar*/ }
+  /* line 106, _general-layout.scss */
+  .read .priority1and2, .read .field-name-body {
+    padding-right: 1.8em; }
+  /* line 110, _general-layout.scss */
+  .read .full {
+    /*if no sidebar, set margins on semantic level becuase images are full screen*/ }
+    /* line 111, _general-layout.scss */
+    .read .full .priority1and2, .read .full .field-name-body {
+      padding-right: 0; }
+    /* line 116, _general-layout.scss */
+    .read .full .maincontent h2, .read .full .maincontent h3, .read .full .maincontent h4, .read .full .maincontent h5, .read .full .maincontent h6, .read .full .maincontent p, .read .full .maincontent ul, .read .full .maincontent ol, .read .full .maincontent .center-content {
+      margin-left: 34%;
+      margin-right: 1.8em;
+      /*prevent margin on nested lists*/ }
+      /* line 120, _general-layout.scss */
+      .read .full .maincontent h2 ul, .read .full .maincontent h2 ol, .read .full .maincontent h3 ul, .read .full .maincontent h3 ol, .read .full .maincontent h4 ul, .read .full .maincontent h4 ol, .read .full .maincontent h5 ul, .read .full .maincontent h5 ol, .read .full .maincontent h6 ul, .read .full .maincontent h6 ol, .read .full .maincontent p ul, .read .full .maincontent p ol, .read .full .maincontent ul ul, .read .full .maincontent ul ol, .read .full .maincontent ol ul, .read .full .maincontent ol ol, .read .full .maincontent .center-content ul, .read .full .maincontent .center-content ol {
+        margin-left: 0.9em; }
 
-/*rewrite above fule for asides*/
-/* line 67, _general-layout.scss */
-.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol, .read .priority1and2 .maincontent aside .center-content {
+/*rewrite above rule for asides*/
+/* line 132, _general-layout.scss */
+.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol, .read .priority1and2 .maincontent aside .center-content, .read .field-name-body .maincontent aside h2, .read .field-name-body .maincontent aside h3, .read .field-name-body .maincontent aside h4, .read .field-name-body .maincontent aside h5, .read .field-name-body .maincontent aside h6, .read .field-name-body .maincontent aside p, .read .field-name-body .maincontent aside ul, .read .field-name-body .maincontent aside ol, .read .field-name-body .maincontent aside .center-content {
   margin-left: 0;
   margin-right: 0; }
-/* line 71, _general-layout.scss */
-.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol {
+/* line 136, _general-layout.scss */
+.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .field-name-body .maincontent aside h2, .read .field-name-body .maincontent aside h3, .read .field-name-body .maincontent aside h4, .read .field-name-body .maincontent aside h5, .read .field-name-body .maincontent aside h6, .read .field-name-body .maincontent aside p {
   padding: 0; }
 
-/* line 76, _general-layout.scss */
+/* line 141, _general-layout.scss */
 .gridpad {
   margin-left: 0;
   margin-right: 0; }
 
 /*if change this, change aside */
-/* line 84, _general-layout.scss */
+/* line 149, _general-layout.scss */
 .maincontent {
   /*on tablets and up, the aside moves to the sidebar*/
   width: 100%;
@@ -173,22 +206,22 @@ body {
   	width: 74%;
   }*/ }
 
-/* line 99, _general-layout.scss */
+/* line 164, _general-layout.scss */
 .full .maincontent {
   width: 100%; }
 
 /*add a right margin*/
-/* line 108, _general-layout.scss */
+/* line 173, _general-layout.scss */
 .single {
   margin-right: 15px;
   /*on larger screen, additional margin */
   margin-right: 1.8em; }
 
-/* line 116, _general-layout.scss */
+/* line 181, _general-layout.scss */
 .center-content {
   text-align: center; }
 
-/* line 120, _general-layout.scss */
+/* line 185, _general-layout.scss */
 .gridguide {
   margin-left: 0;
   margin-right: 0; }
@@ -465,15 +498,15 @@ section {
 
 /* End of Header */
 /*Aside */
-/* line 3, _aside.scss */
+/*
 .priority1and2 {
-  /*@include breakpoint(senior) { 
-  float: right;
-  width: 89%}*/ }
-
+	@include breakpoint(senior) { 
+	float: right;
+	width: 89%}
+}*/
 /*if change this, change general-layout */
 /* line 10, _aside.scss */
-aside {
+aside, .field-name-field-aside {
   overflow: hidden;
   padding-right: .9em;
   /*on tablet and up, aside floats right*/
@@ -482,33 +515,39 @@ aside {
   margin-bottom: 15px;
   padding-right: 1.8em; }
   /* line 22, _aside.scss */
-  aside p {
+  aside p, .field-name-field-aside p {
     margin-top: 0; }
 
 /*aside is at bottom, not sidebar*/
 /* line 29, _aside.scss */
 .full aside {
-  width: 100%;
+  width: auto;
   float: none;
   clear: both;
-  display: block; }
-
-/* line 40, _aside.scss */
-.full aside {
+  display: block;
   padding-right: 30px; }
 
-/* line 46, _aside.scss */
-.read .priority1and2 aside {
+/*margin asigned at col-article level*/
+/* line 42, _aside.scss */
+.col-article aside {
+  padding-right: 0; }
+
+/* line 48, _aside.scss */
+.read .priority1and2 aside, .read .field-name-body aside {
   margin-bottom: 15px;
   padding-top: 15px;
   padding-left: 30px; }
 
-/* line 56, _aside.scss */
-.priority3 {
+/* line 58, _aside.scss */
+.priority3, .field-name-field-aside {
+  /*set image to width of priority3*/
   /*@include breakpoint(senior) { 
   	float: left;
   	width:10%
   }*/ }
+  /* line 63, _aside.scss */
+  .priority3 img, .field-name-field-aside img {
+    width: 100%; }
 
 /* line 1, _nav.scss */
 .mainnav, footer {
@@ -823,33 +862,38 @@ on larger screen, floats left
     margin-right: 0.9em; }
 
 /* styles */
-/* line 1, _images.scss */
+/*restrict image size*/
+/* line 2, _images.scss */
+img {
+  max-width: 100%; }
+
+/* line 6, _images.scss */
 .col-section img, article img, footer img {
   width: 100%; }
 
-/*figure */
-/* line 14, _images.scss */
-.full .fullimg img {
-  width: 100%;
-  /*full screen*/
-  /*max-width and slide left for images on read adult */
-  max-width: 30em;
-  /* or else too big on big screens */
-  float: left;
-  margin-right: 1.8em;
-  /*set gutter*/
-  margin-bottom: 0.9em;
-  width: 30em; }
-
-/*figure */
-/* line 29, _images.scss */
-.full .imageright img {
-  margin-left: 31%;
-  /*align right*/
-  max-width: 69%;
-  /*full width of whatever is left*/
-  width: 30em;
-  margin-left: 34%; }
+/* line 19, _images.scss */
+.full {
+  /*fullimg figure and images*/ }
+  /* line 21, _images.scss */
+  .full .fullimg img, .full img.fullimg {
+    width: 100%;
+    /*full screen*/
+    /*max-width and slide left for images on read adult */
+    max-width: 30em;
+    /* or else too big on big screens */
+    float: left;
+    margin-right: 1.8em;
+    /*set gutter*/
+    margin-bottom: 0.9em;
+    width: 30em; }
+  /* line 34, _images.scss */
+  .full .imgright img, .full img.imgright {
+    margin-left: 31%;
+    /*align right*/
+    max-width: 69%;
+    /*full width of whatever is left*/
+    width: 30em;
+    margin-left: 34%; }
 
 /* ==========================================================================
    Links
@@ -1105,81 +1149,89 @@ h1 {
 
 /* line 46, _typography-h.scss */
 h2 {
-  font-size: 1.2em;
+  font-size: 1.6em;
   margin-bottom: .2em; }
 
-/* line 51, _typography-h.scss */
+/* line 52, _typography-h.scss */
+.grid-wrap h2, .field-name-field-grid-type h2, .read h2 {
+  font-size: 1.2em; }
+
+/* line 57, _typography-h.scss */
 article h2 {
   color: black;
   text-align: left;
   margin-top: 15px; }
 
-/* line 58, _typography-h.scss */
-.read h2 {
+/* line 65, _typography-h.scss */
+.read h2, .read h3, .read h4, .read h5, .read h6 {
   margin-left: 30px;
   color: #4d4d4d;
   text-transform: none;
   margin-top: 45px; }
+/* line 74, _typography-h.scss */
+.read aside h2, .read aside h3, .read aside h4, .read aside h5, .read aside h6, .read .aside h2, .read .aside h3, .read .aside h4, .read .aside h5, .read .aside h6 {
+  margin-left: 0;
+  color: black;
+  text-transform: uppercase;
+  margin-top: 0; }
 
-/* line 70, _typography-h.scss */
+/* line 88, _typography-h.scss */
 section h2, h2.subtitle {
   text-align: center;
   margin: 0 0 15px; }
 
 /*do i need this? */
-/* line 76, _typography-h.scss */
+/* line 94, _typography-h.scss */
 .gridtext h2 {
   text-align: left;
   line-height: 1em; }
 
-/* line 80, _typography-h.scss */
+/* line 98, _typography-h.scss */
 .read .maincontent h2.subtitle {
   font-size: 1.1em;
   text-align: left;
   font-size: 1.2em;
   padding: 0 30px;
-  margin-bottom: 3em;
+  margin-bottom: 0;
   text-transform: uppercase;
   width: 100%;
   margin-left: 0;
   margin-bottom: 30px; }
 
-/* line 98, _typography-h.scss */
+/* line 116, _typography-h.scss */
 section h2 {
   margin-bottom: 0em; }
 
-/* line 104, _typography-h.scss */
+/* line 122, _typography-h.scss */
 h3 {
   font-size: 1.17em;
   margin: 0 0 .3em;
   text-transform: uppercase; }
 
-/* line 111, _typography-h.scss */
+/* line 129, _typography-h.scss */
 .donate h3 {
   margin-top: .7em; }
 
-/* line 114, _typography-h.scss */
+/* line 132, _typography-h.scss */
 .details h3 {
   font-size: 1em;
   margin-top: 0em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-family: "franklin-gothic-urw", verdana, sans-serif;
+  font-weight: 300;
+  text-transform: none; }
 
-/* line 122, _typography-h.scss */
+/* line 143, _typography-h.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0; }
 
-/* line 127, _typography-h.scss */
-.details h4 {
-  margin: 0em;
-  font-size: .9em; }
-
-/* line 133, _typography-h.scss */
+/* line 149, _typography-h.scss */
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0; }
 
-/* line 138, _typography-h.scss */
+/* line 154, _typography-h.scss */
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0; }
@@ -1189,11 +1241,11 @@ p,
 pre {
   margin: 0 0 .8em; }
 
-/* line 6, _typography-p.scss */
-p {
+/* line 21, _typography-p.scss */
+p, .content ul, .content ol {
   font-weight: 300;
   max-width: 40em;
-  text-align: justify;
+  /*text-align: justify;*/
   font-size: 1em;
   /*
   @include breakpoint(big-baby-sleep) { 
@@ -1201,32 +1253,32 @@ p {
   }
   */ }
 
-/* line 19, _typography-p.scss */
+/* line 34, _typography-p.scss */
 .gridtext p {
   font-size: .9em;
-  text-align: left;
+  /*text-align: left;*/
   font-size: .8em; }
 
 /*used on alumni-classes to reduce white space between intro paragraph and boxes*/
-/* line 28, _typography-p.scss */
+/* line 43, _typography-p.scss */
 p.squeeze {
   margin-bottom: 0; }
 
-/* line 33, _typography-p.scss */
+/* line 49, _typography-p.scss */
 .read p {
   margin-left: 30px;
   font-size: 1em;
   font-size: .9em; }
 
-/* line 44, _typography-p.scss */
+/* line 61, _typography-p.scss */
 .read .sidebar p {
   margin-left: 1.8em; }
 
-/* line 50, _typography-p.scss */
+/* line 67, _typography-p.scss */
 .read aside p {
   margin-left: 0; }
 
-/* line 56, _typography-p.scss */
+/* line 73, _typography-p.scss */
 .gray {
   color: #666; }
 
@@ -1337,34 +1389,45 @@ sub {
 figcaption {
   font-size: .8em;
   font-weight: 500;
-  text-align: justify; }
+  /*text-align: justify;*/ }
 
-/* line 10, _typography-figure-aside.scss */
-.read figcaption {
-  width: 28%;
-  float: left;
-  clear: left;
-  font-weight: normal;
-  margin-left: 30px;
-  text-align: left;
-  display: inline; }
+/* line 11, _typography-figure-aside.scss */
+.read {
+  /*add right margin/gutter on figcaption fullimg and imgright with sidebar*/
+  /*turn off for .full, gutters are set elsewhere*/ }
+  /* line 11, _typography-figure-aside.scss */
+  .read figcaption {
+    width: 28%;
+    float: left;
+    clear: left;
+    font-weight: normal;
+    margin-left: 30px;
+    text-align: left;
+    display: inline; }
+  /* line 25, _typography-figure-aside.scss */
+  .read .fullimg figcaption, .read .imgright figcaption {
+    margin-right: 15px; }
+  /* line 30, _typography-figure-aside.scss */
+  .read .full figcaption {
+    margin-right: 0; }
 
-/* line 22, _typography-figure-aside.scss */
+/* line 38, _typography-figure-aside.scss */
 .symmetry figcaption {
   width: auto;
-  margin-left: 0; }
+  margin-left: 0;
+  margin-right: 0; }
 
-/* line 27, _typography-figure-aside.scss */
+/* line 44, _typography-figure-aside.scss */
 .aside figcaption {
   margin-left: 0; }
 
-/* line 34, _typography-figure-aside.scss */
+/* line 51, _typography-figure-aside.scss */
 aside {
   font-size: .8em; }
-  /* line 37, _typography-figure-aside.scss */
+  /* line 54, _typography-figure-aside.scss */
   aside p {
     text-align: left; }
-  /* line 42, _typography-figure-aside.scss */
+  /* line 59, _typography-figure-aside.scss */
   aside p {
     font-size: .9em; }
 
@@ -1408,7 +1471,7 @@ aside {
 	font-style:italic;
 	font-weight: bold;
 	font-size: .9em}*/
-/* line 33, _typography.scss */
+/* line 40, _typography.scss */
 .content {
   font-size: 1.3em; }
 
@@ -1455,15 +1518,16 @@ cite:before {
 
 /* line 58, _typography-quote.scss */
 .read blockquote {
-  clear: right;
-  max-width: 75%;
-  font-size: 1.2em;
-  color: #4d4d4d;
-  margin-right: 25%;
   float: left;
-  display: inline-block; }
+  clear: right;
+  display: inline-block;
+  max-width: 75%;
+  margin-right: 25%;
+  padding-left: 0.9em;
+  font-size: 1.2em;
+  color: #4d4d4d; }
 
-/* line 72, _typography-quote.scss */
+/* line 73, _typography-quote.scss */
 .read .withsidebar blockquote, .read .withsidebar cite {
   float: none;
   width: 100%;
@@ -1471,11 +1535,11 @@ cite:before {
   padding: 0 60px;
   display: block; }
 
-/* line 82, _typography-quote.scss */
+/* line 83, _typography-quote.scss */
 .read .withsidebar blockquote {
   margin: 30px auto 15px; }
 
-/* line 88, _typography-quote.scss */
+/* line 89, _typography-quote.scss */
 .read .withsidebar cite {
   margin: 0 auto 30px; }
 
@@ -1515,24 +1579,41 @@ nav ol {
   list-style: none;
   list-style-image: none; }
 
-/* line 40, _lists.scss */
-.content ul {
-  padding-left: 1.8em;
-  padding-right: 1.8em;
-  max-width: 36em;
-  font-weight: 300;
-  text-align: justify;
-  padding-left: 30px;
-  padding-right: 30px; }
-  /* line 50, _lists.scss */
-  .content ul li {
-    margin-bottom: .3em; }
+/* line 65, _lists.scss */
+.content {
+  /*reduce top-margin and font size on nested lists*/ }
+  /* line 66, _lists.scss */
+  .content ul, .content ol {
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    max-width: 36em;
+    font-weight: 300;
+    /*text-align: justify;*/
+    padding-left: 30px;
+    padding-right: 30px; }
+    /* line 76, _lists.scss */
+    .content ul li, .content ol li {
+      margin-bottom: .3em; }
+  /* line 81, _lists.scss */
+  .content ul ul, .content ol ol {
+    margin-top: 0.45em;
+    font-size: .8em; }
+
+/* line 88, _lists.scss */
+.read .priority1and2, .read .field-name-body {
+  /*set lists on article with sidebar to the same as p*/ }
+  /* line 90, _lists.scss */
+  .read .priority1and2 ul, .read .priority1and2 ol, .read .field-name-body ul, .read .field-name-body ol {
+    margin-left: 30px; }
+  /* line 97, _lists.scss */
+  .read .priority1and2 aside ul li, .read .priority1and2 aside ol li, .read .field-name-body aside ul li, .read .field-name-body aside ol li {
+    margin: 0; }
 
 /* line 1, _social.scss */
 .social {
   color: white;
   width: 100%;
-  max-width: 200px;
+  max-width: 150px;
   z-index: 2;
   position: fixed;
   /*position at bottom right of page */
@@ -1565,12 +1646,18 @@ nav ol {
   .social .addthis_counter a {
     color: black; }
 
-/* line 37, _social.scss */
+/*override add this styles*/
+/* line 38, _social.scss */
+.addthis_counter {
+  margin-top: .9em !important;
+  float: none !important; }
+
+/* line 43, _social.scss */
 .follow, .share {
-  padding: 0.9em;
   text-align: right;
   font-size: .8em;
   background-color: #333333;
+  padding-top: 0.9em;
   -webkit-transform: translateY(100%);
   -moz-transform: translateY(100%);
   -ms-transform: translateY(100%);
@@ -1578,15 +1665,26 @@ nav ol {
   transform: translateY(100%);
   /*transform does not work in ie8*/
   bottom: -100%; }
-  /* line 47, _social.scss */
+  /* line 53, _social.scss */
   .follow li, .share li {
-    padding: 0.9em;
-    float: left; }
+    /*icons form two rows*/
+    float: left;
+    /*magic number to center icons*/ }
+    /* line 57, _social.scss */
+    .follow li a, .share li a {
+      margin: 0.9em 22%; }
 
-/* line 54, _social.scss */
+/* not using this anymore
+close text gets spacing
+.social-close {
+	padding: $margin;
+	display: inline-block;
+}
+*/
+/* line 70, _social.scss */
 .socialnav {
   z-index: 4; }
-  /* line 56, _social.scss */
+  /* line 72, _social.scss */
   .socialnav a {
     padding: 0.9em;
     width: 50%;
@@ -1596,54 +1694,99 @@ nav ol {
     /*facebook blue*/
     background: rgba(59, 89, 152, 0.93);
     background: #3b5998; }
-  /* line 68, _social.scss */
+  /* line 84, _social.scss */
   .socialnav a:hover {
     background: #333333; }
 
-/* line 73, _social.scss */
+/* line 89, _social.scss */
 .socialicon {
   height: 20px;
   display: block;
   margin: 0 auto; }
 
 /*this selector is fired with javascript*/
-/* line 81, _social.scss */
-body.follow-on .follow-toggle {
-  background-color: #333333; }
-  /* line 83, _social.scss */
-  body.follow-on .follow-toggle a {
-    background: #333333; }
-/* line 88, _social.scss */
-body.follow-on .follow {
-  opacity: 1;
-  z-index: 3;
-  padding-bottom: 55px;
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
-  transform: translateY(0%);
-  bottom: 0; }
+/* line 96, _social.scss */
+body.follow-on {
+  /*When activated and on hover, change text after social media icon*/
+  /*when one is activated, blur the non activated icon*/
+  /*when one is activated and non activated is hovered: unblur the non activated icon*/ }
+  /* line 97, _social.scss */
+  body.follow-on .follow-toggle {
+    background-color: #333333; }
+    /* line 99, _social.scss */
+    body.follow-on .follow-toggle a {
+      background: #333333; }
+  /* line 104, _social.scss */
+  body.follow-on .follow {
+    opacity: 1;
+    z-index: 3;
+    padding-bottom: 55px;
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    bottom: 0; }
+  /* line 114, _social.scss */
+  body.follow-on .follow-toggle:hover .follow-open-text:after {
+    content: "Close X"; }
+  /* line 118, _social.scss */
+  body.follow-on .share-toggle .socialicon {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    /* For IE8 and earlier */ }
+  /* line 123, _social.scss */
+  body.follow-on .share-toggle:hover .socialicon {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* For IE8 and earlier */ }
 
-/* line 100, _social.scss */
-body.share-on .share-toggle {
-  background-color: #333333; }
-  /* line 102, _social.scss */
-  body.share-on .share-toggle a {
-    background: #333333; }
-/* line 106, _social.scss */
-body.share-on .share {
-  opacity: 1;
-  padding-bottom: 55px;
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
-  transform: translateY(0%);
-  bottom: 0; }
+/*set text after social media icon*/
+/* line 130, _social.scss */
+.share-open-text:after {
+  content: "Share"; }
+
+/* line 133, _social.scss */
+.follow-open-text:after {
+  content: "Follow"; }
+
+/* line 137, _social.scss */
+body.share-on {
+  /*When activated and on hover, change text after social media icon*/
+  /*when one is activated, blur the non activated icon*/
+  /*when one is activated and non activated is hovered: unblur the non activated icon*/ }
+  /* line 138, _social.scss */
+  body.share-on .share-toggle {
+    background-color: #333333; }
+    /* line 140, _social.scss */
+    body.share-on .share-toggle a {
+      background: #333333; }
+  /* line 144, _social.scss */
+  body.share-on .share {
+    opacity: 1;
+    padding-bottom: 55px;
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    bottom: 0; }
+  /* line 153, _social.scss */
+  body.share-on .share-toggle:hover .share-open-text:after {
+    content: "Close X"; }
+  /* line 157, _social.scss */
+  body.share-on .follow-toggle .socialicon {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    /* For IE8 and earlier */ }
+  /* line 162, _social.scss */
+  body.share-on .follow-toggle:hover .socialicon {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /* For IE8 and earlier */ }
 
 /*css turned on by javascript*/
-/* line 116, _social.scss */
+/* line 168, _social.scss */
 body.social-off .social {
   /*with transitions it fades out. In case they have a keyboard attached, it still looks nice*/
   opacity: 0;
@@ -1686,7 +1829,7 @@ figure {
 
 /*add bar before caption on .read */
 /* line 24, _figures.scss */
-.fullimg figcaption:before, .imageright figcaption:before {
+.fullimg figcaption:before, .imgright figcaption:before {
   content: '';
   border-bottom: 0.4em solid #003399;
   margin-top: 30px;
@@ -1695,55 +1838,63 @@ figure {
   display: block; }
 
 /*aside margins for read */
-/* line 36, _figures.scss */
-.read .priority1and2 .aside, .full .priority1and2 aside {
+/* line 38, _figures.scss */
+.read .priority1and2 .aside, .full .priority1and2 aside,
+.read .field-name-body .aside, .full .field-name-body aside {
   width: 28%;
   margin-top: 15px;
   margin-bottom: 7.5px; }
 
 /*space between image and main body on read with sidebar */
-/* line 45, _figures.scss */
-.read .priority1and2 .aside {
+/* line 48, _figures.scss */
+.read .priority1and2 .aside,
+.read .field-name-body .aside {
   float: right;
   clear: right;
-  margin-left: 30px; }
-  /* line 50, _figures.scss */
-  .read .priority1and2 .aside figcaption:before {
-    display: none; }
+  padding-left: 30px; }
   /* line 53, _figures.scss */
-  .read .priority1and2 .aside figcaption {
+  .read .priority1and2 .aside figcaption:before,
+  .read .field-name-body .aside figcaption:before {
+    display: none; }
+  /* line 56, _figures.scss */
+  .read .priority1and2 .aside figcaption,
+  .read .field-name-body .aside figcaption {
     width: 100%; }
 
 /*full article, set aside to left*/
-/* line 60, _figures.scss */
-.read .full .aside, .full aside {
-  margin-left: 30px;
+/* line 63, _figures.scss */
+.full aside, .read .full .aside {
   float: left;
   clear: left; }
 
+/*read full article, add margin to aside*/
+/* line 72, _figures.scss */
+.read .full .aside, .read .full aside {
+  margin-left: 30px; }
+
 /*correct above rule so that aside within priority1and2 is flush left*/
-/* line 69, _figures.scss */
-.full .priority1and2 aside {
+/* line 81, _figures.scss */
+.full .priority1and2 aside, .full .priority1and2 .aside, .full .field-name-body aside, .full .field-name-body .aside {
   margin-left: 0; }
 
-/* line 87, _figures.scss */
+/* line 99, _figures.scss */
 figcaption {
   margin-bottom: 15px; }
 
 /*add bar before caption on .read */
-/* line 94, _figures.scss */
-.withsidebar .fullimg figcaption:before, .withsidebar .imageright figcaption:before {
+/* line 106, _figures.scss */
+.withsidebar .fullimg figcaption:before, .withsidebar .imgright figcaption:before {
   margin-top: 22.5px; }
 
 /*space between figcaption and mainbody on article with sidebar */
-/* line 101, _figures.scss */
+/* line 113, _figures.scss */
 .read .withsidebar figcaption {
   margin-left: 30px;
   margin-bottom: 15px;
   float: right; }
 
-/* line 110, _figures.scss */
-.full .imageright figcaption {
+/* line 122, _figures.scss */
+.full .imgright figcaption {
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -1758,13 +1909,23 @@ figcaption {
   display: block; }
 
 /*this corresponds to typgoraphy-p: read p margins*/
-/* line 126, _figures.scss */
-figure.symmetry {
+/* line 139, _figures.scss */
+figure.symmetry, img.symmetry {
   margin-left: 30px;
   font-size: 1em;
+  margin-bottom: 15px;
   font-size: .9em; }
 
-/* line 136, _figures.scss */
+/* line 149, _figures.scss */
+.withsidebar img.symmetry {
+  padding-right: 30px; }
+
+/* line 156, _figures.scss */
+.full figure.symmetry, .full img.symmetry {
+  margin-left: 34%;
+  margin-right: 30px; }
+
+/* line 163, _figures.scss */
 .read .symmetry figcaption {
   margin-left: 0;
   float: none; }
@@ -2109,16 +2270,16 @@ table {
   margin-bottom: .2em;
   margin-bottom: .6em; }
 
-/* line 17, _misc.scss */
+/* line 25, _misc.scss */
 footer {
   border-style: none; }
 
-/* line 26, _misc.scss */
+/* line 34, _misc.scss */
 .button {
   text-align: center;
   text-transform: uppercase; }
 
-/* line 32, _misc.scss */
+/* line 40, _misc.scss */
 *:hover, *:focus, nav, .social, .gridlink {
   -moz-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, text-shadow 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
   -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.5s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, text-shadow 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
@@ -2126,3 +2287,37 @@ footer {
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; }
 
 /* End of Misc Style */
+@media print {
+  /* line 1, _print.scss */
+  .mainnav, .menu-button-wrapper, .donate-button, .social, .footerbanner, ul.extra, .sitemap, .footerlogo-wrapper {
+    display: none; }
+
+  /* line 6, _print.scss */
+  .header .title .part1, .header .title .part2, .header .title .tagline {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: inline;
+    color: black;
+    font-weight: normal; }
+  /* line 13, _print.scss */
+  .header .title img {
+    display: none; }
+  /* line 14, _print.scss */
+  .header .title a:link, .header .title a:visited {
+    color: black; }
+
+  /* line 34, _print.scss */
+  .header .title .part2 {
+    margin-left: 2px; }
+
+  /* line 60, _print.scss */
+  .content a:link:after, .content a:visited:after {
+    content: " (" attr(href) ") ";
+    font-size: 80%; }
+  /* line 65, _print.scss */
+  .content a[href^="/"]:after {
+    content: " (http://alumni.rpi.edu" attr(href) ") "; }
+
+  /* line 78, _print.scss */
+  .priority3, .field-name-field-aside {
+    clear: both; } }
