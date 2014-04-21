@@ -155,7 +155,8 @@
       }
     }
     @include breakpoint(adult) {
-      margin-top: 0;
+      margin-top: 2.5em;
+      padding-top: 0em;
     }
   }
 }
@@ -171,54 +172,188 @@ footer ul.extra {
 .menu-icon2{
   /*on fly out menu, image is large, top, center, on desktop it is small and left*/
   padding-top: 3.2em;
-  background-size:auto 3em;
   background-repeat:no-repeat;
-  background-position: top center;
+  background-size:auto 3em;
+  background-position: left center;
   @include breakpoint(adult) {
-    padding-top: 0;
-    background-size:auto .95rem;
-    padding-left: 1.3em;
-    background-position: 0 0; 
+    padding-top: 3px;
+    background-size: auto 14.5px;
+    background-position: middle left;
+    padding-left: 1em;
+  }
+  @if $ie8 {
+    padding-top: 5px;
+    padding-left: 1em;
+    
   }
 }
 
-ul.extra .menu-icon2 {
-  @include breakpoint(adult) {
-    padding: 0em 0em .4em 2.3em;
+
+/*icons on alumni .extra are top centered */
+@if $alumni {
+  ul.extra .menu-icon2 {
+    @include breakpoint(adult) {
+      background-position: top center;
+      padding: 1.6em 0em 0em 0em;
+    }
+  }
+}
+
+
+@else {
+  ul.extra .menu-icon2 {
+    @include breakpoint(adult) {
+      padding: 0em 0em .4em 2.3em;
+    }
   }
 }
 
 /*individual icon images*/
-.icon-impact {
-  background-image:url('../img/menu-icon-png/globe.png');
+
+/*both*/
+@if $ie8 {
+  .icon-contact {
+    background-image:url('../img/menu-icon/16px/envelope.png');
+  }
+  .icon-search {
+    background-image:url('../img/menu-icon/16px/search.png');
+  }
+  .icon-profile {
+    background-image:url('../img/menu-icon/16px/profile.png');
+  }
 }
-.icon-impact:hover {
-  background-image:url('../img/menu-icon-png/ways3-02.png');
+
+@else {
+  .icon-contact {
+    background-image:url('../img/menu-icon-png/envelope2.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/envelope.png');
+    }
+  }
+  .icon-search {
+    background-image:url('../img/menu-icon-png/search2.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/search.png');
+    }
+  }
+  .icon-profile {
+    background-image:url('../img/menu-icon-png/profile.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/profile.png');
+    }
+  }
+  .icon-giving {
+    background-image:url('../img/menu-icon-png/credit-card.png');
+  }
 }
-.icon-ways {
-  background-image:url('../img/menu-icon-png/ways3-02.png');
+@if $alumni {
+  @if $ie8 {
+    .icon-events {
+      background-image:url('../img/menu-icon/16px/events.png');
+      padding-left: 1.5em;
+    }
+    .icon-chapters {
+        background-image:url('../img/menu-icon/16px/chapters.png');
+        padding-left: 2em;
+    }
+    .icon-network {
+      background-image:url('../img/menu-icon/16px/network.png');
+      padding-left: 2.1em;
+    }
+    .icon-reunion {
+      background-image:url('../img/menu-icon/16px/ampersand.png');
+      padding-left: 1.5em;     
+    }
+    .icon-products {
+      background-image:url('../img/menu-icon/16px/products.png');
+      padding-left: 1.4em; 
+    }
+    .icon-volunteer {
+      background-image:url('../img/menu-icon/16px/volunteer.png');
+    }
+    .icon-logout {
+      background-image:url('../img/menu-icon/16px/chapters.png');
+    }
+  }
+  /*responsive image icons*/
+  @else {
+    /*alumni*/
+    .icon-events {
+      background-image:url('../img/menu-icon/16px/events.png');
+      @include breakpoint(adult) {
+        padding-left: 1.3em;
+      }
+    }
+    .icon-chapters {
+      background-image:url('../img/menu-icon/16px/chapters.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/chapters.png');
+        padding-left: 1.7em;
+      }
+    }
+    .icon-network {
+      background-image:url('../img/menu-icon-png/connect.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/network.png');
+        padding-left: 1.9em;
+      }
+    }
+    .icon-reunion {
+      background-image:url('../img/menu-icon-png/ampersand.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/ampersand.png');
+        padding-left: 1.3em;     
+      }
+    }
+    .icon-products {
+      background-image:url('../img/menu-icon-png/products2.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/products.png');
+        padding-left: 1.2em;     
+      }
+    }
+    .icon-volunteer {
+      background-image:url('../img/menu-icon-png/volunteer2.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/volunteer.png');
+      }
+    }
+    .icon-logout {
+      background-image:url('../img/menu-icon-png/envelope2.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/chapters.png');
+      
+      }
+    }
+  }
 }
-.icon-supporters {
-  background-image:url('../img/menu-icon-png/group.png');
-}
-.icon-news {
-  background-image:url('../img/menu-icon-png/news2.png');
-}
-.icon-contact {
-  background-image:url('../img/menu-icon-png/envelope2.png');
-}
-.icon-search {
-  background-image:url('../img/menu-icon-png/search2.png');
-}
-.icon-profile {
-  background-image:url('../img/menu-icon-png/profile.png');
-}
-.icon-giving {
-  background-image:url('../img/menu-icon-png/credit-card.png');
+@else {
+  /*giving*/
+  .icon-impact {
+    background-image:url('../img/menu-icon-png/globe.png');
+  }
+  .icon-impact:hover {
+    background-image:url('../img/menu-icon-png/ways3-02.png');
+  }
+  .icon-ways {
+    background-image:url('../img/menu-icon-png/ways3-02.png');
+  }
+  .icon-supporters {
+    background-image:url('../img/menu-icon-png/group.png');
+  }
+  .icon-news {
+    background-image:url('../img/menu-icon-png/news2.png');
+  }
 }
 
 
 
+             
+             
+              
+            
+             
+          
 
 /*icons adjacent to text on menu items */
 .menu-icon {
