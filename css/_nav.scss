@@ -169,32 +169,46 @@ footer ul.extra {
   }
 }
 
+
 .menu-icon2{
-  /*on fly out menu, image is large, top, center, on desktop it is small and left*/
-  padding-top: 3.2em;
   background-repeat:no-repeat;
+}
+
+.mainnav .menu-icon2, footer ul.extra .menu-icon2 {
+  /*on fly out menu, image is large, top, center*/
   background-size:auto 3em;
-  background-position: left center;
+  background-position: center top;
+  padding-top: 3.2em;
+  /*on desktop, menu icons are small and left*/
   @include breakpoint(adult) {
     padding-top: 3px;
     background-size: auto 14.5px;
-    background-position: middle left;
+    background-position: left center;
     padding-left: 1em;
   }
+  /*hack for lack of background elements in ie8*/
   @if $ie8 {
     padding-top: 5px;
-    padding-left: 1em;
-    
+    padding-left: 1em;   
   }
 }
 
 
-/*icons on alumni .extra are top centered */
-@if $alumni {
-  ul.extra .menu-icon2 {
+/*icons on footer .extra are top centered */
+  footer ul.extra .menu-icon2  {
     @include breakpoint(adult) {
       background-position: top center;
       padding: 1.6em 0em 0em 0em;
+    }
+  }
+
+@if $alumni {
+  .sitemap-simple .menu-icon2  {
+    /*icons on alumni sitemap desktop are large */
+    @include breakpoint(teen-up) {
+      background-size:auto 30px;
+      background-position: center top;
+      padding-top: 32px;
     }
   }
 }
@@ -210,7 +224,7 @@ footer ul.extra {
 
 /*individual icon images*/
 
-/*both*/
+/*ie8: channel wide*/
 @if $ie8 {
   .icon-contact {
     background-image:url('../img/menu-icon/16px/envelope.png');
@@ -222,30 +236,41 @@ footer ul.extra {
     background-image:url('../img/menu-icon/16px/profile.png');
   }
 }
-
+/*channel wide:
+use larger image for phone and tablet
+*/
 @else {
   .icon-contact {
-    background-image:url('../img/menu-icon-png/envelope2.png');
+    background-image:url('../img/menu-icon/96px/contact.png');
     @include breakpoint(adult) {
-      background-image:url('../img/menu-icon/16px/envelope.png');
+      background-image:url('../img/menu-icon/32px/contact.png');
     }
   }
   .icon-search {
-    background-image:url('../img/menu-icon-png/search2.png');
-    @include breakpoint(adult) {
-      background-image:url('../img/menu-icon/16px/search.png');
+    background-image:url('../img/menu-icon/96px/search.png');
+   @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/32px/search.png');
     }
   }
   .icon-profile {
-    background-image:url('../img/menu-icon-png/profile.png');
+    background-image:url('../img/menu-icon/96px/profile.png');
     @include breakpoint(adult) {
-      background-image:url('../img/menu-icon/16px/profile.png');
+      background-image:url('../img/menu-icon/32px/profile.png');
     }
   }
-  .icon-giving {
-    background-image:url('../img/menu-icon-png/credit-card.png');
+  .icon-give {
+    background-image:url('../img/menu-icon/96px/give.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/32px/give.png');
+    }
   }
 }
+
+
+
+
+
+/*ie8 alumni*/
 @if $alumni {
   @if $ie8 {
     .icon-events {
@@ -255,6 +280,9 @@ footer ul.extra {
     .icon-chapters {
         background-image:url('../img/menu-icon/16px/chapters.png');
         padding-left: 2em;
+    }
+    .sitemap-simple .icon-chapters {
+      background-image:url('../img/menu-icon/32px/chapters.png');
     }
     .icon-network {
       background-image:url('../img/menu-icon/16px/network.png');
@@ -275,56 +303,137 @@ footer ul.extra {
       background-image:url('../img/menu-icon/16px/chapters.png');
     }
   }
-  /*responsive image icons*/
+/*alumni:
+use larger icon for phone and tablet
+for phone, no icon in nav sitemap
+*/
   @else {
-    /*alumni*/
-    .icon-events {
-      background-image:url('../img/menu-icon/16px/events.png');
+    .mainnav .icon-events {
+      background-image:url('../img/menu-icon/96px/events.png');
       @include breakpoint(adult) {
         padding-left: 1.3em;
       }
     }
-    .icon-chapters {
-      background-image:url('../img/menu-icon/16px/chapters.png');
+     .sitemap .icon-events, .mainnav .icon-events {
+      @include breakpoint (teen-all) {
+        background-image:url('../img/menu-icon/96px/events.png');
+      }
       @include breakpoint(adult) {
-        background-image:url('../img/menu-icon/16px/chapters.png');
+        background-image:url('../img/menu-icon/32px/events.png');
+      }
+    }
+    
+
+    .mainnav .icon-chapters {
+      background-image:url('../img/menu-icon/96px/chapters.png');
+      @include breakpoint(adult) {
         padding-left: 1.7em;
       }
     }
-    .icon-network {
-      background-image:url('../img/menu-icon-png/connect.png');
+    .sitemap .icon-chapters, .mainnav .icon-chapters {
+      @include breakpoint (teen-all) {
+        background-image:url('../img/menu-icon/96px/chapters.png');
+      }
       @include breakpoint(adult) {
-        background-image:url('../img/menu-icon/16px/network.png');
+        background-image:url('../img/menu-icon/32px/chapters.png');
+      }
+    }
+
+
+    .mainnav .icon-network {
+      background-image:url('../img/menu-icon/96px/network.png');  
+      @include breakpoint(adult) {
         padding-left: 1.9em;
       }
     }
-    .icon-reunion {
-      background-image:url('../img/menu-icon-png/ampersand.png');
+    .sitemap .icon-network, .mainnav .icon-network {
+      @include breakpoint (teen-all) {
+        background-image:url('../img/menu-icon/96px/network.png');  
+      }
       @include breakpoint(adult) {
-        background-image:url('../img/menu-icon/16px/ampersand.png');
-        padding-left: 1.3em;     
+        background-image:url('../img/menu-icon/32px/network.png');  
       }
     }
-    .icon-products {
-      background-image:url('../img/menu-icon-png/products2.png');
+    
+    .mainnav .icon-reunion {
+      background-image:url('../img/menu-icon/96px/ampersand.png');
       @include breakpoint(adult) {
-        background-image:url('../img/menu-icon/16px/products.png');
+        padding-left: 1.3em;
+      }
+    }
+    .sitemap .icon-reunion, .mainnav .icon-reunion {
+      @include breakpoint (teen-all) {
+        background-image:url('../img/menu-icon/96px/ampersand.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/32px/ampersand.png');    
+      }
+    }
+   
+    .mainnav .icon-products {
+      background-image:url('../img/menu-icon/96px/products.png');
+      @include breakpoint(adult) {
         padding-left: 1.2em;     
       }
     }
-    .icon-volunteer {
-      background-image:url('../img/menu-icon-png/volunteer2.png');
+    .sitemap .icon-products, .mainnav .icon-products {
+      @include breakpoint (teen-all) {
+        background-image:url('../img/menu-icon/96px/products.png');
+      }
       @include breakpoint(adult) {
-        background-image:url('../img/menu-icon/16px/volunteer.png');
+        background-image:url('../img/menu-icon/32px/products.png');  
       }
     }
-    .icon-logout {
-      background-image:url('../img/menu-icon-png/envelope2.png');
+    
+
+    .mainnav .icon-volunteer {
+      background-image:url('../img/menu-icon/96px/volunteer.png');
       @include breakpoint(adult) {
-        background-image:url('../img/menu-icon/16px/chapters.png');
-      
+        padding-left: 1.3em;
       }
     }
+    .sitemap .icon-volunteer, .mainnav .icon-volunteer,  {
+      @include breakpoint (teen-all) {
+        background-image:url('../img/menu-icon/96px/volunteer.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/32px/volunteer.png');  
+      }
+    }
+    
+    .mainnav .icon-logout {
+      background-image:url('../img/menu-icon/96px/logout.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/32px/logout.png');  
+      }
+    }
+
+
+    .mainnav .icon-giving {
+      background-image:url('../img/menu-icon/96px/giving.png');
+    }
+    .sitemap .icon-giving, .mainnav .icon-giving,  {
+      @include breakpoint (teen-all) {
+        background-image:url('../img/menu-icon/96px/giving.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/32px/giving.png');  
+      }
+    }
+
+
+    .mainnav .icon-parents {
+      background-image:url('../img/menu-icon/96px/parents.png');
+    }
+    .sitemap .icon-parents, .mainnav .icon-parents,  {
+      @include breakpoint (teen-all) {
+        background-image:url('../img/menu-icon/96px/parents.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/32px/parents.png');  
+      }
+    }
+
   }
 }
 @else {
