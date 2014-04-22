@@ -1,8 +1,11 @@
-/*restrict image size*/
-img {
-	max-width: 100%;
+@if $ie8{}
+@else 
+{
+	/*restrict image size, but breaks ie8*/
+	img {
+		max-width: 100%;
+	}
 }
-
 .col-section img, article img, footer img {
   width: 100%;
 }
