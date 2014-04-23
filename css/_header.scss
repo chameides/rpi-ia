@@ -1,15 +1,31 @@
 /* Header */
 
+@if $drupal {
+    /*drupal wraps the header in another header, so I changed the second one to .header-wrapper*/
+  .header-wrapper {
+    background: $color1;
+    /*@include flex-wrap( nowrap );*/
+     @include breakpoint(teen-all) {
+      padding: 0 $margin2;
+    } 
+    @include breakpoint(adult) {
+      padding: $margin2;
+    } 
+  }
+}
 
-.header {
-  background: $color1;
-  /*@include flex-wrap( nowrap );*/
-   @include breakpoint(teen-all) {
-    padding: 0 $margin2;
-  } 
-  @include breakpoint(adult) {
-    padding: $margin2;
-  } 
+@else {
+
+  .header, .header-wrapper {
+    background: $color1;
+    /*@include flex-wrap( nowrap );*/
+     @include breakpoint(teen-all) {
+      padding: 0 $margin2;
+    } 
+    @include breakpoint(adult) {
+      padding: $margin2;
+    } 
+  }
 }
 
 /*replaced with text
