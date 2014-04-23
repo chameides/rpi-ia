@@ -175,13 +175,12 @@ footer ul.extra {
   }
 }
 
-
-.menu-icon2{
+/*use is-expanded for drupal sitemap*/
+.menu-icon, .is-expanded:nth-child(1) .menu__link, .is-expanded:nth-child(2) .menu__link, .is-expanded:nth-child(3) .menu__link, .is-expanded:nth-child(4) .menu__link {
   background-repeat:no-repeat;
 }
 
-
-.mainnav .menu-icon2, footer ul.extra .menu-icon2 {
+.mainnav .menu-icon, footer ul.extra .menu-icon {
   /*on fly out menu, image is large, top, center*/
   background-size:auto 3em;
   background-position: center top;
@@ -200,22 +199,13 @@ footer ul.extra {
   }
 }
 @if $ie8 {
-  footer ul.extra .menu-icon2 {
+  footer ul.extra .menu-icon {
     padding-left: 0;   
   }
 }  
 
-/*
-.sitemap-simple .menu-icon2 {
-  @include breakpoint (teen-all) {
-    padding-top: 3px;
-    background-size: auto 14.5px;
-    background-position: left center;
-    padding-left: 1em;
-  }
-}*/
 
-.sitemap-comp .menu-icon2 {
+.sitemap-comp .menu-icon, .is-expanded .menu__link {
   @include breakpoint (teen-up) {
     padding-top: 0px;
     background-size: auto 14.5px;
@@ -227,7 +217,7 @@ footer ul.extra {
 
 
 /*icons on footer .extra are top centered */
-  footer ul.extra .menu-icon2  {
+  footer ul.extra .menu-icon  {
     @include breakpoint(adult) {
       background-position: top center;
       padding: 1.6em 0em 0em 0em;
@@ -235,7 +225,7 @@ footer ul.extra {
   }
 
 @if $alumni {
-  .sitemap-simple .menu-icon2  {
+  .sitemap-simple .menu-icon  {
     /*icons on alumni sitemap desktop are large */
     @include breakpoint(teen-up) {
       background-size:auto 30px;
@@ -243,7 +233,7 @@ footer ul.extra {
       padding-top: 32px;
     }
   }
-  .mainnav ul.extra .menu-icon2 {
+  .mainnav ul.extra .menu-icon {
     @include breakpoint(adult) {
       padding: 16px 0em 0em 0em;
       background-position: center top;
@@ -252,7 +242,7 @@ footer ul.extra {
 }
 
 @else {
-  ul.extra .menu-icon2 {
+  ul.extra .menu-icon {
     @include breakpoint(adult) {
       padding: 0em 0em .4em 2.2em;
     }
@@ -525,6 +515,12 @@ for phone, no icon in nav sitemap
   tablet sitemap, small icons
 
   */
+ 
+
+
+
+
+
   .mainnav .icon-impact {
     background-image:url('../img/menu-icon/96px/giving.png');
     @include breakpoint(adult) {
@@ -535,18 +531,25 @@ for phone, no icon in nav sitemap
       }
     }
   }
-  .sitemap-comp .icon-impact {
+
+  
+
+
+  .sitemap-comp .icon-impact, .is-expanded:nth-child(1) .menu__link {
     @include breakpoint(teen-all) {
       background-image:url('../img/menu-icon/96px/giving.png');
     }
     @include breakpoint(adult) {
       background-image:url('../img/menu-icon/16px/impact.png');
+
        @if $ie8{
         padding-left: 20px !important;
       }
     }
   }
   
+
+
   .mainnav .icon-ways {
     background-image:url('../img/menu-icon/96px/ways.png');
     @include breakpoint(adult) {
@@ -556,7 +559,7 @@ for phone, no icon in nav sitemap
       }
     }
   }
-  .sitemap-comp .icon-ways {
+  .sitemap-comp .icon-ways, .is-expanded:nth-child(2) .menu__link {
     @include breakpoint(teen-all) {
       background-image:url('../img/menu-icon/96px/ways.png');
     }
@@ -564,6 +567,8 @@ for phone, no icon in nav sitemap
       background-image:url('../img/menu-icon/16px/ways.png');
     }
   }
+
+  
 
 
   .mainnav .icon-supporters {
@@ -576,7 +581,7 @@ for phone, no icon in nav sitemap
       }
     }
   }
-  .sitemap-comp .icon-supporters {
+  .sitemap-comp .icon-supporters, .is-expanded:nth-child(3) .menu__link {
     @include breakpoint(teen-all) {
       background-image:url('../img/menu-icon/96px/network.png');
       padding-left: 24px;
@@ -602,7 +607,7 @@ for phone, no icon in nav sitemap
     }
 
   }
-  .sitemap-comp .icon-news {
+  .sitemap-comp .icon-news, , .is-expanded:nth-child(4) .menu__link {
     @include breakpoint(teen-all) {
       background-image:url('../img/menu-icon/96px/news.png');
     }
@@ -613,79 +618,21 @@ for phone, no icon in nav sitemap
       }
     }
   }
-  
 }
-
-
-
-             
-             
-              
-            
-             
-          
-
-/*icons adjacent to text on menu items */
-.menu-icon {
-  height: 3em;
-  max-height: 50px;
-  display: block;
-  margin: auto;
-  width: auto;
-  margin-bottom: .2em;
-  @include breakpoint(adult) {
-    width: auto;
-    display: inline;
-    padding-right: .3rem;
-    height: .9rem;
-    margin-bottom: 0;
-    @include ie8 {
-      padding-right: .3em;
-      height: 15px;
-    }
+/*turn off background images in drupal*/
+@if $drupal {
+  .is-expanded .is-leaf .menu__link  {
+    background: none;
+    padding-left: 0;
   }
-}
-
+} 
 
 
 .toggle-menu-icon:hover {
   cursor: pointer;
 }
-.sitemap .menu-icon {
-  display: none;
-  width: auto;
-}
-/*icons show on sitemap in teen and adult */
-@include breakpoint(teen-up) {
- /*small inline icons for giving sitemap*/
- .sitemap-comp .menu-icon  {
-    display: inline;
-    height: .9rem;
-    padding-right: .3rem;
-    margin: 0;
-    @include ie8{
-      height: .9em;
-      padding-right: .3em;
-    }
-  }
-  /*large block icons for alumni sitemap*/
-  .sitemap-simple .menu-icon {
-    display: block;
-    height: 2em;
-  }
-}
-ul.extra .menu-icon {
-  padding-right: 0;
-  @include breakpoint(adult) {
-  padding-right: 0;
-  padding-left: 0;
-  width: auto;
-  max-height: 1.5em;
-  }
-  @include ie8 {
-    max-width: 2em; 
-  }
-}
+
+
 /*javascript fires new class, which moves menu */
 body.menu-on .mainnav {
   @include transform( translate(0%) );
