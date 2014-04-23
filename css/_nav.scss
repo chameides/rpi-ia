@@ -155,7 +155,13 @@
       }
     }
     @include breakpoint(adult) {
-      margin-top: 2.5em;
+      @if $alumni{
+        margin-top: 2em;
+      }
+      @else {
+        margin-top: .8em;
+      }
+      margin-right: .8em;
       padding-top: 0em;
     }
   }
@@ -173,6 +179,7 @@ footer ul.extra {
 .menu-icon2{
   background-repeat:no-repeat;
 }
+
 
 .mainnav .menu-icon2, footer ul.extra .menu-icon2 {
   /*on fly out menu, image is large, top, center*/
@@ -196,7 +203,28 @@ footer ul.extra {
   footer ul.extra .menu-icon2 {
     padding-left: 0;   
   }
+}  
+
+/*
+.sitemap-simple .menu-icon2 {
+  @include breakpoint (teen-all) {
+    padding-top: 3px;
+    background-size: auto 14.5px;
+    background-position: left center;
+    padding-left: 1em;
+  }
+}*/
+
+.sitemap-comp .menu-icon2 {
+  @include breakpoint (teen-up) {
+    padding-top: 0px;
+    background-size: auto 14.5px;
+    background-position: left center;
+    padding-left: 1em;
+  }
 }
+
+
 
 /*icons on footer .extra are top centered */
   footer ul.extra .menu-icon2  {
@@ -223,11 +251,10 @@ footer ul.extra {
   }
 }
 
-
 @else {
   ul.extra .menu-icon2 {
     @include breakpoint(adult) {
-      padding: 0em 0em .4em 2.3em;
+      padding: 0em 0em .4em 2.2em;
     }
   }
 }
@@ -491,22 +518,102 @@ for phone, no icon in nav sitemap
   }
 }
 @else {
-  /*giving*/
-  .icon-impact {
-    background-image:url('../img/menu-icon-png/globe.png');
+
+  /*giving:
+  large icons on mainnav mobile and tablet
+  small icons on desktop
+  tablet sitemap, small icons
+
+  */
+  .mainnav .icon-impact {
+    background-image:url('../img/menu-icon/96px/giving.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/impact.png');
+      padding-left: 17px;
+      @if $ie8{
+        padding-left: 20px !important;
+      }
+    }
   }
-  .icon-impact:hover {
-    background-image:url('../img/menu-icon-png/ways3-02.png');
+  .sitemap-comp .icon-impact {
+    @include breakpoint(teen-all) {
+      background-image:url('../img/menu-icon/96px/giving.png');
+    }
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/impact.png');
+       @if $ie8{
+        padding-left: 20px !important;
+      }
+    }
   }
-  .icon-ways {
-    background-image:url('../img/menu-icon-png/ways3-02.png');
+  
+  .mainnav .icon-ways {
+    background-image:url('../img/menu-icon/96px/ways.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/ways.png');
+      @if $ie8{
+        padding-left: 17px !important;
+      }
+    }
   }
-  .icon-supporters {
-    background-image:url('../img/menu-icon-png/group.png');
+  .sitemap-comp .icon-ways {
+    @include breakpoint(teen-all) {
+      background-image:url('../img/menu-icon/96px/ways.png');
+    }
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/ways.png');
+    }
   }
-  .icon-news {
-    background-image:url('../img/menu-icon-png/news2.png');
+
+
+  .mainnav .icon-supporters {
+    background-image:url('../img/menu-icon/96px/network.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/network.png');
+      padding-left: 28px;
+       @if $ie8{
+        padding-left: 30px !important;
+      }
+    }
   }
+  .sitemap-comp .icon-supporters {
+    @include breakpoint(teen-all) {
+      background-image:url('../img/menu-icon/96px/network.png');
+      padding-left: 24px;
+      @if $ie8{
+        padding-left: 27px !important;
+      }
+    }
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/network.png');
+      padding-left: 30px;
+    }
+  }
+  
+
+  .mainnav .icon-news {
+    background-image:url('../img/menu-icon/96px/news.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/news.png');
+      padding-left: 17px;
+       @if $ie8{
+        padding-left: 19px !important;
+      }
+    }
+
+  }
+  .sitemap-comp .icon-news {
+    @include breakpoint(teen-all) {
+      background-image:url('../img/menu-icon/96px/news.png');
+    }
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/news.png');
+       @if $ie8{
+        padding-left: 20px !important;
+      }
+    }
+  }
+  
 }
 
 
