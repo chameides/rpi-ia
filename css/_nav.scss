@@ -211,6 +211,12 @@ footer ul.extra {
       padding-top: 32px;
     }
   }
+  .mainnav ul.extra .menu-icon2 {
+    @include breakpoint(adult) {
+      padding: 16px 0em 0em 0em;
+      background-position: center top;
+    }
+  }
 }
 
 
@@ -401,7 +407,8 @@ for phone, no icon in nav sitemap
       }
     }
     
-    .mainnav .icon-logout {
+    /*code ul extra differently*/
+    .icon-logout {
       background-image:url('../img/menu-icon/96px/logout.png');
       @include breakpoint(adult) {
         background-image:url('../img/menu-icon/32px/logout.png');  
