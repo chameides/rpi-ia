@@ -39,7 +39,7 @@
       }
     }
   }
-  @if $alumni {
+  @if $imodules {
     ul.log {
       padding: 0;
       @include breakpoint (adult) {
@@ -262,6 +262,11 @@ footer ul.extra {
   .icon-profile {
     background-image:url('../img/menu-icon/16px/profile.png');
   }
+  @if $imodules {
+    .icon-logout {
+      background-image:url('../img/menu-icon/16px/logout.png');
+    }
+  }
 }
 /*channel wide:
 use larger image for phone and tablet
@@ -283,6 +288,14 @@ use larger image for phone and tablet
     background-image:url('../img/menu-icon/96px/profile.png');
     @include breakpoint(adult) {
       background-image:url('../img/menu-icon/32px/profile.png');
+    }
+  }
+  @if $imodules {
+    .icon-logout {
+      background-image:url('../img/menu-icon/96px/logout.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/32px/logout.png');
+      }
     }
   }
   .icon-give {
@@ -358,10 +371,6 @@ use larger image for phone and tablet
     }
     .sitemap .icon-volunteer {
       background-image:url('../img/menu-icon/32px/volunteer.png');
-    }
-
-    .icon-logout {
-      background-image:url('../img/menu-icon/16px/logout.png');
     }
     
     
@@ -468,14 +477,6 @@ for phone, no icon in nav sitemap
       }
       @include breakpoint(adult) {
         background-image:url('../img/menu-icon/32px/volunteer.png');  
-      }
-    }
-    
-    /*code ul extra differently*/
-    .icon-logout {
-      background-image:url('../img/menu-icon/96px/logout.png');
-      @include breakpoint(adult) {
-        background-image:url('../img/menu-icon/32px/logout.png');  
       }
     }
 
