@@ -148,7 +148,8 @@ body {
 */
 
 /*if change this, change aside */
-.maincontent {
+/*in drupal .field-name-body is the body, #block-views-subpage-menu-block is the gridlink*/
+.maincontent, .field-name-body, #block-views-subpage-menu-block {
 	/*on tablets and up, the aside moves to the sidebar*/
 	width: 100%;
 	@include breakpoint(teen-up) { 
@@ -188,3 +189,22 @@ body {
 		margin-left: 0;
 		margin-right: 0;
 }
+
+
+
+@if $drupal {
+	/*turned this off on a template level
+	turn off clearfix for the body so that the aside will float
+	article.clearfix:after{
+		content: none;
+	}
+	*/
+}
+
+
+
+
+
+
+
+

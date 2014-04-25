@@ -7,7 +7,7 @@
 }*/
 
 /*if change this, change general-layout */
-aside, .field-name-field-aside {
+aside, .field-name-field-aside, #block-views-aside-block {
 	overflow: hidden;
 	padding-right: .9em;
 	@include breakpoint(big-baby-sleep) { 
@@ -22,6 +22,18 @@ aside, .field-name-field-aside {
 		p {margin-top: 0;}
 		} 
 	}
+
+@if $drupal {
+	/*if mobile, aside floats. otherwise clear right*/
+	#block-views-aside-block {
+		float: none;
+		clear: both;
+		@include breakpoint(teen-up) {
+			clear: right;
+		}
+	} 	
+}
+
 
 
 /*aside is at bottom, not sidebar*/
