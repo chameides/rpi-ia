@@ -272,12 +272,14 @@ footer ul.extra {
 use larger image for phone and tablet
 */
 @else {
-  .icon-contact {
-    background-image:url('../img/menu-icon/96px/contact.png');
-    @include breakpoint(adult) {
-      background-image:url('../img/menu-icon/32px/contact.png');
+ 
+    .icon-contact {
+      background-image:url('../img/menu-icon/96px/contact.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/32px/contact.png');
+      }
     }
-  }
+  
   .icon-search {
     background-image:url('../img/menu-icon/96px/search.png');
    @include breakpoint(adult) {
@@ -517,10 +519,6 @@ for phone, no icon in nav sitemap
 
   */
  
-
-
-
-
 
   .mainnav .icon-impact {
     background-image:url('../img/menu-icon/96px/giving.png');
