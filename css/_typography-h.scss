@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, .tagline {
+h1, h2, h3, h4, h5, h6, .tagline, .field-name-field-subtitle /* this is replaces pageheader h2 in drupal*/ {
 	font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
 	font-weight: 700;
 }
@@ -83,11 +83,60 @@ article h2 {
 }
 
 
+@if $drupal {
+	/*set margin to boy instead of pageheader*/
+	.field-name-field-subtitle {
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.field-name-body {
+		margin-top: $margin2;
+		@include breakpoint(adult) {
+			margin-top: $margin2*2;
+		}
+	}
+	.pageheader h2, .field-name-field-subtitle {
+		font-size: 1.1em;
+		color: $lighttext;
+		@include breakpoint(teen-up) { 
+			text-align: left;
+			font-size: 1.2em;
+			margin-bottom: 0;
+			text-transform: uppercase;
+			margin-left: 0;	
+		}
+	}
+}
+@else {
+	section h2, .pageheader h2 {
+		text-align: center;
+		margin: 0 0 $margin2;
+	}
+	.pageheader h2 {
+		font-size: 1.1em;
+		color: $lighttext;
+		@include breakpoint(teen-up) { 
+			text-align: left;
+			font-size: 1.2em;
+			margin-bottom: 0;
+			text-transform: uppercase;
+			margin-left: 0;	
+		}
+		@include breakpoint(adult) {
+			margin-bottom: $margin2*2;
+		}
+	}
+}
 
-
-section h2, h2.subtitle {
-	text-align: center;
-	margin: 0 0 $margin2;
+.read .maincontent .pageheader h2 {
+	@include breakpoint(teen-up) { 
+		padding: 0 $margin4;
+		width: 100%;
+		margin-left: 0;	
+	}
+	@include breakpoint(adult) {
+		margin-bottom: $margin2*2;
+	}
 }
 
 /*do i need this? */
@@ -95,22 +144,10 @@ section h2, h2.subtitle {
 	text-align: left;
 	line-height: 1em;
 }
-.read .maincontent h2.subtitle {
-	font-size: 1.1em;
-	@include breakpoint(teen-up) { 
-		text-align: left;
-		font-size: 1.2em;
-		padding: 0 $margin4;
-		margin-bottom: 0;
-		text-transform: uppercase;
-		width: 100%;
-		margin-left: 0;
-	@include breakpoint(adult) {
-		margin-bottom: $margin2*2;
-	}
 
-	}
-}
+
+
+
 
 
 section h2 {
