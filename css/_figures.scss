@@ -34,7 +34,8 @@ figure {
 
 /*aside margins for read */
 .read .priority1and2 .aside, .layout-full .priority1and2 aside,
-.read .field-name-body .aside, .layout-full .field-name-body aside
+.read .field-name-body .aside, .layout-full .field-name-body aside,
+.layout-full-aside .aside, .layout-full-aside aside
  {
 	@include breakpoint(teen-up) {
 		width: $smallratio;
@@ -60,7 +61,8 @@ figure {
 }
 
 /*full article, set aside to left*/
-.layout-full aside, .read .layout-full .aside {
+.layout-full aside, .read .layout-full .aside, 
+.layout-full-read aside, .layout-full-read .aside {
 	@include breakpoint(teen-up) {
 		float: left;
 		clear: left;
@@ -68,7 +70,7 @@ figure {
 }
 
 /*read full article, add margin to aside*/
-.read .layout-full {
+.read .layout-full, .layout-full-read {
 	 .aside, aside {
 		@include breakpoint(teen-up) {
 			margin-left: $margin4;
@@ -119,10 +121,9 @@ figcaption {
 }
 
 
-.layout-full .imgright figcaption {
+.layout-full .imgright figcaption, .layout-full-read .imgright figcaption {
 	@include breakpoint(adult) {
 		@include transform( translateY(-100%) );
-
 	}
 	@include ie8{
 		width: 30em;
@@ -153,14 +154,16 @@ figure.symmetry, img.symmetry {
 }
 
 
-.layout-full figure.symmetry, .layout-full img.symmetry {
+.layout-full figure.symmetry, .layout-full img.symmetry
+.layout-full-read figure.symmetry, .layout-full-read img.symmetry {
 	@include breakpoint(teen-up) {
 		margin-left: $ratio;
 		margin-right: $margin4;
 	}
 }
 
-.read .symmetry figcaption {
+.read .symmetry figcaption,
+.layout-full-read .symmetry figcaption {
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
 		float: none;

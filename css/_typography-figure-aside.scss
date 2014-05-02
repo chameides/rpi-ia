@@ -27,12 +27,16 @@ figcaption {
 			}
 		}
 		/*turn off for .full, gutters are set elsewhere*/
-		.layout-full figcaption {
-			
+		.layout-full figcaption /*see drupal conditional*/{	
 				margin-right: 0;
-			
 		}
 	}	
+}
+
+@if $drupal /*see layout-full figcaption*/{
+	.layout-full-read figcaption {	
+		margin-right: 0;
+	}
 }
 
 .symmetry figcaption {

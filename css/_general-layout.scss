@@ -107,8 +107,8 @@ body {
 			padding-right: $margin3;
 		}
 		/*turn off gutter if no sidebar*/
-		.layout-full {
-			.priority1and2, .field-name-body {
+		.layout-full /*see drupal conditional below*/ {
+			.priority1and2,  {
 				padding-right: 0;
 			}
 			/*if no sidebar, set margins on semantic level becuase images are full screen*/
@@ -127,9 +127,25 @@ body {
 }
 
 
+@if $drupal /*.layout-full above*/ {
+	.layout-full-read .field-name-body {
+		padding-right: 0;
+		h2, h3, h4, h5, h6, p, ul, ol, .center-content {
+			margin-left: $ratio;
+			margin-right: $margin3;
+			/*prevent margin on nested lists*/
+			ul, ol {
+				margin-left: $margin;
+			}
+		}
+	}
+}
+
+
+
 /*rewrite above rule for asides*/
 .read .priority1and2 .maincontent aside, 
-.read .field-name-body .maincontent aside {
+.layout-read .field-name-body aside {
 	h2, h3, h4, h5, h6, p, ul, ol, .center-content  {
 		margin-left: 0;
 		margin-right: 0;
@@ -164,7 +180,7 @@ body {
 }
 
 
-.layout-full {
+.layout-full, .layout-full-read {
 	.maincontent, .field-name-body, #block-views-subpage-menu-block{
 		width: 100%;
 		@include breakpoint (teen-all) {

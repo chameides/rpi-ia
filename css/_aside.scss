@@ -37,7 +37,7 @@ aside, #block-views-aside-block {
 
 
 /*aside is at bottom, not sidebar*/
-.layout-full {
+.layout-full, .layout-full-read {
 	aside, #block-views-aside-block {
 		@include breakpoint(teen-up) { 
 			width:auto;
