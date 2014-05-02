@@ -58,7 +58,7 @@ body {
 			}
 		}
 		/*col-article adds the right margin, so set image margin to 0*/
-		.col-article, .col-section, .field-name-field-aside {
+		.col-article, .col-section, #block-views-aside-block {
 			img, p, h1, h2, h3, h4, h5, h6, ol, li {
 				padding-right: 0;
 			}
@@ -128,7 +128,8 @@ body {
 
 
 /*rewrite above rule for asides*/
-.read .priority1and2 .maincontent aside, .read .field-name-body .maincontent aside {
+.read .priority1and2 .maincontent aside, 
+.read .field-name-body .maincontent aside {
 	h2, h3, h4, h5, h6, p, ul, ol, .center-content  {
 		margin-left: 0;
 		margin-right: 0;

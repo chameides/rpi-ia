@@ -7,7 +7,7 @@
 }*/
 
 /*if change this, change general-layout */
-aside, .field-name-field-aside, #block-views-aside-block {
+aside, #block-views-aside-block {
 	overflow: hidden;
 	padding-right: .9em;
 	@include breakpoint(big-baby-sleep) { 
@@ -38,7 +38,7 @@ aside, .field-name-field-aside, #block-views-aside-block {
 
 /*aside is at bottom, not sidebar*/
 .layout-full {
-	aside {
+	aside, #block-views-aside-block {
 		@include breakpoint(teen-up) { 
 			width:auto;
 			float: none;
@@ -67,7 +67,7 @@ aside, .field-name-field-aside, #block-views-aside-block {
 } 
 
 
-.priority3, .field-name-field-aside {
+.priority3, #block-views-aside-block {
 	@include breakpoint(baby) {
 		clear: left;
 	}
