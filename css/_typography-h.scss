@@ -48,9 +48,9 @@ h2 {
 	margin-bottom: .2em;
 	}
 
-.grid-wrap, .field-name-field-grid-type /*drupal replaces .grid-wrap */, .read { 
+.grid-wrap, #block-views-subpage-menu-block /*drupal replaces .grid-wrap */, .read,  { 
 	h2 {
-		font-size:1.2em; 
+		font-size:1.2em;
 	}
 	
 }
@@ -60,6 +60,13 @@ article h2 {
 	margin-top: $margin2;
 }
 
+@if $drupal {
+	#block-views-subpage-menu-block {
+		h2, p {
+			color: $textmain;
+		}
+	}
+}
 
 .read {
 	h2, h3, h4, h5, h6  {
@@ -85,7 +92,7 @@ article h2 {
 
 @if $drupal {
 	/*set margin to boy instead of pageheader*/
-	.field-name-field-subtitle {
+	.field-name-field-subtitle, #block-views-subpage-menu-block .views-row h2 {
 		text-align: center;
 		text-transform: uppercase;
 	}

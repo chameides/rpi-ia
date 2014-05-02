@@ -31,7 +31,7 @@ pre {
 	}
 }
 
-.gridtext p {
+.gridtext p, #block-views-subpage-menu-block .views-row p {
 	font-size: .9em;
 	/*text-align: left;*/
 	@include breakpoint(adult) { 
