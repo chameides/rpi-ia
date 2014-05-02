@@ -48,7 +48,7 @@ block-menu is the giving menu in drupal*/
   }
 }
 
-.full .col-section, .ExtraRows .col-section {
+.layout-full .col-section, .ExtraRows .col-section {
   /*no sidebar so:
     blocks are three across on tablet
     blocks are four across on tablet as well as desktop
@@ -78,7 +78,7 @@ block-menu is the giving menu in drupal*/
   .col-section:nth-of-type(2n + 1) {
     clear: left;
   }
-  .full /*no sidebar */, .ExtraRows {
+  .layout-full /*no sidebar */, .ExtraRows {
     .col-section:nth-of-type(2n + 1) {
       clear: none; /*reverse above */
     }
@@ -103,7 +103,7 @@ block-menu is the giving menu in drupal*/
   .col-section:nth-of-type(3n + 1) {
     clear: left;
   }
-  .full /*no sidebar */, .ExtraRows{
+  .layout-full /*no sidebar */, .ExtraRows{
     .col-section:nth-of-type(3n + 1) {
       clear: none; /*reverse above */
     }
@@ -117,7 +117,7 @@ block-menu is the giving menu in drupal*/
   .col-section:nth-of-type(3n + 1) {
     clear: left;  
   }
-  .full /*no sidebar */, .ExtraRows{
+  .layout-full /*no sidebar */, .ExtraRows{
     .col-section:nth-of-type(3n + 1) {
       clear: none; /*reverse above */
     }
@@ -138,7 +138,7 @@ block-menu is the giving menu in drupal*/
       .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
         clear: left;
       }
-    .full /*no sidebar */, .ExtraRows {
+      .layout-full /*no sidebar */, .ExtraRows {
       /*1st col-section */
       .col-section:first-child,  
       /*4th col-section */

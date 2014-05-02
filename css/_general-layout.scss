@@ -37,7 +37,7 @@ body {
 /*drupal uses #content for .content*/
 @if $drupal {
 	#content{
-		margin-left: $margin2; /*if change this, change .full img in images.scss*/
+		margin-left: $margin2; /*if change this, change .layout-full img in images.scss*/
 	 	/*on larger screen, additional margin */
 		@include breakpoint(teen-up) {
 	 		margin-top:1em;
@@ -107,7 +107,7 @@ body {
 			padding-right: $margin3;
 		}
 		/*turn off gutter if no sidebar*/
-		.full {
+		.layout-full {
 			.priority1and2, .field-name-body {
 				padding-right: 0;
 			}
@@ -163,14 +163,17 @@ body {
 }
 
 
-.full {
-	.maincontent{
+.layout-full {
+	.maincontent, .field-name-body, #block-views-subpage-menu-block{
 		width: 100%;
 		@include breakpoint (teen-all) {
 			padding-right: $margin4 - $margin5;
 		}
 	}
 }
+
+
+
 
 /*add a right margin*/
 .single {
