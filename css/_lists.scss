@@ -85,7 +85,9 @@ nav ol {
 	}
 }
 
-.read .priority1and2, .read .field-name-body {
+.read .priority1and2, 
+.layout-full-read .field-name-body,
+.layout-read .field-name-body {
 	/*set lists on article with sidebar to the same as p*/
 	ul, ol {
 		@include breakpoint(teen-up) { 

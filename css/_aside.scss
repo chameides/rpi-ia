@@ -57,7 +57,9 @@ aside, #block-views-aside-block {
 
 
 
-.read .priority1and2 aside, .read .field-name-body aside {
+.read .priority1and2 aside,
+.layout-full-read .field-name-body aside,
+.layout-read .field-name-body aside {
 	@include breakpoint(teen-up) { 
 		margin-bottom: $margin2; 
 		padding-top: $margin2;

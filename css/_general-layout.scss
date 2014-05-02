@@ -98,7 +98,7 @@ body {
 }
 
 
-.read {
+.read, .layout-full-read, .layout-read {
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
 		margin-right: 0;
@@ -145,7 +145,7 @@ body {
 
 /*rewrite above rule for asides*/
 .read .priority1and2 .maincontent aside, 
-.layout-read .field-name-body aside {
+.layout-read .field-name-body aside, {
 	h2, h3, h4, h5, h6, p, ul, ol, .center-content  {
 		margin-left: 0;
 		margin-right: 0;

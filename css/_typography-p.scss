@@ -45,7 +45,7 @@ p.squeeze {
 }
 
 
-.read {
+.read, .layout-full-read, .layout-read {
 	p {
 		@include breakpoint(teen-up) { 
 			margin-left: $margin4;
@@ -56,19 +56,20 @@ p.squeeze {
 			font-size: .9em;
 		}
 	}
+	aside p {
+		@include breakpoint(teen-up) { 
+			margin-left: 0;
+		}
+	}
 }
-
+/*
 .read .sidebar p {
 	@include breakpoint(teen-up) { 
 		margin-left: $margin3;
 	}
 }
+*/
 
-.read aside p {
-	@include breakpoint(teen-up) { 
-		margin-left: 0;
-	}
-}
 
 .gray {
 	color: #666;

@@ -14,12 +14,13 @@ figure {
   }
 }
 
-.read figure {
-	@include breakpoint(teen) {
-		margin-bottom: 0;
+.read, .layout-full-read, .layout-read {
+	figure {
+		@include breakpoint(teen) {
+			margin-bottom: 0;
+		}
 	}
 }
-
 /*add bar before caption on .read */
 .fullimg figcaption:before, .imgright figcaption:before {
 	@include breakpoint(teen-up) {
@@ -33,39 +34,48 @@ figure {
 }
 
 /*aside margins for read */
-.read .priority1and2 .aside, .layout-full .priority1and2 aside,
-.read .field-name-body .aside, .layout-full .field-name-body aside,
-.layout-full-aside .aside, .layout-full-aside aside
- {
-	@include breakpoint(teen-up) {
-		width: $smallratio;
-		margin-top: $margin2;
-		margin-bottom: $margin2/2;
+.read .priority1and2, .layout-full .priority1and2 /*static class*/ 
+.layout-full-read /*drupal*/, 
+.layout-read /*drupal*/,
+.layout-full .field-name-body /*drupal*/{
+	aside, .aside {
+		@include breakpoint(teen-up) {
+			width: $smallratio;
+			margin-top: $margin2;
+			margin-bottom: $margin2/2;
+		}
 	}
 }
-
 /*space between image and main body on read with sidebar */
-.read .priority1and2 .aside,
-.read .field-name-body .aside {
-	@include breakpoint(teen-up) {
-		float: right;
-		clear: right;
-		padding-left: $margin4;
-		figcaption:before {
-			display: none;
-		}
-		figcaption {
-			width: 100%;
+.read .priority1and2,
+.layout-full-read,
+.layout-read {
+	.aside, aside {
+		@include breakpoint(teen-up) {
+			float: right;
+			clear: right;
+			padding-left: $margin4;
+			figcaption:before {
+				display: none;
+			}
+			figcaption {
+				width: 100%;
+			}
 		}
 	}
 }
 
 /*full article, set aside to left*/
-.layout-full aside, .read .layout-full .aside, 
-.layout-full-read aside, .layout-full-read .aside {
-	@include breakpoint(teen-up) {
-		float: left;
-		clear: left;
+.layout-full, 
+.read .layout-full, 
+.layout-full-read,
+.layout-read 
+{
+	aside, .aside {
+		@include breakpoint(teen-up) {
+			float: left;
+			clear: left;
+		}
 	}
 }
 
@@ -79,7 +89,7 @@ figure {
 }
 
 /*correct above rule so that aside within priority1and2 is flush left*/
-.layout-full .priority1and2, .layout-full .field-name-body {
+.layout-full .priority1and2, .layout-full .field-name-body, .layout-full-read, .layout-read {
 	aside, .aside{
 		@include breakpoint(teen-up) {
 			margin-left: 0;
@@ -88,16 +98,17 @@ figure {
 }
 
 
-.read .left  {
-	@include breakpoint(teen) {
-		width: 100% - $smallratio;
-		float: left;
-		clear: left;
-		margin: 0 0 $margin2/2;
-		padding-right: $margin2;
+.read, .layout-full-read, .layout-read {
+	.left {
+		@include breakpoint(teen) {
+			width: 100% - $smallratio;
+			float: left;
+			clear: left;
+			margin: 0 0 $margin2/2;
+			padding-right: $margin2;
+		}
 	}
 }
-
 figcaption {
 	@include breakpoint(adult) {
 		margin-bottom: $margin2;
@@ -163,7 +174,8 @@ figure.symmetry, img.symmetry {
 }
 
 .read .symmetry figcaption,
-.layout-full-read .symmetry figcaption {
+.layout-full-read .symmetry figcaption,
+.layout-read .symmetry figcaption {
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
 		float: none;

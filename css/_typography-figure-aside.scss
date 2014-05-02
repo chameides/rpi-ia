@@ -7,8 +7,8 @@ figcaption {
 	}
 }
 
-.read 
-	{figcaption {
+.read, .layout-full-read, .layout-read {
+	figcaption {
 		@include breakpoint(teen-up) {
 			width: $smallratio;
 			float: left;

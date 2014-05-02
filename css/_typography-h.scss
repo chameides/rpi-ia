@@ -25,7 +25,7 @@ h1 {
 	}
 }
 
-.read h1 {
+.read h1, .layout-full-read h1, .layout-read h1 {
 	@include breakpoint(teen-up) { 
 		font-size: 3em;
 		text-align: left;
@@ -48,7 +48,11 @@ h2 {
 	margin-bottom: .2em;
 	}
 
-.grid-wrap, #block-views-subpage-menu-block /*drupal replaces .grid-wrap */, .read,  { 
+.grid-wrap, #block-views-subpage-menu-block /*drupal replaces .grid-wrap */, 
+.read, 
+.layout-full-read,
+.layout-read
+ { 
 	h2 {
 		font-size:1.2em;
 	}
@@ -67,7 +71,9 @@ article h2 {
 	}
 }
 
-.read {
+.read,
+.layout-full-read article,
+.layout-read article{
 	h2, h3, h4, h5, h6  {
 		@include breakpoint(teen-up) { 
 			margin-left: $margin4;
@@ -134,7 +140,9 @@ article h2 {
 	}
 }
 
-.read .maincontent .pageheader h2 {
+.read .maincontent .pageheader h2,
+.layout-full-read .field-name-field-subtitle,
+.layout-read .field-name-field-subtitle {
 	@include breakpoint(teen-up) { 
 		padding: 0 $margin4;
 		width: 100%;
