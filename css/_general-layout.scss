@@ -136,7 +136,7 @@ body {
 
 
 @if $drupal /*.layout-full above*/ {
-	.layout-full-read .field-name-body {
+	.layout-full-read #content .field-name-body {
 		padding-right: 0;
 		h2, h3, h4, h5, h6, p, ul, ol, .center-content {
 			margin-left: $ratio;
