@@ -58,7 +58,15 @@ body {
 			}
 		}
 		/*col-article adds the right margin, so set image margin to 0*/
-		.col-article, .col-section, #block-views-aside-block {
+		.col-section, #block-views-aside-block {
+			img, p, h1, h2, h3, h4, h5, h6, ol, li {
+				padding-right: 0;
+			}
+		}
+	}
+	/*no col-article in drupal*/
+	.layout-full-read, .layout-read {
+		#content article{
 			img, p, h1, h2, h3, h4, h5, h6, ol, li {
 				padding-right: 0;
 			}
@@ -98,7 +106,7 @@ body {
 }
 
 
-.read, .layout-full-read, .layout-read {
+.read, .layout-full-read #content, .layout-read #content {
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
 		margin-right: 0;

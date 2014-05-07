@@ -10,13 +10,14 @@
   width: 100%;
 }
 
-.col-article img
-{
-	@include breakpoint(big-baby-sleep) { 
-    max-height:150px;
-    width: auto;
-    } 
-   }
+.col-article, .layout-full-read article, .layout-read article {
+	img {
+		@include breakpoint(big-baby-sleep) { 
+  		max-height:150px;
+  		width: auto;
+		}
+	} 
+}
 
 
 .layout-full, .layout-full-read {
