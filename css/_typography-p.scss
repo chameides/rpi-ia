@@ -56,9 +56,18 @@ p.squeeze {
 			font-size: .9em;
 		}
 	}
-	aside p {
-		@include breakpoint(teen-up) { 
-			margin-left: 0;
+	@if $drupal {
+		#block-views-aside-block p {
+			@include breakpoint(teen-up) { 
+				margin-left: 0;
+			}
+		}
+	}
+	@else {
+		aside p {
+			@include breakpoint(teen-up) { 
+				margin-left: 0;
+			}
 		}
 	}
 }

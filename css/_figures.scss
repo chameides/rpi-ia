@@ -79,14 +79,30 @@ figure {
 	}
 }
 
-/*read full article, add margin to aside*/
-.read .layout-full, .layout-full-read {
-	 .aside, aside {
-		@include breakpoint(teen-up) {
-			margin-left: $margin4;
+
+/*margin-left for asides*/
+@if $drupal {
+	.layout-full-read {
+		 #block-views-aside-block, .aside, aside {
+			@include breakpoint(teen-up) {
+				margin-left: $margin4;
+			}
 		}
 	}
 }
+
+@else {
+	/*read full article, add margin to aside*/
+	.read .layout-full {
+		 .aside, aside {
+			@include breakpoint(teen-up) {
+				margin-left: $margin4;
+			}
+		}
+	}
+}
+
+
 
 /*correct above rule so that aside within priority1and2 is flush left*/
 .layout-full .priority1and2, .layout-full .field-name-body, .layout-full-read, .layout-read {
