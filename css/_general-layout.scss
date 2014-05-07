@@ -146,6 +146,17 @@ body {
 				margin-left: $margin;
 			}
 		}
+		/*elements inside an aside inside the main article get no margin*/
+		aside {
+			h2, h3, h4, h5, h6, p, ul, ol, .center-content {
+			margin-left: 0;
+			margin-right: 0;
+			/*prevent margin on nested lists*/
+			ul, ol {
+				margin-left: 0;
+			}
+		}
+		}
 	}
 }
 

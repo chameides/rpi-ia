@@ -50,6 +50,17 @@ aside, #block-views-aside-block {
 		}
 	}	  
 }
+
+
+@if $drupal {
+	/*no padding on article aside if layout-full-read*/
+	.layout-full-read aside {
+		@include breakpoint(adult) {
+			padding-right: 0;
+		}
+	}
+}
+
 /*margin asigned at col-article level*/
 .col-article aside {
 	padding-right: 0;
