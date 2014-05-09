@@ -44,5 +44,12 @@ footer {
 }
 
 
+@if $drupal {
+  /*ensures that admin config doesn't interfere with menu*/
+  #block-block-19 {
+    clear: both;
+  }  
+}
+
 
 /* End of Footer */
