@@ -101,7 +101,7 @@ article h2 {
 		text-align: center;
 		text-transform: uppercase;
 	}
-	.field-name-body {
+	.field-name-body, .layout-read #block-views-aside-block {
 		margin-top: $margin2;
 		@include breakpoint(adult) {
 			margin-top: $margin2*2;

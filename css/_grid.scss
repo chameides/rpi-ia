@@ -5,7 +5,7 @@
 }
 
 /*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
-[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, .layout-read article, .layout-full-read article {
+[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, .layout-full-read article {
   float: left;
   padding-right: $margin;
   @include breakpoint(teen-all) { 
@@ -48,7 +48,7 @@ block-menu is the giving menu in drupal*/
   }
 }
 
-.layout-full .col-section, .ExtraRows .col-section, .layout-full-read .col-section {
+.layout-full .col-section, .ExtraColumn .col-section, .layout-full-read .col-section {
   /*no sidebar so:
     blocks are three across on tablet
     blocks are four across on tablet as well as desktop
@@ -78,7 +78,7 @@ block-menu is the giving menu in drupal*/
   .col-section:nth-of-type(2n + 1) {
     clear: left;
   }
-  .layout-full /*no sidebar */, .ExtraRows, .layout-full-read {
+  .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read {
     .col-section:nth-of-type(2n + 1) {
       clear: none; /*reverse above */
     }
@@ -103,7 +103,7 @@ block-menu is the giving menu in drupal*/
   .col-section:nth-of-type(3n + 1) {
     clear: left;
   }
-  .layout-full /*no sidebar */, .ExtraRows, .layout-full-read{
+  .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read{
     .col-section:nth-of-type(3n + 1) {
       clear: none; /*reverse above */
     }
@@ -117,7 +117,7 @@ block-menu is the giving menu in drupal*/
   .col-section:nth-of-type(3n + 1) {
     clear: left;  
   }
-  .layout-full /*no sidebar */, .ExtraRows, .layout-full-read{
+  .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read{
     .col-section:nth-of-type(3n + 1) {
       clear: none; /*reverse above */
     }
@@ -138,7 +138,7 @@ block-menu is the giving menu in drupal*/
       .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
         clear: left;
       }
-      .layout-full /*no sidebar */, .ExtraRows, .layout-full-read {
+      .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read {
       /*1st col-section */
       .col-section:first-child,  
       /*4th col-section */
