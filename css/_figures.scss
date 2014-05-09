@@ -131,19 +131,25 @@ figcaption {
 	}
 }
 
+
+
 /*add bar before caption on .read */
-.withsidebar .fullimg figcaption:before, .withsidebar .imgright figcaption:before {
-	@include breakpoint(teen-up) {
-		margin-top: $margin5;
+.withsidebar .fullimg, .layout-read .fullimg, /*drupal equivalent, drupal has class on body level, while iModules has it as an interior*/
+.withsidebar .imgright .layout-read .imgright /*drupal equivalent*/ {
+	figcaption:before {
+		@include breakpoint(teen-up) {
+			margin-top: $margin5;
+		}
 	}
 }
-
 /*space between figcaption and mainbody on article with sidebar */
-.read .withsidebar figcaption {
-	@include breakpoint(teen-up) {
-		margin-left: $margin4;
-		margin-bottom: $margin2;
-		float: right;
+.read .withsidebar, .layout-read /*drupal equivalent*/{ 
+	figcaption {
+		@include breakpoint(teen-up) {
+			margin-left: $margin4;
+			margin-bottom: $margin2;
+			float: right;
+		}
 	}
 }
 
@@ -174,12 +180,13 @@ figure.symmetry, img.symmetry {
 		font-size: .9em;
 	}
 }
-.withsidebar img.symmetry {
-	@include breakpoint(teen-up) {  
-		padding-right: $margin4;
+.withsidebar, .layout-read /*drupal equivalent*/{ 
+		img.symmetry {
+		@include breakpoint(teen-up) {  
+			padding-right: $margin4;
+		}
 	}
 }
-
 
 .layout-full figure.symmetry, .layout-full img.symmetry
 .layout-full-read figure.symmetry, .layout-full-read img.symmetry {
