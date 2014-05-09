@@ -68,8 +68,7 @@ figure {
 /*full article, set aside to left*/
 .layout-full, 
 .read .layout-full, 
-.layout-full-read,
-.layout-read 
+.layout-full-read
 {
 	aside, .aside {
 		@include breakpoint(teen-up) {
