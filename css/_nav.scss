@@ -185,6 +185,7 @@ footer ul.extra {
   background-size:auto 3em;
   background-position: center top;
   padding-top: 3.2em;
+  background-repeat:no-repeat;
   /*on desktop, menu icons are small and left*/
   @include breakpoint(adult) {
     padding-top: 3px;
