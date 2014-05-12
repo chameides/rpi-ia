@@ -5,7 +5,8 @@
 }
 
 /*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
-[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, .layout-full-read article {
+[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, 
+.layout-full-read article {
   float: left;
   padding-right: $margin;
   @include breakpoint(teen-all) { 
@@ -13,6 +14,12 @@
   }
   @include breakpoint(adult) { 
     padding-right: $margin3;
+  }
+}
+
+.layout-read article {
+  @include breakpoint (baby) {
+    padding-right: $margin;
   }
 }
 
