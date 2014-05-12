@@ -44,13 +44,13 @@ figcaption {
 	margin-left: 0;
 	margin-right: 0;
 }
-
+/* this was breaking the figcaption in drupal
 .aside figcaption {
 	@include breakpoint(teen-up) {
 		margin-left: 0;
 	}
 }
-
+*/
 
 aside {
 	@include breakpoint(teen-up) {

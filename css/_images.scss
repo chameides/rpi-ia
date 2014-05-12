@@ -35,10 +35,11 @@
 			width: 30em;
 		}
 	}
+	
 	.imgright img, img.imgright {
 	@include breakpoint(adult) { 
-	margin-left: 31%; /*align right*/
-	max-width: 69%;	/*full width of whatever is left*/
+	margin-left: 1%; /*without this image disappears, not sure why*/
+	padding-left: 30%; /*align right*/
 	}
 	@include ie8 {
 		width: 30em;

@@ -34,7 +34,7 @@ figure {
 }
 
 /*aside margins for read */
-.read .priority1and2, .layout-full .priority1and2 /*static class*/ 
+.read .priority1and2, .layout-full .priority1and2, /*static class*/ 
 .layout-full-read /*drupal*/, 
 .layout-read /*drupal*/,
 .layout-full .field-name-body /*drupal*/{
@@ -48,7 +48,6 @@ figure {
 }
 /*space between image and main body on read with sidebar */
 .read .priority1and2,
-.layout-full-read,
 .layout-read {
 	.aside, aside {
 		@include breakpoint(teen-up) {
