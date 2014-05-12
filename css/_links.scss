@@ -110,9 +110,13 @@ nav, .social, .footerlogo-wrapper{
   }
 }
 
-.gridgroup1, .gridgroup2, .gridgroup3 {
+/*breakout section has bluebackground, set link color to none*/
+section.breakout {
   .gridlink:link, .gridlink:visited {
   background: none;
+  color: black;
+  text-align: center;
+  margin-top: $margin4;
   }
 }
 
@@ -132,6 +136,14 @@ nav, .social, .footerlogo-wrapper{
     color: $color1;
   }
 }
+/*breakout section has bluebackground and no images, set link underline and no border*/
+section.breakout {
+  .gridlink:hover, .gridlink:visited {
+  text-decoration: underline;
+  border: dotted thin transparent;
+  }
+}
+
 
 /*footer links are on gray and need a lighter blue*/
 footer {

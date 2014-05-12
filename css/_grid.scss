@@ -77,6 +77,26 @@ block-menu is the giving menu in drupal*/
   }
 }
 
+/*designed for grids of 3 elements, either 1 or 3 columns, no 2 columns.*/ 
+.column1-3 .col-section {
+  @include breakpoint(teen) { 
+    width: 33%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(teen-sleep) { 
+    width: 33%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(adult) {
+    width: 33%; /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+
+.column1-3 .col-section:nth-of-type(3) {
+  @include breakpoint(baby) { 
+    width: 100%; /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+
+
 /*.col-sections have various heights and this set of rules ensure that the tops of second rows line up */
 
 /*col-sections are two across*/
@@ -256,3 +276,18 @@ section {
   }
 
 /* End of Grid */
+
+
+.subgrid {
+  h3 {font-size: .8em;}
+  font-size: .9em;
+
+}
+
+section.breakout {
+  padding-top: $margin2;
+  background: $color4;
+  @include breakpoint (baby) {
+    background: none;
+  }
+}
