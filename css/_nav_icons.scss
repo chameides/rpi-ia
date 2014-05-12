@@ -293,17 +293,15 @@ for phone, no icon in nav sitemap
   }
   @else {
    .sitemap-comp .icon-impact, .is-expanded:nth-child(1) .menu__link {
-    @include breakpoint(teen-all) {
-      background-image:url('../img/menu-icon/96px/giving.png');
-    }
-    @include breakpoint(adult) {
-      background-image:url('../img/menu-icon/16px/impact.png');
-       
-    }
-  } 
+      @include breakpoint(teen-all) {
+        background-image:url('../img/menu-icon/96px/giving.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/impact.png');
+         
+      }
+    } 
   }
-
-
 
   .mainnav .icon-ways {
     background-image:url('../img/menu-icon/96px/ways.png');
@@ -314,7 +312,7 @@ for phone, no icon in nav sitemap
       }
     }
   }
-  @if $ie8{
+  @if $ie8 {
     .sitemap-comp .icon-ways {
       @include breakpoint(teen-all) {
         background-image:url('../img/menu-icon/96px/ways.png');
@@ -324,7 +322,7 @@ for phone, no icon in nav sitemap
       }
     }
   }
-  else {
+  @else {
     .sitemap-comp .icon-ways, .is-expanded:nth-child(2) .menu__link {
       @include breakpoint(teen-all) {
         background-image:url('../img/menu-icon/96px/ways.png');

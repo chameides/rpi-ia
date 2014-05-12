@@ -35,17 +35,16 @@
 			width: 30em;
 		}
 	}
-	
 	.imgright img, img.imgright {
-	@include breakpoint(adult) { 
-	margin-left: 1%; /*without this image disappears, not sure why*/
-	padding-left: 30%; /*align right*/
+		@include breakpoint(adult) { 
+		margin-left: 1%; /*without this image disappears, not sure why*/
+		padding-left: 30%; /*align right*/
+		}
+		@include ie8 {
+			width: 30em;
+			margin-left: $ratio;
+		}
 	}
-	@include ie8 {
-		width: 30em;
-		margin-left: $ratio;
-	}
-}
 }
 
 
