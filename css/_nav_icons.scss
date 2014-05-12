@@ -16,10 +16,10 @@
     padding-left: 30px!important;
   }
 }
-/*channel wide:
+/*for alumni
 use larger image for phone and tablet
 */
-@else {
+@else if $alumni {
   .icon-contact {
     background-image:url('../img/menu-icon/96px/contact.png');
     @include breakpoint(adult) {
@@ -53,6 +53,43 @@ use larger image for phone and tablet
     }
   }
 }
+/*for giving use small on adult*/
+@else {
+  .icon-contact {
+    background-image:url('../img/menu-icon/96px/contact.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/contact.png');
+    }
+  }
+  .icon-search {
+    background-image:url('../img/menu-icon/96px/search.png');
+   @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/search.png');
+    }
+  }
+  .icon-profile {
+    background-image:url('../img/menu-icon/96px/profile.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/profile.png');
+    }
+  }
+  @if $imodules {
+    .icon-logout {
+      background-image:url('../img/menu-icon/96px/logout.png');
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/logout.png');
+      }
+    }
+  }
+  .icon-give {
+    background-image:url('../img/menu-icon/96px/give.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/16px/give.png');
+    }
+  }
+}
+
+
 
 
 /*ie8 alumni*/
