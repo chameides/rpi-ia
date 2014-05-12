@@ -64,6 +64,19 @@ block-menu is the giving menu in drupal*/
   }
 }
 
+/*designed for grids of 4 elements, either 2 or 4 columns, no 3 columns.*/ 
+.column2-4 .col-section {
+  @include breakpoint(teen) { 
+    width: 25%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(teen-sleep) { 
+    width: 25%; /*if you change this, must change .col-section:nth-of-type */
+  }
+  @include breakpoint(adult) {
+    width: 25%; /*if you change this, must change .col-section:nth-of-type */
+  }
+}
+
 /*.col-sections have various heights and this set of rules ensure that the tops of second rows line up */
 
 /*col-sections are two across*/
@@ -83,6 +96,14 @@ block-menu is the giving menu in drupal*/
       clear: none; /*reverse above */
     }
     .col-section:nth-of-type(3n + 1) {
+      clear: left; 
+    }
+  }
+  .column2-4 {
+    .col-section:nth-of-type(3n + 1) {
+      clear: none; 
+    }
+    .col-section:nth-of-type(4n + 1) {
       clear: left; 
     }
   } 
