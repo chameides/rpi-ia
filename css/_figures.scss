@@ -186,7 +186,7 @@ figure.symmetry, img.symmetry {
 	}
 }
 
-.layout-full figure.symmetry, .layout-full img.symmetry
+.layout-full figure.symmetry, .layout-full img.symmetry,
 .layout-full-read figure.symmetry, .layout-full-read img.symmetry {
 	@include breakpoint(teen-up) {
 		margin-left: $ratio;
