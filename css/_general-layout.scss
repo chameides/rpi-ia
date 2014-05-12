@@ -204,6 +204,11 @@ body {
 .layout-full, .layout-full-read {
 	.maincontent, .field-name-body, #block-views-subpage-menu-block{
 		width: 100%;
+	}
+}
+
+.layout-full {
+	.maincontent, .field-name-body, #block-views-subpage-menu-block{
 		@include breakpoint (teen-all) {
 			padding-right: $margin4 - $margin5;
 		}
