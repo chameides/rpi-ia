@@ -11,24 +11,20 @@
   .icon-profile {
     background-image:url('../img/menu-icon/16px/profile.png');
   }
-  @if $imodules {
-    .icon-logout {
-      background-image:url('../img/menu-icon/16px/logout.png');
-    }
+  .icon-logout {
+    background-image:url('../img/menu-icon/16px/logout.png');
   }
 }
 /*channel wide:
 use larger image for phone and tablet
 */
 @else {
- 
-    .icon-contact {
-      background-image:url('../img/menu-icon/96px/contact.png');
-      @include breakpoint(adult) {
-        background-image:url('../img/menu-icon/32px/contact.png');
-      }
+  .icon-contact {
+    background-image:url('../img/menu-icon/96px/contact.png');
+    @include breakpoint(adult) {
+      background-image:url('../img/menu-icon/32px/contact.png');
     }
-  
+  }
   .icon-search {
     background-image:url('../img/menu-icon/96px/search.png');
    @include breakpoint(adult) {
@@ -56,9 +52,6 @@ use larger image for phone and tablet
     }
   }
 }
-
-
-
 
 
 /*ie8 alumni*/
@@ -282,20 +275,33 @@ for phone, no icon in nav sitemap
 
   
 
+  @if $ie8 {
+    /*nth child selector for drupal breaks in ie8*/
+    .sitemap-comp .icon-impact {
+      @include breakpoint(teen-all) {
+        background-image:url('../img/menu-icon/96px/giving.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/impact.png');
 
-  .sitemap-comp .icon-impact, .is-expanded:nth-child(1) .menu__link {
+         @if $ie8{
+          padding-left: 20px !important;
+        }
+      }
+    }
+  }
+  @else {
+   .sitemap-comp .icon-impact, .is-expanded:nth-child(1) .menu__link {
     @include breakpoint(teen-all) {
       background-image:url('../img/menu-icon/96px/giving.png');
     }
     @include breakpoint(adult) {
       background-image:url('../img/menu-icon/16px/impact.png');
-
-       @if $ie8{
-        padding-left: 20px !important;
-      }
+       
     }
+  } 
   }
-  
+
 
 
   .mainnav .icon-ways {
@@ -307,15 +313,26 @@ for phone, no icon in nav sitemap
       }
     }
   }
-  .sitemap-comp .icon-ways, .is-expanded:nth-child(2) .menu__link {
-    @include breakpoint(teen-all) {
-      background-image:url('../img/menu-icon/96px/ways.png');
-    }
-    @include breakpoint(adult) {
-      background-image:url('../img/menu-icon/16px/ways.png');
+  @if $ie8{
+    .sitemap-comp .icon-ways {
+      @include breakpoint(teen-all) {
+        background-image:url('../img/menu-icon/96px/ways.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/ways.png');
+      }
     }
   }
-
+  else {
+    .sitemap-comp .icon-ways, .is-expanded:nth-child(2) .menu__link {
+      @include breakpoint(teen-all) {
+        background-image:url('../img/menu-icon/96px/ways.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/ways.png');
+      }
+    }
+  }
   
 
 
@@ -329,17 +346,30 @@ for phone, no icon in nav sitemap
       }
     }
   }
-  .sitemap-comp .icon-supporters, .is-expanded:nth-child(3) .menu__link {
-    @include breakpoint(teen-all) {
-      background-image:url('../img/menu-icon/96px/network.png');
-      padding-left: 24px;
-      @if $ie8{
+
+  @if $ie8{
+    .sitemap-comp .icon-supporters {
+      @include breakpoint(teen-all) {
+        background-image:url('../img/menu-icon/96px/network.png');
         padding-left: 27px !important;
       }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/network.png');
+        padding-left: 30px;
+      }
     }
-    @include breakpoint(adult) {
-      background-image:url('../img/menu-icon/16px/network.png');
-      padding-left: 30px;
+  }
+  @else {
+    .sitemap-comp .icon-supporters, .is-expanded:nth-child(3) .menu__link {
+      @include breakpoint(teen-all) {
+        background-image:url('../img/menu-icon/96px/network.png');
+        padding-left: 24px;
+        
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/network.png');
+        padding-left: 30px;
+      }
     }
   }
   
@@ -355,14 +385,24 @@ for phone, no icon in nav sitemap
     }
 
   }
-  .sitemap-comp .icon-news, , .is-expanded:nth-child(4) .menu__link {
-    @include breakpoint(teen-all) {
-      background-image:url('../img/menu-icon/96px/news.png');
-    }
-    @include breakpoint(adult) {
-      background-image:url('../img/menu-icon/16px/news.png');
-       @if $ie8{
+  @if $ie8{
+    .sitemap-comp .icon-news {
+      @include breakpoint(teen-all) {
+        background-image:url('../img/menu-icon/96px/news.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/news.png');
         padding-left: 20px !important;
+      }
+    }
+  }
+  @else {
+    .sitemap-comp .icon-news, ,.is-expanded:nth-child(4) .menu__link {
+      @include breakpoint(teen-all) {
+        background-image:url('../img/menu-icon/96px/news.png');
+      }
+      @include breakpoint(adult) {
+        background-image:url('../img/menu-icon/16px/news.png');
       }
     }
   }
