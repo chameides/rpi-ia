@@ -52,7 +52,7 @@ figcaption {
 }
 */
 
-aside {
+aside, #block-views-aside-block {
 	@include breakpoint(teen-up) {
 		font-size:.8em; 
 		p {
