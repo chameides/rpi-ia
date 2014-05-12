@@ -8,7 +8,7 @@
 [class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, 
 .layout-full-read article {
   float: left;
-  padding-right: $margin;
+  padding-right: $margin2;
   @include breakpoint(teen-all) { 
     padding-right: $margin5;   
   }
@@ -17,9 +17,11 @@
   }
 }
 
-.layout-read article {
+
+.layout-full-read article {
   @include breakpoint (baby) {
-    padding-right: $margin;
+    padding-right: 0;
+    margin-right: $margin2;
   }
 }
 
