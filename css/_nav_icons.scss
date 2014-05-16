@@ -341,13 +341,13 @@ for phone, no icon in nav sitemap
       .icon-impact {
         background-position: center 5.7%;
         @include breakpoint (adult) {
-          background-position: 0 -352px;
+          background-position: 0 -353px;
          }
       }
       @if $drupal {
         .is-expanded:nth-child(1) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -352px;
+            background-position: 0 -353px;
            }
         }
       }
@@ -356,13 +356,13 @@ for phone, no icon in nav sitemap
       .icon-impact:hover {
         background-position: center 0.1%;
         @include breakpoint (adult) { 
-          background-position: 0 -102px;
+          background-position: 0 -103px;
         }
        }
        @if $drupal {
         .is-expanded:nth-child(1) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -102px;
+            background-position: 0 -103px;
            }
           }
         }
@@ -372,14 +372,14 @@ for phone, no icon in nav sitemap
         background-position: center 92.3%;
         padding-right: .5em;
         @include breakpoint (adult) {
-          background-position: 0 -309px;
+          background-position: 0 -310px;
          }
       }
 
       @if $drupal {
         .is-expanded:nth-child(2) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -309px;
+            background-position: 0 -310px;
            }
         }
       }
@@ -389,27 +389,27 @@ for phone, no icon in nav sitemap
         background-position: center 86.8%;
         padding-right: .5em;
         @include breakpoint (adult) {
-          background-position: 0 -267px;
+          background-position: 0 -268px;
          }
       }
       @if $drupal {
         .is-expanded:nth-child(2) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -267px;
+            background-position: 0 -268px;
            }
           }
         }
       .icon-supporters {
         background-position: center 16.8%;
         @include breakpoint (adult) {
-          background-position: 0 -144px;
+          background-position: 0 -145px;
          }
       }
 
       @if $drupal {
         .is-expanded:nth-child(3) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -144px;
+            background-position: 0 -145px;
            }
         }
       }
@@ -418,13 +418,13 @@ for phone, no icon in nav sitemap
       .icon-supporters:hover {
         background-position: center 11.2%;
         @include breakpoint (adult) {
-          background-position: 0 -123px;
+          background-position: 0 -124px;
          }
       }
       @if $drupal {
         .is-expanded:nth-child(3) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -123px;
+            background-position: 0 -124px;
            }
           }
         }
@@ -432,14 +432,14 @@ for phone, no icon in nav sitemap
         background-position: center 27.7%;
         padding-right: 1em;
         @include breakpoint (adult) {
-          background-position: 0 -373px;
+          background-position: 0 -374px;
          }
       }
 
       @if $drupal {
         .is-expanded:nth-child(4) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -373px;
+            background-position: 0 -374px;
            }
         }
       }
@@ -449,13 +449,13 @@ for phone, no icon in nav sitemap
         background-position: center 22.1%;
         padding-right: 1em;
         @include breakpoint (adult) {
-          background-position: 0 -81px;
+          background-position: 0 -82px;
          }
       }
       @if $drupal {
         .is-expanded:nth-child(4) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -81px;
+            background-position: 0 -82px;
            }
           }
         }
@@ -579,6 +579,9 @@ for phone, no icon in nav sitemap
           background-size: 23px auto;
           background-position: 0 4.5%;
         }
+        @include breakpoint(adult) {
+          padding-left: 21px;
+        }
       }
       .sitemap-comp .icon-impact:hover, .is-expanded:nth-child(1) .menu__link:hover {
         @include breakpoint(teen-all) {
@@ -618,7 +621,9 @@ for phone, no icon in nav sitemap
         @include breakpoint(teen-all) {
           background-size: 23px auto;
           background-position: 0 26.9%;
-
+        }
+        @include breakpoint(adult) {
+            padding-left: 21px;
         }
       }
       .sitemap-comp .icon-news:hover, .is-expanded:nth-child(4) .menu__link:hover {

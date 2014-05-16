@@ -64,11 +64,18 @@ body {
 			}
 		}
 	}
+	
 	/*no col-article in drupal*/
 	.layout-full-read, .layout-read {
 		#content article{
 			img, p, h1, h2, h3, h4, h5, h6, ol, li {
 				padding-right: 0;
+			}
+		}
+		#block-views-subpage-menu-block {
+			padding-left: $margin2;
+			@include breakpoint(teen-up) {
+				padding-left: $margin4;
 			}
 		}
 	}

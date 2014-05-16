@@ -131,7 +131,7 @@ body {
   background: white; }
 
 /*drupal uses #content for .content*/
-/* line 70, _general-layout.scss */
+/* line 78, _general-layout.scss */
 .content {
   margin-left: 15px;
   /*if change this, change .full img in images.scss*/
@@ -143,7 +143,7 @@ body {
   /*if change this, change .full img in images.scss*/
   /*add right margin to full width image, .content adds a left margin*/
   /*col-article adds the right margin, so set image margin to 0*/ }
-  /* line 81, _general-layout.scss */
+  /* line 89, _general-layout.scss */
   .content img, .content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content li {
     padding-right: 15px;
     /*if change this, change .content in general-layout.scss*/
@@ -152,51 +152,70 @@ body {
     /*if change this, change .content in general-layout.scss*/
     padding-right: 1.8em;
     /*if change this, change .content in general-layout.scss*/ }
-  /* line 93, _general-layout.scss */
+  /* line 101, _general-layout.scss */
   .content .col-article img, .content .col-article p, .content .col-article h1, .content .col-article h2, .content .col-article h3, .content .col-article h4, .content .col-article h5, .content .col-article h6, .content .col-article ol, .content .col-article li, .content .col-section img, .content .col-section p, .content .col-section h1, .content .col-section h2, .content .col-section h3, .content .col-section h4, .content .col-section h5, .content .col-section h6, .content .col-section ol, .content .col-section li, .content .priority3 img, .content .priority3 p, .content .priority3 h1, .content .priority3 h2, .content .priority3 h3, .content .priority3 h4, .content .priority3 h5, .content .priority3 h6, .content .priority3 ol, .content .priority3 li {
     padding-right: 0; }
 
-/* line 101, _general-layout.scss */
-.read {
+/* line 109, _general-layout.scss */
+.read, .layout-full-read #content, .layout-read #content {
   margin-left: 0;
   margin-right: 0;
   /*for article with sidebar, add a gutter*/
   /*turn off gutter if no sidebar*/ }
-  /* line 106, _general-layout.scss */
-  .read .priority1and2, .read .field-name-body {
+  /* line 114, _general-layout.scss */
+  .read .priority1and2, .read .field-name-body, .layout-full-read #content .priority1and2, .layout-full-read #content .field-name-body, .layout-read #content .priority1and2, .layout-read #content .field-name-body {
     padding-right: 1.8em; }
-  /* line 110, _general-layout.scss */
-  .read .full {
+  /* line 118, _general-layout.scss */
+  .read .layout-full, .layout-full-read #content .layout-full, .layout-read #content .layout-full {
     /*if no sidebar, set margins on semantic level becuase images are full screen*/ }
-    /* line 111, _general-layout.scss */
-    .read .full .priority1and2, .read .full .field-name-body {
+    /* line 119, _general-layout.scss */
+    .read .layout-full .priority1and2, .layout-full-read #content .layout-full .priority1and2, .layout-read #content .layout-full .priority1and2 {
       padding-right: 0; }
-    /* line 116, _general-layout.scss */
-    .read .full .maincontent h2, .read .full .maincontent h3, .read .full .maincontent h4, .read .full .maincontent h5, .read .full .maincontent h6, .read .full .maincontent p, .read .full .maincontent ul, .read .full .maincontent ol, .read .full .maincontent .center-content {
+    /* line 124, _general-layout.scss */
+    .read .layout-full .maincontent h2, .read .layout-full .maincontent h3, .read .layout-full .maincontent h4, .read .layout-full .maincontent h5, .read .layout-full .maincontent h6, .read .layout-full .maincontent p, .read .layout-full .maincontent ul, .read .layout-full .maincontent ol, .read .layout-full .maincontent .center-content, .layout-full-read #content .layout-full .maincontent h2, .layout-full-read #content .layout-full .maincontent h3, .layout-full-read #content .layout-full .maincontent h4, .layout-full-read #content .layout-full .maincontent h5, .layout-full-read #content .layout-full .maincontent h6, .layout-full-read #content .layout-full .maincontent p, .layout-full-read #content .layout-full .maincontent ul, .layout-full-read #content .layout-full .maincontent ol, .layout-full-read #content .layout-full .maincontent .center-content, .layout-read #content .layout-full .maincontent h2, .layout-read #content .layout-full .maincontent h3, .layout-read #content .layout-full .maincontent h4, .layout-read #content .layout-full .maincontent h5, .layout-read #content .layout-full .maincontent h6, .layout-read #content .layout-full .maincontent p, .layout-read #content .layout-full .maincontent ul, .layout-read #content .layout-full .maincontent ol, .layout-read #content .layout-full .maincontent .center-content {
       margin-left: 34%;
       margin-right: 1.8em;
       /*prevent margin on nested lists*/ }
-      /* line 120, _general-layout.scss */
-      .read .full .maincontent h2 ul, .read .full .maincontent h2 ol, .read .full .maincontent h3 ul, .read .full .maincontent h3 ol, .read .full .maincontent h4 ul, .read .full .maincontent h4 ol, .read .full .maincontent h5 ul, .read .full .maincontent h5 ol, .read .full .maincontent h6 ul, .read .full .maincontent h6 ol, .read .full .maincontent p ul, .read .full .maincontent p ol, .read .full .maincontent ul ul, .read .full .maincontent ul ol, .read .full .maincontent ol ul, .read .full .maincontent ol ol, .read .full .maincontent .center-content ul, .read .full .maincontent .center-content ol {
+      /* line 128, _general-layout.scss */
+      .read .layout-full .maincontent h2 ul, .read .layout-full .maincontent h2 ol, .read .layout-full .maincontent h3 ul, .read .layout-full .maincontent h3 ol, .read .layout-full .maincontent h4 ul, .read .layout-full .maincontent h4 ol, .read .layout-full .maincontent h5 ul, .read .layout-full .maincontent h5 ol, .read .layout-full .maincontent h6 ul, .read .layout-full .maincontent h6 ol, .read .layout-full .maincontent p ul, .read .layout-full .maincontent p ol, .read .layout-full .maincontent ul ul, .read .layout-full .maincontent ul ol, .read .layout-full .maincontent ol ul, .read .layout-full .maincontent ol ol, .read .layout-full .maincontent .center-content ul, .read .layout-full .maincontent .center-content ol, .layout-full-read #content .layout-full .maincontent h2 ul, .layout-full-read #content .layout-full .maincontent h2 ol, .layout-full-read #content .layout-full .maincontent h3 ul, .layout-full-read #content .layout-full .maincontent h3 ol, .layout-full-read #content .layout-full .maincontent h4 ul, .layout-full-read #content .layout-full .maincontent h4 ol, .layout-full-read #content .layout-full .maincontent h5 ul, .layout-full-read #content .layout-full .maincontent h5 ol, .layout-full-read #content .layout-full .maincontent h6 ul, .layout-full-read #content .layout-full .maincontent h6 ol, .layout-full-read #content .layout-full .maincontent p ul, .layout-full-read #content .layout-full .maincontent p ol, .layout-full-read #content .layout-full .maincontent ul ul, .layout-full-read #content .layout-full .maincontent ul ol, .layout-full-read #content .layout-full .maincontent ol ul, .layout-full-read #content .layout-full .maincontent ol ol, .layout-full-read #content .layout-full .maincontent .center-content ul, .layout-full-read #content .layout-full .maincontent .center-content ol, .layout-read #content .layout-full .maincontent h2 ul, .layout-read #content .layout-full .maincontent h2 ol, .layout-read #content .layout-full .maincontent h3 ul, .layout-read #content .layout-full .maincontent h3 ol, .layout-read #content .layout-full .maincontent h4 ul, .layout-read #content .layout-full .maincontent h4 ol, .layout-read #content .layout-full .maincontent h5 ul, .layout-read #content .layout-full .maincontent h5 ol, .layout-read #content .layout-full .maincontent h6 ul, .layout-read #content .layout-full .maincontent h6 ol, .layout-read #content .layout-full .maincontent p ul, .layout-read #content .layout-full .maincontent p ol, .layout-read #content .layout-full .maincontent ul ul, .layout-read #content .layout-full .maincontent ul ol, .layout-read #content .layout-full .maincontent ol ul, .layout-read #content .layout-full .maincontent ol ol, .layout-read #content .layout-full .maincontent .center-content ul, .layout-read #content .layout-full .maincontent .center-content ol {
         margin-left: 0.9em; }
 
 /*rewrite above rule for asides*/
-/* line 132, _general-layout.scss */
-.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol, .read .priority1and2 .maincontent aside .center-content, .read .field-name-body .maincontent aside h2, .read .field-name-body .maincontent aside h3, .read .field-name-body .maincontent aside h4, .read .field-name-body .maincontent aside h5, .read .field-name-body .maincontent aside h6, .read .field-name-body .maincontent aside p, .read .field-name-body .maincontent aside ul, .read .field-name-body .maincontent aside ol, .read .field-name-body .maincontent aside .center-content {
+/* line 170, _general-layout.scss */
+.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol, .read .priority1and2 .maincontent aside .center-content,
+.layout-read .field-name-body aside h2,
+.layout-read .field-name-body aside h3,
+.layout-read .field-name-body aside h4,
+.layout-read .field-name-body aside h5,
+.layout-read .field-name-body aside h6,
+.layout-read .field-name-body aside p,
+.layout-read .field-name-body aside ul,
+.layout-read .field-name-body aside ol,
+.layout-read .field-name-body aside .center-content {
   margin-left: 0;
   margin-right: 0; }
-/* line 136, _general-layout.scss */
-.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .field-name-body .maincontent aside h2, .read .field-name-body .maincontent aside h3, .read .field-name-body .maincontent aside h4, .read .field-name-body .maincontent aside h5, .read .field-name-body .maincontent aside h6, .read .field-name-body .maincontent aside p {
+/* line 174, _general-layout.scss */
+.read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p,
+.layout-read .field-name-body aside h2,
+.layout-read .field-name-body aside h3,
+.layout-read .field-name-body aside h4,
+.layout-read .field-name-body aside h5,
+.layout-read .field-name-body aside h6,
+.layout-read .field-name-body aside p {
   padding: 0; }
 
-/* line 141, _general-layout.scss */
+/*
 .gridpad {
-  margin-left: 0;
-  margin-right: 0; }
-
+	@include breakpoint(teen-up) { 
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+*/
 /*if change this, change aside */
-/* line 149, _general-layout.scss */
-.maincontent {
+/*in drupal .field-name-body is the body, #block-views-subpage-menu-block is the gridlink*/
+/* line 190, _general-layout.scss */
+.maincontent, .field-name-body, #block-views-subpage-menu-block {
   /*on tablets and up, the aside moves to the sidebar*/
   width: 100%;
   float: left;
@@ -206,22 +225,27 @@ body {
   	width: 74%;
   }*/ }
 
-/* line 164, _general-layout.scss */
-.full .maincontent {
+/*fix error in drupal layout-read where margins get applied multiple times*/
+/* line 204, _general-layout.scss */
+.layout-read .maincontent {
+  float: none; }
+
+/* line 211, _general-layout.scss */
+.layout-full .maincontent, .layout-full .field-name-body, .layout-full #block-views-subpage-menu-block, .layout-full-read .maincontent, .layout-full-read .field-name-body, .layout-full-read #block-views-subpage-menu-block {
   width: 100%; }
 
 /*add a right margin*/
-/* line 173, _general-layout.scss */
+/* line 228, _general-layout.scss */
 .single {
   margin-right: 15px;
   /*on larger screen, additional margin */
   margin-right: 1.8em; }
 
-/* line 181, _general-layout.scss */
+/* line 236, _general-layout.scss */
 .center-content {
   text-align: center; }
 
-/* line 185, _general-layout.scss */
+/* line 240, _general-layout.scss */
 .gridguide {
   margin-left: 0;
   margin-right: 0; }
@@ -234,10 +258,11 @@ body {
   box-sizing: border-box; }
 
 /*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
-/* line 8, _grid.scss */
-[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li {
+/* line 9, _grid.scss */
+[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li,
+.layout-full-read article {
   float: left;
-  padding-right: 0.9em;
+  padding-right: 15px;
   padding-right: 1.8em; }
 
 /* Opt-in outside padding 
@@ -248,7 +273,7 @@ body {
 /*col-section is for block grids
 sitemap-comp is the giving menu
 block-menu is the giving menu in drupal*/
-/* line 30, _grid.scss */
+/* line 39, _grid.scss */
 .col-section, .sitemap-comp ul li, .block-menu ul li {
   /*blocks are two across on portrait phone and tablet
     blocks are three across on landscape phone and tablet as well as desktop
@@ -256,8 +281,8 @@ block-menu is the giving menu in drupal*/
   width: 33.33%;
   /*if you change this, must change .col-section:nth-of-type */ }
 
-/* line 51, _grid.scss */
-.full .col-section, .grid-4 .col-section {
+/* line 60, _grid.scss */
+.layout-full .col-section, .ExtraColumn .col-section, .layout-full-read .col-section {
   /*no sidebar so:
     blocks are three across on tablet
     blocks are four across on tablet as well as desktop
@@ -265,23 +290,35 @@ block-menu is the giving menu in drupal*/
   width: 25%;
   /*if you change this, must change .col-section:nth-of-type */ }
 
+/*designed for grids of 4 elements, either 2 or 4 columns, no 3 columns.*/
+/* line 77, _grid.scss */
+.column2-4 .col-section {
+  width: 25%;
+  /*if you change this, must change .col-section:nth-of-type */ }
+
+/*designed for grids of 3 elements, either 1 or 3 columns, no 2 columns.*/
+/* line 90, _grid.scss */
+.column1-3 .col-section {
+  width: 33%;
+  /*if you change this, must change .col-section:nth-of-type */ }
+
 /*.col-sections have various heights and this set of rules ensure that the tops of second rows line up */
 /*col-sections are two across*/
 /*col-sections are three across*/
-/* line 117, _grid.scss */
+/* line 167, _grid.scss */
 .col-section:nth-of-type(3n + 1) {
   clear: left; }
 
-/* line 121, _grid.scss */
-.full .col-section:nth-of-type(3n + 1), .grid-4 .col-section:nth-of-type(3n + 1) {
+/* line 171, _grid.scss */
+.layout-full .col-section:nth-of-type(3n + 1), .ExtraColumn .col-section:nth-of-type(3n + 1), .layout-full-read .col-section:nth-of-type(3n + 1), .column2-4 .col-section:nth-of-type(3n + 1) {
   clear: none;
   /*reverse above */ }
-/* line 124, _grid.scss */
-.full .col-section:nth-of-type(4n + 1), .grid-4 .col-section:nth-of-type(4n + 1) {
+/* line 174, _grid.scss */
+.layout-full .col-section:nth-of-type(4n + 1), .ExtraColumn .col-section:nth-of-type(4n + 1), .layout-full-read .col-section:nth-of-type(4n + 1), .column2-4 .col-section:nth-of-type(4n + 1) {
   clear: left; }
 
 /*1st col-section */
-/* line 138, _grid.scss */
+/* line 188, _grid.scss */
 .col-section:first-child,
 .col-section:first-child + .col-section + .col-section + .col-section,
 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
@@ -289,55 +326,62 @@ block-menu is the giving menu in drupal*/
 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
   clear: left; }
 
-/* line 141, _grid.scss */
-.full, .grid-4 {
+/* line 191, _grid.scss */
+.layout-full, .ExtraColumn, .layout-full-read {
   /*1st col-section */
   /*1st col-section */ }
-  /* line 151, _grid.scss */
-  .full .col-section:first-child,
-  .full .col-section:first-child + .col-section + .col-section + .col-section,
-  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
-  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
-  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, .grid-4 .col-section:first-child,
-  .grid-4 .col-section:first-child + .col-section + .col-section + .col-section,
-  .grid-4 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
-  .grid-4 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
-  .grid-4 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
+  /* line 201, _grid.scss */
+  .layout-full .col-section:first-child,
+  .layout-full .col-section:first-child + .col-section + .col-section + .col-section,
+  .layout-full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .layout-full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .layout-full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, .ExtraColumn .col-section:first-child,
+  .ExtraColumn .col-section:first-child + .col-section + .col-section + .col-section,
+  .ExtraColumn .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .ExtraColumn .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .ExtraColumn .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, .layout-full-read .col-section:first-child,
+  .layout-full-read .col-section:first-child + .col-section + .col-section + .col-section,
+  .layout-full-read .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .layout-full-read .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .layout-full-read .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
     clear: none; }
-  /* line 162, _grid.scss */
-  .full .col-section:first-child,
-  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section,
-  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
-  .full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, .grid-4 .col-section:first-child,
-  .grid-4 .col-section:first-child + .col-section + .col-section + .col-section + .col-section,
-  .grid-4 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
-  .grid-4 .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
+  /* line 212, _grid.scss */
+  .layout-full .col-section:first-child,
+  .layout-full .col-section:first-child + .col-section + .col-section + .col-section + .col-section,
+  .layout-full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .layout-full .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, .ExtraColumn .col-section:first-child,
+  .ExtraColumn .col-section:first-child + .col-section + .col-section + .col-section + .col-section,
+  .ExtraColumn .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .ExtraColumn .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section, .layout-full-read .col-section:first-child,
+  .layout-full-read .col-section:first-child + .col-section + .col-section + .col-section + .col-section,
+  .layout-full-read .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section,
+  .layout-full-read .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
     clear: left; }
 
-/* line 169, _grid.scss */
+/* line 219, _grid.scss */
 .sitemap ul li, .block-menu ul li {
   width: 25%; }
 
-/* line 175, _grid.scss */
-.read .col-article {
+/* line 225, _grid.scss */
+.read .col-article, .layout-full-read article {
   margin: 0;
   padding: 0; }
 
-/* line 182, _grid.scss */
+/* line 232, _grid.scss */
 .col-2-3 {
   width: 66.66%;
   display: block; }
 
-/* line 187, _grid.scss */
+/* line 237, _grid.scss */
 .col-1-3 {
   width: 33.33%;
   display: block; }
 
-/* line 192, _grid.scss */
+/* line 242, _grid.scss */
 .col-1-2 {
   width: 50%; }
 
-/* line 196, _grid.scss */
+/* line 246, _grid.scss */
 .col-3-4 {
   width: 75%; }
 
@@ -349,30 +393,42 @@ block-menu is the giving menu in drupal*/
   padding-right: 0;
 }
 */
-/* line 209, _grid.scss */
+/* line 259, _grid.scss */
 .col-5-8 {
   width: 62.5%; }
 
-/* line 213, _grid.scss */
+/* line 263, _grid.scss */
 .col-2-8 {
   width: 25%; }
 
 /*only need in two column width*/
-/* line 217, _grid.scss */
+/* line 267, _grid.scss */
 .col-1-8 {
   width: 12.5%; }
 
-/* line 221, _grid.scss */
+/* line 271, _grid.scss */
 .module {
   min-width: 25px;
   min-height: 25px; }
 
-/* line 227, _grid.scss */
+/* line 277, _grid.scss */
 section {
   margin-bottom: 15px;
   margin-bottom: 15px; }
 
 /* End of Grid */
+/* line 290, _grid.scss */
+.subgrid {
+  font-size: .9em; }
+  /* line 291, _grid.scss */
+  .subgrid h3 {
+    font-size: .8em; }
+
+/* line 296, _grid.scss */
+section.breakout {
+  padding-top: 15px;
+  background: #b3ccff; }
+
 /* line 1, _grid-groups.scss */
 .gridgroup1 {
   background: white; }
@@ -425,8 +481,8 @@ section {
     float: left; }
 
 /* Header */
-/* line 4, _header.scss */
-.header {
+/* line 19, _header.scss */
+.header, .header-wrapper {
   background: #333333;
   /*@include flex-wrap( nowrap );*/
   padding: 15px; }
@@ -464,7 +520,7 @@ section {
 .title div {
 }
 */
-/* line 48, _header.scss */
+/* line 64, _header.scss */
 .col-bannerfill {
   display: none;
   display: inline;
@@ -473,13 +529,13 @@ section {
   margin-left: 7.5px;
   margin-top: .4em; }
 
-/* line 60, _header.scss */
+/* line 76, _header.scss */
 .menu-open {
   position: relative;
   padding-left: 1.25em; }
 
 /*menu hamburger*/
-/* line 66, _header.scss */
+/* line 82, _header.scss */
 .menu-open:before {
   content: "";
   position: absolute;
@@ -491,7 +547,7 @@ section {
   box-shadow: 0 0.5em 0 0 white, 0 1em 0 0 white;
   /*if change this, change the hover as well*/ }
 
-/* line 80, _header.scss */
+/* line 96, _header.scss */
 .menu-open:hover:before {
   background: #b3ccff;
   box-shadow: 0 0.5em 0 0 #b3ccff, 0 1em 0 0 #b3ccff; }
@@ -506,7 +562,7 @@ section {
 }*/
 /*if change this, change general-layout */
 /* line 10, _aside.scss */
-aside, .field-name-field-aside {
+aside, #block-views-aside-block {
   overflow: hidden;
   padding-right: .9em;
   /*on tablet and up, aside floats right*/
@@ -515,12 +571,12 @@ aside, .field-name-field-aside {
   margin-bottom: 15px;
   padding-right: 1.8em; }
   /* line 22, _aside.scss */
-  aside p, .field-name-field-aside p {
+  aside p, #block-views-aside-block p {
     margin-top: 0; }
 
 /*aside is at bottom, not sidebar*/
-/* line 29, _aside.scss */
-.full aside {
+/* line 41, _aside.scss */
+.layout-full #block-views-aside-block, .layout-full-read #block-views-aside-block {
   width: auto;
   float: none;
   clear: both;
@@ -528,25 +584,27 @@ aside, .field-name-field-aside {
   padding-right: 30px; }
 
 /*margin asigned at col-article level*/
-/* line 42, _aside.scss */
+/* line 65, _aside.scss */
 .col-article aside {
   padding-right: 0; }
 
-/* line 48, _aside.scss */
-.read .priority1and2 aside, .read .field-name-body aside {
+/* line 73, _aside.scss */
+.read .priority1and2 aside,
+.layout-full-read .field-name-body aside,
+.layout-read .field-name-body aside {
   margin-bottom: 15px;
   padding-top: 15px;
   padding-left: 30px; }
 
-/* line 58, _aside.scss */
-.priority3, .field-name-field-aside {
+/* line 83, _aside.scss */
+.priority3, #block-views-aside-block {
   /*set image to width of priority3*/
   /*@include breakpoint(senior) { 
   	float: left;
   	width:10%
   }*/ }
-  /* line 63, _aside.scss */
-  .priority3 img, .field-name-field-aside img {
+  /* line 88, _aside.scss */
+  .priority3 img, #block-views-aside-block img {
     width: 100%; }
 
 /* line 1, _nav.scss */
@@ -584,14 +642,6 @@ aside, .field-name-field-aside {
       /* line 33, _nav.scss */
       .mainnav ul.extra li img, footer ul.extra li img {
         display: block; }
-  /* line 43, _nav.scss */
-  .mainnav ul.log, footer ul.log {
-    padding: 0;
-    padding: .8em 0 0; }
-    /* line 48, _nav.scss */
-    .mainnav ul.log li, footer ul.log li {
-      width: 20%;
-      width: auto; }
 
 /* line 59, _nav.scss */
 .mainnav {
@@ -660,73 +710,174 @@ aside, .field-name-field-aside {
       padding: 0;
       padding-right: 15px;
       width: auto; }
-  /* line 139, _nav.scss */
+  /* line 133, _nav.scss */
+  .mainnav ul.alumni {
+    padding-bottom: 15px; }
+  /* line 143, _nav.scss */
   .mainnav ul.extra {
     margin-top: 30px;
     font-size: .7em;
-    margin-top: 0; }
+    /*symmetrical space above and below red line */
+    margin-top: 2em;
+    margin-right: .8em;
+    padding-top: 0em; }
 
-/* line 147, _nav.scss */
+/* line 169, _nav.scss */
 footer ul.extra {
   text-transform: uppercase;
   font-size: .7em;
   margin-top: 30px;
   display: none; }
 
-/*icons adjacent to text on menu items */
-/* line 156, _nav.scss */
-.menu-icon {
-  height: 3em;
-  max-height: 50px;
-  display: block;
-  margin: auto;
-  width: auto;
-  margin-bottom: .2em;
-  width: auto;
-  display: inline;
-  padding-right: .3rem;
-  height: .9rem;
-  margin-bottom: 0;
-  padding-right: .3em;
-  height: 15px; }
+/*use is-expanded for drupal sitemap*/
+/* line 179, _nav.scss */
+.menu-icon, .is-expanded:nth-child(1) .menu__link, .is-expanded:nth-child(2) .menu__link, .is-expanded:nth-child(3) .menu__link, .is-expanded:nth-child(4) .menu__link {
+  background-repeat: no-repeat; }
 
-/* line 176, _nav.scss */
+/* line 183, _nav.scss */
+.mainnav .menu-icon, footer ul.extra .menu-icon {
+  /*on fly out menu, image is large, top, center*/
+  background-size: auto 3em;
+  background-position: center top;
+  padding-top: 3.2em;
+  background-repeat: no-repeat;
+  /*on desktop, menu icons are small and left*/
+  padding-top: 3px;
+  background-size: auto 14.5px;
+  background-position: left center;
+  padding-left: 1em;
+  /*hack for lack of background elements in ie8*/
+  padding-top: 5px;
+  padding-left: 1em; }
+
+/* line 203, _nav.scss */
+footer ul.extra .menu-icon {
+  padding-left: 0; }
+
+/* line 209, _nav.scss */
+.sitemap-comp .menu-icon, .is-expanded .menu__link {
+  padding-top: 0px;
+  background-size: auto 14.5px;
+  background-position: left center;
+  padding-left: 1em;
+  background-repeat: no-repeat; }
+
+/*icons on footer .extra are top centered */
+/* line 222, _nav.scss */
+footer ul.extra .menu-icon {
+  background-position: top center;
+  padding: 1.6em 0em 0em 0em; }
+
+/* line 230, _nav.scss */
+.sitemap-simple .menu-icon {
+  /*icons on alumni sitemap desktop are large */
+  background-size: auto 30px;
+  background-position: center top;
+  padding-top: 32px;
+  background-repeat: no-repeat; }
+
+/* line 239, _nav.scss */
+.mainnav ul.extra .menu-icon {
+  padding: 16px 0em 0em 0em;
+  background-position: center top; }
+
+/*individual icon images*/
+/*ie8: channel wide*/
+/* line 5, _nav_icons.scss */
+.icon-contact {
+  background-image: url("../img/menu-icon/16px/envelope.png"); }
+
+/* line 8, _nav_icons.scss */
+.icon-search {
+  background-image: url("../img/menu-icon/16px/search.png"); }
+
+/* line 11, _nav_icons.scss */
+.icon-profile {
+  background-image: url("../img/menu-icon/16px/profile.png"); }
+
+/* line 14, _nav_icons.scss */
+.icon-logout {
+  background-image: url("../img/menu-icon/16px/logout.png");
+  padding-left: 30px !important; }
+
+/*ie8 alumni*/
+/* line 61, _nav_icons.scss */
+.mainnav .icon-events {
+  background-image: url("../img/menu-icon/16px/events.png");
+  padding-left: 23px !important; }
+
+/* line 65, _nav_icons.scss */
+.sitemap .icon-events {
+  background-image: url("../img/menu-icon/32px/events.png"); }
+
+/* line 69, _nav_icons.scss */
+.mainnav .icon-chapters {
+  background-image: url("../img/menu-icon/16px/chapters.png");
+  padding-left: 25px !important; }
+
+/* line 73, _nav_icons.scss */
+.sitemap .icon-chapters {
+  background-image: url("../img/menu-icon/32px/chapters.png"); }
+
+/* line 78, _nav_icons.scss */
+.mainnav .icon-chapters {
+  background-image: url("../img/menu-icon/16px/chapters.png");
+  padding-left: 26px !important; }
+
+/* line 82, _nav_icons.scss */
+.sitemap .icon-chapters {
+  background-image: url("../img/menu-icon/32px/chapters.png"); }
+
+/* line 87, _nav_icons.scss */
+.mainnav .icon-network {
+  background-image: url("../img/menu-icon/16px/network.png");
+  padding-left: 30px !important; }
+
+/* line 91, _nav_icons.scss */
+.sitemap .icon-network {
+  background-image: url("../img/menu-icon/32px/network.png"); }
+
+/* line 96, _nav_icons.scss */
+.mainnav .icon-reunion {
+  background-image: url("../img/menu-icon/16px/ampersand.png");
+  padding-left: 19px !important; }
+
+/* line 100, _nav_icons.scss */
+.sitemap .icon-reunion {
+  background-image: url("../img/menu-icon/32px/ampersand.png"); }
+
+/* line 105, _nav_icons.scss */
+.mainnav .icon-products {
+  background-image: url("../img/menu-icon/16px/products.png");
+  padding-left: 17px !important; }
+
+/* line 109, _nav_icons.scss */
+.sitemap .icon-products {
+  background-image: url("../img/menu-icon/32px/products.png"); }
+
+/* line 114, _nav_icons.scss */
+.mainnav .icon-volunteer {
+  background-image: url("../img/menu-icon/16px/volunteer.png"); }
+
+/* line 117, _nav_icons.scss */
+.sitemap .icon-volunteer {
+  background-image: url("../img/menu-icon/32px/volunteer.png"); }
+
+/* line 122, _nav_icons.scss */
+.sitemap .icon-parents {
+  background-image: url("../img/menu-icon/32px/parents.png"); }
+
+/* line 126, _nav_icons.scss */
+.sitemap .icon-giving {
+  background-image: url("../img/menu-icon/32px/giving.png"); }
+
+/*turn off background images in drupal*/
+/* line 266, _nav.scss */
 .toggle-menu-icon:hover {
   cursor: pointer; }
 
-/* line 179, _nav.scss */
-.sitemap .menu-icon {
-  display: none;
-  width: auto; }
-
-/*icons show on sitemap in teen and adult */
-/*small inline icons for giving sitemap*/
-/* line 186, _nav.scss */
-.sitemap-comp .menu-icon {
-  display: inline;
-  height: .9rem;
-  padding-right: .3rem;
-  margin: 0;
-  height: .9em;
-  padding-right: .3em; }
-
-/*large block icons for alumni sitemap*/
-/* line 197, _nav.scss */
-.sitemap-simple .menu-icon {
-  display: block;
-  height: 2em; }
-
-/* line 202, _nav.scss */
-ul.extra .menu-icon {
-  padding-right: 0;
-  padding-right: 0;
-  padding-left: 0;
-  width: auto;
-  max-height: 1.5em;
-  max-width: 2em; }
-
 /*javascript fires new class, which moves menu */
-/* line 215, _nav.scss */
+/* line 272, _nav.scss */
 body.menu-on .mainnav {
   -webkit-transform: translate(0%);
   -moz-transform: translate(0%);
@@ -802,16 +953,22 @@ footer {
     /*each li is 1/3 of 75*/
     width: 33%;
     padding-right: 0;
-    padding-bottom: 0.9em; }
-  /* line 58, _sitemap.scss */
+    padding-bottom: 0.9em;
+    /*padding top based on icon size, set in nav.css*/
+    padding-top: 20px; }
+    /* line 58, _sitemap.scss */
+    .sitemap-simple ul li li {
+      /*turn off padding-top for next set of list items*/
+      padding-top: 0px; }
+  /* line 64, _sitemap.scss */
   .sitemap-simple ul ul {
     width: 100%; }
 
 /*events is the fourth column*/
-/* line 65, _sitemap.scss */
+/* line 71, _sitemap.scss */
 ul.sitemap-feature {
   width: 25%; }
-  /* line 69, _sitemap.scss */
+  /* line 75, _sitemap.scss */
   ul.sitemap-feature li {
     width: 100%;
     margin-top: .5em; }
@@ -862,20 +1019,15 @@ on larger screen, floats left
     margin-right: 0.9em; }
 
 /* styles */
-/*restrict image size*/
-/* line 2, _images.scss */
-img {
-  max-width: 100%; }
-
-/* line 6, _images.scss */
+/* line 9, _images.scss */
 .col-section img, article img, footer img {
   width: 100%; }
 
-/* line 19, _images.scss */
-.full {
+/* line 23, _images.scss */
+.layout-full, .layout-full-read {
   /*fullimg figure and images*/ }
-  /* line 21, _images.scss */
-  .full .fullimg img, .full img.fullimg {
+  /* line 25, _images.scss */
+  .layout-full .fullimg img, .layout-full img.fullimg, .layout-full-read .fullimg img, .layout-full-read img.fullimg {
     width: 100%;
     /*full screen*/
     /*max-width and slide left for images on read adult */
@@ -886,12 +1038,12 @@ img {
     /*set gutter*/
     margin-bottom: 0.9em;
     width: 30em; }
-  /* line 34, _images.scss */
-  .full .imgright img, .full img.imgright {
-    margin-left: 31%;
+  /* line 38, _images.scss */
+  .layout-full .imgright img, .layout-full img.imgright, .layout-full-read .imgright img, .layout-full-read img.imgright {
+    margin-left: 1%;
+    /*without this image disappears, not sure why*/
+    padding-left: 30%;
     /*align right*/
-    max-width: 69%;
-    /*full width of whatever is left*/
     width: 30em;
     margin-left: 34%; }
 
@@ -979,45 +1131,55 @@ nav a:hover, .social a:hover, .footerlogo-wrapper a:hover {
   .gridlink:link img, .gridlink:visited img {
     opacity: 1; }
 
-/* line 114, _links.scss */
-.gridgroup1 .gridlink:link, .gridgroup1 .gridlink:visited, .gridgroup2 .gridlink:link, .gridgroup2 .gridlink:visited, .gridgroup3 .gridlink:link, .gridgroup3 .gridlink:visited {
-  background: none; }
+/*breakout section has bluebackground, set link color to none*/
+/* line 115, _links.scss */
+section.breakout .gridlink:link, section.breakout .gridlink:visited {
+  background: none;
+  color: black;
+  text-align: center;
+  margin-top: 30px; }
 
-/* line 119, _links.scss */
+/* line 123, _links.scss */
 .gridlink:hover, .gridlink:active {
   background: #b3ccff;
   border: dotted thin #003399;
   color: #333333; }
-  /* line 123, _links.scss */
+  /* line 127, _links.scss */
   .gridlink:hover img, .gridlink:active img {
     opacity: 0.6;
     /*webkit jiggles the image without this rule*/
     -webkit-backface-visibility: hidden;
     filter: alpha(opacity=60); }
-  /* line 131, _links.scss */
+  /* line 135, _links.scss */
   .gridlink:hover h2, .gridlink:active h2 {
     color: #333333; }
 
+/*breakout section has bluebackground and no images, set link underline and no border*/
+/* line 141, _links.scss */
+section.breakout .gridlink:hover, section.breakout .gridlink:visited {
+  text-decoration: underline;
+  border: dotted thin transparent; }
+
 /*footer links are on gray and need a lighter blue*/
-/* line 137, _links.scss */
+/* line 149, _links.scss */
 footer {
   /*hide phone link on desktop */ }
-  /* line 138, _links.scss */
+  /* line 150, _links.scss */
   footer a:link, footer a:visited, footer a:active {
     color: #b3ccff;
     border-style: none; }
-  /* line 142, _links.scss */
+  /* line 154, _links.scss */
   footer a:hover {
     border-bottom: #b3ccff;
     border-width: 0px 0px 1px 0px;
     border-style: none none dotted none; }
-  /* line 148, _links.scss */
+  /* line 160, _links.scss */
   footer a.phone:link, footer a.phone:visited, footer a.phone:hover {
     color: white;
     border-style: none; }
 
 /*use this class to space out links for touch*/
-/* line 158, _links.scss */
+/* line 170, _links.scss */
 .space-link {
   line-height: 2em;
   line-height: normal; }
@@ -1115,7 +1277,7 @@ body {
   font-family: "franklin-gothic-urw", verdana, sans-serif; }
 
 /* line 1, _typography-h.scss */
-h1, h2, h3, h4, h5, h6, .tagline {
+h1, h2, h3, h4, h5, h6, .tagline, .field-name-field-subtitle {
   font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
   font-weight: 700; }
 
@@ -1134,7 +1296,7 @@ h1 {
   font-size: 1.9em; }
 
 /* line 28, _typography-h.scss */
-.read h1 {
+.read h1, .layout-full-read h1, .layout-read h1 {
   font-size: 3em;
   text-align: left;
   margin-left: 30px;
@@ -1152,67 +1314,111 @@ h2 {
   font-size: 1.6em;
   margin-bottom: .2em; }
 
-/* line 52, _typography-h.scss */
-.grid-wrap h2, .field-name-field-grid-type h2, .read h2 {
+/* line 56, _typography-h.scss */
+.grid-wrap h2, #block-views-subpage-menu-block h2,
+.read h2,
+.layout-full-read h2,
+.layout-read h2 {
   font-size: 1.2em; }
 
-/* line 57, _typography-h.scss */
+/* line 60, _typography-h.scss */
 article h2 {
   color: black;
   text-align: left;
   margin-top: 15px; }
 
-/* line 65, _typography-h.scss */
-.read h2, .read h3, .read h4, .read h5, .read h6 {
+/* line 77, _typography-h.scss */
+.read h2, .read h3, .read h4, .read h5, .read h6,
+.layout-full-read article h2,
+.layout-full-read article h3,
+.layout-full-read article h4,
+.layout-full-read article h5,
+.layout-full-read article h6,
+.layout-read article h2,
+.layout-read article h3,
+.layout-read article h4,
+.layout-read article h5,
+.layout-read article h6 {
   margin-left: 30px;
   color: #4d4d4d;
   text-transform: none;
   margin-top: 45px; }
-/* line 74, _typography-h.scss */
-.read aside h2, .read aside h3, .read aside h4, .read aside h5, .read aside h6, .read .aside h2, .read .aside h3, .read .aside h4, .read .aside h5, .read .aside h6 {
+/* line 86, _typography-h.scss */
+.read aside h2, .read aside h3, .read aside h4, .read aside h5, .read aside h6, .read .aside h2, .read .aside h3, .read .aside h4, .read .aside h5, .read .aside h6,
+.layout-full-read article aside h2,
+.layout-full-read article aside h3,
+.layout-full-read article aside h4,
+.layout-full-read article aside h5,
+.layout-full-read article aside h6,
+.layout-full-read article .aside h2,
+.layout-full-read article .aside h3,
+.layout-full-read article .aside h4,
+.layout-full-read article .aside h5,
+.layout-full-read article .aside h6,
+.layout-read article aside h2,
+.layout-read article aside h3,
+.layout-read article aside h4,
+.layout-read article aside h5,
+.layout-read article aside h6,
+.layout-read article .aside h2,
+.layout-read article .aside h3,
+.layout-read article .aside h4,
+.layout-read article .aside h5,
+.layout-read article .aside h6 {
   margin-left: 0;
   color: black;
   text-transform: uppercase;
   margin-top: 0; }
 
-/* line 88, _typography-h.scss */
-section h2, h2.subtitle {
+/* line 123, _typography-h.scss */
+section h2, .pageheader h2 {
   text-align: center;
   margin: 0 0 15px; }
 
+/* line 127, _typography-h.scss */
+.pageheader h2 {
+  font-size: 1.1em;
+  color: #4d4d4d;
+  text-align: left;
+  font-size: 1.2em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  margin-left: 0;
+  margin-bottom: 30px; }
+
+/* line 145, _typography-h.scss */
+.read .maincontent .pageheader h2,
+.layout-full-read .field-name-field-subtitle,
+.layout-read .field-name-field-subtitle {
+  padding: 0 30px;
+  width: 100%;
+  margin-left: 0; }
+
+/* line 153, _typography-h.scss */
+.read .maincontent .pageheader h2 {
+  margin-bottom: 30px; }
+
 /*do i need this? */
-/* line 94, _typography-h.scss */
+/* line 160, _typography-h.scss */
 .gridtext h2 {
   text-align: left;
   line-height: 1em; }
 
-/* line 98, _typography-h.scss */
-.read .maincontent h2.subtitle {
-  font-size: 1.1em;
-  text-align: left;
-  font-size: 1.2em;
-  padding: 0 30px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  width: 100%;
-  margin-left: 0;
-  margin-bottom: 30px; }
-
-/* line 116, _typography-h.scss */
+/* line 170, _typography-h.scss */
 section h2 {
   margin-bottom: 0em; }
 
-/* line 122, _typography-h.scss */
+/* line 176, _typography-h.scss */
 h3 {
   font-size: 1.17em;
   margin: 0 0 .3em;
   text-transform: uppercase; }
 
-/* line 129, _typography-h.scss */
+/* line 182, _typography-h.scss */
 .donate h3 {
   margin-top: .7em; }
 
-/* line 132, _typography-h.scss */
+/* line 185, _typography-h.scss */
 .details h3 {
   font-size: 1em;
   margin-top: 0em;
@@ -1221,17 +1427,17 @@ h3 {
   font-weight: 300;
   text-transform: none; }
 
-/* line 143, _typography-h.scss */
+/* line 196, _typography-h.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0; }
 
-/* line 149, _typography-h.scss */
+/* line 202, _typography-h.scss */
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0; }
 
-/* line 154, _typography-h.scss */
+/* line 207, _typography-h.scss */
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0; }
@@ -1254,7 +1460,7 @@ p, .content ul, .content ol {
   */ }
 
 /* line 34, _typography-p.scss */
-.gridtext p {
+.gridtext p, #block-views-subpage-menu-block .views-row p {
   font-size: .9em;
   /*text-align: left;*/
   font-size: .8em; }
@@ -1265,20 +1471,22 @@ p.squeeze {
   margin-bottom: 0; }
 
 /* line 49, _typography-p.scss */
-.read p {
+.read p, .layout-full-read p, .layout-read p {
   margin-left: 30px;
   font-size: 1em;
   font-size: .9em; }
-
-/* line 61, _typography-p.scss */
-.read .sidebar p {
-  margin-left: 1.8em; }
-
 /* line 67, _typography-p.scss */
-.read aside p {
+.read aside p, .layout-full-read aside p, .layout-read aside p {
   margin-left: 0; }
 
-/* line 73, _typography-p.scss */
+/*
+.read .sidebar p {
+	@include breakpoint(teen-up) { 
+		margin-left: $margin3;
+	}
+}
+*/
+/* line 83, _typography-p.scss */
 .gray {
   color: #666; }
 
@@ -1391,12 +1599,12 @@ figcaption {
   font-weight: 500;
   /*text-align: justify;*/ }
 
-/* line 11, _typography-figure-aside.scss */
-.read {
+/* line 10, _typography-figure-aside.scss */
+.read, .layout-full-read, .layout-read {
   /*add right margin/gutter on figcaption fullimg and imgright with sidebar*/
   /*turn off for .full, gutters are set elsewhere*/ }
   /* line 11, _typography-figure-aside.scss */
-  .read figcaption {
+  .read figcaption, .layout-full-read figcaption, .layout-read figcaption {
     width: 28%;
     float: left;
     clear: left;
@@ -1405,30 +1613,33 @@ figcaption {
     text-align: left;
     display: inline; }
   /* line 25, _typography-figure-aside.scss */
-  .read .fullimg figcaption, .read .imgright figcaption {
+  .read .fullimg figcaption, .read .imgright figcaption, .layout-full-read .fullimg figcaption, .layout-full-read .imgright figcaption, .layout-read .fullimg figcaption, .layout-read .imgright figcaption {
     margin-right: 15px; }
   /* line 30, _typography-figure-aside.scss */
-  .read .full figcaption {
+  .read .layout-full figcaption, .layout-full-read .layout-full figcaption, .layout-read .layout-full figcaption {
     margin-right: 0; }
 
-/* line 38, _typography-figure-aside.scss */
+/* line 42, _typography-figure-aside.scss */
 .symmetry figcaption {
   width: auto;
   margin-left: 0;
   margin-right: 0; }
 
-/* line 44, _typography-figure-aside.scss */
+/* this was breaking the figcaption in drupal
 .aside figcaption {
-  margin-left: 0; }
-
-/* line 51, _typography-figure-aside.scss */
-aside {
+	@include breakpoint(teen-up) {
+		margin-left: 0;
+	}
+}
+*/
+/* line 55, _typography-figure-aside.scss */
+aside, #block-views-aside-block {
   font-size: .8em; }
-  /* line 54, _typography-figure-aside.scss */
-  aside p {
+  /* line 58, _typography-figure-aside.scss */
+  aside p, #block-views-aside-block p {
     text-align: left; }
-  /* line 59, _typography-figure-aside.scss */
-  aside p {
+  /* line 63, _typography-figure-aside.scss */
+  aside p, #block-views-aside-block p {
     font-size: .9em; }
 
 /* line 1, _typography-header.scss */
@@ -1516,31 +1727,31 @@ cite:before {
   content: "\2014";
   opacity: .3; }
 
-/* line 58, _typography-quote.scss */
-.read blockquote {
+/* line 59, _typography-quote.scss */
+.read blockquote, .layout-full-read blockquote, .layout-read blockquote {
   float: left;
   clear: right;
   display: inline-block;
-  max-width: 75%;
-  margin-right: 25%;
+  width: 60%;
+  margin-right: 40%;
   padding-left: 0.9em;
   font-size: 1.2em;
   color: #4d4d4d; }
 
-/* line 73, _typography-quote.scss */
-.read .withsidebar blockquote, .read .withsidebar cite {
+/* line 75, _typography-quote.scss */
+.read .withsidebar cite, .read .withsidebar blockquote, .layout-read cite, .layout-read blockquote {
   float: none;
   width: 100%;
   max-width: 80%;
   padding: 0 60px;
   display: block; }
 
-/* line 83, _typography-quote.scss */
-.read .withsidebar blockquote {
+/* line 87, _typography-quote.scss */
+.read .withsidebar blockquote, .layout-read blockquote {
   margin: 30px auto 15px; }
 
-/* line 89, _typography-quote.scss */
-.read .withsidebar cite {
+/* line 94, _typography-quote.scss */
+.read .withsidebar cite, .layout-read cite {
   margin: 0 auto 30px; }
 
 /* End of Typography */
@@ -1599,14 +1810,24 @@ nav ol {
     margin-top: 0.45em;
     font-size: .8em; }
 
-/* line 88, _lists.scss */
-.read .priority1and2, .read .field-name-body {
+/* line 90, _lists.scss */
+.read .priority1and2,
+.layout-full-read .field-name-body,
+.layout-read .field-name-body {
   /*set lists on article with sidebar to the same as p*/ }
-  /* line 90, _lists.scss */
-  .read .priority1and2 ul, .read .priority1and2 ol, .read .field-name-body ul, .read .field-name-body ol {
+  /* line 92, _lists.scss */
+  .read .priority1and2 ul, .read .priority1and2 ol,
+  .layout-full-read .field-name-body ul,
+  .layout-full-read .field-name-body ol,
+  .layout-read .field-name-body ul,
+  .layout-read .field-name-body ol {
     margin-left: 30px; }
-  /* line 97, _lists.scss */
-  .read .priority1and2 aside ul li, .read .priority1and2 aside ol li, .read .field-name-body aside ul li, .read .field-name-body aside ol li {
+  /* line 99, _lists.scss */
+  .read .priority1and2 aside ul li, .read .priority1and2 aside ol li,
+  .layout-full-read .field-name-body aside ul li,
+  .layout-full-read .field-name-body aside ol li,
+  .layout-read .field-name-body aside ul li,
+  .layout-read .field-name-body aside ol li {
     margin: 0; }
 
 /* line 1, _social.scss */
@@ -1828,7 +2049,7 @@ figure {
   margin: 0 0 15px; }
 
 /*add bar before caption on .read */
-/* line 24, _figures.scss */
+/* line 25, _figures.scss */
 .fullimg figcaption:before, .imgright figcaption:before {
   content: '';
   border-bottom: 0.4em solid #003399;
@@ -1838,63 +2059,84 @@ figure {
   display: block; }
 
 /*aside margins for read */
-/* line 38, _figures.scss */
-.read .priority1and2 .aside, .full .priority1and2 aside,
-.read .field-name-body .aside, .full .field-name-body aside {
+/* line 41, _figures.scss */
+.read .priority1and2 aside, .read .priority1and2 .aside, .layout-full .priority1and2 aside, .layout-full .priority1and2 .aside,
+.layout-full-read aside,
+.layout-full-read .aside,
+.layout-read aside,
+.layout-read .aside,
+.layout-full .field-name-body aside,
+.layout-full .field-name-body .aside {
   width: 28%;
   margin-top: 15px;
   margin-bottom: 7.5px; }
 
 /*space between image and main body on read with sidebar */
-/* line 48, _figures.scss */
-.read .priority1and2 .aside,
-.read .field-name-body .aside {
+/* line 52, _figures.scss */
+.read .priority1and2 .aside, .read .priority1and2 aside,
+.layout-read .aside,
+.layout-read aside {
   float: right;
   clear: right;
   padding-left: 30px; }
-  /* line 53, _figures.scss */
-  .read .priority1and2 .aside figcaption:before,
-  .read .field-name-body .aside figcaption:before {
+  /* line 57, _figures.scss */
+  .read .priority1and2 .aside figcaption:before, .read .priority1and2 aside figcaption:before,
+  .layout-read .aside figcaption:before,
+  .layout-read aside figcaption:before {
     display: none; }
-  /* line 56, _figures.scss */
-  .read .priority1and2 .aside figcaption,
-  .read .field-name-body .aside figcaption {
+  /* line 60, _figures.scss */
+  .read .priority1and2 .aside figcaption, .read .priority1and2 aside figcaption,
+  .layout-read .aside figcaption,
+  .layout-read aside figcaption {
     width: 100%; }
 
 /*full article, set aside to left*/
-/* line 63, _figures.scss */
-.full aside, .read .full .aside {
+/* line 72, _figures.scss */
+.layout-full aside, .layout-full .aside,
+.read .layout-full aside,
+.read .layout-full .aside,
+.layout-full-read aside,
+.layout-full-read .aside {
   float: left;
   clear: left; }
+  /* line 77, _figures.scss */
+  .layout-full aside figcaption, .layout-full .aside figcaption,
+  .read .layout-full aside figcaption,
+  .read .layout-full .aside figcaption,
+  .layout-full-read aside figcaption,
+  .layout-full-read .aside figcaption {
+    width: 100%; }
 
+/*margin-left for asides*/
 /*read full article, add margin to aside*/
-/* line 72, _figures.scss */
-.read .full .aside, .read .full aside {
+/* line 98, _figures.scss */
+.read .layout-full .aside, .read .layout-full aside {
   margin-left: 30px; }
 
 /*correct above rule so that aside within priority1and2 is flush left*/
-/* line 81, _figures.scss */
-.full .priority1and2 aside, .full .priority1and2 .aside, .full .field-name-body aside, .full .field-name-body .aside {
+/* line 110, _figures.scss */
+.layout-full .priority1and2 aside, .layout-full .priority1and2 .aside, .layout-full .field-name-body aside, .layout-full .field-name-body .aside, .layout-full-read aside, .layout-full-read .aside, .layout-read aside, .layout-read .aside {
   margin-left: 0; }
 
-/* line 99, _figures.scss */
+/* line 129, _figures.scss */
 figcaption {
   margin-bottom: 15px; }
 
 /*add bar before caption on .read */
-/* line 106, _figures.scss */
-.withsidebar .fullimg figcaption:before, .withsidebar .imgright figcaption:before {
+/* line 140, _figures.scss */
+.withsidebar .fullimg figcaption:before, .layout-read .fullimg figcaption:before,
+.withsidebar .imgright .layout-read .imgright figcaption:before {
   margin-top: 22.5px; }
 
 /*space between figcaption and mainbody on article with sidebar */
-/* line 113, _figures.scss */
-.read .withsidebar figcaption {
+/* line 148, _figures.scss */
+.read .withsidebar figcaption, .layout-read figcaption {
   margin-left: 30px;
   margin-bottom: 15px;
   float: right; }
 
-/* line 122, _figures.scss */
-.full .imgright figcaption {
+/* line 158, _figures.scss */
+.layout-full .imgright figcaption, .layout-full-read .imgright figcaption {
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -1909,24 +2151,27 @@ figcaption {
   display: block; }
 
 /*this corresponds to typgoraphy-p: read p margins*/
-/* line 139, _figures.scss */
+/* line 174, _figures.scss */
 figure.symmetry, img.symmetry {
   margin-left: 30px;
   font-size: 1em;
   margin-bottom: 15px;
   font-size: .9em; }
 
-/* line 149, _figures.scss */
-.withsidebar img.symmetry {
+/* line 185, _figures.scss */
+.withsidebar img.symmetry, .layout-read img.symmetry {
   padding-right: 30px; }
 
-/* line 156, _figures.scss */
-.full figure.symmetry, .full img.symmetry {
+/* line 193, _figures.scss */
+.layout-full figure.symmetry, .layout-full img.symmetry,
+.layout-full-read figure.symmetry, .layout-full-read img.symmetry {
   margin-left: 34%;
   margin-right: 30px; }
 
-/* line 163, _figures.scss */
-.read .symmetry figcaption {
+/* line 202, _figures.scss */
+.read .symmetry figcaption,
+.layout-full-read .symmetry figcaption,
+.layout-read .symmetry figcaption {
   margin-left: 0;
   float: none; }
 
@@ -2319,5 +2564,5 @@ footer {
     content: " (http://alumni.rpi.edu" attr(href) ") "; }
 
   /* line 78, _print.scss */
-  .priority3, .field-name-field-aside {
+  .priority3, #block-views-aside-block {
     clear: both; } }
