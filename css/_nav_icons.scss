@@ -340,7 +340,7 @@ for phone, no icon in nav sitemap
 
       .icon-impact {
         background-size: 3.2em auto; 
-        background-position: center 10.3%;
+        background-position: center 8.4%;
         @include breakpoint (adult) {
           background-position: 0 -353px;
           background-size: auto;
@@ -354,7 +354,7 @@ for phone, no icon in nav sitemap
         }
       }
       .icon-impact:hover {
-        background-position: center .1%;
+        background-position: center 0%;
         @include breakpoint (adult) { 
           background-position: 0 -103px;
         }
@@ -369,10 +369,11 @@ for phone, no icon in nav sitemap
        
 
       .icon-ways {
-        background-position: center 86.9%;
+        background-position: center 87.1%;
         background-size: 2.5em auto;
         @include breakpoint (adult) {
           background-position: 0 -310px;
+          background-size: auto;
          }
       }
 
@@ -386,7 +387,7 @@ for phone, no icon in nav sitemap
 
 
       .icon-ways:hover {
-        background-position: center 58.7%;
+        background-position: center 60%;
         @include breakpoint (adult) {
           background-position: 0 -268px;
          }
@@ -399,10 +400,11 @@ for phone, no icon in nav sitemap
           }
         }
       .icon-supporters {
-        background-position: center 41.4%;
+        background-position: center 43.5%;
         background-size: 5.5em auto;
         @include breakpoint (adult) {
           background-position: 0 -145px;
+          background-size: auto;
          }
       }
 
@@ -416,7 +418,7 @@ for phone, no icon in nav sitemap
 
 
       .icon-supporters:hover {
-        background-position: center 26.2%;
+        background-position: center 28.8%;
         @include breakpoint (adult) {
           background-position: 0 -124px;
          }
@@ -429,10 +431,11 @@ for phone, no icon in nav sitemap
           }
         }
       .icon-news {
-        background-position: center 21.7%;
+        background-position: center 24.6%;
         background-size: 3em auto;
         @include breakpoint (adult) {
           background-position: 0 -374px;
+          background-size: auto;
          }
       }
 
@@ -446,7 +449,7 @@ for phone, no icon in nav sitemap
 
 
       .icon-news:hover {
-        background-position: center 17%;
+        background-position: center 16.3%;
         @include breakpoint (adult) {
           background-position: 0 -82px;
          }
@@ -459,8 +462,8 @@ for phone, no icon in nav sitemap
           }
         }
       .icon-profile {
-        background-size: 5.2em auto;  
-        background-position: center 96.5%;
+        background-size: 5.0em auto;  
+        background-position: center 97.1%;
         @include breakpoint (adult) {
           background-position: 0 -332px;
           padding-left: 2.5em;
@@ -468,14 +471,14 @@ for phone, no icon in nav sitemap
          }
       }
       .icon-profile:hover {
-        background-position: center 73.8%;
+        background-position: center 71.4%;
         @include breakpoint (adult) {
           background-position: 0 -248px;
          }
       }
       .icon-search {
         background-size: 3.2em auto; 
-        background-position: center 53.6%;
+        background-position: center 47.3%;
         @include breakpoint (adult) {
           background-position: 0 -395px;
           padding-left: 1.8em;
@@ -483,30 +486,28 @@ for phone, no icon in nav sitemap
          }
       }
       .icon-search:hover {
-        background-position: center 31.4%;
+        background-position: center 32.4%;
         @include breakpoint (adult) {
           background-position: 0 -227px;
         }
        }
       .icon-contact {
         background-size: 4.5em auto; 
-        background-position: center 58.4%;
+        background-position: center 51.4%;
         @include breakpoint (adult) {
           background-position: 0 -290px;
           background-size: auto;
-
         }
       }
       .icon-contact:hover {
-        background-position: center 44.4%;
+        background-position: center 40.0%;
         @include breakpoint (adult) {
           background-position: 0 -166px;
-
         }
       }
       .icon-logout {
-        background-size: 5.2em auto;
-        background-position: center 77.8%;
+        background-size: 5.0em auto;
+        background-position: center 74.6%;
         @include breakpoint (adult) {
           background-position: 0 -61px;
           padding-left: 2.8em;
@@ -514,17 +515,17 @@ for phone, no icon in nav sitemap
         }
       }
       .icon-logout:hover {
-        background-position: center 40.1%;
+        background-position: center 36.4%;
         @include breakpoint (adult) {
           background-position: 0 -40px;
         }
       }
       .icon-give {
         background-size: 4.5em auto;
-        background-position: center 92.6%;
+        background-position: center 93.8%;
       }
       .icon-give:hover {
-        background-position: center 82.1%
+        background-position: center 78.1%;
       }
       
 
