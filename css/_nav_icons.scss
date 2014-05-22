@@ -300,7 +300,7 @@ for phone, no icon in nav sitemap
     @if $drupal {
       /*child selectors for drupal footer break ie8*/
       .is-expanded:nth-child(1) .menu__link, .is-expanded:nth-child(2) .menu__link, .is-expanded:nth-child(3) .menu__link, .is-expanded:nth-child(4) .menu__link {
-        background-image: url('../img/menu-icon/giving96-s3901ebe072.png');
+        background-image: url('../img/menu-icon/givingtablet-s9f8b61ae95.png');
         @include breakpoint (adult) {
           background: url('../img/menu-icon/giving16-s84369bfae1.png') no-repeat;
         }
@@ -309,7 +309,7 @@ for phone, no icon in nav sitemap
     .mainnav, ul.extra  {
       /*set image background for all icons*/
       .icon-impact, .icon-impact:hover, .icon-ways, .icon-ways:hover, .icon-supporters, .icon-supporters:hover, .icon-news, .icon-news:hover, .icon-profile, .icon-profile:hover, .icon-search, .icon-search:hover, .icon-contact, .icon-contact:hover, .icon-logout, .icon-logout:hover, .icon-give, .icon-give:hover {
-        background-image: url('../img/menu-icon/giving96-s3901ebe072.png');
+        background-image: url('../img/menu-icon/givingtablet-s9f8b61ae95.png');
         @include breakpoint (adult) {
           background: url('../img/menu-icon/giving16-s84369bfae1.png') no-repeat;
         }
@@ -320,7 +320,7 @@ for phone, no icon in nav sitemap
       /*set image background for all icons*/
       .icon-impact, .icon-impact:hover, .icon-ways, .icon-ways:hover, .icon-supporters, .icon-supporters:hover, .icon-news, .icon-news:hover, .icon-profile, .icon-profile:hover, .icon-search, .icon-search:hover, .icon-contact, .icon-contact:hover, .icon-logout, .icon-logout:hover, .icon-give, .icon-give:hover {
         @include breakpoint (teen-all) {
-          background-image: url('../img/menu-icon/giving96-s3901ebe072.png');
+          background-image: url('../img/menu-icon/givingtablet-s9f8b61ae95.png');
         }
         @include breakpoint (adult) {
           background: url('../img/menu-icon/giving16-s84369bfae1.png') no-repeat;
@@ -332,16 +332,18 @@ for phone, no icon in nav sitemap
 
       /*set individual icons*/
       .menu-icon {
-        background-size: 6em auto; 
+        background-size: 3.2em auto; 
         @include breakpoint (adult) {
           background-size: auto;
         }
       }
 
       .icon-impact {
-        background-position: center 5.7%;
+        background-size: 3.2em auto; 
+        background-position: center 10.3%;
         @include breakpoint (adult) {
           background-position: 0 -353px;
+          background-size: auto;
          }
       }
       @if $drupal {
@@ -351,10 +353,8 @@ for phone, no icon in nav sitemap
            }
         }
       }
-
-
       .icon-impact:hover {
-        background-position: center 0.1%;
+        background-position: center .1%;
         @include breakpoint (adult) { 
           background-position: 0 -103px;
         }
@@ -369,8 +369,8 @@ for phone, no icon in nav sitemap
        
 
       .icon-ways {
-        background-position: center 92.3%;
-        padding-right: .5em;
+        background-position: center 86.9%;
+        background-size: 2.5em auto;
         @include breakpoint (adult) {
           background-position: 0 -310px;
          }
@@ -386,8 +386,7 @@ for phone, no icon in nav sitemap
 
 
       .icon-ways:hover {
-        background-position: center 86.8%;
-        padding-right: .5em;
+        background-position: center 58.7%;
         @include breakpoint (adult) {
           background-position: 0 -268px;
          }
@@ -400,7 +399,8 @@ for phone, no icon in nav sitemap
           }
         }
       .icon-supporters {
-        background-position: center 16.8%;
+        background-position: center 41.4%;
+        background-size: 5.5em auto;
         @include breakpoint (adult) {
           background-position: 0 -145px;
          }
@@ -416,7 +416,7 @@ for phone, no icon in nav sitemap
 
 
       .icon-supporters:hover {
-        background-position: center 11.2%;
+        background-position: center 26.2%;
         @include breakpoint (adult) {
           background-position: 0 -124px;
          }
@@ -429,8 +429,8 @@ for phone, no icon in nav sitemap
           }
         }
       .icon-news {
-        background-position: center 27.7%;
-        padding-right: 1em;
+        background-position: center 21.7%;
+        background-size: 3em auto;
         @include breakpoint (adult) {
           background-position: 0 -374px;
          }
@@ -446,8 +446,7 @@ for phone, no icon in nav sitemap
 
 
       .icon-news:hover {
-        background-position: center 22.1%;
-        padding-right: 1em;
+        background-position: center 17%;
         @include breakpoint (adult) {
           background-position: 0 -82px;
          }
@@ -459,64 +458,73 @@ for phone, no icon in nav sitemap
            }
           }
         }
-      .icon-profile { 
-        background-position: center 77.8%;
+      .icon-profile {
+        background-size: 5.2em auto;  
+        background-position: center 96.5%;
         @include breakpoint (adult) {
           background-position: 0 -332px;
           padding-left: 2.5em;
+          background-size: auto;
          }
       }
       .icon-profile:hover {
-        background-position: center 61.3%;
+        background-position: center 73.8%;
         @include breakpoint (adult) {
           background-position: 0 -248px;
          }
       }
       .icon-search {
-        background-position: center 97.7%;
+        background-size: 3.2em auto; 
+        background-position: center 53.6%;
         @include breakpoint (adult) {
           background-position: 0 -395px;
           padding-left: 1.8em;
+          background-size: auto;
          }
       }
       .icon-search:hover {
-        background-position: center 49.9%;
+        background-position: center 31.4%;
         @include breakpoint (adult) {
           background-position: 0 -227px;
         }
        }
       .icon-contact {
-        background-position: center 72.2%;
+        background-size: 4.5em auto; 
+        background-position: center 58.4%;
         @include breakpoint (adult) {
           background-position: 0 -290px;
+          background-size: auto;
 
         }
       }
       .icon-contact:hover {
-        background-position: center 44.5%;
+        background-position: center 44.4%;
         @include breakpoint (adult) {
           background-position: 0 -166px;
 
         }
       }
       .icon-logout {
-        background-position: center 66.6%;
+        background-size: 5.2em auto;
+        background-position: center 77.8%;
         @include breakpoint (adult) {
           background-position: 0 -61px;
           padding-left: 2.8em;
+          background-size: auto;
         }
       }
       .icon-logout:hover {
-        background-position: center 38.9%;
+        background-position: center 40.1%;
         @include breakpoint (adult) {
           background-position: 0 -40px;
         }
       }
       .icon-give {
-        background-position: center 55.6%;
+        background-size: 4.5em auto;
+        background-position: center 92.6%;
       }
       .icon-give:hover {
-        background-position: center 33.5%;
+        background-position: center 82.1%
       }
       
 
@@ -529,7 +537,7 @@ for phone, no icon in nav sitemap
     /*set padding in mainnav*/
     .mainnav {
       .icon-impact {
-       @include breakpoint(adult ) {
+       @include breakpoint(adult) {
           padding-left: 18px;  
           @if $ie8{
             padding-left: 20px !important;
@@ -555,9 +563,11 @@ for phone, no icon in nav sitemap
         }
       }
       .icon-news {
-        padding-left: 19px;
-        @if $ie8{
-          padding-left: 19px !important;
+        @include breakpoint(adult ) {
+          padding-left: 30px;padding-left: 19px;
+          @if $ie8{
+            padding-left: 19px !important;
+          }
         }
       }
     }
@@ -576,8 +586,8 @@ for phone, no icon in nav sitemap
     @else {
       .sitemap-comp .icon-impact, .is-expanded:nth-child(1) .menu__link {
         @include breakpoint(teen-all) {
-          background-size: 23px auto;
-          background-position: 0 4.5%;
+          background-size: .85em auto;
+          background-position: 0 7.6%;
         }
         @include breakpoint(adult) {
           padding-left: 21px;
@@ -585,28 +595,27 @@ for phone, no icon in nav sitemap
       }
       .sitemap-comp .icon-impact:hover, .is-expanded:nth-child(1) .menu__link:hover {
         @include breakpoint(teen-all) {
-          background-position: 0 -1%;
+          background-position: 0 -.9%;
         }
       }
       .sitemap-comp .icon-ways, .is-expanded:nth-child(2) .menu__link {
         @include breakpoint(teen-all) {
-          background-size: 28px auto;
-          background-position: 0 91.5%;
+          background-size: .85em auto;
+          background-position: 0 86.3%;
           padding-left: 15px;
         }
       }
       .sitemap-comp .icon-ways:hover, .is-expanded:nth-child(2) .menu__link:hover {
         @include breakpoint(teen-all) {
-          background-position: 0 85.8%;
+          background-position: 0 59.4%;
         }
       }
 
       .sitemap-comp .icon-supporters, .is-expanded:nth-child(3) .menu__link {
         @include breakpoint (teen-all) {
-          background-size: 25px auto;
-          background-position: 0 16.2%;
+          background-size: 1.5em auto;
+          background-position: 0 43.2%;
           padding-left: 26px;
-
         }
         @include breakpoint(adult) {
           padding-left: 30px;
@@ -614,13 +623,13 @@ for phone, no icon in nav sitemap
       }
       .sitemap-comp .icon-supporters:hover, .is-expanded:nth-child(3) .menu__link:hover {
         @include breakpoint (teen-all) {
-          background-position: 0 10.7%;
+           background-position: 0 28.6%;
         }
       }
       .sitemap-comp .icon-news, .is-expanded:nth-child(4) .menu__link {
         @include breakpoint(teen-all) {
-          background-size: 23px auto;
-          background-position: 0 26.9%;
+          background-size: .9em auto;
+          background-position: 0 24.2%;
         }
         @include breakpoint(adult) {
             padding-left: 21px;
@@ -628,7 +637,7 @@ for phone, no icon in nav sitemap
       }
       .sitemap-comp .icon-news:hover, .is-expanded:nth-child(4) .menu__link:hover {
         @include breakpoint(teen-all) {
-          background-position: 0 21.2%;
+          background-position: 0 16%;
         }
       }
     }
@@ -637,43 +646,40 @@ for phone, no icon in nav sitemap
     footer {
       ul.extra {
         .menu-icon {
-          background-size: 6em auto; 
-          background-position: center 26.9%;
+          background-size: 5em auto; 
         }
         .icon-contact {
-          background-position: center 72.2%;
-          padding-right: 1.5em;
+          background-position: center 51.6%;
         }
         .icon-contact:hover {
-          background-position: center 44.5%;
+          background-position: center 40.1%;
         }
         .icon-search {
-          background-position: center 97.7%;
-          padding-right: 2.2em;
+          background-size: 3.3em auto; 
+          background-position: center 47.5%;
         }
         .icon-search:hover {
-          background-position: center 49.9%;
+          background-position: center 32.5%;
         }
         .icon-profile {
-          background-position: center 77.9%;
-          padding-right: .8em;
+          background-position: center 97.2%;
         }
         .icon-profile:hover {
-          background-position: center 61.3%;
+          background-position: center 71.4%;
         }
         .icon-logout {
-          background-position: center 66.6%;
-          padding-right: .8em;
+          background-position: center 74.6%;
         }
         .icon-logout:hover {
-          background-position: center 38.9%;
+          background-position: center 36.5%
         }
         .icon-give {
-          background-position: center 55.6%;
-          padding-right: .8em;
+          background-size: 4.5em auto;
+          background-position: center 93.8%;
         }
         .icon-give:hover {
-          background-position: center 33.5%;
+          background-position: center 82.2%;
+          background-position: center 78.0%
         }
       }
     }
