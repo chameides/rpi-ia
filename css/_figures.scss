@@ -22,7 +22,7 @@ figure {
 	}
 }
 /*add bar before caption on .read */
-.fullimg figcaption:before, .imgright figcaption:before {
+.fullimg figcaption:before, .imgright figcaption:before,  .field-name-field-caption:before{
 	@include breakpoint(teen-up) {
 		content: '';
 		border-bottom: .4em solid $color3;
@@ -135,9 +135,9 @@ figcaption {
 
 
 /*add bar before caption on .read */
-.withsidebar .fullimg, .layout-read .fullimg, /*drupal equivalent, drupal has class on body level, while iModules has it as an interior*/
+.withsidebar .fullimg, .layout-read .fullimg, .field-name-field-media,/*drupal equivalent, drupal has class on body level, while iModules has it as an interior*/
 .withsidebar .imgright .layout-read .imgright /*drupal equivalent*/ {
-	figcaption:before {
+	figcaption:before, .field-name-field-caption:before {
 		@include breakpoint(teen-up) {
 			margin-top: $margin5;
 		}

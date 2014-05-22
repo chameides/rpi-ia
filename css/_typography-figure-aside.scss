@@ -1,4 +1,4 @@
-figcaption {
+figcaption, .field-name-field-caption {
 	font-size:.8em;
 	font-weight: 500;
 	/*text-align: justify;*/
@@ -8,7 +8,7 @@ figcaption {
 }
 
 .read, .layout-full-read, .layout-read {
-	figcaption {
+	figcaption, .field-name-field-caption {
 		@include breakpoint(teen-up) {
 			width: $smallratio;
 			float: left;
@@ -21,21 +21,25 @@ figcaption {
 	}
 	/*add right margin/gutter on figcaption fullimg and imgright with sidebar*/
 	@include breakpoint(teen-up) {
-		.fullimg, .imgright {
-			figcaption{
+		.fullimg, .imgright, .field-name-field-media  {
+			figcaption, .field-name-field-caption{
 			margin-right: $margin2;
 			}
 		}
 		/*turn off for .full, gutters are set elsewhere*/
-		.layout-full figcaption /*see drupal conditional*/{	
+		.layout-full, .field-name-field-caption {
+			figcaption /*see drupal conditional*/{	
 				margin-right: 0;
+			}
 		}
 	}	
 }
 
 @if $drupal /*see layout-full figcaption*/{
-	.layout-full-read figcaption {	
-		margin-right: 0;
+	.layout-full-read {
+		figcaption, .field-name-field-caption {	
+			margin-right: 0;
+		}
 	}
 }
 

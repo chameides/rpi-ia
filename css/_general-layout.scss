@@ -208,7 +208,7 @@ body {
 }
 
 /*fix error in drupal layout-read where margins get applied multiple times*/
-.layout-read .maincontent{
+.layout-read .maincontent, .layout-full-read .field-name-body{
 	@include breakpoint(teen-up) {
 		float: none;
 	}
