@@ -531,7 +531,7 @@ aside, #block-views-aside-block {
   clear: right; }
 
 /*aside is at bottom, not sidebar*/
-.layout-full #block-views-aside-block, .layout-full-read #block-views-aside-block {
+.layout-full #block-views-aside-block, .layout-full aside.priority3, .layout-full-read #block-views-aside-block, .layout-full-read aside.priority3 {
   width: auto;
   float: none;
   clear: both;
@@ -558,7 +558,8 @@ aside, #block-views-aside-block {
   /*@include breakpoint(senior) { 
   	float: left;
   	width:10%
-  }*/ }
+  }*/
+  margin-top: 15px; }
   .priority3 img, #block-views-aside-block img {
     width: 100%; }
 
@@ -1474,6 +1475,9 @@ figcaption, .field-name-field-caption {
     margin-right: 15px; }
   .read .layout-full figcaption, .read .field-name-field-caption figcaption, .layout-full-read .layout-full figcaption, .layout-full-read .field-name-field-caption figcaption, .layout-read .layout-full figcaption, .layout-read .field-name-field-caption figcaption {
     margin-right: 0; }
+
+.read .aside figcaption, .layout-full-read .aside figcaption, .layout-read .aside figcaption {
+  margin-left: 0; }
 
 .layout-full-read figcaption, .layout-full-read .field-name-field-caption {
   margin-right: 0; }

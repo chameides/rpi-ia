@@ -36,6 +36,9 @@ body {
 
 /*drupal uses #content for .content*/
 @if $drupal {
+	.layout-full-read article {
+		width: 100%
+	}
 	#content{
 		margin-left: $margin2; /*if change this, change .layout-full img in images.scss*/
 	 	/*on larger screen, additional margin */
