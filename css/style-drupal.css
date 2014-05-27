@@ -429,7 +429,7 @@ article.clearfix:after{
   /* line 9, _grid.scss */
   [class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li,
   .layout-full-read article {
-    padding-right: 1.8em;
+    padding-right: 1.8rem;
   }
 }
 
@@ -571,21 +571,21 @@ block-menu is the giving menu in drupal*/
 @media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: portrait) {
   /* line 90, _grid.scss */
   .column1-3 .col-section {
-    width: 33%;
+    width: 33.3%;
     /*if you change this, must change .col-section:nth-of-type */
   }
 }
 @media only screen and (min-width: 708px) and (max-width: 1020px) and (orientation: landscape) {
   /* line 90, _grid.scss */
   .column1-3 .col-section {
-    width: 33%;
+    width: 33.3%;
     /*if you change this, must change .col-section:nth-of-type */
   }
 }
 @media only screen and (min-width: 1021px) {
   /* line 90, _grid.scss */
   .column1-3 .col-section {
-    width: 33%;
+    width: 33.3%;
     /*if you change this, must change .col-section:nth-of-type */
   }
 }
