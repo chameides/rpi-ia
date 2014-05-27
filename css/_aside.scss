@@ -92,4 +92,7 @@ aside, #block-views-aside-block {
 		float: left;
 		width:10%
 	}*/
+	@include breakpoint (teen-up) {
+		margin-top: $margin2;
+	}
 }
