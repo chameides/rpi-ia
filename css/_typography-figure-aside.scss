@@ -34,7 +34,13 @@ figcaption, .field-name-field-caption {
 		}
 	}	
 }
-
+.read, .layout-full-read, .layout-read {
+	.aside figcaption {
+		@include breakpoint(teen-up) {
+			margin-left: 0;
+		}
+	}
+}
 @if $drupal /*see layout-full figcaption*/{
 	.layout-full-read {
 		figcaption, .field-name-field-caption {	
