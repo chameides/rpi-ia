@@ -86,6 +86,12 @@ block-menu is the giving menu in drupal*/
   }
 }
 
+/*synchronize margins*/
+.column1-3 {
+  @include breakpoint(teen-all) {
+    padding-right:$margin5 - $margin4;
+  }
+}
 /*designed for grids of 3 elements, either 1 or 3 columns, no 2 columns.*/ 
 .column1-3 .col-section {
   @include breakpoint(teen) { 

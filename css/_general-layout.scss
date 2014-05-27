@@ -37,7 +37,9 @@ body {
 /*drupal uses #content for .content*/
 @if $drupal {
 	.layout-full-read article {
-		width: 100%
+		@include breakpoint(teen-up) {
+			width: 100%
+		}
 	}
 	#content{
 		margin-left: $margin2; /*if change this, change .layout-full img in images.scss*/
@@ -76,7 +78,8 @@ body {
 			}
 		}
 		#block-views-subpage-menu-block {
-			padding-left: $margin2;
+			/*padding set in article, no padding for block, see platforms
+			padding-left: $margin2;*/
 			@include breakpoint(teen-up) {
 				padding-left: $margin4;
 			}
@@ -122,7 +125,7 @@ body {
 		margin-right: 0;
 		/*for article with sidebar, add a gutter*/
 		.priority1and2, .field-name-body /*drupal uses .field-name-body */{
-			padding-right: $margin3;
+			padding-right: $margin4;
 		}
 		/*turn off gutter if no sidebar*/
 		.layout-full /*see drupal conditional below*/ {
@@ -133,7 +136,7 @@ body {
 			.maincontent { 
 				h2, h3, h4, h5, h6, p, ul, ol, .center-content {
 					margin-left: $ratio;
-					margin-right: $margin3;
+					margin-right: $margin4;
 					/*prevent margin on nested lists*/
 					ul, ol {
 						margin-left: $margin;
@@ -151,7 +154,7 @@ body {
 			padding-right: 0;
 			h2, h3, h4, h5, h6, p, ul, ol, .center-content {
 				margin-left: $ratio;
-				margin-right: $margin3;
+				margin-right: $margin4;
 				/*prevent margin on nested lists*/
 				ul, ol {
 					margin-left: $margin;
