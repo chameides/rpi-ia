@@ -136,7 +136,7 @@ body {
       border: thin solid #333333; } }
 
 /*drupal uses #content for .content*/
-/* line 78, _general-layout.scss */
+/* line 85, _general-layout.scss */
 .content {
   margin-left: 0.9rem;
   /*if change this, change .full img in images.scss*/
@@ -146,17 +146,17 @@ body {
   /*add right margin to full width image, .content adds a left margin*/
   /*col-article adds the right margin, so set image margin to 0*/ }
   @media only screen and (min-width: 708px) {
-    /* line 78, _general-layout.scss */
+    /* line 85, _general-layout.scss */
     .content {
       margin-top: 1em;
       margin-left: 1.8rem;
       /*if change this, change .full img in images.scss*/ } }
   @media only screen and (min-width: 1124px) {
-    /* line 78, _general-layout.scss */
+    /* line 85, _general-layout.scss */
     .content {
       margin-left: 1.8em;
       /*if change this, change .full img in images.scss*/ } }
-  /* line 89, _general-layout.scss */
+  /* line 96, _general-layout.scss */
   .content img, .content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content li {
     padding-right: 0.9rem;
     /*if change this, change .content in general-layout.scss*/
@@ -164,49 +164,49 @@ body {
     /*tablet and up*/
     /*screen*/ }
     @media only screen and (min-width: 708px) {
-      /* line 89, _general-layout.scss */
+      /* line 96, _general-layout.scss */
       .content img, .content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content li {
         padding-right: 1.8rem;
         /*if change this, change .content in general-layout.scss*/ } }
     @media only screen and (min-width: 1124px) {
-      /* line 89, _general-layout.scss */
+      /* line 96, _general-layout.scss */
       .content img, .content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content li {
         padding-right: 1.8em;
         /*if change this, change .content in general-layout.scss*/ } }
-  /* line 101, _general-layout.scss */
+  /* line 108, _general-layout.scss */
   .content .col-article img, .content .col-article p, .content .col-article h1, .content .col-article h2, .content .col-article h3, .content .col-article h4, .content .col-article h5, .content .col-article h6, .content .col-article ol, .content .col-article li, .content .col-section img, .content .col-section p, .content .col-section h1, .content .col-section h2, .content .col-section h3, .content .col-section h4, .content .col-section h5, .content .col-section h6, .content .col-section ol, .content .col-section li, .content .priority3 img, .content .priority3 p, .content .priority3 h1, .content .priority3 h2, .content .priority3 h3, .content .priority3 h4, .content .priority3 h5, .content .priority3 h6, .content .priority3 ol, .content .priority3 li {
     padding-right: 0; }
 
-/* line 109, _general-layout.scss */
+/* line 116, _general-layout.scss */
 .read, .layout-full-read #content, .layout-read #content {
   /*tablet and up*/ }
   @media only screen and (min-width: 708px) {
-    /* line 109, _general-layout.scss */
+    /* line 116, _general-layout.scss */
     .read, .layout-full-read #content, .layout-read #content {
       margin-left: 0;
       margin-right: 0;
       /*for article with sidebar, add a gutter*/
       /*turn off gutter if no sidebar*/ }
-      /* line 114, _general-layout.scss */
+      /* line 121, _general-layout.scss */
       .read .priority1and2, .read .field-name-body, .layout-full-read #content .priority1and2, .layout-full-read #content .field-name-body, .layout-read #content .priority1and2, .layout-read #content .field-name-body {
         padding-right: 1.8em; }
-      /* line 118, _general-layout.scss */
+      /* line 125, _general-layout.scss */
       .read .layout-full, .layout-full-read #content .layout-full, .layout-read #content .layout-full {
         /*if no sidebar, set margins on semantic level becuase images are full screen*/ }
-        /* line 119, _general-layout.scss */
+        /* line 126, _general-layout.scss */
         .read .layout-full .priority1and2, .layout-full-read #content .layout-full .priority1and2, .layout-read #content .layout-full .priority1and2 {
           padding-right: 0; }
-        /* line 124, _general-layout.scss */
+        /* line 131, _general-layout.scss */
         .read .layout-full .maincontent h2, .read .layout-full .maincontent h3, .read .layout-full .maincontent h4, .read .layout-full .maincontent h5, .read .layout-full .maincontent h6, .read .layout-full .maincontent p, .read .layout-full .maincontent ul, .read .layout-full .maincontent ol, .read .layout-full .maincontent .center-content, .layout-full-read #content .layout-full .maincontent h2, .layout-full-read #content .layout-full .maincontent h3, .layout-full-read #content .layout-full .maincontent h4, .layout-full-read #content .layout-full .maincontent h5, .layout-full-read #content .layout-full .maincontent h6, .layout-full-read #content .layout-full .maincontent p, .layout-full-read #content .layout-full .maincontent ul, .layout-full-read #content .layout-full .maincontent ol, .layout-full-read #content .layout-full .maincontent .center-content, .layout-read #content .layout-full .maincontent h2, .layout-read #content .layout-full .maincontent h3, .layout-read #content .layout-full .maincontent h4, .layout-read #content .layout-full .maincontent h5, .layout-read #content .layout-full .maincontent h6, .layout-read #content .layout-full .maincontent p, .layout-read #content .layout-full .maincontent ul, .layout-read #content .layout-full .maincontent ol, .layout-read #content .layout-full .maincontent .center-content {
           margin-left: 34%;
           margin-right: 1.8em;
           /*prevent margin on nested lists*/ }
-          /* line 128, _general-layout.scss */
+          /* line 135, _general-layout.scss */
           .read .layout-full .maincontent h2 ul, .read .layout-full .maincontent h2 ol, .read .layout-full .maincontent h3 ul, .read .layout-full .maincontent h3 ol, .read .layout-full .maincontent h4 ul, .read .layout-full .maincontent h4 ol, .read .layout-full .maincontent h5 ul, .read .layout-full .maincontent h5 ol, .read .layout-full .maincontent h6 ul, .read .layout-full .maincontent h6 ol, .read .layout-full .maincontent p ul, .read .layout-full .maincontent p ol, .read .layout-full .maincontent ul ul, .read .layout-full .maincontent ul ol, .read .layout-full .maincontent ol ul, .read .layout-full .maincontent ol ol, .read .layout-full .maincontent .center-content ul, .read .layout-full .maincontent .center-content ol, .layout-full-read #content .layout-full .maincontent h2 ul, .layout-full-read #content .layout-full .maincontent h2 ol, .layout-full-read #content .layout-full .maincontent h3 ul, .layout-full-read #content .layout-full .maincontent h3 ol, .layout-full-read #content .layout-full .maincontent h4 ul, .layout-full-read #content .layout-full .maincontent h4 ol, .layout-full-read #content .layout-full .maincontent h5 ul, .layout-full-read #content .layout-full .maincontent h5 ol, .layout-full-read #content .layout-full .maincontent h6 ul, .layout-full-read #content .layout-full .maincontent h6 ol, .layout-full-read #content .layout-full .maincontent p ul, .layout-full-read #content .layout-full .maincontent p ol, .layout-full-read #content .layout-full .maincontent ul ul, .layout-full-read #content .layout-full .maincontent ul ol, .layout-full-read #content .layout-full .maincontent ol ul, .layout-full-read #content .layout-full .maincontent ol ol, .layout-full-read #content .layout-full .maincontent .center-content ul, .layout-full-read #content .layout-full .maincontent .center-content ol, .layout-read #content .layout-full .maincontent h2 ul, .layout-read #content .layout-full .maincontent h2 ol, .layout-read #content .layout-full .maincontent h3 ul, .layout-read #content .layout-full .maincontent h3 ol, .layout-read #content .layout-full .maincontent h4 ul, .layout-read #content .layout-full .maincontent h4 ol, .layout-read #content .layout-full .maincontent h5 ul, .layout-read #content .layout-full .maincontent h5 ol, .layout-read #content .layout-full .maincontent h6 ul, .layout-read #content .layout-full .maincontent h6 ol, .layout-read #content .layout-full .maincontent p ul, .layout-read #content .layout-full .maincontent p ol, .layout-read #content .layout-full .maincontent ul ul, .layout-read #content .layout-full .maincontent ul ol, .layout-read #content .layout-full .maincontent ol ul, .layout-read #content .layout-full .maincontent ol ol, .layout-read #content .layout-full .maincontent .center-content ul, .layout-read #content .layout-full .maincontent .center-content ol {
             margin-left: 0.9em; } }
 
 /*rewrite above rule for asides*/
-/* line 170, _general-layout.scss */
+/* line 177, _general-layout.scss */
 .read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p, .read .priority1and2 .maincontent aside ul, .read .priority1and2 .maincontent aside ol, .read .priority1and2 .maincontent aside .center-content,
 .layout-read .field-name-body aside h2,
 .layout-read .field-name-body aside h3,
@@ -219,7 +219,7 @@ body {
 .layout-read .field-name-body aside .center-content {
   margin-left: 0;
   margin-right: 0; }
-/* line 174, _general-layout.scss */
+/* line 181, _general-layout.scss */
 .read .priority1and2 .maincontent aside h2, .read .priority1and2 .maincontent aside h3, .read .priority1and2 .maincontent aside h4, .read .priority1and2 .maincontent aside h5, .read .priority1and2 .maincontent aside h6, .read .priority1and2 .maincontent aside p,
 .layout-read .field-name-body aside h2,
 .layout-read .field-name-body aside h3,
@@ -239,7 +239,7 @@ body {
 */
 /*if change this, change aside */
 /*in drupal .field-name-body is the body, #block-views-subpage-menu-block is the gridlink*/
-/* line 190, _general-layout.scss */
+/* line 197, _general-layout.scss */
 .maincontent, .field-name-body, #block-views-subpage-menu-block {
   /*on tablets and up, the aside moves to the sidebar*/
   width: 100%;
@@ -248,49 +248,49 @@ body {
   	width: 74%;
   }*/ }
   @media only screen and (min-width: 708px) {
-    /* line 190, _general-layout.scss */
+    /* line 197, _general-layout.scss */
     .maincontent, .field-name-body, #block-views-subpage-menu-block {
       float: left;
       display: inline;
       width: 72%; } }
 
 /*fix error in drupal layout-read where margins get applied multiple times*/
-/* line 204, _general-layout.scss */
-.layout-read .maincontent {
+/* line 211, _general-layout.scss */
+.layout-read .maincontent, .layout-full-read .field-name-body {
   /*tablet and up*/ }
   @media only screen and (min-width: 708px) {
-    /* line 204, _general-layout.scss */
-    .layout-read .maincontent {
+    /* line 211, _general-layout.scss */
+    .layout-read .maincontent, .layout-full-read .field-name-body {
       float: none; } }
 
-/* line 211, _general-layout.scss */
+/* line 218, _general-layout.scss */
 .layout-full .maincontent, .layout-full .field-name-body, .layout-full #block-views-subpage-menu-block, .layout-full-read .maincontent, .layout-full-read .field-name-body, .layout-full-read #block-views-subpage-menu-block {
   width: 100%; }
 
-/* line 217, _general-layout.scss */
+/* line 224, _general-layout.scss */
 .layout-full .maincontent, .layout-full .field-name-body, .layout-full #block-views-subpage-menu-block {
   /*tablet-all*/ }
   @media only screen and (min-width: 708px) and (max-width: 1123px) {
-    /* line 217, _general-layout.scss */
+    /* line 224, _general-layout.scss */
     .layout-full .maincontent, .layout-full .field-name-body, .layout-full #block-views-subpage-menu-block {
       padding-right: 0.45rem; } }
 
 /*add a right margin*/
-/* line 228, _general-layout.scss */
+/* line 235, _general-layout.scss */
 .single {
   margin-right: 0.9rem;
   /*on larger screen, additional margin */
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 228, _general-layout.scss */
+    /* line 235, _general-layout.scss */
     .single {
       margin-right: 1.8em; } }
 
-/* line 236, _general-layout.scss */
+/* line 243, _general-layout.scss */
 .center-content {
   text-align: center; }
 
-/* line 240, _general-layout.scss */
+/* line 247, _general-layout.scss */
 .gridguide {
   margin-left: 0;
   margin-right: 0; }
@@ -800,19 +800,19 @@ aside, #block-views-aside-block {
 
 /*aside is at bottom, not sidebar*/
 /* line 41, _aside.scss */
-.layout-full #block-views-aside-block, .layout-full-read #block-views-aside-block {
+.layout-full #block-views-aside-block, .layout-full aside.priority3, .layout-full-read #block-views-aside-block, .layout-full-read aside.priority3 {
   /*tablet and up*/
   /*screen*/ }
   @media only screen and (min-width: 708px) {
     /* line 41, _aside.scss */
-    .layout-full #block-views-aside-block, .layout-full-read #block-views-aside-block {
+    .layout-full #block-views-aside-block, .layout-full aside.priority3, .layout-full-read #block-views-aside-block, .layout-full-read aside.priority3 {
       width: auto;
       float: none;
       clear: both;
       display: block; } }
   @media only screen and (min-width: 1124px) {
     /* line 41, _aside.scss */
-    .layout-full #block-views-aside-block, .layout-full-read #block-views-aside-block {
+    .layout-full #block-views-aside-block, .layout-full aside.priority3, .layout-full-read #block-views-aside-block, .layout-full-read aside.priority3 {
       padding-right: 1.8rem; } }
 
 /*margin asigned at col-article level*/
@@ -841,7 +841,8 @@ aside, #block-views-aside-block {
   /*@include breakpoint(senior) { 
   	float: left;
   	width:10%
-  }*/ }
+  }*/
+  /*tablet and up*/ }
   @media only screen and (max-width: 707px) {
     /* line 83, _aside.scss */
     .priority3, #block-views-aside-block {
@@ -849,6 +850,10 @@ aside, #block-views-aside-block {
   /* line 88, _aside.scss */
   .priority3 img, #block-views-aside-block img {
     width: 100%; }
+  @media only screen and (min-width: 708px) {
+    /* line 83, _aside.scss */
+    .priority3, #block-views-aside-block {
+      margin-top: 0.9rem; } }
 
 /* line 1, _nav.scss */
 .mainnav, footer {
@@ -1066,259 +1071,261 @@ footer ul.extra {
       padding-top: 0px;
       background-size: auto 14.5px;
       background-position: left center;
-      padding-left: 1em; } }
+      padding-left: 1em;
+      background-repeat: no-repeat; } }
 
 /*icons on footer .extra are top centered */
-/* line 221, _nav.scss */
+/* line 222, _nav.scss */
 footer ul.extra .menu-icon {
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 221, _nav.scss */
+    /* line 222, _nav.scss */
     footer ul.extra .menu-icon {
       background-position: top center;
       padding: 1.6em 0em 0em 0em; } }
 
-/* line 229, _nav.scss */
+/* line 230, _nav.scss */
 .sitemap-simple .menu-icon {
   /*icons on alumni sitemap desktop are large */
   /*tablet and up*/ }
   @media only screen and (min-width: 708px) {
-    /* line 229, _nav.scss */
+    /* line 230, _nav.scss */
     .sitemap-simple .menu-icon {
       background-size: auto 30px;
       background-position: center top;
-      padding-top: 32px; } }
+      padding-top: 32px;
+      background-repeat: no-repeat; } }
 
-/* line 237, _nav.scss */
+/* line 239, _nav.scss */
 .mainnav ul.extra .menu-icon {
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 237, _nav.scss */
+    /* line 239, _nav.scss */
     .mainnav ul.extra .menu-icon {
       padding: 16px 0em 0em 0em;
       background-position: center top; } }
 
 /*individual icon images*/
 /*ie8: channel wide*/
-/* line 25, _nav_icons.scss */
+/* line 23, _nav_icons.scss */
 .icon-contact {
   background-image: url("../img/menu-icon/96px/contact.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 25, _nav_icons.scss */
+    /* line 23, _nav_icons.scss */
     .icon-contact {
       background-image: url("../img/menu-icon/32px/contact.png"); } }
 
-/* line 32, _nav_icons.scss */
+/* line 29, _nav_icons.scss */
 .icon-search {
   background-image: url("../img/menu-icon/96px/search.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 32, _nav_icons.scss */
+    /* line 29, _nav_icons.scss */
     .icon-search {
       background-image: url("../img/menu-icon/32px/search.png"); } }
 
-/* line 38, _nav_icons.scss */
+/* line 35, _nav_icons.scss */
 .icon-profile {
   background-image: url("../img/menu-icon/96px/profile.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 38, _nav_icons.scss */
+    /* line 35, _nav_icons.scss */
     .icon-profile {
       background-image: url("../img/menu-icon/32px/profile.png"); } }
 
-/* line 45, _nav_icons.scss */
+/* line 42, _nav_icons.scss */
 .icon-logout {
   background-image: url("../img/menu-icon/96px/logout.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 45, _nav_icons.scss */
+    /* line 42, _nav_icons.scss */
     .icon-logout {
       background-image: url("../img/menu-icon/32px/logout.png"); } }
 
-/* line 52, _nav_icons.scss */
+/* line 49, _nav_icons.scss */
 .icon-give {
   background-image: url("../img/menu-icon/96px/give.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 52, _nav_icons.scss */
+    /* line 49, _nav_icons.scss */
     .icon-give {
       background-image: url("../img/menu-icon/32px/give.png"); } }
 
 /*ie8 alumni*/
-/* line 141, _nav_icons.scss */
+/* line 138, _nav_icons.scss */
 .mainnav .icon-events {
   background-image: url("../img/menu-icon/96px/events.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 141, _nav_icons.scss */
+    /* line 138, _nav_icons.scss */
     .mainnav .icon-events {
       padding-left: 1.3em; } }
 
-/* line 147, _nav_icons.scss */
+/* line 144, _nav_icons.scss */
 .sitemap .icon-events, .mainnav .icon-events {
   /*tablet-all*/
   /*screen*/ }
   @media only screen and (min-width: 708px) and (max-width: 1123px) {
-    /* line 147, _nav_icons.scss */
+    /* line 144, _nav_icons.scss */
     .sitemap .icon-events, .mainnav .icon-events {
       background-image: url("../img/menu-icon/96px/events.png"); } }
   @media only screen and (min-width: 1124px) {
-    /* line 147, _nav_icons.scss */
+    /* line 144, _nav_icons.scss */
     .sitemap .icon-events, .mainnav .icon-events {
       background-image: url("../img/menu-icon/32px/events.png"); } }
 
-/* line 157, _nav_icons.scss */
+/* line 154, _nav_icons.scss */
 .mainnav .icon-chapters {
   background-image: url("../img/menu-icon/96px/chapters.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 157, _nav_icons.scss */
+    /* line 154, _nav_icons.scss */
     .mainnav .icon-chapters {
       padding-left: 1.7em; } }
 
-/* line 163, _nav_icons.scss */
+/* line 160, _nav_icons.scss */
 .sitemap .icon-chapters, .mainnav .icon-chapters {
   /*tablet-all*/
   /*screen*/ }
   @media only screen and (min-width: 708px) and (max-width: 1123px) {
-    /* line 163, _nav_icons.scss */
+    /* line 160, _nav_icons.scss */
     .sitemap .icon-chapters, .mainnav .icon-chapters {
       background-image: url("../img/menu-icon/96px/chapters.png"); } }
   @media only screen and (min-width: 1124px) {
-    /* line 163, _nav_icons.scss */
+    /* line 160, _nav_icons.scss */
     .sitemap .icon-chapters, .mainnav .icon-chapters {
       background-image: url("../img/menu-icon/32px/chapters.png"); } }
 
-/* line 173, _nav_icons.scss */
+/* line 170, _nav_icons.scss */
 .mainnav .icon-network {
   background-image: url("../img/menu-icon/96px/network.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 173, _nav_icons.scss */
+    /* line 170, _nav_icons.scss */
     .mainnav .icon-network {
       padding-left: 1.9em; } }
 
-/* line 179, _nav_icons.scss */
+/* line 176, _nav_icons.scss */
 .sitemap .icon-network, .mainnav .icon-network {
   /*tablet-all*/
   /*screen*/ }
   @media only screen and (min-width: 708px) and (max-width: 1123px) {
-    /* line 179, _nav_icons.scss */
+    /* line 176, _nav_icons.scss */
     .sitemap .icon-network, .mainnav .icon-network {
       background-image: url("../img/menu-icon/96px/network.png"); } }
   @media only screen and (min-width: 1124px) {
-    /* line 179, _nav_icons.scss */
+    /* line 176, _nav_icons.scss */
     .sitemap .icon-network, .mainnav .icon-network {
       background-image: url("../img/menu-icon/32px/network.png"); } }
 
-/* line 188, _nav_icons.scss */
+/* line 185, _nav_icons.scss */
 .mainnav .icon-reunion {
   background-image: url("../img/menu-icon/96px/ampersand.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 188, _nav_icons.scss */
+    /* line 185, _nav_icons.scss */
     .mainnav .icon-reunion {
       padding-left: 1.3em; } }
 
-/* line 194, _nav_icons.scss */
+/* line 191, _nav_icons.scss */
 .sitemap .icon-reunion, .mainnav .icon-reunion {
   /*tablet-all*/
   /*screen*/ }
   @media only screen and (min-width: 708px) and (max-width: 1123px) {
-    /* line 194, _nav_icons.scss */
+    /* line 191, _nav_icons.scss */
     .sitemap .icon-reunion, .mainnav .icon-reunion {
       background-image: url("../img/menu-icon/96px/ampersand.png"); } }
   @media only screen and (min-width: 1124px) {
-    /* line 194, _nav_icons.scss */
+    /* line 191, _nav_icons.scss */
     .sitemap .icon-reunion, .mainnav .icon-reunion {
       background-image: url("../img/menu-icon/32px/ampersand.png"); } }
 
-/* line 203, _nav_icons.scss */
+/* line 200, _nav_icons.scss */
 .mainnav .icon-products {
   background-image: url("../img/menu-icon/96px/products.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 203, _nav_icons.scss */
+    /* line 200, _nav_icons.scss */
     .mainnav .icon-products {
       padding-left: 1.2em; } }
 
-/* line 209, _nav_icons.scss */
+/* line 206, _nav_icons.scss */
 .sitemap .icon-products, .mainnav .icon-products {
   /*tablet-all*/
   /*screen*/ }
   @media only screen and (min-width: 708px) and (max-width: 1123px) {
-    /* line 209, _nav_icons.scss */
+    /* line 206, _nav_icons.scss */
     .sitemap .icon-products, .mainnav .icon-products {
       background-image: url("../img/menu-icon/96px/products.png"); } }
   @media only screen and (min-width: 1124px) {
-    /* line 209, _nav_icons.scss */
+    /* line 206, _nav_icons.scss */
     .sitemap .icon-products, .mainnav .icon-products {
       background-image: url("../img/menu-icon/32px/products.png"); } }
 
-/* line 219, _nav_icons.scss */
+/* line 216, _nav_icons.scss */
 .mainnav .icon-volunteer {
   background-image: url("../img/menu-icon/96px/volunteer.png");
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 219, _nav_icons.scss */
+    /* line 216, _nav_icons.scss */
     .mainnav .icon-volunteer {
       padding-left: 1.3em; } }
 
-/* line 225, _nav_icons.scss */
+/* line 222, _nav_icons.scss */
 .sitemap .icon-volunteer, .mainnav .icon-volunteer {
   /*tablet-all*/
   /*screen*/ }
   @media only screen and (min-width: 708px) and (max-width: 1123px) {
-    /* line 225, _nav_icons.scss */
+    /* line 222, _nav_icons.scss */
     .sitemap .icon-volunteer, .mainnav .icon-volunteer {
       background-image: url("../img/menu-icon/96px/volunteer.png"); } }
   @media only screen and (min-width: 1124px) {
-    /* line 225, _nav_icons.scss */
+    /* line 222, _nav_icons.scss */
     .sitemap .icon-volunteer, .mainnav .icon-volunteer {
       background-image: url("../img/menu-icon/32px/volunteer.png"); } }
 
-/* line 235, _nav_icons.scss */
+/* line 232, _nav_icons.scss */
 .mainnav .icon-giving {
   background-image: url("../img/menu-icon/96px/giving.png"); }
 
-/* line 238, _nav_icons.scss */
+/* line 235, _nav_icons.scss */
 .sitemap .icon-giving, .mainnav .icon-giving {
   /*tablet-all*/
   /*screen*/ }
   @media only screen and (min-width: 708px) and (max-width: 1123px) {
-    /* line 238, _nav_icons.scss */
+    /* line 235, _nav_icons.scss */
     .sitemap .icon-giving, .mainnav .icon-giving {
       background-image: url("../img/menu-icon/96px/giving.png"); } }
   @media only screen and (min-width: 1124px) {
-    /* line 238, _nav_icons.scss */
+    /* line 235, _nav_icons.scss */
     .sitemap .icon-giving, .mainnav .icon-giving {
       background-image: url("../img/menu-icon/32px/giving.png"); } }
 
-/* line 248, _nav_icons.scss */
+/* line 245, _nav_icons.scss */
 .mainnav .icon-parents {
   background-image: url("../img/menu-icon/96px/parents.png"); }
 
-/* line 251, _nav_icons.scss */
+/* line 248, _nav_icons.scss */
 .sitemap .icon-parents, .mainnav .icon-parents {
   /*tablet-all*/
   /*screen*/ }
   @media only screen and (min-width: 708px) and (max-width: 1123px) {
-    /* line 251, _nav_icons.scss */
+    /* line 248, _nav_icons.scss */
     .sitemap .icon-parents, .mainnav .icon-parents {
       background-image: url("../img/menu-icon/96px/parents.png"); } }
   @media only screen and (min-width: 1124px) {
-    /* line 251, _nav_icons.scss */
+    /* line 248, _nav_icons.scss */
     .sitemap .icon-parents, .mainnav .icon-parents {
       background-image: url("../img/menu-icon/32px/parents.png"); } }
 
 /*turn off background images in drupal*/
-/* line 264, _nav.scss */
+/* line 266, _nav.scss */
 .toggle-menu-icon:hover {
   cursor: pointer; }
 
 /*javascript fires new class, which moves menu */
-/* line 270, _nav.scss */
+/* line 272, _nav.scss */
 body.menu-on .mainnav {
   -webkit-transform: translate(0%);
   -moz-transform: translate(0%);
@@ -1512,20 +1519,21 @@ img {
     /* line 14, _images.scss */
     .col-article img, .layout-full-read article img, .layout-read article img {
       max-height: 150px;
-      width: auto; } }
+      width: auto !important; } }
 
 /* line 23, _images.scss */
 .layout-full, .layout-full-read {
   /*fullimg figure and images*/ }
   /* line 25, _images.scss */
-  .layout-full .fullimg img, .layout-full img.fullimg, .layout-full-read .fullimg img, .layout-full-read img.fullimg {
+  .layout-full .fullimg img, .layout-full img.fullimg, .layout-full .field-name-field-image img, .layout-full-read .fullimg img, .layout-full-read img.fullimg, .layout-full-read .field-name-field-image img {
     width: 100%;
     /*full screen*/
+    height: auto;
     /*max-width and slide left for images on read adult */
     /*screen*/ }
     @media only screen and (min-width: 1124px) {
       /* line 25, _images.scss */
-      .layout-full .fullimg img, .layout-full img.fullimg, .layout-full-read .fullimg img, .layout-full-read img.fullimg {
+      .layout-full .fullimg img, .layout-full img.fullimg, .layout-full .field-name-field-image img, .layout-full-read .fullimg img, .layout-full-read img.fullimg, .layout-full-read .field-name-field-image img {
         max-width: 30em;
         /* or else too big on big screens */
         float: left;
@@ -2233,14 +2241,14 @@ sub {
   bottom: -0.25em; }
 
 /* line 1, _typography-figure-aside.scss */
-figcaption {
+figcaption, .field-name-field-caption {
   font-size: .8em;
   font-weight: 500;
   /*text-align: justify;*/
   /* large phone (landscape) ----------- */ }
   @media only screen and (min-width: 320px) and (max-width: 707px) and (orientation: landscape) {
     /* line 1, _typography-figure-aside.scss */
-    figcaption {
+    figcaption, .field-name-field-caption {
       font-size: .5em; } }
 
 /* line 10, _typography-figure-aside.scss */
@@ -2248,11 +2256,11 @@ figcaption {
   /*add right margin/gutter on figcaption fullimg and imgright with sidebar*/
   /*tablet and up*/ }
   /* line 11, _typography-figure-aside.scss */
-  .read figcaption, .layout-full-read figcaption, .layout-read figcaption {
+  .read figcaption, .read .field-name-field-caption, .layout-full-read figcaption, .layout-full-read .field-name-field-caption, .layout-read figcaption, .layout-read .field-name-field-caption {
     /*tablet and up*/ }
     @media only screen and (min-width: 708px) {
       /* line 11, _typography-figure-aside.scss */
-      .read figcaption, .layout-full-read figcaption, .layout-read figcaption {
+      .read figcaption, .read .field-name-field-caption, .layout-full-read figcaption, .layout-full-read .field-name-field-caption, .layout-read figcaption, .layout-read .field-name-field-caption {
         width: 28%;
         float: left;
         clear: left;
@@ -2265,13 +2273,21 @@ figcaption {
     .read, .layout-full-read, .layout-read {
       /*turn off for .full, gutters are set elsewhere*/ }
       /* line 25, _typography-figure-aside.scss */
-      .read .fullimg figcaption, .read .imgright figcaption, .layout-full-read .fullimg figcaption, .layout-full-read .imgright figcaption, .layout-read .fullimg figcaption, .layout-read .imgright figcaption {
+      .read .fullimg figcaption, .read .fullimg .field-name-field-caption, .read .imgright figcaption, .read .imgright .field-name-field-caption, .read .field-name-field-media figcaption, .read .field-name-field-media .field-name-field-caption, .layout-full-read .fullimg figcaption, .layout-full-read .fullimg .field-name-field-caption, .layout-full-read .imgright figcaption, .layout-full-read .imgright .field-name-field-caption, .layout-full-read .field-name-field-media figcaption, .layout-full-read .field-name-field-media .field-name-field-caption, .layout-read .fullimg figcaption, .layout-read .fullimg .field-name-field-caption, .layout-read .imgright figcaption, .layout-read .imgright .field-name-field-caption, .layout-read .field-name-field-media figcaption, .layout-read .field-name-field-media .field-name-field-caption {
         margin-right: 0.9rem; }
-      /* line 30, _typography-figure-aside.scss */
-      .read .layout-full figcaption, .layout-full-read .layout-full figcaption, .layout-read .layout-full figcaption {
+      /* line 31, _typography-figure-aside.scss */
+      .read .layout-full figcaption, .read .field-name-field-caption figcaption, .layout-full-read .layout-full figcaption, .layout-full-read .field-name-field-caption figcaption, .layout-read .layout-full figcaption, .layout-read .field-name-field-caption figcaption {
         margin-right: 0; } }
 
-/* line 42, _typography-figure-aside.scss */
+/* line 38, _typography-figure-aside.scss */
+.read .aside figcaption, .layout-full-read .aside figcaption, .layout-read .aside figcaption {
+  /*tablet and up*/ }
+  @media only screen and (min-width: 708px) {
+    /* line 38, _typography-figure-aside.scss */
+    .read .aside figcaption, .layout-full-read .aside figcaption, .layout-read .aside figcaption {
+      margin-left: 0; } }
+
+/* line 52, _typography-figure-aside.scss */
 .symmetry figcaption {
   width: auto;
   margin-left: 0;
@@ -2284,19 +2300,19 @@ figcaption {
 	}
 }
 */
-/* line 55, _typography-figure-aside.scss */
+/* line 65, _typography-figure-aside.scss */
 aside, #block-views-aside-block {
   /*tablet and up*/
   /*screen*/ }
   @media only screen and (min-width: 708px) {
-    /* line 55, _typography-figure-aside.scss */
+    /* line 65, _typography-figure-aside.scss */
     aside, #block-views-aside-block {
       font-size: .8em; }
-      /* line 58, _typography-figure-aside.scss */
+      /* line 68, _typography-figure-aside.scss */
       aside p, #block-views-aside-block p {
         text-align: left; } }
   @media only screen and (min-width: 1124px) {
-    /* line 63, _typography-figure-aside.scss */
+    /* line 73, _typography-figure-aside.scss */
     aside p, #block-views-aside-block p {
       font-size: .9em; } }
 
@@ -2648,21 +2664,22 @@ close text gets spacing
 .socialicon {
   height: 20px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: auto; }
 
 /*this selector is fired with javascript*/
-/* line 96, _social.scss */
+/* line 97, _social.scss */
 body.follow-on {
   /*When activated and on hover, change text after social media icon*/
   /*when one is activated, blur the non activated icon*/
   /*when one is activated and non activated is hovered: unblur the non activated icon*/ }
-  /* line 97, _social.scss */
+  /* line 98, _social.scss */
   body.follow-on .follow-toggle {
     background-color: #333333; }
-    /* line 99, _social.scss */
+    /* line 100, _social.scss */
     body.follow-on .follow-toggle a {
       background: #333333; }
-  /* line 104, _social.scss */
+  /* line 105, _social.scss */
   body.follow-on .follow {
     opacity: 1;
     z-index: 3;
@@ -2672,41 +2689,41 @@ body.follow-on {
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
     transform: translateY(0%); }
-  /* line 114, _social.scss */
+  /* line 115, _social.scss */
   body.follow-on .follow-toggle:hover .follow-open-text:after {
     content: "Close X"; }
-  /* line 118, _social.scss */
+  /* line 119, _social.scss */
   body.follow-on .share-toggle .socialicon {
     opacity: 0.4;
     filter: alpha(opacity=40);
     /* For IE8 and earlier */ }
-  /* line 123, _social.scss */
+  /* line 124, _social.scss */
   body.follow-on .share-toggle:hover .socialicon {
     opacity: 1;
     filter: alpha(opacity=100);
     /* For IE8 and earlier */ }
 
 /*set text after social media icon*/
-/* line 130, _social.scss */
+/* line 131, _social.scss */
 .share-open-text:after {
   content: "Share"; }
 
-/* line 133, _social.scss */
+/* line 134, _social.scss */
 .follow-open-text:after {
   content: "Follow"; }
 
-/* line 137, _social.scss */
+/* line 138, _social.scss */
 body.share-on {
   /*When activated and on hover, change text after social media icon*/
   /*when one is activated, blur the non activated icon*/
   /*when one is activated and non activated is hovered: unblur the non activated icon*/ }
-  /* line 138, _social.scss */
+  /* line 139, _social.scss */
   body.share-on .share-toggle {
     background-color: #333333; }
-    /* line 140, _social.scss */
+    /* line 141, _social.scss */
     body.share-on .share-toggle a {
       background: #333333; }
-  /* line 144, _social.scss */
+  /* line 145, _social.scss */
   body.share-on .share {
     opacity: 1;
     padding-bottom: 55px;
@@ -2715,22 +2732,22 @@ body.share-on {
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
     transform: translateY(0%); }
-  /* line 153, _social.scss */
+  /* line 154, _social.scss */
   body.share-on .share-toggle:hover .share-open-text:after {
     content: "Close X"; }
-  /* line 157, _social.scss */
+  /* line 158, _social.scss */
   body.share-on .follow-toggle .socialicon {
     opacity: 0.4;
     filter: alpha(opacity=40);
     /* For IE8 and earlier */ }
-  /* line 162, _social.scss */
+  /* line 163, _social.scss */
   body.share-on .follow-toggle:hover .socialicon {
     opacity: 1;
     filter: alpha(opacity=100);
     /* For IE8 and earlier */ }
 
 /*css turned on by javascript*/
-/* line 168, _social.scss */
+/* line 169, _social.scss */
 body.social-off .social {
   /*with transitions it fades out. In case they have a keyboard attached, it still looks nice*/
   opacity: 0;
@@ -2739,7 +2756,7 @@ body.social-off .social {
   /*still works with large screens, which presumably don't have on screen keyboards*/
   /*screen*/ }
   @media only screen and (min-width: 1124px) {
-    /* line 168, _social.scss */
+    /* line 169, _social.scss */
     body.social-off .social {
       opacity: 1;
       display: block; } }
@@ -2791,11 +2808,11 @@ figure {
 
 /*add bar before caption on .read */
 /* line 25, _figures.scss */
-.fullimg figcaption:before, .imgright figcaption:before {
+.fullimg figcaption:before, .imgright figcaption:before, .field-name-field-caption:before {
   /*tablet and up*/ }
   @media only screen and (min-width: 708px) {
     /* line 25, _figures.scss */
-    .fullimg figcaption:before, .imgright figcaption:before {
+    .fullimg figcaption:before, .imgright figcaption:before, .field-name-field-caption:before {
       content: '';
       border-bottom: 0.4em solid #003399;
       margin-top: 1.8rem;
@@ -2917,13 +2934,15 @@ figcaption {
 
 /*add bar before caption on .read */
 /* line 140, _figures.scss */
-.withsidebar .fullimg figcaption:before, .layout-read .fullimg figcaption:before,
-.withsidebar .imgright .layout-read .imgright figcaption:before {
+.withsidebar .fullimg figcaption:before, .withsidebar .fullimg .field-name-field-caption:before, .layout-read .fullimg figcaption:before, .layout-read .fullimg .field-name-field-caption:before, .field-name-field-media figcaption:before, .field-name-field-media .field-name-field-caption:before,
+.withsidebar .imgright .layout-read .imgright figcaption:before,
+.withsidebar .imgright .layout-read .imgright .field-name-field-caption:before {
   /*tablet and up*/ }
   @media only screen and (min-width: 708px) {
     /* line 140, _figures.scss */
-    .withsidebar .fullimg figcaption:before, .layout-read .fullimg figcaption:before,
-    .withsidebar .imgright .layout-read .imgright figcaption:before {
+    .withsidebar .fullimg figcaption:before, .withsidebar .fullimg .field-name-field-caption:before, .layout-read .fullimg figcaption:before, .layout-read .fullimg .field-name-field-caption:before, .field-name-field-media figcaption:before, .field-name-field-media .field-name-field-caption:before,
+    .withsidebar .imgright .layout-read .imgright figcaption:before,
+    .withsidebar .imgright .layout-read .imgright .field-name-field-caption:before {
       margin-top: 1.35rem; } }
 
 /*space between figcaption and mainbody on article with sidebar */
