@@ -57,7 +57,7 @@
             <li><a href="3" class="menu-icon icon-contact" title="Contact Us"><span class="mobileonly">Contact</span></a></li>
             <li><a href="3" title="Search Website" class="menu-icon icon-search"><span class="mobileonly">Search</span></a></li>
             <li><a href="3" class="menu-icon icon-profile" title="Profile Settings"><span class="mobileonly">Profile Settings</span></a></li>
-            <li class="mobileonly" title="Giving Form"><a href="3" class="menu-icon icon-give title="Give Now">Give Now</a></li>
+            <li class="mobileonly" title="Giving Form"><a href="3" class="menu-icon icon-give" title="Give Now">Give Now</a></li>
           </ul>
         </nav>
       </div><!--end of header-wrapper-->
@@ -67,19 +67,20 @@
         This is the description for the Giving Channel Template. If you notice any bugs or have any questions, feel free to <a href="mailto:chamem@rpi.edu?subject=Redesign Bug Report">report them to me</a>.</p>
        
         
-        <p>The menu icons are background images</p>
+        <p>The menu icons are background images, using a responsive sprite</p>
         <h3>Log In</h3>
         <p>
           <a href="giving.html">Giving Template #1 - Not logged in</a><br>
+          <a href="iModules-form.html">Form Example</a><br>
           <a href="index-logged-in.html">Logged In</a><br>
           Can you make sure the log in, log out, and update profile links go to the appropriate page?
         </p>
         <p>If not logged in, use this code in the nav:</p>
         <code>
-         <ul class="extra">
+        <ul class="extra">
             <li><a href="3" class="menu-icon icon-contact" title="Contact Us"><span class="mobileonly">Contact</span></a></li>
             <li><a href="3" title="Search Website" class="menu-icon icon-search"><span class="mobileonly">Search</span></a></li>
-            <li><a href="3" class="menu-icon icon-profile" title="Profile Settings"><span class="mobileonly">Profile Settings</span></a></li>
+            <li><a href="3" class="menu-icon icon-profile" title="Profile Settings"><span class="mobileonly">Log In</span></a></li>
             <li class="mobileonly" title="Giving Form"><a href="3" class="menu-icon icon-give" title="Give Now">Give Now</a></li>
           </ul>
         </code>
@@ -88,7 +89,7 @@
          <ul class="extra log">
             <li><a href="3" class="menu-icon icon-contact" title="Contact Us"><span class="mobileonly">Contact</span></a></li>
             <li><a href="3" title="Search Website" class="menu-icon icon-search"><span class="mobileonly">Search</span></a></li>
-            <li><a href="3" class="menu-icon icon-profile" title="Profile Settings"><span class="mobileonly">Profile Settings</span></a></li>
+            <li><a href="3" class="menu-icon icon-profile" title="Profile Settings"><span class="mobileonly">Profile</span></a></li>
             <li>
               <a href="3" class="menu-icon icon-logout">
                 <span class="mobileonly">Log Out</span>
@@ -125,7 +126,7 @@
       </code>
       <p>Logged In:</p>
       <code>
-       <ul class="extra log">
+       <ul class="extra">
           <li>
             <a href="http://alumni.rpi.edu/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=59&amp;cid=211" class="menu-icon icon-contact" title="Contact Us">
               Contact
@@ -141,11 +142,6 @@
             Log In
             </a>
           </li>
-          <li>
-            <a href="https://securelb.imodules.com/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=3&amp;cid=40&amp;returnurl=http%3a%2f%2falumni.rpi.edu%2fs%2f1225%2fstart.aspx" class="menu-icon icon-logout">
-            Log Out
-            </a>
-          </li>
           <li class="mobileonly">
             <a href="https://securelb.imodules.com/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=3&amp;id=40&amp;returnurl=http%3a%2f%2falumni.rpi.edu%2fs%2f1225%2fstart.aspx" class="menu-icon icon-give">
               Give Now
@@ -154,7 +150,9 @@
         </ul>
         </code>
 
-        
+      <h3>Sidebar - Same Note as Alumni</h3>
+      <p><strong><a href="giving-no-sidebar.html">Without Sidebar</a></strong></p>
+      <p>Remove class="layout-full" from the content block and the aside comes to the side. Can you set up a JavaScript to do this so that we don't need to create a separate template? Chris suggested we wrap the aside content inside a div class="sidebar" to specify that we have a sidebar. That works for us, just let me know what works best for you. </p>   
       <h3>Meta Tags - Same Note as Alumni</h3>
       <p>Add the page specific meta tags to the head of the template. I'm not sure how you want to do this so I left it blank. Except the title, that's in there. But it shouldn't be coded on a template wide basis.</p>
       <h3>Top Menu - Same Note as Alumni</h3>
