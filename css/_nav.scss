@@ -157,11 +157,11 @@
     @include breakpoint(adult) {
       @if $alumni{
         margin-top: 2em;
+        margin-right: .4em;
       }
       @else {
-        margin-top: .8em;
+        margin-top: .7em;
       }
-      margin-right: .8em;
       padding-top: 0em;
     }
   }

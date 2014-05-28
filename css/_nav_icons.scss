@@ -302,7 +302,7 @@ for phone, no icon in nav sitemap
       .is-expanded:nth-child(1) .menu__link, .is-expanded:nth-child(2) .menu__link, .is-expanded:nth-child(3) .menu__link, .is-expanded:nth-child(4) .menu__link {
         background-image: url('../img/menu-icon/givingtablet-s9f8b61ae95.png');
         @include breakpoint (adult) {
-          background: url('../img/menu-icon/giving16-s84369bfae1.png') no-repeat;
+          background: url('../img/menu-icon/giving16-s036b0707ef.png') no-repeat;
         }
       }
     }
@@ -311,7 +311,7 @@ for phone, no icon in nav sitemap
       .icon-impact, .icon-impact:hover, .icon-ways, .icon-ways:hover, .icon-supporters, .icon-supporters:hover, .icon-news, .icon-news:hover, .icon-profile, .icon-profile:hover, .icon-search, .icon-search:hover, .icon-contact, .icon-contact:hover, .icon-logout, .icon-logout:hover, .icon-give, .icon-give:hover {
         background-image: url('../img/menu-icon/givingtablet-s9f8b61ae95.png');
         @include breakpoint (adult) {
-          background: url('../img/menu-icon/giving16-s84369bfae1.png') no-repeat;
+          background: url('../img/menu-icon/giving16-s036b0707ef.png') no-repeat;
         }
       }
     }
@@ -323,7 +323,7 @@ for phone, no icon in nav sitemap
           background-image: url('../img/menu-icon/givingtablet-s9f8b61ae95.png');
         }
         @include breakpoint (adult) {
-          background: url('../img/menu-icon/giving16-s84369bfae1.png') no-repeat;
+          background: url('../img/menu-icon/giving16-s036b0707ef.png') no-repeat;
         }
       }
     }
@@ -443,6 +443,7 @@ for phone, no icon in nav sitemap
         background-position: center 43.5%;
         background-size: 5.5em auto;
         @include breakpoint (adult) {
+          background-size: auto;
           @if $ie8 {
             background-position: 0 -142px;
           }
@@ -552,7 +553,7 @@ for phone, no icon in nav sitemap
       .icon-profile:hover {
         background-position: center 71.4%;
         @include breakpoint (adult) {
-          background-position: 0 -248px;
+          background-position: 0 -227px;
          }
       }
       .icon-search {
@@ -562,12 +563,13 @@ for phone, no icon in nav sitemap
           background-position: 0 -395px;
           padding-left: 1.8em;
           background-size: auto;
+
          }
       }
       .icon-search:hover {
         background-position: center 32.4%;
         @include breakpoint (adult) {
-          background-position: 0 -227px;
+          background-position: 0 -206px;
         }
        }
       .icon-contact {
@@ -576,12 +578,13 @@ for phone, no icon in nav sitemap
         @include breakpoint (adult) {
           background-position: 0 -290px;
           background-size: auto;
+
         }
       }
       .icon-contact:hover {
         background-position: center 40.0%;
         @include breakpoint (adult) {
-          background-position: 0 -166px;
+          background-position: 0 -248px;
         }
       }
       .icon-logout {
