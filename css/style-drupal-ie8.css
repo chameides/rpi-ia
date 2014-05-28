@@ -120,6 +120,9 @@ body {
   background: white; }
 
 /*drupal uses #content for .content*/
+.layout-full-read article {
+  width: 100%; }
+
 #content {
   margin-left: 15px;
   /*if change this, change .layout-full img in images.scss*/
@@ -146,7 +149,8 @@ body {
 .layout-full-read #content article img, .layout-full-read #content article p, .layout-full-read #content article h1, .layout-full-read #content article h2, .layout-full-read #content article h3, .layout-full-read #content article h4, .layout-full-read #content article h5, .layout-full-read #content article h6, .layout-full-read #content article ol, .layout-full-read #content article li, .layout-read #content article img, .layout-read #content article p, .layout-read #content article h1, .layout-read #content article h2, .layout-read #content article h3, .layout-read #content article h4, .layout-read #content article h5, .layout-read #content article h6, .layout-read #content article ol, .layout-read #content article li {
   padding-right: 0; }
 .layout-full-read #block-views-subpage-menu-block, .layout-read #block-views-subpage-menu-block {
-  padding-left: 15px;
+  /*padding set in article, no padding for block, see platforms
+  padding-left: $margin2;*/
   padding-left: 30px; }
 
 .read, .layout-full-read #content, .layout-read #content {
@@ -155,14 +159,14 @@ body {
   /*for article with sidebar, add a gutter*/
   /*turn off gutter if no sidebar*/ }
   .read .priority1and2, .read .field-name-body, .layout-full-read #content .priority1and2, .layout-full-read #content .field-name-body, .layout-read #content .priority1and2, .layout-read #content .field-name-body {
-    padding-right: 1.8em; }
+    padding-right: 30px; }
   .read .layout-full, .layout-full-read #content .layout-full, .layout-read #content .layout-full {
     /*if no sidebar, set margins on semantic level becuase images are full screen*/ }
     .read .layout-full .priority1and2, .layout-full-read #content .layout-full .priority1and2, .layout-read #content .layout-full .priority1and2 {
       padding-right: 0; }
     .read .layout-full .maincontent h2, .read .layout-full .maincontent h3, .read .layout-full .maincontent h4, .read .layout-full .maincontent h5, .read .layout-full .maincontent h6, .read .layout-full .maincontent p, .read .layout-full .maincontent ul, .read .layout-full .maincontent ol, .read .layout-full .maincontent .center-content, .layout-full-read #content .layout-full .maincontent h2, .layout-full-read #content .layout-full .maincontent h3, .layout-full-read #content .layout-full .maincontent h4, .layout-full-read #content .layout-full .maincontent h5, .layout-full-read #content .layout-full .maincontent h6, .layout-full-read #content .layout-full .maincontent p, .layout-full-read #content .layout-full .maincontent ul, .layout-full-read #content .layout-full .maincontent ol, .layout-full-read #content .layout-full .maincontent .center-content, .layout-read #content .layout-full .maincontent h2, .layout-read #content .layout-full .maincontent h3, .layout-read #content .layout-full .maincontent h4, .layout-read #content .layout-full .maincontent h5, .layout-read #content .layout-full .maincontent h6, .layout-read #content .layout-full .maincontent p, .layout-read #content .layout-full .maincontent ul, .layout-read #content .layout-full .maincontent ol, .layout-read #content .layout-full .maincontent .center-content {
       margin-left: 34%;
-      margin-right: 1.8em;
+      margin-right: 30px;
       /*prevent margin on nested lists*/ }
       .read .layout-full .maincontent h2 ul, .read .layout-full .maincontent h2 ol, .read .layout-full .maincontent h3 ul, .read .layout-full .maincontent h3 ol, .read .layout-full .maincontent h4 ul, .read .layout-full .maincontent h4 ol, .read .layout-full .maincontent h5 ul, .read .layout-full .maincontent h5 ol, .read .layout-full .maincontent h6 ul, .read .layout-full .maincontent h6 ol, .read .layout-full .maincontent p ul, .read .layout-full .maincontent p ol, .read .layout-full .maincontent ul ul, .read .layout-full .maincontent ul ol, .read .layout-full .maincontent ol ul, .read .layout-full .maincontent ol ol, .read .layout-full .maincontent .center-content ul, .read .layout-full .maincontent .center-content ol, .layout-full-read #content .layout-full .maincontent h2 ul, .layout-full-read #content .layout-full .maincontent h2 ol, .layout-full-read #content .layout-full .maincontent h3 ul, .layout-full-read #content .layout-full .maincontent h3 ol, .layout-full-read #content .layout-full .maincontent h4 ul, .layout-full-read #content .layout-full .maincontent h4 ol, .layout-full-read #content .layout-full .maincontent h5 ul, .layout-full-read #content .layout-full .maincontent h5 ol, .layout-full-read #content .layout-full .maincontent h6 ul, .layout-full-read #content .layout-full .maincontent h6 ol, .layout-full-read #content .layout-full .maincontent p ul, .layout-full-read #content .layout-full .maincontent p ol, .layout-full-read #content .layout-full .maincontent ul ul, .layout-full-read #content .layout-full .maincontent ul ol, .layout-full-read #content .layout-full .maincontent ol ul, .layout-full-read #content .layout-full .maincontent ol ol, .layout-full-read #content .layout-full .maincontent .center-content ul, .layout-full-read #content .layout-full .maincontent .center-content ol, .layout-read #content .layout-full .maincontent h2 ul, .layout-read #content .layout-full .maincontent h2 ol, .layout-read #content .layout-full .maincontent h3 ul, .layout-read #content .layout-full .maincontent h3 ol, .layout-read #content .layout-full .maincontent h4 ul, .layout-read #content .layout-full .maincontent h4 ol, .layout-read #content .layout-full .maincontent h5 ul, .layout-read #content .layout-full .maincontent h5 ol, .layout-read #content .layout-full .maincontent h6 ul, .layout-read #content .layout-full .maincontent h6 ol, .layout-read #content .layout-full .maincontent p ul, .layout-read #content .layout-full .maincontent p ol, .layout-read #content .layout-full .maincontent ul ul, .layout-read #content .layout-full .maincontent ul ol, .layout-read #content .layout-full .maincontent ol ul, .layout-read #content .layout-full .maincontent ol ol, .layout-read #content .layout-full .maincontent .center-content ul, .layout-read #content .layout-full .maincontent .center-content ol {
         margin-left: 0.9em; }
@@ -172,7 +176,7 @@ body {
   /*elements inside an aside inside the main article get no margin*/ }
   .layout-full-read #content .field-name-body h2, .layout-full-read #content .field-name-body h3, .layout-full-read #content .field-name-body h4, .layout-full-read #content .field-name-body h5, .layout-full-read #content .field-name-body h6, .layout-full-read #content .field-name-body p, .layout-full-read #content .field-name-body ul, .layout-full-read #content .field-name-body ol, .layout-full-read #content .field-name-body .center-content {
     margin-left: 34%;
-    margin-right: 1.8em;
+    margin-right: 30px;
     /*prevent margin on nested lists*/ }
     .layout-full-read #content .field-name-body h2 ul, .layout-full-read #content .field-name-body h2 ol, .layout-full-read #content .field-name-body h3 ul, .layout-full-read #content .field-name-body h3 ol, .layout-full-read #content .field-name-body h4 ul, .layout-full-read #content .field-name-body h4 ol, .layout-full-read #content .field-name-body h5 ul, .layout-full-read #content .field-name-body h5 ol, .layout-full-read #content .field-name-body h6 ul, .layout-full-read #content .field-name-body h6 ol, .layout-full-read #content .field-name-body p ul, .layout-full-read #content .field-name-body p ol, .layout-full-read #content .field-name-body ul ul, .layout-full-read #content .field-name-body ul ol, .layout-full-read #content .field-name-body ol ul, .layout-full-read #content .field-name-body ol ol, .layout-full-read #content .field-name-body .center-content ul, .layout-full-read #content .field-name-body .center-content ol {
       margin-left: 0.9em; }
@@ -262,7 +266,7 @@ article.clearfix:after{
 .layout-full-read article {
   float: left;
   padding-right: 15px;
-  padding-right: 1.8em; }
+  padding-right: 30px; }
 
 /* Opt-in outside padding 
 .grid-pad {
@@ -292,9 +296,10 @@ block-menu is the giving menu in drupal*/
   width: 25%;
   /*if you change this, must change .col-section:nth-of-type */ }
 
+/*synchronize margins*/
 /*designed for grids of 3 elements, either 1 or 3 columns, no 2 columns.*/
 .column1-3 .col-section {
-  width: 33%;
+  width: 33.3%;
   /*if you change this, must change .col-section:nth-of-type */ }
 
 /*.col-sections have various heights and this set of rules ensure that the tops of second rows line up */
@@ -753,51 +758,50 @@ ul.extra .menu-icon {
   .mainnav .icon-impact, .sitemap-comp .icon-impact, ul.extra .icon-impact, #block-system-main-menu .icon-impact {
     background-size: 3.2em auto;
     background-position: center 8.4%;
-    background-position: 0 -353px;
+    background-position: 0 -350px;
     background-size: auto; }
   .mainnav .is-expanded:nth-child(1) .menu__link, .sitemap-comp .is-expanded:nth-child(1) .menu__link, ul.extra .is-expanded:nth-child(1) .menu__link, #block-system-main-menu .is-expanded:nth-child(1) .menu__link {
-    background-position: 0 -353px; }
+    background-position: 0 -350px; }
   .mainnav .icon-impact:hover, .sitemap-comp .icon-impact:hover, ul.extra .icon-impact:hover, #block-system-main-menu .icon-impact:hover {
     background-position: center 0%;
-    background-position: 0 -103px; }
+    background-position: 0 -100px; }
   .mainnav .is-expanded:nth-child(1) .menu__link:hover, .sitemap-comp .is-expanded:nth-child(1) .menu__link:hover, ul.extra .is-expanded:nth-child(1) .menu__link:hover, #block-system-main-menu .is-expanded:nth-child(1) .menu__link:hover {
-    background-position: 0 -103px; }
+    background-position: 0 -100px; }
   .mainnav .icon-ways, .sitemap-comp .icon-ways, ul.extra .icon-ways, #block-system-main-menu .icon-ways {
     background-position: center 87.1%;
     background-size: 2.5em auto;
-    background-position: 0 -310px;
+    background-position: 0 -307px;
     background-size: auto; }
   .mainnav .is-expanded:nth-child(2) .menu__link, .sitemap-comp .is-expanded:nth-child(2) .menu__link, ul.extra .is-expanded:nth-child(2) .menu__link, #block-system-main-menu .is-expanded:nth-child(2) .menu__link {
-    background-position: 0 -310px; }
+    background-position: 0 -307px; }
   .mainnav .icon-ways:hover, .sitemap-comp .icon-ways:hover, ul.extra .icon-ways:hover, #block-system-main-menu .icon-ways:hover {
     background-position: center 60%;
-    background-position: 0 -268px; }
+    background-position: 0 -265px; }
   .mainnav .is-expanded:nth-child(2) .menu__link:hover, .sitemap-comp .is-expanded:nth-child(2) .menu__link:hover, ul.extra .is-expanded:nth-child(2) .menu__link:hover, #block-system-main-menu .is-expanded:nth-child(2) .menu__link:hover {
-    background-position: 0 -268px; }
+    background-position: 0 -265px; }
   .mainnav .icon-supporters, .sitemap-comp .icon-supporters, ul.extra .icon-supporters, #block-system-main-menu .icon-supporters {
     background-position: center 43.5%;
     background-size: 5.5em auto;
-    background-position: 0 -145px;
-    background-size: auto; }
+    background-position: 0 -142px; }
   .mainnav .is-expanded:nth-child(3) .menu__link, .sitemap-comp .is-expanded:nth-child(3) .menu__link, ul.extra .is-expanded:nth-child(3) .menu__link, #block-system-main-menu .is-expanded:nth-child(3) .menu__link {
-    background-position: 0 -145px; }
+    background-position: 0 -142px; }
   .mainnav .icon-supporters:hover, .sitemap-comp .icon-supporters:hover, ul.extra .icon-supporters:hover, #block-system-main-menu .icon-supporters:hover {
     background-position: center 28.8%;
-    background-position: 0 -124px; }
+    background-position: 0 -121px; }
   .mainnav .is-expanded:nth-child(3) .menu__link:hover, .sitemap-comp .is-expanded:nth-child(3) .menu__link:hover, ul.extra .is-expanded:nth-child(3) .menu__link:hover, #block-system-main-menu .is-expanded:nth-child(3) .menu__link:hover {
-    background-position: 0 -124px; }
+    background-position: 0 -121px; }
   .mainnav .icon-news, .sitemap-comp .icon-news, ul.extra .icon-news, #block-system-main-menu .icon-news {
     background-position: center 24.6%;
     background-size: 3em auto;
-    background-position: 0 -374px;
+    background-position: 0 -371px;
     background-size: auto; }
   .mainnav .is-expanded:nth-child(4) .menu__link, .sitemap-comp .is-expanded:nth-child(4) .menu__link, ul.extra .is-expanded:nth-child(4) .menu__link, #block-system-main-menu .is-expanded:nth-child(4) .menu__link {
-    background-position: 0 -374px; }
+    background-position: 0 -371px; }
   .mainnav .icon-news:hover, .sitemap-comp .icon-news:hover, ul.extra .icon-news:hover, #block-system-main-menu .icon-news:hover {
     background-position: center 16.3%;
-    background-position: 0 -82px; }
+    background-position: 0 -79px; }
   .mainnav .is-expanded:nth-child(4) .menu__link:hover, .sitemap-comp .is-expanded:nth-child(4) .menu__link:hover, ul.extra .is-expanded:nth-child(4) .menu__link:hover, #block-system-main-menu .is-expanded:nth-child(4) .menu__link:hover {
-    background-position: 0 -82px; }
+    background-position: 0 -79px; }
   .mainnav .icon-profile, .sitemap-comp .icon-profile, ul.extra .icon-profile, #block-system-main-menu .icon-profile {
     background-size: 5.0em auto;
     background-position: center 97.1%;
