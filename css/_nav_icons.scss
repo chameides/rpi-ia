@@ -342,37 +342,62 @@ for phone, no icon in nav sitemap
         background-size: 3.2em auto; 
         background-position: center 8.4%;
         @include breakpoint (adult) {
-          background-position: 0 -353px;
+          @if $ie8 {
+            background-position: 0 -350px;
+          }
+          @else {
+            background-position: 0 -353px;
+          }
           background-size: auto;
          }
       }
       @if $drupal {
         .is-expanded:nth-child(1) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -353px;
-           }
+            @if $ie8 {
+              background-position: 0 -350px;
+            }
+            @else {
+              background-position: 0 -353px;
+            }
+          }
         }
       }
       .icon-impact:hover {
         background-position: center 0%;
         @include breakpoint (adult) { 
-          background-position: 0 -103px;
+          @if $ie8 {
+            background-position: 0 -100px;
+          }
+          @else {
+            background-position: 0 -103px;
+          }
         }
        }
        @if $drupal {
         .is-expanded:nth-child(1) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -103px;
-           }
+            @if $ie8 {
+              background-position: 0 -100px;
+            }
+            @else {
+              background-position: 0 -103px;
+            }
           }
         }
+      }
        
 
       .icon-ways {
         background-position: center 87.1%;
         background-size: 2.5em auto;
         @include breakpoint (adult) {
-          background-position: 0 -310px;
+          @if $ie8 {
+            background-position: 0 -307px;
+          }
+          @else {
+            background-position: 0 -310px;
+          }
           background-size: auto;
          }
       }
@@ -380,8 +405,13 @@ for phone, no icon in nav sitemap
       @if $drupal {
         .is-expanded:nth-child(2) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -310px;
-           }
+            @if $ie8 {
+            background-position: 0 -307px;
+            }
+            @else {
+              background-position: 0 -310px;
+            }
+          }
         }
       }
 
@@ -389,30 +419,49 @@ for phone, no icon in nav sitemap
       .icon-ways:hover {
         background-position: center 60%;
         @include breakpoint (adult) {
-          background-position: 0 -268px;
-         }
+          @if $ie8 {
+            background-position: 0 -265px;
+          }
+          @else {
+            background-position: 0 -268px;
+          }
+        }
       }
       @if $drupal {
         .is-expanded:nth-child(2) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -268px;
-           }
+            @if $ie8 {
+              background-position: 0 -265px;
+            }
+            @else {
+              background-position: 0 -268px;
+            }
           }
         }
+      }
       .icon-supporters {
         background-position: center 43.5%;
         background-size: 5.5em auto;
         @include breakpoint (adult) {
-          background-position: 0 -145px;
-          background-size: auto;
-         }
+          @if $ie8 {
+            background-position: 0 -142px;
+          }
+          @else {
+            background-position: 0 -145px;
+          }
+        }
       }
 
       @if $drupal {
         .is-expanded:nth-child(3) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -145px;
-           }
+            @if $ie8 {
+              background-position: 0 -142px;
+            }
+            @else {
+              background-position: 0 -145px;
+            }
+          }
         }
       }
 
@@ -420,21 +469,36 @@ for phone, no icon in nav sitemap
       .icon-supporters:hover {
         background-position: center 28.8%;
         @include breakpoint (adult) {
-          background-position: 0 -124px;
-         }
+          @if $ie8 {
+            background-position: 0 -121px;
+          }
+          @else {
+            background-position: 0 -124px;
+          }
+        }
       }
       @if $drupal {
         .is-expanded:nth-child(3) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -124px;
-           }
+            @if $ie8 {
+              background-position: 0 -121px;
+            }
+            @else {
+              background-position: 0 -124px;
+            }
           }
         }
+      }
       .icon-news {
         background-position: center 24.6%;
         background-size: 3em auto;
         @include breakpoint (adult) {
-          background-position: 0 -374px;
+          @if $ie8 {
+            background-position: 0 -371px;
+          }
+          @else {
+            background-position: 0 -374px;
+          }
           background-size: auto;
          }
       }
@@ -442,8 +506,13 @@ for phone, no icon in nav sitemap
       @if $drupal {
         .is-expanded:nth-child(4) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -374px;
-           }
+            @if $ie8 {
+              background-position: 0 -371px;
+            }
+            @else {
+              background-position: 0 -374px;
+            }
+          }
         }
       }
 
@@ -451,16 +520,26 @@ for phone, no icon in nav sitemap
       .icon-news:hover {
         background-position: center 16.3%;
         @include breakpoint (adult) {
-          background-position: 0 -82px;
-         }
+          @if $ie8 {
+            background-position: 0 -79px;
+          }
+          @else {
+            background-position: 0 -82px;
+          }
+        }
       }
       @if $drupal {
         .is-expanded:nth-child(4) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -82px;
-           }
+            @if $ie8 {
+              background-position: 0 -79px;
+            }
+            @else {
+              background-position: 0 -82px;
+            }
           }
         }
+      }
       .icon-profile {
         background-size: 5.0em auto;  
         background-position: center 97.1%;
@@ -585,13 +664,16 @@ for phone, no icon in nav sitemap
       }
     }
     @else {
-      .sitemap-comp .icon-impact, .is-expanded:nth-child(1) .menu__link {
+      .sitemap-comp .icon-impact {
         @include breakpoint(teen-all) {
           background-size: .85em auto;
           background-position: 0 7.6%;
         }
         @include breakpoint(adult) {
           padding-left: 21px;
+          @if $ie8 {
+            padding-left: 40px !important;
+          }
         }
       }
       .sitemap-comp .icon-impact:hover, .is-expanded:nth-child(1) .menu__link:hover {
