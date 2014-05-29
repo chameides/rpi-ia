@@ -257,81 +257,24 @@ for phone, no icon in nav sitemap
   }
 }
 @else {
-
   /*giving:
   large icons on mainnav mobile and tablet
   small icons on desktop
   tablet sitemap, small icons
-
   */
-
-
-
-  
-
-  
-
-
-
-
-  
-  @if $ie8{
-    .sitemap-comp .icon-news {
-      @include breakpoint(adult) {
-        padding-left: 20px !important;
-      }
-    }
-  }
-  
-
-
-  
-
-  @if $imodules {
-    .icon-logout {
-      background-image:url('../img/menu-icon/96px/logout.png');
-    }
-   
-
-  }
-  
-
-
-    @if $drupal {
-      /*drupal doesn't have unique classes in menu footer*/
-      /*child selectors for drupal footer break ie8*/
-      @if $ie8 {
-         .is-expanded .menu__link {
-            background: url('../img/menu-icon/giving16-s7f2632750d.png') no-repeat;
-          }
-          .is-expanded:first-child .is-leaf .menu__link{
-            background: none;
-          }
-      }
-      @else {
-        .is-expanded:nth-child(1) .menu__link, .is-expanded:nth-child(2) .menu__link, .is-expanded:nth-child(3) .menu__link, .is-expanded:nth-child(4) .menu__link {
-          @include breakpoint (teen-all) {
-            background-image: url('../img/menu-icon/givingtablet-sc1d7db3c43.png');
-          }
-          @include breakpoint (adult) {
-            background: url('../img/menu-icon/giving16-s7f2632750d.png') no-repeat;
-          }
-        }
-      }
-    }
-    .mainnav, ul.extra  {
-      /*set image background for all icons*/
-      .icon-impact, .icon-impact:hover, .icon-ways, .icon-ways:hover, .icon-supporters, .icon-supporters:hover, .icon-news, .icon-news:hover, .icon-profile, .icon-profile:hover, .icon-search, .icon-search:hover, .icon-contact, .icon-contact:hover, .icon-logout, .icon-logout:hover, .icon-give, .icon-give:hover {
-        background-image: url('../img/menu-icon/givingtablet-sc1d7db3c43.png');
-        @include breakpoint (adult) {
+  @if $drupal {
+    /*drupal doesn't have unique classes in menu footer*/
+    /*child selectors for drupal footer break ie8*/
+    @if $ie8 {
+       .is-expanded .menu__link {
           background: url('../img/menu-icon/giving16-s7f2632750d.png') no-repeat;
         }
-      }
+        .is-expanded:first-child .is-leaf .menu__link{
+          background: none;
+        }
     }
-
-    .sitemap-comp {
-      /*reset image background for all icons*/
-      .icon-impact, .icon-impact:hover, .icon-ways, .icon-ways:hover, .icon-supporters, .icon-supporters:hover, .icon-news, .icon-news:hover, .icon-profile, .icon-profile:hover, .icon-search, .icon-search:hover, .icon-contact, .icon-contact:hover, .icon-logout, .icon-logout:hover, .icon-give, .icon-give:hover {
+    @else {
+      .is-expanded:nth-child(1) .menu__link, .is-expanded:nth-child(2) .menu__link, .is-expanded:nth-child(3) .menu__link, .is-expanded:nth-child(4) .menu__link {
         @include breakpoint (teen-all) {
           background-image: url('../img/menu-icon/givingtablet-sc1d7db3c43.png');
         }
@@ -340,97 +283,126 @@ for phone, no icon in nav sitemap
         }
       }
     }
-
-    .mainnav, .sitemap-comp, ul.extra, #block-system-main-menu  {
-      
-      
-      /*set individual icons*/
-      .icon-impact {
-        background-size: 3.2em auto; 
-        background-position: center 8.4%;
-        @include breakpoint (adult) {
-          @if $ie8 {
-            background-position: 0 -395px;
-          }
-          @else {
-            background-position: 0 -398px;
-          }
-          background-size: auto;
-         }
+  }
+  .mainnav, ul.extra  {
+    /*set image background for all icons*/
+    .icon-impact, .icon-impact:hover, .icon-ways, .icon-ways:hover, .icon-supporters, .icon-supporters:hover, .icon-news, .icon-news:hover, .icon-profile, .icon-profile:hover, .icon-search, .icon-search:hover, .icon-contact, .icon-contact:hover, .icon-logout, .icon-logout:hover, .icon-give, .icon-give:hover {
+      background-image: url('../img/menu-icon/givingtablet-sc1d7db3c43.png');
+      @include breakpoint (adult) {
+        background: url('../img/menu-icon/giving16-s7f2632750d.png') no-repeat;
       }
-      @if $drupal {
-        @if $ie8{
-          .is-expanded:first-child .menu__link {
-            background-position: 0 -398px;
-          }
+    }
+  }
+
+  .sitemap-comp {
+    /*reset image background for all icons*/
+    .icon-impact, .icon-impact:hover, .icon-ways, .icon-ways:hover, .icon-supporters, .icon-supporters:hover, .icon-news, .icon-news:hover, .icon-profile, .icon-profile:hover, .icon-search, .icon-search:hover, .icon-contact, .icon-contact:hover, .icon-logout, .icon-logout:hover, .icon-give, .icon-give:hover {
+      @include breakpoint (teen-all) {
+        background-image: url('../img/menu-icon/givingtablet-sc1d7db3c43.png');
+      }
+      @include breakpoint (adult) {
+        background: url('../img/menu-icon/giving16-s7f2632750d.png') no-repeat;
+      }
+    }
+  }
+
+  .mainnav, .sitemap-comp, ul.extra, #block-system-main-menu  {
+    /*set individual icons
+    for phone and tablet: large and centered
+    for desktop: small and to the left*/
+    .icon-impact {
+      background-size: 3.2em auto; 
+      background-position: center 8.4%;
+      @include breakpoint (adult) {
+        @if $ie8 {
+          /*no resizing, so use slightly different position*/
+          background-position: 0 -395px;
         }
         @else {
-          .is-expanded:nth-child(1) .menu__link {
-            @include breakpoint (adult) {
-              background-position: 0 -398px;
-            }
-          }
-        }
-      }
-      .icon-impact:hover {
-        background-position: center 0%;
-        @include breakpoint (adult) { 
-          @if $ie8 {
-            background-position: 0 -115px;
-          }
-          @else {
-            background-position: 0 -118px;
-          }
+          background-position: 0 -398px;
+          background-size: auto;
         }
        }
-       @if $drupal {
-        @if $ie8{
-          .is-expanded:first-child .menu__link:hover {
-            background-position: 0 -118px;
+    }
+    @if $drupal {
+      @if $ie8{
+        .is-expanded:first-child .menu__link {
+          background-position: 0 -398px;
+        }
+      }
+      @else {
+        .is-expanded:nth-child(1) .menu__link {
+          @include breakpoint (adult) {
+            background-position: 0 -398px;
           }
         }
+      }
+    }
+    .icon-impact:hover {
+      background-position: center 0%;
+      @include breakpoint (adult) { 
+        @if $ie8 {
+          background-position: 0 -115px;
+        }
         @else {
+          background-position: 0 -118px;
+        }
+      }
+     }
+     @if $drupal {
+      @if $ie8{
+        .is-expanded:first-child .menu__link:hover {
+          background-position: 0 -118px;
+        }
+      }
+      @else {
         .is-expanded:nth-child(1) .menu__link:hover {
           @include breakpoint (adult) {
             background-position: 0 -118px;
           }
         }
       }
-      }
-       
-
-      .icon-ways {
-        background-position: center 83.0%;
-        background-size: 2.5em auto;
-        @include breakpoint (adult) {
-          @if $ie8 {
-            background-position: 0 -352px;
-          }
-          @else {
-            background-position: 0 -355px;
-          }
-          background-size: auto;
-         }
-      }
-
-      @if $drupal {
-        @if $ie8{
-          .is-expanded:first-child + .is-expanded .menu__link {
-            background-position: 0 -352px;
-          }
+    }
+    .icon-ways {
+      background-position: center 83.0%;
+      background-size: 2.5em auto;
+      @include breakpoint (adult) {
+        @if $ie8 {
+          background-position: 0 -352px;
         }
         @else {
-          .is-expanded:nth-child(2) .menu__link {
-            @include breakpoint (adult) {
-              background-position: 0 -355px;
-            }
+          background-position: 0 -355px;
+          background-size: auto;
+        }
+      }
+    }
+    @if $drupal {
+      @if $ie8{
+        .is-expanded:first-child + .is-expanded .menu__link {
+          background-position: 0 -352px;
+        }
+      }
+      @else {
+        .is-expanded:nth-child(2) .menu__link {
+          @include breakpoint (adult) {
+            background-position: 0 -355px;
           }
         }
       }
-
-
-      .icon-ways:hover {
-        background-position: center 60%;
+    }
+    .icon-ways:hover {
+      background-position: center 60%;
+      @include breakpoint (adult) {
+        @if $ie8 {
+          background-position: 0 -309.5px;
+        }
+        @else {
+          background-position: 0 -313.5px;
+        }
+      }
+    }
+    @if $drupal {
+      .is-expanded:nth-child(2) .menu__link:hover {
         @include breakpoint (adult) {
           @if $ie8 {
             background-position: 0 -309.5px;
@@ -440,49 +412,45 @@ for phone, no icon in nav sitemap
           }
         }
       }
-      @if $drupal {
-        .is-expanded:nth-child(2) .menu__link:hover {
-          @include breakpoint (adult) {
-            @if $ie8 {
-              background-position: 0 -309.5px;
-            }
-            @else {
-              background-position: 0 -313.5px;
-            }
-          }
+    }
+    .icon-supporters {
+      background-position: center 43.5%;
+      background-size: 5.5em auto;
+      @include breakpoint (adult) {
+        @if $ie8 {
+          background-position: 0 -157px;
+        }
+        @else {
+          background-position: 0 -160px;
+          background-size: auto;
         }
       }
-      .icon-supporters {
-        background-position: center 43.5%;
-        background-size: 5.5em auto;
+    }
+    @if $drupal {
+      .is-expanded:nth-child(3) .menu__link {
         @include breakpoint (adult) {
-          background-size: auto;
           @if $ie8 {
             background-position: 0 -157px;
           }
           @else {
             background-position: 0 -160px;
-
           }
         }
       }
-
-      @if $drupal {
-        .is-expanded:nth-child(3) .menu__link {
-          @include breakpoint (adult) {
-            @if $ie8 {
-              background-position: 0 -157px;
-            }
-            @else {
-              background-position: 0 -160px;
-            }
-          }
+    }
+    .icon-supporters:hover {
+      background-position: center 28.89%;
+      @include breakpoint (adult) {
+        @if $ie8 {
+          background-position: 0 -136px;
+        }
+        @else {
+          background-position: 0 -139px;
         }
       }
-
-
-      .icon-supporters:hover {
-        background-position: center 28.89%;
+    }
+    @if $drupal {
+      .is-expanded:nth-child(3) .menu__link:hover {
         @include breakpoint (adult) {
           @if $ie8 {
             background-position: 0 -136px;
@@ -492,50 +460,47 @@ for phone, no icon in nav sitemap
           }
         }
       }
-      @if $drupal {
-        .is-expanded:nth-child(3) .menu__link:hover {
-          @include breakpoint (adult) {
-            @if $ie8 {
-              background-position: 0 -136px;
-            }
-            @else {
-              background-position: 0 -139px;
-            }
-          }
-        }
-      }
-      .icon-news {
-        background-position: center 24.6%;
-        background-size: 3em auto;
-        @include breakpoint (adult) {
-          @if $ie8 {
-            background-position: 0 -416px;
-          }
-          @else {
-            background-position: 0 -419px;
-          }
-          background-size: auto;
-         }
-      }
-
-      @if $drupal {
-        @if $ie8{
-          .is-expanded:first-child + .is-expanded .menu__link {
-            background-position: 0 -352px;
-          }
+    }
+    .icon-news {
+      background-position: center 24.6%;
+      background-size: 3em auto;
+      @include breakpoint (adult) {
+        @if $ie8 {
+          background-position: 0 -416px;
         }
         @else {
-          .is-expanded:nth-child(4) .menu__link {
+          background-position: 0 -419px;
+          background-size: auto;
+        }
+      }
+    }
+    @if $drupal {
+      @if $ie8{
+        .is-expanded:first-child + .is-expanded .menu__link {
+          background-position: 0 -352px;
+        }
+      }
+      @else {
+        .is-expanded:nth-child(4) .menu__link {
           @include breakpoint (adult) {
             background-position: 0 -419px;
-            }
           }
         }
       }
-
-
-      .icon-news:hover {
-        background-position: center 16.37%;
+    }
+    .icon-news:hover {
+      background-position: center 16.37%;
+      @include breakpoint (adult) {
+        @if $ie8 {
+          background-position: 0 -94px;
+        }
+        @else {
+          background-position: 0 -97px;
+        }
+      }
+    }
+    @if $drupal {
+      .is-expanded:nth-child(4) .menu__link:hover {
         @include breakpoint (adult) {
           @if $ie8 {
             background-position: 0 -94px;
@@ -545,163 +510,130 @@ for phone, no icon in nav sitemap
           }
         }
       }
-      @if $drupal {
-        .is-expanded:nth-child(4) .menu__link:hover {
-          @include breakpoint (adult) {
-            @if $ie8 {
-              background-position: 0 -94px;
-            }
-            @else {
-              background-position: 0 -97px;
-            }
-          }
-        }
-      }
-
-      .icon-contact {
-        background-size: 4.5em auto; 
-        background-position: center 51.5%;
-        @include breakpoint (adult) {
-          background-position: 0 -335px;
-          background-size: auto;
-
-
-        }
-      }
-      .icon-contact:hover {
-        background-position: center 40.0%;
-        @include breakpoint (adult) {
-          background-position: 0 -293px;
-        }
-      }
-
-       .icon-search {
-        background-size: 3.2em auto; 
-        background-position: center 47.4%;
-        @include breakpoint (adult) {
-          background-position: 0 -440px;
-          padding-left: 1.8em;
-          background-size: auto;
-         }
-      }
-      .icon-search:hover {
-        background-position: center 32.41%;
-        @include breakpoint (adult) {
-           background-position: 0 -251px;
-        }
-       }
-
-
-
-
-      .icon-profile {
-        background-size: 5.0em auto;  
-        background-position: center 97.2%;
-        @include breakpoint (adult) {
-          background-position: 0 -378px;
-          padding-left: 2.5em;
-          background-size: auto;
-
-         }
-      }
-      .icon-profile:hover {
-        background-position: center 67.35%;
-        @include breakpoint (adult) {
-          background-position: 0 -273px;
-         }
-      }
-     
-      
-      .icon-logout {
-        background-size: 5.0em auto;
-        background-position: center 70.6%;
-        @include breakpoint (adult) {
-          background-position: 0 -71.9px;
-          padding-left: 2.8em;
-          background-size: 4.5em auto;
-          @if $ie8 {
-            background-position: 0 -74.9px;
-          }
-        }
-      }
-      .icon-logout:hover {
-        background-position: center 36.5%;
-        @include breakpoint (adult) {
-          background-position: 0 -51.5px;
-          background-size: 4.5em auto;
-        }
-        @if $ie8 {
-          background-position: 0 -54.5px;
-        }
-      }
-      .icon-give {
-        background-size: 4.5em auto;
-        background-position: center 89.9%;
-      }
-      .icon-give:hover {
-        background-position: center 74.15%;
-      }
-      
-
-
-
-      
-      
-
     }
-    /*set padding in mainnav*/
-    .mainnav {
-      .icon-impact {
-       @include breakpoint(adult) {
-          padding-left: 18px;  
-          @if $ie8{
-            padding-left: 19px !important;
-          }
+    .icon-contact {
+      background-size: 4.5em auto; 
+      background-position: center 51.5%;
+      @include breakpoint (adult) {
+        background-position: 0 -335px;
+        background-size: auto;
+      }
+    }
+    .icon-contact:hover {
+      background-position: center 40.0%;
+      @include breakpoint (adult) {
+        background-position: 0 -293px;
+      }
+    }
+    .icon-search {
+      background-size: 3.2em auto; 
+      background-position: center 47.4%;
+      @include breakpoint (adult) {
+        background-position: 0 -440px;
+        padding-left: 1.8em;
+        background-size: auto;
+      }
+    }
+    .icon-search:hover {
+      background-position: center 32.41%;
+      @include breakpoint (adult) {
+         background-position: 0 -251px;
+      }
+     }
+    .icon-profile {
+      background-size: 5.0em auto;  
+      background-position: center 97.2%;
+      @include breakpoint (adult) {
+        background-position: 0 -378px;
+        padding-left: 2.5em;
+        background-size: auto;
+       }
+    }
+    .icon-profile:hover {
+      background-position: center 67.35%;
+      @include breakpoint (adult) {
+        background-position: 0 -273px;
+       }
+    }
+    .icon-logout {
+      background-size: 5.0em auto;
+      background-position: center 70.6%;
+      @include breakpoint (adult) {
+        background-position: 0 -71.9px;
+        padding-left: 2.8em;
+        background-size: 4.5em auto;
+        @if $ie8 {
+          background-position: 0 -74.9px;
         }
+      }
+    }
+    .icon-logout:hover {
+      background-position: center 36.5%;
+      @include breakpoint (adult) {
+        background-position: 0 -51.5px;
+        background-size: 4.5em auto;
+      }
+      @if $ie8 {
+        background-position: 0 -54.5px;
+      }
+    }
+    .icon-give {
+      background-size: 4.5em auto;
+      background-position: center 89.9%;
+    }
+    .icon-give:hover {
+      background-position: center 74.15%;
+    }
+  }
+  /*set padding in mainnav*/
+  .mainnav {
+    .icon-impact {
+     @include breakpoint(adult) {
+        padding-left: 18px;  
+        @if $ie8{
+          padding-left: 19px !important;
+        }
+      }
+    }
+    .icon-ways {
+      @include breakpoint(adult ) {
+        padding-left: 16px; 
+        @if $ie8{
+          padding-left: 17px !important;
+        }
+      }
+    }
+    .icon-supporters {
+      @include breakpoint(adult ) {
+        padding-left: 30px;
+        @if $ie8{
+          padding-left: 30px !important;
+        }
+      }
+    }
+    .icon-news {
+      @include breakpoint(adult ) {
+        padding-left: 18px;
+        @if $ie8{
+          padding-left: 19px !important;
+        }
+      }
+    }
+  }
+  .sitemap-comp {
+    @include breakpoint(adult) {
+      .icon-impact{
+        background-position: 0 -398px;
+        padding-left: 18px;
       }
       .icon-ways {
-        @include breakpoint(adult ) {
-          padding-left: 16px; 
-          @if $ie8{
-            padding-left: 17px !important;
-          }
-        }
+        background-position: 0 -355px;
       }
       .icon-supporters {
-        
-        @include breakpoint(adult ) {
-          padding-left: 30px;
-          @if $ie8{
-            padding-left: 30px !important;
-          }
-        }
-      }
-      .icon-news {
-        @include breakpoint(adult ) {
-          padding-left: 18px;
-          @if $ie8{
-            padding-left: 19px !important;
-          }
-        }
+        padding-left: 30px;
       }
     }
-    
-
-
-    .sitemap-comp {
-      @include breakpoint(adult) {
-        .icon-impact{
-          background-position: 0 -398px;
-          padding-left: 18px;
-        }
-        .icon-ways {
-          background-position: 0 -355px;
-        }
-        .icon-supporters {
-          padding-left: 30px;
-        }
-      }
-      @if $ie8{
+    @if $ie8{
       .icon-impact:hover {
         background-position: 0 -118px;
       }
@@ -711,7 +643,6 @@ for phone, no icon in nav sitemap
       .icon-supporters {
         background-position: 0 -160px;
       }
-
       .icon-supporters:hover {
         background-position: 0 -139px;
       }
@@ -719,131 +650,112 @@ for phone, no icon in nav sitemap
         background-position: 0 -419px;
       }
       .icon-news:hover {
-          background-position: 0 -97px;
-      }
-      
-    }
-    }
-    @if $ie8{
-      
-    }
-    @else {
-
-      .sitemap-comp .icon-impact, .is-expanded:nth-child(1) .menu__link {
-        @include breakpoint(teen-all) {
-          background-size: .93em auto;
-          background-position: 0 8.1%;
-        }
-        @include breakpoint(adult) {
-          padding-top: 1px;
-        }
-      }
-      .sitemap-comp .icon-impact:hover, .is-expanded:nth-child(1) .menu__link:hover {
-        @include breakpoint(teen-all) {
-          background-position: 0 -.6%;
-        }
-      }
-      .sitemap-comp .icon-ways, .is-expanded:nth-child(2) .menu__link {
-        @include breakpoint(teen-all) {
-          background-size: .93em auto;
-          background-position: 0 82.4%;
-          padding-left: 15px;
-        }
-        @include breakpoint(adult) {
-          background-position: 0 -355px;
-          padding-top: 1px;
-        }
-      }
-      .sitemap-comp .icon-ways:hover, .is-expanded:nth-child(2) .menu__link:hover {
-        @include breakpoint(teen-all) {
-          background-position: 0 59.65%;
-        }
-      }
-
-      .sitemap-comp .icon-supporters, .is-expanded:nth-child(3) .menu__link {
-        @include breakpoint (teen-all) {
-          background-size: 1.7em auto;
-          background-position: 0 43.45%;
-          padding-left: 28px;
-        }
-        @include breakpoint(adult) {
-          padding-left: 30px;
-          padding-top: 1px;
-        }
-      }
-      .sitemap-comp .icon-supporters:hover, .is-expanded:nth-child(3) .menu__link:hover {
-        @include breakpoint (teen-all) {
-           background-position: 0 28.8%;
-        }
-      }
-      .sitemap-comp .icon-news, .is-expanded:nth-child(4) .menu__link {
-        @include breakpoint(teen-all) {
-          background-size: .9em auto;
-          background-position: 0 24.44%;
-        }
-        @include breakpoint(adult) {
-          padding-left: 18px;
-          padding-top: 1px;
-        }
-      }
-      .sitemap-comp .icon-news:hover, .is-expanded:nth-child(4) .menu__link:hover {
-        @include breakpoint(teen-all) {
-          background-position: 0 16.3%;
-        }
-      }
-    }
-
-      
-    footer {
-      ul.extra {
-        .menu-icon {
-          background-size: 5em auto; 
-        }
-        .icon-contact {
-          background-position: center 51.6%;
-        }
-        .icon-contact:hover {
-          background-position: center 40.15%;
-        }
-        .icon-search {
-          background-size: 3.3em auto; 
-          background-position: center 47.5%;
-        }
-        .icon-search:hover {
-          background-position: center 32.44%;
-        }
-        .icon-profile {
-          background-position: center 97.2%;
-        }
-        .icon-profile:hover {
-          background-position: center 67.35%;
-        }
-        .icon-logout {
-          background-position: center 70.6%;
-        }
-        .icon-logout:hover {
-          background-position: center 36.5%
-        }
-        .icon-give {
-          background-size: 4.5em auto;
-          background-position: center 89.8%;
-        }
-        .icon-give:hover {
-          background-position: center 74.0%
-        }
+        background-position: 0 -97px;
       }
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
+  @if $ie8{
+  }
+  @else {
+    .sitemap-comp .icon-impact, .is-expanded:nth-child(1) .menu__link {
+      @include breakpoint(teen-all) {
+        background-size: .93em auto;
+        background-position: 0 8.1%;
+      }
+      @include breakpoint(adult) {
+        padding-top: 1px;
+      }
+    }
+    .sitemap-comp .icon-impact:hover, .is-expanded:nth-child(1) .menu__link:hover {
+      @include breakpoint(teen-all) {
+        background-position: 0 -.6%;
+      }
+    }
+    .sitemap-comp .icon-ways, .is-expanded:nth-child(2) .menu__link {
+      @include breakpoint(teen-all) {
+        background-size: .93em auto;
+        background-position: 0 82.4%;
+        padding-left: 15px;
+      }
+      @include breakpoint(adult) {
+        background-position: 0 -355px;
+        padding-top: 1px;
+      }
+    }
+    .sitemap-comp .icon-ways:hover, .is-expanded:nth-child(2) .menu__link:hover {
+      @include breakpoint(teen-all) {
+        background-position: 0 59.65%;
+      }
+    }
+    .sitemap-comp .icon-supporters, .is-expanded:nth-child(3) .menu__link {
+      @include breakpoint (teen-all) {
+        background-size: 1.7em auto;
+        background-position: 0 43.45%;
+        padding-left: 28px;
+      }
+      @include breakpoint(adult) {
+        padding-left: 30px;
+        padding-top: 1px;
+      }
+    }
+    .sitemap-comp .icon-supporters:hover, .is-expanded:nth-child(3) .menu__link:hover {
+      @include breakpoint (teen-all) {
+         background-position: 0 28.8%;
+      }
+    }
+    .sitemap-comp .icon-news, .is-expanded:nth-child(4) .menu__link {
+      @include breakpoint(teen-all) {
+        background-size: .9em auto;
+        background-position: 0 24.44%;
+      }
+      @include breakpoint(adult) {
+        padding-left: 18px;
+        padding-top: 1px;
+      }
+    }
+    .sitemap-comp .icon-news:hover, .is-expanded:nth-child(4) .menu__link:hover {
+      @include breakpoint(teen-all) {
+        background-position: 0 16.3%;
+      }
+    }
+  }      
+  footer {
+    ul.extra {
+      .menu-icon {
+        background-size: 5em auto; 
+      }
+      .icon-contact {
+        background-position: center 51.6%;
+      }
+      .icon-contact:hover {
+        background-position: center 40.15%;
+      }
+      .icon-search {
+        background-size: 3.3em auto; 
+        background-position: center 47.5%;
+      }
+      .icon-search:hover {
+        background-position: center 32.44%;
+      }
+      .icon-profile {
+        background-position: center 97.2%;
+      }
+      .icon-profile:hover {
+        background-position: center 67.35%;
+      }
+      .icon-logout {
+        background-position: center 70.6%;
+      }
+      .icon-logout:hover {
+        background-position: center 36.5%
+      }
+      .icon-give {
+        background-size: 4.5em auto;
+        background-position: center 89.8%;
+      }
+      .icon-give:hover {
+        background-position: center 74.0%
+      }
+    }
+  }
+}

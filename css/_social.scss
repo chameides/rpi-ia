@@ -98,45 +98,43 @@ close text gets spacing
 		width: auto;
 	}	
 }
-
 @else {
 	/*use sprite instead of single html image*/
-	.share-open-text{
+	.share-open-text, .follow-open-text {
 		background-image: url('../img/menu-icon/givingtablet-sc1d7db3c43.png');
-		background-position: center 94.2%;
-		background-size: 3em auto;
+		background-size: 2.9em auto;
 		padding-top: 3em;
 		background-repeat:no-repeat;
+		@include breakpoint (adult) {
+			background-image: url('../img/menu-icon/giving16-s7f2632750d.png');
+		}
+	}
+	.share-open-text{
+		background-position: center 94%;
 		@if $ie8 {
+			/*ie8 can't resize image, so use non sprite instead*/
 			background-image: url('../img/menu-icon/16px/share.png');
 			background-position: center 50%;
 		}
-		else {
+		@else {
 			@include breakpoint (adult) {
-				background: url('../img/menu-icon/giving16-s7f2632750d.png') no-repeat;
-				background-size: 2.9em auto;
 				background-position: 6px 46.5%;
+				
 			}
 		}
 	}
 	.follow-open-text{
-		background-image: url('../img/menu-icon/givingtablet-sc1d7db3c43.png');
 		background-position: center 101.5%;
-		background-size: 3em auto;
-		padding-top: 3em;
-		background-repeat:no-repeat;
 		@if $ie8 {
 			background-image: url('../img/menu-icon/16px/follow.png');
 			background-position: center 50%;
 		}
-		else {
+		@else {
 			@include breakpoint (adult) {
-				background: url('../img/menu-icon/giving16-s7f2632750d.png') no-repeat;
-				background-size: 2.9em auto;
 				background-position: center -4.2%;
 			}
 		}
-	}	
+	}			
 }
 
 
