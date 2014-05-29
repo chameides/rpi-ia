@@ -75,14 +75,15 @@ close text gets spacing
 		display: inline-block;
 		float: left;
 		font-size: .7em;
-		@if $drupal{}
-		@else {
-			padding-top: 3em;
-		}
 		/*facebook blue*/
 		background: transparentize($colorfacebook, .07);
 		@include ie8 {
 			background: $colorfacebook;
+		}
+		@if $alumni {}
+		@else {
+			/*need padding for sprites*/
+			padding-top: 3em;
 		}
 	}
 	a:hover {
@@ -124,7 +125,7 @@ close text gets spacing
 		}
 	}
 	.follow-open-text{
-		background-position: center 101.5%;
+		background-position: center 101.4%;
 		@if $ie8 {
 			background-image: url('../img/menu-icon/16px/follow.png');
 			background-position: center 50%;
