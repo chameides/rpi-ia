@@ -92,6 +92,12 @@ block-menu is the giving menu in drupal*/
     padding-right:$margin5 - $margin4;
   }
 }
+
+/*designed for grids 2 elements*/ 
+.column2 .col-section {
+  width: 50%; /*if you change this, must change .col-section:nth-of-type */
+}
+
 /*designed for grids of 3 elements, either 1 or 3 columns, no 2 columns.*/ 
 .column1-3 .col-section {
   @include breakpoint(teen) { 
