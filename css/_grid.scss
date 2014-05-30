@@ -75,13 +75,7 @@ block-menu is the giving menu in drupal*/
 
 /*designed for grids of 4 elements, either 2 or 4 columns, no 3 columns.*/ 
 .column2-4 .col-section {
-  @include breakpoint(teen) { 
-    width: 25%; /*if you change this, must change .col-section:nth-of-type */
-  }
-  @include breakpoint(teen-sleep) { 
-    width: 25%; /*if you change this, must change .col-section:nth-of-type */
-  }
-  @include breakpoint(adult) {
+  @include breakpoint(teen-up) { 
     width: 25%; /*if you change this, must change .col-section:nth-of-type */
   }
 }
@@ -100,13 +94,7 @@ block-menu is the giving menu in drupal*/
 
 /*designed for grids of 3 elements, either 1 or 3 columns, no 2 columns.*/ 
 .column1-3 .col-section {
-  @include breakpoint(teen) { 
-    width: 33.3%; /*if you change this, must change .col-section:nth-of-type */
-  }
-  @include breakpoint(teen-sleep) { 
-    width: 33.3%; /*if you change this, must change .col-section:nth-of-type */
-  }
-  @include breakpoint(adult) {
+  @include breakpoint(teen-up) { 
     width: 33.3%; /*if you change this, must change .col-section:nth-of-type */
   }
 }
@@ -165,7 +153,7 @@ block-menu is the giving menu in drupal*/
   .col-section:nth-of-type(3n + 1) {
     clear: left;
   }
-  .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read{
+  .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read, .column2-4{
     .col-section:nth-of-type(3n + 1) {
       clear: none; /*reverse above */
     }
@@ -200,7 +188,7 @@ block-menu is the giving menu in drupal*/
       .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section {
         clear: left;
       }
-      .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read {
+      .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read, .column2-4 {
       /*1st col-section */
       .col-section:first-child,  
       /*4th col-section */
