@@ -52,11 +52,15 @@
 
 .footer-image .footer-image-wrapper { 
   @if $ie8{
-    background-image: url(../img/aerial.png) no-repeat; 
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale')";
-
-
+    /*different file tree for drupal*/
+    @if $drupal {
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale')";
+    }
+    @else {
+       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale')";
+    }
   }
     @else {
     @include breakpoint (teen-up) {
