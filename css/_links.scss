@@ -79,7 +79,7 @@ a:hover {
 }
 
 /*no hover affect, w/out this there will be a flash of color*/
-nav, .social, .footerlogo-wrapper{
+nav, .social, /*.footerlogo-wrapper replaced with:*/ .footer-logo{
   a:hover {
     border-style: none;
   }

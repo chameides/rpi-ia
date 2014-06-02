@@ -1,0 +1,71 @@
+.footer-image .footer-image-wrapper, .footer-logo .footer-logo-wrapper {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+}
+/*aerial image of campus, full width*/
+.footer-image .footer-image-wrapper {
+  background: white; /*set background to white so image bleeds into background*/
+  background-size: 100%;
+  background-position: 50% -8%; 
+  background-repeat: no-repeat;
+}
+/*rensselaer logo*/
+.footer-logo {
+  max-width: 500px; /*full width on small devices, then hold at 500px*/
+  margin: 0 auto; /*center image*/
+  padding: $margin2 $margin2*2 ;
+  @include breakpoint (adult) {
+    margin-top: $margin3;
+  }
+  @include ie8 {
+    max-height: 101px; /*this might need to be rechecked*/
+  }
+}
+.footer-logo .footer-logo-wrapper {
+  background-size: 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/seal-text-white.png"); 
+  @include breakpoint(teen-up) {
+    background-size: 190%; /*blow up image to fill space*/
+    background-image: url("../img/footersprite-s30645a0337.png"); /*use sprite*/ 
+  }
+}
+
+.footer-image-inner, .footer-logo-inner  {
+  display: block;
+  height: 0;
+}
+.footer-logo-inner {
+  padding-top: 27%; /* height/width of image */
+  @include breakpoint(teen-all) {
+     padding-top: 26%; /* height/width of image */
+  }
+  @include breakpoint(adult) {
+     padding-top: 20%; /* height/width of image */
+  }
+}
+.footer-image-inner {
+  padding-top: 22%; /* height/width of image */
+}
+
+.footer-image .footer-image-wrapper { 
+  @include breakpoint (teen-up) {
+    background-image: url("../img/footersprite-s30645a0337.png"); 
+  }
+}
+
+@include breakpoint (baby) {
+  /*on small screen, do not download sprite or aerial image*/
+  .footer-image, .footer-image .footer-image-wrapper, .footer-image-inner {
+    display: none;
+  } 
+  .footer-image .footer-image-wrapper {
+    background-image: none;
+  }
+
+}
