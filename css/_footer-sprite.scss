@@ -21,9 +21,6 @@
   @include breakpoint (adult) {
     margin-top: $margin3;
   }
-  @include ie8 {
-    max-height: 101px; /*this might need to be rechecked*/
-  }
 }
 .footer-logo .footer-logo-wrapper {
   background-size: 100%;
@@ -54,8 +51,17 @@
 }
 
 .footer-image .footer-image-wrapper { 
-  @include breakpoint (teen-up) {
-    background-image: url("../img/footersprite-s30645a0337.png"); 
+  @if $ie8{
+    background-image: url(../img/aerial.png) no-repeat; 
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale')";
+
+
+  }
+    @else {
+    @include breakpoint (teen-up) {
+      background-image: url("../img/footersprite-s30645a0337.png"); 
+    }
   }
 }
 
