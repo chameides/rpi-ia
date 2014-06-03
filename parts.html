@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/style-alumni.css">
     <!--<![endif]-->
     <link rel="shortcut icon" href="http://www.rpi.edu/favicon.ico" />
-    <script src="js/vendor/modernizr-2.7.1.js"></script>
+    <script src="js/vendor/modernizr.custom.61089.js"></script>
     <script type="text/javascript" src="//use.typekit.net/yac3sjj.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
@@ -336,15 +336,21 @@
           <li><a class="addthis_counter addthis_bubble_style"></a></li>
         </ul>
       </div>
-    </div><!--end share-->
+    </div><!--end share-->    
     <div class="social socialnav">
       <ul>
         <li class="follow-toggle">
-          <a title="Menu of Social Media Channels to Follow" class="follow-open" href="javascript:void(0);">
-            <img src="img/menu-icon-png/follow.png" class="socialicon"><span class="follow-open-text"></span></a></li>
-        <li class="share-toggle"><a title="Menu of Social Media Channels to Post" class="share-open" href="javascript:void(0);"><img src="img/menu-icon-png/share.png" class="socialicon"><span class="share-open-text"></span></a></li>
+          <a title="Menu of Social Media Channels to Follow" class="follow-open" title="Toggle Social Media Follow Channels" href="javascript:void(0);">
+            <span class="follow-open-text"></span>
+          </a>
+        </li>
+        <li class="share-toggle">
+          <a title="Menu of Social Media Channels to Post" class="share-open" title="Toggle Social Media Share Channels" href="javascript:void(0);">
+            <span class="share-open-text">&nbsp;</span>
+          </a>
+        </li>
       </ul>   
-    </div>
+    </div><!--end socialnav-->     
     <!-- <script>
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
