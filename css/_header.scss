@@ -24,6 +24,9 @@
     } 
     @include breakpoint(adult) {
       padding: $margin2;
+    }
+    @include breakpoint(senior) {
+      z-index: 1;
     } 
   }
 }

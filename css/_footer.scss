@@ -8,6 +8,12 @@ footer {
   background: $color1;
   color: white;
   padding: 0 0 3em;
+  @include breakpoint(senior) {
+    max-width: 85%; /*make space for sitemap sidebar*/
+  }
+  @include breakpoint(super-senior) {
+    max-width: 100%; /*fill in space created by max-width on sitemap sidebar*/
+  }
 }
 
 /*

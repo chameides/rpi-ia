@@ -16,7 +16,7 @@ body {
 @if $drupal {
 	#page {
 		margin: auto;
-		max-width: 1524px;
+		max-width: 2227px; /*any bigger and the footer image gets away from the sidebar*/
 		background: white;
 		@include breakpoint(senior) {
 			border: thin solid $color1;
@@ -26,13 +26,32 @@ body {
 @else {
 	.wrapper {
 		margin: auto;
-		max-width: 1524px;
+		max-width: 2227px; /*any bigger and the footer image gets away from the sidebar*/
 		background: white;
 		@include breakpoint(senior) {
 			border: thin solid $color1;
 		}
 	}
+	/*senior layout*/
+	.content{
+		@include breakpoint(senior) {
+			max-width: 80%
+		}
+	}
+	.header-main .donate-wrapper, .header .mainnav ul.extra {
+	  @include breakpoint(senior) {
+	    right: 5%;
+	    z-index: 11;
+	    float: none;
+	    display: block;
+	    position: fixed !important;
+	    right: 5%;
+	    height: 50px;
+	  }
 }
+}
+
+
 
 /*drupal uses #content for .content*/
 @if $drupal {

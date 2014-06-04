@@ -3,12 +3,26 @@
   grid.scss for some of the float rules
   nav.scss for icon rule */
 /*.block-menu is sitemap in drupal*/
+
 .sitemap, .block-menu {
   text-align: left;  
   padding: 0 $margin2;
+  @include breakpoint(senior) {
+    position: fixed;
+    min-width: 240px;
+    width: 15%;
+    height: 100%;
+    max-width: 335px;
+    right: 0px;
+    top: 0px;
+    padding-top:120px;
+    background: $color1;
+    padding-left: $margin4;
+    z-index: 1;
+    overflow: scroll;
+  }
   li {
   	text-transform: uppercase;
-    
   	ul {
       margin: 0;
   	}
@@ -29,6 +43,11 @@
   .sitemap-comp, .block-menu {
     li {
       margin-bottom: $margin2*2;
+    }
+    ul li {
+      @include breakpoint(senior) {
+        width: 100%;
+      }
     }
   }
 }
