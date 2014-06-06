@@ -6,7 +6,7 @@ body {
   @include ie8 {
   	min-width: 850px;
   	@if $alumni {
-  		min-width: 1037px;
+  		min-width: 1037px; /*more menu items require larger width*/
   	}
   }
 }
@@ -30,7 +30,7 @@ body {
 	}
 	#main{
 		@include breakpoint(senior) {
-			margin-right: 320px; /*make space for sidebar*/
+			margin-right: 320px; /*make space for sidebar, magic number*/
 		}
 	}
 }
