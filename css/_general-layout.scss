@@ -16,7 +16,13 @@ body {
 @if $drupal {
 	#page {
 		margin: auto;
-		max-width: 2227px; /*any bigger and the footer image gets away from the sidebar*/
+		@if $ie8 {
+			max-width: 1524px; /*no senior for ie8*/
+			border: thin solid $color1;
+		}
+		@else {
+			max-width: 2227px; /*any bigger and the footer image gets away from the sidebar*/
+		}
 		background: white;
 		@include breakpoint(senior) {
 			border: thin solid $color1;
@@ -26,7 +32,13 @@ body {
 @else {
 	.wrapper {
 		margin: auto;
-		max-width: 2227px; /*any bigger and the footer image gets away from the sidebar*/
+		@if $ie8 {
+			max-width: 1524px; /*no senior for ie8*/
+			border: thin solid $color1;
+		}
+		@else {
+			max-width: 2227px; /*any bigger and the footer image gets away from the sidebar*/
+		}
 		background: white;
 		@include breakpoint(senior) {
 			border: thin solid $color1;
