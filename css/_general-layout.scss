@@ -253,7 +253,7 @@ body {
 	width: 100%;
 	@include breakpoint(teen-up) { 
 		float:left; 
-		display:inline;
+		/*display:inline; turning this off, becuase it interferes with the top-margin*/
 		width: 72%;
 	} 
 }
