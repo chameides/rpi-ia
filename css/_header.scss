@@ -4,13 +4,15 @@
     /*drupal wraps the header in another header, so I changed the second one to .header-wrapper*/
   .header-wrapper {
     background: $color1;
-    /*@include flex-wrap( nowrap );*/
      @include breakpoint(teen-all) {
       padding: 0 $margin2;
     } 
     @include breakpoint(adult) {
       padding: $margin2;
-    } 
+    }
+    @include breakpoint(senior) {
+      z-index: 1;
+    }  
   }
 }
 
@@ -18,7 +20,6 @@
 
   .header, .header-wrapper {
     background: $color1;
-    /*@include flex-wrap( nowrap );*/
      @include breakpoint(teen-all) {
       padding: 0 $margin2;
     } 
@@ -31,39 +32,6 @@
   }
 }
 
-/*replaced with text
-.bannerimage {
-  width:100%;
-  max-width: 400px;
-  @include breakpoint(teen-all) {
-    padding: 0 $margin2;
-    }
-  }
-*/
-/* code removed and replaced with flexbox
-.header {
-  padding: .7em .7em .3em;
-}
-
-.header {
-  background: $color1;
-  padding-top: .3em;
-}
-
-
-
-
-.title {
-  margin-top:.3em;
-  text-align:center;
-  padding-right: 0em;
-  width: 69%;
-  max-width: 400px;
-  }
-
-.title div {
-}
-*/
 .col-bannerfill {
   display: none;
   @include breakpoint(adult) { 

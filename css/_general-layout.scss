@@ -28,6 +28,11 @@ body {
 			border: thin solid $color1;
 		}
 	}
+	#main{
+		@include breakpoint(senior) {
+			max-width: 80% /*make space for sidebar*/
+		}
+	}
 }
 @else {
 	.wrapper {
@@ -47,22 +52,25 @@ body {
 	/*senior layout*/
 	.content{
 		@include breakpoint(senior) {
-			max-width: 80%
+			max-width: 80% /*make space for sidebar*/
 		}
 	}
-	.header-main .donate-wrapper, .header .mainnav ul.extra {
+}
+.header-main .donate-wrapper, .header .mainnav ul.extra {
 	  @include breakpoint(senior) {
 	    right: 5%;
 	    z-index: 11;
 	    float: none;
 	    display: block;
 	    position: fixed !important;
-	    right: 5%;
 	    height: 50px;
 	  }
-}
-}
-
+	}
+	.header-main .donate-wrapper {
+		@include breakpoint (senior) {
+			margin-right: 20px; /*center on header extra icons */
+		}
+	}
 
 
 /*drupal uses #content for .content*/
