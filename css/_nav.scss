@@ -20,8 +20,11 @@
         display: none;
       }
     }
-    @include breakpoint(senior) {
-      padding: 0 $margin2; /*line up under give now button*/
+    @if $alumni{}
+    @else {
+      @include breakpoint(senior) {
+        padding: 0 $margin2; /*line up under give now button*/
+      }
     }
 
     

@@ -72,11 +72,11 @@
 
     @else if $point == senior {
       /*screen*/
-      @media only screen and (min-width : 1525px) and (min-height : 900px) { @content; }
+      @media only screen and (min-width : 1730px) and (min-height : 900px) { @content; }
     }
     @else if $point == super-senior {
-      /*screen*/
-      @media only screen and (min-width : 2227px) and (min-height : 900px) { @content; }
+      /*screen, this is the point when the super side bar hits max width*/
+      @media only screen and (min-width : 1917px) and (min-height : 900px) { @content; }
     }
   }
 }

@@ -30,40 +30,49 @@ body {
 	}
 	#main{
 		@include breakpoint(senior) {
-			max-width: 80% /*make space for sidebar*/
+			margin-right: 320px; /*make space for sidebar*/
 		}
 	}
 }
 @else {
 	.wrapper {
 		margin: auto;
-		@if $ie8 {
-			max-width: 1524px; /*no senior for ie8*/
-			border: thin solid $color1;
+		@if $alumni {
+			max-width: 1524px; 
 		}
 		@else {
-			max-width: 2227px; /*any bigger and the footer image gets away from the sidebar*/
+			@if $ie8 {
+				max-width: 1524px; /*no senior for ie8*/
+				border: thin solid $color1;
+			}
+			@else {
+				max-width: 2227px; /*any bigger and the footer image gets away from the sidebar*/
+			}
 		}
 		background: white;
 		@include breakpoint(senior) {
 			border: thin solid $color1;
 		}
 	}
-	/*senior layout*/
-	.content{
-		@include breakpoint(senior) {
-			max-width: 80% /*make space for sidebar*/
+	@if $alumni{}
+	@else {
+		/*senior layout*/
+		.content{
+			@include breakpoint(senior) {
+				margin-right: 320px; /*make space for sidebar*/
+			}
 		}
 	}
 }
-.header-main .donate-wrapper, .header .mainnav ul.extra {
+@if $alumni{}
+@else {
+	.header-main .donate-wrapper, .header .mainnav ul.extra {
 	  @include breakpoint(senior) {
 	    right: 5%;
 	    z-index: 11;
 	    float: none;
 	    display: block;
 	    position: fixed !important;
-	    height: 50px;
 	  }
 	}
 	.header-main .donate-wrapper {
@@ -71,7 +80,7 @@ body {
 			margin-right: 20px; /*center on header extra icons */
 		}
 	}
-
+}
 
 /*drupal uses #content for .content*/
 @if $drupal {
@@ -247,9 +256,6 @@ body {
 		display:inline;
 		width: 72%;
 	} 
-	/*@include breakpoint(senior) { 
-		width: 74%;
-	}*/
 }
 
 /*fix error in drupal layout-read where margins get applied multiple times*/
