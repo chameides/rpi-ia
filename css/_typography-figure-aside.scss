@@ -68,7 +68,8 @@ figcaption,
 	}
 }
 
-.symmetry {
+.symmetry, 
+.media-symmetry /*drupal media*/ {
 	figcaption, 
 	.field-name-field-caption /*drupal lead image*/,
 	.field-name-field-image-caption /*drupal media caption*/ {

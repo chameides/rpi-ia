@@ -207,7 +207,10 @@ figcaption {
 }
 
 /*this corresponds to typgoraphy-p: read p margins*/
-figure.symmetry, img.symmetry {
+figure.symmetry, 
+.media-symmetry /*drupal media*/ 
+img.symmetry,
+{
 	@include breakpoint(teen-up) { 
 		margin-left: $margin4;
 		font-size: 1em;
@@ -218,26 +221,35 @@ figure.symmetry, img.symmetry {
 	}
 }
 .withsidebar, .layout-read /*drupal equivalent*/{ 
-		img.symmetry {
+		img.symmetry, 
+		.file-symmetry /*drupal media*/  {
 		@include breakpoint(teen-up) {  
 			padding-right: $margin4;
 		}
 	}
 }
 
-.layout-full figure.symmetry, .layout-full img.symmetry,
-.layout-full-read figure.symmetry, .layout-full-read img.symmetry {
+.layout-full figure.symmetry,
+.layout-full .media-symmetry /*drupal media*/,  
+.layout-full img.symmetry,
+.layout-full-read figure.symmetry,
+.layout-full-read .media-symmetry /*drupal media*/, 
+.layout-full-read img.symmetry {
 	@include breakpoint(teen-up) {
 		margin-left: $ratio;
 		margin-right: $margin4;
 	}
 }
 
-.read .symmetry figcaption,
-.layout-full-read .symmetry figcaption,
-.layout-read .symmetry figcaption {
-	@include breakpoint(teen-up) { 
-		margin-left: 0;
-		float: none;
+.read,
+.layout-full-read,
+.layout-read {
+	.symmetry, .media-symmetry /*drupal media*/{
+		figcaption, .field-name-field-image-caption /*drupal media*/{
+			@include breakpoint(teen-up) { 
+				margin-left: 0;
+				float: none;
+			}
+		}
 	}
 }
