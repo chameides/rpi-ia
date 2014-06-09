@@ -1,4 +1,6 @@
-figcaption, .field-name-field-caption {
+figcaption, 
+.field-name-field-caption /*drupal lead image*/,
+.field-name-field-image-caption /*drupal media caption*/{
 	font-size:.8em;
 	font-weight: 500;
 	/*text-align: justify;*/
@@ -8,7 +10,9 @@ figcaption, .field-name-field-caption {
 }
 
 .read, .layout-full-read, .layout-read {
-	figcaption, .field-name-field-caption {
+	figcaption, 
+	.field-name-field-caption /*drupal lead image*/,
+	.field-name-field-image-caption /*drupal media caption*/ {
 		@include breakpoint(teen-up) {
 			width: $smallratio;
 			float: left;
@@ -21,38 +25,55 @@ figcaption, .field-name-field-caption {
 	}
 	/*add right margin/gutter on figcaption fullimg and imgright with sidebar*/
 	@include breakpoint(teen-up) {
-		.fullimg, .imgright, .field-name-field-media  {
-			figcaption, .field-name-field-caption{
+		.fullimg,
+		.media-fullimg, /*drupal media*/,
+		.field-name-field-media /*drupal lead image*/, 
+		.imgright
+		 {
+			figcaption, 
+			.field-name-field-caption /*drupal lead image*/,
+			.field-name-field-image-caption /*drupal media caption*/ {
 			margin-right: $margin2;
 			}
 		}
 		/*turn off for .full, gutters are set elsewhere*/
-		.layout-full, .field-name-field-caption {
-			figcaption /*see drupal conditional*/{	
+		.layout-full {
+			figcaption, /*see drupal conditional*/
+			.field-name-field-caption /*drupal lead image*/,
+			.field-name-field-image-caption /*drupal media caption*/{	
 				margin-right: 0;
 			}
 		}
 	}	
 }
 .read, .layout-full-read, .layout-read {
-	.aside figcaption {
-		@include breakpoint(teen-up) {
-			margin-left: 0;
+	.aside {
+		figcaption,
+		.field-name-field-caption /*drupal lead image*/,
+		.field-name-field-image-caption /*drupal media caption*/ {
+			@include breakpoint(teen-up) {
+				margin-left: 0;
+			}
 		}
 	}
 }
 @if $drupal /*see layout-full figcaption*/{
 	.layout-full-read {
-		figcaption, .field-name-field-caption {	
+		.field-name-field-caption /*drupal lead image*/,
+		.field-name-field-image-caption /*drupal media caption*/  {	
 			margin-right: 0;
 		}
 	}
 }
 
-.symmetry figcaption {
-	width: auto;
-	margin-left: 0;
-	margin-right: 0;
+.symmetry {
+	figcaption, 
+	.field-name-field-caption /*drupal lead image*/,
+	.field-name-field-image-caption /*drupal media caption*/ {
+		width: auto;
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 /* this was breaking the figcaption in drupal
 .aside figcaption {

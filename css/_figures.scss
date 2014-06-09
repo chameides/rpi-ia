@@ -6,7 +6,7 @@
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
 
-figure {
+figure, div.media /*drupal uses div.media for figure*/ {
     margin: 0 0 $margin2;
     @include breakpoint(big-baby-sleep) { 
     margin: 0 auto $margin2;
@@ -15,14 +15,18 @@ figure {
 }
 
 .read, .layout-full-read, .layout-read {
-	figure {
+	figure, div.media /*drupal uses div.media for figure*/ {
 		@include breakpoint(teen) {
 			margin-bottom: 0;
 		}
 	}
 }
 /*add bar before caption on .read */
-.fullimg figcaption:before, .imgright figcaption:before,  .field-name-field-caption:before{
+.fullimg figcaption:before, 
+.imgright figcaption:before,  
+.field-name-field-caption:before /*drupal lead image*/,
+.media-fullimg .field-name-field-image-caption:before /*drupal media*/
+{
 	@include breakpoint(teen-up) {
 		content: '';
 		border-bottom: .4em solid $color3;
@@ -135,9 +139,17 @@ figcaption {
 
 
 /*add bar before caption on .read */
-.withsidebar .fullimg, .layout-read .fullimg, .field-name-field-media,/*drupal equivalent, drupal has class on body level, while iModules has it as an interior*/
-.withsidebar .imgright .layout-read .imgright /*drupal equivalent*/ {
-	figcaption:before, .field-name-field-caption:before {
+.withsidebar .fullimg, 
+.layout-read .fullimg,
+.layout-read .media-fullimg, /*drupal equivalent*/
+.field-name-field-media,/*drupal lead image*/
+.withsidebar .imgright,
+.layout-read .imgright,
+{
+	figcaption:before, 
+	.field-name-field-caption:before/*drupal lead image*/
+	.field-name-field-image-caption /*drupal media*/
+	 {
 		@include breakpoint(teen-up) {
 			margin-top: $margin5;
 		}
@@ -145,7 +157,7 @@ figcaption {
 }
 /*space between figcaption and mainbody on article with sidebar */
 .read .withsidebar, .layout-read /*drupal equivalent*/{ 
-	figcaption {
+	figcaption, .field-name-field-image-caption /*drupal media*/ {
 		@include breakpoint(teen-up) {
 			margin-left: $margin4;
 			margin-bottom: $margin2;

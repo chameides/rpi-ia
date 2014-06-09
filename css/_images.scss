@@ -22,7 +22,10 @@
 
 .layout-full, .layout-full-read {
 	/*fullimg figure and images*/ 
-	.fullimg img, img.fullimg, .field-name-field-image img{
+	.fullimg img, 
+	img.fullimg, 
+	.field-name-field-image img /*drupal lead image*/,
+	.media-fullimg{
 		width: 100%; /*full screen*/
 		height: auto;
 		/*max-width and slide left for images on read adult */
