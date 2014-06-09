@@ -47,7 +47,8 @@ figcaption,
 	}	
 }
 .read, .layout-full-read, .layout-read {
-	.aside {
+	.aside,
+	.media-aside /*drupal media*/ {
 		figcaption,
 		.field-name-field-caption /*drupal lead image*/,
 		.field-name-field-image-caption /*drupal media caption*/ {

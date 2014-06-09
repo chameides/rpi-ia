@@ -42,7 +42,8 @@ figure, div.media /*drupal uses div.media for figure*/ {
 .layout-full-read /*drupal*/, 
 .layout-read /*drupal*/,
 .layout-full .field-name-body /*drupal*/{
-	aside, .aside {
+	aside, .aside,
+	.media-aside /*drupal media*/ {
 		@include breakpoint(teen-up) {
 			width: $smallratio;
 			margin-top: $margin2;
@@ -53,7 +54,8 @@ figure, div.media /*drupal uses div.media for figure*/ {
 /*space between image and main body on read with sidebar */
 .read .priority1and2,
 .layout-read {
-	.aside, aside {
+	.aside, aside,
+	.media-aside /*drupal media*/ {
 		@include breakpoint(teen-up) {
 			float: right;
 			clear: right;
@@ -68,12 +70,22 @@ figure, div.media /*drupal uses div.media for figure*/ {
 	}
 }
 
+@if $drupal {
+	/*media-aside needs padding
+	this could probably get folded into other rules*/
+	@include breakpoint(teen-up) {
+		.media-aside {
+			padding-left: $margin4;
+		}
+	}
+}
 /*full article, set aside to left*/
 .layout-full, 
 .read .layout-full, 
 .layout-full-read
 {
-	aside, .aside {
+	aside, .aside,
+	.media-aside /*drupal media*/ {
 		@include breakpoint(teen-up) {
 			float: left;
 			clear: left;
@@ -88,7 +100,8 @@ figure, div.media /*drupal uses div.media for figure*/ {
 /*margin-left for asides*/
 @if $drupal {
 	.layout-full-read {
-		 #block-views-aside-block, .aside, aside {
+		 #block-views-aside-block, .aside, aside,
+		 {
 			@include breakpoint(teen-up) {
 				margin-left: $margin4;
 			}
@@ -99,7 +112,8 @@ figure, div.media /*drupal uses div.media for figure*/ {
 @else {
 	/*read full article, add margin to aside*/
 	.read .layout-full {
-		 .aside, aside {
+		.aside, aside,
+		 {
 			@include breakpoint(teen-up) {
 				margin-left: $margin4;
 			}
@@ -111,7 +125,8 @@ figure, div.media /*drupal uses div.media for figure*/ {
 
 /*correct above rule so that aside within priority1and2 is flush left*/
 .layout-full .priority1and2, .layout-full .field-name-body, .layout-full-read, .layout-read {
-	aside, .aside{
+	aside, .aside,
+	{
 		@include breakpoint(teen-up) {
 			margin-left: 0;
 		}
