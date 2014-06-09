@@ -39,7 +39,7 @@
 			width: 30em;
 		}
 	}
-	.imgright img, img.imgright {
+	.imgright img, img.imgright, .file-imgright {
 		@include breakpoint(adult) { 
 		margin-left: 1%; /*without this image disappears, not sure why*/
 		padding-left: 30%; /*align right*/

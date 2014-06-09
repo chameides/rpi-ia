@@ -25,7 +25,8 @@ figure, div.media /*drupal uses div.media for figure*/ {
 .fullimg figcaption:before, 
 .imgright figcaption:before,  
 .field-name-field-caption:before /*drupal lead image*/,
-.media-fullimg .field-name-field-image-caption:before /*drupal media*/
+.media-fullimg .field-name-field-image-caption:before /*drupal media*/,
+.media-imgright .field-name-field-image-caption:before /*drupal media*/
 {
 	@include breakpoint(teen-up) {
 		content: '';
@@ -153,13 +154,14 @@ figcaption {
 
 
 
-/*add bar before caption on .read */
+/*add bar before caption on .read  */
 .withsidebar .fullimg, 
 .layout-read .fullimg,
 .layout-read .media-fullimg, /*drupal equivalent*/
 .field-name-field-media,/*drupal lead image*/
 .withsidebar .imgright,
 .layout-read .imgright,
+.layout-read .media-imgright /*drupal media*/
 {
 	figcaption:before, 
 	.field-name-field-caption:before/*drupal lead image*/
@@ -182,18 +184,25 @@ figcaption {
 }
 
 
-.layout-full .imgright figcaption, .layout-full-read .imgright figcaption {
-	@include breakpoint(adult) {
-		@include transform( translateY(-100%) );
-	}
-	@include ie8{
-		width: 30em;
-		float: none;
-		clear: left;
-		margin-left: $ratio;
-		margin-top: 0;
-		margin-bottom: $margin2;
-		display: block;
+.layout-full, 
+.layout-full-read {
+	.imgright,
+	.media-imgright /*drupal media*/ {
+		figcaption,
+		.field-name-field-image-caption {
+			@include breakpoint(adult) {
+				@include transform( translateY(-100%) );
+			}
+			@include ie8{
+				width: 30em;
+				float: none;
+				clear: left;
+				margin-left: $ratio;
+				margin-top: 0;
+				margin-bottom: $margin2;
+				display: block;
+			}
+		}
 	}
 }
 
