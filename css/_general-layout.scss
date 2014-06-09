@@ -209,7 +209,7 @@ body {
 				}
 			}
 			/*elements inside an aside inside the main article get no margin*/
-			aside {
+			aside, .aside {
 				h2, h3, h4, h5, h6, p, ul, ol, .center-content {
 					margin-left: 0;
 					margin-right: 0;

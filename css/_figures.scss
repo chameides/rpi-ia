@@ -75,7 +75,7 @@ figure, div.media /*drupal uses div.media for figure*/ {
 	/*media-aside needs padding
 	this could probably get folded into other rules*/
 	@include breakpoint(teen-up) {
-		.media-aside {
+		.media-aside, .aside {
 			padding-left: $margin4;
 		}
 	}
