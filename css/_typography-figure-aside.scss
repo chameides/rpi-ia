@@ -66,6 +66,10 @@ figcaption,
 			margin-right: 0;
 		}
 	}
+	/*caption for aside should be full width*/
+	.media-aside .field-name-field-image-caption /*drupal media caption*/{
+		width: 100%;
+	}
 }
 
 .symmetry, 
