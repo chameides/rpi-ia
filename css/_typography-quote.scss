@@ -33,6 +33,7 @@ cite{
 	font-size:.7em;
 	font-family: "franklin-gothic-urw-cond", "franklin-gothic-urw", verdana, sans-serif;
 	margin: .4rem 2.2rem $margin2+$margin2 4em;	
+	text-indent: -.8em; /*make space for hyphen */
 	@include ie8 {
 		margin: .4em 2.2em $margin2+$margin2 4em;	
 	}
@@ -41,13 +42,10 @@ cite{
     font-size: .5em;
 	}
   @include breakpoint(teen-up) {
-		float: left;
+		float: none;
 		clear: left;
-		width: 75%;
-		margin-right: 25%;
-		text-indent: -.8em;
 		padding-left: 1.5em;
-  }	
+  }
 }
 
 
