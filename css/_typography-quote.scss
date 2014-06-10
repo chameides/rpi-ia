@@ -37,15 +37,17 @@ cite{
 		margin: .4em 2.2em $margin2+$margin2 4em;	
 	}
 	@include breakpoint(big-baby-sleep) { 
-	    margin-left: 20%;
-	    font-size: .5em;
-  	}
-  	@include breakpoint(teen-up) {
+    margin-left: 20%;
+    font-size: .5em;
+	}
+  @include breakpoint(teen-up) {
 		float: left;
 		clear: left;
 		width: 75%;
 		margin-right: 25%;
-  	}	
+		text-indent: -.8em;
+		padding-left: 1.5em;
+  }	
 }
 
 
