@@ -220,13 +220,13 @@ body {
 					}
 				}
 			}
-			blockquote p /*no margin on p inside of blockquote*/{
-				margin-bottom: 0;
-			}
 			.cite-wrapper /* class is added to p parent of cite using jquery, turn off margin*/ {
 				margin-left: 0;
 			}
 		}
+	}
+	blockquote p /*no margin on p inside of blockquote*/{
+		margin-bottom: 0;
 	}
 }
 
