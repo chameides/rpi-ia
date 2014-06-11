@@ -5,12 +5,14 @@ p.quote {
 
 blockquote{
 	line-height:1.2em;
-	text-align: justify;
 	font-weight: 500;
 	margin-bottom: 0;
 	@include breakpoint(big-baby-sleep) { 
     margin-left: 20%;
     font-size: .7em;
+  }
+  @include breakpoint (teen-up) {
+  	text-align: justify;
   }
 
 
