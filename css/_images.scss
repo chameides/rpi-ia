@@ -47,6 +47,7 @@
 		@include ie8 {
 			width: 30em;
 			margin-left: $ratio;
+			padding-left: 0; /*prevent image from getting squished*/
 		}
 	}
 }
