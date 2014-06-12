@@ -11,10 +11,6 @@ blockquote{
     margin-left: 20%;
     font-size: .7em;
   }
-  @include breakpoint (teen-up) {
-  	text-align: justify;
-  }
-
 }
 blockquote:before{
 	content: '\201C'; 
