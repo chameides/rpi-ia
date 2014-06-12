@@ -32,12 +32,18 @@
       float: left;
       padding-right: $margin2;
       max-width: 100-$smallratio;
-
+      @if $ie8 {
+        max-width: 98-$smallratio; /*ensure floats*/
+      }
       img {
         max-width: 250px;
         float: left;
         margin-right: $margin;
+        @if $ie8 {
+          width: 250px /*prevent image squish*/ 
+        }
       }
+
     }
   }
 
