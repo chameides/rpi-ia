@@ -67,7 +67,7 @@
   width: 100%; /* is this the right choice? */
   height:100%;
   position:fixed;
-  overflow: scroll;
+  overflow: auto; /*showing up in android menu, when it is not needed*/
   display: block;
   top:0px;
   left:0px;
