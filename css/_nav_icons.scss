@@ -319,7 +319,11 @@ for phone, no icon in nav sitemap
           background-position: 0 -395px;
         }
         @else {
-          background-position: 0 -398px;
+          /*chrome resizes 1px different */
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            background-position: 0 -398px;
+          }
+          background-position: 0 -397px;
           background-size: auto;
         }
        }
@@ -345,7 +349,11 @@ for phone, no icon in nav sitemap
           background-position: 0 -115px;
         }
         @else {
-          background-position: 0 -118px;
+          /*chrome resizes 1px different */
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            background-position: 0 -118px;
+          }
+          background-position: 0 -117px;
         }
       }
      }
@@ -371,7 +379,10 @@ for phone, no icon in nav sitemap
           background-position: 0 -352px;
         }
         @else {
-          background-position: 0 -355px;
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            background-position: 0 -355px;
+          }
+          background-position: 0 -354px;
           background-size: auto;
         }
       }
@@ -397,7 +408,10 @@ for phone, no icon in nav sitemap
           background-position: 0 -309.5px;
         }
         @else {
-          background-position: 0 -313.5px;
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            background-position: 0 -313.5px;
+          }
+          background-position: 0 -312.5px;
         }
       }
     }
@@ -421,7 +435,10 @@ for phone, no icon in nav sitemap
           background-position: 0 -157px;
         }
         @else {
-          background-position: 0 -160px;
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            background-position: 0 -160px;
+          }
+          background-position: 0 -159px;
           background-size: auto;
         }
       }
@@ -445,7 +462,10 @@ for phone, no icon in nav sitemap
           background-position: 0 -136px;
         }
         @else {
-          background-position: 0 -139px;
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            background-position: 0 -139px;
+          }
+          background-position: 0 -138px;
         }
       }
     }
@@ -462,14 +482,17 @@ for phone, no icon in nav sitemap
       }
     }
     .icon-news {
-      background-position: center 24.6%;
+      background-position: center 24.5%;
       background-size: 3em auto;
       @include breakpoint (adult) {
         @if $ie8 {
           background-position: 0 -416px;
         }
         @else {
-          background-position: 0 -419px;
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            background-position: 0 -419px;
+          }
+          background-position: 0 -418px;
           background-size: auto;
         }
       }
@@ -489,13 +512,16 @@ for phone, no icon in nav sitemap
       }
     }
     .icon-news:hover {
-      background-position: center 16.37%;
+      background-position: center 16.36%;
       @include breakpoint (adult) {
         @if $ie8 {
           background-position: 0 -94px;
         }
         @else {
-          background-position: 0 -97px;
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            background-position: 0 -97px;
+          }
+          background-position: 0 -96px;
         }
       }
     }
