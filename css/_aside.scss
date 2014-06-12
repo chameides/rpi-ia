@@ -96,3 +96,13 @@ aside, #block-views-aside-block {
 		margin-top: $margin2;
 	}
 }
+
+/*aside inside main content block needs that special formatting on phones to differentiate*/
+@include breakpoint (baby) {
+	.aside-callout {
+		background: #ccc;
+		padding: $margin2;
+		margin-left: -$margin2;
+		width: 108%;
+	}
+}
