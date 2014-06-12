@@ -9,12 +9,18 @@ pre {
 		font-weight: 300;
 		max-width: 40em;
 		/*text-align: justify;*/
-		font-size: 1em;
-		/*
-		@include breakpoint(big-baby-sleep) { 
-			font-size: .7em;
+		font-size: 1.1em;
+		line-height: 1.4;
+		/*@include breakpoint(big-baby-sleep) { 
+			font-size: .7em; 
+		}*/
+		@include breakpoint(teen-up) {
+			font-size: 1em;
+			line-height: 1.3em;
 		}
-		*/
+		
+		
+		
 	}
 }
 
@@ -22,13 +28,15 @@ pre {
 	p, .content ul, .content ol {
 		font-weight: 300;
 		max-width: 40em;
-		/*text-align: justify;*/
-		font-size: 1em;
-		/*
+		font-size: 1.1em;
+		line-height: 1.4;
 		@include breakpoint(big-baby-sleep) { 
 			font-size: .7em;
 		}
-		*/
+		@include breakpoint(teen-up) {
+			font-size: 1em;
+			line-height: 1.3em;
+		}
 	}
 }
 
