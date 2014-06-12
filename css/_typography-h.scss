@@ -82,6 +82,10 @@ article h2 {
 			margin-top: $margin2*3;
 		}
 	}
+	/*to be used when h2 is preceded by a relevant image*/
+	h2.squeeze {
+		margin-top: 0;
+	}
 	aside, .aside {
 		h2, h3, h4, h5, h6 {
 			@include breakpoint(teen-up) { 
