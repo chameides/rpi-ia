@@ -24,15 +24,19 @@ a {text-decoration: none}
 /*standard link color*/
 a:link, a:visited{
 	color: $color3; 
-  border-bottom: white;
+  /*border-bottom: white;*/
   border-width: 0px 0px 1px 0px;
-  border-style: none none dotted none;
+  /*border-style: none none dotted none;*/
 }
 
 a:hover {
   border-bottom: $color3;
   border-width: 0px 0px 1px 0px;
   border-style: none none dotted none;
+}
+
+a.button {
+  border-style: none;
 }
 
 /*hide phone link on desktop */
