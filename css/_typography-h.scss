@@ -63,13 +63,8 @@ article h2 {
 	margin-top: $margin2;
 }
 
-@if $drupal {
-	#block-views-subpage-menu-block {
-		h2, p {
-			color: $textmain;
-		}
-	}
-}
+
+
 
 .read,
 .layout-full-read article,

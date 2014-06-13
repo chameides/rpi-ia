@@ -300,3 +300,36 @@ section.breakout {
     background: none;
   }
 }
+
+
+
+@if $drupal {
+  #block-views-subpage-menu-block {
+    h2, p {
+      color: $textmain; /*links in grid are black*/
+    }
+    @include breakpoint (adult) {
+      .col-section p /*pad, so that there is some space between blue border and text
+      only for desktop since, hover isn't as important on touch screens */ {
+        padding-left: .4em;
+        padding-right: .4em;
+      }
+    }
+  }
+}
+@else {
+  .grid-wrap {
+    h2, p {
+      color: $textmain; /*links in grid are black*/
+    }
+    .col-section p /*pad, so that there is some space between blue border and text*/ {
+      padding-left: .4em;
+      padding-right: .4em;
+    }
+  }
+}
+
+.gridtext .col-section p /*if left aligned with .gridtext, no padding*/ {
+    padding-left: 0;
+    padding-right: 0;
+  }
