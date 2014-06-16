@@ -40,18 +40,38 @@ pre {
 	}
 }
 
-.gridtext p, #block-views-subpage-menu-block .views-row p {
-	font-size: .9em;
-	@include breakpoint(adult) { 
-	  font-size: .8em;
+@if $drupal {
+	#block-views-subpage-menu-block .views-row p {
+		font-size: .9em;
+		@include breakpoint(adult) { 
+		  font-size: .8em;
+		}
 	}
 }
+@else {
+	.grid-wrap p {
+		font-size: .9em;
+		@include breakpoint(adult) { 
+		  font-size: .8em;
+		}
+	}
+}
+
 
 @if $drupal {
 	#block-views-subpage-menu-block .views-row p {
 		text-align: center;
 	}
 }
+@else {
+	.grid-wrap p {
+		text-align: center;
+	}
+	.gridtext p {
+		text-align: left;
+	}
+}
+
 
 /*used on alumni-classes to reduce white space between intro paragraph and boxes*/
 p.squeeze {
