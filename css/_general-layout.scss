@@ -100,7 +100,7 @@ body {
 	 		margin-left: $margin3; /*if change this, change .full img in images.scss*/
 		}
 		/*add right margin to full width image, .content adds a left margin*/
-		img, p, h1, h2, h3, h4, h5, h6, li {
+		img, p, h1, h2, h3, h4, h5, h6, li, iframe {
 			padding-right: $margin2; /*if change this, change .content in general-layout.scss*/
 		 	/*on larger screen, additional margin */
 			@include breakpoint(teen-up) {
@@ -112,7 +112,7 @@ body {
 		}
 		/*col-article adds the right margin, so set image margin to 0*/
 		.col-section, #block-views-aside-block {
-			img, p, h1, h2, h3, h4, h5, h6, ol, li {
+			img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe {
 				padding-right: 0;
 			}
 		}
@@ -121,7 +121,7 @@ body {
 	/*no col-article in drupal*/
 	.layout-full-read, .layout-read {
 		#content article{
-			img, p, h1, h2, h3, h4, h5, h6, ol, li {
+			img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe {
 				padding-right: 0;
 			}
 		}
@@ -147,7 +147,7 @@ body {
 	 		margin-left: $margin3; /*if change this, change .full img in images.scss*/
 		}
 		/*add right margin to full width image, .content adds a left margin*/
-		img, p, h1, h2, h3, h4, h5, h6, li {
+		img, p, h1, h2, h3, h4, h5, h6, li, iframe {
 			padding-right: $margin2; /*if change this, change .content in general-layout.scss*/
 		 	/*on larger screen, additional margin */
 			@include breakpoint(teen-up) {
@@ -159,7 +159,7 @@ body {
 		}
 		/*col-article adds the right margin, so set image margin to 0*/
 		.col-article, .col-section, .priority3, .single {
-			img, p, h1, h2, h3, h4, h5, h6, ol, li {
+			img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe {
 				padding-right: 0;
 			}
 		}
