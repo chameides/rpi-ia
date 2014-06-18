@@ -14,6 +14,11 @@ figure, div.media /*drupal uses div.media for figure*/ {
   }
 }
 
+figure.fullimg, .media-fullimg /*drupal equivalent*/{
+	clear:left;
+}
+
+
 .read, .layout-full-read, .layout-read {
 	figure, div.media /*drupal uses div.media for figure*/ {
 		@include breakpoint(teen) {
@@ -146,7 +151,9 @@ figure, div.media /*drupal uses div.media for figure*/ {
 		}
 	}
 }
-figcaption {
+figcaption, 
+.field-name-field-caption /*drupal lead image*/,
+.field-name-field-image-caption /*drupal media*/  {
 	@include breakpoint(adult) {
 		margin-bottom: $margin2;
 	}
