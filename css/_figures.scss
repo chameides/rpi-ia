@@ -215,7 +215,7 @@ figcaption,
 
 /*this corresponds to typgoraphy-p: read p margins*/
 figure.symmetry, 
-.media-symmetry /*drupal media*/ 
+.media-symmetry, /*drupal media*/ 
 img.symmetry,
 {
 	@include breakpoint(teen-up) { 
@@ -225,6 +225,7 @@ img.symmetry,
 	}
 	@include breakpoint(adult) {
 		font-size: .9em;
+		max-width: 40em;
 	}
 }
 .withsidebar, .layout-read /*drupal equivalent*/{ 
