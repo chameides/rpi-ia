@@ -77,138 +77,15 @@
           </ul> 
         </nav>
       </div><!--end of header-->  
-      <div class="content"><!--content adds margin-->       
-        <div class="pageheader">
-          <h1>Alumni Template: Full Width</h1>
-          <h2>A Guide for iModules Templating - June 2014</h2>
-        </div>
-        If you notice any bugs or have any questions, feel free to <a href="mailto:chamem@rpi.edu?subject=Redesign Bug Report">report them to Michael Chameides</a>.</p>
-        <h3>Page Samples</h3>
-        <ul>
-          <li><a href="alumni-nosidebar.html">Blank Content</a></li>
-          <li><a href="alumni-classes.html">Classes, Chapters, and Groups</a></li>
-          <li><a href="alumni-nosidebar-event.html">Events</a></li>
-          <li>Article</li>
-        </ul>
-
-        <h3>CSS Images</h3>
-        <p>The menu icons are background images</p>
-        <h3>Log In</h3>
-        <p>
-          <a href="alumni-classes.html">Alumni Template #1 - No Sidebar</a><br>
-          <a href="alumni-classes-logged.html">Logged In</a><br>
-          Can you make sure the log in, log out, and update profile links go to the appropriate page?
-        </p>
-        <p>If not logged in, use this code in the nav and the footer:</p>
-        <code>
-          <ul class="extra">
-            <li>
-              <a href="http://alumni.rpi.edu/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=59&amp;cid=211" class="menu-icon icon-contact" title="Contact Us">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="http://www.rpi.edu/site/search.html?cx=013771039018657924800%3Acjfn9nbyxhq&amp;ie=UTF-8&amp;cof=FORID%3A9&amp;sa=Search&amp;q=&amp;submitButtonName=++Search++&amp;siteurl=rpi.edu%2F&amp;siteurl=rpi.edu%2F&amp;ref=&amp;ss=0j0j1" class="menu-icon icon-search" title="Search Website">
-                Search
-              </a>
-            </li>
-            <li>
-                <a href="https://securelb.imodules.com/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=3&amp;cid=40&amp;returnurl=http%3a%2f%2falumni.rpi.edu%2fs%2f1225%2fstart.aspx" title="Log In or Sign Up" class="menu-icon icon-profile">
-                  <span>Log In</span>
-                </a>
-            </li>
-            <li class="mobileonly"><a href="https://securelb.imodules.com/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=1947&amp;cid=4524" class="menu-icon icon-give">
-              Give Now</a></li>
-          </ul> 
-        </code>
-      <p>If logged in, add the class "log" to the ul class="extra", drop in the extra li, and change sign up to update profile</p>
-      <code>
-         <ul class="extra log">
-            <li>
-              <a href="http://alumni.rpi.edu/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=59&amp;cid=211" class="menu-icon icon-contact" title="Contact Us">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="http://www.rpi.edu/site/search.html?cx=013771039018657924800%3Acjfn9nbyxhq&amp;ie=UTF-8&amp;cof=FORID%3A9&amp;sa=Search&amp;q=&amp;submitButtonName=++Search++&amp;siteurl=rpi.edu%2F&amp;siteurl=rpi.edu%2F&amp;ref=&amp;ss=0j0j1" class="menu-icon icon-search" title="Search Website">
-                Search
-              </a>
-            </li>
-            <li>
-              <a href="https://securelb.imodules.com/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=3&amp;cid=40&amp;returnurl=http%3a%2f%2falumni.rpi.edu%2fs%2f1225%2fstart.aspx" title="Log In or Sign Up" class="menu-icon icon-profile">
-                  Log In
-              </a>
-            </li>
-            <li>
-              <a href="3" class="menu-icon icon-logout">
-                Log Out
-              </a>
-            </li>
-            <li class="mobileonly"><a href="https://securelb.imodules.com/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=1947&amp;cid=4524" class="menu-icon icon-give">
-              Give Now</a></li>
-          </ul> 
-        </code>
-      <h3>Sidebar</h3>
-      <p><strong><a href="alumni-classes-sidebar.html">With Sidebar</a></strong></p>
-      <p>Remove class="layout-full" from the content block and the aside comes to the side. Can you set up a JavaScript to do this so that we don't need to create a separate template? Chris suggested we wrap the aside content inside a div class="sidebar" to specify that we have a sidebar. That works for us, just let me know what works best for you. </p> 
-      <h3>Meta Tags</h3>
-      <p>Add the page specific meta tags to the head of the template. I'm not sure how you want to do this so I left it blank. Except the title, that's in there. But it shouldn't be coded on a template wide basis.</p>
-      <h3>Top Menu</h3>
-      <p>Over the years (months), we may want to change the nav links. In the process of switching to the new design, we will definitely need to update links. So it might make sense to set this up as an editable html block. Or we can just request that iModules makes the updates</p>
-      <h3>Bottom Menu</h3>
-      <p>Same as Top Menu</p>
-      <h3>Search</h3>
-      <p>Is there a way to configure a search page that doesn't require a search form being pre-filled? <strong>I have a search icon as a link, rather than a search field</strong>.</p>
-      <h3>Dynamic Event Feed</h3>
-      <p>The events list in the footer should be a dynamic events feed. Something like: Grab 3 upcoming events (sort by closest to today's date/time) that are tagged "priority event". Then list date, location, title. Is that doable? The html would play out like this:</p>
-      <code>
-        <ul>
-                <li>
-                  <a href="http://alumni.rpi.edu/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=3923&amp;cid=8283&amp;ecid=8283&amp;crid=0&camp;alpgid=13&amp;calcid=664" title="More on this Event">
-                    1/3/14<br>
-                    Minnesota<br>
-                    Hockey Game and Post-Game Reception
-                  </a>
-                </li>
-                <li>
-                  <a href="http://alumni.rpi.edu/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=3923&amp;cid=8283&amp;ecid=8283&amp;crid=0&amp;calpgid=13&amp;calcid=664" title="More on this Event">
-                    1/5/14<br>
-                    Mumbai<br>
-                    Luncheon
-                  </a>
-                </li>
-                <li>
-                  <a href="http://alumni.rpi.edu/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=3923&amp;cid=8283&amp;ecid=8283&amp;crid=0&amp;calpgid=13&amp;calcid=664" title="More on this Event">
-                    1/6/14<br>
-                    Florida<br>
-                    Alumni Hall of Fame
-                  </a>
-                </li>
-                <li>
-                  <a href="http://alumni.rpi.edu/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=3923&amp;cid=8283&amp;ecid=8283&amp;crid=0&amp;calpgid=13&amp;calcid=664" title="More on this Event">
-                    1/10/14<br>
-                    Indiana<br>
-                    Holiday Party
-                  </a>
-                </li>
-                <li><a href="http://alumni.rpi.edu/s/1225/index.aspx?sid=1225&amp;gid=1&amp;pgid=13&amp;cid=664">More</a></li>          
-              </ul>
-            </li>
-          </ul>
-        </code>
-        <h3>Content</h3>
-        <p>The individual page content is everything inside the div class="content layout-full"</p>
-        <h3>Page Headers</h3>
-        <p>An h1 and h2 is encased in a div with class="pageheader". The h2 subtitle is optional in the CMS.</p>
-        <h3>Consistent Coding</h3>
-        <p>I am coordinating the CSS across multiple CMSs, so it would be great if you can leave it intact. If you need to add CSS, could you do it either before or after my CSS? If you do need to change my CSS, please let me know and I'll try to keep everything consistent. Similarly, if you need to change any of the HTML selectors or classes, let me know. I know that you will be adding code and that's great.</p>
-        <h3>Patterns</h3>
-        <p>We have a <a href="http://lamp7.server.rpi.edu/ia/patterns">Pattern Library</a> detailing snippets of code to be used inside the templates. The library is being used for some channels using Drupal and some channels using iModules. In Drupal, for the most part, we have been able to extract the HTML into widgets so that content editors can employ patterns from the WYSIWYG. Perhaps you can help us do the same with iModules.</p> 
-        <h3>Additional Templates</h3>
-        <p>Additional Templates are on the way.<br><br>
-        Thanks,<br> 
-        <em>Michael</em>
-      </p>
+      <div class="content"><!--content adds margin-->
+        <div class="priority1and2">
+          <article class="maincontent">
+              Field: Content
+        </article>  
+      </div><!--close priority1and2-->
+      <aside class="priority3">
+        Optional Field: Aside
+      </aside>
       </div><!--close content-->
       <footer>
         <div class="footer-image">
