@@ -158,11 +158,18 @@ body {
 			}
 		}
 		/*col-article adds the right margin, so set image margin to 0*/
-		.col-article, .col-section, .priority3, .single {
+		.col-article, .col-section, .priority3, .single,
+		{
 			img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe {
 				padding-right: 0;
 			}
 		}
+	}
+}
+
+.bleed .maincontent /*iModules template*/ {
+	img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe {
+		padding-right: 0;
 	}
 }
 
@@ -308,7 +315,6 @@ body {
 		}
 	}
 }
-
 
 
 

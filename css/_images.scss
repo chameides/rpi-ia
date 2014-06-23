@@ -10,7 +10,9 @@
   width: 100%;
 }
 
-.col-article, .layout-full-read article, .layout-read article {
+.col-article, 
+.bleed .maincontent /*iModules Alumni Template*/,
+.layout-full-read article, .layout-read article {
 	img {
 		@include breakpoint(big-baby-sleep) { 
   		max-height:150px;

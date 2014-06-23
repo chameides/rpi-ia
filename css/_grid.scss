@@ -5,7 +5,9 @@
 }
 
 /*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
-[class*='col-'], .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, 
+[class*='col-'], 
+.bleed .maincontent /*iModules Alumni Template*/,
+.sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, 
 .layout-full-read article {
   float: left;
   padding-right: $margin2;
@@ -231,7 +233,7 @@ block-menu is the giving menu in drupal*/
 }
 
 .read .col-article, .layout-full-read article,
-.bleed .col-article, /*iModules*/{
+.bleed .maincontent, /*iModules*/{
   @include breakpoint(teen-up) {
     margin: 0;
     padding: 0;
