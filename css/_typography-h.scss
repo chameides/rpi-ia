@@ -25,7 +25,10 @@ h1 {
 	}
 }
 
-.read h1, .layout-full-read h1, .layout-read h1 {
+.read h1,
+.bleed h1, /*iModules*/ 
+.layout-full-read h1,  /*drupal*/
+.layout-read h1 /*drupal*/{
 	@include breakpoint(teen-up) { 
 		font-size: 3em;
 		text-align: left;
@@ -49,9 +52,10 @@ h2 {
 	}
 
 .grid-wrap, #block-views-subpage-menu-block /*drupal replaces .grid-wrap */, 
-.read, 
-.layout-full-read,
-.layout-read
+.read,
+.bleed .content, /*imodules*/
+.layout-full-read, /*drupal*/
+.layout-read /*drupal*/
  { 
 	h2 {
 		font-size:1.2em;
@@ -67,6 +71,7 @@ article h2 {
 
 
 .read,
+.bleed .content , /*imodules*/
 .layout-full-read article,
 .layout-read article{
 	h2, h3, h4, h5, h6  {
@@ -121,7 +126,8 @@ article h2 {
 	}
 }
 @else {
-	section h2, .pageheader h2 {
+	section h2, 
+	.pageheader h2, {
 		text-align: center;
 		margin: 0 0 $margin2;
 	}
@@ -142,16 +148,19 @@ article h2 {
 }
 
 .read .maincontent .pageheader h2,
+.bleed .priority1and2 .pageheader h2, /*imodules*/
 .layout-full-read .field-name-field-subtitle,
 .layout-read .field-name-field-subtitle {
 	@include breakpoint(teen-up) { 
 		padding: 0 $margin4;
 		width: 100%;
 		margin-left: 0;	
+		margin-top: 0;
 	}
 }
 
-.read .maincontent .pageheader h2 {
+.read .maincontent .pageheader h2,
+.bleed .maincontent .pageheader h2 /*imodules*/{
 	@include breakpoint(adult) {
 		margin-bottom: $margin2*2;
 	}
@@ -162,11 +171,6 @@ article h2 {
 	text-align: left;
 	line-height: 1em;
 }
-
-
-
-
-
 
 section h2 {
 	margin-bottom: 0em;

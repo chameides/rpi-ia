@@ -69,8 +69,9 @@ aside, #block-views-aside-block {
 
 
 .read .priority1and2 aside,
-.layout-full-read .field-name-body aside,
-.layout-read .field-name-body aside {
+.bleed .priority1and2 aside, /*iModules*/
+.layout-full-read .field-name-body aside, /*drupal*/
+.layout-read .field-name-body aside /*drupal*/{
 	@include breakpoint(teen-up) { 
 		margin-bottom: $margin2; 
 		padding-top: $margin2;

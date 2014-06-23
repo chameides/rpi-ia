@@ -19,7 +19,9 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 }
 
 
-.read, .layout-full-read, .layout-read {
+.read, 
+.bleed .priority1and2, /*Imodules*/
+.layout-full-read, .layout-read {
 	figure, div.media /*drupal uses div.media for figure*/ {
 		@include breakpoint(teen) {
 			margin-bottom: 0;
@@ -44,7 +46,9 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 }
 
 /*aside margins for read */
-.read .priority1and2, .layout-full .priority1and2, /*static class*/ 
+.read .priority1and2, 
+.bleed .priority1and2, /*Imodules*/
+.layout-full .priority1and2, /*static class*/ 
 .layout-full-read /*drupal*/, 
 .layout-read /*drupal*/,
 .layout-full .field-name-body /*drupal*/{
@@ -59,6 +63,7 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 }
 /*space between image and main body on read with sidebar */
 .read .priority1and2,
+.bleed .priority1and2, /*Imodules*/
 .layout-read {
 	.aside, aside,
 	.media-aside /*drupal media*/ {
@@ -87,7 +92,8 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 }
 /*full article, set aside to left*/
 .layout-full, 
-.read .layout-full, 
+.read .layout-full,
+.bleed .layout-full, /*Imodules*/ 
 .layout-full-read
 {
 	aside, .aside,
@@ -117,7 +123,8 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 
 @else {
 	/*read full article, add margin to aside*/
-	.read .layout-full {
+	.read .layout-full,
+	.bleed .layout-full, /*Imodules*/ {
 		.aside, aside,
 		 {
 			@include breakpoint(teen-up) {
@@ -140,7 +147,9 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 }
 
 
-.read, .layout-full-read, .layout-read {
+.read, 
+.bleed .content, /*Imodules*/
+.layout-full-read, .layout-read {
 	.left {
 		@include breakpoint(teen) {
 			width: 100% - $smallratio;
@@ -250,6 +259,7 @@ img.symmetry,
 }
 
 .read,
+.bleed .content, /*Imodules*/
 .layout-full-read,
 .layout-read {
 	.symmetry, .media-symmetry /*drupal media*/{

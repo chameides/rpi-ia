@@ -167,7 +167,11 @@ body {
 }
 
 
-.read, .layout-full-read #content, .layout-read #content {
+.read, /*html template*/ 
+.layout-full-read #content, /*drupal*/ 
+.layout-read #content, /*drupal*/
+.bleed .content, /*iModules Alumni*/
+{
 	@include breakpoint(teen-up) { 
 		margin-left: 0;
 		margin-right: 0;
@@ -181,6 +185,15 @@ body {
 		.priority1and2, .field-name-body /*drupal uses .field-name-body */{
 			padding-right: $margin4;
 		}
+	}
+}
+
+.read, /*html template*/ 
+.layout-full-read #content, /*drupal*/ 
+.layout-read #content, /*drupal*/
+.bleed /*iModules Alumni*/
+{
+	@include breakpoint(teen-up) { 
 		/*turn off gutter if no sidebar*/
 		.layout-full /*see drupal conditional below*/ {
 			.priority1and2,  {
@@ -200,6 +213,8 @@ body {
 		}
 	}
 }
+
+
 
 
 @if $drupal /*.layout-full above*/ {
@@ -240,7 +255,9 @@ body {
 
 /*rewrite above rule for asides*/
 .read .priority1and2 .maincontent aside, 
-.layout-read .field-name-body aside, {
+.bleed .priority1and2 .maincontent aside, /*iModules*/
+.layout-read .field-name-body aside, /*drupal*/
+{
 	h2, h3, h4, h5, h6, p, ul, ol, .center-content  {
 		margin-left: 0;
 		margin-right: 0;

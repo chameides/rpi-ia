@@ -9,7 +9,9 @@ figcaption,
 	}
 }
 
-.read, .layout-full-read, .layout-read {
+.read, 
+.bleed .content, /*imodules*/
+.layout-full-read, .layout-read {
 	figcaption, 
 	.field-name-field-caption /*drupal lead image*/,
 	.field-name-field-image-caption /*drupal media caption*/ {
@@ -47,7 +49,9 @@ figcaption,
 		}
 	}	
 }
-.read, .layout-full-read, .layout-read {
+.read, 
+.bleed .content, /*imodules*/
+.layout-full-read, .layout-read {
 	.aside,
 	.media-aside /*drupal media*/ {
 		figcaption,

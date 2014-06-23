@@ -96,7 +96,8 @@ p.squeeze {
 }
 
 @else{
-	.read {
+	.read, 
+	.bleed .content /*imodules*/{
 		p {
 			@include breakpoint(teen-up) { 
 				margin-left: $margin4;
@@ -116,13 +117,6 @@ p.squeeze {
 }
 
 
-/*
-.read .sidebar p {
-	@include breakpoint(teen-up) { 
-		margin-left: $margin3;
-	}
-}
-*/
 
 
 .gray {

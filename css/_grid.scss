@@ -230,7 +230,8 @@ block-menu is the giving menu in drupal*/
    }
 }
 
-.read .col-article, .layout-full-read article {
+.read .col-article, .layout-full-read article,
+.bleed .col-article, /*iModules*/{
   @include breakpoint(teen-up) {
     margin: 0;
     padding: 0;

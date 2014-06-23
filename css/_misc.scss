@@ -17,7 +17,8 @@ border-bottom-color:$color2;
 	}
 }
 
-.read .pageheader {
+.read .pageheader,
+.bleed .pageheader, /*Imodules*/ {
 	@include breakpoint(teen-all) {
 		margin-bottom: $margin2*2.5;
 	}

@@ -52,7 +52,9 @@ cite:before{
 	}
 
 
-.read, .layout-full-read, .layout-read {
+.read, 
+.bleed .content, /*imodules*/
+.layout-full-read, .layout-read {
 	blockquote{
 		@include breakpoint(teen-up) {
 			float: left;
