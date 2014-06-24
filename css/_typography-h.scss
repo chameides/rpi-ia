@@ -131,7 +131,7 @@ article h2 {
 		text-align: center;
 		margin: 0 0 $margin2;
 	}
-	.pageheader h2 {
+	.pageheader h2, .bleed .pageheader h2 {
 		font-size: 1.1em;
 		color: $lighttext;
 		@include breakpoint(teen-up) { 
