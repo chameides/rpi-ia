@@ -157,11 +157,16 @@ body {
 		 		padding-right: $margin3; /*if change this, change .content in general-layout.scss*/
 			}
 		}
-		/*col-article adds the right margin, so set image margin to 0*/
-		.col-article, .col-section, .priority3, .single,
+		/*col- adds the right margin, so set image margin to 0*/
+		.col-article, .col-section, .priority3, .single
 		{
 			img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe {
 				padding-right: 0;
+			}
+		}
+		.single {
+			@include breakpoint(baby) {
+				padding-right: $margin2;
 			}
 		}
 	}
