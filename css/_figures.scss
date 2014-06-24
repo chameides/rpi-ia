@@ -171,11 +171,13 @@ figcaption,
 
 
 /*add bar before caption on .read  */
-.withsidebar .fullimg, 
+.withsidebar .fullimg,
+.bleed .layout-sidebar .fullimg /*iModules*/, 
 .layout-read .fullimg,
 .layout-read .media-fullimg, /*drupal equivalent*/
 .field-name-field-media,/*drupal lead image*/
 .withsidebar .imgright,
+.bleed .layout-sidebar .imgright /*iModules*/,
 .layout-read .imgright,
 .layout-read .media-imgright /*drupal media*/
 {
@@ -189,7 +191,9 @@ figcaption,
 	}
 }
 /*space between figcaption and mainbody on article with sidebar */
-.read .withsidebar, .layout-read /*drupal equivalent*/{ 
+.read .withsidebar, 
+.bleed .layout-sidebar /*iModules*/,
+.layout-read /*drupal equivalent*/{ 
 	figcaption, .field-name-field-image-caption /*drupal media*/ {
 		@include breakpoint(teen-up) {
 			margin-left: $margin4;
@@ -237,7 +241,9 @@ img.symmetry,
 		max-width: 40em;
 	}
 }
-.withsidebar, .layout-read /*drupal equivalent*/{ 
+.withsidebar, 
+.bleed .layout-sidebar /*iModules*/,
+.layout-read /*drupal equivalent*/{ 
 		img.symmetry, 
 		.file-symmetry /*drupal media*/  {
 		@include breakpoint(teen-up) {  

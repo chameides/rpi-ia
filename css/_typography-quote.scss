@@ -70,7 +70,9 @@ cite:before{
 }
 
 
-.read .withsidebar, .layout-read /*drupal equivalent*/ {
+.read .withsidebar, 
+.bleed .layout-sidebar /*iModules*/,
+.layout-read /*drupal equivalent*/ {
 	cite, blockquote {
 		@include breakpoint(teen-up) {
 			float: none;
@@ -82,14 +84,18 @@ cite:before{
 	}
 }
 
-.read .withsidebar, .layout-read /*drupal equivalent*/ {
+.read .withsidebar, 
+.bleed .layout-sidebar /*iModules*/,
+.layout-read /*drupal equivalent*/ {
 	blockquote {
 		@include breakpoint(teen-up) {
 			margin: $margin4 auto $margin2;
 		}
 	}
 }
-.read .withsidebar, .layout-read /*drupal equivalent*/ {
+.read .withsidebar, 
+.bleed .layout-sidebar /*iModules*/,
+.layout-read /*drupal equivalent*/ {
 		cite {
 		@include breakpoint(teen-up) {
 			margin: 0 auto $margin4;
