@@ -92,14 +92,18 @@ aside, #block-views-aside-block {
 	img {
 		width: 100%;
 	}
-	/*@include breakpoint(senior) { 
-		float: left;
-		width:10%
-	}*/
+}
+
+.layout-full .priority3,
+.layout-full-read #block-views-aside-block,
+.layout-full #block-views-aside-block 
+/*if aside is below, add margin*/ 
+{
 	@include breakpoint (teen-up) {
 		margin-top: $margin2;
 	}
 }
+
 
 /*aside inside main content block needs that special formatting on phones to differentiate*/
 @include breakpoint (baby) {
