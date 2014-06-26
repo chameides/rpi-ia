@@ -1,0 +1,167 @@
+/* -------------
+1. wrappers 
+----------------*/
+
+
+.footer-image .footer-image-wrapper, 
+.footer-logo .footer-logo-wrapper,
+.responsive-background .alumni-branded-banner-wrapper {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+}
+
+/* -------------
+1-. wrappers: footer image
+----------------*/
+
+/*aerial image of campus, full width*/
+.footer-image .footer-image-wrapper, {
+  background: white; /*set background to white so image bleeds into background*/
+  background-size: 100%;
+  background-position: 50% -8%; 
+  background-repeat: no-repeat;
+}
+
+.footer-image .footer-image-wrapper { 
+  @if $ie8{
+    /*different file tree for drupal*/
+    @if $drupal {
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale')";
+    }
+    @else {
+       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale')";
+    }
+  }
+    @else {
+    @include breakpoint (teen-up) {
+      background-image: url("../img/footersprite-s30645a0337.png"); 
+    }
+  }
+}
+
+
+/* -------------
+1-. wrappers: Alumni Banner
+----------------*/
+
+.responsive-background {
+  width: 100%;
+  margin-top: $margin2;
+  margin-bottom: $margin2;
+  @include breakpoint(teen-up) {
+    margin-bottom: $margin3;
+  }
+}
+
+/*alumni homepage, responsive banner. changes based on campaign*/
+.responsive-background .alumni-branded-banner-wrapper {
+  background-size: 100%;
+  background-position: 50% 50%; /*center image in case the wrong aspect ratio*/
+  background-repeat: no-repeat;
+}
+
+
+/* -------------
+1-. wrappers: footer logo
+----------------*/
+
+
+/*rensselaer logo*/
+.footer-logo {
+  max-width: 500px; /*full width on small devices, then hold at 500px*/
+  margin: 0 auto; /*center image*/
+  padding: $margin2 $margin2*2 ;
+  @include breakpoint (adult) {
+    margin-top: $margin3;
+  }
+}
+.footer-logo .footer-logo-wrapper {
+  background-size: 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/seal-text-white.png"); 
+  @include breakpoint(teen-up) {
+    background-size: 190%; /*blow up image to fill space*/
+    background-image: url("../img/footersprite-s30645a0337.png"); /*use sprite*/ 
+  }
+}
+
+
+/* -------------
+1. inner 
+----------------*/
+
+
+
+.footer-image-inner, .footer-logo-inner, .alumni-branded-banner-inner  {
+  display: block;
+  height: 0;
+}
+
+
+/* -------------
+1-. inner: footer image
+----------------*/
+.footer-image-inner {
+  padding-top: 22%; /* height/width of image */
+}
+
+@include breakpoint (baby) {
+  /*on small screen, do not download sprite or aerial image*/
+  .footer-image, .footer-image .footer-image-wrapper, .footer-image-inner {
+    display: none;
+  } 
+  .footer-image .footer-image-wrapper {
+    background-image: none;
+  }
+}
+
+/* -------------
+1-. inner: alumni banner
+----------------*/
+
+.responsive-background .alumni-branded-banner-wrapper { 
+  @if $ie8{
+    /*different file tree for drupal*/ 
+     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/alumni-homepage/alumni-homepage-wide2.jpg', sizingMethod='scale'); /*change with campaign*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/alumni-homepage/alumni-homepage-wide2.jpg', sizingMethod='scale')"; /*change with campaign*/
+  }
+  
+    @else {
+    background-image: url("../img/alumni-homepage/alumni-homepage-small.jpg"); /*change with campaign*/
+    @include breakpoint (teen-up) {
+      background-image: url("../img/alumni-homepage/alumni-homepage-wide2.jpg"); /*change with campaign*/
+    }
+  }
+}
+
+
+.alumni-branded-banner-inner {
+  padding-top: 108%; /* height/width of image */
+  @include breakpoint(teen-up) {
+    padding-top: 24%; /* height/width of image */
+  }
+}
+
+
+/* -------------
+1-. inner: footer logo
+----------------*/
+
+
+
+.footer-logo-inner {
+  padding-top: 27%; /* height/width of image */
+  @include breakpoint(teen-all) {
+     padding-top: 26%; /* height/width of image */
+  }
+  @include breakpoint(adult) {
+     padding-top: 20%; /* height/width of image */
+  }
+}
