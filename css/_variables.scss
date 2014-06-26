@@ -12,7 +12,7 @@ $imodules: false !default;
 	$pagemargin: 3%;
 	$margin2: .9rem;
 	@if $ie8 {
-    $margin2: 15px;
+    $margin2: 15px !global;
   }
 	$margin3: $margin * 2;
 	$margin4: $margin2 * 2;
