@@ -201,6 +201,14 @@ figcaption,
 			float: right;
 		}
 	}
+	.fullimg, .imgright {
+		figcaption, .field-name-field-image-caption /*drupal media*/ {
+			@include breakpoint(teen-up) {
+				margin-left: 0;
+				padding-left: $margin4; /*set to align with asides*/
+			}
+		}
+	}
 }
 
 

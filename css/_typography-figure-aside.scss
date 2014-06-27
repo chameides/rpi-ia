@@ -39,16 +39,23 @@ figcaption,
 			margin-right: $margin2;
 			}
 		}
-		/*turn off for .full, gutters are set elsewhere*/
-		.layout-full {
-			figcaption, /*see drupal conditional*/
-			.field-name-field-caption /*drupal lead image*/,
-			.field-name-field-image-caption /*drupal media caption*/{	
-				margin-right: 0;
-			}
-		}
 	}	
 }
+/*turn off for .full, gutters are set elsewhere*/
+.layout-full, 
+.withsidebar .fullimg,
+.withsidebar .imgright,
+.bleed .layout-sidebar .fullimg,
+.bleed .layout-sidebar .imgright
+{
+	figcaption, /*see drupal conditional*/
+	.field-name-field-caption /*drupal lead image*/,
+	.field-name-field-image-caption /*drupal media caption*/{	
+		margin-right: 0;
+	}
+}
+
+
 .read, 
 .bleed .content, /*imodules*/
 .layout-full-read, .layout-read {
