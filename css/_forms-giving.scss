@@ -1,40 +1,42 @@
-/*rules designed for the iModules giving form */
+@if $drupal {}
+@else {
+	/*rules designed for the iModules giving form */
 
-/* breadcrumbs */
+	/* breadcrumbs */
 
-/* controls the block of breadcrumbs*/
-.formbreadcrumbs {
-	margin-bottom: $margin2;
+	/* controls the block of breadcrumbs*/
+	.formbreadcrumbs {
+		margin-bottom: $margin2;
+	}
+
+	/*individual items*/
+	.idbmsBreadcrumb, .idbmsBreadcrumbActive {
+		padding: .2em;
+		margin: 0;
+		border: #666 thin solid;
+		padding: .7em;
+		font-size: .6em;
+	}
+
+	/*different color for general and active*/
+	.idbmsBreadcrumb {
+		background: #999;
+		color: black;
+	}
+
+	.idbmsBreadcrumbActive {
+		background: $color3;
+		color: white;
+	}
+
+	/*add a margin underneath radio buttons on giving form*/
+	#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
+		margin-bottom: .5em;
+	}
+
+	/*tab in the "if you selected other" */
+	#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_27319 {
+		margin-left: 1.5em;
+	}
 }
-
-/*individual items*/
-.idbmsBreadcrumb, .idbmsBreadcrumbActive {
-	padding: .2em;
-	margin: 0;
-	border: #666 thin solid;
-	padding: .7em;
-	font-size: .6em;
-}
-
-/*different color for general and active*/
-.idbmsBreadcrumb {
-	background: #999;
-	color: black;
-}
-
-.idbmsBreadcrumbActive {
-	background: $color3;
-	color: white;
-}
-
-/*add a margin underneath radio buttons on giving form*/
-#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
-	margin-bottom: .5em;
-}
-
-/*tab in the "if you selected other" */
-#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_27319 {
-	margin-left: 1.5em;
-}
-
 
