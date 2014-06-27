@@ -37,6 +37,9 @@ footer {
   text-transform: uppercase;
 }
 
+hr.red {
+	border: 1px solid $color2;
+}
 
  *:hover, *:focus, nav, .social, .gridlink{
  	-moz-transition:
