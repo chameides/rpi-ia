@@ -1,0 +1,11 @@
+/*separate style sheet, just for responsive background overrites*/
+
+/* Vendor Dependencies */
+@import "bourbon";
+
+/* Authored Dependencies */
+@import "variables";
+@import "mixin";
+@import "media-queries";
+
+@import "responsive-background";
