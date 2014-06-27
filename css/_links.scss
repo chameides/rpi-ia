@@ -113,7 +113,7 @@ nav, .social, /*.footerlogo-wrapper replaced with:*/ .footer-logo{
   }
 }
 
-/*breakout section has bluebackground, set link color to none*/
+/*breakout section has bluebackground, set link color to none
 section.breakout {
   .gridlink:link, .gridlink:visited {
   background: none;
@@ -122,6 +122,7 @@ section.breakout {
   margin-top: $margin4;
   }
 }
+*/
 
 .gridlink:hover, .gridlink:active {
   background: $color4;
@@ -139,13 +140,14 @@ section.breakout {
     color: $color1;
   }
 }
-/*breakout section has bluebackground and no images, set link underline and no border*/
+/*breakout section has bluebackground and no images, set link underline and no border
 section.breakout {
   .gridlink:hover, .gridlink:visited {
   text-decoration: underline;
   border: dotted thin transparent;
   }
 }
+*/
 
 
 /*footer links are on gray and need a lighter blue*/
