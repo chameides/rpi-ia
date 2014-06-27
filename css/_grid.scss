@@ -8,7 +8,8 @@
 [class*='col-'], 
 .bleed .maincontent /*iModules Alumni Template*/,
 .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, 
-.layout-full-read article {
+.layout-full-read article,
+.grid-separator /*set equal margin for grid-separator on alumni homepage*/{
   float: left;
   padding-right: $margin2;
   @include breakpoint(teen-all) { 
@@ -295,9 +296,9 @@ section {
   }
   }
 
-/* End of Grid */
 
 
+/* used to set up a grid that has a blue block in the middle that pops from the rest. requested by ellen, but decided to not use 
 .subgrid {
   h3 {font-size: .8em;}
   font-size: .9em;
@@ -311,7 +312,7 @@ section.breakout {
     background: none;
   }
 }
-
+*/
 
 
 @if $drupal {
@@ -341,6 +342,15 @@ section.breakout {
 }
 
 .gridtext .col-section p /*if left aligned with .gridtext, no padding*/ {
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grid-separator {
+  width: 100%;
+  clear: left;
+  margin-bottom: $margin3;
+  @include breakpoint(adult) {
+    margin-top: $margin;
   }
+}
