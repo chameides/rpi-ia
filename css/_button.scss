@@ -74,6 +74,7 @@
 
 .action:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
   @include linear-gradient(to bottom, #d91f28 0%, #de2831 29%, #94151b 100%, $fallback: #de2831);
+  border: none;
 }
 
 a.action:link, a.action:visited, .button, a.button, input[type="submit"] {
