@@ -40,3 +40,10 @@ svg:not(:root) {
 	width: 100%;
 	height: 100%;
 }
+
+@if $alumni {
+	.twitter-timeline /*Alumni Twitter Feed Embed */{
+	  margin: 0 auto;
+	  width: 100% !important; /*override iframe fixed-width*/
+	}
+}
