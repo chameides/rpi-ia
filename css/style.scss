@@ -15,8 +15,6 @@
 /* page structure and parts */
 @import "general-layout";
 @import "grid";
-/*@import "grid-groups";
-@import "grid-hover";*/
 @import "header-main";
 @import "header";
 @import "aside";
@@ -43,8 +41,6 @@
 @import "tables";
 @import "misc";
 
-/*page level solutions */
-@import "branded-banners";
 
 @media print {
 	@import "print";

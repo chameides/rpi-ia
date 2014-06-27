@@ -132,8 +132,7 @@
      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/alumni-homepage/alumni-homepage-wide2.jpg', sizingMethod='scale'); /*change with campaign*/
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/alumni-homepage/alumni-homepage-wide2.jpg', sizingMethod='scale')"; /*change with campaign*/
   }
-  
-    @else {
+  @else {
     background-image: url("../img/alumni-homepage/alumni-homepage-small.jpg"); /*change with campaign*/
     @include breakpoint (teen-up) {
       background-image: url("../img/alumni-homepage/alumni-homepage-wide2.jpg"); /*change with campaign*/
