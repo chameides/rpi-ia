@@ -13,6 +13,9 @@
   .details {
     padding-top: $margin;
     text-align: center;
+    h2 {
+      font-size: 1em; /*font size the same as h3 and text*/
+    }
     @include breakpoint (teen-up) {
       float: right;
       width:$smallratio;
