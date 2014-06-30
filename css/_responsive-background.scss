@@ -55,7 +55,8 @@
   margin-top: $margin2;
   margin-bottom: $margin2;
   @include breakpoint(teen-up) {
-    margin-bottom: $margin3;
+    margin-bottom: $margin4;
+    margin-top: 0;
   }
 }
 

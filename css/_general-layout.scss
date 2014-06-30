@@ -90,14 +90,15 @@ body {
 		}
 	}
 	#content{
+		margin-top: $margin2; /*if change this, change .full img in images.scss*/
 		margin-left: $margin2; /*if change this, change .layout-full img in images.scss*/
 	 	/*on larger screen, additional margin */
 		@include breakpoint(teen-up) {
-	 		margin-top:1em;
+	 		margin-top:$margin4; /*should be >= to margin-left*/
 	 		margin-left: $margin4; /*if change this, change .full img in images.scss*/
 	 	}
 		@include breakpoint(adult) {
-	 		margin-left: $margin3; /*if change this, change .full img in images.scss*/
+	 		margin-left: $margin4; /*if change this, change .full img in images.scss*/
 		}
 		/*add right margin to full width image, .content adds a left margin*/
 		img, p, h1, h2, h3, h4, h5, h6, li, iframe {
@@ -107,7 +108,7 @@ body {
 		 		padding-right: $margin4; /*if change this, change .content in general-layout.scss*/
 		 	}
 			@include breakpoint(adult) {
-		 		padding-right: $margin3; /*if change this, change .content in general-layout.scss*/
+		 		padding-right: $margin4; /*if change this, change .content in general-layout.scss*/
 			}
 		}
 		/*col-article adds the right margin, so set image margin to 0*/
@@ -137,14 +138,16 @@ body {
 
 @else {
 	.content {
+		margin-top: $margin2; /*if change this, change .full img in images.scss*/
 		margin-left: $margin2; /*if change this, change .full img in images.scss*/
 	 	/*on larger screen, additional margin */
 		@include breakpoint(teen-up) {
-	 		margin-top:1em;
+	 		margin-top:$margin4; /*should be >= to margin-left*/
 	 		margin-left: $margin4; /*if change this, change .full img in images.scss*/
 	 	}
 		@include breakpoint(adult) {
-	 		margin-left: $margin3; /*if change this, change .full img in images.scss*/
+	 		margin-top:$margin4; /*should be >= to margin-left*/
+	 		margin-left: $margin4; /*if change this, change .full img in images.scss*/
 		}
 		/*add right margin to full width image, .content adds a left margin*/
 		img, p, h1, h2, h3, h4, h5, h6, li, iframe {
@@ -154,7 +157,7 @@ body {
 		 		padding-right: $margin4; /*if change this, change .content in general-layout.scss*/
 		 	}
 			@include breakpoint(adult) {
-		 		padding-right: $margin3; /*if change this, change .content in general-layout.scss*/
+		 		padding-right: $margin4; /*if change this, change .content in general-layout.scss*/
 			}
 		}
 		/*col- adds the right margin, so set image margin to 0*/
@@ -313,6 +316,7 @@ body {
 	}
 }
 
+/*this messes up the margin on boxes-noside tablet
 .layout-full {
 	.maincontent, .field-name-body, #block-views-subpage-menu-block{
 		@include breakpoint (teen-all) {
@@ -320,7 +324,7 @@ body {
 		}
 	}
 }
-
+*/
 
 
 /*add a right margin*/
@@ -328,7 +332,7 @@ body {
 	margin-right: $margin2;
  	/*on larger screen, additional margin */
 	@include breakpoint(adult) {
- 		margin-right: $margin3;
+ 		margin-right: $margin4;
 	}
 }
 

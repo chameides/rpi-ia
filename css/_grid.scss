@@ -13,7 +13,7 @@ box-sizing: border-box;
   float: left;
   padding-right: $margin2;
   @include breakpoint(teen-all) { 
-    padding-right: $margin5;   
+    padding-right: $margin4; /*should equal .content margin-left, check alumni homepage*/   
   }
   @include breakpoint(adult) { 
     padding-right: $margin4;
@@ -294,7 +294,13 @@ section {
   @include breakpoint(adult) { 
     margin-bottom: $margin2;   
   }
-  }
+}
+
+/*
+.grid-wrap .col-section {
+  margin-bottom: $margin2;
+}  
+*/
 
 
 
