@@ -18,8 +18,7 @@
   }
   margin-bottom: $margin;
 }
-@if $drupal {}
-@else {
+@if $imodules {
   /*that long string is for iModules giving form*/
   .radio-group, #rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
       label {
