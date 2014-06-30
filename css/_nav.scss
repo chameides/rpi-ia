@@ -77,11 +77,12 @@
   text-transform:uppercase;
   box-shadow:inset 0 0 1em .2em #222;
   /*menu tranform breaks Chrome Fixed Positioning (used in Senior), so only use when neccessary*/
+  
   @include breakpoint (baby) {
-    @include transform( translate(-105%) );
+    transform: translate(-105%);
   }
   @include breakpoint (teen-all) {
-    @include transform( translate(-105%) );
+    transform: translate(-105%);
   }
   @include breakpoint(adult) { 
     position: relative;
@@ -279,8 +280,15 @@ footer ul.extra {
   cursor: pointer;
 }
 
-
-/*javascript fires new class, which moves menu */
-body.menu-on .mainnav {
-  @include transform( translate(0%) );
+@include breakpoint (baby){
+  /*javascript fires new class, which moves menu */
+  body.menu-on .mainnav {
+    transform: translate(0%);
+  }
+}
+@include breakpoint (teen-all){
+  /*javascript fires new class, which moves menu */
+  body.menu-on .mainnav {
+    transform: translate(0%);
+  }
 }

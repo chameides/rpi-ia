@@ -219,7 +219,7 @@ figcaption,
 		figcaption,
 		.field-name-field-image-caption {
 			@include breakpoint(adult) {
-				@include transform( translateY(-100%) );
+				transform: translateY(-100%);
 			}
 			@include ie8{
 				width: 30em;

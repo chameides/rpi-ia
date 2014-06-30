@@ -45,7 +45,7 @@
 	font-size: .8em;
 	background-color: $color1;
 	padding-top: $margin;
-	@include transform( translateY(100%));
+	transform: translateY(100%);
 	/*transform does not work in ie8*/
 	@include ie8 {
 		bottom: -100%;
@@ -196,7 +196,7 @@ body.share-on {
 		.share {
 			opacity: 1;
 			padding-bottom: 55px;
-			@include transform( translateY(0%) );
+			transform: translateY(0%);
 			@include ie8 {
 				bottom: 0;
 			}
