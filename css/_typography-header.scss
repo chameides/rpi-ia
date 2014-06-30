@@ -5,7 +5,7 @@
 	margin: 0;
 	text-align: left;
 	text-transform: none;
-	@include flex-grow(1);
+	/*@include flex-grow(1); */
 	@include breakpoint (teen-up) {
 		color: #FFF;
 		font-size: 2.2em;
