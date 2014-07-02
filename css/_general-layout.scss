@@ -293,7 +293,7 @@ body {
 
 /*if change this, change aside */
 /*in drupal .field-name-body is the body, #block-views-subpage-menu-block is the gridlink*/
-.maincontent, .field-name-body, #block-views-subpage-menu-block {
+.maincontent, .field-name-body, #block-views-subpage-menu-block, .page__title /*drupal h1*/ {
 	/*on tablets and up, the aside moves to the sidebar*/
 	width: 100%;
 	@include breakpoint(teen-up) { 
@@ -301,6 +301,15 @@ body {
 		/*display:inline; turning this off, becuase it interferes with the top-margin*/
 		width: 72%;
 	} 
+}
+
+@if $drupal {
+	.page__title /*drupal h1*/, .field-name-field-subtitle /*drupal page header h2*/{
+		float: left /*have aside even with h1*/
+	} 
+	.field-name-body, #block-views-subpage-menu-block, .field-name-field-subtitle {
+		clear: left /*set subtitle to left*/
+	}
 }
 
 /*fix error in drupal layout-read where margins get applied multiple times*/
@@ -311,9 +320,14 @@ body {
 }
 
 .layout-full, .layout-full-read {
-	.maincontent, .field-name-body, #block-views-subpage-menu-block{
+	.maincontent, .field-name-body, #block-views-subpage-menu-block, .page__title /*drupal h1*/{
 		width: 100%;
 	}
+	@if $drupal {
+		.page__title /*drupal h1*/, .field-name-field-subtitle /*drupal page header h2*/{
+			float: none /*have aside even with h1*/
+		}
+	} 
 }
 
 /*this messes up the margin on boxes-noside tablet
@@ -344,6 +358,8 @@ body {
 		margin-left: 0;
 		margin-right: 0;
 }
+
+
 
 
 
