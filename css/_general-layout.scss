@@ -307,7 +307,7 @@ body {
 	.page__title /*drupal h1*/, .field-name-field-subtitle /*drupal page header h2*/{
 		float: left /*have aside even with h1*/
 	} 
-	.field-name-body, #block-views-subpage-menu-block, .field-name-field-subtitle {
+	#block-views-subpage-menu-block, .field-name-field-subtitle {
 		clear: left /*set subtitle to left*/
 	}
 }
@@ -320,12 +320,13 @@ body {
 }
 
 .layout-full, .layout-full-read {
-	.maincontent, .field-name-body, #block-views-subpage-menu-block, .page__title /*drupal h1*/{
+	.maincontent, .field-name-body, #block-views-subpage-menu-block{
 		width: 100%;
 	}
 	@if $drupal {
 		.page__title /*drupal h1*/, .field-name-field-subtitle /*drupal page header h2*/{
-			float: none /*have aside even with h1*/
+			float: none /*have aside even with h1*/;
+			width: auto; /*if 100%, crushes margin*/
 		}
 	} 
 }
