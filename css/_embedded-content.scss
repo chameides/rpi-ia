@@ -24,11 +24,8 @@ svg:not(:root) {
 /*responsive youtube embed*/
 .video-container {
 	position: relative;
-	/*padding-bottom: 56.25%;*/
-	padding-bottom: 32.3%;
-	padding-top: 30px;
+	padding-bottom: 56.3%; /*16:9*/
 	height: 0;
-	overflow: hidden;
 }
 
 .video-container iframe,  
