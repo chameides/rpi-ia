@@ -6,6 +6,9 @@
 	position: fixed;  /*position at bottom right of page */
 	bottom: 0;
 	right: 0;
+	@include breakpoint(big-baby-sleep) {
+		display: none;
+	}
 	ul {
 		list-style-type: none; /*could probably combine with menu rule */
 		width: 100%;
