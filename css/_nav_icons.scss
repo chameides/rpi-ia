@@ -332,13 +332,21 @@ for phone, no icon in nav sitemap
       @if $ie8{
         .is-expanded:first-child .menu__link {
           background-position: 0 -398px;
+          padding-left: 1.1em; /*make space for icon*/
+        }
+        .is-expanded:first-child .is-leaf .menu__link {
+          padding-left: 0; /*turn off padding for subitems*/
         }
       }
       @else {
         .is-expanded:nth-child(1) .menu__link {
           @include breakpoint (adult) {
             background-position: 0 -398px;
+            padding-left: 1.1em; /*make space for icon*/
           }
+        }
+        .is-expanded:nth-child(1) .is-leaf .menu__link {
+          padding-left: 0; /*turn off padding for subitems*/
         }
       }
     }
@@ -390,7 +398,7 @@ for phone, no icon in nav sitemap
     @if $drupal {
       @if $ie8{
         .is-expanded:first-child + .is-expanded .menu__link {
-          background-position: 0 -352px;
+          background-position: 0 -355.5px;
         }
       }
       @else {
@@ -416,12 +424,14 @@ for phone, no icon in nav sitemap
       }
     }
     @if $drupal {
-      .is-expanded:nth-child(2) .menu__link:hover {
-        @include breakpoint (adult) {
-          @if $ie8 {
-            background-position: 0 -309.5px;
-          }
-          @else {
+      @if $ie8{
+        .is-expanded:first-child + .is-expanded .menu__link:hover {
+          background-position: 0 -313.5px;
+        }
+      }
+      @else {
+        .is-expanded:nth-child(2) .menu__link:hover {
+          @include breakpoint (adult) {
             background-position: 0 -313.5px;
           }
         }
@@ -444,12 +454,19 @@ for phone, no icon in nav sitemap
       }
     }
     @if $drupal {
-      .is-expanded:nth-child(3) .menu__link {
-        @include breakpoint (adult) {
-          @if $ie8 {
-            background-position: 0 -157px;
-          }
-          @else {
+      @if $ie8{
+        .is-expanded:first-child + .is-expanded + .is-expanded .menu__link {
+          background-position: 0 -160px;
+          padding-left: 1.9em;
+        }
+        .is-expanded:first-child + .is-expanded + .is-expanded .is-leaf .menu__link
+        {
+          padding-left: 0em; /*turn off padding for subitems*/
+        }
+      }
+      @else {
+        .is-expanded:nth-child(3) .menu__link {
+          @include breakpoint (adult) {
             background-position: 0 -160px;
           }
         }
@@ -470,12 +487,14 @@ for phone, no icon in nav sitemap
       }
     }
     @if $drupal {
-      .is-expanded:nth-child(3) .menu__link:hover {
-        @include breakpoint (adult) {
-          @if $ie8 {
-            background-position: 0 -136px;
-          }
-          @else {
+      @if $ie8{
+        .is-expanded:first-child + .is-expanded + .is-expanded .menu__link:hover {
+          background-position: 0 -139px;
+        }
+      }
+      @else {
+        .is-expanded:nth-child(3) .menu__link:hover {
+          @include breakpoint (adult) {
             background-position: 0 -139px;
           }
         }
@@ -487,6 +506,7 @@ for phone, no icon in nav sitemap
       @include breakpoint (adult) {
         @if $ie8 {
           background-position: 0 -416px;
+          padding-left: 1.1em;
         }
         @else {
           @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -499,8 +519,12 @@ for phone, no icon in nav sitemap
     }
     @if $drupal {
       @if $ie8{
-        .is-expanded:first-child + .is-expanded .menu__link {
-          background-position: 0 -352px;
+        .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link {
+          background-position: 0 -419px;
+          padding-left: 1.1em;
+        }
+        .is-expanded + .is-expanded + .is-expanded + .is-expanded .is-leaf .menu__link {
+          padding-left: 0;
         }
       }
       @else {
@@ -526,17 +550,21 @@ for phone, no icon in nav sitemap
       }
     }
     @if $drupal {
-      .is-expanded:nth-child(4) .menu__link:hover {
-        @include breakpoint (adult) {
-          @if $ie8 {
-            background-position: 0 -94px;
-          }
-          @else {
+      @if $ie8{
+        .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link:hover {
+          background-position: 0 -97px;
+        }
+
+      }
+      @else {
+        .is-expanded:nth-child(4) .menu__link:hover {
+          @include breakpoint (adult) {
             background-position: 0 -97px;
           }
         }
       }
     }
+
     .icon-contact {
       background-size: 4.5em auto; 
       background-position: center 51.5%;
