@@ -166,7 +166,7 @@ block-menu is the giving menu in drupal*/
   .col-section:nth-of-type(3n + 1) {
     clear: left;
   }
-  .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read, .column2-4{
+  .layout-full /*no sidebar */, .ExtraColumn, .layout-full-read, .column2-4, .column2{
     .col-section:nth-of-type(3n + 1) {
       clear: none; /*reverse above */
     }
