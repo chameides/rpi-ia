@@ -109,9 +109,11 @@ article h2 {
 	.layout-read #block-views-aside-block /*beginning of aside*/, 
 	.field-name-field-media /*lead image*/{
 		margin-top: $margin2;
+		/* turned this off, seems like too much
 		@include breakpoint(adult) {
 			margin-top: $margin2*2;
 		}
+		*/
 	}
 	.pageheader h2, .field-name-field-subtitle {
 		font-size: 1.1em;
@@ -142,7 +144,7 @@ article h2 {
 			margin-left: 0;	
 		}
 		@include breakpoint(adult) {
-			margin-bottom: $margin2*2;
+			margin-bottom: $margin2;
 		}
 	}
 }
