@@ -341,7 +341,11 @@ for phone, no icon in nav sitemap
       @else {
         .is-expanded:nth-child(1) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -398px;
+            /*chrome resizes 1px different */
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+              background-position: 0 -398px;
+            }
+            background-position: 0 -397px;
             padding-left: 1.1em; /*make space for icon*/
           }
         }
@@ -373,9 +377,10 @@ for phone, no icon in nav sitemap
       }
       @else {
         .is-expanded:nth-child(1) .menu__link:hover {
-          @include breakpoint (adult) {
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
             background-position: 0 -118px;
           }
+          background-position: 0 -117px;
         }
       }
     }
@@ -432,7 +437,10 @@ for phone, no icon in nav sitemap
       @else {
         .is-expanded:nth-child(2) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -313.5px;
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+              background-position: 0 -313.5px;
+            }
+            background-position: 0 -312.5px;
           }
         }
       }
@@ -467,7 +475,10 @@ for phone, no icon in nav sitemap
       @else {
         .is-expanded:nth-child(3) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -160px;
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+              background-position: 0 -160px;
+            }
+            background-position: 0 -159px;
           }
         }
       }
@@ -495,7 +506,10 @@ for phone, no icon in nav sitemap
       @else {
         .is-expanded:nth-child(3) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -139px;
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+              background-position: 0 -139px;
+            }
+            background-position: 0 -138px;
           }
         }
       }
@@ -530,7 +544,10 @@ for phone, no icon in nav sitemap
       @else {
         .is-expanded:nth-child(4) .menu__link {
           @include breakpoint (adult) {
-            background-position: 0 -419px;
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+              background-position: 0 -419px;
+            }
+            background-position: 0 -418px;
           }
         }
       }
@@ -559,7 +576,10 @@ for phone, no icon in nav sitemap
       @else {
         .is-expanded:nth-child(4) .menu__link:hover {
           @include breakpoint (adult) {
-            background-position: 0 -97px;
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+              background-position: 0 -97px;
+            }
+            background-position: 0 -96px;
           }
         }
       }
