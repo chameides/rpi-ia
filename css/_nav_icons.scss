@@ -370,17 +370,19 @@ for phone, no icon in nav sitemap
       }
      }
      @if $drupal {
-      @if $ie8{
-        .is-expanded:first-child .menu__link:hover {
-          background-position: 0 -118px;
-        }
-      }
-      @else {
-        .is-expanded:nth-child(1) .menu__link:hover {
-          @media screen and (-webkit-min-device-pixel-ratio:0) {
+      @include breakpoint (adult) { 
+        @if $ie8{
+          .is-expanded:first-child .menu__link:hover {
             background-position: 0 -118px;
           }
-          background-position: 0 -117px;
+        }
+        @else {
+          .is-expanded:nth-child(1) .menu__link:hover {
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+              background-position: 0 -118px;
+            }
+            background-position: 0 -117px;
+          }
         }
       }
     }
@@ -734,7 +736,7 @@ for phone, no icon in nav sitemap
     .sitemap-comp .icon-impact, .is-expanded:nth-child(1) .menu__link {
       @include breakpoint(teen-all) {
         background-size: .93em auto;
-        background-position: 0 8.1%;
+        background-position: 0 8.1%; 
       }
       @include breakpoint(adult) {
         padding-top: 1px;
@@ -742,7 +744,7 @@ for phone, no icon in nav sitemap
     }
     .sitemap-comp .icon-impact:hover, .is-expanded:nth-child(1) .menu__link:hover {
       @include breakpoint(teen-all) {
-        background-position: 0 -.6%;
+        background-position: 0 -.35%;
       }
     }
     .sitemap-comp .icon-ways, .is-expanded:nth-child(2) .menu__link {
@@ -752,13 +754,12 @@ for phone, no icon in nav sitemap
         padding-left: 15px;
       }
       @include breakpoint(adult) {
-        background-position: 0 -355px;
         padding-top: 1px;
-      }
+      } 
     }
     .sitemap-comp .icon-ways:hover, .is-expanded:nth-child(2) .menu__link:hover {
       @include breakpoint(teen-all) {
-        background-position: 0 59.65%;
+        background-position: 0 59.8%;
       }
     }
     .sitemap-comp .icon-supporters, .is-expanded:nth-child(3) .menu__link {
@@ -774,7 +775,7 @@ for phone, no icon in nav sitemap
     }
     .sitemap-comp .icon-supporters:hover, .is-expanded:nth-child(3) .menu__link:hover {
       @include breakpoint (teen-all) {
-         background-position: 0 28.8%;
+        background-position: 0 28.8%;
       }
     }
     .sitemap-comp .icon-news, .is-expanded:nth-child(4) .menu__link {
