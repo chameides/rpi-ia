@@ -24,7 +24,7 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 .layout-full-read, .layout-read {
 	figure, div.media /*drupal uses div.media for figure*/ {
 		@include breakpoint(teen) {
-			margin-bottom: 0;
+			/*margin-bottom: 0; too tight*/
 		}
 	}
 }
@@ -283,5 +283,12 @@ img.symmetry,
 				float: none;
 			}
 		}
+	}
+}
+
+@if $drupal {
+/*hide caption in news view*/
+	.view-news .field-name-field-caption {
+		display: none;
 	}
 }
