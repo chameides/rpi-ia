@@ -7,7 +7,7 @@ pre {
 @if $drupal {
 	p, #content ul, #content ol {
 		font-weight: 300;
-		max-width: 40em;
+		max-width: 33em;
 		/*text-align: justify;*/
 		font-size: 1.1em;
 		line-height: 1.4;
@@ -27,7 +27,7 @@ pre {
 @else {
 	p, .content ul, .content ol {
 		font-weight: 300;
-		max-width: 40em;
+		max-width: 33em;
 		font-size: 1.1em;
 		line-height: 1.4;
 		@include breakpoint(big-baby-sleep) { 
@@ -43,7 +43,7 @@ pre {
 @if $drupal {
 	#block-views-subpage-menu-block .views-row p {
 		font-size: .9em;
-		@include breakpoint(adult) { 
+		@include breakpoint(teen-up) { 
 		  font-size: .8em;
 		}
 	}
@@ -51,7 +51,7 @@ pre {
 @else {
 	.grid-wrap p {
 		font-size: .9em;
-		@include breakpoint(adult) { 
+		@include breakpoint(teen-up) { 
 		  font-size: .8em;
 		}
 	}
@@ -85,10 +85,10 @@ p.squeeze {
 			p {
 				@include breakpoint(teen-up) { 
 					margin-left: $margin4;
-					font-size: 1em;	
+					font-size: 1.1em;	
 				}
 				@include breakpoint(adult) {
-					font-size: .9em;
+					font-size: .88em;
 				}
 			}
 		}
@@ -101,11 +101,11 @@ p.squeeze {
 		p {
 			@include breakpoint(teen-up) { 
 				margin-left: $margin4;
-				font-size: 1em;
+				font-size: 1.1em;
 			
 			}
 			@include breakpoint(adult) {
-				font-size: .9em;
+				font-size: .88em;
 			}
 		}
 		aside p {

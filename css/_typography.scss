@@ -33,6 +33,9 @@ body {
 	font-size: .9em}*/
 @if $drupal {
 	#content {
+		@include breakpoint(teen) /*just teen, because ipad automatically increases font size on landscape*/ {
+			font-size: 1.2em;
+		}
 		@include breakpoint(adult) {
 			font-size: 1.3em;
 		}
@@ -40,6 +43,9 @@ body {
 }
 @else {
 	.content {
+		@include breakpoint(teen) /*just teen, because ipad automatically increases font size on landscape*/ {
+			font-size: 1.2em;
+		}
 		@include breakpoint(adult) {
 			font-size: 1.3em;
 		}
