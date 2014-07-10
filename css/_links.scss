@@ -113,6 +113,12 @@ nav, .social, /*.footerlogo-wrapper replaced with:*/ .footer-logo{
   }
 }
 
+@if $drupal {
+  /*in the news view, the gridlink class is a div */
+  .view-news .gridlink {
+    border: dotted thin transparent;
+  }
+}
 /*breakout section has bluebackground, set link color to none
 section.breakout {
   .gridlink:link, .gridlink:visited {
