@@ -146,6 +146,9 @@ block-menu is the giving menu in drupal*/
   } 
 }
 
+
+
+
 /*col-sections are three across*/
 @include breakpoint(big-baby-sleep) {
   /*clear baby grid*/
@@ -160,6 +163,10 @@ block-menu is the giving menu in drupal*/
       clear: none; /*reverse above */
     }
   }
+}
+
+.column2 .col-section:nth-of-type(2n + 1) {
+  clear: left; /*reverse above */
 }
 
 @include breakpoint(teen-sleep) {
@@ -324,7 +331,8 @@ section.breakout {
 
 
 @if $drupal {
-  #block-views-subpage-menu-block {
+  #block-views-subpage-menu-block /*grid*/,
+  .view-news .gridlink /*news view*/  {
     h2, p {
       color: $textmain; /*links in grid are black*/
     }
