@@ -291,4 +291,12 @@ img.symmetry,
 	.view-news .field-name-field-caption {
 		display: none;
 	}
+	.media-fullimg .video-container{
+		@include breakpoint(baby) {
+			margin-bottom: $margin2;/*add margin that would normally be lead image*/
+		}
+		@include breakpoint(teen-all) {
+			margin-bottom: $margin2;/*add margin that would normally be lead image*/
+		}
+	}
 }
