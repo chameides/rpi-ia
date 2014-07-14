@@ -41,10 +41,12 @@ pre {
 }
 
 @if $drupal {
-	#block-views-subpage-menu-block .views-row p {
-		font-size: .9em;
-		@include breakpoint(teen-up) { 
-		  font-size: .8em;
+	#block-views-subpage-menu-block .views-row, .view-news /*news*/ {
+		p {
+			font-size: .9em;
+			@include breakpoint(teen-up) { 
+			  font-size: .8em;
+			}
 		}
 	}
 }

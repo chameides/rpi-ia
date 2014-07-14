@@ -100,20 +100,27 @@ article h2 {
 
 
 @if $drupal {
-	/*set margin to boy instead of pageheader*/
+	/*set margin to main content instead of pageheader*/
 	.field-name-field-subtitle, #block-views-subpage-menu-block .views-row h2 {
 		text-align: center;
 		text-transform: uppercase;
 	}
 	.field-name-body /*beginning of text body*/, 
 	.layout-read #block-views-aside-block /*beginning of aside*/, 
-	.field-name-field-media /*lead image*/{
-		margin-top: $margin2;
+	.field-name-field-media /*lead image*/,
+	{
+		margin-top: $margin2; /*if change this change .view-news */
 		/* turned this off, seems like too much
 		@include breakpoint(adult) {
 			margin-top: $margin2*2;
 		}
 		*/
+	}
+	.view-news /*news, margin includes the h1 above it and requires a larger number. not sure why.*/ {
+		padding-top: 2.4em; /*magic number, based on above*/
+		@include breakpoint (teen-up) {
+			padding-top: 3.6rem; /*magic number*/
+		}
 	}
 	.pageheader h2, .field-name-field-subtitle {
 		font-size: 1.1em;
