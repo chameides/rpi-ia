@@ -231,6 +231,9 @@ block-menu is the giving menu in drupal*/
       .col-section:first-child + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section + .col-section 
       {
         clear: left;
+      }
+      .column2 .col-section:first-child + .col-section + .col-section {
+        clear: left;
       } 
     }
   }
