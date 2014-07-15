@@ -82,23 +82,30 @@ cite:before{
 			display: block;
 		}
 	}
-}
-
-.read .withsidebar, 
-.bleed .layout-sidebar /*iModules*/,
-.layout-read /*drupal equivalent*/ {
 	blockquote {
 		@include breakpoint(teen-up) {
 			margin: $margin4 auto $margin2;
 		}
 	}
-}
-.read .withsidebar, 
-.bleed .layout-sidebar /*iModules*/,
-.layout-read /*drupal equivalent*/ {
-		cite {
+	cite {
 		@include breakpoint(teen-up) {
 			margin: 0 auto $margin4;
+		}
+	}
+}
+
+/*quote in sidebar*/
+aside, .views-field-field-aside {
+	@include breakpoint(teen-up) {
+		cite, blockquote {
+			margin-left: 15%;
+			margin-right: 10%;
+		}
+		cite {
+			padding-left: .7em;
+			line-height: 1.3em;
+			margin-top: .2em;
+			margin-bottom: 1.4em;
 		}
 	}
 }
