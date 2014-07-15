@@ -94,7 +94,6 @@ cite:before{
 	}
 }
 
-/*quote in sidebar*/
 aside, .views-field-field-aside {
 	@include breakpoint(teen-up) {
 		cite, blockquote {
@@ -106,6 +105,35 @@ aside, .views-field-field-aside {
 			line-height: 1.3em;
 			margin-top: .2em;
 			margin-bottom: 1.4em;
+		}
+	}
+}
+
+/*quote in sidebar*/
+read .withsidebar, 
+.bleed .layout-sidebar /*iModules*/,
+.layout-read /*drupal equivalent*/ {
+	@include breakpoint (teen) {
+		blockquote, cite {
+			margin-left: 13%;
+		}
+	}
+	@include breakpoint (teen-up) {
+		blockquote, cite {
+			max-width: 85%;
+			padding: 0;
+		}
+		blockquote {
+			padding: 0;
+		}
+	}
+	@include breakpoint (adult) {
+		article blockquote {
+			max-width: 20em;
+		}
+		blockquote {
+			padding: 0;
+			margin-left: 10%;
 		}
 	}
 }

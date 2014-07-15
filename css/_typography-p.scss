@@ -95,6 +95,11 @@ p.squeeze {
 			}
 		}
 	}
+	.layout-read blockquote p /*if sidebar reduce white space*/{
+		@include breakpoint(teen-up) { 
+			margin-left: 0; 
+		}
+	}
 }
 
 @else{
