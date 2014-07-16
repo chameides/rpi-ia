@@ -21,13 +21,15 @@ box-sizing: border-box;
 }
 
 
-.layout-full-read article {
-  @include breakpoint (baby) {
-    padding-right: 0;
-    margin-right: $margin2;
+.layout-full-read, 
+.layout-read /*noticed that I needed to add this rule on http://giving.rpi.edu/patroon-scholars*/ {
+  article {
+    @include breakpoint (baby) {
+      padding-right: 0;
+      margin-right: $margin2;
+    }
   }
 }
-
 
 /* Opt-in outside padding 
 .grid-pad {
