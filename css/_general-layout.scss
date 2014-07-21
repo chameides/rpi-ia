@@ -101,7 +101,7 @@ body {
 	 		margin-left: $margin4; /*if change this, change .full img in images.scss*/
 		}
 		/*add right margin to full width image, .content adds a left margin*/
-		img, p, h1, h2, h3, h4, h5, h6, li, iframe {
+		img, p, h1, h2, h3, h4, h5, h6, li, iframe, .field-name-field-subtitle /*drupal subtitleh2*/ {
 			padding-right: $margin2; /*if change this, change .content in general-layout.scss*/
 		 	/*on larger screen, additional margin */
 			@include breakpoint(teen-up) {
@@ -122,7 +122,7 @@ body {
 	/*no col-article in drupal*/
 	.layout-full-read, .layout-read {
 		#content article{
-			img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe {
+			img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe, .field-name-field-subtitle {
 				padding-right: 0;
 			}
 		}
@@ -304,8 +304,10 @@ body {
 }
 
 @if $drupal {
-	.page__title /*drupal h1*/, .field-name-field-subtitle /*drupal page header h2*/{
-		float: left /*have aside even with h1*/
+	@include breakpoint(teen-up){ 
+		.page__title /*drupal h1*/, .field-name-field-subtitle /*drupal page header h2*/{
+			float: left /*have aside even with h1, but keep centered on phone*/
+		}
 	} 
 	#block-views-subpage-menu-block, .field-name-field-subtitle {
 		clear: left /*set subtitle to left*/
