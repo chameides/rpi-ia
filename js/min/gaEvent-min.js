@@ -1,1 +1,1 @@
-function gaEvent(e,t,n){ga("send",{hitType:"event",eventCategory:e,eventAction:t,eventLabel:n}),alert("gaEvent Fires")}
+function gaEvent(e,n,t){ga("send",{hitType:"event",eventCategory:e,eventAction:n,eventLabel:t})}
