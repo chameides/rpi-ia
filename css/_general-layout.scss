@@ -102,7 +102,7 @@ body {
 		}
 		/*add right margin to full width image, .content adds a left margin*/
 		img, p, h1, h2, h3, h4, h5, h6, li, iframe, .field-name-field-subtitle /*drupal subtitleh2*/ {
-			padding-right: $margin2; /*if change this, change .content in general-layout.scss*/
+			/*baby set on article level*/
 		 	/*on larger screen, additional margin */
 			@include breakpoint(teen-up) {
 		 		padding-right: $margin4; /*if change this, change .content in general-layout.scss*/
@@ -266,6 +266,30 @@ body {
 	}
 }
 
+/*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
+[class*='col-'], 
+.bleed .maincontent /*iModules Alumni Template*/,
+.sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, 
+/*.layout-full-read article,*/
+.grid-separator /*set equal margin for grid-separator on alumni homepage*/{
+  float: left;
+  padding-right: $margin2;
+  @include breakpoint(teen-all) { 
+    padding-right: $margin4; /*should equal .content margin-left, check alumni homepage*/   
+  }
+  @include breakpoint(adult) { 
+    padding-right: $margin4;
+  }
+}
+
+
+
+  article {
+    @include breakpoint (baby) {
+      padding-right: 0;
+      margin-right: $margin2;
+    }
+  }
 
 
 /*rewrite above rule for asides*/

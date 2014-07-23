@@ -4,40 +4,6 @@
 box-sizing: border-box;
 }
 
-/*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
-[class*='col-'], 
-.bleed .maincontent /*iModules Alumni Template*/,
-.sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, 
-.layout-full-read article,
-.grid-separator /*set equal margin for grid-separator on alumni homepage*/{
-  float: left;
-  padding-right: $margin2;
-  @include breakpoint(teen-all) { 
-    padding-right: $margin4; /*should equal .content margin-left, check alumni homepage*/   
-  }
-  @include breakpoint(adult) { 
-    padding-right: $margin4;
-  }
-}
-
-
-.layout-full-read, 
-.layout-read /*noticed that I needed to add this rule on http://giving.rpi.edu/patroon-scholars*/ {
-  article {
-    @include breakpoint (baby) {
-      padding-right: 0;
-      margin-right: $margin2;
-    }
-  }
-}
-
-/* Opt-in outside padding 
-.grid-pad {
-  padding: 0;
-}
-*/
-
-
 /*col-section is for block grids
 sitemap-comp is the giving menu
 block-menu is the giving menu in drupal*/
