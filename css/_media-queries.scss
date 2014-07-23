@@ -11,51 +11,50 @@
 
   /*not ie8*/
   @else {
-    
     @if $point == baby {
       /* Smartphones, except large phone landscape ----------- */
-      @media only screen and (max-width : 707px) { @content; }
+      @media only screen and (max-width : 748px) { @content; }
     }
 
     @else if $point == big-baby-sleep {
       /* large phone (landscape) ----------- */
-      @media only screen and (min-width : 320px) and (max-width : 707px) and (orientation:landscape)  { @content; }
+      @media only screen and (min-width : 320px) and (max-width : 748px) and (orientation:landscape)  { @content; }
     }
     @else if $point == teen-up {
       /*tablet and up*/
-      @media only screen and (min-width : 708px) { @content; }
+      @media only screen and (min-width : 749px) { @content; }
     }
 
     @else if $point == teen {
       @if $alumni {
         /*tablet-vertical*/
-        @media only screen and (min-width : 708px) and (max-width : 1123px) and (orientation:portrait) { @content; }
+        @media only screen and (min-width : 749px) and (max-width : 1123px) and (orientation:portrait) { @content; }
       }
       @else  {
         /*tablet-vertical*/
-        @media only screen and (min-width : 708px) and (max-width : 1020px) and (orientation:portrait) { @content; }
+        @media only screen and (min-width : 749px) and (max-width : 1020px) and (orientation:portrait) { @content; }
       } 
     }
 
     @else if $point == teen-sleep {
       @if $alumni {
         /*tablet-horizontal*/
-        @media only screen and (min-width : 708px) and (max-width : 1123px) and (orientation:landscape) { @content; }
+        @media only screen and (min-width : 749px) and (max-width : 1123px) and (orientation:landscape) { @content; }
       }
       @else  {
         /*tablet-horizontal*/
-        @media only screen and (min-width : 708px) and (max-width : 1020px) and (orientation:landscape) { @content; }
+        @media only screen and (min-width : 749px) and (max-width : 1020px) and (orientation:landscape) { @content; }
       } 
     }
 
     @else if $point == teen-all {
       @if $alumni {
         /*tablet-all*/
-        @media only screen and (min-width : 708px) and (max-width : 1123px) { @content; }
+        @media only screen and (min-width : 749px) and (max-width : 1123px) { @content; }
       }
       @else  {
         /*tablet-all*/
-        @media only screen and (min-width : 708px) and (max-width : 1020px) { @content; }
+        @media only screen and (min-width : 749px) and (max-width : 1020px) { @content; }
       } 
     }
     
