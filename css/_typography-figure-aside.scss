@@ -9,40 +9,71 @@ figcaption,
 	}
 }
 
-.read, 
-.bleed .content, /*imodules*/
-.layout-full-read, .layout-read {
-	figcaption, 
-	.field-name-field-caption /*drupal lead image*/,
-	.field-name-field-image-caption /*drupal media caption*/ {
-		@include breakpoint(teen-up) {
-			width: $smallratio;
-			float: left;
-			clear: left;
-			font-weight: normal;
-			margin-left: $margin4;
-			text-align: left;
-			display: inline;
+
+figcaption, 
+.field-name-field-caption /*drupal lead image*/,
+.field-name-field-image-caption /*drupal media caption*/ {
+	@include breakpoint(teen-up) {
+		clear: left;
+		font-weight: normal;
+		text-align: left;
+		
+	}
+}
+/*add right margin/gutter on figcaption fullimg and imgright with sidebar*/
+@include breakpoint(teen-up) {
+	.fullimg,
+	.media-fullimg, /*drupal media*/,
+	.field-name-field-media /*drupal lead image*/, 
+	.imgright,
+	.media-imgright /*drupal media*/
+	 {
+		figcaption, 
+		.field-name-field-caption /*drupal lead image*/,
+		.field-name-field-image-caption /*drupal media caption*/ {
+		margin-right: $margin2;
 		}
 	}
-	/*add right margin/gutter on figcaption fullimg and imgright with sidebar*/
-	@include breakpoint(teen-up) {
-		.fullimg,
-		.media-fullimg, /*drupal media*/,
-		.field-name-field-media /*drupal lead image*/, 
-		.imgright,
-		.media-imgright /*drupal media*/
-		 {
-			figcaption, 
-			.field-name-field-caption /*drupal lead image*/,
-			.field-name-field-image-caption /*drupal media caption*/ {
-			margin-right: $margin2;
-			}
+}	
+
+
+figcaption, 
+.field-name-field-caption /*drupal lead image*/,
+.field-name-field-image-caption /*drupal media caption*/ {
+	@include breakpoint(adult) {
+		max-width: 37em; /*captions shouldn't be wider than picture*/
+	}
+}	
+
+
+/*no left page margin, so add margin to the caption*/
+@include breakpoint(teen-up) {
+	/*read layouts*/
+	.read, 
+	.bleed .content, /*imodules*/
+	.layout-full-read, .layout-read {
+		figcaption, 
+		.field-name-field-caption /*drupal lead image*/,
+		.field-name-field-image-caption /*drupal media caption*/ {	
+			margin-left: $margin4;
 		}
-	}	
+	}
+	/* read full layouts*/
+	.read .layout-full /*static*/,
+	.layout-full-read /*drupal*/, 
+	.bleed .layout-full /*imodules*/ {
+		figcaption, 
+		.field-name-field-caption /*drupal lead image*/,
+		.field-name-field-image-caption /*drupal media caption*/ {	
+			width: $smallratio; /*restrict caption to negative space sidebar*/
+			display: inline;
+			float: left;
+		}
+	}
 }
+
 /*turn off for .full, gutters are set elsewhere*/
-.layout-full, 
+/* .layout-full, forces lead image figcaption off page */
 .withsidebar .fullimg,
 .withsidebar .imgright,
 .bleed .layout-sidebar .fullimg,

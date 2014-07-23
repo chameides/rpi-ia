@@ -28,39 +28,38 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 		}
 	}
 }
-/*add bar before caption on .read */
-.fullimg figcaption:before, 
-.imgright figcaption:before,  
-.field-name-field-caption:before /*drupal lead image*/,
-.media-fullimg .field-name-field-image-caption:before /*drupal media*/,
-.media-imgright .field-name-field-image-caption:before /*drupal media*/
-{
-	@include breakpoint(teen-up) {
-		content: '';
-		border-bottom: .4em solid $color3;
-		margin-top: $margin2*2;
-		margin-bottom: $margin2;
-		width: 60%;
-		display: block;
-	}
-}
-
-/*aside margins for read */
-.read .priority1and2, 
-.bleed .priority1and2, /*Imodules*/
-.layout-full .priority1and2, /*static class*/ 
+/*add bar before caption on .read-full */
+.read .layout-full /*static*/,
 .layout-full-read /*drupal*/, 
-.layout-read /*drupal*/,
-.layout-full .field-name-body /*drupal*/{
-	aside, .aside,
-	.media-aside /*drupal media*/ {
+.bleed .layout-full /*imodules*/ 
+ {
+	.fullimg figcaption:before, 
+	.imgright figcaption:before,  
+	.field-name-field-caption:before /*drupal lead image*/,
+	.media-fullimg .field-name-field-image-caption:before /*drupal media*/,
+	.media-imgright .field-name-field-image-caption:before /*drupal media*/
+	{
 		@include breakpoint(teen-up) {
-			width: $smallratio;
-			margin-top: $margin2;
-			margin-bottom: $margin2/2;
+			content: '';
+			border-bottom: .4em solid $color3;
+			margin-top: $margin2*2;
+			margin-bottom: $margin2;
+			width: 60%;
+			display: block;
 		}
 	}
 }
+
+
+aside, .aside,
+.media-aside /*drupal media*/ {
+	@include breakpoint(teen-up) {
+		width: $smallratio;
+		margin-top: $margin2;
+		margin-bottom: $margin2/2;
+	}
+}
+
 /*space between image and main body on read with sidebar */
 .read .priority1and2,
 .bleed .priority1and2, /*Imodules*/
@@ -85,28 +84,33 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 	/*media-aside needs padding
 	this could probably get folded into other rules*/
 	@include breakpoint(teen-up) {
-		.media-aside, .aside {
-			padding-left: $margin4;
-		}
-	}
-}
-/*full article, set aside to left*/
-.layout-full, 
-.read .layout-full,
-.bleed .layout-full, /*Imodules*/ 
-.layout-full-read
-{
-	aside, .aside,
-	.media-aside /*drupal media*/ {
-		@include breakpoint(teen-up) {
-			float: left;
-			clear: left;
-		}
-		figcaption {
-				width: 100%;
+		.layout-full-read {
+			.media-aside, .aside {
+				padding-left: $margin4;
 			}
+		}
+		.layout-full {
+			.media-aside, .aside {
+				padding-right: $margin4;
+				img {
+					padding-right: 0;
+				}
+			}
+		}
 	}
 }
+/*set aside to left*/
+aside, .aside,
+.media-aside /*drupal media*/ {
+	@include breakpoint(teen-up) {
+		float: left;
+		clear: left;
+	}
+	figcaption {
+			width: 100%;
+		}
+}
+
 
 
 /*margin-left for asides*/
@@ -277,6 +281,15 @@ img.symmetry,
 {
 	@include breakpoint(teen-up) {
 		margin-right: $margin4;
+		clear: both;
+	}
+}
+
+.layout-full-read {
+	figure.symmetry,
+	.media-symmetry /*drupal media*/,   
+	img.symmetry {
+		clear: none;
 	}
 }
 
@@ -299,6 +312,7 @@ img.symmetry,
 		margin-left: $ratio;
 	}
 }
+
 
 
 
