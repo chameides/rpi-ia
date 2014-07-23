@@ -222,3 +222,14 @@ h6 {
 	font-size: 0.67em;
 	margin: 2.33em 0;
 }
+
+
+@if $drupal {
+	/*hide temporary header names. These are headers used set page and grid type and then a jquery uses them to change the body name and removes them from the page. But sometimes there is a flash and they show up*/
+	.field-name-field-page-type, .field-name-field-grid-type {
+		font-size: 0; 
+	}
+
+
+
+}
