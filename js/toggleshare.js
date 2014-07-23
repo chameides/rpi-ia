@@ -6,6 +6,5 @@ function shareopen() {
 
 function socialclose() {
     $(document.body).removeClass('follow-on');
-    $(document.body).removeClass('share-on');
-    
+    $(document.body).removeClass('share-on');   
 }
