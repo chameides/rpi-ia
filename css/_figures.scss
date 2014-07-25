@@ -62,9 +62,11 @@ aside, .aside,
 }
 
 /*space between image and main body on read with sidebar */
-.read .priority1and2,
-.bleed .priority1and2, /*Imodules*/
-.layout-read {
+.read .priority1and2 /*original html*/,
+.bleed .priority1and2, /*iModules*/
+.layout-sidebar .priority1and2, /*iModules*/
+.layout-read,
+div.sidebar .priority1and2 .maincontent /*stelter*/ {
 	.aside, aside,
 	.media-aside /*drupal media*/ {
 		@include breakpoint(teen-up) {
@@ -100,18 +102,22 @@ aside, .aside,
 		}
 	}
 }
-/*set aside to left*/
-aside, .aside,
-.media-aside /*drupal media*/ {
-	@include breakpoint(teen-up) {
-		float: left;
-		clear: left;
-	}
-	figcaption {
-			width: 100%;
+/*full article, set aside to left*/
+.layout-full, 
+.read .layout-full,
+.bleed .layout-full, /*Imodules*/ 
+.layout-full-read {
+	aside, .aside,
+	.media-aside /*drupal media*/ {
+		@include breakpoint(teen-up) {
+			float: left;
+			clear: left;
 		}
+		figcaption {
+				width: 100%;
+			}
+	}
 }
-
 
 
 /*margin-left for asides*/
@@ -169,7 +175,7 @@ figcaption,
 .field-name-field-caption /*drupal lead image*/,
 .field-name-field-image-caption /*drupal media*/  {
 	@include breakpoint(adult) {
-		margin-bottom: $margin2;
+		margin-bottom: $margin4;
 	}
 }
 
@@ -206,19 +212,21 @@ figcaption,
 			float: right;
 		}
 	}
-	.fullimg, .imgright {
+	.fullimg, .imgright, .media-imgright {
+		font-size: .9em;
 		figcaption, .field-name-field-image-caption /*drupal media*/ {
 			@include breakpoint(teen-up) {
 				margin-left: 0;
 				padding-left: $margin4; /*set to align with asides*/
+				float: none;
 			}
 		}
 	}
 }
 
 
-.layout-full, 
-.layout-full-read {
+.bleed .layout-full /*imodules*/,
+.layout-full-read /*drupal*/{
 	.imgright,
 	.media-imgright /*drupal media*/ {
 		figcaption,
@@ -254,7 +262,10 @@ img.symmetry,
 	}
 }
 
-.layout-read, .layout-full-read {
+.read /*original html*/,
+.bleed /*imodules*/,
+.layout-read, 
+.layout-full-read {
 	figure.symmetry, 
 	.media-symmetry, /*drupal media*/ 
 	img.symmetry,
@@ -306,14 +317,16 @@ img.symmetry,
 	}
 }
 
-.layout-full-read figure.symmetry,
-.layout-full-read .media-symmetry /*drupal media*/, 
-.layout-full-read img.symmetry {
-	@include breakpoint(teen-up) {
-		margin-left: $ratio;
+.read .layout-full /*original html*/, 
+.layout-full-read /*drupal */{
+	figure.symmetry,
+	.media-symmetry /*drupal media*/, 
+	img.symmetry {
+		@include breakpoint(teen-up) {
+			margin-left: $ratio;
+		}
 	}
 }
-
 
 
 
