@@ -144,5 +144,12 @@ aside, #block-views-aside-block, .aside {
 			font-size: .9em;
 		}
 	}
-	
 }
+/*on full layout, aside priority3 is regular size*/
+.layout-full, .layout-full-read {
+	aside.priority3 /*static*/,
+	#block-views-aside-block /*drupal*/ {
+		font-size: 1em;
+	}
+}
+

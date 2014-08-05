@@ -54,7 +54,7 @@ cite:before{
 
 .read, 
 .bleed .content, /*imodules*/
-.layout-full-read, .layout-read {
+.layout-full-read, .layout-read, .layout-full /*drupal*/ {
 	blockquote{
 		@include breakpoint(teen-up) {
 			float: left;
@@ -134,6 +134,27 @@ read .withsidebar,
 		blockquote {
 			padding: 0;
 			margin-left: 10%;
+		}
+	}
+}
+
+/*on layout-full blockquote*/
+.layout-full, .layout-full-read {
+	aside.priority3 /*static*/,
+	.views-field-field-aside /*drupal*/{
+		blockquote p {
+			max-width: 29em; /*fit width to paragraph width, blockquote has larger font-size, so the width needs to be smaller*/
+		}
+		@include breakpoint(teen-up) {
+			blockquote {
+				margin-left: 1%; /*align left*/
+				p {
+					max-width: 25em; 
+				}
+			}
+			cite {
+				margin-left: 6%; /*align cite to beginning of quote*/
+			}
 		}
 	}
 }
