@@ -159,13 +159,13 @@
 .responsive-background .giving-branded-banner-wrapper { 
   @if $ie8{
     /*different file tree for drupal*/ 
-     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-2060.jpg', sizingMethod='scale'); /*change with campaign*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-2060.jpg', sizingMethod='scale')"; /*change with campaign*/
+     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846.jpg', sizingMethod='scale'); /*change with campaign*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846.jpg', sizingMethod='scale')"; /*change with campaign*/
   }
   @else {
     background-image: url("../img/giving-homepage/bridging-718.jpg"); /*change with campaign*/
     @include breakpoint (teen-up) {
-      background-image: url("../img/giving-homepage/bridging-2060.jpg"); /*change with campaign*/
+      background-image: url("../img/giving-homepage/bridging-1846.jpg"); /*change with campaign*/
     }
   }
 }

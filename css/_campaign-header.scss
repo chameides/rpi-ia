@@ -1,0 +1,31 @@
+@if $drupal {
+	/*giving homepage focuses on a single campaign*/
+	.campaign-header {
+	  background: #333; /*background used in graphic extends to text area*/
+	  padding-bottom: $margin2; /*space withing gray box*/
+	  margin-bottom: $margin2; /*space below gray box*/
+	  @include breakpoint (teen-up) {
+	  	margin-right: $margin4; /*for this page type, on teen-up margin is determined on an element basis, to allow for page bleed*/
+	  	padding-bottom: $margin4; 
+	  	margin-bottom: $margin4;
+	  }
+	  font-size: .9em; /*text closer in size to text in graphic*/
+	}
+	#content .campaign-header .campaign-text{
+	  margin-top: $margin2; /*space between image and text*/
+	  padding: 0 $margin2; /*space between image and box border*/
+	  @include breakpoint(teen-up) {
+	  	margin-top: $margin4;
+		}
+	}
+	.campaign-header p {
+	  color: white; /* white text on gray background*/
+	  text-align: center; 
+	  max-width: 100%; /*override max width in order to center*/
+	}
+	.page-node-14 /*make an impact page*/{
+		#content {
+			margin-top: 0; /*make top margin consistent with left and right, when page title is hidden */
+		}
+	}
+}
