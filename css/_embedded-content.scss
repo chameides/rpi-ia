@@ -26,6 +26,9 @@ svg:not(:root) {
 	position: relative;
 	padding-bottom: 56.3%; /*16:9*/
 	height: 0;
+	-webkit-overflow-scrolling: touch; /*iframes should scroll*/
+  overflow-y: scroll; /*iframes should scroll*/
+  overflow-x: scroll; /*iframes should scroll*/
 }
 
 .video-container iframe,  
