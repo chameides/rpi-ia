@@ -6,8 +6,9 @@
 @import "mixin";
 @import "media-queries";
 
-body {
+html, body {
  background: white;
+ display: inline;
 }
 
 button, input, select, textarea {
