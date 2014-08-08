@@ -38,12 +38,16 @@ svg:not(:root) {
 	height: 100%;
 }
 
-.iframe-portal {
-	-webkit-overflow-scrolling: touch; /*iframes should scroll*/
-  overflow-y: scroll; /*iframes should scroll*/
-  overflow-x: scroll; /*iframes should scroll*/
+@if $ie8 {
+	/*prevent double scrollbars*/
 }
-
+@else {
+	.iframe-portal {
+		-webkit-overflow-scrolling: touch; /*iframes should scroll*/
+	  overflow-y: scroll; /*iframes should scroll*/
+	  overflow-x: scroll; /*iframes should scroll*/
+	}
+}
 @if $alumni {
 	.twitter-timeline /*Alumni Twitter Feed Embed */{
 	  margin: 0 auto;
