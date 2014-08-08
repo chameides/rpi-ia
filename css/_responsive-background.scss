@@ -31,12 +31,12 @@
   @if $ie8{
     /*different file tree for drupal*/
     @if $drupal {
-      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale');
-      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale')";
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale')";
     }
     @else {
-       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale');
-      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale')";
+       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/aerial.png', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/aerial.png', sizingMethod='scale')";
     }
   }
     @else {
