@@ -1,18 +1,9 @@
-/* Vendor Dependencies */
-@import "bourbon";
-
-/* Authored Dependencies */
-@import "variables";
-@import "mixin";
-@import "media-queries";
-
 html, body {
  background: white;
  display: inline;
+ padding: 0 1.5em;
 }
 
 button, input, select, textarea {
-  @include breakpoint(baby) {
     max-width: 20em;
-  }
 }
