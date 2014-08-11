@@ -42,11 +42,21 @@ svg:not(:root) {
 	.iframe-portal {
 		-webkit-overflow-scrolling: touch; /*iframes should scroll*/
 	  overflow-y: scroll; /*iframes should scroll, but causes two scroll bars in ie10*/
+		@include breakpoint(adult){
+			overflow: hidden;
+		}
 	}
+}
+
+.media-wrapper /*add border, initially used on matching gifts iframe*/{
+	border: 1px #ccc solid; 
+	padding: .3em
 }
 
 #content .iframe-portal iframe {
 	padding-right: 0;
+	width: 100%;
+	border: none;
 }
 
 @if $alumni {
