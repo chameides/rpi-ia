@@ -24,8 +24,11 @@
   }
   li {
   	text-transform: uppercase;
-  	ul {
-      margin: 0;
+    ul {
+      margin: .7em 0 0; /*for touch device, add a space between main link and sublinks*/
+      @include breakpoint(adult) {
+        margin: 0;
+      }
   	}
   	ul li{
 		font-size: .8em;
