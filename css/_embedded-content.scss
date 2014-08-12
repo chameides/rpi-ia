@@ -43,7 +43,7 @@ svg:not(:root) {
 		-webkit-overflow-scrolling: touch; /*iframes should scroll*/
 	  overflow-y: scroll; /*iframes should scroll, but causes two scroll bars in ie10*/
 		@include breakpoint(adult){
-			overflow: hidden;
+			overflow: hidden;/*two scroll bars in chrome for windows, so hide on larger screens*/
 		}
 	}
 }
