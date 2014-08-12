@@ -15,4 +15,9 @@
 	.gsc-control-cse, .gsc-control-cse .gsc-table-result {
 		margin-bottom: .7rem;
 	}
+
+	/*align search button with input field*/
+	input[type="button"].gsc-search-button {
+    margin-top: .2em;
+	}
 }
