@@ -49,6 +49,20 @@ figure.fullimg, .media-fullimg /*drupal equivalent*/{
 			display: block;
 		}
 	}
+	@if $ie8{
+		/*style as symmetry*/
+		.imgright figcaption:before,  
+		.media-fullimg .field-name-field-image-caption:before /*drupal media*/,
+		.media-imgright .field-name-field-image-caption:before /*drupal media*/
+		{
+				content: none;
+				border-bottom: none;
+				margin-top: 0;
+				margin-bottom: 0;
+				width: auto;
+				display: block;
+		}
+	}
 }
 
 
@@ -200,6 +214,14 @@ figcaption,
 			margin-top: $margin5;
 		}
 	}
+	@if $ie8{
+		figcaption:before, 
+		.field-name-field-caption:before/*drupal lead image*/
+		.field-name-field-image-caption /*drupal media*/
+		 {
+			margin-top: 0;
+		}
+	}
 }
 /*space between figcaption and mainbody on article with sidebar */
 .read .withsidebar, 
@@ -224,29 +246,37 @@ figcaption,
 	}
 }
 
-
-.bleed .layout-full /*imodules*/,
-.layout-full-read /*drupal*/{
-	.imgright,
-	.media-imgright /*drupal media*/ {
-		figcaption,
-		.field-name-field-image-caption {
-			@include breakpoint(adult) {
-				transform: translateY(-100%);
+@if $ie8{
+	/*style as symmetry*/
+}
+	@else {
+	.read .layout-full,
+	.bleed .layout-full /*imodules*/,
+	.layout-full-read /*drupal*/{
+		.imgright,
+		.media-imgright /*drupal media*/ {
+			figcaption,
+			.field-name-field-image-caption {
+				@include breakpoint(adult) {
+					transform: translateY(-100%);
+				}
+				@include ie8{
+					width: 30em;
+					float: none;
+					clear: left;
+					margin-top: 0;
+					margin-bottom: $margin2;
+					display: block;
+				}
 			}
-			@include ie8{
-				width: 30em;
-				float: none;
-				clear: left;
-				margin-left: $ratio;
-				margin-top: 0;
-				margin-bottom: $margin2;
-				display: block;
+			figcaption {
+				@include ie8{
+					margin-left: $ratio;
+				}
 			}
 		}
 	}
 }
-
 
 figure.symmetry, 
 .media-symmetry, /*drupal media*/ 
@@ -257,6 +287,19 @@ img.symmetry,
 		margin-bottom: $margin2;
 	}
 	@include breakpoint(adult) {
+		font-size: .9em;
+		max-width: 40em;
+	}
+}
+
+
+@if $ie8 {
+	/*imgright as if symmetry*/
+	figure.imgright, 
+	.media-imgright,
+	img.imgright {
+		font-size: 1em;
+		margin-bottom: $margin2;
 		font-size: .9em;
 		max-width: 40em;
 	}
@@ -276,6 +319,23 @@ img.symmetry,
 		}
 	}
 }
+
+@if $ie8 {
+	/*imgright as if symmetry*/
+	.read /*original html*/,
+	.bleed /*imodules*/,
+	.layout-read, 
+	.layout-full-read {
+		figure.imgright, 
+		.media-imgright,
+		img.imgright {
+			margin-left: $margin4; /*this corresponds to typgoraphy-p: read p margins*/
+		}
+	}
+}
+
+
+
 .withsidebar, 
 .bleed .layout-sidebar /*iModules*/,
 .layout-read /*drupal equivalent*/{ 
@@ -287,6 +347,19 @@ img.symmetry,
 	}
 }
 
+@if $ie8 {
+	/*imgright as if symmetry*/
+	.withsidebar, 
+	.bleed .layout-sidebar /*iModules*/,
+	.layout-read /*drupal equivalent*/{ 
+		img.imgright, 
+		.file-imgright /*drupal media*/  {
+			padding-right: $margin4;
+		}
+	}
+}
+
+
 figure.symmetry,
 .media-symmetry /*drupal media*/,   
 img.symmetry,
@@ -297,6 +370,18 @@ img.symmetry,
 	}
 }
 
+@if $ie8 {
+	/*imgright as if symmetry*/
+	figure.imgright,
+	.media-imgright /*drupal media*/,   
+	img.imgright,
+	{	
+		margin-right: $margin4;
+		clear: both;
+	}
+}
+
+
 .layout-full-read {
 	figure.symmetry,
 	.media-symmetry /*drupal media*/,   
@@ -304,6 +389,19 @@ img.symmetry,
 		clear: none;
 	}
 }
+
+@if $ie8 {
+	/*imgright as if symmetry*/
+	.layout-full-read {
+		figure.imgright,
+		.media-imgright /*drupal media*/,   
+		img.imgright {
+			clear: none;
+		}
+	}
+}
+
+
 
 /*margin for layout-read on priority1and2 level*/
 .layout-read {
@@ -317,6 +415,18 @@ img.symmetry,
 	}
 }
 
+@if $ie8 {
+	/*imgright as if symmetry*/
+	.layout-full-read {
+		figure.imgright,
+		.media-imgright /*drupal media*/,   
+		img.imgright {
+			clear: none;
+		}
+	}
+}
+
+
 .read .layout-full /*original html*/, 
 .layout-full-read /*drupal */{
 	figure.symmetry,
@@ -328,7 +438,19 @@ img.symmetry,
 	}
 }
 
-
+@if $ie8 {
+	/*imgright as if symmetry*/
+	.read .layout-full /*original html*/, 
+	.layout-full-read /*drupal */{
+		figure.imgright,
+		.media-imgright /*drupal media*/, 
+		img.imgright {
+			@include breakpoint(teen-up) {
+				margin-left: $ratio;
+			}
+		}
+	}
+}
 
 
 .read,
@@ -337,13 +459,29 @@ img.symmetry,
 .layout-read {
 	.symmetry, .media-symmetry /*drupal media*/{
 		figcaption, .field-name-field-image-caption /*drupal media*/{
-			@include breakpoint(teen-up) { 
+				margin-left: 0;
+				float: none;
+		}
+	}
+}
+
+@if $ie8 {
+	/*imgright as if symmetry*/
+	.read,
+	.bleed .content, /*Imodules*/
+	.layout-full-read,
+	.layout-read {
+		.imgright, 
+		.media-imgright /*drupal media*/{
+			figcaption, .field-name-field-image-caption /*drupal media*/{
 				margin-left: 0;
 				float: none;
 			}
 		}
 	}
 }
+
+
 
 @if $drupal {
 /*hide caption in news view*/

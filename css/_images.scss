@@ -54,41 +54,44 @@ img.fullimg,
 		.fullimg, 
 		.media-fullimg /*drupal fullimg*/,
 		.field-name-field-media .field-name-field-image /*drupal lead image*/ {
-			max-width: 750px; /* or else too big on big screens: full image based on pixel recommendation */
+			@if $ie8{
+				width: 750px;
+			}
+			@else {
+				max-width: 750px; /* or else too big on big screens: full image based on pixel recommendation */
+			}
 		}
 	}
 }
 
 
 @include breakpoint(adult) {
-	.layout-full /*imodules and drupal*/ {
-		figure.imgright {
-			float: right;
-			padding-left: $margin4;
-		}
-		.imgright img, img.imgright, .file-imgright {
-			max-width: 750px;
-			padding-left: 0;
-			margin-left: 0;
-		}
+	@if $ie8{
+		/*style imgright as symmetry*/
 	}
-
-
-	/*on large screen right image goes right*/
-	.bleed .layout-full/*imodules article no sidebar*/, 
-	.layout-full-read /*drupal*/{ 
-		figure.imgright {
-			float: none;
+	@else {
+		.layout-full /*imodules and drupal*/ {
+			figure.imgright {
+				float: right;
+				padding-left: $margin4;
+			}
+			.imgright img, img.imgright, .file-imgright {
+				max-width: 750px; /* or else too big on big screens: full image based on pixel recommendation */
+				padding-left: 0;
+				margin-left: 0;
+			}
 		}
-		.imgright img, img.imgright, .file-imgright {
-			margin-left: 1%; /*without this image disappears, not sure why*/
-			padding-left: 30%; /*align right*/
-			max-width: 100%;
-
-			@include ie8 {
-				width: 30em;
-				margin-left: $ratio;
-				padding-left: 0; /*prevent image from getting squished*/
+		/*on large screen right image goes right*/
+		.read .layout-full,
+		.bleed .layout-full/*imodules article no sidebar*/, 
+		.layout-full-read /*drupal*/{ 
+			figure.imgright {
+				float: none;
+			}
+			.imgright img, img.imgright, .file-imgright {
+				margin-left: 1%; /*without this image disappears, not sure why*/
+				padding-left: 30%; /*align right*/
+				max-width: 100%;
 			}
 		}
 	}
@@ -99,7 +102,7 @@ img.fullimg,
 		.imgright img, img.imgright, .file-imgright {
 			padding-left: 0;
 			margin-left: 0;
-			max-width: 750px;
+			max-width: 750px; /* or else too big on big screens: full image based on pixel recommendation */
 		}
 	}
 }

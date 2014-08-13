@@ -35,6 +35,17 @@ figcaption,
 		}
 	}
 }	
+@if $ie8{
+	/*imgright as if symmetry*/
+	.imgright,
+	.media-imgright /*drupal media*/{
+		figcaption, 
+		.field-name-field-caption /*drupal lead image*/,
+		.field-name-field-image-caption /*drupal media caption*/ {
+		margin-right: 0;
+		}
+	}
+}
 
 
 figcaption, 
@@ -87,6 +98,7 @@ figcaption,
 }
 
 
+
 .read, 
 .bleed .content, /*imodules*/
 .layout-full-read, .layout-read {
@@ -124,6 +136,23 @@ figcaption,
 		margin-right: 0;
 	}
 }
+
+@if $ie8 {
+	/*imgright as if symmetry*/
+	.imgright, 
+	.media-imgright /*drupal media*/ {
+		figcaption, 
+		.field-name-field-caption /*drupal lead image*/,
+		.field-name-field-image-caption /*drupal media caption*/ {
+			width: auto;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+
+
 /* this was breaking the figcaption in drupal
 .aside figcaption {
 	@include breakpoint(teen-up) {
