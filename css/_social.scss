@@ -50,7 +50,7 @@
 	padding-top: $margin;
 	transform: translateY(100%);
 	/*transform does not work in ie8*/
-	@include ie8 {
+	@if $ie8 {
 		bottom: -100%;
 	}
 	li {
@@ -80,7 +80,7 @@ close text gets spacing
 		font-size: .7em;
 		/*facebook blue*/
 		background: transparentize($colorfacebook, .07);
-		@include ie8 {
+		@if $ie8 {
 			background: $colorfacebook;
 		}
 		@if $alumni {}
@@ -159,7 +159,7 @@ body.follow-on {
 			z-index: 3;	
 			padding-bottom: 55px;
 			@include transform( translateY(0%) );
-			@include ie8 {
+			@if $ie8 {
 				bottom: 0;
 			}
 		}
@@ -200,7 +200,7 @@ body.share-on {
 			opacity: 1;
 			padding-bottom: 55px;
 			transform: translateY(0%);
-			@include ie8 {
+			@if $ie8 {
 				bottom: 0;
 			}
 		}

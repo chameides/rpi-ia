@@ -165,7 +165,7 @@ block-menu is the giving menu in drupal*/
       clear: left; 
     }
   } 
-  @include ie8 {    
+  @if $ie8 {    
     /*1st col-section */
       .col-section:first-child,  
       /*4th col-section */

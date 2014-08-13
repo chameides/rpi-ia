@@ -9,7 +9,7 @@
     padding-bottom: 0;
     padding-right: $margin2;
     padding-top: .5rem;
-    @include ie8 {
+    @if $ie8 {
       padding-top: .5em;
     }
   }

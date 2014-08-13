@@ -149,7 +149,7 @@ section.breakout {
     opacity:0.6;
     /*webkit jiggles the image without this rule*/
     -webkit-backface-visibility: hidden;
-    @include ie8 {  
+    @if $ie8 {  
       filter:alpha(opacity=60);
     }
   }

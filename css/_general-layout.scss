@@ -3,7 +3,7 @@ body {
   padding: 0px;
   min-width: 310px;
   background: #ccc;
-  @include ie8 {
+  @if $ie8 {
   	min-width: 850px;
   	@if $alumni {
   		min-width: 895px; /*more menu items require larger width*/

@@ -40,7 +40,7 @@
         img {
           display: block;
         }
-        @include ie8 {
+        @if $ie8 {
           margin-left: .3em;
         }
       }
@@ -88,7 +88,7 @@
     position: relative;
     overflow: visible;
     padding: 0rem 1rem;
-    @include ie8 {
+    @if $ie8 {
       padding: 0em 1em;
     }
     box-shadow:none;
@@ -117,7 +117,7 @@
       float: left;
       width: auto;
       margin-top: .5rem;
-      @include ie8 {
+      @if $ie8 {
         margin-top: .5em;
       }
     }

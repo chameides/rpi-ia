@@ -36,7 +36,7 @@ img.fullimg,
 		margin-right: $margin*2; /*set gutter*/
 		margin-bottom: $margin;
 	}
-	@include ie8 {
+	@if $ie8 {
 		max-width: 750px; /*prevent images from getting to large*/
 	}
 }
