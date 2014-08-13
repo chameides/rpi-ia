@@ -308,6 +308,8 @@ section.breakout {
   .view-news .gridlink /*news view*/  {
     h2, p {
       color: $textmain; /*links in grid are black*/
+      margin-left: auto; /*center text for windows, max-width prevents text align center from working*/
+      margin-right: auto;
     }
     @include breakpoint (adult) {
       .col-section p /*pad, so that there is some space between blue border and text
