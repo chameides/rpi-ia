@@ -6,7 +6,7 @@ body {
   @include ie8 {
   	min-width: 850px;
   	@if $alumni {
-  		min-width: 1037px; /*more menu items require larger width*/
+  		min-width: 895px; /*more menu items require larger width*/
   	}
   }
 }
