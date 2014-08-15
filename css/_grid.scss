@@ -310,7 +310,6 @@ section.breakout {
       color: $textmain; /*links in grid are black*/
       margin-left: auto; /*center text for windows, max-width prevents text align center from working*/
       margin-right: auto;
-      max-width: 60em;/*prevent indendation on large screens*/
     }
     @include breakpoint (adult) {
       .col-section p /*pad, so that there is some space between blue border and text
@@ -319,6 +318,9 @@ section.breakout {
         padding-right: .4em;
       }
     }
+  }
+  .view-news .gridlink p /*news view*/ {
+    max-width: 60em;/*prevent indendation on large screens*/
   }
 }
 @else {
