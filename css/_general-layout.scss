@@ -336,13 +336,16 @@ body {
 	#block-views-subpage-menu-block, .field-name-field-subtitle {
 		clear: left /*set subtitle to left*/
 	}
-	/* turned this off because caused wierd spacing in chrome mac on /faculty 
-	.field-name-body (if no lead image, paragraph floats on h2),
-	.field-name-field-media (prevent lead image floating on h2)
+	.field-name-body /*if no lead image, paragraph floats on h2*/,
+	/*.field-name-field-media; this causes weird formatting on chrome for mac on /faculty */
 	{
-		clear: left; 
+		clear: left
 	}
-	*/
+	@if $ie8 {
+		.field-name-field-media {
+			clear: left; /*enables sidebar on /annual-fund */
+		}
+	}
 	.layout-full-read, .layout-full /*but above will break with lead image*/{
 		.field-name-body {
 			clear: none;
