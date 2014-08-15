@@ -128,56 +128,57 @@
 /* -------------
 1-. inner: alumni banner
 ----------------*/
-
-.responsive-background .alumni-branded-banner-wrapper { 
-  @if $ie8{
-    /*different file tree for drupal*/ 
-     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/alumni-homepage/alumni-homepage-wide2.jpg', sizingMethod='scale'); /*change with campaign*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/alumni-homepage/alumni-homepage-wide2.jpg', sizingMethod='scale')"; /*change with campaign*/
+@if $alumni {
+  .responsive-background .alumni-branded-banner-wrapper { 
+    @if $ie8{
+      /*different file tree for drupal*/ 
+       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/alumni-homepage/alumni-homepage-wide2.jpg', sizingMethod='scale'); /*change with campaign*/
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/alumni-homepage/alumni-homepage-wide2.jpg', sizingMethod='scale')"; /*change with campaign*/
+    }
+    @else {
+      background-image: url("../img/alumni-homepage/alumni-homepage-small.jpg"); /*change with campaign*/
+      @include breakpoint (teen-up) {
+        background-image: url("../img/alumni-homepage/alumni-homepage-wide2.jpg"); /*change with campaign*/
+      }
+    }
   }
-  @else {
-    background-image: url("../img/alumni-homepage/alumni-homepage-small.jpg"); /*change with campaign*/
-    @include breakpoint (teen-up) {
-      background-image: url("../img/alumni-homepage/alumni-homepage-wide2.jpg"); /*change with campaign*/
+
+
+  .alumni-branded-banner-inner {
+    padding-top: 108%; /* height/width of image */
+    @include breakpoint(teen-up) {
+      padding-top: 24%; /* height/width of image */
     }
   }
 }
-
-
-.alumni-branded-banner-inner {
-  padding-top: 108%; /* height/width of image */
-  @include breakpoint(teen-up) {
-    padding-top: 24%; /* height/width of image */
-  }
-}
-
 
 /* -------------
 1-. inner: giving banner
 ----------------*/
-
-.responsive-background .giving-branded-banner-wrapper { 
-  @if $ie8{
-    /*different file tree for drupal*/ 
-     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846.jpg', sizingMethod='scale'); /*change with campaign*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846.jpg', sizingMethod='scale')"; /*change with campaign*/
+@if $drupal {
+  .responsive-background .giving-branded-banner-wrapper { 
+    @if $ie8{
+      background-image: none; /*on drupal, preven media query background image from bleeding through-*/
+      /*different file tree for drupal*/ 
+       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846.jpg', sizingMethod='scale'); /*change with campaign*/
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846.jpg', sizingMethod='scale')"; /*change with campaign*/
+    }
+    @else {
+      background-image: url("../img/giving-homepage/bridging-718.jpg"); /*change with campaign*/
+      @include breakpoint (teen-up) {
+        background-image: url("../img/giving-homepage/bridging-1846.jpg"); /*change with campaign*/
+      }
+    }
   }
-  @else {
-    background-image: url("../img/giving-homepage/bridging-718.jpg"); /*change with campaign*/
-    @include breakpoint (teen-up) {
-      background-image: url("../img/giving-homepage/bridging-1846.jpg"); /*change with campaign*/
+
+
+  .giving-branded-banner-inner {
+    padding-top: 138%; /* height/width of image */
+    @include breakpoint(teen-up) {
+      padding-top: 19%; /* height/width of image */
     }
   }
 }
-
-
-.giving-branded-banner-inner {
-  padding-top: 138%; /* height/width of image */
-  @include breakpoint(teen-up) {
-    padding-top: 19%; /* height/width of image */
-  }
-}
-
 
 /* -------------
 1-. inner: footer logo
