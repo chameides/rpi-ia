@@ -336,11 +336,13 @@ body {
 	#block-views-subpage-menu-block, .field-name-field-subtitle {
 		clear: left /*set subtitle to left*/
 	}
-	.field-name-body /*if no lead image, paragraph floats on h2*/,
-	.field-name-field-media /*prevent lead image floating on h2*/
+	/* turned this off because caused wierd spacing in chrome mac on /faculty 
+	.field-name-body (if no lead image, paragraph floats on h2),
+	.field-name-field-media (prevent lead image floating on h2)
 	{
-		clear: left
+		clear: left; 
 	}
+	*/
 	.layout-full-read, .layout-full /*but above will break with lead image*/{
 		.field-name-body {
 			clear: none;
