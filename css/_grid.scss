@@ -64,8 +64,11 @@ block-menu is the giving menu in drupal*/
 }
 
 /*designed for grids 2 elements*/ 
-.column2 .col-section {
-  width: 50%; /*if you change this, must change .col-section:nth-of-type */
+.column2 {
+  max-width: 1300px /*prevent images from getting too big*/;
+  .col-section {
+    width: 50%; /*if you change this, must change .col-section:nth-of-type */
+  }
 }
 
 /*designed for grids of 3 elements, either 1 or 3 columns, no 2 columns.*/ 
