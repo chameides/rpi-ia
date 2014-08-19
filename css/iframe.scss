@@ -7,3 +7,11 @@ html, body {
 button, input, select, textarea {
     max-width: 20em;
 }
+
+	body {
+		border: none;
+	}
+	input {
+		width: 20em;
+		height: 30px;
+	}

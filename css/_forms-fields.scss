@@ -65,7 +65,8 @@ input::-moz-focus-inner {
 button,
 html input[type="button"], /* 1 */
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"], 
+input.search_button /*hep search*/ {
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
     *overflow: visible;  /* 4 */
@@ -76,12 +77,13 @@ input[type="submit"] {
 }
 
 input[type="submit"], input[type="reset"],
-input[type="submit"] {
+input.search_button /*hep search*/ {
     border: 0;
 }
 
 input[type="submit"]:hover, input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+input.search_button:hover /*hep search*/ {
     border: 0;
 }
 
