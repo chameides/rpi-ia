@@ -117,7 +117,7 @@ article h2 {
 		*/
 	}
 	.view-news /*news, margin includes the h1 above it and requires a larger number. not sure why.*/ {
-		padding-top: 2.4em; /*magic number, based on above*/
+		padding-top: $margin; /*magic number, based on above*/
 		@include breakpoint (teen-up) {
 			padding-top: 3.6rem; /*magic number*/
 		}
