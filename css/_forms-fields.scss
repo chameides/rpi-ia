@@ -177,11 +177,6 @@ select {
 textarea {
     overflow: auto; /* 1 */
     vertical-align: top; /* 2 */
-    max-width: none;
-}
-
-input[type="textarea"] {
-    max-width: none;
 }
 
 textarea:focus, input:focus{
