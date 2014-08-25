@@ -171,13 +171,24 @@
     }
   }
 
-
   .giving-branded-banner-inner {
     padding-top: 141%; /* height/width of image */
     @include breakpoint(teen-up) {
       padding-top: 19%; /* height/width of image */
     }
   }
+
+  /*white link, white underline on hover*/
+  a.campaign-link, a.campaign-link:link, a.campaign-link:visited{
+    color: white;
+  }
+
+  a.campaign-link:hover, a.campaign-link:active{
+    border-bottom: white;
+    border-width: 0px 0px 1px 0px;
+    border-style: none none dotted none;
+  }
+
 }
 
 /* -------------
