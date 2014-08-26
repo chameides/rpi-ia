@@ -21,20 +21,56 @@ figcaption,
 	}
 }
 /*add right margin/gutter on figcaption fullimg and imgright with sidebar*/
-@include breakpoint(teen-up) {
-	.fullimg,
-	.media-fullimg, /*drupal media*/,
-	.field-name-field-media /*drupal lead image*/, 
-	.imgright,
-	.media-imgright /*drupal media*/
-	 {
-		figcaption, 
-		.field-name-field-caption /*drupal lead image*/,
-		.field-name-field-image-caption /*drupal media caption*/ {
+
+.fullimg,
+.media-fullimg, /*drupal media*/,
+.field-name-field-media /*drupal lead image*/, 
+.imgright,
+.media-imgright /*drupal media*/
+ {
+	figcaption, 
+	.field-name-field-caption /*drupal lead image*/,
+	.field-name-field-image-caption /*drupal media caption*/ {
 		margin-right: $margin2;
+		@include breakpoint(teen-up) {
+			margin-right: $margin4; /*if change this, change .content in general-layout.scss*/
 		}
 	}
-}	
+}
+
+@if $drupal {
+	/*no margin on captions for small devices*/
+	@include breakpoint(baby){
+		.field-name-field-media /*drupal lead image*/ ,
+		.media-element-container /*drupal media*/ ,
+		{
+			.field-name-field-caption /*drupal lead image caption*/,
+			.field-name-field-image-caption /*drupal media caption*/
+			{
+				margin-right: 0;
+			}
+		}
+	}
+}
+@if $imodules {
+	/*no margin on read/bleed image captions*/
+	.read /*static*/,
+	.bleed /*imodules*/ {
+		.fullimg,
+		.media-fullimg, /*drupal media*/,
+		.field-name-field-media /*drupal lead image*/, 
+		.imgright,
+		.media-imgright /*drupal media*/
+		 {
+			figcaption, 
+			.field-name-field-caption /*drupal lead image*/,
+			.field-name-field-image-caption /*drupal media caption*/ {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
 @if $ie8{
 	/*imgright as if symmetry*/
 	.imgright,
@@ -113,6 +149,38 @@ figcaption,
 		}
 	}
 }
+
+@if $drupal {
+	/*image caption padding for aside and symmetry*/
+	@include breakpoint(teen-up){
+		.media-aside, .media-symmetry {
+			.field-name-field-image-caption /*drupal media caption*/ {
+				padding-right: $margin4; /*if change this, change .content in general-layout.scss*/
+			}
+		}
+		/*no image caption padding for aside and symmetry on read layouts*/
+		.layout-read, .layout-full-read {
+			.media-aside, .media-symmetry {
+			.field-name-field-image-caption /*drupal media caption*/ {
+				padding-right: 0; /*if change this, change .content in general-layout.scss*/
+			}
+		}
+		}
+	}
+}
+
+@else {
+	/*figcaption should align with figure image*/
+	figure.aside figcaption {
+		padding-right: $margin2;
+		@include breakpoint(teen-up) {
+			padding-right: $margin4; /*if change this, change .content in general-layout.scss*/
+		}
+	}
+}
+
+
+
 @if $drupal /*see layout-full figcaption*/{
 	.layout-full-read {
 		.field-name-field-caption /*drupal lead image*/,

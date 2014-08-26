@@ -80,17 +80,26 @@ p.squeeze {
 	margin-bottom: 0;
 }
 
-
+ 
 @if $drupal{
 	.layout-full-read, .layout-read {
 		article {
-			p {
+			p, li {
 				@include breakpoint(teen-up) { 
-					margin-left: $margin4;
 					font-size: 1.1em;	
 				}
 				@include breakpoint(adult) {
 					font-size: .88em;
+				}
+			}
+			.aside, aside {
+				li {
+	      	font-size: 1em;
+	    	}
+	    }
+			p {
+				@include breakpoint(teen-up) { 
+					margin-left: $margin4;
 				}
 			}
 		}
@@ -103,21 +112,35 @@ p.squeeze {
 }
 
 @else{
-	.read, 
-	.bleed .content /*imodules*/{
-		p {
-			@include breakpoint(teen-up) { 
-				margin-left: $margin4;
-				font-size: 1.1em;
-			
+	.read /*static*/, 
+	.bleed /*imodules*/{
+		.priority1and2 {
+			p, li {
+				@include breakpoint(teen-up) { 
+					font-size: 1.1em;
+				
+				}
+				@include breakpoint(adult) {
+					font-size: .88em;
+				}
 			}
-			@include breakpoint(adult) {
-				font-size: .88em;
+			.aside, aside {
+				li {
+		      font-size: 1em;
+		    }
+		  }
+			p {
+				@include breakpoint(teen-up) { 
+					margin-left: $margin4;
+				}
+				@include breakpoint(adult) {
+					font-size: .88em;
+				}
 			}
-		}
-		aside p {
-			@include breakpoint(teen-up) { 
-				margin-left: 0;
+			aside p {
+				@include breakpoint(teen-up) { 
+					margin-left: 0;
+				}
 			}
 		}
 	}

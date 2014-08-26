@@ -181,8 +181,9 @@ body {
 	}
 }
 
+.read .maincontent /*static*/, 
 .bleed .maincontent /*iModules template*/ {
-	img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe {
+	img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe, figcaption /*add figcaption to ensure figcaption isn't wider than the image above it*/ {
 		padding-right: 0;
 	}
 }
@@ -274,7 +275,8 @@ body {
 
 /*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
 [class*='col-'], 
-.bleed .maincontent /*iModules Alumni Template*/,
+.read .maincontent, /*static template*/
+.bleed .maincontent /*iModules */,
 .sitemap-comp ul li, .sitemap-simple ul li, .block-menu ul li, 
 /*.layout-full-read article,*/
 .grid-separator /*set equal margin for grid-separator on alumni homepage*/{
@@ -297,19 +299,19 @@ body {
 
 
 /*rewrite above rule for asides*/
-.read .priority1and2 .maincontent aside, 
-.bleed .priority1and2 .maincontent aside, /*iModules*/
-.layout-read .field-name-body aside, /*drupal*/
-{
-	h2, h3, h4, h5, h6, p, ul, ol, .center-content  {
-		margin-left: 0;
-		margin-right: 0;
-	}
-	h2, h3, h4, h5, h6, p  {	
-		padding: 0;
+.read .priority1and2 .maincontent, 
+.bleed .priority1and2 .maincontent, /*iModules*/
+.layout-read .field-name-body /*drupal*/{
+	aside, .aside {
+		h2, h3, h4, h5, h6, p, ul, ol, .center-content  {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		h2, h3, h4, h5, h6, p  {	
+			padding: 0;
+		}
 	}
 }
-
 /*
 .gridpad {
 	@include breakpoint(teen-up) { 

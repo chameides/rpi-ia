@@ -103,4 +103,27 @@ nav ol {
 		}
 	}
 }
+/*remove padding around lists inside a maincontent aside*/
+@include breakpoint(teen-up){
+	.priority1and2, article {
+		aside, .aside {
+			li {
+				padding-right: 0;
+			}
+		}
+	}
+	@if $drupal{}
+	@else {
+		.read /*static*/, 
+		.bleed /*imodules*/{ 
+			.priority1and2 {
+				aside, .aside {
+					ul, ol {
+						padding-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
 
