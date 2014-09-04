@@ -97,7 +97,10 @@
   }
   z-index:10;
   .menu-close {
-    font-size: .8em;   
+    font-size: .8em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-width: 25px; 
     @include breakpoint(adult) { 
       display: none;
     }
