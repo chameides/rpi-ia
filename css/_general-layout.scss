@@ -290,13 +290,18 @@ body {
   }
 }
 
-  article {
-    @include breakpoint (baby) {
-      padding-right: 0;
-      margin-right: $margin2;
-    }
+article {
+  @include breakpoint (baby) {
+    padding-right: 0;
+    margin-right: $margin2;
   }
-
+}
+/*prevent the events list on the homepage from being offcentered on baby view*/
+.priority3 article{
+	@include breakpoint (baby) {
+    margin-right: 0;
+  }
+}
 
 /*rewrite above rule for asides*/
 .read .priority1and2 .maincontent, 
