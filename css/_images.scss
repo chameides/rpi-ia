@@ -93,8 +93,8 @@ img.fullimg,
 				float: none;
 			}
 			.imgright img, img.imgright, .file-imgright {
-				margin-left: 1%; /*without this image disappears, not sure why*/
-				padding-left: 30%; /*align right*/
+				margin-left: .1%; /*without this image disappears, not sure why*/
+				padding-left: 32%; /*align right*/
 				max-width: 100%;
 			}
 		}
