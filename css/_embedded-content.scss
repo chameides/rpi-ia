@@ -63,5 +63,10 @@ svg:not(:root) {
 	.twitter-timeline /*Alumni Twitter Feed Embed */{
 	  margin: 0 auto;
 	  width: 100% !important; /*override iframe fixed-width*/
+	  @include breakpoint(teen-all){
+	  	min-width: 1px !important;/*prevent feed from being too wide and going outside of page on ipad*/
+		  transform: scale(0.75);/*ensure feed is viewable without horizontal scrolling*/
+	    transform-origin: 0 0;
+  	}
 	}
 }
