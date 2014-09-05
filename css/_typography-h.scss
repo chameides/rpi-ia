@@ -82,6 +82,14 @@ article h2 {
 			margin-top: $margin2*3;
 		}
 	}
+	.maincontent .grid-wrap h2{
+		@include breakpoint(teen-up){
+			margin-top: 0;
+			margin-left: 0;
+			margin-right: 0;
+			color: $textmain;
+		}
+	}
 	/*to be used when h2 is preceded by a relevant image*/
 	h2.squeeze {
 		margin-top: 0;

@@ -234,6 +234,14 @@ body {
 			}
 		}
 	}
+	.maincontent .grid-wrap {
+		@include breakpoint(baby){
+			margin-left: $margin; /*2nd column has a margin, so make it symmetrical with that*/
+		}
+		@include breakpoint(teen-up) {
+			margin-left: $margin4; /*add margin for grid on bleed page*/
+		} 
+	}
 }
 
 
