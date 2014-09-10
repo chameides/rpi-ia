@@ -138,6 +138,34 @@ read .withsidebar,
 	}
 }
 
+/*layout full read; aside quote, priority2 goes left reduced padding*/
+.read .layout-full /*static*/,
+.bleed .layout-full /*imodules*/,
+.layout-full-read/*drupal*/ {
+	article .aside /*this might conflict with iModules*/,
+	.priority1and2 .aside{
+		blockquote {
+			@include breakpoint(teen-all){
+				font-size: 1em;
+			}
+			@include breakpoint(teen-up) {
+				width: 100%;
+				margin-right: 0;
+				padding-right: $margin;
+				padding-left: 0;
+			}
+		}
+		cite {
+			@include breakpoint(teen-up) {
+				padding-left: 0;
+				margin-right: 0;
+				padding-top: .9em;
+			}
+		}
+	}
+}
+
+
 /*on layout-full blockquote*/
 .layout-full, .layout-full-read {
 	aside.priority3 /*static*/,

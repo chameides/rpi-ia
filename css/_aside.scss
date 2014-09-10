@@ -113,6 +113,7 @@ aside, #block-views-aside-block, div.aside /*for drupal when can't use html5 ele
 		background: #ccc;
 		margin-left: -$margin2; /*move box to left of screen*/
 		padding: $margin2;/*pad text to line up with other text*/
+		margin-bottom: $margin2;/*add space beneath gray box*/
 		width: 110%; /*extend box to right edge, magic number tested on iphone 5s and Samsung Galaxy*/
 	}
 }
