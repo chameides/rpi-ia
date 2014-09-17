@@ -67,7 +67,9 @@ article h2 {
 	margin-top: $margin2;
 }
 
-
+.grid-wrap h2 {
+	word-wrap: break-word; /*prevent long words from breaking layout*/
+}
 
 
 .read,
