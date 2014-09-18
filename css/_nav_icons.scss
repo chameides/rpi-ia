@@ -319,10 +319,6 @@ for phone, no icon in nav sitemap
           background-position: 0 -395px;
         }
         @else {
-          /*chrome resizes 1px different */
-          @media screen and (-webkit-min-device-pixel-ratio:0) {
-            background-position: 0 -398px;
-          }
           background-position: 0 -397px;
           background-size: auto;
         }
@@ -362,9 +358,6 @@ for phone, no icon in nav sitemap
         }
         @else {
           /*chrome resizes 1px different */
-          @media screen and (-webkit-min-device-pixel-ratio:0) {
-            background-position: 0 -118px;
-          }
           background-position: 0 -117px;
         }
       }
@@ -394,9 +387,6 @@ for phone, no icon in nav sitemap
           background-position: 0 -352px;
         }
         @else {
-          @media screen and (-webkit-min-device-pixel-ratio:0) {
-            background-position: 0 -355px;
-          }
           background-position: 0 -354px;
           background-size: auto;
         }
@@ -423,9 +413,6 @@ for phone, no icon in nav sitemap
           background-position: 0 -309.5px;
         }
         @else {
-          @media screen and (-webkit-min-device-pixel-ratio:0) {
-            background-position: 0 -313.5px;
-          }
           background-position: 0 -312.5px;
         }
       }
@@ -455,9 +442,6 @@ for phone, no icon in nav sitemap
           background-position: 0 -157px;
         }
         @else {
-          @media screen and (-webkit-min-device-pixel-ratio:0) {
-            background-position: 0 -160px;
-          }
           background-position: 0 -159px;
           background-size: auto;
         }
@@ -492,9 +476,6 @@ for phone, no icon in nav sitemap
           background-position: 0 -136px;
         }
         @else {
-          @media screen and (-webkit-min-device-pixel-ratio:0) {
-            background-position: 0 -139px;
-          }
           background-position: 0 -138px;
         }
       }
@@ -525,9 +506,6 @@ for phone, no icon in nav sitemap
           padding-left: 1.1em;
         }
         @else {
-          @media screen and (-webkit-min-device-pixel-ratio:0) {
-            background-position: 0 -419px;
-          }
           background-position: 0 -418px;
           background-size: auto;
         }
@@ -561,9 +539,6 @@ for phone, no icon in nav sitemap
           background-position: 0 -94px;
         }
         @else {
-          @media screen and (-webkit-min-device-pixel-ratio:0) {
-            background-position: 0 -97px;
-          }
           background-position: 0 -96px;
         }
       }
@@ -661,6 +636,38 @@ for phone, no icon in nav sitemap
       background-position: center 74.15%;
     }
   }
+  /*correct for chrome, which renders 1 pixel off*/
+  @if $drupal {}
+  @else {
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      .sitemap-comp {
+        .icon-impact {
+          background-position: 0 -398px;
+        }
+        .icon-impact:hover {
+          background-position: 0 -118px;
+        }
+        .icon-ways {
+          background-position: 0 -355px;
+        }
+        .icon-ways:hover {
+          background-position: 0 -313.5px;
+        }
+        .icon-supporters {
+          background-position: 0 -160px;
+        }
+        .icon-supporters:hover {
+          background-position: 0 -139px;
+        }
+        .icon-news {
+          background-position: 0 -419px;
+        }
+        .icon-news:hover {
+          background-position: 0 -97px;
+        }
+      }
+    }
+  }
   /*set padding in mainnav*/
   .mainnav {
     .icon-impact {
@@ -672,7 +679,7 @@ for phone, no icon in nav sitemap
       }
     }
     .icon-ways {
-      @include breakpoint(adult ) {
+      @include breakpoint(adult) {
         padding-left: 16px; 
         @if $ie8{
           padding-left: 17px !important;
@@ -680,7 +687,7 @@ for phone, no icon in nav sitemap
       }
     }
     .icon-supporters {
-      @include breakpoint(adult ) {
+      @include breakpoint(adult) {
         padding-left: 30px;
         @if $ie8{
           padding-left: 30px !important;
@@ -688,7 +695,7 @@ for phone, no icon in nav sitemap
       }
     }
     .icon-news {
-      @include breakpoint(adult ) {
+      @include breakpoint(adult) {
         padding-left: 18px;
         @if $ie8{
           padding-left: 19px !important;
@@ -699,11 +706,7 @@ for phone, no icon in nav sitemap
   .sitemap-comp {
     @include breakpoint(adult) {
       .icon-impact{
-        background-position: 0 -398px;
         padding-left: 18px;
-      }
-      .icon-ways {
-        background-position: 0 -355px;
       }
       .icon-supporters {
         padding-left: 30px;
