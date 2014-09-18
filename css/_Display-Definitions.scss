@@ -37,19 +37,19 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-
+/*
 audio:not([controls]) {
     display: none;
     height: 0;
 }
-
+*/
 /**
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
-
+/*
 [hidden] {
     display: none;
 }
-
+*/
 /* End of HTML5 Definitions */

@@ -1,7 +1,7 @@
-.group:after, 
-.grid:after,
+/*.group:after, not used
+.grid:after,*/
 .header-main:after,
-ul.nav:after, .gridgroup1, .gridgroup2, .gridgroup3
+ul.nav:after
 {
 	content: "";
   display: table;
@@ -9,7 +9,7 @@ ul.nav:after, .gridgroup1, .gridgroup2, .gridgroup3
 }
 
 @include breakpoint (adult) {
-	.mainnav ul.extra ul:after, .mainnav:after
+	/*.mainnav ul.extra ul:after, not used */.mainnav:after
 	{
 		content: "";
 	  display: table;

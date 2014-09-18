@@ -401,24 +401,26 @@ body {
 }
 */
 
-
-/*add a right margin*/
-.single {
-	margin-right: $margin2;
- 	/*on larger screen, additional margin */
-	@include breakpoint(adult) {
- 		margin-right: $margin4;
+@if $alumni {
+	/*add a right margin*/
+	.single {
+		margin-right: $margin2;
+	 	/*on larger screen, additional margin */
+		@include breakpoint(adult) {
+	 		margin-right: $margin4;
+		}
 	}
 }
-
 .center-content, .center-content-no-margin {
 	text-align: center;
 }
 
+/*no longer used
 .gridguide {
 		margin-left: 0;
 		margin-right: 0;
 }
+*/
 
 
 

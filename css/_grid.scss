@@ -242,7 +242,7 @@ block-menu is the giving menu in drupal*/
     padding: 0;
     }
 }
-
+/* not using
 .col-2-3 {
   width: 66.66%;
   display: block;
@@ -261,14 +261,6 @@ block-menu is the giving menu in drupal*/
   width: 75%;
 }
 
-/*col-1-4:nth-of-type(even) {
-  clear:left;
-}
-
-.col-1-4:nth-of-type(even) {
-  padding-right: 0;
-}
-*/
 
 .col-5-8 {
   width: 62.5%;
@@ -276,8 +268,6 @@ block-menu is the giving menu in drupal*/
 
 .col-2-8 {
    width: 25%;}
-
-/*only need in two column width*/
 .col-1-8 {
   width: 12.5%;
 }
@@ -286,7 +276,7 @@ block-menu is the giving menu in drupal*/
   min-width: 25px;
   min-height: 25px;
 }
-
+*/
 
 section {
   margin-bottom: $margin2;
