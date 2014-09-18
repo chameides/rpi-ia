@@ -1,6 +1,6 @@
 /* General Layout */
 body {
-  padding: 0px;
+  padding: 0;
   min-width: 310px;
   background: #ccc;
   @if $ie8 {
@@ -28,8 +28,8 @@ body {
 			border: thin solid $color1;
 		}
 	}
-	#main{
-		@include breakpoint(senior) {
+	@include breakpoint(senior) {
+		#main{
 			margin-right: 320px; /*make space for sidebar, magic number, if change this change .content as well*/
 		}
 	}
@@ -66,8 +66,8 @@ body {
 }
 @if $alumni{}
 @else {
-	.header-main .donate-wrapper, .header .mainnav ul.extra {
-	  @include breakpoint(senior) {
+	@include breakpoint(senior) {
+		.header-main .donate-wrapper, .header .mainnav ul.extra { 
 	    right: 5%;
 	    z-index: 11;
 	    float: none;
@@ -75,8 +75,8 @@ body {
 	    position: fixed !important;
 	  }
 	}
-	.header-main .donate-wrapper {
-		@include breakpoint (senior) {
+	@include breakpoint (senior) {
+		.header-main .donate-wrapper {
 			margin-right: 20px; /*center on header extra icons */
 		}
 	}
@@ -84,8 +84,8 @@ body {
 
 /*drupal uses #content for .content*/
 @if $drupal {
-	.layout-full-read article {
-		@include breakpoint(teen-up) {
+	@include breakpoint(teen-up) {
+		.layout-full-read article {
 			width: 100%
 		}
 	}
@@ -132,10 +132,10 @@ body {
 				padding-right: 0;
 			}
 		}
-		#block-views-subpage-menu-block {
-			/*padding set in article, no padding for block, see platforms
-			padding-left: $margin2;*/
-			@include breakpoint(teen-up) {
+		/*padding set in article, no padding for block, see platforms
+		padding-left: $margin2;*/
+		@include breakpoint(teen-up) {
+			#block-views-subpage-menu-block {
 				padding-left: $margin4;
 			}
 		}
@@ -298,15 +298,15 @@ body {
   }
 }
 
-article {
-  @include breakpoint (baby) {
+@include breakpoint (baby) {
+	article {
     padding-right: 0;
     margin-right: $margin2;
   }
 }
 /*prevent the events list on the homepage from being offcentered on baby view*/
-.priority3 article{
-	@include breakpoint (baby) {
+@include breakpoint (baby) {
+	.priority3 article{
     margin-right: 0;
   }
 }
@@ -373,8 +373,8 @@ article {
 }
 
 /*fix error in drupal layout-read where margins get applied multiple times*/
-.layout-read .maincontent, .layout-full-read .field-name-body{
-	@include breakpoint(teen-up) {
+@include breakpoint(teen-up) {
+	.layout-read .maincontent, .layout-full-read .field-name-body{
 		float: none;
 	}
 }

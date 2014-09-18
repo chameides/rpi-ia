@@ -25,13 +25,13 @@ a {text-decoration: none}
 a:link, a:visited{
 	color: $color3; 
   /*border-bottom: white;*/
-  border-width: 0px 0px 1px 0px;
+  border-width: 0 0 1px 0;
   /*border-style: none none dotted none;*/
 }
 
 a:hover {
   border-bottom: $color3;
-  border-width: 0px 0px 1px 0px;
+  border-width: 0 0 1px 0;
   border-style: none none dotted none;
 }
 
@@ -175,7 +175,7 @@ footer {
   }
   a:hover {
     border-bottom: $color4;
-    border-width: 0px 0px 1px 0px;
+    border-width: 0 0 1px 0;
     border-style: none none dotted none;
   }
   /*hide phone link on desktop */

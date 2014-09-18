@@ -8,9 +8,7 @@ box-sizing: border-box;
 sitemap-comp is the giving menu
 block-menu is the giving menu in drupal*/
 .col-section, .sitemap-comp ul li, .block-menu ul li {
-  /*blocks are two across on portrait phone and tablet
-    blocks are three across on landscape phone and tablet as well as desktop
-   */
+  
   @include breakpoint(baby) { 
     width: 50%; /*if you change this, must change .col-section:nth-of-type */
   }

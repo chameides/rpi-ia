@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6, .tagline, .field-name-field-subtitle /* this is replaces
 
 h1, h2, .header .title {
 	text-transform: uppercase;
-	margin-top: 0px;
+	margin-top: 0;
 	text-align: center;
 	@include breakpoint(teen-up) {
 		text-align: left;
@@ -192,7 +192,7 @@ article h2 {
 }
 
 section h2 {
-	margin-bottom: 0em;
+	margin-bottom: 0;
 }
 
 
@@ -208,7 +208,7 @@ h3 {
 @if $alumni {
 	.details h3 {
 		font-size: 1em;
-		margin-top: 0em;
+		margin-top: 0;
 		margin-bottom: 0;
 		font-family: "franklin-gothic-urw", verdana, sans-serif;
 		font-weight: 300;

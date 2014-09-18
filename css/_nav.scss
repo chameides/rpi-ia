@@ -2,7 +2,7 @@
   /*menu is set up as a ul, but renders as inline*/
   ul {
     list-style-type:none;
-    padding-left: 0px;
+    padding-left: 0;
   }
   /*this is for a secondary menu, renders as a list of icons with labels
   both mainnav and footer*/
@@ -13,7 +13,7 @@
     @include breakpoint(adult) {
       float: right;
       width: auto;
-      display: inline;
+      /*display: inline;*/
       padding: .8em 0 0;
       vertical-align: top;
       .mobileonly {
@@ -26,8 +26,6 @@
         padding: 0 $margin2; /*line up under give now button*/
       }
     }
-
-    
     li {
       text-align: center;
       width: 25%;
@@ -35,7 +33,7 @@
       @include breakpoint(adult) {
         padding-left: .9em;
         width: auto;
-        display: inline;
+        /*display: inline;*/
         float: left;
         img {
           display: block;
@@ -69,8 +67,8 @@
   position:fixed;
   overflow: auto; /*showing up in android menu, when it is not needed*/
   display: block;
-  top:0px;
-  left:0px;
+  top:0;
+  left:0;
   background: #333;
   color:#fff;
   padding:3%;
@@ -87,13 +85,13 @@
   @include breakpoint(adult) { 
     position: relative;
     overflow: visible;
-    padding: 0rem 1rem;
+    padding: 0 1rem;
     @if $ie8 {
-      padding: 0em 1em;
+      padding: 0 1em;
     }
     box-shadow:none;
     font-size: .9em;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   z-index:10;
   .menu-close {
@@ -112,11 +110,11 @@
     margin-top: 1em;
     border-bottom: solid thin $color2; /* red line divider */
     @if $alumni {
-      margin-top: 0em;
+      margin-top: 0;
     }
     @include breakpoint(adult) { 
       border:none;
-      display: inline-block;
+      /*display: inline-block;*/
       float: left;
       width: auto;
       margin-top: .5rem;
@@ -178,7 +176,7 @@
       @else {
         margin-top: .7em;
       }
-      padding-top: 0em;
+      padding-top: 0;
     }
   }
 }
@@ -224,7 +222,7 @@ footer ul.extra {
 
 .sitemap-comp .menu-icon, .is-expanded .menu__link {
   @include breakpoint (teen-up) {
-    padding-top: 0px;
+    padding-top: 0;
     background-size: auto 14.5px;
     background-position: left center;
     padding-left: 1em;
@@ -238,7 +236,7 @@ footer ul.extra {
   footer ul.extra .menu-icon  {
     @include breakpoint(adult) {
       background-position: top center;
-      padding: 1.6em 0em 0em 0em;
+      padding: 1.6em 0 0 0;
     }
   }
 
@@ -254,7 +252,7 @@ footer ul.extra {
   }
   .mainnav ul.extra .menu-icon {
     @include breakpoint(adult) {
-      padding: 16px 0em 0em 0em;
+      padding: 16px 0 0 0;
       background-position: center top;
     }
   }
@@ -263,7 +261,7 @@ footer ul.extra {
 @else {
   ul.extra .menu-icon {
     @include breakpoint(adult) {
-      padding: 0em 0em .4em 2.2em;
+      padding: 0 0 .4em 2.2em;
     }
   }
 }

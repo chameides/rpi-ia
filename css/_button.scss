@@ -38,8 +38,8 @@
 .action, .donate-button, .button, a.button, input[type="submit"], input[type="button"], input.search_button /*hep search*/   {
   border-radius: 1em;
   text-shadow:
-    0px -1px 0px rgba(000,000,000,0),
-    0px 1px 0px rgba(255,255,255,0);
+    0 -1px 0 rgba(000,000,000,0),
+    0 1px 0 rgba(255,255,255,0);
    text-transform: uppercase; 
 }
 

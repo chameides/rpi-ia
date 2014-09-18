@@ -14,8 +14,8 @@
       min-width: 240px;
       height: 100%;
       width: 288px;/*magic number based on longest menu item*/
-      right: 0px;
-      top: 0px;
+      right: 0;
+      top: 0;
       padding-top:96px;/*magic number based on height of ul extra block*/
       background: $color1;
       padding-left: $margin4;
@@ -80,7 +80,7 @@
           padding-top: 20px;
           li {
             /*turn off padding-top for next set of list items*/
-            padding-top: 0px;
+            padding-top: 0;
           }
         }
       }

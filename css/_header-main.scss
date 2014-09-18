@@ -20,9 +20,9 @@
 
 
 .header-item {
-  float: left;
-  padding-right: $margin2;
-  display: inline-block;
+  float: left /*keeps menu button at top*/;
+  padding-right: $margin2 /*keep padding on give now button*/;
+  /*display: inline-block;*/
   @include breakpoint(teen) { 
     padding-right: $margin2;
   }
@@ -33,8 +33,8 @@
 
 /*added .header to front end because drupal assigns .title to main h1, not title of channel*/
 .header .title {
-  padding-top: 0px;
-  margin-top: 0px;
+  padding-top: 0;
+  margin-top: 0;
   @if $alumni {
     /*only image in alumni channel*/
     img {
