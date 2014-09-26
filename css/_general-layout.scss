@@ -240,6 +240,10 @@ body {
 		}
 		@include breakpoint(teen-up) {
 			margin-left: $margin4; /*add margin for grid on bleed page*/
+			h2, h3, h4, h5, h6, p, ul, ol, .center-content {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		} 
 	}
 }
