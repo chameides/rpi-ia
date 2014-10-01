@@ -31,6 +31,7 @@
 	/*add a margin underneath radio buttons on giving form*/
 	#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
 		margin-bottom: .5em;
+		padding-top: 0; /*added after the iteration #1*/
 	}
 
 	/*tab in the "if you selected other" */
@@ -38,4 +39,3 @@
 		margin-left: 1.5em;
 	}
 }
-
