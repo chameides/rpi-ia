@@ -56,23 +56,23 @@
 .menu-open:before {
   content: "";
   position: absolute;
-  left: 0;
   top: 0;
-  width: 1.3em;
-  height: 0.15em;
-  background: white; 
-  box-shadow: 
-    0 0.5em 0 0 white, /*if change this, change the hover as well*/
-    0 1em 0 0 white; /*if change this, change the hover as well*/
+  left: 0;
+  width: 1em;
+  height: 0.19em;
+  border-top: 0.5em double #FFF;
+  border-bottom: 0.167em solid #FFF;
+  font-size: 1.5em;
 }
 
-
+/*
 .menu-open:hover:before {
   background: $color4;
   box-shadow: 
     0 0.5em 0 0 $color4,
     0 1em 0 0 $color4;
 }
+*/
 
 
 /* End of Header */
