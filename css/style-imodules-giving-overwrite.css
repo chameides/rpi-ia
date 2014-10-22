@@ -1,0 +1,109 @@
+/*separate style sheet, just for responsive background overrites*/
+/* Vendor Dependencies */
+/* Authored Dependencies */
+/* layout */
+/* Main-Sidebar Ratio */
+/* colors */
+/*header*/
+/* it was: $color1: #d3d8d4; */
+/*red line, separator*/
+/*blue link text */
+/*lighter link text for dark bg */
+/*if ie8, combine teen-up and adult breakpoints */
+/*add space beneath the breadcrumbs*/
+/* line 2, giving-overwrite.scss */
+#rg_gfid_2096_pnlBreadcrumbs {
+  /*tablet and up*/ }
+  @media only screen and (min-width: 749px) {
+    /* line 2, giving-overwrite.scss */
+    #rg_gfid_2096_pnlBreadcrumbs {
+      margin-bottom: .9em; } }
+
+/*reduce the label size and color*/
+/* line 10, giving-overwrite.scss */
+.imod_fieldWrapper .imod_fieldLabel,
+#ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
+  font-size: .9em;
+  color: #666;
+  /*tablet and up*/ }
+  @media only screen and (min-width: 749px) {
+    /* line 10, giving-overwrite.scss */
+    .imod_fieldWrapper .imod_fieldLabel,
+    #ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
+      font-size: .8em; } }
+
+/*make designation choices black to contrast with label color*/
+/* line 20, giving-overwrite.scss */
+label, .checkbox-header, .radio-header {
+  color: black; }
+
+/*reduce events header font-size, should be a step bigger than label*/
+/* line 24, giving-overwrite.scss */
+.EventsHeader {
+  /*tablet and up*/ }
+  @media only screen and (min-width: 749px) {
+    /* line 24, giving-overwrite.scss */
+    .EventsHeader {
+      font-size: .8em; } }
+
+/*reduce space between other designations and designation*/
+/* line 30, giving-overwrite.scss */
+#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
+  padding-top: 0; }
+
+/* Smartphones, except large phone landscape ----------- */
+@media only screen and (max-width: 748px) {
+  /*add margin to error, flex forms line 312*/
+  /* line 3, _imodround3.scss */
+  #ContentMiddle .error, #ContentMiddle .Error {
+    margin: 0 1em 1em 0 !important;
+    /*only need the important if placed in the giving overwrite file*/ }
+
+  /*set margin on Accordian Tables, similar to style.css line 100*/
+  /* line 8, _imodround3.scss */
+  .imod_formItemWrapper > table {
+    width: 90% !important;
+    /*only need the important if placed in the giving overwrite file*/ }
+
+  /*padding on attendee list*/
+  /*1 of 2: padding on attendee list, on event_attendee_list.min.css, width set to 99%, any reason it's not 100%?  */
+  /* line 14, _imodround3.scss */
+  .AttendeeListGrid {
+    width: 100% !important;
+    /*only need !important if in overwrite*/ }
+
+  /*2 of 2: this is for an #id, does that mean it would only effect a specific event attendee list and not all attendee lists?*/
+  /* line 19, _imodround3.scss */
+  #cid_7762_updatePanelAL {
+    padding-right: .9em;
+    /*for ie8*/
+    padding-right: .9rem; } }
+/*adjust the perpetual giving styles*/
+/* line 26, _imodround3.scss */
+div.imod-payment-options-payment-control {
+  margin-left: 0px !important;
+  /*lose the margin, idmbs.min.css, was 5px, only need !important if in giving-overwrite*/
+  max-width: 34em;
+  /*consistent with events header wrap line 180*/
+  /*add margin for small screens*/
+  /* Smartphones, except large phone landscape ----------- */ }
+  @media only screen and (max-width: 748px) {
+    /* line 26, _imodround3.scss */
+    div.imod-payment-options-payment-control {
+      padding-right: .9em;
+      /*for ie8*/
+      padding-right: .9rem; } }
+
+/* Review/Confirmation Page */
+/* line 38, _imodround3.scss */
+.imod_commSummaryWrapper {
+  max-width: 34em !important;
+  /*only need !important if in overwrite, consistent with events header wrap line 180*/
+  /*add margin to transaction summary; imod flex forms, line 70*/
+  /* Smartphones, except large phone landscape ----------- */ }
+  @media only screen and (max-width: 748px) {
+    /* line 38, _imodround3.scss */
+    .imod_commSummaryWrapper {
+      padding-right: .9em;
+      /*for ie8*/
+      padding-right: .9rem; } }

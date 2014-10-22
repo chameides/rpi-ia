@@ -1,0 +1,45 @@
+@include breakpoint (baby) {
+	/*add margin to error, flex forms line 312*/
+	#ContentMiddle .error, #ContentMiddle .Error {
+		margin: 0 1em 1em 0!important; /*only need the important if placed in the giving overwrite file*/
+	}
+
+	/*set margin on Accordian Tables, similar to style.css line 100*/
+	.imod_formItemWrapper > table {
+		width: 90%!important; /*only need the important if placed in the giving overwrite file*/
+	}
+
+	/*padding on attendee list*/ 
+	/*1 of 2: padding on attendee list, on event_attendee_list.min.css, width set to 99%, any reason it's not 100%?  */
+	.AttendeeListGrid {
+		width: 100%!important; /*only need !important if in overwrite*/
+	} 
+
+	/*2 of 2: this is for an #id, does that mean it would only effect a specific event attendee list and not all attendee lists?*/
+	#cid_7762_updatePanelAL {
+		padding-right: .9em;/*for ie8*/
+		padding-right: .9rem;
+	}
+}
+
+/*adjust the perpetual giving styles*/
+div.imod-payment-options-payment-control {
+	margin-left: 0px!important; /*lose the margin, idmbs.min.css, was 5px, only need !important if in giving-overwrite*/
+	max-width: 34em; /*consistent with events header wrap line 180*/
+	
+	/*add margin for small screens*/
+	@include breakpoint (baby) {
+		padding-right: .9em;/*for ie8*/
+		padding-right: .9rem;
+	}
+} 
+
+/* Review/Confirmation Page */
+.imod_commSummaryWrapper {
+	max-width: 34em!important; /*only need !important if in overwrite, consistent with events header wrap line 180*/
+	/*add margin to transaction summary; imod flex forms, line 70*/
+	@include breakpoint (baby){
+		padding-right: .9em;/*for ie8*/
+		padding-right: .9rem;
+	}
+}

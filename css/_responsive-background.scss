@@ -160,13 +160,13 @@
     @if $ie8{
       background-image: none; /*on drupal, preven media query background image from bleeding through-*/
       /*different file tree for drupal*/ 
-       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846.jpg', sizingMethod='scale'); /*change with campaign*/
-      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846.jpg', sizingMethod='scale')"; /*change with campaign*/
+       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846c.jpg', sizingMethod='scale'); /*change with campaign*/
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846c.jpg', sizingMethod='scale')"; /*change with campaign*/
     }
     @else {
-      background-image: url("../img/giving-homepage/bridging-718.jpg"); /*change with campaign*/
+      background-image: url("../img/giving-homepage/bridging-718c.jpg"); /*change with campaign*/
       @include breakpoint (teen-up) {
-        background-image: url("../img/giving-homepage/bridging-1846.jpg"); /*change with campaign*/
+        background-image: url("../img/giving-homepage/bridging-1846c.jpg"); /*change with campaign*/
       }
     }
   }
@@ -174,7 +174,7 @@
   .giving-branded-banner-inner {
     padding-top: 141%; /* height/width of image */
     @include breakpoint(teen-up) {
-      padding-top: 19%; /* height/width of image */
+      padding-top: 19.5%; /* height/width of image */
     }
   }
 
