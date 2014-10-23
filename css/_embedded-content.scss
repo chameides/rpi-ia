@@ -53,10 +53,13 @@ svg:not(:root) {
 	padding: .3em
 }
 
-#content .iframe-portal iframe {
-	padding-right: 0;
-	width: 100%;
-	border: none;
+/*minimal border on iframe*/
+#content/*drupal*/, .content/*iModules and Static*/ {
+ 	.iframe-portal iframe {
+		padding-right: 0;
+		width: 100%;
+		border: none;
+	}
 }
 
 @if $alumni {

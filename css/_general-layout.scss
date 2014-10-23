@@ -392,7 +392,7 @@ body {
 			float: none /*have aside even with h1*/;
 			width: auto; /*if 100%, crushes margin*/
 		}
-	} 
+	}
 }
 
 /*this messes up the margin on boxes-noside tablet
@@ -426,7 +426,21 @@ body {
 }
 */
 
+@if $drupal{}
+@else {
+	/*provide padding for iframe on layoutfull in iModules and static*/
+	.layout-full .maincontent .full-section {
+		padding-right: $margin;
+	}
 
+	.bleed, .read {
+		.maincontent {
+			.full-section, .col-article {
+				padding-right: 0;
+			}
+		}
+	}	
+}
 
 
 
