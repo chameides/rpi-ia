@@ -1,0 +1,52 @@
+/*separate style sheet, just for responsive background overrites*/
+/* Vendor Dependencies */
+/* Authored Dependencies */
+/* layout */
+/* Main-Sidebar Ratio */
+/* colors */
+/*header*/
+/* it was: $color1: #d3d8d4; */
+/*red line, separator*/
+/*blue link text */
+/*lighter link text for dark bg */
+/*if ie8, combine teen-up and adult breakpoints */
+/*add space beneath the breadcrumbs*/
+/* line 2, giving-overwrite.scss */
+#rg_gfid_2096_pnlBreadcrumbs {
+  /*tablet and up*/ }
+  @media only screen and (min-width: 749px) {
+    /* line 2, giving-overwrite.scss */
+    #rg_gfid_2096_pnlBreadcrumbs {
+      margin-bottom: .9em; } }
+
+/*reduce the label size and color*/
+/* line 10, giving-overwrite.scss */
+.imod_fieldWrapper .imod_fieldLabel,
+#ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
+  font-size: .9em;
+  color: #666;
+  /*tablet and up*/ }
+  @media only screen and (min-width: 749px) {
+    /* line 10, giving-overwrite.scss */
+    .imod_fieldWrapper .imod_fieldLabel,
+    #ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
+      font-size: .8em; } }
+
+/*make designation choices black to contrast with label color*/
+/* line 20, giving-overwrite.scss */
+label, .checkbox-header, .radio-header {
+  color: black; }
+
+/*reduce events header font-size, should be a step bigger than label*/
+/* line 24, giving-overwrite.scss */
+.EventsHeader {
+  /*tablet and up*/ }
+  @media only screen and (min-width: 749px) {
+    /* line 24, giving-overwrite.scss */
+    .EventsHeader {
+      font-size: .8em; } }
+
+/*reduce space between other designations and designation*/
+/* line 30, giving-overwrite.scss */
+#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
+  padding-top: 0; }
