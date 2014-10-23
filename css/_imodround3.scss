@@ -43,3 +43,11 @@ div.imod-payment-options-payment-control {
 		padding-right: .9rem;
 	}
 }
+
+.success {
+	margin: .9rem 0!important; /*only need !important if in overwrite, align margins to breadcrumbs, calendar.min.css*/
+}
+
+.searchResultsWrap {
+	max-width: 34em; /*consistent with events header wrap line 180*/
+}

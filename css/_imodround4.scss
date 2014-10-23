@@ -1,0 +1,16 @@
+/*provide padding for iframe on layoutfull in iModules and static*/
+/* line 432, _general-layout.scss */
+.layout-full .maincontent .full-section {
+  padding-right: 0.9em; }
+
+/* line 438, _general-layout.scss */
+.bleed .maincontent .full-section, .bleed .maincontent .col-article, .read .maincontent .full-section, .read .maincontent .col-article {
+  padding-right: 0; }
+
+/*minimal border on iframe*/
+/* line 58, _embedded-content.scss */
+#content .iframe-portal iframe, .content .iframe-portal iframe {
+  padding-right: 0;
+  width: 100%;
+  border: none; }
+

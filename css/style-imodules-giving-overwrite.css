@@ -10,44 +10,64 @@
 /*blue link text */
 /*lighter link text for dark bg */
 /*if ie8, combine teen-up and adult breakpoints */
+/*separate style sheet, just for responsive background overrites*/
+/* Vendor Dependencies */
+/* Authored Dependencies */
+/* layout */
+/* Main-Sidebar Ratio */
+/* colors */
+/*header*/
+/* it was: $color1: #d3d8d4; */
+/*red line, separator*/
+/*blue link text */
+/*lighter link text for dark bg */
+/*if ie8, combine teen-up and adult breakpoints */
 /*add space beneath the breadcrumbs*/
 /* line 2, giving-overwrite.scss */
+/* line 15, _imodround1.scss */
 #rg_gfid_2096_pnlBreadcrumbs {
   /*tablet and up*/ }
-  @media only screen and (min-width: 749px) {
-    /* line 2, giving-overwrite.scss */
-    #rg_gfid_2096_pnlBreadcrumbs {
-      margin-bottom: .9em; } }
 
+@media only screen and (min-width: 749px) {
+  /* line 2, giving-overwrite.scss */
+  /* line 19, _imodround1.scss */
+  #rg_gfid_2096_pnlBreadcrumbs {
+    margin-bottom: .9em; } }
 /*reduce the label size and color*/
 /* line 10, giving-overwrite.scss */
+/* line 24, _imodround1.scss */
 .imod_fieldWrapper .imod_fieldLabel,
 #ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
   font-size: .9em;
   color: #666;
   /*tablet and up*/ }
-  @media only screen and (min-width: 749px) {
-    /* line 10, giving-overwrite.scss */
-    .imod_fieldWrapper .imod_fieldLabel,
-    #ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
-      font-size: .8em; } }
 
+@media only screen and (min-width: 749px) {
+  /* line 10, giving-overwrite.scss */
+  /* line 31, _imodround1.scss */
+  .imod_fieldWrapper .imod_fieldLabel,
+  #ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
+    font-size: .8em; } }
 /*make designation choices black to contrast with label color*/
 /* line 20, giving-overwrite.scss */
+/* line 37, _imodround1.scss */
 label, .checkbox-header, .radio-header {
   color: black; }
 
 /*reduce events header font-size, should be a step bigger than label*/
 /* line 24, giving-overwrite.scss */
+/* line 42, _imodround1.scss */
 .EventsHeader {
   /*tablet and up*/ }
-  @media only screen and (min-width: 749px) {
-    /* line 24, giving-overwrite.scss */
-    .EventsHeader {
-      font-size: .8em; } }
 
+@media only screen and (min-width: 749px) {
+  /* line 24, giving-overwrite.scss */
+  /* line 46, _imodround1.scss */
+  .EventsHeader {
+    font-size: .8em; } }
 /*reduce space between other designations and designation*/
 /* line 30, giving-overwrite.scss */
+/* line 51, _imodround1.scss */
 #rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
   padding-top: 0; }
 
@@ -107,3 +127,32 @@ div.imod-payment-options-payment-control {
       padding-right: .9em;
       /*for ie8*/
       padding-right: .9rem; } }
+
+/* line 47, _imodround3.scss */
+.success {
+  margin: 0.9rem 0 !important;
+  /*only need !important if in overwrite, align margins to breadcrumbs, calendar.min.css*/ }
+
+/* line 51, _imodround3.scss */
+.searchResultsWrap {
+  max-width: 34em;
+  /*consistent with events header wrap line 180*/ }
+
+/*provide padding for iframe on layoutfull in iModules and static*/
+/* line 432, _general-layout.scss */
+/* line 3, _imodround4.scss */
+.layout-full .maincontent .full-section {
+  padding-right: 0.9em; }
+
+/* line 438, _general-layout.scss */
+/* line 7, _imodround4.scss */
+.bleed .maincontent .full-section, .bleed .maincontent .col-article, .read .maincontent .full-section, .read .maincontent .col-article {
+  padding-right: 0; }
+
+/*minimal border on iframe*/
+/* line 58, _embedded-content.scss */
+/* line 12, _imodround4.scss */
+#content .iframe-portal iframe, .content .iframe-portal iframe {
+  padding-right: 0;
+  width: 100%;
+  border: none; }
