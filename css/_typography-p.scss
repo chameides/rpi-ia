@@ -2,6 +2,9 @@ p,
 pre {
 	margin: 0 0 .8em;
 	line-height: 1.3em;
+	@include breakpoint(baby){
+		word-wrap: break-word;
+	}
 }
 
 @if $drupal {
