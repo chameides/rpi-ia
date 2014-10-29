@@ -98,7 +98,9 @@
     li {
       @include breakpoint(teen-up) {
         width: 100%;
+      ul li {
         margin-top: .5em;
+        }
       }
     }
   }
