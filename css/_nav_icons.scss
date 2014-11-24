@@ -610,11 +610,14 @@ for phone, no icon in nav sitemap
       background-size: 5.0em auto;
       background-position: center 70.6%;
       @include breakpoint (adult) {
-        background-position: 0 -71.9px;
+        background-position: 0 -69.9px;
         padding-left: 2.8em;
         background-size: 4.5em auto;
         @if $ie8 {
           background-position: 0 -74.9px;
+        }
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+         background-position: 0 -71.9px;
         }
       }
     }
@@ -664,6 +667,9 @@ for phone, no icon in nav sitemap
         }
         .icon-news:hover {
           background-position: 0 -97px;
+        }
+        .icon-logout {
+
         }
       }
     }
