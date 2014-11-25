@@ -499,3 +499,36 @@ img.symmetry,
 		}
 	}
 }
+/*figure floats in paragraph block, see giving form*/
+figure.small-left {
+	width: 40%; 
+	max-width: 265px; 
+	float: left;
+	clear: left; 
+	margin-bottom: 0px;
+	img {
+		padding-right: 0;
+	}
+	/*image padding set in general layout*/
+}
+@if $drupal {
+	#content figure.small-left {
+		@include breakpoint(baby) {
+			padding-right: $margin;
+		}
+		img {
+			padding-right:0;
+		}
+	}
+}
+@include breakpoint(teen-up) {
+.read, /*html template*/ 
+.layout-full-read #content, /*drupal*/ 
+.layout-read #content, /*drupal*/
+.bleed /*iModules Alumni*/
+	{
+		.layout-full .maincontent figure.small-left {
+			margin-left: $ratio;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+/* small left image*/
+/*line 160, _general-layout.scss */
+  .content figure.small-left {
+    padding-right: 0.9em;
+    padding-right: 0.9rem;
+    /*if change this, change .content in general-layout.scss*/
+    /*on larger screen, additional margin */
+    /*tablet and up*/
+    /*screen*/ }
+  @media only screen and (min-width: 749px) {
+      /* line 160, _general-layout.scss */
+      .content figure.small-left,
+      {
+       	padding-right: 1.8em;
+        padding-right: 1.8rem;
+        /*if change this, change .content in general-layout.scss*/ } }
+    @media only screen and (min-width: 901px) {
+      /* line 160, _general-layout.scss */
+      .content figure.small-left
+      { padding-right: 1.8em;
+      	padding-right: 1.8rem;
+        /*if change this, change .content in general-layout.scss*/ } }
+
+  /* line 503, _figures.scss */
+	figure.small-left {
+	  width: 40%;
+	  max-width: 265px;
+	  float: left;
+	  clear: left;
+	  margin-bottom: 0px;
+	  /*image padding set in general layout*/ }
+	  /* line 509, _figures.scss */
+	  figure.small-left img {
+	    padding-right: 0; }
+
+	/*tablet and up*/
+	@media only screen and (min-width: 749px) {
+	  /* line 530, _figures.scss */
+	  .read .layout-full .maincontent figure.small-left,
+	  .layout-full-read #content .layout-full .maincontent figure.small-left,
+	  .layout-read #content .layout-full .maincontent figure.small-left,
+	  .bleed .layout-full .maincontent figure.small-left {
+	    margin-left: 34%; } }
+

@@ -106,7 +106,7 @@ body {
 	 		margin-left: $margin4; /*if change this, change .full img in images.scss*/
 		}
 		/*add right margin to full width image, .content adds a left margin*/
-		img, p, h1, h2, h3, h4, h5, h6, li, iframe, .field-name-field-subtitle /*drupal subtitleh2*/ {
+		img, figure.small-left /*image floats in p block see giving form*/, p, h1, h2, h3, h4, h5, h6, li, iframe, .field-name-field-subtitle /*drupal subtitleh2*/ {
 			/*baby set on article level*/
 		 	/*on larger screen, additional margin */
 			@include breakpoint(teen-up) {
@@ -128,7 +128,8 @@ body {
 	/*no col-article in drupal*/
 	.layout-full-read, .layout-read {
 		#content article{
-			img, p, h1, h2, h3, h4, h5, h6, ol, li, iframe, .field-name-field-subtitle {
+			img,
+			p, h1, h2, h3, h4, h5, h6, ol, li, iframe, .field-name-field-subtitle {
 				padding-right: 0;
 			}
 		}
@@ -156,7 +157,8 @@ body {
 	 		margin-left: $margin4; /*if change this, change .full img in images.scss*/
 		}
 		/*add right margin to full width image, .content adds a left margin*/
-		img, p, h1, h2, h3, h4, h5, h6, li, iframe {
+		img, figure.small-left /*image floats in p block. see giving form*/, 
+		p, h1, h2, h3, h4, h5, h6, li, iframe {
 			padding-right: $margin2; /*if change this, change .content in general-layout.scss*/
 		 	/*on larger screen, additional margin */
 			@include breakpoint(teen-up) {
@@ -223,7 +225,7 @@ body {
 			}
 			/*if no sidebar, set margins on semantic level becuase images are full screen*/
 			.maincontent { 
-				h2, h3, h4, h5, h6, p, ul, ol, .center-content {
+				h2, h3, h4, h5, h6, p, ul, ol, .center-content{
 					margin-left: $ratio;
 					margin-right: $margin4;
 					/*prevent margin on nested lists*/
