@@ -64,3 +64,18 @@ label {
     display: block;
 }
 
+@if $imodules {
+    /*in iModules giving form, the label comes before the checkbox. Move label to the right of checkbox*/
+    .imod-checkbox .imod_fieldLabel {
+         position: absolute;
+         left: 1em;
+    }
+    /*no bold on checkbox label*/
+    .imod-checkbox .imod_fieldLabel span{
+            font-weight: 300
+    }
+    /*breadcrumbs should not float*/
+    div[id$="_pnlBreadcrumbs"] {
+        clear: left;
+    }
+}
