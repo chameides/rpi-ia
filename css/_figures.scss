@@ -500,24 +500,42 @@ img.symmetry,
 	}
 }
 /*figure floats in paragraph block, see giving form*/
-figure.small-left {
+figure.small {
 	width: 40%; 
-	max-width: 265px; 
+	max-width: 265px;
+	margin-bottom: 0px; 
+}
+
+figure.small-left {
+	@extend figure.small; 
 	float: left;
 	clear: left; 
-	margin-bottom: 0px;
 	img {
 		padding-right: 0;
 	}
 	/*image padding set in general layout*/
 }
+
+img.small-right {
+	@extend figure.small;
+	float: right;
+	clear: right;
+	padding-left: $margin;
+	padding-right:0;
+}
+
 @if $drupal {
-	#content figure.small-left {
-		@include breakpoint(baby) {
-			padding-right: $margin;
+	#content {
+		figure.small-left {
+			@include breakpoint(baby) {
+				padding-right: $margin;
+			}
+			img {
+				padding-right:0;
+			}
 		}
-		img {
-			padding-right:0;
+		img.small-right {
+			padding-right: 0;
 		}
 	}
 }
