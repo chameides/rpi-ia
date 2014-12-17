@@ -524,6 +524,10 @@ img.small-right {
 	padding-right:0;
 }
 
+.small-img, .priority3 .small-img {
+	width: auto;
+}
+
 @if $drupal {
 	#content {
 		figure.small-left {
