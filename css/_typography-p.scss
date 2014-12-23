@@ -21,9 +21,6 @@ pre {
 			font-size: .9em; /*lowered by .1 for paragraph on intro to grid*/
 			line-height: 1.3em;
 		}
-		
-		
-		
 	}
 }
 
@@ -33,9 +30,9 @@ pre {
 		max-width: 33em;
 		font-size: 1.1em;
 		line-height: 1.4;
-		@include breakpoint(big-baby-sleep) { 
+		/*@include breakpoint(big-baby-sleep) { 
 			font-size: .7em;
-		}
+		}*/
 		@include breakpoint(teen-up) {
 			font-size: .9em; /*lowered by .1 for paragraph on intro to grid*/
 			line-height: 1.3em;
