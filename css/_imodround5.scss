@@ -42,3 +42,18 @@
 	  .bleed .layout-full .maincontent figure.small-left {
 	    margin-left: 34%; } }
 
+/*in iModules giving form, the label comes before the checkbox. Move label to the right of checkbox*/
+/* line 69, _forms.scss */
+.imod-checkbox .imod_fieldLabel {
+  position: absolute;
+  left: 1em; }
+
+/*no bold on checkbox label*/
+/* line 74, _forms.scss */
+.imod-checkbox .imod_fieldLabel span {
+  font-weight: 300; }
+
+/*breadcrumbs should not float*/
+/* line 78, _forms.scss */
+div[id$="_pnlBreadcrumbs"] {
+  clear: left; }

@@ -1,5 +1,4 @@
-/*.group:after, not used
-.grid:after,*/
+/* ensure proper clears when floats are used*/
 .header-main:after,
 ul.nav:after
 {

@@ -1,10 +1,4 @@
-/*Aside */
-/*
-.priority1and2 {
-	@include breakpoint(senior) { 
-	float: right;
-	width: 89%}
-}*/
+/*Asides blocks of non primary content can be floated, dropped to the bottom, or display as a sidebar */
 
 /*if change this, change general-layout */
 aside, #block-views-aside-block, div.aside /*for drupal when can't use html5 elements in wyswyg*/ {

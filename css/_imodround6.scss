@@ -1,0 +1,11 @@
+/*optimize spacing for many lists in a row. Used on News page of Intranet. http://alumni.rpi.edu/s/1225/2col.aspx?sid=1225&gid=1&pgid=436 */
+.content .tightlist {
+  p {
+    margin-bottom: .4em; /*reduce space below paragraph so that list is closer*/
+  }
+  ul {
+    margin-top: 0em; /*reduce space above list so that header is closer*/
+    margin-bottom: 1.5em; /*increase space below to distuingish from the header of the next list*/
+    font-size: .8em; /*reduce font-size so that it is smaller than paragraph header*/
+  }
+}

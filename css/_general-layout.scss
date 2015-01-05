@@ -106,7 +106,10 @@ body {
 	 		margin-left: $margin4; /*if change this, change .full img in images.scss*/
 		}
 		/*add right margin to full width image, .content adds a left margin*/
-		img, figure.small-left /*image floats in p block see giving form*/, p, h1, h2, h3, h4, h5, h6, li, iframe, .field-name-field-subtitle /*drupal subtitleh2*/ {
+		img, 
+		figure.small-left /*image floats in p block see giving form*/, 
+		.media-small_left_image /*drupal version of above*/,
+		p, h1, h2, h3, h4, h5, h6, li, iframe, .field-name-field-subtitle /*drupal subtitleh2*/ {
 			/*baby set on article level*/
 		 	/*on larger screen, additional margin */
 			@include breakpoint(teen-up) {

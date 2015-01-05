@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Figures
+   Figures 
    ========================================================================== */
 
 /**
@@ -501,12 +501,20 @@ img.symmetry,
 }
 /*figure floats in paragraph block, see giving form*/
 figure.small {
-	width: 40%; 
-	max-width: 265px;
+	@if $ie8 {
+		/*prevent image from being squished with fixed width*/
+		width: 265px;
+	}
+	else {
+		width: 40%; 
+		max-width: 265px;
+	}
 	margin-bottom: 0px; 
 }
 
-figure.small-left {
+figure.small-left, 
+.media-small_left_image /*drupal version*/
+{
 	@extend figure.small; 
 	float: left;
 	clear: left; 
@@ -516,7 +524,9 @@ figure.small-left {
 	/*image padding set in general layout*/
 }
 
-img.small-right {
+/*for drupal replace with media-small_left_image*/
+
+img.small-right, .media-small_right_image img {
 	@extend figure.small;
 	float: right;
 	clear: right;
@@ -524,13 +534,13 @@ img.small-right {
 	padding-right:0;
 }
 
-.small-img, .priority3 .small-img {
+.fixed-img, .priority3 .fixed-img, .media-fixed_image img {
 	width: auto;
 }
 
 @if $drupal {
 	#content {
-		figure.small-left {
+		figure.small-left, .media-small_left_image {
 			@include breakpoint(baby) {
 				padding-right: $margin;
 			}
@@ -538,8 +548,20 @@ img.small-right {
 				padding-right:0;
 			}
 		}
-		img.small-right {
+		img.small-right, .media-small_right_image img {
 			padding-right: 0;
+		}
+	}
+	@include breakpoint (teen-up) {
+		/*force div to sit within paragraph on widescreens*/
+		.media-small_right_image {
+			@if $ie8 {
+				/*no rem units in ie8*/
+				max-width: 29em;
+			}
+			@else {
+				max-width: 36.5rem;
+			}
 		}
 	}
 }
