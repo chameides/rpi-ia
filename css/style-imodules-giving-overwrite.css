@@ -10,134 +10,8 @@
 /*blue link text */
 /*lighter link text for dark bg */
 /*if ie8, combine teen-up and adult breakpoints */
-/*separate style sheet, just for responsive background overrites*/
-/* Vendor Dependencies */
-/* Authored Dependencies */
-/* layout */
-/* Main-Sidebar Ratio */
-/* colors */
-/*header*/
-/* it was: $color1: #d3d8d4; */
-/*red line, separator*/
-/*blue link text */
-/*lighter link text for dark bg */
-/*if ie8, combine teen-up and adult breakpoints */
-/*add space beneath the breadcrumbs*/
-/* line 2, giving-overwrite.scss */
-/* line 15, _imodround1.scss */
-#rg_gfid_2096_pnlBreadcrumbs {
-  /*tablet and up*/ }
-
-@media only screen and (min-width: 749px) {
-  /* line 2, giving-overwrite.scss */
-  /* line 19, _imodround1.scss */
-  #rg_gfid_2096_pnlBreadcrumbs {
-    margin-bottom: .9em; } }
-/*reduce the label size and color*/
-/* line 10, giving-overwrite.scss */
-/* line 24, _imodround1.scss */
-.imod_fieldWrapper .imod_fieldLabel,
-#ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
-  font-size: .9em;
-  color: #666;
-  /*tablet and up*/ }
-
-@media only screen and (min-width: 749px) {
-  /* line 10, giving-overwrite.scss */
-  /* line 31, _imodround1.scss */
-  .imod_fieldWrapper .imod_fieldLabel,
-  #ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
-    font-size: .8em; } }
-/*make designation choices black to contrast with label color*/
-/* line 20, giving-overwrite.scss */
-/* line 37, _imodround1.scss */
-label, .checkbox-header, .radio-header {
-  color: black; }
-
-/*reduce events header font-size, should be a step bigger than label*/
-/* line 24, giving-overwrite.scss */
-/* line 42, _imodround1.scss */
-.EventsHeader {
-  /*tablet and up*/ }
-
-@media only screen and (min-width: 749px) {
-  /* line 24, giving-overwrite.scss */
-  /* line 46, _imodround1.scss */
-  .EventsHeader {
-    font-size: .8em; } }
-/*reduce space between other designations and designation*/
-/* line 30, giving-overwrite.scss */
-/* line 51, _imodround1.scss */
-#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
-  padding-top: 0; }
-
-/* Smartphones, except large phone landscape ----------- */
-@media only screen and (max-width: 748px) {
-  /*add margin to error, flex forms line 312*/
-  /* line 3, _imodround3.scss */
-  #ContentMiddle .error, #ContentMiddle .Error {
-    margin: 0 1em 1em 0 !important;
-    /*only need the important if placed in the giving overwrite file*/ }
-
-  /*set margin on Accordian Tables, similar to style.css line 100*/
-  /* line 8, _imodround3.scss */
-  .imod_formItemWrapper > table {
-    width: 90% !important;
-    /*only need the important if placed in the giving overwrite file*/ }
-
-  /*padding on attendee list*/
-  /*1 of 2: padding on attendee list, on event_attendee_list.min.css, width set to 99%, any reason it's not 100%?  */
-  /* line 14, _imodround3.scss */
-  .AttendeeListGrid {
-    width: 100% !important;
-    /*only need !important if in overwrite*/ }
-
-  /*2 of 2: this is for an #id, does that mean it would only effect a specific event attendee list and not all attendee lists?*/
-  /* line 19, _imodround3.scss */
-  #cid_7762_updatePanelAL {
-    padding-right: .9em;
-    /*for ie8*/
-    padding-right: .9rem; } }
-/*adjust the perpetual giving styles*/
-/* line 26, _imodround3.scss */
-div.imod-payment-options-payment-control {
-  margin-left: 0px !important;
-  /*lose the margin, idmbs.min.css, was 5px, only need !important if in giving-overwrite*/
-  max-width: 34em;
-  /*consistent with events header wrap line 180*/
-  /*add margin for small screens*/
-  /* Smartphones, except large phone landscape ----------- */ }
-  @media only screen and (max-width: 748px) {
-    /* line 26, _imodround3.scss */
-    div.imod-payment-options-payment-control {
-      padding-right: .9em;
-      /*for ie8*/
-      padding-right: .9rem; } }
-
-/* Review/Confirmation Page */
-/* line 38, _imodround3.scss */
-.imod_commSummaryWrapper {
-  max-width: 34em !important;
-  /*only need !important if in overwrite, consistent with events header wrap line 180*/
-  /*add margin to transaction summary; imod flex forms, line 70*/
-  /* Smartphones, except large phone landscape ----------- */ }
-  @media only screen and (max-width: 748px) {
-    /* line 38, _imodround3.scss */
-    .imod_commSummaryWrapper {
-      padding-right: .9em;
-      /*for ie8*/
-      padding-right: .9rem; } }
-
-/* line 47, _imodround3.scss */
-.success {
-  margin: 0.9rem 0 !important;
-  /*only need !important if in overwrite, align margins to breadcrumbs, calendar.min.css*/ }
-
-/* line 51, _imodround3.scss */
-.searchResultsWrap {
-  max-width: 34em;
-  /*consistent with events header wrap line 180*/ }
-
+/*@import "imodround1";
+@import "imodround3";*/
 /*provide padding for iframe on layoutfull in iModules and static*/
 /* line 432, _general-layout.scss */
 /* line 3, _imodround4.scss */
@@ -156,3 +30,85 @@ div.imod-payment-options-payment-control {
   padding-right: 0;
   width: 100%;
   border: none; }
+
+/* small left image*/
+/*line 160, _general-layout.scss */
+/* line 3, _imodround5.scss */
+.content figure.small-left {
+  padding-right: 0.9em;
+  padding-right: 0.9rem;
+  /*if change this, change .content in general-layout.scss*/
+  /*on larger screen, additional margin */
+  /*tablet and up*/
+  /*screen*/ }
+
+@media only screen and (min-width: 749px) {
+  /* line 160, _general-layout.scss */
+  /* line 12, _imodround5.scss */
+  .content figure.small-left {
+    padding-right: 1.8em;
+    padding-right: 1.8rem;
+    /*if change this, change .content in general-layout.scss*/ } }
+@media only screen and (min-width: 901px) {
+  /* line 160, _general-layout.scss */
+  /* line 19, _imodround5.scss */
+  .content figure.small-left {
+    padding-right: 1.8em;
+    padding-right: 1.8rem;
+    /*if change this, change .content in general-layout.scss*/ } }
+/* line 503, _figures.scss */
+/* line 25, _imodround5.scss */
+figure.small-left {
+  width: 40%;
+  max-width: 265px;
+  float: left;
+  clear: left;
+  margin-bottom: 0px;
+  /*image padding set in general layout*/ }
+
+/* line 509, _figures.scss */
+/* line 33, _imodround5.scss */
+figure.small-left img {
+  padding-right: 0; }
+
+/*tablet and up*/
+@media only screen and (min-width: 749px) {
+  /* line 530, _figures.scss */
+  /* line 39, _imodround5.scss */
+  .read .layout-full .maincontent figure.small-left,
+  .layout-full-read #content .layout-full .maincontent figure.small-left,
+  .layout-read #content .layout-full .maincontent figure.small-left,
+  .bleed .layout-full .maincontent figure.small-left {
+    margin-left: 34%; } }
+/*in iModules giving form, the label comes before the checkbox. Move label to the right of checkbox*/
+/* line 69, _forms.scss */
+/* line 47, _imodround5.scss */
+.imod-checkbox .imod_fieldLabel {
+  position: absolute;
+  left: 1em; }
+
+/*no bold on checkbox label*/
+/* line 74, _forms.scss */
+/* line 53, _imodround5.scss */
+.imod-checkbox .imod_fieldLabel span {
+  font-weight: 300; }
+
+/*breadcrumbs should not float*/
+/* line 78, _forms.scss */
+/* line 58, _imodround5.scss */
+div[id$="_pnlBreadcrumbs"] {
+  clear: left; }
+
+/*optimize spacing for many lists in a row. Used on News page of Intranet. http://alumni.rpi.edu/s/1225/2col.aspx?sid=1225&gid=1&pgid=436 */
+/* line 3, _imodround6.scss */
+.content .tightlist p {
+  margin-bottom: .4em;
+  /*reduce space below paragraph so that list is closer*/ }
+/* line 6, _imodround6.scss */
+.content .tightlist ul {
+  margin-top: 0em;
+  /*reduce space above list so that header is closer*/
+  margin-bottom: 1.5em;
+  /*increase space below to distuingish from the header of the next list*/
+  font-size: .8em;
+  /*reduce font-size so that it is smaller than paragraph header*/ }

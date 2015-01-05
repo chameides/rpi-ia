@@ -1,0 +1,21 @@
+.responsive-background .alumni-branded-banner-wrapper {
+  background-image: url("/s/-12250/images/editor/alumni-homepage-small.jpg"); /*set phone image */
+}
+/*tablet and up*/
+@media only screen and (min-width: 708px) {
+  .responsive-background .alumni-branded-banner-wrapper {
+    background-image: url("/s/-12250/images/editor/alumni-homepage-wide2.jpg"); /*set tablet and up image*/
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/s/-12250/images/editor/alumni-homepage-wide2.jpg', sizingMethod='scale'); /*set ie8 image*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/s/-12250/images/editor/alumni-homepage-wide2.jpg', sizingMethod='scale')"; /*set ie8 image*/
+  } 
+}
+
+.alumni-branded-banner-inner {
+  padding-top: 108%; /* height/width of phone image: currently set to 707 wide x 760 high  ; */
+}
+/*tablet and up*/ 
+@media only screen and (min-width: 708px) {
+  .alumni-branded-banner-inner {
+    padding-top: 24%; /* height/width of tablet image: currently set to 1460 wide x 357 high; */ 
+  } 
+}
