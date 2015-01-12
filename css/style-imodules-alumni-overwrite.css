@@ -37,4 +37,6 @@
   .alumni-branded-banner-inner {
     padding-top: 24%;
     /* height/width of tablet image: currently set to 1460 wide x 357 high; */ } }
-/*@import "imodround3";*/
+/* line 1, _imodround8.scss */
+img.small-right {
+  width: auto; }
