@@ -533,6 +533,12 @@ img.small-right, .media-small_right_image img {
 	padding-left: $margin;
 	padding-right:0;
 }
+/*prevent image from enlarging, drupal wraps image in a larger containter*/
+@if $imodules {
+	img.small-right {
+		width: auto;
+	}
+}
 
 .fixed-img, .priority3 .fixed-img, .media-fixed_image img {
 	width: auto;
