@@ -1,12 +1,12 @@
 .responsive-background .alumni-branded-banner-wrapper {
-  background-image: url("/s/-12250/images/editor/alumni-homepage-small.jpg"); /*set phone image */
+  background-image: url("http://lorempixel.com/707/760/technics/4"); /*set phone image */
 }
 /*tablet and up*/
 @media only screen and (min-width: 708px) {
   .responsive-background .alumni-branded-banner-wrapper {
-    background-image: url("/s/-12250/images/editor/alumni-homepage-wide2.jpg"); /*set tablet and up image*/
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/s/-12250/images/editor/alumni-homepage-wide2.jpg', sizingMethod='scale'); /*set ie8 image*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/s/-12250/images/editor/alumni-homepage-wide2.jpg', sizingMethod='scale')"; /*set ie8 image*/
+    background-image: url("http://lorempixel.com/1460/357/technics/4"); /*set tablet and up image*/
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://lorempixel.com/1460/357/technics/4', sizingMethod='scale'); /*set ie8 image*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://lorempixel.com/1460/357/technics/4', sizingMethod='scale')"; /*set ie8 image*/
   } 
 }
 

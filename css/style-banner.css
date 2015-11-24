@@ -10,10 +10,10 @@
 /*blue link text */
 /*lighter link text for dark bg */
 /*if ie8, combine teen-up and adult breakpoints */
+/*responsive images for full width graphics*/
 /* -------------
 1. wrappers 
 ----------------*/
-/* line 6, _responsive-background.scss */
 .footer-image .footer-image-wrapper,
 .footer-logo .footer-logo-wrapper,
 .responsive-background .alumni-branded-banner-wrapper,
@@ -29,44 +29,36 @@
 1-. wrappers: footer image
 ----------------*/
 /*aerial image of campus, full width*/
-/* line 23, _responsive-background.scss */
 .footer-image .footer-image-wrapper {
   background: white;
   /*set background to white so image bleeds into background*/
-  -webkit-background-size: 100% 100%;
-          background-size: 100%;
+  background-size: 100%;
   background-position: 50% -8%;
   background-repeat: no-repeat; }
 
-/* line 30, _responsive-background.scss */
 .footer-image .footer-image-wrapper {
   /*tablet and up*/ }
   @media only screen and (min-width: 749px) {
-    /* line 30, _responsive-background.scss */
     .footer-image .footer-image-wrapper {
       background-image: url("../img/footersprite-s30645a0337.png"); } }
 
 /* -------------
 1-. wrappers: Alumni Banner
 ----------------*/
-/* line 54, _responsive-background.scss */
 .responsive-background {
   width: 100%;
   margin-top: 0.9rem;
   margin-bottom: 0.9rem;
   /*tablet and up*/ }
   @media only screen and (min-width: 749px) {
-    /* line 54, _responsive-background.scss */
     .responsive-background {
       margin-bottom: 1.8rem;
       margin-top: 0; } }
 
 /*alumni homepage, responsive banner. changes based on campaign*/
-/* line 65, _responsive-background.scss */
 .responsive-background .alumni-branded-banner-wrapper,
 .responsive-background .giving-branded-banner-wrapper {
-  -webkit-background-size: 100% 100%;
-          background-size: 100%;
+  background-size: 100%;
   background-position: 50% 50%;
   /*center image in case the wrong aspect ratio*/
   background-repeat: no-repeat; }
@@ -75,7 +67,6 @@
 1-. wrappers: footer logo
 ----------------*/
 /*rensselaer logo*/
-/* line 79, _responsive-background.scss */
 .footer-logo {
   max-width: 500px;
   /*full width on small devices, then hold at 500px*/
@@ -83,24 +74,19 @@
   /*center image*/
   padding: 0.9rem 1.8rem;
   /*screen*/ }
-  @media only screen and (min-width: 1021px) {
-    /* line 79, _responsive-background.scss */
+  @media only screen and (min-width: 901px) {
     .footer-logo {
       margin-top: 1.8em; } }
 
-/* line 87, _responsive-background.scss */
 .footer-logo .footer-logo-wrapper {
-  -webkit-background-size: 100% 100%;
-          background-size: 100%;
+  background-size: 100%;
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-image: url("../img/seal-text-white.png");
   /*tablet and up*/ }
   @media only screen and (min-width: 749px) {
-    /* line 87, _responsive-background.scss */
     .footer-logo .footer-logo-wrapper {
-      -webkit-background-size: 190% 190%;
-              background-size: 190%;
+      background-size: 190%;
       /*blow up image to fill space*/
       background-image: url("../img/footersprite-s30645a0337.png");
       /*use sprite*/ } }
@@ -108,7 +94,6 @@
 /* -------------
 1. inner 
 ----------------*/
-/* line 105, _responsive-background.scss */
 .footer-image-inner, .footer-logo-inner, .alumni-branded-banner-inner, .giving-branded-banner-inner {
   display: block;
   height: 0; }
@@ -116,7 +101,6 @@
 /* -------------
 1-. inner: footer image
 ----------------*/
-/* line 114, _responsive-background.scss */
 .footer-image-inner {
   padding-top: 22%;
   /* height/width of image */ }
@@ -124,79 +108,30 @@
 /* Smartphones, except large phone landscape ----------- */
 @media only screen and (max-width: 748px) {
   /*on small screen, do not download sprite or aerial image*/
-  /* line 120, _responsive-background.scss */
   .footer-image, .footer-image .footer-image-wrapper, .footer-image-inner {
     display: none; }
 
-  /* line 123, _responsive-background.scss */
   .footer-image .footer-image-wrapper {
     background-image: none; } }
 /* -------------
 1-. inner: alumni banner
 ----------------*/
-/* line 132, _responsive-background.scss */
-.responsive-background .alumni-branded-banner-wrapper {
-  background-image: url("../img/alumni-homepage/alumni-homepage-small.jpg");
-  /*change with campaign*/
-  /*tablet and up*/ }
-  @media only screen and (min-width: 749px) {
-    /* line 132, _responsive-background.scss */
-    .responsive-background .alumni-branded-banner-wrapper {
-      background-image: url("../img/alumni-homepage/alumni-homepage-wide2.jpg");
-      /*change with campaign*/ } }
-
-/* line 147, _responsive-background.scss */
-.alumni-branded-banner-inner {
-  padding-top: 108%;
-  /* height/width of image */
-  /*tablet and up*/ }
-  @media only screen and (min-width: 749px) {
-    /* line 147, _responsive-background.scss */
-    .alumni-branded-banner-inner {
-      padding-top: 24%;
-      /* height/width of image */ } }
-
 /* -------------
 1-. inner: giving banner
 ----------------*/
-/* line 159, _responsive-background.scss */
-.responsive-background .giving-branded-banner-wrapper {
-  background-image: url("../img/giving-homepage/bridging-718.jpg");
-  /*change with campaign*/
-  /*tablet and up*/ }
-  @media only screen and (min-width: 749px) {
-    /* line 159, _responsive-background.scss */
-    .responsive-background .giving-branded-banner-wrapper {
-      background-image: url("../img/giving-homepage/bridging-1846.jpg");
-      /*change with campaign*/ } }
-
-/* line 174, _responsive-background.scss */
-.giving-branded-banner-inner {
-  padding-top: 138%;
-  /* height/width of image */
-  /*tablet and up*/ }
-  @media only screen and (min-width: 749px) {
-    /* line 174, _responsive-background.scss */
-    .giving-branded-banner-inner {
-      padding-top: 19%;
-      /* height/width of image */ } }
-
 /* -------------
 1-. inner: footer logo
 ----------------*/
-/* line 188, _responsive-background.scss */
 .footer-logo-inner {
   padding-top: 27%;
   /* height/width of image */
   /*tablet-all*/
   /*screen*/ }
-  @media only screen and (min-width: 749px) and (max-width: 1020px) {
-    /* line 188, _responsive-background.scss */
+  @media only screen and (min-width: 749px) and (max-width: 900px) {
     .footer-logo-inner {
       padding-top: 26%;
       /* height/width of image */ } }
-  @media only screen and (min-width: 1021px) {
-    /* line 188, _responsive-background.scss */
+  @media only screen and (min-width: 901px) {
     .footer-logo-inner {
       padding-top: 20%;
       /* height/width of image */ } }

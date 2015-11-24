@@ -1,4 +1,3 @@
-/*add rules selectors generated in the drupal site*/
 /* Vendor Dependencies */
 /* Authored Dependencies */
 /* layout */
@@ -118,54 +117,42 @@ body {
   min-width: 850px; }
 
 /*drupal uses #page for .wrapper*/
-#page {
+.wrapper {
   margin: auto;
   max-width: 1524px;
   /*no senior for ie8*/
   border: thin solid #333;
   background: white; }
 
+/*senior layout*/
 /*drupal uses #content for .content*/
-.layout-full-read article {
-  width: 100%; }
-
-#content {
+.content {
   margin-top: 15px;
   /*if change this, change .full img in images.scss*/
   margin-left: 15px;
-  /*if change this, change .layout-full img in images.scss*/
+  /*if change this, change .full img in images.scss*/
   /*on larger screen, additional margin */
   margin-top: 30px;
   /*should be >= to margin-left*/
   margin-left: 30px;
   /*if change this, change .full img in images.scss*/
+  margin-top: 30px;
+  /*should be >= to margin-left*/
   margin-left: 30px;
   /*if change this, change .full img in images.scss*/
   /*add right margin to full width image, .content adds a left margin*/
-  /*col-article adds the right margin, so set image margin to 0*/ }
-  #content img,
-  #content figure.small-left,
-  #content .media-small_left_image,
-  #content p, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6, #content li, #content iframe, #content .field-name-field-subtitle {
-    /*baby set on article level*/
+  /*col- adds the right margin, so set image margin to 0*/ }
+  .content img, .content figure.small-left,
+  .content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content li, .content iframe {
+    padding-right: 15px;
+    /*if change this, change .content in general-layout.scss*/
     /*on larger screen, additional margin */
     padding-right: 30px;
     /*if change this, change .content in general-layout.scss*/
     padding-right: 30px;
     /*if change this, change .content in general-layout.scss*/ }
-  #content .col-section img, #content .col-section p, #content .col-section h1, #content .col-section h2, #content .col-section h3, #content .col-section h4, #content .col-section h5, #content .col-section h6, #content .col-section ol, #content .col-section li, #content .col-section iframe, #content #block-views-aside-block img, #content #block-views-aside-block p, #content #block-views-aside-block h1, #content #block-views-aside-block h2, #content #block-views-aside-block h3, #content #block-views-aside-block h4, #content #block-views-aside-block h5, #content #block-views-aside-block h6, #content #block-views-aside-block ol, #content #block-views-aside-block li, #content #block-views-aside-block iframe {
+  .content .col-article img, .content .col-article p, .content .col-article h1, .content .col-article h2, .content .col-article h3, .content .col-article h4, .content .col-article h5, .content .col-article h6, .content .col-article ol, .content .col-article li, .content .col-article iframe, .content .col-section img, .content .col-section p, .content .col-section h1, .content .col-section h2, .content .col-section h3, .content .col-section h4, .content .col-section h5, .content .col-section h6, .content .col-section ol, .content .col-section li, .content .col-section iframe, .content .priority3 img, .content .priority3 p, .content .priority3 h1, .content .priority3 h2, .content .priority3 h3, .content .priority3 h4, .content .priority3 h5, .content .priority3 h6, .content .priority3 ol, .content .priority3 li, .content .priority3 iframe, .content .single img, .content .single p, .content .single h1, .content .single h2, .content .single h3, .content .single h4, .content .single h5, .content .single h6, .content .single ol, .content .single li, .content .single iframe {
     padding-right: 0; }
-
-/*no col-article in drupal*/
-.layout-full-read, .layout-read {
-  /*padding set in article, no padding for block, see platforms
-  padding-left: $margin2;*/ }
-  .layout-full-read #content article img,
-  .layout-full-read #content article p, .layout-full-read #content article h1, .layout-full-read #content article h2, .layout-full-read #content article h3, .layout-full-read #content article h4, .layout-full-read #content article h5, .layout-full-read #content article h6, .layout-full-read #content article ol, .layout-full-read #content article li, .layout-full-read #content article iframe, .layout-full-read #content article .field-name-field-subtitle, .layout-read #content article img,
-  .layout-read #content article p, .layout-read #content article h1, .layout-read #content article h2, .layout-read #content article h3, .layout-read #content article h4, .layout-read #content article h5, .layout-read #content article h6, .layout-read #content article ol, .layout-read #content article li, .layout-read #content article iframe, .layout-read #content article .field-name-field-subtitle {
-    padding-right: 0; }
-  .layout-full-read #block-views-subpage-menu-block, .layout-read #block-views-subpage-menu-block {
-    padding-left: 30px; }
 
 .read .maincontent img, .read .maincontent p, .read .maincontent h1, .read .maincontent h2, .read .maincontent h3, .read .maincontent h4, .read .maincontent h5, .read .maincontent h6, .read .maincontent ol, .read .maincontent li, .read .maincontent iframe, .read .maincontent figcaption,
 .bleed .maincontent img,
@@ -337,53 +324,6 @@ body {
       margin-left: 0;
       margin-right: 0; }
 
-.layout-full-read #content .field-name-body {
-  padding-right: 0; }
-  .layout-full-read #content .field-name-body h2, .layout-full-read #content .field-name-body h3, .layout-full-read #content .field-name-body h4, .layout-full-read #content .field-name-body h5, .layout-full-read #content .field-name-body h6, .layout-full-read #content .field-name-body p, .layout-full-read #content .field-name-body ul, .layout-full-read #content .field-name-body ol, .layout-full-read #content .field-name-body .center-content {
-    margin-left: 34%;
-    margin-right: 30px;
-    /*prevent margin on nested lists*/ }
-    .layout-full-read #content .field-name-body h2 ul, .layout-full-read #content .field-name-body h2 ol, .layout-full-read #content .field-name-body h3 ul, .layout-full-read #content .field-name-body h3 ol, .layout-full-read #content .field-name-body h4 ul, .layout-full-read #content .field-name-body h4 ol, .layout-full-read #content .field-name-body h5 ul, .layout-full-read #content .field-name-body h5 ol, .layout-full-read #content .field-name-body h6 ul, .layout-full-read #content .field-name-body h6 ol, .layout-full-read #content .field-name-body p ul, .layout-full-read #content .field-name-body p ol, .layout-full-read #content .field-name-body ul ul, .layout-full-read #content .field-name-body ul ol, .layout-full-read #content .field-name-body ol ul, .layout-full-read #content .field-name-body ol ol, .layout-full-read #content .field-name-body .center-content ul, .layout-full-read #content .field-name-body .center-content ol {
-      margin-left: 0.9em; }
-  .layout-full-read #content .field-name-body aside h2, .layout-full-read #content .field-name-body aside h3, .layout-full-read #content .field-name-body aside h4, .layout-full-read #content .field-name-body aside h5, .layout-full-read #content .field-name-body aside h6, .layout-full-read #content .field-name-body aside p, .layout-full-read #content .field-name-body aside ul, .layout-full-read #content .field-name-body aside ol, .layout-full-read #content .field-name-body aside .center-content, .layout-full-read #content .field-name-body .aside h2, .layout-full-read #content .field-name-body .aside h3, .layout-full-read #content .field-name-body .aside h4, .layout-full-read #content .field-name-body .aside h5, .layout-full-read #content .field-name-body .aside h6, .layout-full-read #content .field-name-body .aside p, .layout-full-read #content .field-name-body .aside ul, .layout-full-read #content .field-name-body .aside ol, .layout-full-read #content .field-name-body .aside .center-content,
-  .layout-full-read #content .field-name-body blockquote h2,
-  .layout-full-read #content .field-name-body blockquote h3,
-  .layout-full-read #content .field-name-body blockquote h4,
-  .layout-full-read #content .field-name-body blockquote h5,
-  .layout-full-read #content .field-name-body blockquote h6,
-  .layout-full-read #content .field-name-body blockquote p,
-  .layout-full-read #content .field-name-body blockquote ul,
-  .layout-full-read #content .field-name-body blockquote ol,
-  .layout-full-read #content .field-name-body blockquote .center-content {
-    margin-left: 0;
-    margin-right: 0;
-    /*prevent margin on nested lists*/ }
-    .layout-full-read #content .field-name-body aside h2 ul, .layout-full-read #content .field-name-body aside h2 ol, .layout-full-read #content .field-name-body aside h3 ul, .layout-full-read #content .field-name-body aside h3 ol, .layout-full-read #content .field-name-body aside h4 ul, .layout-full-read #content .field-name-body aside h4 ol, .layout-full-read #content .field-name-body aside h5 ul, .layout-full-read #content .field-name-body aside h5 ol, .layout-full-read #content .field-name-body aside h6 ul, .layout-full-read #content .field-name-body aside h6 ol, .layout-full-read #content .field-name-body aside p ul, .layout-full-read #content .field-name-body aside p ol, .layout-full-read #content .field-name-body aside ul ul, .layout-full-read #content .field-name-body aside ul ol, .layout-full-read #content .field-name-body aside ol ul, .layout-full-read #content .field-name-body aside ol ol, .layout-full-read #content .field-name-body aside .center-content ul, .layout-full-read #content .field-name-body aside .center-content ol, .layout-full-read #content .field-name-body .aside h2 ul, .layout-full-read #content .field-name-body .aside h2 ol, .layout-full-read #content .field-name-body .aside h3 ul, .layout-full-read #content .field-name-body .aside h3 ol, .layout-full-read #content .field-name-body .aside h4 ul, .layout-full-read #content .field-name-body .aside h4 ol, .layout-full-read #content .field-name-body .aside h5 ul, .layout-full-read #content .field-name-body .aside h5 ol, .layout-full-read #content .field-name-body .aside h6 ul, .layout-full-read #content .field-name-body .aside h6 ol, .layout-full-read #content .field-name-body .aside p ul, .layout-full-read #content .field-name-body .aside p ol, .layout-full-read #content .field-name-body .aside ul ul, .layout-full-read #content .field-name-body .aside ul ol, .layout-full-read #content .field-name-body .aside ol ul, .layout-full-read #content .field-name-body .aside ol ol, .layout-full-read #content .field-name-body .aside .center-content ul, .layout-full-read #content .field-name-body .aside .center-content ol,
-    .layout-full-read #content .field-name-body blockquote h2 ul,
-    .layout-full-read #content .field-name-body blockquote h2 ol,
-    .layout-full-read #content .field-name-body blockquote h3 ul,
-    .layout-full-read #content .field-name-body blockquote h3 ol,
-    .layout-full-read #content .field-name-body blockquote h4 ul,
-    .layout-full-read #content .field-name-body blockquote h4 ol,
-    .layout-full-read #content .field-name-body blockquote h5 ul,
-    .layout-full-read #content .field-name-body blockquote h5 ol,
-    .layout-full-read #content .field-name-body blockquote h6 ul,
-    .layout-full-read #content .field-name-body blockquote h6 ol,
-    .layout-full-read #content .field-name-body blockquote p ul,
-    .layout-full-read #content .field-name-body blockquote p ol,
-    .layout-full-read #content .field-name-body blockquote ul ul,
-    .layout-full-read #content .field-name-body blockquote ul ol,
-    .layout-full-read #content .field-name-body blockquote ol ul,
-    .layout-full-read #content .field-name-body blockquote ol ol,
-    .layout-full-read #content .field-name-body blockquote .center-content ul,
-    .layout-full-read #content .field-name-body blockquote .center-content ol {
-      margin-left: 0; }
-  .layout-full-read #content .field-name-body .cite-wrapper {
-    margin-left: 0; }
-
-blockquote p {
-  margin-bottom: 0; }
-
 /*sitemap comp is for giving channel, .sitemap-simple is alumni, and .block-menu is drupal*/
 [class*='col-'],
 .read .maincontent,
@@ -479,32 +419,12 @@ blockquote p {
   /*display:inline; turning this off, becuase it interferes with the top-margin*/
   width: 72%; }
 
-.page__title, .field-name-field-subtitle {
-  float: left; }
-
-#block-views-subpage-menu-block, .field-name-field-subtitle {
-  clear: left; }
-
-.field-name-body {
-  clear: left; }
-
-.field-name-field-media {
-  clear: left;
-  /*enables sidebar on /annual-fund */ }
-
-.layout-full-read .field-name-body, .layout-full .field-name-body {
-  clear: none; }
-
 /*fix error in drupal layout-read where margins get applied multiple times*/
 .layout-read .maincontent, .layout-full-read .field-name-body {
   float: none; }
 
 .layout-full .maincontent, .layout-full .field-name-body, .layout-full #block-views-subpage-menu-block, .layout-full-read .maincontent, .layout-full-read .field-name-body, .layout-full-read #block-views-subpage-menu-block {
   width: 100%; }
-.layout-full .page__title, .layout-full .field-name-field-subtitle, .layout-full-read .page__title, .layout-full-read .field-name-field-subtitle {
-  float: none;
-  width: auto;
-  /*if 100%, crushes margin*/ }
 
 /*this messes up the margin on boxes-noside tablet
 .layout-full {
@@ -524,6 +444,13 @@ blockquote p {
 		margin-right: 0;
 }
 */
+/*provide padding for iframe on layoutfull in iModules and static*/
+.layout-full .maincontent .full-section {
+  padding-right: 0.9em; }
+
+.bleed .maincontent .full-section, .bleed .maincontent .col-article, .read .maincontent .full-section, .read .maincontent .col-article {
+  padding-right: 0; }
+
 /* Grid */
 * {
   box-sizing: border-box; }
@@ -701,22 +628,12 @@ section.breakout {
   }
 }
 */
-#block-views-subpage-menu-block h2, #block-views-subpage-menu-block p,
-.view-news .gridlink h2,
-.view-news .gridlink p {
+.grid-wrap h2, .grid-wrap p {
   color: black;
-  /*links in grid are black*/
-  margin-left: auto;
-  /*center text for windows, max-width prevents text align center from working*/
-  margin-right: auto; }
-#block-views-subpage-menu-block .col-section p,
-.view-news .gridlink .col-section p {
+  /*links in grid are black*/ }
+.grid-wrap .col-section p {
   padding-left: .4em;
   padding-right: .4em; }
-
-.view-news .gridlink p {
-  max-width: 60em;
-  /*prevent indendation on large screens*/ }
 
 .gridtext .col-section p {
   padding-left: 0;
@@ -750,8 +667,7 @@ section.breakout {
   margin-top: 0; }
 
 /* Header */
-/*drupal wraps the header in another header, so I changed the second one to .header-wrapper*/
-.header-wrapper {
+.header, .header-wrapper {
   background: #333;
   padding: 15px; }
 
@@ -806,12 +722,6 @@ aside, #block-views-aside-block, div.aside {
   aside p, #block-views-aside-block p, div.aside p {
     margin-top: 0; }
 
-/*if mobile, aside floats. otherwise clear right*/
-#block-views-aside-block {
-  float: none;
-  clear: both;
-  clear: right; }
-
 /*aside is at bottom, not sidebar*/
 .layout-full #block-views-aside-block, .layout-full aside.priority3, .layout-full-read #block-views-aside-block, .layout-full-read aside.priority3 {
   width: auto;
@@ -820,8 +730,8 @@ aside, #block-views-aside-block, div.aside {
   display: block;
   padding-right: 30px; }
 
-/*no padding on article aside if layout-full-read*/
-.layout-full-read aside {
+/*no padding on priority1and2 aside if not read*/
+.layout-full .priority1and2 aside, .layout-full .priority1and2 div.aside, .layout-sidebar .priority1and2 aside, .layout-sidebar .priority1and2 div.aside {
   padding-right: 0; }
 
 .read .priority1and2 aside,
@@ -873,6 +783,12 @@ aside, #block-views-aside-block, div.aside {
       margin-left: .3em; }
       .mainnav ul.extra li img, footer ul.extra li img {
         display: block; }
+  .mainnav ul.log, footer ul.log {
+    padding: 0;
+    padding: .8em 0 0; }
+    .mainnav ul.log li, footer ul.log li {
+      width: 20%;
+      width: auto; }
 
 .mainnav {
   width: 100%;
@@ -999,14 +915,6 @@ large icons on mainnav mobile and tablet
 small icons on desktop
 tablet sitemap, small icons
 */
-/*drupal doesn't have unique classes in menu footer*/
-/*child selectors for drupal footer break ie8*/
-.is-expanded .menu__link {
-  background: url("../img/menu-icon/giving16-s7f2632750d.png") no-repeat; }
-
-.is-expanded:first-child .is-leaf .menu__link {
-  background: none; }
-
 .mainnav, ul.extra {
   /*set image background for all icons*/ }
   .mainnav .icon-impact, .mainnav .icon-impact:hover, .mainnav .icon-ways, .mainnav .icon-ways:hover, .mainnav .icon-supporters, .mainnav .icon-supporters:hover, .mainnav .icon-news, .mainnav .icon-news:hover, .mainnav .icon-profile, .mainnav .icon-profile:hover, .mainnav .icon-search, .mainnav .icon-search:hover, .mainnav .icon-contact, .mainnav .icon-contact:hover, .mainnav .icon-logout, .mainnav .icon-logout:hover, .mainnav .icon-give, .mainnav .icon-give:hover, ul.extra .icon-impact, ul.extra .icon-impact:hover, ul.extra .icon-ways, ul.extra .icon-ways:hover, ul.extra .icon-supporters, ul.extra .icon-supporters:hover, ul.extra .icon-news, ul.extra .icon-news:hover, ul.extra .icon-profile, ul.extra .icon-profile:hover, ul.extra .icon-search, ul.extra .icon-search:hover, ul.extra .icon-contact, ul.extra .icon-contact:hover, ul.extra .icon-logout, ul.extra .icon-logout:hover, ul.extra .icon-give, ul.extra .icon-give:hover {
@@ -1027,59 +935,31 @@ tablet sitemap, small icons
     background-position: center 8.4%;
     /*no resizing, so use slightly different position*/
     background-position: 0 -395px; }
-  .mainnav .is-expanded:first-child .menu__link, .sitemap-comp .is-expanded:first-child .menu__link, ul.extra .is-expanded:first-child .menu__link, #block-system-main-menu .is-expanded:first-child .menu__link {
-    background-position: 0 -398px;
-    padding-left: 1.1em;
-    /*make space for icon*/ }
-  .mainnav .is-expanded:first-child .is-leaf .menu__link, .sitemap-comp .is-expanded:first-child .is-leaf .menu__link, ul.extra .is-expanded:first-child .is-leaf .menu__link, #block-system-main-menu .is-expanded:first-child .is-leaf .menu__link {
-    padding-left: 0;
-    /*turn off padding for subitems*/ }
   .mainnav .icon-impact:hover, .sitemap-comp .icon-impact:hover, ul.extra .icon-impact:hover, #block-system-main-menu .icon-impact:hover {
     background-position: center 0;
     background-position: 0 -115px; }
-  .mainnav .is-expanded:first-child .menu__link:hover, .sitemap-comp .is-expanded:first-child .menu__link:hover, ul.extra .is-expanded:first-child .menu__link:hover, #block-system-main-menu .is-expanded:first-child .menu__link:hover {
-    background-position: 0 -118px; }
   .mainnav .icon-ways, .sitemap-comp .icon-ways, ul.extra .icon-ways, #block-system-main-menu .icon-ways {
     background-position: center 83.0%;
     background-size: 2.5em auto;
     background-position: 0 -352px; }
-  .mainnav .is-expanded:first-child + .is-expanded .menu__link, .sitemap-comp .is-expanded:first-child + .is-expanded .menu__link, ul.extra .is-expanded:first-child + .is-expanded .menu__link, #block-system-main-menu .is-expanded:first-child + .is-expanded .menu__link {
-    background-position: 0 -355.5px; }
   .mainnav .icon-ways:hover, .sitemap-comp .icon-ways:hover, ul.extra .icon-ways:hover, #block-system-main-menu .icon-ways:hover {
     background-position: center 60%;
     background-position: 0 -309.5px; }
-  .mainnav .is-expanded:first-child + .is-expanded .menu__link:hover, .sitemap-comp .is-expanded:first-child + .is-expanded .menu__link:hover, ul.extra .is-expanded:first-child + .is-expanded .menu__link:hover, #block-system-main-menu .is-expanded:first-child + .is-expanded .menu__link:hover {
-    background-position: 0 -313.5px; }
   .mainnav .icon-supporters, .sitemap-comp .icon-supporters, ul.extra .icon-supporters, #block-system-main-menu .icon-supporters {
     background-position: center 43.5%;
     background-size: 5.5em auto;
     background-position: 0 -157px; }
-  .mainnav .is-expanded:first-child + .is-expanded + .is-expanded .menu__link, .sitemap-comp .is-expanded:first-child + .is-expanded + .is-expanded .menu__link, ul.extra .is-expanded:first-child + .is-expanded + .is-expanded .menu__link, #block-system-main-menu .is-expanded:first-child + .is-expanded + .is-expanded .menu__link {
-    background-position: 0 -160px;
-    padding-left: 1.9em; }
-  .mainnav .is-expanded:first-child + .is-expanded + .is-expanded .is-leaf .menu__link, .sitemap-comp .is-expanded:first-child + .is-expanded + .is-expanded .is-leaf .menu__link, ul.extra .is-expanded:first-child + .is-expanded + .is-expanded .is-leaf .menu__link, #block-system-main-menu .is-expanded:first-child + .is-expanded + .is-expanded .is-leaf .menu__link {
-    padding-left: 0em;
-    /*turn off padding for subitems*/ }
   .mainnav .icon-supporters:hover, .sitemap-comp .icon-supporters:hover, ul.extra .icon-supporters:hover, #block-system-main-menu .icon-supporters:hover {
     background-position: center 28.89%;
     background-position: 0 -136px; }
-  .mainnav .is-expanded:first-child + .is-expanded + .is-expanded .menu__link:hover, .sitemap-comp .is-expanded:first-child + .is-expanded + .is-expanded .menu__link:hover, ul.extra .is-expanded:first-child + .is-expanded + .is-expanded .menu__link:hover, #block-system-main-menu .is-expanded:first-child + .is-expanded + .is-expanded .menu__link:hover {
-    background-position: 0 -139px; }
   .mainnav .icon-news, .sitemap-comp .icon-news, ul.extra .icon-news, #block-system-main-menu .icon-news {
     background-position: center 24.5%;
     background-size: 3em auto;
     background-position: 0 -416px;
     padding-left: 1.1em; }
-  .mainnav .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link, .sitemap-comp .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link, ul.extra .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link, #block-system-main-menu .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link {
-    background-position: 0 -419px;
-    padding-left: 1.1em; }
-  .mainnav .is-expanded + .is-expanded + .is-expanded + .is-expanded .is-leaf .menu__link, .sitemap-comp .is-expanded + .is-expanded + .is-expanded + .is-expanded .is-leaf .menu__link, ul.extra .is-expanded + .is-expanded + .is-expanded + .is-expanded .is-leaf .menu__link, #block-system-main-menu .is-expanded + .is-expanded + .is-expanded + .is-expanded .is-leaf .menu__link {
-    padding-left: 0; }
   .mainnav .icon-news:hover, .sitemap-comp .icon-news:hover, ul.extra .icon-news:hover, #block-system-main-menu .icon-news:hover {
     background-position: center 16.36%;
     background-position: 0 -94px; }
-  .mainnav .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link:hover, .sitemap-comp .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link:hover, ul.extra .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link:hover, #block-system-main-menu .is-expanded + .is-expanded + .is-expanded + .is-expanded .menu__link:hover {
-    background-position: 0 -97px; }
   .mainnav .icon-contact, .sitemap-comp .icon-contact, ul.extra .icon-contact, #block-system-main-menu .icon-contact {
     background-size: 4.5em auto;
     background-position: center 51.5%;
@@ -1128,6 +1008,23 @@ tablet sitemap, small icons
     background-position: center 74.15%; }
 
 /*correct for chrome, which renders 1 pixel off*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .sitemap-comp .icon-impact {
+    background-position: 0 -398px; }
+  .sitemap-comp .icon-impact:hover {
+    background-position: 0 -118px; }
+  .sitemap-comp .icon-ways {
+    background-position: 0 -355px; }
+  .sitemap-comp .icon-ways:hover {
+    background-position: 0 -313.5px; }
+  .sitemap-comp .icon-supporters {
+    background-position: 0 -160px; }
+  .sitemap-comp .icon-supporters:hover {
+    background-position: 0 -139px; }
+  .sitemap-comp .icon-news {
+    background-position: 0 -419px; }
+  .sitemap-comp .icon-news:hover {
+    background-position: 0 -97px; } }
 /*set padding in mainnav*/
 .mainnav .icon-impact {
   padding-left: 18px;
@@ -1185,10 +1082,6 @@ footer ul.extra .icon-give:hover {
   background-position: center 74%; }
 
 /*turn off background images in drupal*/
-.is-expanded .is-leaf .menu__link {
-  background: none;
-  padding-left: 0; }
-
 .toggle-menu-icon:hover {
   cursor: pointer; }
 
@@ -1206,10 +1099,6 @@ footer {
   clear: both;
   margin: 15px;
   font-size: .7em; }
-
-/*ensures that admin config doesn't interfere with menu*/
-#block-block-19 {
-  clear: both; }
 
 /*responsive images for full width graphics*/
 /* -------------
@@ -1239,8 +1128,8 @@ footer {
 
 .footer-image .footer-image-wrapper {
   /*different file tree for drupal*/
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/all/themes/ia/ia-resources/img/aerial.png', sizingMethod='scale')"; }
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/aerial.png', sizingMethod='scale')"; }
 
 /* -------------
 1-. wrappers: Alumni Banner
@@ -1302,30 +1191,6 @@ footer {
 /* -------------
 1-. inner: giving banner
 ----------------*/
-.responsive-background .giving-branded-banner-wrapper {
-  background-image: none;
-  /*on drupal, preven media query background image from bleeding through-*/
-  /*different file tree for drupal*/
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846c.jpg', sizingMethod='scale');
-  /*change with campaign*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sites/all/themes/ia/ia-resources/img/giving-homepage/bridging-1846c.jpg', sizingMethod='scale')";
-  /*change with campaign*/ }
-
-.giving-branded-banner-inner {
-  padding-top: 141%;
-  /* height/width of image */
-  padding-top: 19.5%;
-  /* height/width of image */ }
-
-/*white link, white underline on hover*/
-a.campaign-link, a.campaign-link:link, a.campaign-link:visited {
-  color: white; }
-
-a.campaign-link:hover, a.campaign-link:active {
-  border-bottom: white;
-  border-width: 0 0 1px 0;
-  border-style: none none dotted none; }
-
 /* -------------
 1-. inner: footer logo
 ----------------*/
@@ -1336,39 +1201,6 @@ a.campaign-link:hover, a.campaign-link:active {
   /* height/width of image */ }
 
 /*hero graphic in drupal*/
-/*giving homepage focuses on a single campaign*/
-.campaign-header {
-  background: #333;
-  /*background used in graphic extends to text area*/
-  padding-bottom: 15px;
-  /*space withing gray box*/
-  margin-bottom: 15px;
-  /*space below gray box*/
-  margin-right: 30px;
-  /*for this page type, on teen-up margin is determined on an element basis, to allow for page bleed*/
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  font-size: .9em;
-  /*text closer in size to text in graphic*/ }
-
-#content .campaign-header .campaign-text {
-  margin-top: 15px;
-  /*space between image and text*/
-  padding: 0 15px;
-  /*space between image and box border*/
-  margin-top: 30px; }
-
-.campaign-header p {
-  color: white;
-  /* white text on gray background*/
-  text-align: center;
-  max-width: 100%;
-  /*override max width in order to center*/ }
-
-.page-node-14 #content {
-  margin-top: 0;
-  /*make top margin consistent with left and right, when page title is hidden */ }
-
 /*navigation at footer of page*/
 /*also see:
   grid.scss for some of the float rules
@@ -1393,9 +1225,6 @@ a.campaign-link:hover, a.campaign-link:active {
 
 .sitemap-comp li, .block-menu li {
   margin-bottom: 30px; }
-
-.block-menu {
-  clear: both; }
 
 /*some additional rules are in the _nav.scss that define how the grid is arranged */
 /*event details for alumni single event pages*/
@@ -1541,10 +1370,6 @@ nav a:hover, .social a:hover, .footer-logo a:hover {
   padding-bottom: 7.5px; }
   .gridlink:link img, .gridlink:visited img {
     opacity: 1; }
-
-/*in the news view, the gridlink class is a div */
-.view-news .gridlink {
-  border: dotted thin transparent; }
 
 /*breakout section has bluebackground, set link color to none
 section.breakout {
@@ -1812,36 +1637,20 @@ article h2 {
     text-transform: uppercase;
     margin-top: 0; }
 
-/*set margin to main content instead of pageheader*/
-.field-name-field-subtitle, #block-views-subpage-menu-block .views-row h2 {
+section h2,
+.pageheader h2 {
   text-align: center;
-  text-transform: uppercase; }
+  margin: 0 0 15px; }
 
-.field-name-body,
-.layout-read #block-views-aside-block,
-.field-name-field-media {
-  margin-top: 15px;
-  /*if change this change .view-news */
-  /* turned this off, seems like too much
-  @include breakpoint(adult) {
-  	margin-top: $margin2*2;
-  }
-  */ }
-
-.view-news {
-  padding-top: 0.9em;
-  /*magic number, based on above*/
-  padding-top: 3.6rem;
-  /*magic number*/ }
-
-.pageheader h2, .field-name-field-subtitle {
+.pageheader h2, .bleed .pageheader h2 {
   font-size: 1.1em;
   color: #4d4d4d;
   text-align: left;
   font-size: 1.2em;
   margin-bottom: 0;
   text-transform: uppercase;
-  margin-left: 0; }
+  margin-left: 0;
+  margin-bottom: 15px; }
 
 .read .maincontent .pageheader h2,
 .bleed .priority1and2 .pageheader h2,
@@ -1884,48 +1693,52 @@ h6 {
   font-size: 0.67em;
   margin: 2.33em 0; }
 
-/*hide temporary header names. These are headers used set page and grid type and then a jquery uses them to change the body name and removes them from the page. But sometimes there is a flash and they show up*/
-.field-name-field-page-type, .field-name-field-grid-type {
-  font-size: 0; }
-
 p,
 pre {
   margin: 0 0 .8em;
   line-height: 1.3em; }
 
-p, #content ul, #content ol {
+p, .content ul, .content ol {
   font-weight: 300;
   max-width: 33em;
-  /*text-align: justify;*/
   font-size: 1.1em;
   line-height: 1.4;
   /*@include breakpoint(big-baby-sleep) { 
-  	font-size: .7em; 
+  	font-size: .7em;
   }*/
   font-size: .9em;
   /*lowered by .1 for paragraph on intro to grid*/
   line-height: 1.3em; }
 
-#block-views-subpage-menu-block .views-row p, .view-news p {
+.grid-wrap p {
   font-size: .9em;
   font-size: .8em; }
 
-#block-views-subpage-menu-block .views-row p {
+.grid-wrap p {
   text-align: center; }
+
+.gridtext p {
+  text-align: left; }
 
 /*used on alumni-classes to reduce white space between intro paragraph and boxes*/
 p.squeeze {
   margin-bottom: 0; }
 
-.layout-full-read article p, .layout-full-read article li, .layout-read article p, .layout-read article li {
+.read .priority1and2 p, .read .priority1and2 li,
+.bleed .priority1and2 p,
+.bleed .priority1and2 li {
   font-size: 1.1em;
   font-size: .88em; }
-.layout-full-read article .aside li, .layout-full-read article aside li, .layout-read article .aside li, .layout-read article aside li {
+.read .priority1and2 .aside li, .read .priority1and2 aside li,
+.bleed .priority1and2 .aside li,
+.bleed .priority1and2 aside li {
   font-size: 1em; }
-.layout-full-read article p, .layout-read article p {
-  margin-left: 30px; }
-
-.layout-read blockquote p {
+.read .priority1and2 p,
+.bleed .priority1and2 p {
+  margin-left: 30px;
+  font-size: .88em; }
+.read .priority1and2 aside p,
+.bleed .priority1and2 aside p {
   margin-left: 0; }
 
 /**
@@ -2051,7 +1864,39 @@ figcaption,
   margin-right: 30px;
   /*if change this, change .content in general-layout.scss*/ }
 
-/*no margin on captions for small devices*/
+/*no margin on read/bleed image captions*/
+.read .fullimg figcaption,
+.read .fullimg .field-name-field-caption,
+.read .fullimg .field-name-field-image-caption,
+.read .media-fullimg figcaption,
+.read .media-fullimg .field-name-field-caption,
+.read .media-fullimg .field-name-field-image-caption,
+.read .field-name-field-media figcaption,
+.read .field-name-field-media .field-name-field-caption,
+.read .field-name-field-media .field-name-field-image-caption,
+.read .imgright figcaption,
+.read .imgright .field-name-field-caption,
+.read .imgright .field-name-field-image-caption,
+.read .media-imgright figcaption,
+.read .media-imgright .field-name-field-caption,
+.read .media-imgright .field-name-field-image-caption,
+.bleed .fullimg figcaption,
+.bleed .fullimg .field-name-field-caption,
+.bleed .fullimg .field-name-field-image-caption,
+.bleed .media-fullimg figcaption,
+.bleed .media-fullimg .field-name-field-caption,
+.bleed .media-fullimg .field-name-field-image-caption,
+.bleed .field-name-field-media figcaption,
+.bleed .field-name-field-media .field-name-field-caption,
+.bleed .field-name-field-media .field-name-field-image-caption,
+.bleed .imgright figcaption,
+.bleed .imgright .field-name-field-caption,
+.bleed .imgright .field-name-field-image-caption,
+.bleed .media-imgright figcaption,
+.bleed .media-imgright .field-name-field-caption,
+.bleed .media-imgright .field-name-field-image-caption {
+  margin-right: 0; }
+
 /*imgright as if symmetry*/
 .imgright figcaption,
 .imgright .field-name-field-caption,
@@ -2138,23 +1983,11 @@ figcaption,
 .layout-read .media-aside .field-name-field-image-caption {
   margin-left: 0; }
 
-/*image caption padding for aside and symmetry*/
-.media-aside .field-name-field-image-caption, .media-symmetry .field-name-field-image-caption {
+/*figcaption should align with figure image*/
+figure.aside figcaption {
+  padding-right: 15px;
   padding-right: 30px;
   /*if change this, change .content in general-layout.scss*/ }
-
-/*no image caption padding for aside and symmetry on read layouts*/
-.layout-read .media-aside .field-name-field-image-caption, .layout-read .media-symmetry .field-name-field-image-caption, .layout-full-read .media-aside .field-name-field-image-caption, .layout-full-read .media-symmetry .field-name-field-image-caption {
-  padding-right: 0;
-  /*if change this, change .content in general-layout.scss*/ }
-
-.layout-full-read .field-name-field-caption,
-.layout-full-read .field-name-field-image-caption {
-  margin-right: 0; }
-
-/*caption for aside should be full width*/
-.media-aside .field-name-field-image-caption {
-  width: 100%; }
 
 .symmetry figcaption,
 .symmetry .field-name-field-caption,
@@ -2234,7 +2067,7 @@ aside, #block-views-aside-block, .aside {
 	font-style:italic;
 	font-weight: bold;
 	font-size: .9em}*/
-#content {
+.content {
   font-size: 1.3em; }
 
 /*p.quote {
@@ -2409,9 +2242,9 @@ nav ol {
   list-style: none;
   list-style-image: none; }
 
-#content {
+.content {
   /*reduce top-margin and font size on nested lists*/ }
-  #content ul, #content ol {
+  .content ul, .content ol {
     padding-left: 1.8em;
     padding-right: 1.8em;
     max-width: 36em;
@@ -2419,9 +2252,9 @@ nav ol {
     /*text-align: justify;*/
     padding-left: 30px;
     padding-right: 30px; }
-    #content ul li, #content ol li {
+    .content ul li, .content ol li {
       margin-bottom: .3em; }
-  #content ul ul, #content ol ol {
+  .content ul ul, .content ol ol {
     margin-top: 0.45em;
     font-size: .8em; }
 
@@ -2451,11 +2284,18 @@ nav ol {
 .priority1and2 aside li, .priority1and2 .aside li, article aside li, article .aside li {
   padding-right: 0; }
 
+.read .priority1and2 aside ul, .read .priority1and2 aside ol, .read .priority1and2 .aside ul, .read .priority1and2 .aside ol,
+.bleed .priority1and2 aside ul,
+.bleed .priority1and2 aside ol,
+.bleed .priority1and2 .aside ul,
+.bleed .priority1and2 .aside ol {
+  padding-right: 0; }
+
 /*optimize spacing for many lists in a row. Used on News page of Intranet. http://alumni.rpi.edu/s/1225/2col.aspx?sid=1225&gid=1&pgid=436 */
-#content .tightlist p {
+.content .tightlist p {
   margin-bottom: .4em;
   /*reduce space below paragraph so that list is closer*/ }
-#content .tightlist ul {
+.content .tightlist ul {
   margin-top: 0em;
   /*reduce space above list so that header is closer*/
   margin-bottom: 1.5em;
@@ -2791,16 +2631,6 @@ div.sidebar .priority1and2 .maincontent .media-aside {
   div.sidebar .priority1and2 .maincontent .media-aside figcaption {
     width: 100%; }
 
-/*media-aside needs padding
-this could probably get folded into other rules*/
-.layout-full-read .media-aside, .layout-full-read .aside {
-  padding-left: 30px; }
-
-.layout-full .media-aside, .layout-full .aside {
-  padding-right: 30px; }
-  .layout-full .media-aside img, .layout-full .aside img {
-    padding-right: 0; }
-
 /*full article, set aside to left*/
 .layout-full aside, .layout-full .aside,
 .layout-full .media-aside,
@@ -2829,7 +2659,10 @@ this could probably get folded into other rules*/
     width: 100%; }
 
 /*margin-left for asides*/
-.layout-full-read #block-views-aside-block, .layout-full-read .aside, .layout-full-read aside {
+/*read full article, add margin to aside*/
+.read .layout-full .aside, .read .layout-full aside,
+.bleed .layout-full .aside,
+.bleed .layout-full aside {
   margin-left: 30px; }
 
 /*correct above rule so that aside within priority1and2 is flush left*/
@@ -3092,10 +2925,6 @@ img.imgright {
   margin-left: 0;
   float: none; }
 
-/*hide caption in news view*/
-.view-news .field-name-field-caption {
-  display: none; }
-
 /*figure floats in paragraph block, see giving form*/
 figure.small, figure.small-left,
 .media-small_left_image, img.small-right, .media-small_right_image img {
@@ -3124,18 +2953,11 @@ img.small-right, .media-small_right_image img {
   padding-right: 0; }
 
 /*prevent image from enlarging, drupal wraps image in a larger containter*/
-.fixed-img, .priority3 .fixed-img, .media-fixed_image img {
+img.small-right {
   width: auto; }
 
-#content figure.small-left img, #content .media-small_left_image img {
-  padding-right: 0; }
-#content img.small-right, #content .media-small_right_image img {
-  padding-right: 0; }
-
-/*force div to sit within paragraph on widescreens*/
-.media-small_right_image {
-  /*no rem units in ie8*/
-  max-width: 29em; }
+.fixed-img, .priority3 .fixed-img, .media-fixed_image img {
+  width: auto; }
 
 .read .layout-full .maincontent figure.small-left,
 .layout-full-read #content .layout-full .maincontent figure.small-left,
@@ -3195,6 +3017,19 @@ label {
   padding-left: 2px;
   color: #666;
   display: block; }
+
+/*in iModules giving form, the label comes before the checkbox. Move label to the right of checkbox*/
+.imod-checkbox .imod_fieldLabel {
+  position: absolute;
+  left: 1em; }
+
+/*no bold on checkbox label*/
+.imod-checkbox .imod_fieldLabel span {
+  font-weight: 300; }
+
+/*breadcrumbs should not float*/
+div[id$="_pnlBreadcrumbs"] {
+  clear: left; }
 
 button,
 input,
@@ -3379,11 +3214,72 @@ textarea:hover, input:hover, select:hover {
     margin-top: 0.45em;
     margin-right: 0; }
 
+/*that long string is for iModules giving form*/
+.radio-group label, #rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations label {
+  display: inline;
+  padding-right: 0.45em; }
+
 .input-group input[type="button"],
 .input-group input[type="reset"],
 .input-group input[type="submit"] {
   display: inline;
   padding-right: 0.45em; }
+
+/*rules designed for the iModules giving form */
+/* breadcrumbs */
+/* controls the block of breadcrumbs*/
+.formbreadcrumbs {
+  margin-bottom: 15px; }
+
+/*individual items*/
+.idbmsBreadcrumb, .idbmsBreadcrumbActive {
+  padding: .2em;
+  margin: 0;
+  border: #666 thin solid;
+  padding: .7em;
+  font-size: .6em; }
+
+/*different color for general and active*/
+.idbmsBreadcrumb {
+  background: #999;
+  color: black; }
+
+.idbmsBreadcrumbActive {
+  background: #003399;
+  color: white; }
+
+/*add space beneath the breadcrumbs*/
+#rg_gfid_2096_pnlBreadcrumbs {
+  margin-bottom: .9em; }
+
+/*reduce the label size and color*/
+.imod_fieldWrapper .imod_fieldLabel,
+#ContentMiddle .idbmsCampaignDesignationHeader, #ContentMiddle .idbmsCampaignPaymentOptionsHeader {
+  font-size: .9em;
+  color: #666;
+  font-size: .8em; }
+
+/*add a margin underneath radio buttons on giving form*/
+#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
+  margin-bottom: .5em;
+  padding-top: 0;
+  /*added after the iteration #1*/ }
+
+/*tab in the "if you selected other" */
+#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_27319 {
+  margin-left: 1.5em; }
+
+/*make designation choices black to contrast with label color*/
+label, .checkbox-header, .radio-header {
+  color: black; }
+
+/*reduce space between other designations and designation*/
+#rg_gfid_2096_tblOuter_ctl00_ctl00_ctl00_ctl00_ctl00_tblGrouping_2097_ctl00_tr_23370_ctl00_ctl00_ctl00_fc_23370_rblAdvancedDesignations {
+  padding-top: 0; }
+
+/*reduce events header font-size, should be a step bigger than label*/
+.EventsHeader {
+  font-size: .8em; }
 
 /* ==========================================================================
    Tables
@@ -3423,24 +3319,6 @@ nav {
   transition: none;
   /*this prevents a flash of nav transition in IE*/ }
 
-/* google search overrides */
-article .gsc-control-cse {
-  padding: 0; }
-
-form.gsc-search-box {
-  padding: .7rem 0 0 0;
-  max-width: 584px; }
-
-form tbody {
-  border-top: none; }
-
-.gsc-control-cse, .gsc-control-cse .gsc-table-result {
-  margin-bottom: .7rem; }
-
-/*align search button with input field*/
-input[type="button"].gsc-search-button {
-  margin-top: .2em; }
-
 @media print {
   .mainnav, .menu-button-wrapper, .donate-button, .social, .footerbanner, ul.extra, .sitemap, .footerlogo-wrapper {
     display: none; }
@@ -3457,10 +3335,10 @@ input[type="button"].gsc-search-button {
   .header .title .part2 {
     margin-left: 2px; }
 
-  #content a:link:after, #content a:visited:after {
+  .content a:link:after, .content a:visited:after {
     content: " (" attr(href) ") ";
     font-size: 80%; }
-  #content a[href^="/"]:after {
+  .content a[href^="/"]:after {
     content: " (http://rpi.edu/giving" attr(href) ") "; }
 
   .priority3, #block-views-aside-block {

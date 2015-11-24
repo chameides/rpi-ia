@@ -140,7 +140,7 @@
     @else {
       background-image: url("../img/alumni-homepage/alumni-homepage-small.jpg"); /*change with campaign*/
       @include breakpoint (teen-up) {
-        background-image: url("../img/alumni-homepage/alumni-homepage-wide2.jpg"); /*change with campaign*/
+        background-image: url("/img/alumni-homepage/alumni-homepage-wide2.jpg"); /*change with campaign*/
       }
     }
   }

@@ -11,14 +11,12 @@
 /*lighter link text for dark bg */
 /*if ie8, combine teen-up and adult breakpoints */
 /*code for the Alumni Homepage hero graphic*/
-/* line 3, _alumni-banner.scss */
 .responsive-background .alumni-branded-banner-wrapper {
-  background-image: url("/s/-12250/images/editor/alumni-homepage-small.jpg");
+  background-image: url("http://lorempixel.com/707/760/technics/4");
   /*set phone image */ }
 
 /*tablet and up*/
 @media only screen and (min-width: 708px) {
-  /* line 8, _alumni-banner.scss */
   .responsive-background .alumni-branded-banner-wrapper {
     background-image: url("/s/-12250/images/editor/alumni-homepage-wide2.jpg");
     /*set tablet and up image*/
@@ -26,17 +24,14 @@
     /*set ie8 image*/
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/s/-12250/images/editor/alumni-homepage-wide2.jpg', sizingMethod='scale')";
     /*set ie8 image*/ } }
-/* line 15, _alumni-banner.scss */
 .alumni-branded-banner-inner {
   padding-top: 108%;
   /* height/width of phone image: currently set to 707 wide x 760 high  ; */ }
 
 /*tablet and up*/
 @media only screen and (min-width: 708px) {
-  /* line 20, _alumni-banner.scss */
   .alumni-branded-banner-inner {
     padding-top: 24%;
     /* height/width of tablet image: currently set to 1460 wide x 357 high; */ } }
-/* line 1, _imodround8.scss */
 img.small-right {
   width: auto; }
